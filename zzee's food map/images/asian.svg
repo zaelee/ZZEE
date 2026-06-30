@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="아시아 음식 이미지">
+  <rect width="1200" height="700" fill="#f5f0ff"/>
+  <path d="M290 430h520c-28 90-115 135-260 135s-232-45-260-135z" fill="#8b5cf6"/>
+  <path d="M350 360c140-120 250-120 390 0" fill="none" stroke="#2f2a26" stroke-width="28" stroke-linecap="round"/>
+  <path d="M420 290c-24-70 40-95 8-150M560 290c-24-70 40-95 8-150M700 290c-24-70 40-95 8-150" fill="none" stroke="#ff6b35" stroke-width="22" stroke-linecap="round"/>
+</svg>

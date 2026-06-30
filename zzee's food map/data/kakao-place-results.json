@@ -1,0 +1,4021 @@
+[
+  {
+    "requestedName": "해남닭집",
+    "matched": true,
+    "query": "해남닭집 서울특별시 광진구 능동로13길 46 1층",
+    "score": 302,
+    "kakaoPlaceId": "11499383",
+    "matchedName": "해남닭집",
+    "category": "치킨",
+    "address": "서울 광진구 능동로13길 46 1층",
+    "lotAddress": "화양동 12-40",
+    "latitude": 37.54398311546965,
+    "longitude": 127.06999831351119,
+    "kakaoMapLink": "https://place.map.kakao.com/11499383",
+    "rating": 4,
+    "ratingCount": 44,
+    "reviewCount": 117,
+    "menuItems": [
+      {
+        "name": "후라이드치킨",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-10-10 23:41:25"
+      },
+      {
+        "name": "양념치킨",
+        "price": 19000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-10-10 22:40:22"
+      },
+      {
+        "name": "반반치킨",
+        "price": 19000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-10-10 23:24:22"
+      }
+    ],
+    "menuUpdatedAt": "2024-03-04 17:35:49",
+    "priceRange": "18,000-19,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100654_9151652_20260402020715_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/3e3c82937bbc4310402affe4c4833dce061fed79?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "정면",
+    "matched": true,
+    "query": "정면 서울특별시 광진구 능동로13길 88 1층",
+    "score": 310,
+    "kakaoPlaceId": "2103908554",
+    "matchedName": "정면",
+    "category": "국수",
+    "address": "서울 광진구 능동로13길 88 1층",
+    "lotAddress": "화양동 32-17",
+    "latitude": 37.545486746718964,
+    "longitude": 127.06869613606028,
+    "kakaoMapLink": "https://place.map.kakao.com/2103908554",
+    "rating": 4.6,
+    "ratingCount": 206,
+    "reviewCount": 621,
+    "menuItems": [
+      {
+        "name": "곁들임 냉제육(한정20접시)",
+        "price": 11000,
+        "desc": "향긋한 고수와 새콤달콤한 레몬소스가 어우러진 곁들임 냉제육",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-06-11 01:40:23"
+      },
+      {
+        "name": "백면",
+        "price": 11000,
+        "desc": "부드러운 돼지목살의 육향과 깔끔하고 깊은육수가 특징인 백면 ",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-01 22:48:02"
+      },
+      {
+        "name": "홍면",
+        "price": 11000,
+        "desc": "깊은 맛 뒤에 느껴지는 매콤한 국물이 특징인 홍면 ",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-01 22:48:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-01 22:48:02",
+    "priceRange": "11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101234_9151652_20260402030255_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/75BAA5D0ECF640639A32857D97B0862D"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "동대문곱창",
+    "matched": true,
+    "query": "동대문곱창 서울특별시 광진구 뚝섬로27길 37",
+    "score": 310,
+    "kakaoPlaceId": "8256333",
+    "matchedName": "동대문곱창",
+    "category": "곱창,막창",
+    "address": "서울 광진구 뚝섬로27길 37 1층",
+    "lotAddress": "자양동 845-10",
+    "latitude": 37.5375054148691,
+    "longitude": 127.06602308871672,
+    "kakaoMapLink": "https://place.map.kakao.com/8256333",
+    "rating": 3.5,
+    "ratingCount": 48,
+    "reviewCount": 330,
+    "menuItems": [
+      {
+        "name": "곱창",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-10 10:24:19"
+      },
+      {
+        "name": "오돌뼈",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-10 10:24:19"
+      },
+      {
+        "name": "치즈곱창",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-10 10:24:19"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-10 10:24:19",
+    "priceRange": "13,000-16,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_102437_9151652_20260402064706_cube/front_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/9B9F91293C6B45E59D1E55F4569868BE",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/1789e14361ca2e5d043e3c22341e84827b42f5d4?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "원조숯불소금구이",
+    "matched": true,
+    "query": "원조숯불소금구이 서울특별시 광진구 광나루로12길 19 1층",
+    "score": 310,
+    "kakaoPlaceId": "10692259",
+    "matchedName": "원조숯불소금구이",
+    "category": "육류,고기",
+    "address": "서울 광진구 광나루로12길 19 1층",
+    "lotAddress": "화양동 20-25",
+    "latitude": 37.54665865094554,
+    "longitude": 127.0676470862037,
+    "kakaoMapLink": "https://place.map.kakao.com/10692259",
+    "rating": 4,
+    "ratingCount": 24,
+    "reviewCount": 59,
+    "menuItems": [
+      {
+        "name": "돼지치맛살(150g)",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 00:34:57"
+      },
+      {
+        "name": "갈매기살(160g)",
+        "price": 17000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 07:19:42"
+      },
+      {
+        "name": "한우등심채끝(180g)",
+        "price": 45000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 05:43:50"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-05 07:19:42",
+    "priceRange": "17,000-45,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101288_9151652_20260402030956_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/bda39851541ab0be8153cd061734cd9848ff3856?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "서북면옥",
+    "matched": true,
+    "query": "서북면옥 서울특별시 광진구 자양로 199-1 서북면옥",
+    "score": 310,
+    "kakaoPlaceId": "7939102",
+    "matchedName": "서북면옥",
+    "category": "냉면",
+    "address": "서울 광진구 자양로 199-1 1층",
+    "lotAddress": "구의동 80-47",
+    "latitude": 37.54539660029566,
+    "longitude": 127.08534387836036,
+    "kakaoMapLink": "https://place.map.kakao.com/7939102",
+    "rating": 3.6,
+    "ratingCount": 385,
+    "reviewCount": 697,
+    "menuItems": [
+      {
+        "name": "비빔냉면",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-29 17:00:44"
+      },
+      {
+        "name": "물냉면",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-29 17:00:44"
+      },
+      {
+        "name": "만두국",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-29 17:00:44"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-26 22:56:32",
+    "priceRange": "12,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148283/2_102876_9148283_20250709034135_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/DE9B8F1BF97742A5A562B023DF3095E1",
+      "http://t1.kakaocdn.net/mystore/F483A537E43E4A819ABB6DFA012B636F"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "은혜즉석떡볶이",
+    "matched": true,
+    "query": "건대 은혜즉석떡볶이",
+    "score": 302,
+    "kakaoPlaceId": "11354357",
+    "matchedName": "은혜즉석떡볶이",
+    "category": "떡볶이",
+    "address": "서울 광진구 광나루로 381-1 2층",
+    "lotAddress": "군자동 361-25",
+    "latitude": 37.54813712067502,
+    "longitude": 127.07232428784693,
+    "kakaoMapLink": "https://place.map.kakao.com/11354357",
+    "rating": 3.1,
+    "ratingCount": 120,
+    "reviewCount": 384,
+    "menuItems": [
+      {
+        "name": "떡2인분세트 1",
+        "price": 15000,
+        "desc": "라면+오뎅+계란2+만두2",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-29 13:20:08"
+      },
+      {
+        "name": "떡 2인분세트 2",
+        "price": 15000,
+        "desc": "쫄면+오뎅+계란2+만두2",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-29 13:20:08"
+      },
+      {
+        "name": "떡 3인분세트 1",
+        "price": 20000,
+        "desc": "라면+오뎅+계란3+만두3",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-29 13:20:08"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-29 13:20:08",
+    "priceRange": "15,000-20,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148341/2_100160_9148341_20250711001526_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d885d1330a6f0b958a233f4701e8e088055122b0?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "깍둑",
+    "matched": true,
+    "query": "깍둑 서울특별시 광진구 능동로19길 36 1층",
+    "score": 200,
+    "kakaoPlaceId": "24944745",
+    "matchedName": "깍뚝",
+    "category": "삼겹살",
+    "address": "서울 광진구 능동로19길 36 1층",
+    "lotAddress": "화양동 111-161",
+    "latitude": 37.54745266328354,
+    "longitude": 127.07183024350354,
+    "kakaoMapLink": "https://place.map.kakao.com/24944745",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 117,
+    "menuItems": [
+      {
+        "name": "숙성 삼겹살 한판 (600g)",
+        "price": 25900,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-10-27 14:35:11"
+      },
+      {
+        "name": "숙성 목살 한판 (600g)",
+        "price": 25900,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2022-12-08 17:59:07"
+      },
+      {
+        "name": "숙성 삼겹살 반판 (300g)",
+        "price": 15900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-12-08 17:59:07"
+      }
+    ],
+    "menuUpdatedAt": "2025-10-27 14:35:11",
+    "priceRange": "15,900-25,900원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100527_9151652_20260402015805_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/63D7A26B0A9A4F13B025602788723811"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "김해평화뒷고기",
+    "matched": true,
+    "query": "김해평화뒷고기 서울특별시 광진구 아차산로31길 9-1 1층",
+    "score": 80,
+    "kakaoPlaceId": "269850048",
+    "matchedName": "평화김해뒷고기 건대본점",
+    "category": "육류,고기",
+    "address": "서울 광진구 아차산로31길 9-1 1층",
+    "lotAddress": "화양동 9-19",
+    "latitude": 37.54155079230561,
+    "longitude": 127.06936238644813,
+    "kakaoMapLink": "https://place.map.kakao.com/269850048",
+    "rating": 4,
+    "ratingCount": 57,
+    "reviewCount": 70,
+    "menuItems": [
+      {
+        "name": "치즈김치볶음밥",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-24 00:04:19"
+      },
+      {
+        "name": "평화뒷고기(1인분)",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-15 00:18:00"
+      },
+      {
+        "name": "평화껍데기(1인분)",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-23 23:40:27"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-24 00:04:19",
+    "priceRange": "6,500-8,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101087_9151652_20260402025127_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/2b1053f64e80c5fffcc4149dc5540d57fe1ba4ec?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "아찌떡볶이",
+    "matched": true,
+    "query": "아찌떡볶이 서울특별시 광진구 아차산로29길 53",
+    "score": 302,
+    "kakaoPlaceId": "19238595",
+    "matchedName": "아찌떡볶이",
+    "category": "분식",
+    "address": "서울 광진구 아차산로29길 53 1층",
+    "lotAddress": "화양동 34-5",
+    "latitude": 37.54323038182346,
+    "longitude": 127.0691466851365,
+    "kakaoMapLink": "https://place.map.kakao.com/19238595",
+    "rating": 3.3,
+    "ratingCount": 149,
+    "reviewCount": 306,
+    "menuItems": [
+      {
+        "name": "친구세트",
+        "price": 12000,
+        "desc": "(떡볶이+튀김+찹쌀순대)",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-31 10:42:12"
+      },
+      {
+        "name": "패밀리세트",
+        "price": 18000,
+        "desc": "(떡볶이2인분+튀김+찹쌀순대+부산어묵)",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-31 10:42:12"
+      },
+      {
+        "name": "떡볶이",
+        "price": 4000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-31 10:42:12"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-16 13:33:33",
+    "priceRange": "4,000-18,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100906_9151652_20260402022721_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/05daf7df4889ca3ed2fff35cb3de4af9a4ff8150?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "환이네갈비살",
+    "matched": true,
+    "query": "환이네갈비살 서울특별시 광진구 아차산로29길 24 1층",
+    "score": 230,
+    "kakaoPlaceId": "461883111",
+    "matchedName": "환이네갈비살 본점",
+    "category": "갈비",
+    "address": "서울 광진구 아차산로29길 24 1층",
+    "lotAddress": "화양동 9-36",
+    "latitude": 37.541911596669685,
+    "longitude": 127.06867022510825,
+    "kakaoMapLink": "https://place.map.kakao.com/461883111",
+    "rating": 4,
+    "ratingCount": 44,
+    "reviewCount": 146,
+    "menuItems": [
+      {
+        "name": "소갈비살(120g)(미국산)",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 10:54:08"
+      },
+      {
+        "name": "차돌박이(120g)(호주산)",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 10:54:08"
+      },
+      {
+        "name": "육회비빔냉면",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 10:54:08"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-17 10:54:08",
+    "priceRange": "10,000-15,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100921_9151652_20260402022826_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/e948e7e6d36467c1152ee9f23bb1fc927e690df4?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "방이샤브칼국수",
+    "matched": true,
+    "query": "방이샤브칼국수 서울특별시 광진구 동일로20길 100 1층",
+    "score": 192,
+    "kakaoPlaceId": "20495977",
+    "matchedName": "방이샤브샤브칼국수 건대점",
+    "category": "샤브샤브",
+    "address": "서울 광진구 동일로20길 100 1층",
+    "lotAddress": "자양동 5-10",
+    "latitude": 37.53975987077375,
+    "longitude": 127.0689081289244,
+    "kakaoMapLink": "https://place.map.kakao.com/20495977",
+    "rating": 3.4,
+    "ratingCount": 29,
+    "reviewCount": 73,
+    "menuItems": [
+      {
+        "name": "샤브샤브세트메뉴 (1인분)",
+        "price": 15000,
+        "desc": "야채+칼국수+볶음밥+고기/2인이상주문",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-19 22:01:03"
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-19 22:01:03"
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-19 22:01:03"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-19 22:01:03",
+    "priceRange": "9,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_102764_9151652_20260402072232_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/1E76A85E565A4A62A38BB5D854176B4A"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "김밥천국 건대2호점",
+    "matched": true,
+    "query": "김밥천국 건대2호점 서울특별시 광진구 능동로13길 21 1층",
+    "score": 302,
+    "kakaoPlaceId": "2141404953",
+    "matchedName": "김밥천국 건대2호점",
+    "category": "분식",
+    "address": "서울 광진구 능동로13길 21 1층",
+    "lotAddress": "화양동 11-30",
+    "latitude": 37.542969969452315,
+    "longitude": 127.07070797636088,
+    "kakaoMapLink": "https://place.map.kakao.com/2141404953",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 24,
+    "menuItems": [
+      {
+        "name": "열무비빔국수",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-26 02:10:41"
+      },
+      {
+        "name": "등심돈비냉",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-25 13:08:13"
+      },
+      {
+        "name": "열무국수",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-26 00:10:01"
+      }
+    ],
+    "menuUpdatedAt": "2025-06-26 02:10:41",
+    "priceRange": "₩₩",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100642_9151652_20260402020653_cube/right_800.jpg",
+      "https://blog.kakaocdn.net/dn/cbnB93/dJMcadWNKRN/JW8rMChhpdUN1nrp5sPCWk/img.jpg"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "최신족발",
+    "matched": true,
+    "query": "최신족발 서울특별시 광진구 아차산로29길 63",
+    "score": 145,
+    "kakaoPlaceId": "19409834",
+    "matchedName": "최신족발 건대직영점",
+    "category": "족발,보쌈",
+    "address": "서울 광진구 아차산로29길 63 1층",
+    "lotAddress": "화양동 34-3",
+    "latitude": 37.54360506459849,
+    "longitude": 127.06937334205425,
+    "kakaoMapLink": "https://place.map.kakao.com/19409834",
+    "rating": 3.6,
+    "ratingCount": 36,
+    "reviewCount": 56,
+    "menuItems": [
+      {
+        "name": "반반족발 (대)(앞발 3~4인분)",
+        "price": 45000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-04-10 15:23:58"
+      },
+      {
+        "name": "숯불양념족발 (대) (앞발 3~4인분)",
+        "price": 43000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-07-25 20:40:33"
+      },
+      {
+        "name": "숯불양념족발 (중) (앞발 2~3인분)",
+        "price": 37000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-04-10 15:23:58"
+      }
+    ],
+    "menuUpdatedAt": "2023-09-19 20:34:31",
+    "priceRange": "37,000-45,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100901_9151652_20260402022702_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/7fc58657c8783786d8ad67d8be5f7c38e2de26d4?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "서소문순두부보쌈",
+    "matched": true,
+    "query": "건대 서소문순두부보쌈",
+    "score": 310,
+    "kakaoPlaceId": "13290722",
+    "matchedName": "서소문순두부보쌈",
+    "category": "두부전문점",
+    "address": "서울 광진구 동일로 128 재향군인회관 1층",
+    "lotAddress": "화양동 42-29",
+    "latitude": 37.54369036190835,
+    "longitude": 127.06515045545035,
+    "kakaoMapLink": "https://place.map.kakao.com/13290722",
+    "rating": 3.5,
+    "ratingCount": 27,
+    "reviewCount": 73,
+    "menuItems": [
+      {
+        "name": "스페셜보쌈",
+        "price": 100000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-21 23:23:53"
+      },
+      {
+        "name": "낙지보쌈",
+        "price": 65000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-21 23:54:08"
+      },
+      {
+        "name": "굴보쌈",
+        "price": 65000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-21 11:55:33"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-22 00:15:57",
+    "priceRange": "65,000-100,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101941_9151652_20260402054658_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/4ceb63eabd9e5129a691b189a2380b495abe07b9?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "돕감자탕",
+    "matched": true,
+    "query": "돕감자탕 서울특별시 광진구 아차산로31길 9",
+    "score": 145,
+    "kakaoPlaceId": "7834861",
+    "matchedName": "돕",
+    "category": "감자탕",
+    "address": "서울 광진구 아차산로31길 9 1층",
+    "lotAddress": "화양동 9-22",
+    "latitude": 37.54147876816737,
+    "longitude": 127.06926727186031,
+    "kakaoMapLink": "https://place.map.kakao.com/7834861",
+    "rating": 3.1,
+    "ratingCount": 98,
+    "reviewCount": 143,
+    "menuItems": [
+      {
+        "name": "통문어 해물감자탕 (중)",
+        "price": 49000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-25 18:45:03"
+      },
+      {
+        "name": "감자탕 (대)",
+        "price": 40000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-08-02 13:13:42"
+      },
+      {
+        "name": "감자탕 (소)",
+        "price": 28000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-08-02 13:13:42"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-26 14:32:46",
+    "priceRange": "28,000-49,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101086_9151652_20260402025124_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/8c4a1d3b156779cf4ca754fd66cd9a53b11ff566?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "포크포크",
+    "matched": true,
+    "query": "포크포크 서울특별시 광진구 동일로22길 117-16 1층",
+    "score": 102,
+    "kakaoPlaceId": "26874320",
+    "matchedName": "포크포크 본점",
+    "category": "돈까스,우동",
+    "address": "서울 광진구 동일로22길 117-16 1층",
+    "lotAddress": "화양동 5-95",
+    "latitude": 37.54131922804073,
+    "longitude": 127.07089198667795,
+    "kakaoMapLink": "https://place.map.kakao.com/26874320",
+    "rating": 4.2,
+    "ratingCount": 83,
+    "reviewCount": 105,
+    "menuItems": [
+      {
+        "name": "매콤돈까스",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-24 08:46:03"
+      },
+      {
+        "name": "칡물냉면",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-24 08:46:03"
+      },
+      {
+        "name": "칡비빔냉면",
+        "price": 8500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-24 08:46:03"
+      }
+    ],
+    "menuUpdatedAt": "2025-04-24 23:10:23",
+    "priceRange": "8,000-9,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101053_9151652_20260402024350_cube/back_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/054956021182f09821e6f894e676a6f2dc4b6490?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "김창훈포차",
+    "matched": true,
+    "query": "김창훈포차 서울특별시 광진구 아차산로31길 27 지하 김창훈포차",
+    "score": 137,
+    "kakaoPlaceId": "2086408454",
+    "matchedName": "김창훈포차 육지점",
+    "category": "호프,요리주점",
+    "address": "서울 광진구 아차산로31길 27 지하층",
+    "lotAddress": "화양동 9-76",
+    "latitude": 37.54219930372981,
+    "longitude": 127.06971602556149,
+    "kakaoMapLink": "https://place.map.kakao.com/2086408454",
+    "rating": 3.4,
+    "ratingCount": 9,
+    "reviewCount": 630,
+    "menuItems": [
+      {
+        "name": "즉석떡볶이",
+        "price": 7900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-01-08 10:57:10"
+      },
+      {
+        "name": "고기탕수육",
+        "price": 6900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-01-08 10:57:10"
+      },
+      {
+        "name": "컵라면볶음밥",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-01-08 10:57:10"
+      }
+    ],
+    "menuUpdatedAt": "2025-01-08 22:38:10",
+    "priceRange": "6,000-7,900원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101095_9151652_20260402025148_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/84621282BB4B44ABB7A44BD166F57F11"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "시홍쓰",
+    "matched": true,
+    "query": "시홍쓰 서울특별시 광진구 능동로17길 5 1층",
+    "score": 310,
+    "kakaoPlaceId": "1736699136",
+    "matchedName": "시홍쓰",
+    "category": "중식",
+    "address": "서울 광진구 능동로17길 5 1층",
+    "lotAddress": "화양동 94-1",
+    "latitude": 37.54608602258155,
+    "longitude": 127.07301484039233,
+    "kakaoMapLink": "https://place.map.kakao.com/1736699136",
+    "rating": 4.5,
+    "ratingCount": 161,
+    "reviewCount": 253,
+    "menuItems": [
+      {
+        "name": "토마토계란 덮밥",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-12 14:32:36"
+      },
+      {
+        "name": "마파가지튀김",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-13 14:27:25"
+      },
+      {
+        "name": "마파두부밥",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-04 15:04:11"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-12 14:32:36",
+    "priceRange": "9,500-12,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100779_9151652_20260402021657_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/855E6FA5173E48F19495DE5A9E810AD5"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "송화산시도삭면",
+    "matched": true,
+    "query": "송화산시도삭면 서울특별시 광진구 뚝섬로27길 48",
+    "score": 145,
+    "kakaoPlaceId": "1467670437",
+    "matchedName": "송화산시도삭면 본점",
+    "category": "중국요리",
+    "address": "서울 광진구 뚝섬로27길 48 1층",
+    "lotAddress": "자양동 851-20",
+    "latitude": 37.53789076082872,
+    "longitude": 127.06652580026014,
+    "kakaoMapLink": "https://place.map.kakao.com/1467670437",
+    "rating": 4.1,
+    "ratingCount": 483,
+    "reviewCount": 611,
+    "menuItems": [
+      {
+        "name": "도삭면",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-02-27 23:42:44"
+      },
+      {
+        "name": "쇼룽포오(6p)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-02-27 15:37:16"
+      },
+      {
+        "name": "쇼마이(5p)",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-02-27 23:11:37"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-12 14:32:37",
+    "priceRange": "8,000-9,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2013/05/1007845/2_100082_1007845_20130426014321_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/5db761952b7bbce3f627a6e3b2f85b6a66f6b2f3?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "빠오즈푸",
+    "matched": true,
+    "query": "건대 빠오즈푸",
+    "score": 225,
+    "kakaoPlaceId": "15101449",
+    "matchedName": "빠오즈푸",
+    "category": "중국요리",
+    "address": "서울 광진구 광나루로 373 1층",
+    "lotAddress": "군자동 361-32",
+    "latitude": 37.548097972994974,
+    "longitude": 127.07150948201458,
+    "kakaoMapLink": "https://place.map.kakao.com/15101449",
+    "rating": 3.9,
+    "ratingCount": 193,
+    "reviewCount": 297,
+    "menuItems": [
+      {
+        "name": "새우지짐만두 (9개)",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-17 14:23:03"
+      },
+      {
+        "name": "고기_빠오즈 (8개)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-17 14:23:03"
+      },
+      {
+        "name": "매운 훈둔면",
+        "price": 8500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-17 14:23:03"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-26 15:30:20",
+    "priceRange": "8,000-9,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101704_9151652_20260402050600_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/457F5A5E546344DA80A793AF02EBC395"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "매운향솥",
+    "matched": true,
+    "query": "매운향솥 서울특별시 광진구 동일로18길 61 1층",
+    "score": 310,
+    "kakaoPlaceId": "19983662",
+    "matchedName": "매운향솥",
+    "category": "중국요리",
+    "address": "서울 광진구 동일로18길 61 1층",
+    "lotAddress": "자양동 9-33",
+    "latitude": 37.53914149590237,
+    "longitude": 127.06626440648117,
+    "kakaoMapLink": "https://place.map.kakao.com/19983662",
+    "rating": 4.2,
+    "ratingCount": 546,
+    "reviewCount": 309,
+    "menuItems": [
+      {
+        "name": "마라샹궈 (100g)",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2022-11-12 03:15:23"
+      },
+      {
+        "name": "마라탕 (100g)",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2022-11-12 05:17:07"
+      },
+      {
+        "name": "크림새우",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-13 00:29:03"
+      }
+    ],
+    "menuUpdatedAt": "2022-11-13 00:29:03",
+    "priceRange": "3,000-11,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_102099_9151652_20260402061709_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/B7DC34AF308846AFA65AFE84D614A7B7"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "송화양꼬치",
+    "matched": true,
+    "query": "송화양꼬치 서울특별시 광진구 동일로18길 70",
+    "score": 310,
+    "kakaoPlaceId": "14822911",
+    "matchedName": "송화양꼬치",
+    "category": "양꼬치",
+    "address": "서울 광진구 동일로18길 70 1층",
+    "lotAddress": "자양동 11-2",
+    "latitude": 37.5387773215343,
+    "longitude": 127.06656732122401,
+    "kakaoMapLink": "https://place.map.kakao.com/14822911",
+    "rating": 4.2,
+    "ratingCount": 133,
+    "reviewCount": 302,
+    "menuItems": [
+      {
+        "name": "꿔바로우",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-23 01:05:11"
+      },
+      {
+        "name": "가지튀김",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-11 16:29:41"
+      },
+      {
+        "name": "어향가지",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-11 16:29:41"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-23 17:40:59",
+    "priceRange": "16,000-18,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_102103_9151652_20260402061716_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/2e0149d6659b08b070de0427aec5eac18cc28924?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "638DENO탄탄면",
+    "matched": true,
+    "query": "638DENO탄탄면 서울특별시 광진구 능동로13길 81-1 1층",
+    "score": 80,
+    "kakaoPlaceId": "906824475",
+    "matchedName": "638데노탄탄면",
+    "category": "일본식라면",
+    "address": "서울 광진구 능동로13길 81-1 1층",
+    "lotAddress": "화양동 33-21",
+    "latitude": 37.54521647874289,
+    "longitude": 127.06864157227828,
+    "kakaoMapLink": "https://place.map.kakao.com/906824475",
+    "rating": 4.7,
+    "ratingCount": 137,
+    "reviewCount": 48,
+    "menuItems": [
+      {
+        "name": "나고야풍 마제멘",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-24 15:48:13"
+      },
+      {
+        "name": "탄탄멘(시루나시)",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-05-18 18:08:33"
+      },
+      {
+        "name": "라멘 나가사키",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-24 15:48:13"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-04 17:03:01",
+    "priceRange": "9,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101236_9151652_20260402030332_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d4aa2759b26646cb8cccc32fda5271a39168fd34?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "브네",
+    "matched": true,
+    "query": "브네 서울특별시 광진구 군자로 70 106호 VENEZ 브네",
+    "score": 137,
+    "kakaoPlaceId": "807472188",
+    "matchedName": "오다 브네",
+    "category": "양식",
+    "address": "서울 광진구 군자로 70 나동 1층 106호",
+    "lotAddress": "군자동 362-1",
+    "latitude": 37.548912889866344,
+    "longitude": 127.07082222671009,
+    "kakaoMapLink": "https://place.map.kakao.com/807472188",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 128,
+    "menuItems": [
+      {
+        "name": "가츠산도(목살)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-12-13 10:47:09"
+      },
+      {
+        "name": "상로스카츠정식(특등심한정)",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-12-13 10:47:09"
+      },
+      {
+        "name": "가지튀김",
+        "price": 14000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-12-13 10:47:09"
+      }
+    ],
+    "menuUpdatedAt": "2024-12-16 10:34:36",
+    "priceRange": "14,000-16,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148334/2_101226_9148334_20250710031925_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/5501EA00133F4FF4BC8230059040FBD3"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "오코노미야키식당하나",
+    "matched": true,
+    "query": "오코노미야키식당하나 서울특별시 광진구 능동로13길 111 1층",
+    "score": 310,
+    "kakaoPlaceId": "1441425449",
+    "matchedName": "오코노미야키식당하나",
+    "category": "일식",
+    "address": "서울 광진구 능동로13길 111 1층",
+    "lotAddress": "화양동 31-4",
+    "latitude": 37.546218930005004,
+    "longitude": 127.06770553173196,
+    "kakaoMapLink": "https://place.map.kakao.com/1441425449",
+    "rating": 4.6,
+    "ratingCount": 284,
+    "reviewCount": 363,
+    "menuItems": [
+      {
+        "name": "돼지오징어타마",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-12-31 00:19:02"
+      },
+      {
+        "name": "시오소바",
+        "price": 14500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-12-31 00:19:02"
+      },
+      {
+        "name": "돈페이야키",
+        "price": 7500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-12-31 00:19:02"
+      }
+    ],
+    "menuUpdatedAt": "2025-12-31 00:19:02",
+    "priceRange": "7,500-15,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100687_9151652_20260402020827_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/CA84C687839240D599CD356A9EA85C60"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "멘쇼",
+    "matched": true,
+    "query": "멘쇼 서울특별시 광진구 군자로2길 3",
+    "score": 310,
+    "kakaoPlaceId": "1990556306",
+    "matchedName": "멘쇼",
+    "category": "일식",
+    "address": "서울 광진구 군자로2길 3",
+    "lotAddress": "화양동 1-10",
+    "latitude": 37.544418188717515,
+    "longitude": 127.0716824914236,
+    "kakaoMapLink": "https://place.map.kakao.com/1990556306",
+    "rating": 4.3,
+    "ratingCount": 164,
+    "reviewCount": 215,
+    "menuItems": [
+      {
+        "name": "매운맛츠케멘(R)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-30 00:24:57"
+      },
+      {
+        "name": "츠케멘(R)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-29 17:20:56"
+      },
+      {
+        "name": "츠케멘(L)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-29 17:20:56"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-30 00:24:57",
+    "priceRange": "10,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100853_9151652_20260402022310_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/16401af7d19ba00e9a44af30b9198b8702c84638?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "우마텐텐동",
+    "matched": true,
+    "query": "우마텐 텐동 서울특별시 성동구 동일로 143 성수1차 대우아파트 1층 126호",
+    "score": 310,
+    "kakaoPlaceId": "1165080047",
+    "matchedName": "우마텐 텐동",
+    "category": "일식",
+    "address": "서울 성동구 동일로 143 성수대우1차 아파트 1층 126호",
+    "lotAddress": "성수동2가 279-50",
+    "latitude": 37.545427382410985,
+    "longitude": 127.06534207285083,
+    "kakaoMapLink": "https://place.map.kakao.com/1165080047",
+    "rating": 3.3,
+    "ratingCount": 89,
+    "reviewCount": 157,
+    "menuItems": [
+      {
+        "name": "우마텐동",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-28 23:10:09"
+      },
+      {
+        "name": "에비텐동",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-28 23:26:50"
+      },
+      {
+        "name": "스페셜텐동",
+        "price": 17000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-28 23:04:14"
+      }
+    ],
+    "menuUpdatedAt": "2024-03-14 16:31:27",
+    "priceRange": "10,000-17,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151653/2_100074_9151653_20260402052953_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/104DB14E3C864C289C307DF3C76FBD5A"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "호야초밥참치",
+    "matched": true,
+    "query": "호야초밥참치 서울특별시 광진구 능동로13길 39 1층",
+    "score": 230,
+    "kakaoPlaceId": "11989881",
+    "matchedName": "호야초밥참치 본점",
+    "category": "초밥,롤",
+    "address": "서울 광진구 능동로13길 39 한아름건물 1층",
+    "lotAddress": "화양동 10-1",
+    "latitude": 37.543453279873276,
+    "longitude": 127.07007928988185,
+    "kakaoMapLink": "https://place.map.kakao.com/11989881",
+    "rating": 2.9,
+    "ratingCount": 284,
+    "reviewCount": 747,
+    "menuItems": [
+      {
+        "name": "참다랑어",
+        "price": 43000,
+        "desc": "턱살,뱃살,등살,속살",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-15 12:08:23"
+      },
+      {
+        "name": "대뱃살",
+        "price": 44000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-29 14:48:33"
+      },
+      {
+        "name": "오도로배꼽 (12PCS)",
+        "price": 45000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2019-08-07 09:01:05"
+      }
+    ],
+    "menuUpdatedAt": "2023-11-22 15:33:34",
+    "priceRange": "43,000-45,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100649_9151652_20260402020707_cube/right_800.jpg",
+      "https://thumb.kakaocdn.net/dna/kamp/source/rv069p5mo0ek4080j1juujsks/thumbs/1.jpg?credential=TuMuFGKUIcirOSjFzOpncbomGFEIdZWK&expires=33338513122&kamp_tidx=0&signature=2guLAhPo9Gz9VdO8k5dkK8ruy%2Bc%3D&ts=1781604322",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/f0771687cdc89a39078ad0ad44f13e117014b517?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "초라멘",
+    "matched": true,
+    "query": "초라멘 서울특별시 광진구 능동로13길 80 1층",
+    "score": 310,
+    "kakaoPlaceId": "1477555417",
+    "matchedName": "초라멘",
+    "category": "일본식라면",
+    "address": "서울 광진구 능동로13길 80 1층",
+    "lotAddress": "화양동 16-28",
+    "latitude": 37.54516587784888,
+    "longitude": 127.06889047302755,
+    "kakaoMapLink": "https://place.map.kakao.com/1477555417",
+    "rating": 4.6,
+    "ratingCount": 250,
+    "reviewCount": 161,
+    "menuItems": [
+      {
+        "name": "마제멘",
+        "price": 10500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-23 14:53:02"
+      },
+      {
+        "name": "토리파이탄",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-23 14:53:02"
+      },
+      {
+        "name": "카라파이탄",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-23 14:53:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-23 14:53:02",
+    "priceRange": "10,000-10,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100671_9151652_20260402020749_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/67536bae5be28675a9f75b0b862be966fbd1237c?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "슈퍼슬라이더",
+    "matched": true,
+    "query": "슈퍼슬라이더 서울특별시 광진구 능동로13길 50 1층 수퍼슬라이더스",
+    "score": 200,
+    "kakaoPlaceId": "1093085311",
+    "matchedName": "수퍼슬라이더스",
+    "category": "햄버거",
+    "address": "서울 광진구 능동로13길 50 1층 1호",
+    "lotAddress": "화양동 12-41",
+    "latitude": 37.54409128090282,
+    "longitude": 127.06992146844901,
+    "kakaoMapLink": "https://place.map.kakao.com/1093085311",
+    "rating": 4.7,
+    "ratingCount": 102,
+    "reviewCount": 223,
+    "menuItems": [
+      {
+        "name": "부바검프쉬림프",
+        "price": 4300,
+        "desc": "슬라이더2개 8,200원, 슬라이더3개 12,000원, 슬라이더4개 15,800원",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-03-19 09:27:01"
+      },
+      {
+        "name": "버드맨",
+        "price": 4300,
+        "desc": "슬라이더2개 8,200원, 슬라이더3개 12,000원, 슬라이더4개 15,800원",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-03-19 09:27:01"
+      },
+      {
+        "name": "모던타임즈",
+        "price": 8600,
+        "desc": "세트 12,100원",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-03-19 09:27:01"
+      }
+    ],
+    "menuUpdatedAt": "2024-04-30 20:34:46",
+    "priceRange": "4,300-8,600원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100656_9151652_20260402020720_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/BE6FFA1D89FA4601834416646DA09660",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/3594dd3f1b6086abb1bc6e8050ce10128d098730?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "호파스타",
+    "matched": true,
+    "query": "호파스타 서울특별시 광진구 군자로3길 23 1층 호파스타",
+    "score": 137,
+    "kakaoPlaceId": "841786170",
+    "matchedName": "호파스타 생면파스타건대본점HO PASTA",
+    "category": "음식점",
+    "address": "서울 광진구 군자로3길 23",
+    "lotAddress": "화양동 12-52",
+    "latitude": 37.54425329685715,
+    "longitude": 127.07019772141224,
+    "kakaoMapLink": "https://place.map.kakao.com/841786170",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 14,
+    "menuItems": [
+      {
+        "name": "생면 파스타",
+        "price": null
+      }
+    ],
+    "menuUpdatedAt": null,
+    "priceRange": "₩₩",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2013/03/1008010/2_100262_1008010_20130315034747_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjAxMThfMjA4/MDAxNzY4NzE2NTI0MjEw.sJJG-UJG6t4JD8KN8_BsYnbHKZ2w1EoF0KLl6RkMs_Yg.v-yPyA_cHT_vw1qivREVR1JZTgVsmF7gE5lxYc241xEg.JPEG/SE-0c2e8b18-8a05-4c1e-80e8-a51450da8599.jpg?type=w966"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "미분당",
+    "matched": true,
+    "query": "미분당 서울특별시 광진구 군자로3길 27 1층",
+    "score": 222,
+    "kakaoPlaceId": "27487909",
+    "matchedName": "미분당 건대점",
+    "category": "베트남음식",
+    "address": "서울 광진구 군자로3길 27 1층",
+    "lotAddress": "화양동 12-42",
+    "latitude": 37.5441849123411,
+    "longitude": 127.07004376471083,
+    "kakaoMapLink": "https://place.map.kakao.com/27487909",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 90,
+    "menuItems": [
+      {
+        "name": "차돌양지힘줄 쌀국수",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-05-24 01:01:02"
+      },
+      {
+        "name": "양지쌀국수",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-23 23:44:59"
+      },
+      {
+        "name": "차돌박이 쌀국수",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-24 00:42:11"
+      }
+    ],
+    "menuUpdatedAt": "2026-03-20 18:38:45",
+    "priceRange": "9,500-12,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100892_9151652_20260402022628_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/12BDCCD188C54EDDB0FA2D988EF4EDD4"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "꾸아",
+    "matched": true,
+    "query": "꾸아 서울특별시 성동구 왕십리로 94-2 2층",
+    "score": 102,
+    "kakaoPlaceId": "2021790703",
+    "matchedName": "꾸아 서울숲역점",
+    "category": "동남아음식",
+    "address": "서울 성동구 왕십리로 94-2 2층",
+    "lotAddress": "성수동1가 661-2",
+    "latitude": 37.546121678234,
+    "longitude": 127.044915171904,
+    "kakaoMapLink": "https://place.map.kakao.com/2021790703",
+    "rating": 3.7,
+    "ratingCount": 23,
+    "reviewCount": 209,
+    "menuItems": [
+      {
+        "name": "반세오",
+        "price": 28000,
+        "desc": "한국에서 유일하게 제대로된 반세오를 만드는 곳, 다낭 호이안 오리지날 레시피!",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-10 07:39:40"
+      },
+      {
+        "name": "분짜",
+        "price": 18000,
+        "desc": "베트남현지 조리방식에 최상급비장탄으로 구워낸 숯불분짜, 흐엉리엔 스타일",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-10 07:39:40"
+      },
+      {
+        "name": "오리지널하노이직화쌀국수",
+        "price": 11500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-11 11:33:13"
+      }
+    ],
+    "menuUpdatedAt": "2026-03-11 11:33:13",
+    "priceRange": "11,500-28,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148512/2_103210_9148512_20250721041752_cube/left_800.jpg",
+      "https://blog.kakaocdn.net/dn/nfSuW/dJMcaiDwp8I/PUQaPJcIzp1PowhIHhk6Uk/img.jpg"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "보난자",
+    "matched": true,
+    "query": "건대 보난자",
+    "score": 137,
+    "kakaoPlaceId": "1928816021",
+    "matchedName": "보난자커피 군자점",
+    "category": "커피전문점",
+    "address": "서울 광진구 능동로 239-1 B동 1층",
+    "lotAddress": "군자동 270",
+    "latitude": 37.55164136690014,
+    "longitude": 127.0762025318072,
+    "kakaoMapLink": "https://place.map.kakao.com/1928816021",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 511,
+    "menuItems": [
+      {
+        "name": "프랍",
+        "price": 7500,
+        "desc": "군자점에서만 맛볼 수 있는 에스프레소와 아이스크림이 블렌딩되어 부드럽게 마시는 달콤한 커피 쉐이크",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2023-09-13 18:41:05"
+      },
+      {
+        "name": "서울라떼",
+        "price": 6500,
+        "desc": "우유와 크림을 블렌딩하여 기분좋은 단맛과 고소한 늬양스가 특징적인 라떼",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-09-13 18:41:05"
+      },
+      {
+        "name": "아메리카노",
+        "price": 5300,
+        "desc": "독일의 스페셜티 커피 브랜드 Bonanza의 시그니처 블랜드를 사용하여 단맛과 산미의 밸러스가 좋은 블랙커피",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-09-13 17:40:06"
+      }
+    ],
+    "menuUpdatedAt": "2023-09-14 00:00:45",
+    "priceRange": "5,300-7,500원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148357/2_101152_9148357_20250705010641_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/1B92D313A149475EB227600334F3B82E"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "꼬메노",
+    "matched": true,
+    "query": "꼬메노 서울특별시 광진구 군자로7길 29 1층 카페꼬메노",
+    "score": 302,
+    "kakaoPlaceId": "15954181",
+    "matchedName": "꼬메노",
+    "category": "카페",
+    "address": "서울 광진구 군자로7길 29 1층",
+    "lotAddress": "화양동 16-24",
+    "latitude": 37.545583814214446,
+    "longitude": 127.06910812179872,
+    "kakaoMapLink": "https://place.map.kakao.com/15954181",
+    "rating": 4.7,
+    "ratingCount": 123,
+    "reviewCount": 107,
+    "menuItems": [
+      {
+        "name": "꼬메노커피(ICE)",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-11 12:32:08"
+      },
+      {
+        "name": "퐁당오쇼콜라",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-17 15:36:42"
+      },
+      {
+        "name": "티라미수",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 02:00:57"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-29 17:47:36",
+    "priceRange": "6,000-6,500원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_101230_9151652_20260402030243_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/7661c90532291286205d8e388799a5b595bbee30?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "최가회관",
+    "matched": true,
+    "query": "최가회관 서울특별시 광진구 능동로13길 30 지층",
+    "score": 182,
+    "kakaoPlaceId": "1540990560",
+    "matchedName": "최가회관",
+    "category": "커피전문점",
+    "address": "서울 광진구 능동로13길 30 지하1층",
+    "lotAddress": "화양동 12-34",
+    "latitude": 37.543366463110196,
+    "longitude": 127.07061782676277,
+    "kakaoMapLink": "https://place.map.kakao.com/1540990560",
+    "rating": 4.3,
+    "ratingCount": 56,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "유자파운드케이크 + 유자소스",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 14:48:43"
+      },
+      {
+        "name": "다크초코무스",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-16 11:31:51"
+      },
+      {
+        "name": "호두당근케이크",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-16 22:59:51"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-17 14:48:43",
+    "priceRange": "6,500-7,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_100646_9151652_20260402020701_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/a4ac5343d0eba75a94e8621cd5e42f6f77b42855?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "잠수교집",
+    "matched": true,
+    "query": "잠수교집",
+    "score": 97,
+    "kakaoPlaceId": "475641876",
+    "matchedName": "잠수교집 성수점",
+    "category": "삼겹살",
+    "address": "서울 성동구 아차산로 137 1층",
+    "lotAddress": "성수동2가 277-156",
+    "latitude": 37.54381598619771,
+    "longitude": 127.05928909657804,
+    "kakaoMapLink": "https://place.map.kakao.com/475641876",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 455,
+    "menuItems": [
+      {
+        "name": "급랭 삼겹살(1인분)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-15 13:47:27"
+      },
+      {
+        "name": "생삼겹살(1인분)",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-15 13:47:27"
+      },
+      {
+        "name": "시골청국장",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-15 13:47:27"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-30 17:00:44",
+    "priceRange": "9,500-18,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100187_9151598_20260402234226_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/29BC06F19A744966937A85940137A43F"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "꿉당",
+    "matched": true,
+    "query": "꿉당",
+    "score": 97,
+    "kakaoPlaceId": "239928138",
+    "matchedName": "꿉당 성수점",
+    "category": "육류,고기",
+    "address": "서울 성동구 성수이로20길 10 1층",
+    "lotAddress": "성수동2가 273-24",
+    "latitude": 37.54324377096504,
+    "longitude": 127.05763205578747,
+    "kakaoMapLink": "https://place.map.kakao.com/239928138",
+    "rating": 3.9,
+    "ratingCount": 189,
+    "reviewCount": 484,
+    "menuItems": [
+      {
+        "name": "KOKUMI 목살(180g)",
+        "price": 19000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-17 07:20:41"
+      },
+      {
+        "name": "꿉살(150g)",
+        "price": 20000,
+        "desc": "테이블당2인분 한정",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-24 14:27:43"
+      },
+      {
+        "name": "삼겹살(180g)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-24 14:27:43"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-24 14:27:43",
+    "priceRange": "19,000-20,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101584_9151598_20260403012203_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/ed8b28406397dfee6f3c5ae5fea366ce60c319c5?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "땅코참숯구이",
+    "matched": true,
+    "query": "땅코참숯구이",
+    "score": 87,
+    "kakaoPlaceId": "487116221",
+    "matchedName": "땅코참숯구이 본점",
+    "category": "육류,고기",
+    "address": "서울 성동구 행당로17길 26 1층",
+    "lotAddress": "행당동 292-34",
+    "latitude": 37.5606857384056,
+    "longitude": 127.03299007959369,
+    "kakaoMapLink": "https://place.map.kakao.com/487116221",
+    "rating": 4,
+    "ratingCount": 339,
+    "reviewCount": 659,
+    "menuItems": [
+      {
+        "name": "목살 (200g)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-12-07 13:28:02"
+      },
+      {
+        "name": "삼겹살 (200g)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-12-07 13:28:02"
+      },
+      {
+        "name": "전투라면",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-12-29 23:00:00"
+      }
+    ],
+    "menuUpdatedAt": "2025-12-29 23:29:54",
+    "priceRange": "8,000-20,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148469/2_103398_9148469_20250723044047_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/AA7D7D1136A84A2784D42313F9C247B5"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "성수동양갈비",
+    "matched": true,
+    "query": "성수동양갈비",
+    "score": 177,
+    "kakaoPlaceId": "1774035310",
+    "matchedName": "성수동양갈비",
+    "category": "갈비",
+    "address": "서울 성동구 성수일로12길 33 1층",
+    "lotAddress": "성수동2가 299-234",
+    "latitude": 37.54770334137667,
+    "longitude": 127.05462991598964,
+    "kakaoMapLink": "https://place.map.kakao.com/1774035310",
+    "rating": 4.6,
+    "ratingCount": 38,
+    "reviewCount": 29,
+    "menuItems": [
+      {
+        "name": "양갈비 (250g)",
+        "price": 28000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-22 08:13:11"
+      },
+      {
+        "name": "돼지갈비 (280g)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-28 22:53:17"
+      },
+      {
+        "name": "양곰탕",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-28 22:53:17"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-29 22:44:30",
+    "priceRange": "10,000-28,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102307_9148454_20250722051040_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d9b0748f226ceffff601a748cdd13ce88a129b48?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "능동미나리",
+    "matched": true,
+    "query": "능동미나리",
+    "score": 97,
+    "kakaoPlaceId": "134670855",
+    "matchedName": "능동미나리 성수점",
+    "category": "한식",
+    "address": "서울 성동구 연무장길 42 1층",
+    "lotAddress": "성수동2가 310-14",
+    "latitude": 37.542758970024174,
+    "longitude": 127.05395190924062,
+    "kakaoMapLink": "https://place.map.kakao.com/134670855",
+    "rating": 4,
+    "ratingCount": 301,
+    "reviewCount": 1503,
+    "menuItems": [
+      {
+        "name": "능동미나리곰탕",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-25 17:25:17"
+      },
+      {
+        "name": "능동육회비빔밥",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-01 23:18:18"
+      },
+      {
+        "name": "능동곰탕",
+        "price": 14000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-28 13:55:10"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-01 23:18:18",
+    "priceRange": "14,000-15,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101185_9151598_20260403004203_cube/left_800.jpg",
+      "https://thumb.kakaocdn.net/dna/kamp/source/rv45nupqps3xaku38cfr0przc/thumbs/1.jpg?credential=TuMuFGKUIcirOSjFzOpncbomGFEIdZWK&expires=33326943960&kamp_tidx=0&signature=EfsLmz1y4wkuCszUXIJ4UJMyAQc%3D&ts=1770035160",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/cad066cdc7416906a1cd95eb7f8257f7fb09d083?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "금금",
+    "matched": true,
+    "query": "금금",
+    "score": 177,
+    "kakaoPlaceId": "282713203",
+    "matchedName": "금금",
+    "category": "한식",
+    "address": "서울 성동구 성수이로12길 11 1층 101호",
+    "lotAddress": "성수동2가 269-115",
+    "latitude": 37.53982765242884,
+    "longitude": 127.05665633866963,
+    "kakaoMapLink": "https://place.map.kakao.com/282713203",
+    "rating": 3.9,
+    "ratingCount": 158,
+    "reviewCount": 204,
+    "menuItems": [
+      {
+        "name": "보리된장고기국수",
+        "price": 13500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2024-03-27 10:51:14"
+      },
+      {
+        "name": "들기름통밀국수",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2024-03-27 10:51:14"
+      },
+      {
+        "name": "문어간장비빔밥",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-03-27 10:51:14"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-30 16:13:52",
+    "priceRange": "9,500-13,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101552_9151598_20260403011057_cube/left_800.jpg",
+      "http://t1.daumcdn.net/place/5542B886E8F1415782FCE37A40D6A665",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/21a6b4b807c4524bc7761fe35f611d30cfc99d19?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "돼지공탕하우",
+    "matched": true,
+    "query": "돼지공탕하우",
+    "score": 97,
+    "kakaoPlaceId": "1159905218",
+    "matchedName": "돼지공탕 하우 성수점",
+    "category": "국밥",
+    "address": "서울 성동구 아차산로7길 36 1층 2호",
+    "lotAddress": "성수동2가 289-39",
+    "latitude": 37.548420039143075,
+    "longitude": 127.05569416860772,
+    "kakaoMapLink": "https://place.map.kakao.com/1159905218",
+    "rating": 4.4,
+    "ratingCount": 36,
+    "reviewCount": 352,
+    "menuItems": [
+      {
+        "name": "하우 곰탕(보통)",
+        "price": 12000,
+        "desc": "엄선된 문경 약돌 돼지를 저온, 고압에서 천천히 우려낸 국물에 육수에 특제 오일을 더한 맑은 돼지 곰탕입니다. 하우만 깊은 맛을 곰탕 한그릇에 오롯이 담았습니다.",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-07-31 16:24:45"
+      },
+      {
+        "name": "하우 냉면",
+        "price": 14000,
+        "desc": "문경 약돌 돼지를 저온, 고압에서 진하게 우려낸 풍미 깊은 육수에 구수한 메밀면을 더한 평양식 물냉면을 선보입니다. 마지막에 같이 공깃밥을 말아드시는게 별미.",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-07-31 16:24:45"
+      },
+      {
+        "name": "하우 곰탕(특)",
+        "price": 15000,
+        "desc": "엄선된 문경 약돌 돼지를 저온, 고압에서 천천히 우려낸 국물에 육수에 특제 오일을 더한 맑은 돼지 곰탕입니다. 하우만 깊은 맛을 곰탕 한그릇에 오롯이 담았습니다.",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-31 23:35:06"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-31 23:53:11",
+    "priceRange": "12,000-15,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102834_9148454_20250722054409_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/91DFD8BCAF4249239B16EEE1A078E124"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "실비옥",
+    "matched": true,
+    "query": "실비옥",
+    "score": 177,
+    "kakaoPlaceId": "1907528700",
+    "matchedName": "실비옥",
+    "category": "한식",
+    "address": "서울 성동구 아차산로 126",
+    "lotAddress": "성수동2가 273-52",
+    "latitude": 37.54349944850003,
+    "longitude": 127.05805319024685,
+    "kakaoMapLink": "https://place.map.kakao.com/1907528700",
+    "rating": 3.9,
+    "ratingCount": 16,
+    "reviewCount": 228,
+    "menuItems": [
+      {
+        "name": "소고기미역수제비전골",
+        "price": 12900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-22 09:43:26"
+      },
+      {
+        "name": "오징어미나리전",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-22 23:20:46"
+      },
+      {
+        "name": "오징어미나리수제비전골",
+        "price": 13900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-22 09:43:26"
+      }
+    ],
+    "menuUpdatedAt": "2026-05-19 12:35:39",
+    "priceRange": "12,900-15,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100476_9151598_20260402235954_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MDlfNjcg/MDAxNzgwOTcxMjIzMjIy.i2ta0veNZ-XBsUFkIgiN2ttd_iM0mDmT3ntWwpnOFx4g.xvgjhsKq3096wBeKOEj8iCqnumeojqwg8u_NeAYsWw4g.JPEG/SE-BCE6F32C-99EA-491E-952F-E19304D07CD2.jpg?type=w773"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "솥솥",
+    "matched": true,
+    "query": "솥솥",
+    "score": 138,
+    "kakaoPlaceId": "1862680828",
+    "matchedName": "솥솥",
+    "category": "한식",
+    "address": "대구 중구 남성로 31 1층",
+    "lotAddress": "남성로 59",
+    "latitude": 35.867818493291566,
+    "longitude": 128.5901755274846,
+    "kakaoMapLink": "https://place.map.kakao.com/1862680828",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 0,
+    "menuItems": [
+      {
+        "name": "돌솥밥",
+        "price": null
+      }
+    ],
+    "menuUpdatedAt": null,
+    "priceRange": null,
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/10/9149402/2_101689_9149402_20251010024739_cube/left_800.jpg"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "조조칼국수",
+    "matched": true,
+    "query": "조조칼국수",
+    "score": 97,
+    "kakaoPlaceId": "1143126185",
+    "matchedName": "조조칼국수 성수점",
+    "category": "칼국수",
+    "address": "서울 성동구 성수일로8길 55 1층",
+    "lotAddress": "성수동2가 289-257",
+    "latitude": 37.54523363664487,
+    "longitude": 127.05668306123671,
+    "kakaoMapLink": "https://place.map.kakao.com/1143126185",
+    "rating": 4.3,
+    "ratingCount": 177,
+    "reviewCount": 1649,
+    "menuItems": [
+      {
+        "name": "동죽칼국수",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-03 17:01:29"
+      },
+      {
+        "name": "낙지해물파전",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-03 17:01:29"
+      },
+      {
+        "name": "물총조개탕",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-03 17:01:29"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-03 17:01:29",
+    "priceRange": "10,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_103323_9148454_20250722063658_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/fc3519b5e8f4655501a199e9b61943d0775b4e2e?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "칼",
+    "matched": true,
+    "query": "칼",
+    "score": 177,
+    "kakaoPlaceId": "1563080666",
+    "matchedName": "칼",
+    "category": "국수",
+    "address": "서울 성동구 성수이로 126 1층",
+    "lotAddress": "성수동2가 277-20",
+    "latitude": 37.54620617768321,
+    "longitude": 127.05779275946557,
+    "kakaoMapLink": "https://place.map.kakao.com/1563080666",
+    "rating": 4,
+    "ratingCount": 27,
+    "reviewCount": 186,
+    "menuItems": [
+      {
+        "name": "부추수제비",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-11 08:48:12"
+      },
+      {
+        "name": "바지락칼국수",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-11 08:48:12"
+      },
+      {
+        "name": "녹두전(한접시)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-11 23:20:32"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-12 11:31:41",
+    "priceRange": "10,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102773_9148454_20250722054051_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/D2C771823B5A42928999C2F8DF0716D6"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "르프리크",
+    "matched": true,
+    "query": "르프리크",
+    "score": 169,
+    "kakaoPlaceId": "936069123",
+    "matchedName": "르프리크",
+    "category": "햄버거",
+    "address": "서울 성동구 연무장5길 9-16 B103호",
+    "lotAddress": "성수동2가 302-8",
+    "latitude": 37.544439016637995,
+    "longitude": 127.05265860726594,
+    "kakaoMapLink": "https://place.map.kakao.com/936069123",
+    "rating": 4.3,
+    "ratingCount": 524,
+    "reviewCount": 726,
+    "menuItems": [
+      {
+        "name": "SIGNATURE",
+        "price": 12800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-05-02 15:59:54"
+      },
+      {
+        "name": "CHAT POTATO",
+        "price": 7300,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-02 10:47:23"
+      },
+      {
+        "name": "EGGPLANT",
+        "price": 7800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-02 10:47:23"
+      }
+    ],
+    "menuUpdatedAt": "2025-10-02 10:47:23",
+    "priceRange": "7,300-12,800원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100810_9151598_20260403001841_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/DFE065E50ED64CE9843870C1720E0542"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "bd버거",
+    "matched": true,
+    "query": "bd버거",
+    "score": 59,
+    "kakaoPlaceId": "1724006766",
+    "matchedName": "비디버거 성수",
+    "category": "햄버거",
+    "address": "서울 성동구 성수이로14길 7 2층",
+    "lotAddress": "성수동2가 322-20",
+    "latitude": 37.54106033026674,
+    "longitude": 127.05642644215017,
+    "kakaoMapLink": "https://place.map.kakao.com/1724006766",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 1088,
+    "menuItems": [
+      {
+        "name": "[SIGNATURE] bd WASABI SHRIMP",
+        "price": 11400,
+        "desc": "[SIGNATURE] 부드러워진 와사비 소스와 새우, 청겨자의 조화로 더욱 새로워진 bd시그니처 수제버거. 와사비 새우 버거.",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-11-22 12:50:02"
+      },
+      {
+        "name": "[BEST] DOUBLE CHEESE BURGER",
+        "price": 12400,
+        "desc": "[BEST] 두툼한 식감의 더블 치즈&패티와 육즙 가득한 비프 버거",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-11-22 12:50:02"
+      },
+      {
+        "name": "[BEST] 버터갈릭 감자튀김",
+        "price": 6900,
+        "desc": "[BEST] 갈릭향이 가득한 버터소스가 꾸덕하게 얹어진 짭쪼롬한 감자튀김",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-02-01 22:03:10"
+      }
+    ],
+    "menuUpdatedAt": "2025-11-22 12:50:02",
+    "priceRange": "6,900-12,400원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101610_9151598_20260403012314_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/7194FAA523864DC085A5B429592DA0E9"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "롸카두들",
+    "matched": true,
+    "query": "롸카두들",
+    "score": 89,
+    "kakaoPlaceId": "87489103",
+    "matchedName": "롸카두들 내쉬빌 핫치킨 성수점",
+    "category": "햄버거",
+    "address": "서울 성동구 성수일로4길 25 서울숲코오롱디지털타워 상가 1층 108호",
+    "lotAddress": "성수동2가 308-4",
+    "latitude": 37.542255253699025,
+    "longitude": 127.05207319978068,
+    "kakaoMapLink": "https://place.map.kakao.com/87489103",
+    "rating": 4.4,
+    "ratingCount": 120,
+    "reviewCount": 348,
+    "menuItems": [
+      {
+        "name": "클래식",
+        "price": 11800,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2023-10-11 20:56:11"
+      },
+      {
+        "name": "포포",
+        "price": 12800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-15 17:25:15"
+      },
+      {
+        "name": "그랜파",
+        "price": 11500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-15 17:25:15"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-09 09:43:49",
+    "priceRange": "11,500-12,800원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100728_9151598_20260403001254_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/9326C59F31EA471CA6BC7819487FB7A7"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "핑거팁스",
+    "matched": true,
+    "query": "핑거팁스",
+    "score": 169,
+    "kakaoPlaceId": "1257457465",
+    "matchedName": "핑거팁스",
+    "category": "햄버거",
+    "address": "서울 성동구 광나루로2길 34-17 1층",
+    "lotAddress": "성수동2가 299-231",
+    "latitude": 37.54786550852177,
+    "longitude": 127.05465719319054,
+    "kakaoMapLink": "https://place.map.kakao.com/1257457465",
+    "rating": 4.5,
+    "ratingCount": 17,
+    "reviewCount": 168,
+    "menuItems": [
+      {
+        "name": "인덱스버거",
+        "price": 9400,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-04 02:07:57"
+      },
+      {
+        "name": "투썸즈버거",
+        "price": 12400,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-18 11:33:23"
+      },
+      {
+        "name": "핑키버거",
+        "price": 10900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-03 23:31:16"
+      }
+    ],
+    "menuUpdatedAt": "2025-08-18 11:33:23",
+    "priceRange": "9,400-12,400원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102999_9148454_20250722060142_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/1a9b0435f15557092468e5c2ee1ca8ba12d5203d?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "마오",
+    "matched": true,
+    "query": "마오",
+    "score": 135,
+    "kakaoPlaceId": "519499689",
+    "matchedName": "마오",
+    "category": "중국요리",
+    "address": "서울 서초구 명달로 93 1-2층",
+    "lotAddress": "서초동 1496-12",
+    "latitude": 37.48569083180812,
+    "longitude": 127.00379456371672,
+    "kakaoMapLink": "https://place.map.kakao.com/519499689",
+    "rating": 3.1,
+    "ratingCount": 36,
+    "reviewCount": 54,
+    "menuItems": [
+      {
+        "name": "북경오리 (소)",
+        "price": 43000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-04-14 11:19:24"
+      },
+      {
+        "name": "포로샤추",
+        "price": 38000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-04-14 11:19:24"
+      },
+      {
+        "name": "자장면",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-04-14 23:32:09"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-02 21:35:14",
+    "priceRange": "7,000-43,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/06/9147915/2_102459_9147915_20250618034244_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/09799e284ca272ab1b488ef11ccd75d37e161224?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "마하차이",
+    "matched": true,
+    "query": "마하차이",
+    "score": 169,
+    "kakaoPlaceId": "522438272",
+    "matchedName": "마하차이",
+    "category": "태국음식",
+    "address": "서울 성동구 뚝섬로 399 2층",
+    "lotAddress": "성수동2가 339-22",
+    "latitude": 37.53895262378738,
+    "longitude": 127.05508517665906,
+    "kakaoMapLink": "https://place.map.kakao.com/522438272",
+    "rating": 4,
+    "ratingCount": 128,
+    "reviewCount": 261,
+    "menuItems": [
+      {
+        "name": "오물렛팟타이",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-31 00:24:02"
+      },
+      {
+        "name": "푸팟퐁커리덮밥",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-06-03 09:03:12"
+      },
+      {
+        "name": "나시고랭",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-12-09 22:59:17"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-25 14:38:45",
+    "priceRange": "12,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100085_9151598_20260402233311_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/0BCBE06FBECC4821805E4343CD7B558B"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "벱",
+    "matched": true,
+    "query": "벱",
+    "score": 169,
+    "kakaoPlaceId": "1079903424",
+    "matchedName": "벱",
+    "category": "베트남음식",
+    "address": "서울 성동구 성수일로4가길 2 1층",
+    "lotAddress": "성수동2가 321-21",
+    "latitude": 37.542063371714406,
+    "longitude": 127.05401024761336,
+    "kakaoMapLink": "https://place.map.kakao.com/1079903424",
+    "rating": 4.1,
+    "ratingCount": 266,
+    "reviewCount": 474,
+    "menuItems": [
+      {
+        "name": "해산물 볶음밥",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-21 07:30:19"
+      },
+      {
+        "name": "짜조",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-21 07:30:19"
+      },
+      {
+        "name": "양지&차돌박이 쌀국수",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-21 07:30:19"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-21 07:30:19",
+    "priceRange": "5,000-13,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101072_9151598_20260403003420_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c3c7dc48882d25cc225fc6d5b4bc5e013ef21852?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "남짐릇",
+    "matched": true,
+    "query": "남짐릇",
+    "score": 169,
+    "kakaoPlaceId": "913958943",
+    "matchedName": "남짐릇",
+    "category": "태국음식",
+    "address": "서울 성동구 연무장5가길 32 지하1층",
+    "lotAddress": "성수동2가 315-21",
+    "latitude": 37.54306445370971,
+    "longitude": 127.05579428666519,
+    "kakaoMapLink": "https://place.map.kakao.com/913958943",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 461,
+    "menuItems": [
+      {
+        "name": "카오카무",
+        "price": 14000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-01-17 10:07:03"
+      },
+      {
+        "name": "닭고기 쌀국수",
+        "price": 11500,
+        "desc": "닭다리 포함한 금액입니다.",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-01-17 10:07:03"
+      }
+    ],
+    "menuUpdatedAt": "2025-01-17 10:07:03",
+    "priceRange": "11,500-14,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100852_9151598_20260403002029_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MjRfMTQy/MDAxNzgyMjc5ODAwNzY5.UzFTt3B6laIvbjPEUWykFK4GH9vP9Kc4SRXnEtvzZ64g.lbCYc3b28eMQel9sinPEw-04oiOf0FM9Qp7CEJq_GYEg.JPEG/IMG%EF%BC%BF9663.jpg?type=w966"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "페이퍼플레이트",
+    "matched": true,
+    "query": "페이퍼플레이트",
+    "score": 177,
+    "kakaoPlaceId": "632570382",
+    "matchedName": "페이퍼플레이트",
+    "category": "피자",
+    "address": "서울 성동구 성수이로14길 15 1층",
+    "lotAddress": "성수동2가 322-21",
+    "latitude": 37.54173775387809,
+    "longitude": 127.05669399285443,
+    "kakaoMapLink": "https://place.map.kakao.com/632570382",
+    "rating": 4.6,
+    "ratingCount": 140,
+    "reviewCount": 353,
+    "menuItems": [
+      {
+        "name": "CHEESE",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-06 08:13:02"
+      },
+      {
+        "name": "PEPPERONI",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-06 08:13:02"
+      },
+      {
+        "name": "MARGHERITA",
+        "price": 7500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-06 08:13:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-06 08:13:02",
+    "priceRange": "6,000-7,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101602_9151598_20260403012246_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/AE5C05A9FBC848628A0812D9E09B8686"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "세스크멘슬",
+    "matched": true,
+    "query": "세스크멘슬",
+    "score": 110,
+    "kakaoPlaceId": "1355861094",
+    "matchedName": "세스크멘슬",
+    "category": "식품가공,제조",
+    "address": "경기 양평군 서종면 서능로 16-5",
+    "lotAddress": "서종면 수능리 85-1",
+    "latitude": 37.58392642185643,
+    "longitude": 127.3920632744835,
+    "kakaoMapLink": "https://place.map.kakao.com/1355861094",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 0,
+    "menuItems": [
+      {
+        "name": "샤퀴테리",
+        "price": null
+      }
+    ],
+    "menuUpdatedAt": null,
+    "priceRange": null,
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/01/9140017/2_102800_9140017_20240118030157_cube/right_800.jpg"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "마리오네",
+    "matched": true,
+    "query": "마리오네",
+    "score": 177,
+    "kakaoPlaceId": "1590694902",
+    "matchedName": "마리오네",
+    "category": "이탈리안",
+    "address": "서울 성동구 광나루로2길 23-1 1층",
+    "lotAddress": "성수동2가 299-50",
+    "latitude": 37.54892884318993,
+    "longitude": 127.05431847915159,
+    "kakaoMapLink": "https://place.map.kakao.com/1590694902",
+    "rating": 4.3,
+    "ratingCount": 313,
+    "reviewCount": 747,
+    "menuItems": [
+      {
+        "name": "가리발디",
+        "price": 29000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-12 12:51:02"
+      },
+      {
+        "name": "프로슈토 부팔라",
+        "price": 32000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-03-12 17:54:03"
+      },
+      {
+        "name": "보따르가",
+        "price": 40000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-12 12:51:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-03-12 17:54:03",
+    "priceRange": "29,000-40,000원",
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102982_9148454_20250722055950_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/94B69056429C4849861F3D06014FF930"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "피읻짜",
+    "matched": true,
+    "query": "피읻짜",
+    "score": 177,
+    "kakaoPlaceId": "1117466948",
+    "matchedName": "피읻짜",
+    "category": "피자",
+    "address": "서울 성동구 아차산로7길 11 2층",
+    "lotAddress": "성수동2가 289-101",
+    "latitude": 37.546236618167434,
+    "longitude": 127.05440705315878,
+    "kakaoMapLink": "https://place.map.kakao.com/1117466948",
+    "rating": 4.4,
+    "ratingCount": 49,
+    "reviewCount": 145,
+    "menuItems": [
+      {
+        "name": "마르게리따피자",
+        "price": 19000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-29 17:56:14"
+      },
+      {
+        "name": "살라미피자",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-29 17:56:14"
+      },
+      {
+        "name": "화덕 먹태구이",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-29 17:56:14"
+      }
+    ],
+    "menuUpdatedAt": "2025-08-22 15:43:14",
+    "priceRange": "15,000-20,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102807_9148454_20250722054320_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/5B2671852D82421FA5CD22F3B8D5A620"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "코치",
+    "matched": true,
+    "query": "코치",
+    "score": 177,
+    "kakaoPlaceId": "1990658906",
+    "matchedName": "코치",
+    "category": "일식",
+    "address": "서울 성동구 성덕정17길 11 1층",
+    "lotAddress": "성수동2가 565",
+    "latitude": 37.538184936035016,
+    "longitude": 127.05516155205558,
+    "kakaoMapLink": "https://place.map.kakao.com/1990658906",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 1012,
+    "menuItems": [
+      {
+        "name": "다리살대파",
+        "price": 3800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-12 13:08:24"
+      },
+      {
+        "name": "염통",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-12 13:08:24"
+      },
+      {
+        "name": "볏짚에 구운 통허벅지",
+        "price": 4800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-12 13:08:24"
+      }
+    ],
+    "menuUpdatedAt": "2025-11-13 00:03:20",
+    "priceRange": "3,000-4,800원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_100671_9148454_20250722010011_cube/right_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MTlfMjQy/MDAxNzgxODQyMTkxODEx.hvyZX6rnhPJO_hg7qXYH6yJ6fptCEDQ7ka0loHIIMGIg.ylbTmrHeyfWlG8rC9nAXJ6PsT1ngdT_xY6ye067EJHcg.JPEG/SE-FE0FC81D-F1D1-483D-874E-A9991770E1EE.jpg?type=w386"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "가조쿠",
+    "matched": true,
+    "query": "가조쿠",
+    "score": 177,
+    "kakaoPlaceId": "1869562416",
+    "matchedName": "가조쿠",
+    "category": "일식",
+    "address": "서울 성동구 연무장길 31-2 1층",
+    "lotAddress": "성수동2가 316-77",
+    "latitude": 37.543199043323405,
+    "longitude": 127.05310130205304,
+    "kakaoMapLink": "https://place.map.kakao.com/1869562416",
+    "rating": 3.9,
+    "ratingCount": 164,
+    "reviewCount": 299,
+    "menuItems": [
+      {
+        "name": "(따뜻한)에비텐소바",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 12:58:59"
+      },
+      {
+        "name": "(따뜻한)니싱소바",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 12:58:59"
+      },
+      {
+        "name": "(시원한)자루소바",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 12:58:59"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-06 23:29:43",
+    "priceRange": "11,000-18,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101176_9151598_20260403004139_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/ad960e5528405db82b28e5dc3333acff40f1f10a?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "소바마에니고",
+    "matched": true,
+    "query": "소바마에니고",
+    "score": 177,
+    "kakaoPlaceId": "6928575",
+    "matchedName": "소바마에니고",
+    "category": "일식",
+    "address": "서울 성동구 연무장길 39-15 지층",
+    "lotAddress": "성수동2가 316-40",
+    "latitude": 37.54332481609053,
+    "longitude": 127.05391158119325,
+    "kakaoMapLink": "https://place.map.kakao.com/6928575",
+    "rating": 2.8,
+    "ratingCount": 65,
+    "reviewCount": 295,
+    "menuItems": [
+      {
+        "name": "카모세이로",
+        "price": 21800,
+        "desc": "따뜻한 국물에 오리고기가 들어가있고 냉소바를 적셔 먹는다.",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2024-10-24 17:10:16"
+      },
+      {
+        "name": "니싱소바",
+        "price": 21800,
+        "desc": "냉,온소바가 있다. 말린 청어를 달짝지근하게 조려 올라가있는 면이다. 소바마에의 시니쳐이기도하다.",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-24 17:10:16"
+      },
+      {
+        "name": "카케소바",
+        "price": 13800,
+        "desc": "냉,온소바가있다 가장 기본적인 소바로 씀씀한 국물에 야채4종이 토핑되어있다.",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-24 17:10:16"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-03 20:33:35",
+    "priceRange": "13,800-21,800원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100835_9151598_20260403001958_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/1F6BBEC78C7D47F9A0C8669B28626DA1"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "탐광",
+    "matched": true,
+    "query": "탐광",
+    "score": 177,
+    "kakaoPlaceId": "1855191777",
+    "matchedName": "탐광",
+    "category": "일식집",
+    "address": "서울 성동구 연무장5가길 26 1층",
+    "lotAddress": "성수동2가 315-24",
+    "latitude": 37.54317275263071,
+    "longitude": 127.05541416728498,
+    "kakaoMapLink": "https://place.map.kakao.com/1855191777",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 1363,
+    "menuItems": [
+      {
+        "name": "에비에비카츠동",
+        "price": 17000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-08 13:04:05"
+      },
+      {
+        "name": "뉴에비가츠동",
+        "price": 14000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-09-12 17:08:13"
+      },
+      {
+        "name": "대창소고기카레누들",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-09-12 17:08:13"
+      }
+    ],
+    "menuUpdatedAt": "2024-10-08 14:35:42",
+    "priceRange": "14,000-17,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100849_9151598_20260403002024_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MjRfNTkg/MDAxNzgyMzA2MTAwNTkx.wq4CzEZ7Pg_77WJiyjLCcgOFNzFbfQmIoQBAmT6m9agg.Hwi394gL63bmS5Q-0fEG3E6tPtYhvfOcOcBOrMyY9jgg.JPEG/SE-4394E941-8D8B-451C-B321-28D2B56B2428.jpg?type=w773"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "토리아에즈",
+    "matched": true,
+    "query": "토리아에즈",
+    "score": 89,
+    "kakaoPlaceId": "1461015420",
+    "matchedName": "토리아에즈 성수점",
+    "category": "일본식주점",
+    "address": "서울 성동구 아차산로7길 7 1층",
+    "lotAddress": "성수동2가 289-273",
+    "latitude": 37.5460204201641,
+    "longitude": 127.05431636875717,
+    "kakaoMapLink": "https://place.map.kakao.com/1461015420",
+    "rating": 4.5,
+    "ratingCount": 32,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "명란구이",
+        "price": 4900,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-29 01:48:12"
+      },
+      {
+        "name": "계란구이",
+        "price": 2800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-05 13:46:10"
+      },
+      {
+        "name": "레몬하이볼",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-05 13:46:10"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-06 00:06:21",
+    "priceRange": "2,800-6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102805_9148454_20250722054315_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/374BB4B99C8E44A190CEDC1E0AD4572B"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "라무라",
+    "matched": true,
+    "query": "라무라",
+    "score": 143,
+    "kakaoPlaceId": "461869810",
+    "matchedName": "라무라",
+    "category": "일식",
+    "address": "서울 마포구 포은로 21 1층 101호",
+    "lotAddress": "합정동 395-16",
+    "latitude": 37.549788940172306,
+    "longitude": 126.90859906201337,
+    "kakaoMapLink": "https://place.map.kakao.com/461869810",
+    "rating": 4.1,
+    "ratingCount": 346,
+    "reviewCount": 512,
+    "menuItems": [
+      {
+        "name": "흑색 닭(닭사이즈 )",
+        "price": 16500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-06 14:13:15"
+      },
+      {
+        "name": "적색 닭(닭사이즈)",
+        "price": 17500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-06 14:13:15"
+      },
+      {
+        "name": "백색 닭(닭사이즈)",
+        "price": 16500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-06 14:13:15"
+      }
+    ],
+    "menuUpdatedAt": "2025-08-06 14:13:15",
+    "priceRange": "16,500-17,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/06/9147809/2_103761_9147809_20250612050935_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/A1EBE2B7B7694CB2BD304BD105AA1F38"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "도죠",
+    "matched": true,
+    "query": "도죠",
+    "score": 177,
+    "kakaoPlaceId": "1318637977",
+    "matchedName": "도죠",
+    "category": "일식",
+    "address": "서울 성동구 성수이로 126 A열 5호",
+    "lotAddress": "성수동2가 277-20",
+    "latitude": 37.54622407999898,
+    "longitude": 127.05803267121173,
+    "kakaoMapLink": "https://place.map.kakao.com/1318637977",
+    "rating": 3.4,
+    "ratingCount": 30,
+    "reviewCount": 437,
+    "menuItems": [
+      {
+        "name": "나가사끼 짬뽕",
+        "price": 10500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-11 08:36:18"
+      },
+      {
+        "name": "카라미소 라멘",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-11 08:36:18"
+      },
+      {
+        "name": "탄탄멘",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-07-11 08:36:18"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-11 08:36:18",
+    "priceRange": "10,000-10,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102341_9148454_20250722051209_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/e835087e22fd6a4fae40e5bc67cbb41d41f12c24?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "죠죠",
+    "matched": true,
+    "query": "죠죠",
+    "score": 97,
+    "kakaoPlaceId": "1103690927",
+    "matchedName": "죠죠 성수점",
+    "category": "일식",
+    "address": "서울 성동구 연무장17길 7 1층",
+    "lotAddress": "성수동2가 272-1",
+    "latitude": 37.54149413176378,
+    "longitude": 127.06101622430816,
+    "kakaoMapLink": "https://place.map.kakao.com/1103690927",
+    "rating": 3.8,
+    "ratingCount": 147,
+    "reviewCount": 3396,
+    "menuItems": [
+      {
+        "name": "명란 몬자야끼",
+        "price": 19500,
+        "desc": "명란과 모찌가 들어간 감칠맛 몬자야끼",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2026-03-03 12:56:02"
+      },
+      {
+        "name": "몬자야끼 2인",
+        "price": 39500,
+        "desc": "명란 몬자야끼 + 카라이 야끼소바 + 폭포테이토",
+        "isRecommended": true,
+        "sourceUpdatedAt": "2026-03-03 12:56:02"
+      },
+      {
+        "name": "폭포테이토",
+        "price": 7000,
+        "desc": "죠죠의 인기 사이드 메뉴 포테이토매쉬 위 계란이 올라간 요리 🥚",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-06 15:24:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-03-03 12:56:02",
+    "priceRange": "7,000-39,500원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101654_9151598_20260403012803_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/00C2670443314736B9AE718BB898B0A2"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "성수속향연",
+    "matched": true,
+    "query": "성수속향연",
+    "score": 177,
+    "kakaoPlaceId": "1177409967",
+    "matchedName": "성수속향연",
+    "category": "중국요리",
+    "address": "서울 성동구 성수이로 65 협성빌딩 1층 102호",
+    "lotAddress": "성수동2가 309-148",
+    "latitude": 37.540974297418785,
+    "longitude": 127.05544874865501,
+    "kakaoMapLink": "https://place.map.kakao.com/1177409967",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 427,
+    "menuItems": [
+      {
+        "name": "향연 짜장면",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-02 09:17:45"
+      },
+      {
+        "name": "향연 부추 해물 짬뽕",
+        "price": 9500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-02 09:17:45"
+      },
+      {
+        "name": "안심 탕수육 (소)",
+        "price": 18000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-02 09:17:45"
+      }
+    ],
+    "menuUpdatedAt": "2024-07-02 09:17:45",
+    "priceRange": "8,000-18,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101017_9151598_20260403003100_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/FC796FFFA39A4F11B3C50B0B4902AD54"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "중앙감속기",
+    "matched": true,
+    "query": "중앙감속기",
+    "score": 169,
+    "kakaoPlaceId": "138978252",
+    "matchedName": "중앙감속기",
+    "category": "퓨전요리",
+    "address": "서울 성동구 성수일로6길 7-1 1층",
+    "lotAddress": "성수동2가 301-98",
+    "latitude": 37.545574967144404,
+    "longitude": 127.05108424107581,
+    "kakaoMapLink": "https://place.map.kakao.com/138978252",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 917,
+    "menuItems": [
+      {
+        "name": "바질 새우 춘권(4pcs)",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-11-20 11:58:05"
+      },
+      {
+        "name": "차돌 마라 크림 짬뽕",
+        "price": 19500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-02-16 13:26:07"
+      },
+      {
+        "name": "어향부라타",
+        "price": 19000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-11-20 11:58:05"
+      }
+    ],
+    "menuUpdatedAt": "2023-11-20 11:58:05",
+    "priceRange": "15,000-19,500원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100542_9151598_20260403000153_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MjhfOTMg/MDAxNzgyNjE0NDA4NTIy.HAFN109jl4b_2fm4thMeTkGjYHCJDZdM_SGMpXvXrFcg.ozlb6478CxYOIsTeQSJ94p5R7jaTk4oSR1skD0-KLLkg.JPEG/IMG%EF%BC%BF7033.jpg?type=w773"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "데니스타코",
+    "matched": true,
+    "query": "데니스타코",
+    "score": 55,
+    "kakaoPlaceId": "90747064",
+    "matchedName": "데니스타코 송파점",
+    "category": "멕시칸,브라질",
+    "address": "서울 송파구 송파대로30길 39 종원빌딩 106호",
+    "lotAddress": "가락동 76-2",
+    "latitude": 37.49607682004948,
+    "longitude": 127.12118499826492,
+    "kakaoMapLink": "https://place.map.kakao.com/90747064",
+    "rating": 4,
+    "ratingCount": 34,
+    "reviewCount": 157,
+    "menuItems": [
+      {
+        "name": "치킨부리또",
+        "price": 8500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-11-03 12:19:12"
+      },
+      {
+        "name": "포크타코(2조각)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-05-09 11:19:09"
+      },
+      {
+        "name": "새우튀김타코2조각)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-11-03 12:19:12"
+      }
+    ],
+    "menuUpdatedAt": "2024-05-09 11:19:09",
+    "priceRange": "8,000-8,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/06/9147890/2_103599_9147890_20250617060415_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/ED046837941243D183D8C69C0F97F610"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "영수분식",
+    "matched": true,
+    "query": "영수분식",
+    "score": 169,
+    "kakaoPlaceId": "21421301",
+    "matchedName": "영수분식",
+    "category": "한식",
+    "address": "서울 성동구 성덕정15길 2-12",
+    "lotAddress": "성수동2가 335-149",
+    "latitude": 37.537918800408924,
+    "longitude": 127.05394842179088,
+    "kakaoMapLink": "https://place.map.kakao.com/21421301",
+    "rating": 4.1,
+    "ratingCount": 48,
+    "reviewCount": 205,
+    "menuItems": [
+      {
+        "name": "숯불치즈곱창",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-02 10:05:24"
+      },
+      {
+        "name": "날치알계란찜",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-02 10:05:24"
+      },
+      {
+        "name": "숯불양념알곱창",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-10-20 11:50:21"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-12 21:32:28",
+    "priceRange": "8,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148512/2_104627_9148512_20250721060249_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/ef2fdc350b25afb95973609e1e009034b234cfbe?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "미정이네식당",
+    "matched": true,
+    "query": "미정이네식당",
+    "score": 130,
+    "kakaoPlaceId": "1002768913",
+    "matchedName": "미정이네식당",
+    "category": "찌개,전골",
+    "address": "강원특별자치도 평창군 미탄면 새터길 9",
+    "lotAddress": "미탄면 창리 280-8",
+    "latitude": 37.34247241812498,
+    "longitude": 128.4994498492713,
+    "kakaoMapLink": "https://place.map.kakao.com/1002768913",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 0,
+    "menuItems": [
+      {
+        "name": "아귀찜(중)",
+        "price": 40000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-12 22:08:36"
+      },
+      {
+        "name": "소곱창전골(중)",
+        "price": 30000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-12 23:44:47"
+      },
+      {
+        "name": "감자탕전골(중)",
+        "price": 28000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-11 14:07:13"
+      }
+    ],
+    "menuUpdatedAt": "2022-11-13 03:10:05",
+    "priceRange": "28,000-40,000원",
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/03/9147148/2_109986_9147148_20250325051857_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/fiy_reboot/place/D9ECFD5C278A406FAA5926C93B5E922F"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "소문난 성수 감자탕",
+    "matched": true,
+    "query": "소문난 성수 감자탕",
+    "score": 169,
+    "kakaoPlaceId": "13289056",
+    "matchedName": "소문난성수감자탕",
+    "category": "감자탕",
+    "address": "서울 성동구 연무장길 45 1층",
+    "lotAddress": "성수동2가 315-100",
+    "latitude": 37.54283084229667,
+    "longitude": 127.05440457812003,
+    "kakaoMapLink": "https://place.map.kakao.com/13289056",
+    "rating": 2.9,
+    "ratingCount": 1104,
+    "reviewCount": 2682,
+    "menuItems": [
+      {
+        "name": "감자탕(대)",
+        "price": 49000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 05:45:51"
+      },
+      {
+        "name": "감자탕(중)",
+        "price": 37000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 03:17:25"
+      },
+      {
+        "name": "감자탕(소)",
+        "price": 32000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-25 22:36:24"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-05 06:24:40",
+    "priceRange": "32,000-49,000원",
+    "priceSymbol": "₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100703_9151598_20260403001203_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/fd6ad7c86db810e2bd5a4f3e6679555824c361f7?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "성수 족발",
+    "matched": true,
+    "query": "성수 족발",
+    "score": 169,
+    "kakaoPlaceId": "8416853",
+    "matchedName": "성수족발",
+    "category": "족발,보쌈",
+    "address": "서울 성동구 아차산로7길 7 1층",
+    "lotAddress": "성수동2가 289-273",
+    "latitude": 37.54602762815355,
+    "longitude": 127.05431637398702,
+    "kakaoMapLink": "https://place.map.kakao.com/8416853",
+    "rating": 3.3,
+    "ratingCount": 301,
+    "reviewCount": 559,
+    "menuItems": [
+      {
+        "name": "족발 (대)",
+        "price": 50000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-29 16:29:37"
+      },
+      {
+        "name": "족발 (중)",
+        "price": 45000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-29 16:29:37"
+      },
+      {
+        "name": "족발 (특대)",
+        "price": 55000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-29 16:29:37"
+      }
+    ],
+    "menuUpdatedAt": "2025-08-29 16:29:37",
+    "priceRange": "45,000-55,000원",
+    "priceSymbol": "₩₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_102805_9148454_20250722054315_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/7bde944768a195a2159adb513ae56b125ea3472f?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "높은산",
+    "matched": true,
+    "query": "높은산",
+    "score": 169,
+    "kakaoPlaceId": "1440389368",
+    "matchedName": "높은산",
+    "category": "카페",
+    "address": "서울 성동구 성수이로 18-1 1층",
+    "lotAddress": "성수동2가 535-2",
+    "latitude": 37.536855531337025,
+    "longitude": 127.05414226561115,
+    "kakaoMapLink": "https://place.map.kakao.com/1440389368",
+    "rating": 4.7,
+    "ratingCount": 139,
+    "reviewCount": 422,
+    "menuItems": [
+      {
+        "name": "진저 짜이",
+        "price": 4000,
+        "desc": "생강, 카더멈",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-11 11:43:08"
+      },
+      {
+        "name": "마살라 짜이",
+        "price": 4500,
+        "desc": "카더멈, 정향, 팔각, 시나몬",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-11 11:43:08"
+      },
+      {
+        "name": "사프란 짜이",
+        "price": 5000,
+        "desc": "생강, 카더멈, 사프란",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-11 11:43:08"
+      }
+    ],
+    "menuUpdatedAt": "2025-03-15 21:05:17",
+    "priceRange": "4,000-5,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_100380_9148454_20250722003545_cube/back_800.jpg",
+      "http://t1.kakaocdn.net/mystore/D3DC54295480485784032765E1A33144"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "밀스",
+    "matched": true,
+    "query": "밀스",
+    "score": 169,
+    "kakaoPlaceId": "1427326028",
+    "matchedName": "밀스",
+    "category": "카페",
+    "address": "서울 성동구 뚝섬로4길 21 1,2층",
+    "lotAddress": "성수동1가 275-6",
+    "latitude": 37.538857235381684,
+    "longitude": 127.05080357604334,
+    "kakaoMapLink": "https://place.map.kakao.com/1427326028",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 583,
+    "menuItems": [
+      {
+        "name": "브락워스트 소시지번",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-06-01 17:23:04"
+      },
+      {
+        "name": "반 밀스 번",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-06-01 17:23:04"
+      },
+      {
+        "name": "나폴리탄번",
+        "price": 5000,
+        "desc": "직접 만든 소시지와 나폴리탄 파스타, 치즈가 듬뿍 들어간 나폴리탄번 :) 베스트메뉴 중 하나 입니다 💙",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-09 17:39:44"
+      }
+    ],
+    "menuUpdatedAt": "2025-06-01 17:23:04",
+    "priceRange": "5,000-6,500원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148512/2_104182_9148512_20250721052106_cube/left_800.jpg",
+      "http://t1.kakaocdn.net/mystore/947D9FBD4DC84C648ED2DA94B0C10A65"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "맥파이앤타이거",
+    "matched": true,
+    "query": "맥파이앤타이거",
+    "score": 89,
+    "kakaoPlaceId": "1492088819",
+    "matchedName": "맥파이앤타이거 성수티룸",
+    "category": "카페",
+    "address": "서울 성동구 성수이로 97 5층",
+    "lotAddress": "성수동2가 315-108",
+    "latitude": 37.543647924190466,
+    "longitude": 127.05658681002872,
+    "kakaoMapLink": "https://place.map.kakao.com/1492088819",
+    "rating": 4.7,
+    "ratingCount": 106,
+    "reviewCount": 761,
+    "menuItems": [
+      {
+        "name": "쑥 티라미수",
+        "price": 7000,
+        "desc": "향긋하고 고소한 쑥의 향기와 부드럽고 진한 마스카포네 치즈의 향미가 가득한 쑥 티라미수",
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-13 23:22:34"
+      },
+      {
+        "name": "Signature Tea",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-13 08:34:04"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-13 23:22:34",
+    "priceRange": "7,000-8,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100489_9151598_20260403000023_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/973BF629355E4970826CD66F99AA1151"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "커피로우스탠드",
+    "matched": true,
+    "query": "커피로우스탠드",
+    "score": 59,
+    "kakaoPlaceId": "940053669",
+    "matchedName": "로우커피스탠드",
+    "category": "카페",
+    "address": "서울 성동구 왕십리로4길 28-2 1층",
+    "lotAddress": "성수동1가 8-16",
+    "latitude": 37.54715896195635,
+    "longitude": 127.04663583870042,
+    "kakaoMapLink": "https://place.map.kakao.com/940053669",
+    "rating": 4.5,
+    "ratingCount": 203,
+    "reviewCount": 184,
+    "menuItems": [
+      {
+        "name": "AMERICANO",
+        "price": 2500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-05 11:28:17"
+      },
+      {
+        "name": "CAFE LATTE",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-05 11:28:17"
+      },
+      {
+        "name": "CAPPUCCINO (HOT)",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-05-05 11:28:17"
+      }
+    ],
+    "menuUpdatedAt": "2025-05-05 11:28:17",
+    "priceRange": "2,500-3,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148512/2_104851_9148512_20250721062938_cube/right_800.jpg",
+      "http://t1.daumcdn.net/place/F709A3EBCBF74BCA8408DEF7F0D8CC70",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/1dd657646cdfef82b408b9e2eed41de39848441c?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "스탠드업플리즈",
+    "matched": true,
+    "query": "스탠드업플리즈",
+    "score": 169,
+    "kakaoPlaceId": "151718461",
+    "matchedName": "스탠드업플리즈",
+    "category": "카페",
+    "address": "서울 성동구 연무장3길 14 1층 2호",
+    "lotAddress": "성수동2가 302-24",
+    "latitude": 37.54476735863771,
+    "longitude": 127.05180336978641,
+    "kakaoMapLink": "https://place.map.kakao.com/151718461",
+    "rating": 4.6,
+    "ratingCount": 60,
+    "reviewCount": 108,
+    "menuItems": [
+      {
+        "name": "콘판나",
+        "price": 2500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-25 10:28:10"
+      },
+      {
+        "name": "마르소",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-25 10:28:10"
+      },
+      {
+        "name": "빈센트",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-25 10:28:10"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-05 04:01:28",
+    "priceRange": "2,500-3,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_100768_9151598_20260403001538_cube/right_800.jpg",
+      "https://thumb.kakaocdn.net/dna/kamp/source/rvwlqis61gzmkklf1pmk7mto9/thumbs/1.jpg?credential=TuMuFGKUIcirOSjFzOpncbomGFEIdZWK&expires=33316904153&kamp_tidx=0&signature=BULi6qAh1kIazec6hlWIJfxvt94%3D&ts=1759995353",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/095f175c2ad23cd632aa2933d943e93c768bb974?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "폴린커피바",
+    "matched": false,
+    "query": "폴린커피바",
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "뵈르뵈르",
+    "matched": true,
+    "query": "뵈르뵈르",
+    "score": 135,
+    "kakaoPlaceId": "1440459183",
+    "matchedName": "뵈르뵈르",
+    "category": "음식점",
+    "address": "서울 광진구 아차산로30길 8",
+    "lotAddress": "자양동 8-22",
+    "latitude": 37.54040213056107,
+    "longitude": 127.06761427719489,
+    "kakaoMapLink": "https://place.map.kakao.com/1440459183",
+    "rating": 5,
+    "ratingCount": 1,
+    "reviewCount": 2,
+    "menuItems": [
+      {
+        "name": "콜드브루라떼",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-26 14:50:34"
+      },
+      {
+        "name": "모나카롱",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-26 22:51:16"
+      },
+      {
+        "name": "초코라떼",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-26 14:50:34"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-26 22:51:16",
+    "priceRange": null,
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151652/2_102778_9151652_20260402072302_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MjZfNTQg/MDAxNzgyNDcwNDMxMjE2.MmaO19kkvxUqij2ncFYRIpHw8502kjBTS1JoZWEPyhEg._sMVXK4hLkpiJEiqYIIQkPOkOHO7CZLkSt884HdOmtYg.JPEG/900_20260625_185341.jpg?type=w966"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "자연도소금빵",
+    "matched": true,
+    "query": "자연도소금빵",
+    "score": 89,
+    "kakaoPlaceId": "134679676",
+    "matchedName": "자연도소금빵 in성수",
+    "category": "제과,베이커리",
+    "address": "서울 성동구 연무장길 56-1 1층",
+    "lotAddress": "성수동2가 321-74",
+    "latitude": 37.54230416818566,
+    "longitude": 127.05545878580577,
+    "kakaoMapLink": "https://place.map.kakao.com/134679676",
+    "rating": 3.4,
+    "ratingCount": 351,
+    "reviewCount": 2946,
+    "menuItems": [
+      {
+        "name": "소금빵4개",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-09-27 23:08:24"
+      }
+    ],
+    "menuUpdatedAt": "2023-09-27 23:08:24",
+    "priceRange": "12,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101199_9151598_20260403004225_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/79167a9ac229dd757bdeb7ab34735da9d8294afe?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "코끼리베이글",
+    "matched": true,
+    "query": "코끼리베이글",
+    "score": 135,
+    "kakaoPlaceId": "745164647",
+    "matchedName": "코끼리베이글",
+    "category": "제과,베이커리",
+    "address": "서울 영등포구 선유로 176 수화공단 1층 60호",
+    "lotAddress": "양평동3가 69",
+    "latitude": 37.52931270114093,
+    "longitude": 126.89340981729266,
+    "kakaoMapLink": "https://place.map.kakao.com/745164647",
+    "rating": 3.5,
+    "ratingCount": 326,
+    "reviewCount": 1493,
+    "menuItems": [
+      {
+        "name": "스테이크 샌드위치",
+        "price": 8300,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-12 07:52:46"
+      },
+      {
+        "name": "햄치즈 샌드위치",
+        "price": 6800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-02 15:48:57"
+      },
+      {
+        "name": "애플베리콜포트 샌드위치",
+        "price": 6800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2022-11-02 15:48:57"
+      }
+    ],
+    "menuUpdatedAt": "2023-10-17 23:52:22",
+    "priceRange": "6,800-8,300원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148173/2_102449_9148173_20250702011916_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/bfdf7dd9872cfed04b746f30ee397d727b2fe8a7?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "차일디쉬",
+    "matched": true,
+    "query": "차일디쉬",
+    "score": 169,
+    "kakaoPlaceId": "2009228453",
+    "matchedName": "차일디쉬",
+    "category": "제과,베이커리",
+    "address": "서울 성동구 연무장길 114 2층",
+    "lotAddress": "성수동2가 275-12",
+    "latitude": 37.540470295750424,
+    "longitude": 127.06159472156686,
+    "kakaoMapLink": "https://place.map.kakao.com/2009228453",
+    "rating": 3.9,
+    "ratingCount": 65,
+    "reviewCount": 588,
+    "menuItems": [
+      {
+        "name": "불장난크림커피",
+        "price": 6800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-09-12 10:38:17"
+      },
+      {
+        "name": "아메리카노",
+        "price": 4500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-09-12 10:38:17"
+      },
+      {
+        "name": "에스프레소",
+        "price": 3500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-09-12 10:38:17"
+      }
+    ],
+    "menuUpdatedAt": "2024-09-19 17:37:46",
+    "priceRange": "3,500-6,800원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/04/9151598/2_101256_9151598_20260403004524_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/cd5cc9e1d7970e8ea4ee91f8e767b001096cdce6?original"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "텅 성수 스페이스",
+    "matched": false,
+    "query": "텅 성수 스페이스",
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "마마젤라또",
+    "matched": true,
+    "query": "마마젤라또",
+    "score": 20,
+    "kakaoPlaceId": "22247063",
+    "matchedName": "커피마마 창원신촌점",
+    "category": "커피전문점",
+    "address": "경남 창원시 성산구 신촌로 112 신촌생활문화센터 1층 102-1호",
+    "lotAddress": "신촌동 33-7",
+    "latitude": 35.19934536777572,
+    "longitude": 128.6286130791804,
+    "kakaoMapLink": "https://place.map.kakao.com/22247063",
+    "rating": 4.5,
+    "ratingCount": 2,
+    "reviewCount": 1,
+    "menuItems": [
+      {
+        "name": "아메리카노",
+        "price": 3000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-02-09 14:15:32"
+      },
+      {
+        "name": "카페라떼",
+        "price": 3800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-02-09 14:15:32"
+      },
+      {
+        "name": "청포도에이드",
+        "price": 4800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-02-26 17:37:29"
+      }
+    ],
+    "menuUpdatedAt": "2025-07-11 10:05:45",
+    "priceRange": "3,000-4,800원",
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2026/01/9150491/2_104336_9150491_20260118044529_cube/right_800.jpg",
+      "http://t1.daumcdn.net/localfiy/C26419B998EC4290AA28370B99C70F5B"
+    ],
+    "checkedAt": "2026-06-30"
+  },
+  {
+    "requestedName": "어니언",
+    "matched": true,
+    "query": "어니언",
+    "score": 89,
+    "kakaoPlaceId": "145791269",
+    "matchedName": "어니언 성수",
+    "category": "카페",
+    "address": "서울 성동구 아차산로9길 8 1-2층",
+    "lotAddress": "성수동2가 277-135",
+    "latitude": 37.544782395189884,
+    "longitude": 127.05820807890457,
+    "kakaoMapLink": "https://place.map.kakao.com/145791269",
+    "rating": 3.3,
+    "ratingCount": 382,
+    "reviewCount": 725,
+    "menuItems": [
+      {
+        "name": "에스프레소(Espresso)",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-18 23:07:32"
+      },
+      {
+        "name": "아메리카노(Americano)",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-18 23:45:39"
+      },
+      {
+        "name": "카페라떼(Cafe latte)",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-18 23:14:46"
+      }
+    ],
+    "menuUpdatedAt": "2025-02-04 16:32:57",
+    "priceRange": "5,000-6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/07/9148454/2_103533_9148454_20250722070004_cube/front_800.jpg",
+      "http://t1.kakaocdn.net/mystore/D759B82401654920ABB1E17978FCF06F"
+    ],
+    "checkedAt": "2026-06-30"
+  }
+]

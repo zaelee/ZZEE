@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="양식 이미지">
+  <rect width="1200" height="700" fill="#f1f8f0"/>
+  <path d="M310 430h460c-20 75-90 120-230 120s-210-45-230-120z" fill="#5b8c5a"/>
+  <path d="M320 300c55-95 375-95 430 0z" fill="#f5c16c"/>
+  <rect x="290" y="330" width="500" height="72" rx="36" fill="#ff6b35"/>
+  <circle cx="430" cy="365" r="18" fill="#fff"/>
+  <circle cx="550" cy="365" r="18" fill="#fff"/>
+  <circle cx="670" cy="365" r="18" fill="#fff"/>
+</svg>

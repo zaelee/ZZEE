@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="디저트 이미지">
+  <rect width="1200" height="700" fill="#fff0f5"/>
+  <rect x="320" y="260" width="360" height="230" rx="44" fill="#c06c84"/>
+  <path d="M340 260c35-90 275-90 320 0" fill="#ffcf7d"/>
+  <circle cx="460" cy="340" r="24" fill="#fff"/>
+  <circle cx="550" cy="340" r="24" fill="#fff"/>
+  <path d="M760 260h120a95 95 0 010 190H760" fill="none" stroke="#2f2a26" stroke-width="34" stroke-linecap="round"/>
+</svg>

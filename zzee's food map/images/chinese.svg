@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="중식 이미지">
+  <rect width="1200" height="700" fill="#fff1f0"/>
+  <rect x="250" y="210" width="520" height="280" rx="40" fill="#d94841"/>
+  <path d="M300 260h420M300 350h420M300 440h420" stroke="#fff7ef" stroke-width="28" stroke-linecap="round"/>
+  <path d="M820 190l130 310" stroke="#2f2a26" stroke-width="24" stroke-linecap="round"/>
+  <path d="M900 190l130 310" stroke="#2f2a26" stroke-width="24" stroke-linecap="round"/>
+</svg>

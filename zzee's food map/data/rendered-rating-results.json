@@ -1,0 +1,1292 @@
+[
+  {
+    "name": "해남닭집",
+    "naver": {
+      "rating": 4.53,
+      "reviewCount": 786,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20069127"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%95%B4%EB%82%A8%EB%8B%AD%EC%A7%91%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2046%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "정면",
+    "naver": {
+      "rating": 4.86,
+      "reviewCount": 2511,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1765453403"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A0%95%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2088%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "동대문곱창",
+    "naver": {
+      "rating": 4.66,
+      "reviewCount": 731,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/32090089"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B3%B1%EC%B0%BD%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%9A%9D%EC%84%AC%EB%A1%9C27%EA%B8%B8%2037%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "원조숯불소금구이",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20844012"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9B%90%EC%A1%B0%EC%88%AF%EB%B6%88%EC%86%8C%EA%B8%88%EA%B5%AC%EC%9D%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B4%91%EB%82%98%EB%A3%A8%EB%A1%9C12%EA%B8%B8%2019%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "서북면옥",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/11727906"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EB%B6%81%EB%A9%B4%EC%98%A5%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%9E%90%EC%96%91%EB%A1%9C%20199-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "은혜즉석떡볶이",
+    "naver": {
+      "rating": 4.35,
+      "reviewCount": 2512,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20912981"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9D%80%ED%98%9C%EC%A6%89%EC%84%9D%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B4%91%EB%82%98%EB%A3%A8%EB%A1%9C%20381-1%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "깍둑",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/35357402"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B9%8D%EB%91%91%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C19%EA%B8%B8%2036%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "김해평화뒷고기",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1393442096"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B9%80%ED%95%B4%ED%8F%89%ED%99%94%EB%92%B7%EA%B3%A0%EA%B8%B0%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C31%EA%B8%B8%209-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "환이네갈비살",
+    "naver": {
+      "rating": 4.4,
+      "reviewCount": 1121,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1436916083"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%99%98%EC%9D%B4%EB%84%A4%EA%B0%88%EB%B9%84%EC%82%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C29%EA%B8%B8%2024%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "방이샤브칼국수",
+    "naver": {
+      "rating": 4.39,
+      "reviewCount": 1284,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/17994062"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%A9%EC%9D%B4%EC%83%A4%EB%B8%8C%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C20%EA%B8%B8%20100%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "김밥천국 건대2호점",
+    "naver": {
+      "rating": 4.27,
+      "reviewCount": 1205,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/18834914"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B9%80%EB%B0%A5%EC%B2%9C%EA%B5%AD%20%EA%B1%B4%EB%8C%802%ED%98%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2021%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "최신족발",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/32794440"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B5%9C%EC%8B%A0%EC%A1%B1%EB%B0%9C%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C29%EA%B8%B8%2063%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "서소문순두부보쌈",
+    "naver": {
+      "rating": 4.29,
+      "reviewCount": 1631,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/13154500"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EC%86%8C%EB%AC%B8%EC%88%9C%EB%91%90%EB%B6%80%EB%B3%B4%EC%8C%88%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C%20128%20%EC%9E%AC%ED%96%A5%EA%B5%B0%EC%9D%B8%ED%9A%8C%EA%B4%80%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "돕감자탕",
+    "naver": {
+      "rating": 4.42,
+      "reviewCount": 2499,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/11836177"
+    },
+    "google": {
+      "rating": 3.9,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%95%EA%B0%90%EC%9E%90%ED%83%95%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C31%EA%B8%B8%209%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "포크포크",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1755431931"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%8F%AC%ED%81%AC%ED%8F%AC%ED%81%AC%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C22%EA%B8%B8%20117-16%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "김창훈포차",
+    "naver": {
+      "rating": 4.57,
+      "reviewCount": 3235,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1929531895"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B9%80%EC%B0%BD%ED%9B%88%ED%8F%AC%EC%B0%A8%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C31%EA%B8%B8%2027%20%EC%A7%80%ED%95%98%EC%B8%B5"
+    }
+  },
+  {
+    "name": "시홍쓰",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1494321970"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%8B%9C%ED%99%8D%EC%93%B0%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C17%EA%B8%B8%205%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "송화산시도삭면",
+    "naver": {
+      "rating": 4.53,
+      "reviewCount": 6849,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1359051109"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A1%ED%99%94%EC%82%B0%EC%8B%9C%EB%8F%84%EC%82%AD%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%9A%9D%EC%84%AC%EB%A1%9C27%EA%B8%B8%2048%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "빠오즈푸",
+    "naver": {
+      "rating": 4.48,
+      "reviewCount": 4628,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20757891"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B9%A0%EC%98%A4%EC%A6%88%ED%91%B8%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B4%91%EB%82%98%EB%A3%A8%EB%A1%9C%20373%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "매운향솥",
+    "naver": {
+      "rating": 4.49,
+      "reviewCount": 1,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/34203618"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%A4%EC%9A%B4%ED%96%A5%EC%86%A5%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C18%EA%B8%B8%2061%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "송화양꼬치",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/12966607"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A1%ED%99%94%EC%96%91%EA%BC%AC%EC%B9%98%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C18%EA%B8%B8%2070%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "638DENO탄탄면",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1479756144"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=638DENO%ED%83%84%ED%83%84%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2081-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "브네",
+    "naver": {
+      "rating": 4.7,
+      "reviewCount": 750,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1580083114"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B8%8C%EB%84%A4%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%2070%20%EB%82%98%EB%8F%99%201%EC%B8%B5%20106%ED%98%B8"
+    }
+  },
+  {
+    "name": "오코노미야키식당하나",
+    "naver": {
+      "rating": 4.52,
+      "reviewCount": 2811,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1788087862"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EC%BD%94%EB%85%B8%EB%AF%B8%EC%95%BC%ED%82%A4%EC%8B%9D%EB%8B%B9%ED%95%98%EB%82%98%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%20111%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "멘쇼",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/760819243"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A9%98%EC%87%BC%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C2%EA%B8%B8%203"
+    }
+  },
+  {
+    "name": "우마텐텐동",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1040714903"
+    },
+    "google": {
+      "rating": 3.9,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9A%B0%EB%A7%88%ED%85%90%ED%85%90%EB%8F%99%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C%20143%20%EC%84%B1%EC%88%98%EB%8C%80%EC%9A%B01%EC%B0%A8%20%EC%95%84%ED%8C%8C%ED%8A%B8%201%EC%B8%B5%20126%ED%98%B8"
+    }
+  },
+  {
+    "name": "호야초밥참치",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/32089668"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%98%B8%EC%95%BC%EC%B4%88%EB%B0%A5%EC%B0%B8%EC%B9%98%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2039%20%ED%95%9C%EC%95%84%EB%A6%84%EA%B1%B4%EB%AC%BC%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "초라멘",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1267891433"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B4%88%EB%9D%BC%EB%A9%98%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2080%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "슈퍼슬라이더",
+    "naver": {
+      "rating": 4.6,
+      "reviewCount": 2046,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1720361242"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%8A%88%ED%8D%BC%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2050%201%EC%B8%B5%201%ED%98%B8"
+    }
+  },
+  {
+    "name": "호파스타",
+    "naver": {
+      "rating": 4.39,
+      "reviewCount": 1940,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1134743279"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%98%B8%ED%8C%8C%EC%8A%A4%ED%83%80%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C3%EA%B8%B8%2023"
+    }
+  },
+  {
+    "name": "미분당",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/37475126"
+    },
+    "google": {
+      "rating": 3.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%AF%B8%EB%B6%84%EB%8B%B9%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C3%EA%B8%B8%2027%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "꾸아",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%99%95%EC%8B%AD%EB%A6%AC%EB%A1%9C%2094-2%202%EC%B8%B5%20%EA%BE%B8%EC%95%84"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%BE%B8%EC%95%84%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%99%95%EC%8B%AD%EB%A6%AC%EB%A1%9C%2094-2%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "보난자",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1689645997"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B3%B4%EB%82%9C%EC%9E%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C%20239-1%20B%EB%8F%99%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "꼬메노",
+    "naver": {
+      "rating": 4.71,
+      "reviewCount": 815,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20322289"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%BC%AC%EB%A9%94%EB%85%B8%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C7%EA%B8%B8%2029%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "최가회관",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1332129677"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B5%9C%EA%B0%80%ED%9A%8C%EA%B4%80%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2030%20%EC%A7%80%ED%95%981%EC%B8%B5"
+    }
+  },
+  {
+    "name": "잠수교집",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1920277706"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9E%A0%EC%88%98%EA%B5%90%EC%A7%91%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C%20137%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "꿉당",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1739440199"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%BF%89%EB%8B%B9%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C20%EA%B8%B8%2010%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "땅코참숯구이",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1328684927"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%95%85%EC%BD%94%EC%B0%B8%EC%88%AF%EA%B5%AC%EC%9D%B4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%ED%96%89%EB%8B%B9%EB%A1%9C17%EA%B8%B8%2026%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "성수동양갈비",
+    "naver": {
+      "rating": 4.68,
+      "reviewCount": 257,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/12770339"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%88%98%EB%8F%99%EC%96%91%EA%B0%88%EB%B9%84%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C12%EA%B8%B8%2033%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "능동미나리",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1594044291"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8A%A5%EB%8F%99%EB%AF%B8%EB%82%98%EB%A6%AC%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2042%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "금금",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1818902068"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EA%B8%88%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C12%EA%B8%B8%2011%201%EC%B8%B5%20101%ED%98%B8"
+    }
+  },
+  {
+    "name": "돼지공탕하우",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1559602117"
+    },
+    "google": {
+      "rating": 4.9,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%BC%EC%A7%80%EA%B3%B5%ED%83%95%ED%95%98%EC%9A%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C7%EA%B8%B8%2036%201%EC%B8%B5%202%ED%98%B8"
+    }
+  },
+  {
+    "name": "실비옥",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/2026535112"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%8B%A4%EB%B9%84%EC%98%A5%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C%20126"
+    }
+  },
+  {
+    "name": "솥솥",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1580152953"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A5%EC%86%A5%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A55%EA%B0%80%EA%B8%B8%2024%20%EC%86%94%EC%86%A5%20%EC%84%B1%EC%88%98%EC%A0%90"
+    }
+  },
+  {
+    "name": "조조칼국수",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1057264169"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EC%A1%B0%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C8%EA%B8%B8%2055%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "칼",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1001495826"
+    },
+    "google": {
+      "rating": 4.7,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B9%BC%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%20126%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "르프리크",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1227114216"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A5%B4%ED%94%84%EB%A6%AC%ED%81%AC%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A55%EA%B8%B8%209-16%20B103%ED%98%B8"
+    }
+  },
+  {
+    "name": "bd버거",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1026594418"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=bd%EB%B2%84%EA%B1%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C14%EA%B8%B8%207%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "롸카두들",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1882528663"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A1%B8%EC%B9%B4%EB%91%90%EB%93%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C4%EA%B8%B8%2025%20%EC%84%9C%EC%9A%B8%EC%88%B2%EC%BD%94%EC%98%A4%EB%A1%B1%EB%94%94%EC%A7%80%ED%84%B8%ED%83%80%EC%9B%8C%20%EC%83%81%EA%B0%80%201%EC%B8%B5%20108%ED%98%B8"
+    }
+  },
+  {
+    "name": "핑거팁스",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1566517542"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%95%91%EA%B1%B0%ED%8C%81%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EA%B4%91%EB%82%98%EB%A3%A8%EB%A1%9C2%EA%B8%B8%2034-17%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "마오",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1909402080"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%88%EC%98%A4%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EB%9A%9D%EC%84%AC%EB%A1%9C4%EA%B8%B8%2021%20%EC%A7%80%ED%95%981%EC%B8%B5"
+    }
+  },
+  {
+    "name": "마하차이",
+    "naver": {
+      "rating": 4.52,
+      "reviewCount": 1987,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1963449777"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%88%ED%95%98%EC%B0%A8%EC%9D%B4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EB%9A%9D%EC%84%AC%EB%A1%9C%20399%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "벱",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1465603515"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B2%B1%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C4%EA%B0%80%EA%B8%B8%202%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "남짐릇",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1957072341"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%82%A8%EC%A7%90%EB%A6%87%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A55%EA%B0%80%EA%B8%B8%2032%20%EC%A7%80%ED%95%981%EC%B8%B5"
+    }
+  },
+  {
+    "name": "페이퍼플레이트",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1683846629"
+    },
+    "google": {
+      "rating": 4.7,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%8E%98%EC%9D%B4%ED%8D%BC%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C14%EA%B8%B8%2015%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "세스크멘슬",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1057225152"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B8%EC%8A%A4%ED%81%AC%EB%A9%98%EC%8A%AC%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C14%EA%B8%B8%207%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "마리오네",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1118354814"
+    },
+    "google": {
+      "rating": 4.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%88%EB%A6%AC%EC%98%A4%EB%84%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EA%B4%91%EB%82%98%EB%A3%A8%EB%A1%9C2%EA%B8%B8%2023-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "피읻짜",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1080140629"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%94%BC%EC%9D%BB%EC%A7%9C%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C7%EA%B8%B8%2011%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "코치",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1933103682"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BD%94%EC%B9%98%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9517%EA%B8%B8%2011%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "가조쿠",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1716744205"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B0%80%EC%A1%B0%EC%BF%A0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2031-2%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "소바마에니고",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1133279249"
+    },
+    "google": {
+      "rating": 3.5,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%8C%EB%B0%94%EB%A7%88%EC%97%90%EB%8B%88%EA%B3%A0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2039-15%20%EC%A7%80%EC%B8%B5"
+    }
+  },
+  {
+    "name": "탐광",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1778707941"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%83%90%EA%B4%91%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A55%EA%B0%80%EA%B8%B8%2026%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "토리아에즈",
+    "naver": {
+      "rating": 4.65,
+      "reviewCount": 727,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1398181678"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%86%A0%EB%A6%AC%EC%95%84%EC%97%90%EC%A6%88%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C7%EA%B8%B8%207%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "라무라",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1989241430"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%9D%BC%EB%AC%B4%EB%9D%BC%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C12%EA%B8%B8%208%202%EC%B8%B5%20%EB%9D%BC%EB%AC%B4%EB%9D%BC%20%EC%84%B1%EC%88%98"
+    }
+  },
+  {
+    "name": "도죠",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1093763709"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%84%EC%A3%A0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%20126%20A%EC%97%B4%205%ED%98%B8"
+    }
+  },
+  {
+    "name": "죠죠",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1006460400"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A3%A0%EC%A3%A0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A517%EA%B8%B8%207%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "성수속향연",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1772785792"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%88%98%EC%86%8D%ED%96%A5%EC%97%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%2065%20%ED%98%91%EC%84%B1%EB%B9%8C%EB%94%A9%201%EC%B8%B5%20102%ED%98%B8"
+    }
+  },
+  {
+    "name": "중앙감속기",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20937806"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A4%91%EC%95%99%EA%B0%90%EC%86%8D%EA%B8%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%BC%EB%A1%9C6%EA%B8%B8%207-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "데니스타코",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%20%EB%8D%B0%EB%8B%88%EC%8A%A4%ED%83%80%EC%BD%94"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8D%B0%EB%8B%88%EC%8A%A4%ED%83%80%EC%BD%94%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%97%AD%20%EC%9D%B8%EA%B7%BC"
+    }
+  },
+  {
+    "name": "영수분식",
+    "naver": {
+      "rating": 4.52,
+      "reviewCount": 876,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1656481040"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%81%EC%88%98%EB%B6%84%EC%8B%9D%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9515%EA%B8%B8%202-12"
+    }
+  },
+  {
+    "name": "미정이네식당",
+    "naver": {
+      "rating": 4.4,
+      "reviewCount": 369,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/20765291"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%AF%B8%EC%A0%95%EC%9D%B4%EB%84%A4%EC%8B%9D%EB%8B%B9%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9515%EA%B8%B8%206-5"
+    }
+  },
+  {
+    "name": "소문난 성수 감자탕",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/11721256"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%8C%EB%AC%B8%EB%82%9C%20%EC%84%B1%EC%88%98%20%EA%B0%90%EC%9E%90%ED%83%95%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2045%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "성수 족발",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/19862383"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%88%98%20%EC%A1%B1%EB%B0%9C%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C7%EA%B8%B8%207%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "높은산",
+    "naver": {
+      "rating": 4.81,
+      "reviewCount": 1186,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1081045129"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%92%EC%9D%80%EC%82%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%2018-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "밀스",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1250194088"
+    },
+    "google": {
+      "rating": 4.7,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%80%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EB%9A%9D%EC%84%AC%EB%A1%9C4%EA%B8%B8%2021%201%2C2%EC%B8%B5"
+    }
+  },
+  {
+    "name": "맥파이앤타이거",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1038370038"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%A5%ED%8C%8C%EC%9D%B4%EC%95%A4%ED%83%80%EC%9D%B4%EA%B1%B0%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%2097%205%EC%B8%B5"
+    }
+  },
+  {
+    "name": "커피로우스탠드",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1404930910"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EB%A1%9C%EC%9A%B0%EC%8A%A4%ED%83%A0%EB%93%9C%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%99%95%EC%8B%AD%EB%A6%AC%EB%A1%9C4%EA%B8%B8%2028-2%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "스탠드업플리즈",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1306390433"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%8A%A4%ED%83%A0%EB%93%9C%EC%97%85%ED%94%8C%EB%A6%AC%EC%A6%88%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A53%EA%B8%B8%2014%201%EC%B8%B5%202%ED%98%B8"
+    }
+  },
+  {
+    "name": "폴린커피바",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%20%ED%8F%B4%EB%A6%B0%EC%BB%A4%ED%94%BC%EB%B0%94"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%8F%B4%EB%A6%B0%EC%BB%A4%ED%94%BC%EB%B0%94%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%97%AD%20%EC%9D%B8%EA%B7%BC"
+    }
+  },
+  {
+    "name": "뵈르뵈르",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/2058486345"
+    },
+    "google": {
+      "rating": 4.9,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B5%88%EB%A5%B4%EB%B5%88%EB%A5%B4%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C7%EA%B0%80%EA%B8%B8%2022%201%EC%B8%B5%202%ED%98%B8"
+    }
+  },
+  {
+    "name": "자연도소금빵",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1022429915"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9E%90%EC%97%B0%EB%8F%84%EC%86%8C%EA%B8%88%EB%B9%B5%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2056-1%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "코끼리베이글",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1543901744"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BD%94%EB%81%BC%EB%A6%AC%EB%B2%A0%EC%9D%B4%EA%B8%80%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C26%EA%B8%B8%2017%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "차일디쉬",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1217287130"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B0%A8%EC%9D%BC%EB%94%94%EC%89%AC%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%20114%202%EC%B8%B5"
+    }
+  },
+  {
+    "name": "텅 성수 스페이스",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%20%ED%85%85%20%EC%84%B1%EC%88%98%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%85%85%20%EC%84%B1%EC%88%98%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%97%AD%20%EC%9D%B8%EA%B7%BC"
+    }
+  },
+  {
+    "name": "마마젤라또",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/1057884253"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%88%EB%A7%88%EC%A0%A4%EB%9D%BC%EB%98%90%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A59%EA%B8%B8%208%201%EC%B8%B5"
+    }
+  },
+  {
+    "name": "어니언",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://map.naver.com/p/entry/place/38561949"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-06-30",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C9%EA%B8%B8%208%201-2%EC%B8%B5"
+    }
+  }
+]

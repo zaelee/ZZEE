@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>재리의 맛집 | Jae's Food Map</title>
+    <meta
+      name="description"
+      content="재리가 직접 다녀온 건대 중심 개인 맛집 아카이브"
+    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script defer src="./js/data.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer src="./js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="재리의 맛집 홈">
+        <span class="brand-mark">J</span>
+        <span>
+          <strong>재리의 맛집</strong>
+          <small>Jae's Food Map</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="다크모드 전환" title="다크모드">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="list-pane" aria-labelledby="archiveTitle">
+        <div class="intro">
+          <p class="eyebrow">Konkuk Univ. Area Archive</p>
+          <h1 id="archiveTitle">재리가 직접 다녀온 맛집 지도</h1>
+          <p>
+            건대 주변에서 다시 가고 싶은 곳, 애매하지만 기억해둘 곳까지 한 번에 모아둔 개인 맛집 지도.
+          </p>
+        </div>
+
+        <form class="controls" id="controls" role="search">
+          <label class="search-field">
+            <span class="visually-hidden">맛집 검색</span>
+            <input id="searchInput" type="search" placeholder="가게명, 메뉴, 코멘트 검색" autocomplete="off" />
+          </label>
+
+          <div class="control-group" aria-label="카테고리 필터">
+            <button class="chip is-active" type="button" data-filter="category" data-value="전체">전체</button>
+            <button class="chip" type="button" data-filter="category" data-value="한식">한식</button>
+            <button class="chip" type="button" data-filter="category" data-value="중식">중식</button>
+            <button class="chip" type="button" data-filter="category" data-value="일식">일식</button>
+            <button class="chip" type="button" data-filter="category" data-value="양식">양식</button>
+            <button class="chip" type="button" data-filter="category" data-value="아시아">아시아</button>
+            <button class="chip" type="button" data-filter="category" data-value="햄부기">햄부기</button>
+            <button class="chip" type="button" data-filter="category" data-value="멕시칸">멕시칸</button>
+            <button class="chip" type="button" data-filter="category" data-value="고인물">고인물</button>
+            <button class="chip" type="button" data-filter="category" data-value="디저트">디저트</button>
+          </div>
+
+          <div class="filter-row">
+            <label>
+              <span>별점</span>
+              <select id="ratingFilter">
+                <option value="0">전체</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★ 이상</option>
+                <option value="3">★★★ 이상</option>
+                <option value="2">★★ 이상</option>
+              </select>
+            </label>
+
+            <label>
+              <span>정렬</span>
+              <select id="sortSelect">
+                <option value="recommended">추천순</option>
+                <option value="rating">별점순</option>
+                <option value="name">가나다순</option>
+              </select>
+            </label>
+          </div>
+        </form>
+
+        <section class="quick-section" aria-labelledby="recentTitle">
+          <div class="section-heading">
+            <h2 id="recentTitle">최근 본 맛집</h2>
+            <button class="text-button" id="clearRecent" type="button">비우기</button>
+          </div>
+          <div class="recent-list" id="recentList" aria-live="polite"></div>
+        </section>
+
+        <div class="result-summary" id="resultSummary"></div>
+        <section class="restaurant-grid" id="restaurantList" aria-live="polite"></section>
+      </section>
+
+      <aside class="map-pane" aria-label="맛집 지도">
+        <div class="map-toolbar">
+          <div>
+            <strong>Map</strong>
+            <span id="mapStatus">CARTO 지도 준비 중</span>
+          </div>
+          <button class="text-button" id="fitMap" type="button">전체 보기</button>
+        </div>
+        <div id="map" class="map-canvas"></div>
+      </aside>
+    </main>
+
+    <div class="modal" id="detailModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="modal-panel">
+        <button class="icon-button modal-close" type="button" data-close-modal aria-label="상세 닫기">×</button>
+        <div id="modalContent"></div>
+      </article>
+    </div>
+  </body>
+</html>
