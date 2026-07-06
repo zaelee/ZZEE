@@ -61,6 +61,7 @@ const FoodMap = (() => {
       <p>${restaurant.comment}</p>
       <small>${restaurant.address}</small>
       <small>대표메뉴: ${restaurant.signatureMenu}</small>
+      <button class="map-detail-button" type="button" data-map-detail="${restaurant.id}">자세히보기</button>
       <div class="map-links">
         <a href="${restaurant.kakaoMapLink}" target="_blank" rel="noreferrer">카카오</a>
         <a href="${restaurant.naverMapLink}" target="_blank" rel="noreferrer">네이버</a>
@@ -80,7 +81,11 @@ const FoodMap = (() => {
         title: restaurant.name,
       })
         .bindPopup(popupContent(restaurant), { maxWidth: 260 })
-        .on("click", () => onSelect?.(restaurant.id, { openModal: false }));
+        .on("click", () => onSelect?.(restaurant.id, { openModal: false }))
+        .on("popupopen", (event) => {
+          const detailButton = event.popup.getElement()?.querySelector("[data-map-detail]");
+          detailButton?.addEventListener("click", () => onSelect?.(restaurant.id, { openModal: true }));
+        });
 
       marker.addTo(markersLayer);
       markers.set(restaurant.id, marker);
@@ -129,7 +134,7 @@ const FoodMap = (() => {
       pin.style.setProperty("--pin-color", (CATEGORY_META[restaurant.category] || CATEGORY_META["한식"]).color);
       pin.textContent = index + 1;
       pin.addEventListener("click", () => {
-        onSelect?.(restaurant.id, { openModal: false });
+        onSelect?.(restaurant.id, { openModal: true });
         focus(restaurant);
       });
       mapNode.appendChild(pin);

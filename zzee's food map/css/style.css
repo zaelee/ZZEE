@@ -802,6 +802,27 @@ select {
   font-size: 13px;
 }
 
+.map-detail-button {
+  display: flex;
+  width: 100%;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  border: 0;
+  border-radius: var(--radius);
+  background: #202124;
+  color: white;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.map-detail-button:hover {
+  background: var(--accent);
+}
+
 .map-links {
   display: flex;
   gap: 6px;
