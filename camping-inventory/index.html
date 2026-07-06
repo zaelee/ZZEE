@@ -471,13 +471,17 @@
         gap: 8px;
       }
 
+      .required-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .required-item,
       .meal-card {
-        padding: 9px;
+        padding: 7px 8px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: #fafbf7;
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .required-item.is-covered {
@@ -515,7 +519,7 @@
         display: block;
         margin-top: 2px;
         color: var(--muted);
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 800;
       }
 
@@ -775,32 +779,21 @@
         Coleman: "https://logo.clearbit.com/coleman.com",
       };
 
-      const imageQueryByCategory = {
-        Backpack: "backpacking,backpack",
-        Chair: "camping,chair",
-        Table: "camping,table",
-        "Trekking Pole": "trekking,poles",
-        Lantern: "camping,lantern",
-        Headlamp: "headlamp,hiking",
-        "Power Bank": "powerbank,camping",
-        "Bluetooth Speaker": "camping,speaker",
-        Shelter: "backpacking,tent",
-        "Sleep System": "sleeping-bag,camping",
-        Cooking: "camping,cooking",
-        Tools: "camping,tools",
-        Furniture: "camping,furniture",
-        Kitchen: "camping,kitchen",
-        Cooler: "camping,cooler",
-        Lighting: "camping,light",
-        Fire: "campfire",
-        Wagon: "camping,wagon",
+      const productImageByItem = {
+        "Helinox Chair Zero (Sand)": "https://helinox.com/cdn/shop/files/carousel_A.jpg?v=1781710313&width=700",
+        "Helinox Table One": "https://helinox.com/cdn/shop/files/web_table_one_black_1.jpg?v=1698962684&width=700",
+        "Helinox Sunset Chair (Black)": "https://helinox.com/cdn/shop/files/web_sunset_chair_coyote_tan_1_f4205e15-0da0-4e88-89fc-e14fc9be9684.jpg?v=1705682844&width=700",
+        "Stanley Adventure Cook Set": "https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-AdventureNestingTwoCupCookSet24ozStainlessSteel.png?v=1762181885&width=900",
       };
 
-      const imageFor = (category, brand, item) =>
-        `https://source.unsplash.com/900x640/?${encodeURIComponent(imageQueryByCategory[category] || `${brand},${item},camping`)}`;
+      const fallbackImageFor = (category, brand, item) =>
+        `https://placehold.co/900x640/f4f6f0/172018?text=${encodeURIComponent(`${brand}\n${item}\n${category}`)}`;
 
-      const mealImageFor = (query) =>
-        `https://source.unsplash.com/480x360/?${encodeURIComponent(query)}`;
+      const imageFor = (category, brand, item) =>
+        productImageByItem[item] || fallbackImageFor(category, brand, item);
+
+      const mealImageFor = (label) =>
+        `https://placehold.co/480x360/fff7ed/172018?text=${encodeURIComponent(label)}`;
 
       const baseGear = [
         ["Shared Gear", "Chair", "Helinox", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
@@ -857,13 +850,13 @@
       ];
 
       const mealPlan = [
-        { type: "Breakfast", name: "오트밀 + 견과 + 꿀", weight: "80g", method: "Hot water", image: mealImageFor("oatmeal,nuts,hiking") },
-        { type: "Lunch", name: "또띠아 + 참치 pouch", weight: "180g", method: "No-cook", image: mealImageFor("tortilla,tuna,wrap") },
-        { type: "Dinner", name: "바로쿡 발열 도시락 + 즉석밥", weight: "320g", method: "Barocook", image: mealImageFor("instant,rice,camping,meal") },
-        { type: "Dinner", name: "동결건조 비빔밥/달밧", weight: "120g", method: "Freeze-dried", image: mealImageFor("freeze,dried,backpacking,meal") },
-        { type: "Late snack", name: "라면 + 육포/참치", weight: "160g", method: "Hot water", image: mealImageFor("instant,ramen,camping") },
-        { type: "Snack", name: "트레일믹스 + 에너지바", weight: "150g", method: "No-cook", image: mealImageFor("trail,mix,energy,bar") },
-        { type: "Drink", name: "전해질 타블렛 + 커피", weight: "30g", method: "Hydration", image: mealImageFor("coffee,hiking,camping") },
+        { type: "Breakfast", name: "오트밀 + 견과 + 꿀", weight: "80g", method: "Hot water", image: mealImageFor("Oatmeal") },
+        { type: "Lunch", name: "또띠아 + 참치 pouch", weight: "180g", method: "No-cook", image: mealImageFor("Tuna Wrap") },
+        { type: "Dinner", name: "바로쿡 발열 도시락 + 즉석밥", weight: "320g", method: "Barocook", image: mealImageFor("Barocook Meal") },
+        { type: "Dinner", name: "동결건조 비빔밥/달밧", weight: "120g", method: "Freeze-dried", image: mealImageFor("Freeze Dried") },
+        { type: "Late snack", name: "라면 + 육포/참치", weight: "160g", method: "Hot water", image: mealImageFor("Ramen") },
+        { type: "Snack", name: "트레일믹스 + 에너지바", weight: "150g", method: "No-cook", image: mealImageFor("Trail Mix") },
+        { type: "Drink", name: "전해질 타블렛 + 커피", weight: "30g", method: "Hydration", image: mealImageFor("Coffee") },
       ];
 
       const localKey = "zzee-camping-local-gear";
@@ -950,7 +943,7 @@
       const gearCard = (gear) => `
         <article class="gear-card ${selectedPackIds.has(gear.id) ? "is-packed" : ""}" data-gear-id="${gear.id}" style="--status-color: ${statusColor[gear.status]}">
           <div class="gear-image">
-            <img src="${gear.image}" alt="${gear.item}" loading="lazy" />
+            <img src="${gear.image}" alt="${gear.item}" loading="lazy" onerror="this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
             <span class="brand-logo"><img src="${gear.logo}" alt="${gear.brand} logo" loading="lazy" onerror="this.src='${imageFor(gear.category, gear.brand, gear.item)}'" /></span>
           </div>
           <div class="gear-body">
@@ -1071,7 +1064,7 @@
       const openModal = (gear) => {
         const note = notes[gear.id] || {};
         $("#modalContent").innerHTML = `
-          <img class="modal-image" src="${gear.image}" alt="${gear.item}" />
+          <img class="modal-image" src="${gear.image}" alt="${gear.item}" onerror="this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
           <div class="modal-body">
             <div class="modal-title">
               <div>
