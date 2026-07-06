@@ -204,14 +204,14 @@
 
       .gear-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
       }
 
       .gear-card {
         position: relative;
         display: grid;
-        grid-template-rows: 170px auto;
+        grid-template-rows: 116px auto;
         overflow: hidden;
         border: 1px solid var(--line);
         border-top: 5px solid var(--status-color);
@@ -246,8 +246,8 @@
         right: 10px;
         bottom: 10px;
         display: grid;
-        width: 44px;
-        height: 44px;
+        width: 34px;
+        height: 34px;
         place-items: center;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.88);
@@ -256,15 +256,15 @@
       }
 
       .brand-logo img {
-        width: 30px;
-        height: 30px;
+        width: 23px;
+        height: 23px;
         object-fit: contain;
       }
 
       .gear-body {
         display: grid;
-        gap: 10px;
-        padding: 14px;
+        gap: 8px;
+        padding: 11px;
       }
 
       .gear-card.is-packed {
@@ -278,13 +278,13 @@
       }
 
       .gear-title strong {
-        font-size: 17px;
+        font-size: 14px;
         line-height: 1.25;
       }
 
       .gear-title span {
         color: var(--muted);
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 900;
         text-transform: uppercase;
       }
@@ -292,11 +292,11 @@
       .gear-meta {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
+        gap: 6px;
       }
 
       .meta-box {
-        padding: 8px;
+        padding: 7px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: #fafbf7;
@@ -313,19 +313,19 @@
       .meta-box strong {
         display: block;
         margin-top: 2px;
-        font-size: 14px;
+        font-size: 12px;
       }
 
       .status {
         display: inline-flex;
         width: fit-content;
-        min-height: 26px;
+        min-height: 24px;
         align-items: center;
         padding: 0 9px;
         border-radius: 999px;
         background: color-mix(in srgb, var(--status-color) 14%, white);
         color: var(--status-color);
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 900;
       }
 
@@ -336,10 +336,15 @@
       }
 
       .card-action {
-        min-height: 32px;
+        min-height: 30px;
         padding: 0 8px;
         border-radius: 6px;
-        font-size: 12px;
+        font-size: 11px;
+      }
+
+      .card-action:disabled {
+        cursor: not-allowed;
+        opacity: 0.42;
       }
 
       .card-action.pack {
@@ -460,6 +465,60 @@
         margin-top: 8px;
       }
 
+      .required-list,
+      .meal-grid {
+        display: grid;
+        gap: 8px;
+      }
+
+      .required-item,
+      .meal-card {
+        padding: 9px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fafbf7;
+        font-size: 12px;
+      }
+
+      .required-item.is-covered {
+        border-color: color-mix(in srgb, var(--owned) 45%, var(--line));
+        background: color-mix(in srgb, var(--owned) 9%, white);
+      }
+
+      .required-item.is-missing {
+        border-color: color-mix(in srgb, var(--dream) 45%, var(--line));
+        background: color-mix(in srgb, var(--dream) 8%, white);
+      }
+
+      .meal-card {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 9px;
+        align-items: center;
+      }
+
+      .meal-card img {
+        width: 42px;
+        height: 42px;
+        border-radius: 7px;
+        object-fit: cover;
+      }
+
+      .meal-card strong,
+      .required-item strong {
+        display: block;
+        line-height: 1.25;
+      }
+
+      .meal-card span,
+      .required-item span {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+      }
+
       .modal {
         position: fixed;
         inset: 0;
@@ -549,7 +608,7 @@
         }
 
         .gear-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
       }
 
@@ -569,9 +628,12 @@
         }
 
         .stats,
-        .gear-grid,
         .modal-content {
           grid-template-columns: 1fr;
+        }
+
+        .gear-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .modal-image {
@@ -631,12 +693,18 @@
           <section class="panel">
             <h2>Backpacking Preview</h2>
             <div id="packSummary" class="lead"></div>
+            <div id="requiredList" class="required-list"></div>
             <div id="packTable"></div>
             <textarea class="checklist" id="checklistOutput" spellcheck="false"></textarea>
             <div class="panel-actions">
               <button type="button" id="copyChecklist">Copy</button>
               <button type="button" id="resetPack">Reset</button>
             </div>
+          </section>
+
+          <section class="panel">
+            <h2>Meal Menu</h2>
+            <div id="mealPlan" class="meal-grid"></div>
           </section>
 
           <section class="panel">
@@ -707,8 +775,32 @@
         Coleman: "https://logo.clearbit.com/coleman.com",
       };
 
-      const imageFor = (brand, item) =>
-        `https://placehold.co/900x640/eef2e8/172018?text=${encodeURIComponent(`${brand}\n${item}`)}`;
+      const imageQueryByCategory = {
+        Backpack: "backpacking,backpack",
+        Chair: "camping,chair",
+        Table: "camping,table",
+        "Trekking Pole": "trekking,poles",
+        Lantern: "camping,lantern",
+        Headlamp: "headlamp,hiking",
+        "Power Bank": "powerbank,camping",
+        "Bluetooth Speaker": "camping,speaker",
+        Shelter: "backpacking,tent",
+        "Sleep System": "sleeping-bag,camping",
+        Cooking: "camping,cooking",
+        Tools: "camping,tools",
+        Furniture: "camping,furniture",
+        Kitchen: "camping,kitchen",
+        Cooler: "camping,cooler",
+        Lighting: "camping,light",
+        Fire: "campfire",
+        Wagon: "camping,wagon",
+      };
+
+      const imageFor = (category, brand, item) =>
+        `https://source.unsplash.com/900x640/?${encodeURIComponent(imageQueryByCategory[category] || `${brand},${item},camping`)}`;
+
+      const mealImageFor = (query) =>
+        `https://source.unsplash.com/480x360/?${encodeURIComponent(query)}`;
 
       const baseGear = [
         ["Shared Gear", "Chair", "Helinox", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
@@ -748,10 +840,31 @@
         weight,
         price,
         status,
-        image: imageFor(brand, item),
-        logo: logoByBrand[brand] || imageFor(brand, ""),
+        image: imageFor(category, brand, item),
+        logo: logoByBrand[brand] || imageFor(category, brand, item),
         purchaseLink: "",
       }));
+
+      const requiredPackCategories = [
+        { key: "Backpack", label: "가방", match: ["Backpack"] },
+        { key: "Shelter", label: "텐트/쉘터", match: ["Shelter"] },
+        { key: "Sleeping Bag", label: "침낭", match: ["Sleep System"] },
+        { key: "Sleeping Pad", label: "침대/패드", items: ["Comet Foam Pad", "PUROMONTE Short Self Inflating Pad", "NEMO Ora Short Mummy"] },
+        { key: "Lighting", label: "랜턴/헤드랜턴", match: ["Lantern", "Headlamp", "Lighting"] },
+        { key: "Cooking", label: "취사/발열", match: ["Cooking", "Kitchen"] },
+        { key: "Power", label: "보조배터리", match: ["Power Bank"] },
+        { key: "Tools", label: "툴/팩망치", match: ["Tools", "Trekking Pole"] },
+      ];
+
+      const mealPlan = [
+        { type: "Breakfast", name: "오트밀 + 견과 + 꿀", weight: "80g", method: "Hot water", image: mealImageFor("oatmeal,nuts,hiking") },
+        { type: "Lunch", name: "또띠아 + 참치 pouch", weight: "180g", method: "No-cook", image: mealImageFor("tortilla,tuna,wrap") },
+        { type: "Dinner", name: "바로쿡 발열 도시락 + 즉석밥", weight: "320g", method: "Barocook", image: mealImageFor("instant,rice,camping,meal") },
+        { type: "Dinner", name: "동결건조 비빔밥/달밧", weight: "120g", method: "Freeze-dried", image: mealImageFor("freeze,dried,backpacking,meal") },
+        { type: "Late snack", name: "라면 + 육포/참치", weight: "160g", method: "Hot water", image: mealImageFor("instant,ramen,camping") },
+        { type: "Snack", name: "트레일믹스 + 에너지바", weight: "150g", method: "No-cook", image: mealImageFor("trail,mix,energy,bar") },
+        { type: "Drink", name: "전해질 타블렛 + 커피", weight: "30g", method: "Hydration", image: mealImageFor("coffee,hiking,camping") },
+      ];
 
       const localKey = "zzee-camping-local-gear";
       const notesKey = "zzee-camping-gear-notes";
@@ -773,6 +886,16 @@
         allGear()
           .filter((gear) => gear.status === "Owned" && isBackpackingCandidate(gear))
           .forEach((gear) => selectedPackIds.add(gear.id));
+        localStorage.setItem(packKey, JSON.stringify([...selectedPackIds]));
+      };
+
+      const syncPackSelection = () => {
+        const packableIds = new Set(
+          allGear()
+            .filter((gear) => gear.status === "Owned" && isBackpackingCandidate(gear))
+            .map((gear) => gear.id)
+        );
+        selectedPackIds = new Set([...selectedPackIds].filter((id) => packableIds.has(id)));
         localStorage.setItem(packKey, JSON.stringify([...selectedPackIds]));
       };
 
@@ -828,11 +951,11 @@
         <article class="gear-card ${selectedPackIds.has(gear.id) ? "is-packed" : ""}" data-gear-id="${gear.id}" style="--status-color: ${statusColor[gear.status]}">
           <div class="gear-image">
             <img src="${gear.image}" alt="${gear.item}" loading="lazy" />
-            <span class="brand-logo"><img src="${gear.logo}" alt="${gear.brand} logo" loading="lazy" onerror="this.src='${imageFor(gear.brand, "")}'" /></span>
+            <span class="brand-logo"><img src="${gear.logo}" alt="${gear.brand} logo" loading="lazy" onerror="this.src='${imageFor(gear.category, gear.brand, gear.item)}'" /></span>
           </div>
           <div class="gear-body">
             <div class="gear-title">
-              <span>${gear.section} · ${gear.category} · ${gear.brand}</span>
+              <span>${gear.section} · ${gear.category}</span>
               <strong>${gear.item}</strong>
             </div>
             <span class="status">${gear.status}</span>
@@ -841,22 +964,62 @@
               <div class="meta-box"><span>Price</span><strong>${gear.price || "-"}</strong></div>
             </div>
             <div class="card-actions">
-              <button class="card-action pack" type="button" data-pack-id="${gear.id}" ${isBackpackingCandidate(gear) ? "" : "disabled"}>${selectedPackIds.has(gear.id) ? "Packed" : "Pack"}</button>
+              <button class="card-action pack" type="button" data-pack-id="${gear.id}" ${gear.status === "Owned" && isBackpackingCandidate(gear) ? "" : "disabled"}>${selectedPackIds.has(gear.id) ? "Packed" : gear.status === "Owned" ? "Pack" : "Owned only"}</button>
               <button class="card-action memo" type="button" data-memo-id="${gear.id}">Memo</button>
             </div>
           </div>
         </article>
       `;
 
+      const requirementCovered = (requirement, items) =>
+        items.some((gear) => {
+          const categoryMatch = requirement.match?.includes(gear.category);
+          const itemMatch = requirement.items?.includes(gear.item);
+          return categoryMatch || itemMatch;
+        });
+
+      const renderRequiredList = (items) => {
+        $("#requiredList").innerHTML = requiredPackCategories.map((requirement) => {
+          const covered = requirementCovered(requirement, items);
+          return `
+            <div class="required-item ${covered ? "is-covered" : "is-missing"}">
+              <strong>${covered ? "✓" : "!"} ${requirement.label}</strong>
+              <span>${covered ? "covered" : "missing"}</span>
+            </div>
+          `;
+        }).join("");
+      };
+
+      const renderMealPlan = () => {
+        $("#mealPlan").innerHTML = mealPlan.map((meal) => `
+          <div class="meal-card">
+            <img src="${meal.image}" alt="${meal.name}" loading="lazy" />
+            <div>
+              <strong>${meal.name}</strong>
+              <span>${meal.type} · ${meal.method} · ${meal.weight}</span>
+            </div>
+          </div>
+        `).join("");
+      };
+
       const buildChecklist = (items) => {
         const totalWeight = items.reduce((sum, item) => sum + weightNumber(item.weight), 0);
         const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
+        const missing = requiredPackCategories.filter((requirement) => !requirementCovered(requirement, items));
         return [
           "# Backpacking Gear Checklist",
           `Total Weight: ${gram(totalWeight)}`,
           `Total Purchase Price: ${won(totalPrice)}`,
           "",
+          "## Required Coverage",
+          ...requiredPackCategories.map((requirement) => `- [${requirementCovered(requirement, items) ? "x" : " "}] ${requirement.label}`),
+          "",
           ...items.map((gear) => `- [ ] ${gear.category} | ${gear.item} | ${gear.weight || "-"} | ${gear.status}`),
+          "",
+          "## Meal Menu",
+          ...mealPlan.map((meal) => `- [ ] ${meal.type} | ${meal.name} | ${meal.method} | ${meal.weight}`),
+          "",
+          missing.length ? `Missing: ${missing.map((item) => item.label).join(", ")}` : "Missing: none",
         ].join("\n");
       };
 
@@ -867,6 +1030,8 @@
         const totalWeight = items.reduce((sum, item) => sum + weightNumber(item.weight), 0);
         const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
         $("#packSummary").textContent = `${items.length} items · ${gram(totalWeight)} · ${won(totalPrice)}`;
+        renderRequiredList(items);
+        renderMealPlan();
         $("#packTable").innerHTML = items.length ? `
           <table class="pack-table">
             <thead><tr><th>Category</th><th>Item</th><th>Weight</th></tr></thead>
@@ -879,6 +1044,7 @@
       };
 
       const renderInventory = () => {
+        syncPackSelection();
         renderCategoryOptions();
         const gear = filteredGear();
         renderStats(gear);
@@ -957,8 +1123,8 @@
           id: `local-${Date.now()}-${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
           brand,
           item,
-          image: data.image || imageFor(brand, item),
-          logo: data.logo || logoByBrand[brand] || imageFor(brand, ""),
+          image: data.image || imageFor(data.category, brand, item),
+          logo: data.logo || logoByBrand[brand] || imageFor(data.category, brand, item),
         });
         localStorage.setItem(localKey, JSON.stringify(localGear));
         event.currentTarget.reset();
