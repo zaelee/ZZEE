@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Haidilao Guide | ZZEE</title>
+    <meta name="description" content="하이디라오 200% 즐기는 방법: 탕 조합, 소스바, 추천 재료, 수타면, 유타오, VIP 팁." />
+    <style>
+      :root {
+        --bg: #fff8f2;
+        --paper: #fffdf9;
+        --paper-strong: #ffffff;
+        --ink: #211813;
+        --muted: #76675e;
+        --line: #ead7c9;
+        --red: #d92121;
+        --orange: #ff6b35;
+        --gold: #f7b733;
+        --green: #237a57;
+        --shadow: 0 20px 54px rgba(84, 35, 18, 0.12);
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 28px 0 72px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .official-logo {
+        width: 128px;
+        height: 48px;
+        object-fit: contain;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: 26px;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+
+      .hero-copy {
+        padding: 22px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: rgba(217, 33, 33, 0.09);
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 14px;
+        font-size: clamp(30px, 4.8vw, 58px);
+        line-height: 1.05;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      .lead {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .summary-card {
+        margin-top: 22px;
+        padding: 18px;
+        border: 1px solid rgba(255, 107, 53, 0.28);
+        border-radius: 12px;
+        background: linear-gradient(135deg, #fff 0%, #fff1e6 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .summary-card strong {
+        color: var(--red);
+      }
+
+      .summary-card p {
+        margin: 8px 0 0;
+        line-height: 1.7;
+      }
+
+      .hero-media {
+        display: grid;
+        place-items: center;
+        min-height: 430px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-media img {
+        width: min(68%, 360px);
+        height: 190px;
+        object-fit: contain;
+        background: #fff;
+      }
+
+      .quick-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 12px 0;
+        margin-bottom: 18px;
+        background: linear-gradient(180deg, var(--bg) 70%, rgba(255, 248, 242, 0));
+      }
+
+      .quick-nav a {
+        flex: 0 0 auto;
+        padding: 10px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .guide-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .content {
+        display: grid;
+        gap: 16px;
+      }
+
+      .section {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--paper-strong);
+        box-shadow: 0 12px 34px rgba(84, 35, 18, 0.07);
+      }
+
+      .section-inner {
+        padding: 22px;
+      }
+
+      .section h2 {
+        margin: 0 0 14px;
+        font-size: 25px;
+      }
+
+      .section h3 {
+        margin: 22px 0 10px;
+        font-size: 18px;
+      }
+
+      .section p,
+      .section li {
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .section ul {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .section strong {
+        color: var(--ink);
+      }
+
+      .recipe {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .recipe span,
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        background: #fff5ea;
+        color: #8a3e14;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .choice-grid,
+      .item-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .choice,
+      .item {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fffaf4;
+      }
+
+      .choice strong,
+      .item strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .choice p,
+      .item p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .rank {
+        color: var(--orange);
+        font-weight: 1000;
+      }
+
+      .aside {
+        position: sticky;
+        top: 70px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .aside-card {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--paper-strong);
+        box-shadow: 0 12px 34px rgba(84, 35, 18, 0.07);
+      }
+
+      .aside-card h2 {
+        margin: 0 0 12px;
+        font-size: 18px;
+      }
+
+      .course {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .course li {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 8px;
+        align-items: center;
+        min-height: 38px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .course span {
+        display: grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border-radius: 999px;
+        background: var(--red);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 1000;
+      }
+
+      .source-note {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .source-note a {
+        color: var(--red);
+        font-weight: 800;
+      }
+
+      .quote {
+        margin: 14px 0 0;
+        padding: 14px;
+        border-left: 4px solid var(--red);
+        border-radius: 10px;
+        background: #fff5ea;
+        color: var(--ink);
+        font-weight: 900;
+      }
+
+      .final {
+        border-color: rgba(217, 33, 33, 0.24);
+        background: linear-gradient(135deg, #fff 0%, #fff0ec 100%);
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .guide-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-media {
+          min-height: 320px;
+        }
+
+        .aside {
+          position: static;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 680px) {
+        .shell {
+          width: min(100% - 24px, 1180px);
+          padding-top: 18px;
+        }
+
+        .official-logo {
+          width: 108px;
+        }
+
+        .hero {
+          gap: 14px;
+        }
+
+        .hero-media {
+          min-height: 250px;
+          border-radius: 14px;
+        }
+
+        .section-inner,
+        .aside-card {
+          padding: 16px;
+        }
+
+        .recipe,
+        .choice-grid,
+        .item-grid,
+        .aside {
+          grid-template-columns: 1fr;
+        }
+
+        .quick-nav {
+          margin-left: -12px;
+          margin-right: -12px;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="topbar" aria-label="상단 이동">
+        <img class="official-logo" src="https://www.haidilao.com/static/img/logo_en.d046b51a.svg" alt="Haidilao" />
+      </nav>
+
+      <header class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Hot Pot Field Guide</span>
+          <h1><span>하이디라오 200%</span><span>즐기는 방법 🍲</span></h1>
+          <p class="lead">
+            프리미엄 VIP 챙기기부터 토마토탕, 소스바, 날치알완자, 수타면, 유타오, 디저트까지.
+            처음 가도 실패 확률을 확 낮추는 재리식 하이디라오 루트.
+          </p>
+          <div class="summary-card">
+            <strong>한 줄 요약</strong>
+            <p>토마토탕 + 소기름훠궈 → 소스바 → 날치알완자 → 특제양념고기 → 옥수수분모자 → 수타면 → 유타오 → 디저트 → VIP 선물 확인.</p>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="https://www.haidilao.com/static/img/logo_en.d046b51a.svg" alt="Haidilao logo" />
+        </figure>
+      </header>
+
+      <nav class="quick-nav" aria-label="가이드 목차">
+        <a href="#vip">VIP</a>
+        <a href="#soup">탕 선택</a>
+        <a href="#sauce">소스바</a>
+        <a href="#ingredients">추천 재료</a>
+        <a href="#noodle">수타면 & 유타오</a>
+        <a href="#dessert">디저트</a>
+        <a href="#summary">요약</a>
+      </nav>
+
+      <div class="guide-grid">
+        <div class="content">
+          <section class="section" id="vip">
+            <div class="section-inner">
+              <h2>1. 프리미엄 VIP부터 챙기기</h2>
+              <ul>
+                <li>계산 전에 <strong>010-3937-6837</strong> 번호로 하이디라오 계정 로그인.</li>
+                <li>프리미엄 VIP 혜택, 등급 상승, 선물 등을 받을 수 있음.</li>
+                <li>작성자는 포인트도 적립됨 😎</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" id="soup">
+            <div class="section-inner">
+              <h2>2. 탕 선택은 이렇게</h2>
+              <h3>추천 조합, 4칸 냄비</h3>
+              <div class="choice-grid">
+                <article class="choice">
+                  <strong>토마토탕 <span class="rank">필수</span></strong>
+                  <p>처음 가도 안정적으로 맛있는 베이스. 고기, 야채, 면 모두 잘 받음.</p>
+                </article>
+                <article class="choice">
+                  <strong>소기름 훠궈 <span class="rank">추천</span></strong>
+                  <p>묵직한 마라 쪽을 원하면 이쪽. 청유마라도 맛있음.</p>
+                </article>
+              </div>
+              <h3>인원별 추천</h3>
+              <ul>
+                <li><strong>2~3명:</strong> 토마토탕 + 소기름훠궈만 선택하고 나머지 2칸은 물로 채우기.</li>
+                <li><strong>4명 이상:</strong> 탕 하나 정도 더 추가해도 좋음.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" id="sauce">
+            <div class="section-inner">
+              <h2>3. 소스바는 무조건 추가</h2>
+              <p>소스바는 <strong>인당 추가</strong>하는 걸 추천. 처음이라면 아래 건희소스부터 만들고, 고수나 마늘을 더 넣어서 자기 스타일로 변형해보자.</p>
+              <h3>건희소스 레시피</h3>
+              <div class="recipe">
+                <span>땅콩소스 1</span>
+                <span>칠리소스 2.5</span>
+                <span>고추기름 1티스푼</span>
+                <span>마늘 1/2</span>
+                <span>다진 파 1/2</span>
+                <span>깨 1티스푼</span>
+                <span>볶음 소고기장 1/2티스푼</span>
+                <span>고춧가루 1/2티스푼</span>
+                <span>땅콩가루 1티스푼</span>
+                <span>설탕 약간, 안 넣는 걸 추천</span>
+              </div>
+              <p>소스바는 뷔페니까 이것저것 섞어서 <strong>3가지 정도</strong> 만들어 보는 것도 추천.</p>
+            </div>
+          </section>
+
+          <section class="section" id="ingredients">
+            <div class="section-inner">
+              <h2>4. 추천 재료</h2>
+              <h3>먼저</h3>
+              <ul>
+                <li>재료 넣기 전에 <strong>거품 걷기</strong>.</li>
+                <li>직원에게 <strong>건더기망</strong> 하나 달라고 하기.</li>
+              </ul>
+              <h3>꼭 먹어볼 것</h3>
+              <div class="item-grid">
+                <article class="item">
+                  <div>
+                    <strong>🥇 날치알완자</strong>
+                    <p>유부에 싸달라고 요청. 완자 간장도 같이 요청. 유부 + 날치알완자 조합이 최고.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🥩 특제양념양고기</strong>
+                    <p>가성비 최고. 냄새 거의 없고 얇은 고기보다 잘 안 부서짐.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🥩 특제양념소고기</strong>
+                    <p>양고기와 같이 가면 안정적인 고기 조합.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🐮 천엽</strong>
+                    <p>호불호는 있지만 천엽 전용 소스 달라고 해서 먹으면 맛이 훨씬 좋음.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🧈 두부모둠</strong>
+                    <p>탕 맛이 잘 배어서 중간에 넣기 좋음.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🥬 배추 + 숙주</strong>
+                    <p>채소모둠보다 이 조합 추천. 상추는 금방 시듦.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🍄 팽이버섯 + 목이버섯</strong>
+                    <p>버섯모둠보다 잘 어울림. 표고버섯은 개인적으로 비추천.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🌽 옥수수분모자</strong>
+                    <p>하이디라오에서 꼭 먹어야 하는 메뉴.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>🌽 옥수수</strong>
+                    <p>이것도 퀄리티가 좋음.</p>
+                  </div>
+                </article>
+                <article class="item">
+                  <div>
+                    <strong>연근, 유부피</strong>
+                    <p>추가로 괜찮으니 취향껏 주문.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="noodle">
+            <div class="section-inner">
+              <h2>5. 수타면 & 유타오</h2>
+              <ul>
+                <li>식사 마무리쯤 <strong>수타면 쇼</strong>를 주문.</li>
+                <li>주문 후 직원에게 <strong>"수타면 쇼 추가했어요."</strong> 라고 한 번 더 말하면 진행이 빠름.</li>
+                <li>쇼를 굳이 안 봐도 된다면 <strong>생면</strong>이 더 맛있다고 느껴짐.</li>
+              </ul>
+              <h3>유타오도 추천</h3>
+              <ul>
+                <li>갓 튀겨줘서 맛있음.</li>
+                <li><strong>연유에 찍어 먹기</strong>.</li>
+                <li><strong>훠궈 국물에 찍어 먹기</strong>. 둘 다 맛있다.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" id="dessert">
+            <div class="section-inner">
+              <h2>6. 디저트 & 숨은 혜택</h2>
+              <ul>
+                <li>지점에 따라 <strong>케이크가 소스바에 있는 곳</strong>도 있음.</li>
+                <li>없다면 직원에게 부탁하면 주는 경우가 많음.</li>
+              </ul>
+              <p>그리고 VIP라면 마지막에 한 번 물어보자.</p>
+              <p class="quote">"VIP 선물 있나요?"</p>
+              <p>생각보다 챙겨주는 지점이 많다. 😄</p>
+            </div>
+          </section>
+
+          <section class="section final" id="summary">
+            <div class="section-inner">
+              <h2>한 줄 요약</h2>
+              <p><strong>토마토탕 + 소기름훠궈 → 소스바 → 날치알완자, 유부 필수 → 특제양념고기 → 옥수수분모자 → 수타면 → 유타오 → 디저트 → VIP 선물 확인.</strong></p>
+              <p>이 코스로 먹으면 실패할 확률이 거의 없다.</p>
+            </div>
+          </section>
+        </div>
+
+        <aside class="aside" aria-label="빠른 요약">
+          <section class="aside-card">
+            <h2>Best Course</h2>
+            <ol class="course">
+              <li><span>1</span>토마토탕 + 소기름훠궈</li>
+              <li><span>2</span>건희소스 만들기</li>
+              <li><span>3</span>날치알완자 유부 요청</li>
+              <li><span>4</span>특제양념고기 추가</li>
+              <li><span>5</span>옥수수분모자</li>
+              <li><span>6</span>수타면 또는 생면</li>
+              <li><span>7</span>유타오 + 디저트</li>
+            </ol>
+          </section>
+          <section class="aside-card">
+            <h2>Must Say</h2>
+            <p class="pill">건더기망 하나 주세요</p>
+            <p class="pill">날치알완자 유부에 싸주세요</p>
+            <p class="pill">완자 간장도 주세요</p>
+            <p class="pill">VIP 선물 있나요?</p>
+          </section>
+          <section class="aside-card source-note">
+            공식 이미지 출처:
+            <a href="https://www.haidilao.com/" target="_blank" rel="noreferrer">Haidilao official website</a>.
+            재료 이미지는 흰 배경 안에서 비율 유지 방식으로 표시했다.
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
