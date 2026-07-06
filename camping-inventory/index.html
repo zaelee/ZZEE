@@ -238,7 +238,8 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        padding: 10px;
       }
 
       .brand-logo {
@@ -465,8 +466,7 @@
         margin-top: 8px;
       }
 
-      .required-list,
-      .meal-grid {
+      .required-list {
         display: grid;
         gap: 8px;
       }
@@ -475,8 +475,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .required-item,
-      .meal-card {
+      .required-item {
         padding: 7px 8px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
@@ -494,27 +493,11 @@
         background: color-mix(in srgb, var(--dream) 8%, white);
       }
 
-      .meal-card {
-        display: grid;
-        grid-template-columns: 42px minmax(0, 1fr);
-        gap: 9px;
-        align-items: center;
-      }
-
-      .meal-card img {
-        width: 42px;
-        height: 42px;
-        border-radius: 7px;
-        object-fit: cover;
-      }
-
-      .meal-card strong,
       .required-item strong {
         display: block;
         line-height: 1.25;
       }
 
-      .meal-card span,
       .required-item span {
         display: block;
         margin-top: 2px;
@@ -560,7 +543,7 @@
         width: 100%;
         height: 100%;
         min-height: 420px;
-        object-fit: cover;
+        object-fit: contain;
         background: #eef2e8;
       }
 
@@ -707,11 +690,6 @@
           </section>
 
           <section class="panel">
-            <h2>Meal Menu</h2>
-            <div id="mealPlan" class="meal-grid"></div>
-          </section>
-
-          <section class="panel">
             <h2>Add Local Item</h2>
             <form class="form-grid" id="gearForm">
               <label>Section
@@ -792,9 +770,6 @@
       const imageFor = (category, brand, item) =>
         productImageByItem[item] || fallbackImageFor(category, brand, item);
 
-      const mealImageFor = (label) =>
-        `https://placehold.co/480x360/fff7ed/172018?text=${encodeURIComponent(label)}`;
-
       const baseGear = [
         ["Shared Gear", "Chair", "Helinox", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
         ["Shared Gear", "Table", "Helinox", "Helinox Table One", "690g", "₩170,000", "Owned"],
@@ -847,16 +822,6 @@
         { key: "Cooking", label: "취사/발열", match: ["Cooking", "Kitchen"] },
         { key: "Power", label: "보조배터리", match: ["Power Bank"] },
         { key: "Tools", label: "툴/팩망치", match: ["Tools", "Trekking Pole"] },
-      ];
-
-      const mealPlan = [
-        { type: "Breakfast", name: "오트밀 + 견과 + 꿀", weight: "80g", method: "Hot water", image: mealImageFor("Oatmeal") },
-        { type: "Lunch", name: "또띠아 + 참치 pouch", weight: "180g", method: "No-cook", image: mealImageFor("Tuna Wrap") },
-        { type: "Dinner", name: "바로쿡 발열 도시락 + 즉석밥", weight: "320g", method: "Barocook", image: mealImageFor("Barocook Meal") },
-        { type: "Dinner", name: "동결건조 비빔밥/달밧", weight: "120g", method: "Freeze-dried", image: mealImageFor("Freeze Dried") },
-        { type: "Late snack", name: "라면 + 육포/참치", weight: "160g", method: "Hot water", image: mealImageFor("Ramen") },
-        { type: "Snack", name: "트레일믹스 + 에너지바", weight: "150g", method: "No-cook", image: mealImageFor("Trail Mix") },
-        { type: "Drink", name: "전해질 타블렛 + 커피", weight: "30g", method: "Hydration", image: mealImageFor("Coffee") },
       ];
 
       const localKey = "zzee-camping-local-gear";
@@ -983,18 +948,6 @@
         }).join("");
       };
 
-      const renderMealPlan = () => {
-        $("#mealPlan").innerHTML = mealPlan.map((meal) => `
-          <div class="meal-card">
-            <img src="${meal.image}" alt="${meal.name}" loading="lazy" />
-            <div>
-              <strong>${meal.name}</strong>
-              <span>${meal.type} · ${meal.method} · ${meal.weight}</span>
-            </div>
-          </div>
-        `).join("");
-      };
-
       const buildChecklist = (items) => {
         const totalWeight = items.reduce((sum, item) => sum + weightNumber(item.weight), 0);
         const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
@@ -1009,9 +962,6 @@
           "",
           ...items.map((gear) => `- [ ] ${gear.category} | ${gear.item} | ${gear.weight || "-"} | ${gear.status}`),
           "",
-          "## Meal Menu",
-          ...mealPlan.map((meal) => `- [ ] ${meal.type} | ${meal.name} | ${meal.method} | ${meal.weight}`),
-          "",
           missing.length ? `Missing: ${missing.map((item) => item.label).join(", ")}` : "Missing: none",
         ].join("\n");
       };
@@ -1024,7 +974,6 @@
         const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
         $("#packSummary").textContent = `${items.length} items · ${gram(totalWeight)} · ${won(totalPrice)}`;
         renderRequiredList(items);
-        renderMealPlan();
         $("#packTable").innerHTML = items.length ? `
           <table class="pack-table">
             <thead><tr><th>Category</th><th>Item</th><th>Weight</th></tr></thead>
