@@ -6,7 +6,7 @@
     <title>재리의 맛집 | Jae's Food Map</title>
     <meta
       name="description"
-      content="재리가 직접 다녀온 건대 중심 개인 맛집 아카이브"
+      content="재리가 직접 다녀온 건대와 성수 중심 개인 맛집 지도"
     />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
@@ -43,6 +43,9 @@
       </a>
 
       <div class="header-actions">
+        <button class="icon-button" id="addToggle" type="button" aria-label="맛집 추가 열기" title="맛집 추가">
+          <span aria-hidden="true">+</span>
+        </button>
         <button class="icon-button" id="themeToggle" type="button" aria-label="다크모드 전환" title="다크모드">
           <span aria-hidden="true">◐</span>
         </button>
@@ -52,10 +55,9 @@
     <main class="app-shell">
       <section class="list-pane" aria-labelledby="archiveTitle">
         <div class="intro">
-          <p class="eyebrow">Konkuk Univ. Area Archive</p>
           <h1 id="archiveTitle">재리가 직접 다녀온 맛집 지도</h1>
           <p>
-            건대 주변에서 다시 가고 싶은 곳, 애매하지만 기억해둘 곳까지 한 번에 모아둔 개인 맛집 지도.
+            건대와 성수 주변에서 다시 가고 싶은 곳, 애매하지만 기억해둘 곳까지 한 번에 모아둔 개인 맛집 지도.
           </p>
         </div>
 
@@ -64,6 +66,12 @@
             <span class="visually-hidden">맛집 검색</span>
             <input id="searchInput" type="search" placeholder="가게명, 메뉴, 코멘트 검색" autocomplete="off" />
           </label>
+
+          <div class="area-tabs" aria-label="지역 필터">
+            <button class="area-tab is-active" type="button" data-filter="area" data-value="전체">전체</button>
+            <button class="area-tab" type="button" data-filter="area" data-value="건대">건대역</button>
+            <button class="area-tab" type="button" data-filter="area" data-value="성수">성수역</button>
+          </div>
 
           <div class="control-group" aria-label="카테고리 필터">
             <button class="chip is-active" type="button" data-filter="category" data-value="전체">전체</button>
@@ -132,5 +140,114 @@
         <div id="modalContent"></div>
       </article>
     </div>
+
+    <aside class="add-panel" id="addPanel" aria-hidden="true" aria-labelledby="addTitle">
+      <div class="add-panel-backdrop" data-close-add></div>
+      <section class="add-panel-card">
+        <div class="add-panel-head">
+          <div>
+            <p class="eyebrow">PRIVATE ADD</p>
+            <h2 id="addTitle">맛집 추가</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-add aria-label="맛집 추가 닫기">×</button>
+        </div>
+        <form class="add-form" id="addRestaurantForm">
+          <input id="editRestaurantId" name="editId" type="hidden" />
+          <label>
+            <span>비밀번호</span>
+            <input id="addPassword" name="password" type="password" inputmode="numeric" autocomplete="off" required />
+          </label>
+          <label>
+            <span>가게명</span>
+            <input name="name" type="text" required />
+          </label>
+          <label class="span-2">
+            <span>한줄평</span>
+            <input name="comment" type="text" placeholder="가볍게 메모" required />
+          </label>
+          <label class="span-2">
+            <span>주소</span>
+            <input name="address" type="text" required />
+          </label>
+          <section class="edit-fields span-2" data-edit-fields hidden>
+            <label>
+              <span>Area</span>
+              <select name="area">
+                <option value="건대">건대</option>
+                <option value="성수">성수</option>
+              </select>
+            </label>
+            <label>
+              <span>Category</span>
+              <select name="category">
+                <option value="한식">한식</option>
+                <option value="중식">중식</option>
+                <option value="일식">일식</option>
+                <option value="양식">양식</option>
+                <option value="아시아">아시아</option>
+                <option value="디저트">디저트</option>
+                <option value="햄부기">햄부기</option>
+                <option value="멕시칸">멕시칸</option>
+                <option value="고인물">고인물</option>
+              </select>
+            </label>
+            <label>
+              <span>Jae Rating</span>
+              <input name="rating" type="number" min="0" max="5" step="0.5" />
+            </label>
+            <label>
+              <span>Signature Menu</span>
+              <input name="signatureMenu" type="text" />
+            </label>
+            <label>
+              <span>Price Range</span>
+              <input name="priceRange" type="text" />
+            </label>
+            <label>
+              <span>Mood</span>
+              <input name="mood" type="text" />
+            </label>
+            <label class="span-2">
+              <span>Jae Comment</span>
+              <textarea name="jaeComment" rows="3"></textarea>
+            </label>
+            <label class="span-2">
+              <span>Menu Items</span>
+              <textarea name="menuItems" rows="3" placeholder="메뉴명 | 가격"></textarea>
+            </label>
+            <label class="span-2">
+              <span>Main Image URL</span>
+              <input name="image" type="url" />
+            </label>
+            <label>
+              <span>Kakao Rating</span>
+              <input name="kakaoRating" type="number" min="0" max="5" step="0.1" />
+            </label>
+            <label>
+              <span>Naver Rating</span>
+              <input name="naverRating" type="number" min="0" max="5" step="0.01" />
+            </label>
+            <label>
+              <span>Google Rating</span>
+              <input name="googleRating" type="number" min="0" max="5" step="0.1" />
+            </label>
+            <label class="span-2">
+              <span>Kakao Link</span>
+              <input name="kakaoMapLink" type="url" />
+            </label>
+            <label class="span-2">
+              <span>Naver Link</span>
+              <input name="naverMapLink" type="url" />
+            </label>
+            <label class="span-2">
+              <span>Google Link</span>
+              <input name="googleMapLink" type="url" />
+            </label>
+          </section>
+          <button class="text-button add-submit" type="submit">Add as pending</button>
+          <p class="form-message" id="addFormMessage" aria-live="polite"></p>
+        </form>
+      </section>
+    </aside>
   </body>
 </html>

@@ -1263,7 +1263,7 @@ const kakaoPlaceData = {
       "https://map.kakaocdn.net/map_roadview/2025/07/9148334/2_101226_9148334_20250710031925_cube/left_800.jpg",
       "http://t1.kakaocdn.net/fiy_reboot/place/5501EA00133F4FF4BC8230059040FBD3"
     ],
-    "checkedAt": "2026-06-30"
+    "checkedAt": "2026-07-06"
   },
   "오코노미야키식당하나": {
     "matchedName": "오코노미야키식당하나",
@@ -5359,14 +5359,33 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
   const mapSearchText = displayPlace ? `${displayPlace.address} ${name}` : `${areaKeyword} ${name}`;
   const searchQuery = encodeURIComponent(mapSearchText);
   const platformRatings = {
-    kakao: { label: "카카오", rating: kakaoPlace?.rating ?? null, checkedAt: kakaoPlace?.checkedAt ?? null, note: kakaoPlace ? "카카오 평점 미표시" : "카카오 평점 미확인" },
-    naver: { label: "네이버", rating: naverPlace?.rating ?? null, checkedAt: naverPlace?.checkedAt ?? null, note: naverPlace ? "네이버 평점 미표시" : "네이버 평점 미확인" },
-    google: { label: "구글", rating: googlePlace?.rating ?? null, checkedAt: googlePlace?.checkedAt ?? null, note: googlePlace ? "구글 평점 미표시" : "구글 평점 미확인" },
+    kakao: {
+      label: "카카오",
+      rating: kakaoPlace?.rating ?? null,
+      reviewCount: kakaoPlace?.ratingCount ?? kakaoPlace?.reviewCount ?? null,
+      checkedAt: kakaoPlace?.checkedAt ?? null,
+      note: kakaoPlace ? "카카오 평점 미표시" : "카카오 평점 미확인",
+    },
+    naver: {
+      label: "네이버",
+      rating: naverPlace?.rating ?? null,
+      reviewCount: naverPlace?.reviewCount ?? null,
+      checkedAt: naverPlace?.checkedAt ?? null,
+      note: naverPlace ? "네이버 평점 미표시" : "네이버 평점 미확인",
+    },
+    google: {
+      label: "구글",
+      rating: googlePlace?.rating ?? null,
+      reviewCount: googlePlace?.reviewCount ?? null,
+      checkedAt: googlePlace?.checkedAt ?? null,
+      note: googlePlace ? "구글 평점 미표시" : "구글 평점 미확인",
+    },
   };
 
   return {
     id: name.replace(/\s+/g, "-").toLowerCase(),
     name,
+    area: areaKeyword,
     category,
     rating,
     comment,
@@ -5375,6 +5394,7 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
     priceRange: kakaoPlace?.priceRange || priceByCategory[category],
     priceSource: kakaoPlace?.menuUpdatedAt ? `카카오맵 메뉴 기준 · ${kakaoPlace.menuUpdatedAt}` : "카카오맵 메뉴 가격 미표시",
     verifiedAt: kakaoPlace?.checkedAt || (verifiedPlace ? addressVerifiedAt : null),
+    verificationStatus: kakaoPlace || verifiedPlace ? "검증후" : "검증전",
     verificationNote: kakaoPlace
       ? `카카오맵 상세/메뉴 API 기준 반영${kakaoPlace.matchedName !== name ? ` · 등록명: ${kakaoPlace.matchedName}` : ""}`
       : verifiedPlace

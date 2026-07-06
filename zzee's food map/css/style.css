@@ -40,7 +40,8 @@ body {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -113,6 +114,7 @@ a {
 .icon-button,
 .text-button,
 .chip,
+.area-tab,
 .favorite-button,
 .recent-list button {
   border: 1px solid var(--line);
@@ -125,6 +127,7 @@ a {
 .icon-button:hover,
 .text-button:hover,
 .chip:hover,
+.area-tab:hover,
 .recent-list button:hover {
   transform: translateY(-1px);
   border-color: var(--accent);
@@ -222,6 +225,25 @@ select:focus {
   gap: 8px;
 }
 
+.area-tabs {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1fr;
+  gap: 8px;
+}
+
+.area-tab {
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.area-tab.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
 .chip {
   min-height: 36px;
   padding: 0 12px;
@@ -254,6 +276,113 @@ select {
 
 .quick-section {
   margin-bottom: 18px;
+}
+
+.add-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+
+.add-form label span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.add-form input,
+.add-form select {
+  height: 42px;
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.edit-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.edit-fields[hidden] {
+  display: none;
+}
+
+.add-form .span-2,
+.add-form .add-submit,
+.form-message {
+  grid-column: 1 / -1;
+}
+
+.add-submit {
+  justify-self: start;
+}
+
+.form-message {
+  min-height: 20px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.add-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  display: none;
+}
+
+.add-panel.is-open {
+  display: block;
+}
+
+.add-panel-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.add-panel-card {
+  position: absolute;
+  top: calc(var(--header-height) + 12px);
+  right: 16px;
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100vh - var(--header-height) - 28px);
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.add-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.add-panel-head h2 {
+  margin: 0;
+  font-size: 22px;
 }
 
 .section-heading,
@@ -302,7 +431,8 @@ select {
 .restaurant-card {
   position: relative;
   display: grid;
-  gap: 12px;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 8px 14px;
   padding: 18px;
   border: 1px solid color-mix(in srgb, var(--category-color) 38%, var(--line));
   border-left: 5px solid var(--category-color);
@@ -318,8 +448,33 @@ select {
   box-shadow: var(--shadow);
 }
 
-.restaurant-card.rating-5 {
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 24%, transparent);
+.restaurant-card > :not(.card-thumb-wrap):not(.favorite-button) {
+  grid-column: 2;
+}
+
+.card-thumb-wrap {
+  grid-row: 1 / span 5;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.card-thumb {
+  width: 86px;
+  height: 86px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  object-fit: cover;
+}
+
+.card-thumb.is-top-rated {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 10px 26px rgba(255, 107, 53, 0.24);
+}
+
+.restaurant-card.rating-unknown {
+  border-style: dashed;
 }
 
 .favorite-button {
@@ -345,12 +500,57 @@ select {
   font-weight: 800;
 }
 
+.stars.is-high-rating,
+.platform-mini span.is-high-rating,
+.platform-link.is-high-rating,
+.modal-rating.is-high-rating {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.stars.is-high-rating {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+}
+
+.stars.is-high-rating .star-rating span,
+.modal-rating.is-high-rating .star-rating span {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.stars.is-high-rating .star-rating .is-full,
+.modal-rating.is-high-rating .star-rating .is-full {
+  color: white;
+}
+
+.stars.is-high-rating .star-rating .is-half::before,
+.modal-rating.is-high-rating .star-rating .is-half::before {
+  color: white;
+}
+
 .star-rating {
   display: inline-flex;
   gap: 1px;
   color: var(--line);
   line-height: 1;
   vertical-align: -1px;
+}
+
+.star-rating.is-unknown {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .star-rating span {
@@ -386,6 +586,13 @@ select {
   font-weight: 800;
 }
 
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .restaurant-card h2 {
   margin: 0;
   font-size: 20px;
@@ -400,6 +607,37 @@ select {
 .card-meta {
   color: var(--muted);
   font-size: 13px;
+}
+
+.platform-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.platform-mini span,
+.verify-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.verify-badge {
+  justify-content: center;
+  letter-spacing: 0;
+  width: 86px;
+}
+
+.verify-badge.is-verified {
+  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .map-pane {
@@ -634,6 +872,18 @@ select {
   white-space: nowrap;
 }
 
+.modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.modal-edit {
+  color: var(--accent);
+  font-weight: 900;
+}
+
 .modal-comment {
   margin: 16px 0 20px;
   color: var(--muted);
@@ -744,6 +994,11 @@ select {
   transform: translateY(-1px);
 }
 
+.platform-link.is-high-rating span,
+.platform-link.is-high-rating small {
+  color: rgba(255, 255, 255, 0.84);
+}
+
 .platform-link strong {
   font-size: 14px;
 }
@@ -806,9 +1061,32 @@ select {
   }
 
   .filter-row,
+  .area-tabs,
+  .add-form,
   .detail-list,
   .platform-grid {
     grid-template-columns: 1fr;
+  }
+
+  .restaurant-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .card-thumb {
+    width: 72px;
+    height: 72px;
+  }
+
+  .verify-badge {
+    width: 72px;
+  }
+
+  .add-panel-card {
+    top: calc(var(--header-height) + 8px);
+    right: 10px;
+    width: calc(100vw - 20px);
+    padding: 14px;
   }
 
   .modal-image {

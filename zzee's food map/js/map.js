@@ -39,7 +39,7 @@ const FoodMap = (() => {
   };
 
   const markerIcon = (restaurant) => {
-    const color = CATEGORY_META[restaurant.category].color;
+    const color = (CATEGORY_META[restaurant.category] || CATEGORY_META["한식"]).color;
     return L.divIcon({
       className: "leaflet-food-marker",
       html: `<span style="--pin-color: ${color}"></span>`,
@@ -49,10 +49,15 @@ const FoodMap = (() => {
     });
   };
 
+  const jaeRatingText = (restaurant) =>
+    typeof restaurant.rating === "number" && restaurant.rating > 0
+      ? `${"★".repeat(Math.floor(restaurant.rating))} ${restaurant.rating}`
+      : "? 검증전";
+
   const popupContent = (restaurant) => `
     <div class="map-info">
       <strong>${restaurant.name}</strong>
-      <span>${restaurant.category} · ${"★".repeat(Math.floor(restaurant.rating))} ${restaurant.rating}</span>
+      <span>${restaurant.area} · ${restaurant.category} · ${jaeRatingText(restaurant)}</span>
       <p>${restaurant.comment}</p>
       <small>${restaurant.address}</small>
       <small>대표메뉴: ${restaurant.signatureMenu}</small>
@@ -121,7 +126,7 @@ const FoodMap = (() => {
       pin.title = restaurant.name;
       pin.style.setProperty("--x", `${16 + ((index * 23) % 72)}%`);
       pin.style.setProperty("--y", `${18 + ((index * 31) % 66)}%`);
-      pin.style.setProperty("--pin-color", CATEGORY_META[restaurant.category].color);
+      pin.style.setProperty("--pin-color", (CATEGORY_META[restaurant.category] || CATEGORY_META["한식"]).color);
       pin.textContent = index + 1;
       pin.addEventListener("click", () => {
         onSelect?.(restaurant.id, { openModal: false });
@@ -132,5 +137,9 @@ const FoodMap = (() => {
     });
   };
 
-  return { init, focus, fitToRestaurants };
+  const update = (restaurants, onSelect) => {
+    renderMarkers(restaurants, onSelect);
+  };
+
+  return { init, focus, fitToRestaurants, update };
 })();
