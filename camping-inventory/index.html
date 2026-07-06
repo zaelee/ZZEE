@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZZEE's Camping Inventory</title>
+    <meta name="description" content="ZZEE camping gear inventory for auto camping and backpacking." />
+    <style>
+      :root {
+        --bg: #f4f6f0;
+        --paper: #fffefa;
+        --ink: #172018;
+        --muted: #667061;
+        --line: #dbe0d3;
+        --accent: #4f7d55;
+        --orange: #ff6b35;
+        --blue: #2f6f8f;
+        --shadow: 0 16px 40px rgba(23, 32, 24, 0.08);
+        --radius: 8px;
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+        letter-spacing: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 28px 0 72px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .back {
+        display: inline-flex;
+        min-height: 34px;
+        align-items: center;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+        gap: 22px;
+        align-items: end;
+        margin-bottom: 24px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: linear-gradient(135deg, #fffefa 0%, #edf5ea 68%, #fff0e9 100%);
+        box-shadow: var(--shadow);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: clamp(34px, 6vw, 64px);
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .stat {
+        min-height: 86px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .stat strong {
+        display: block;
+        margin-top: 6px;
+        font-size: 26px;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      input,
+      select,
+      button {
+        min-height: 40px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      input,
+      select {
+        padding: 0 12px;
+      }
+
+      button {
+        padding: 0 14px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+
+      button.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: white;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .section {
+        margin-bottom: 18px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        box-shadow: 0 10px 26px rgba(23, 32, 24, 0.04);
+      }
+
+      .section h2 {
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      .subsection {
+        margin-top: 18px;
+      }
+
+      .subsection h3 {
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 16px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 10px 11px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: middle;
+        font-size: 14px;
+      }
+
+      th {
+        background: #edf4e9;
+        color: #2e4130;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      td:nth-child(3),
+      td:nth-child(4),
+      th:nth-child(3),
+      th:nth-child(4) {
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .pill {
+        display: inline-flex;
+        min-height: 24px;
+        align-items: center;
+        padding: 0 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .pill.owned {
+        background: rgba(79, 125, 85, 0.13);
+        color: var(--accent);
+      }
+
+      .pill.wishlist {
+        background: rgba(255, 107, 53, 0.12);
+        color: var(--orange);
+      }
+
+      aside {
+        position: sticky;
+        top: 18px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .panel {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        box-shadow: 0 10px 26px rgba(23, 32, 24, 0.04);
+      }
+
+      .panel h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 9px;
+      }
+
+      .form-grid label {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .list li {
+        padding: 6px 8px;
+        border-radius: 999px;
+        background: #f1f4ed;
+        color: #3b4738;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      @media (max-width: 920px) {
+        header,
+        .layout,
+        .controls {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          position: static;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 24px, 1180px);
+          padding-top: 18px;
+        }
+
+        header {
+          padding: 18px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        th,
+        td {
+          padding: 9px 8px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topbar">
+        <a class="back" href="../index.html">← ZZEE Index</a>
+        <span class="back">Local Inventory</span>
+      </div>
+
+      <header>
+        <div>
+          <h1>🏕 ZZEE's Camping Inventory</h1>
+          <p class="lead">오토캠핑과 백패킹 장비를 한 번에 관리하는 로컬 인벤토리. 보유 장비와 위시리스트를 무게, 가격, 카테고리 기준으로 빠르게 훑는다.</p>
+        </div>
+        <div class="stats" id="stats"></div>
+      </header>
+
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="장비명, 카테고리, 섹션 검색" />
+        <select id="statusFilter" aria-label="상태 필터">
+          <option value="All">All Status</option>
+          <option value="Owned">Owned</option>
+          <option value="Wishlist">Wishlist</option>
+        </select>
+        <select id="sectionFilter" aria-label="섹션 필터">
+          <option value="All">All Sections</option>
+          <option value="Shared Gear">Shared Gear</option>
+          <option value="Backpacking">Backpacking</option>
+          <option value="Auto Camping">Auto Camping</option>
+        </select>
+      </div>
+
+      <div class="layout">
+        <div id="inventory"></div>
+
+        <aside>
+          <section class="panel">
+            <h2>Add Local Item</h2>
+            <form class="form-grid" id="gearForm">
+              <label>
+                Section
+                <select name="section">
+                  <option>Shared Gear</option>
+                  <option>Backpacking</option>
+                  <option>Auto Camping</option>
+                </select>
+              </label>
+              <label>
+                Category
+                <input name="category" placeholder="Kitchen, Shelter, Chair..." required />
+              </label>
+              <label>
+                Item
+                <input name="item" placeholder="Gear name" required />
+              </label>
+              <label>
+                Weight
+                <input name="weight" placeholder="510g" />
+              </label>
+              <label>
+                Price
+                <input name="price" placeholder="₩180,000" />
+              </label>
+              <label>
+                Status
+                <select name="status">
+                  <option>Wishlist</option>
+                  <option>Owned</option>
+                </select>
+              </label>
+              <button class="primary" type="submit">Add to Local List</button>
+            </form>
+          </section>
+
+          <section class="panel">
+            <h2>Owned Items</h2>
+            <ul class="list" id="ownedList"></ul>
+          </section>
+
+          <section class="panel">
+            <h2>Wishlist</h2>
+            <ul class="list" id="wishlistList"></ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <script>
+      const baseGear = [
+        ["Shared Gear", "Chair", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
+        ["Shared Gear", "Table", "Helinox Table One", "690g", "₩170,000", "Owned"],
+        ["Shared Gear", "Trekking Pole", "LEKI Trekking Poles", "500g", "-", "Owned"],
+        ["Shared Gear", "Lantern", "Goal Zero Lighthouse Micro Flash ×3", "204g", "-", "Owned"],
+        ["Shared Gear", "Headlamp", "Claymore HEADY2", "72g", "₩60,000", "Wishlist"],
+        ["Shared Gear", "Power Bank", "Nitecore NB10000 Gen3", "150g", "₩100,000", "Wishlist"],
+        ["Shared Gear", "Bluetooth Speaker", "QCY SP2 Mini", "210g", "₩20,000", "Wishlist"],
+        ["Backpacking", "Backpack", "Mystery Ranch Terraplane 82", "2700g", "-", "Owned"],
+        ["Backpacking", "Backpack", "Gregory Focal 48", "1270g", "₩280,000", "Wishlist"],
+        ["Backpacking", "Backpack", "Yamatomichi MINI2", "470g", "₩420,000", "Wishlist"],
+        ["Backpacking", "Shelter", "Naturehike Mongar UL 1P", "1480g", "-", "Owned"],
+        ["Backpacking", "Sleep System", "Naturehike LD350 Sleeping Bag", "760g", "-", "Owned"],
+        ["Backpacking", "Sleep System", "Naturehike 280 Down Sleeping Bag", "560g", "₩150,000", "Wishlist"],
+        ["Backpacking", "Sleep System", "Comet Foam Pad", "340g", "-", "Owned"],
+        ["Backpacking", "Sleep System", "PUROMONTE Short Self Inflating Pad", "390g", "₩150,000", "Wishlist"],
+        ["Backpacking", "Sleep System", "NEMO Ora Short Mummy", "375g", "₩150,000", "Wishlist"],
+        ["Backpacking", "Cooking", "Barocook 850ml", "230g", "₩35,000", "Wishlist"],
+        ["Backpacking", "Tools", "SUSA MH-1 Peg Hammer", "285g", "₩15,000", "Wishlist"],
+        ["Backpacking", "Tools", "Forged Stakes + Carabiners", "300g", "₩20,000", "Wishlist"],
+        ["Auto Camping", "Furniture", "Helinox Sunset Chair (Black)", "1450g", "₩210,000", "Wishlist"],
+        ["Auto Camping", "Furniture", "Snow Peak Entry IGT", "6500g", "₩250,000", "Wishlist"],
+        ["Auto Camping", "Kitchen", "Snow Peak Home & Camp Burner", "1400g", "₩160,000", "Wishlist"],
+        ["Auto Camping", "Kitchen", "Snow Peak Trek 900", "175g", "₩65,000", "Wishlist"],
+        ["Auto Camping", "Kitchen", "Stanley Adventure Cook Set", "440g", "₩60,000", "Wishlist"],
+        ["Auto Camping", "Cooler", "Dometic Patrol 20", "8300g", "₩280,000", "Wishlist"],
+        ["Auto Camping", "Lighting", "Claymore ULTRA3.0 M", "860g", "₩130,000", "Wishlist"],
+        ["Auto Camping", "Fire", "Snow Peak Pack & Carry Fireplace S", "1800g", "₩180,000", "Wishlist"],
+        ["Auto Camping", "Wagon", "Coleman Outdoor Wagon", "11000g", "₩140,000", "Wishlist"],
+      ].map(([section, category, item, weight, price, status]) => ({ section, category, item, weight, price, status }));
+
+      const localKey = "zzee-camping-local-gear";
+      const localGear = JSON.parse(localStorage.getItem(localKey) || "[]");
+      const allGear = () => [...baseGear, ...localGear];
+      const weightNumber = (weight) => Number(String(weight).replace(/[^0-9.]/g, "")) || 0;
+      const priceNumber = (price) => Number(String(price).replace(/[^0-9]/g, "")) || 0;
+      const won = (value) => value ? `₩${value.toLocaleString("ko-KR")}` : "-";
+      const gram = (value) => value >= 1000 ? `${(value / 1000).toFixed(2)}kg` : `${value}g`;
+
+      const filters = () => ({
+        query: document.querySelector("#searchInput").value.trim().toLowerCase(),
+        status: document.querySelector("#statusFilter").value,
+        section: document.querySelector("#sectionFilter").value,
+      });
+
+      const filteredGear = () => {
+        const { query, status, section } = filters();
+        return allGear().filter((gear) => {
+          const haystack = [gear.section, gear.category, gear.item, gear.weight, gear.price, gear.status].join(" ").toLowerCase();
+          return (!query || haystack.includes(query)) &&
+            (status === "All" || gear.status === status) &&
+            (section === "All" || gear.section === section);
+        });
+      };
+
+      const renderStats = (gear) => {
+        const owned = gear.filter((item) => item.status === "Owned");
+        const wishlist = gear.filter((item) => item.status === "Wishlist");
+        const totalWeight = owned.reduce((sum, item) => sum + weightNumber(item.weight), 0);
+        const wishlistBudget = wishlist.reduce((sum, item) => sum + priceNumber(item.price), 0);
+        document.querySelector("#stats").innerHTML = `
+          <div class="stat"><span>Owned</span><strong>${owned.length}</strong></div>
+          <div class="stat"><span>Wishlist</span><strong>${wishlist.length}</strong></div>
+          <div class="stat"><span>Owned Weight</span><strong>${gram(totalWeight)}</strong></div>
+          <div class="stat"><span>Wishlist Budget</span><strong>${won(wishlistBudget)}</strong></div>
+        `;
+      };
+
+      const renderTable = (items) => `
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Item</th>
+              <th>Weight</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${items.map((gear) => `
+              <tr>
+                <td>${gear.category}</td>
+                <td>${gear.item}</td>
+                <td>${gear.weight || "-"}</td>
+                <td>${gear.price || "-"}</td>
+                <td><span class="pill ${gear.status.toLowerCase()}">${gear.status}</span></td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+
+      const renderInventory = () => {
+        const gear = filteredGear();
+        renderStats(gear);
+        const sections = ["Shared Gear", "Backpacking", "Auto Camping"];
+        document.querySelector("#inventory").innerHTML = sections.map((section) => {
+          const sectionItems = gear.filter((item) => item.section === section);
+          if (!sectionItems.length) return "";
+          const categories = [...new Set(sectionItems.map((item) => item.category))];
+          return `
+            <section class="section">
+              <h2>${section}</h2>
+              ${categories.map((category) => `
+                <div class="subsection">
+                  <h3>${category}</h3>
+                  ${renderTable(sectionItems.filter((item) => item.category === category))}
+                </div>
+              `).join("")}
+            </section>
+          `;
+        }).join("");
+
+        document.querySelector("#ownedList").innerHTML = allGear()
+          .filter((gear) => gear.status === "Owned")
+          .map((gear) => `<li>${gear.item}</li>`)
+          .join("");
+        document.querySelector("#wishlistList").innerHTML = allGear()
+          .filter((gear) => gear.status === "Wishlist")
+          .map((gear) => `<li>${gear.item}</li>`)
+          .join("");
+      };
+
+      document.querySelector("#gearForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(event.currentTarget));
+        localGear.push(data);
+        localStorage.setItem(localKey, JSON.stringify(localGear));
+        event.currentTarget.reset();
+        renderInventory();
+      });
+
+      ["#searchInput", "#statusFilter", "#sectionFilter"].forEach((selector) => {
+        document.querySelector(selector).addEventListener("input", renderInventory);
+      });
+
+      renderInventory();
+    </script>
+  </body>
+</html>
