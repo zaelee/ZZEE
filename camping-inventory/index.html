@@ -97,21 +97,31 @@
         font-size: 16px;
       }
 
-      .stats {
+      .section-banners {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .stat {
-        min-height: 86px;
+      .section-banner {
+        display: grid;
+        min-height: 92px;
+        align-content: end;
         padding: 14px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: rgba(255, 255, 255, 0.76);
+        text-decoration: none;
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
       }
 
-      .stat span {
+      .section-banner:hover {
+        border-color: var(--accent);
+        box-shadow: 0 14px 30px rgba(23, 31, 24, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .section-banner span {
         display: block;
         color: var(--muted);
         font-size: 12px;
@@ -119,10 +129,10 @@
         text-transform: uppercase;
       }
 
-      .stat strong {
+      .section-banner strong {
         display: block;
         margin-top: 6px;
-        font-size: 25px;
+        font-size: 20px;
       }
 
       .controls {
@@ -214,7 +224,6 @@
         grid-template-rows: 116px auto;
         overflow: hidden;
         border: 1px solid var(--line);
-        border-top: 5px solid var(--status-color);
         border-radius: var(--radius);
         background: var(--paper);
         box-shadow: 0 10px 26px rgba(23, 31, 24, 0.05);
@@ -223,7 +232,7 @@
       }
 
       .gear-card:hover {
-        border-color: var(--status-color);
+        border-color: var(--accent);
         box-shadow: var(--shadow);
         transform: translateY(-3px);
       }
@@ -231,7 +240,8 @@
       .gear-image {
         position: relative;
         overflow: hidden;
-        background: #eef2e8;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
       }
 
       .gear-image img {
@@ -239,27 +249,32 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        padding: 10px;
+        padding: 14px;
       }
 
       .brand-logo {
         position: absolute;
         right: 10px;
         bottom: 10px;
-        display: grid;
-        width: 34px;
-        height: 34px;
-        place-items: center;
+        display: inline-flex;
+        max-width: calc(100% - 20px);
+        min-width: 34px;
+        min-height: 26px;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.88);
+        padding: 0 8px;
+        border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.92);
-      }
-
-      .brand-logo img {
-        width: 23px;
-        height: 23px;
-        object-fit: contain;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 6px 16px rgba(23, 31, 24, 0.08);
+        color: var(--ink);
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
       }
 
       .gear-body {
@@ -269,8 +284,7 @@
       }
 
       .gear-card.is-packed {
-        outline: 3px solid color-mix(in srgb, var(--status-color) 44%, white);
-        outline-offset: -6px;
+        box-shadow: 0 0 0 2px rgba(23, 31, 24, 0.1), var(--shadow);
       }
 
       .gear-title {
@@ -315,6 +329,16 @@
         display: block;
         margin-top: 2px;
         font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .status-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
       }
 
       .status {
@@ -326,6 +350,19 @@
         border-radius: 999px;
         background: color-mix(in srgb, var(--status-color) 14%, white);
         color: var(--status-color);
+        font-size: 11px;
+        font-weight: 900;
+      }
+
+      .qty {
+        display: inline-flex;
+        min-height: 24px;
+        align-items: center;
+        padding: 0 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
         font-size: 11px;
         font-weight: 900;
       }
@@ -349,8 +386,8 @@
       }
 
       .card-action.pack {
-        border-color: var(--status-color);
-        color: var(--status-color);
+        border-color: var(--line);
+        color: var(--ink);
       }
 
       .card-action.memo {
@@ -420,6 +457,7 @@
 
       .pack-table {
         width: 100%;
+        margin-top: 14px;
         border-collapse: collapse;
         overflow: hidden;
         border: 1px solid var(--line);
@@ -468,19 +506,21 @@
 
       .required-list {
         display: grid;
-        gap: 8px;
-      }
-
-      .required-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+        margin: 10px 0 2px;
       }
 
       .required-item {
-        padding: 7px 8px;
+        display: grid;
+        aspect-ratio: 1;
+        place-content: center;
+        padding: 5px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: #fafbf7;
-        font-size: 11px;
+        font-size: 10px;
+        text-align: center;
       }
 
       .required-item.is-covered {
@@ -500,10 +540,31 @@
 
       .required-item span {
         display: block;
-        margin-top: 2px;
+        margin-top: 3px;
         color: var(--muted);
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 800;
+      }
+
+      .add-guide {
+        display: grid;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .add-guide strong {
+        color: var(--ink);
+      }
+
+      .add-guide code {
+        display: block;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fafbf7;
+        color: var(--ink);
+        white-space: pre-line;
       }
 
       .modal {
@@ -544,7 +605,8 @@
         height: 100%;
         min-height: 420px;
         object-fit: contain;
-        background: #eef2e8;
+        padding: 22px;
+        background: #fff;
       }
 
       .modal-body {
@@ -614,13 +676,17 @@
           padding: 18px;
         }
 
-        .stats,
+        .section-banners,
         .modal-content {
           grid-template-columns: 1fr;
         }
 
         .gear-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .required-list {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
         .modal-image {
@@ -642,7 +708,11 @@
           <h1>🏕 ZZEE's Camping Inventory</h1>
           <p class="lead">오토캠핑과 백패킹 장비를 카드로 관리하는 로컬 인벤토리. 보유 장비의 총 무게, 구매 금액, 백패킹 무게를 자동 계산한다.</p>
         </div>
-        <div class="stats" id="stats"></div>
+        <nav class="section-banners" aria-label="장비 섹션 바로가기">
+          <a class="section-banner" href="#shared-gear"><span>Section</span><strong>Shared Gear</strong></a>
+          <a class="section-banner" href="#backpacking"><span>Section</span><strong>Backpacking</strong></a>
+          <a class="section-banner" href="#auto-camping"><span>Section</span><strong>Auto Camping</strong></a>
+        </nav>
       </header>
 
       <div class="controls">
@@ -690,32 +760,15 @@
           </section>
 
           <section class="panel">
-            <h2>Add Local Item</h2>
-            <form class="form-grid" id="gearForm">
-              <label>Section
-                <select name="section">
-                  <option>Shared Gear</option>
-                  <option>Backpacking</option>
-                  <option>Auto Camping</option>
-                </select>
-              </label>
-              <label>Category <input name="category" placeholder="Kitchen, Shelter, Chair..." required /></label>
-              <label>Brand <input name="brand" placeholder="Helinox" required /></label>
-              <label>Item <input name="item" placeholder="Gear name" required /></label>
-              <label>Weight <input name="weight" placeholder="510g" /></label>
-              <label>Price <input name="price" placeholder="₩180,000" /></label>
-              <label>Status
-                <select name="status">
-                  <option>Wishlist</option>
-                  <option>Owned</option>
-                  <option>Dream Gear</option>
-                </select>
-              </label>
-              <label>Image URL <input name="image" placeholder="https://..." /></label>
-              <label>Brand Logo URL <input name="logo" placeholder="https://..." /></label>
-              <label>Purchase Link <input name="purchaseLink" placeholder="https://..." /></label>
-              <button class="primary" type="submit">Add to Local List</button>
-            </form>
+            <h2>장비 추가 방법</h2>
+            <div class="add-guide">
+              <p><strong>가장 편한 방식:</strong> 채팅에 장비명과 상태만 던져줘. 내가 브랜드, 이미지, 무게, 가격 후보를 웹에서 확인해서 기존 양식에 맞게 넣을게.</p>
+              <code>예시)
+헬리녹스 체어투 가지고 있음
+니모 텐서 올시즌 사고 싶음
+브리즈문 스트랩 블랙 보유</code>
+              <p>정확한 모델명이 애매하면 사진이나 구매 링크만 줘도 돼. 확인이 필요한 값은 비워두지 않고 “확인 필요”로 표시해서 다음 수정 때 이어갈 수 있게 정리할게.</p>
+            </div>
           </section>
         </aside>
       </div>
@@ -735,46 +788,62 @@
         "Dream Gear": "var(--dream)",
       };
 
-      const logoByBrand = {
-        Helinox: "https://logo.clearbit.com/helinox.com",
-        LEKI: "https://logo.clearbit.com/leki.com",
-        "Goal Zero": "https://logo.clearbit.com/goalzero.com",
-        Claymore: "https://logo.clearbit.com/claymoreoutdoor.com",
-        Nitecore: "https://logo.clearbit.com/nitecorestore.com",
-        QCY: "https://logo.clearbit.com/qcy.com",
-        "Mystery Ranch": "https://logo.clearbit.com/mysteryranch.com",
-        Gregory: "https://logo.clearbit.com/gregorypacks.com",
-        Yamatomichi: "https://logo.clearbit.com/yamatomichi.com",
-        Naturehike: "https://logo.clearbit.com/naturehike.com",
-        Comet: "https://logo.clearbit.com/coupang.com",
-        PUROMONTE: "https://placehold.co/120x120/f4f6f0/3f8f55?text=P",
-        NEMO: "https://logo.clearbit.com/nemoequipment.com",
-        Barocook: "https://placehold.co/120x120/f4f6f0/3f8f55?text=B",
-        SUSA: "https://placehold.co/120x120/f4f6f0/3f8f55?text=S",
-        "Snow Peak": "https://logo.clearbit.com/snowpeak.com",
-        Stanley: "https://logo.clearbit.com/stanley1913.com",
-        Dometic: "https://logo.clearbit.com/dometic.com",
-        Coleman: "https://logo.clearbit.com/coleman.com",
-      };
-
       const productImageByItem = {
-        "Helinox Chair Zero (Sand)": "https://helinox.com/cdn/shop/files/carousel_A.jpg?v=1781710313&width=700",
-        "Helinox Table One": "https://helinox.com/cdn/shop/files/web_table_one_black_1.jpg?v=1698962684&width=700",
+        "Helinox Chair Zero (Sand)": "https://cdn.shopify.com/s/files/1/0039/1367/8918/files/helinox_chair_zero_l_grey_hero.jpg?v=1754052301",
+        "Helinox Table One": "https://cdn.shopify.com/s/files/1/0039/1367/8918/files/helinox_table_one_black_hero.png?v=1735805865",
+        "LEKI Trekking Poles": "https://lekiusa.com/cdn/shop/files/65426801_1_2048x2048.jpg?v=1775838490",
+        "Goal Zero Lighthouse Micro Flash": "https://dks.scene7.com/is/image/GolfGalaxy/23GZEULGHTHSMCRFLCAC?fit=constrain&fmt=webp&hei=700&op_sharpen=1&qlt=80&wid=700",
+        "Claymore HEADY2": "https://claymoreoutdoor.com/cdn/shop/files/HEADY__01_5fdacb92-98f8-4b83-9e2b-94d7d37495f4.jpg?crop=center&height=1200&v=1721328930&width=1200",
+        "Nitecore NB10000 Gen3": "https://en.aventurenordique.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/b/a/batterie-externe-outdoor-nitecore-nb10000-power-bank-gen4-30.jpg",
+        "QCY SP2 Mini": "https://qcyturkiye.tsoftstatic.com/sp2-tasinabilir-bluetooth-hoparlor-punch-bass-17-saat-dinleme-rgb-isik-ip67-tf-kart-girisli-hoparlorler-qcy-sp2-199-48-K.jpg",
+        "Mystery Ranch Terraplane 82": "https://s3-ap-northeast-1.amazonaws.com/aandfjp/mysteryranch/web/product/2016ss/1200/19761666063005.jpg",
+        "Gregory Focal 48": "https://cdn11.bigcommerce.com/s-xhsipki9fu/images/stencil/640x711/products/867/51185/gregory-focal-48-rucksack__14871.1655337262.jpg?c=1",
+        "Yamatomichi MINI2": "https://baseec-img-mng.akamaized.net/images/item/origin/f2f4d17b2c226c3d089e2cb144290ce6.jpg?im=Resize%2Cwidth%3D1280%2Ctype%3Dnormal&imformat=generic&q=90",
+        "Naturehike Mongar UL 1P": "https://www.naturehike.com/cdn/shop/files/naturehike_mongar_ul_1_person_tent_main_moon_sand.jpg?v=1761817287",
+        "Naturehike LD350 Sleeping Bag": "https://img.myshopline.com/image/store/1660207760542/-8-4.jpeg?h=1000&w=1000",
+        "Naturehike 280 Down Sleeping Bag": "https://www.naturehike.com/cdn/shop/files/71OosPbNIaL._AC_SX679.jpg?v=1755656194&width=1080",
+        "Comet Foam Pad": "https://pajaksport.com/2367-large_default/sleep-buddy.jpg",
+        "PUROMONTE Short Self Inflating Pad": "https://item-shopping.c.yimg.jp/i/n/kyuzo-outdoor_pmt120",
+        "NEMO Ora Short Mummy": "https://images.hardloop.fr/273324-large_default/nemo-ora-20s-sleeping-pad.jpg?h=auto&q=80&w=auto",
+        "Barocook 850ml": "https://mgadistribution.ca/cdn/shop/products/BC-003.jpg?v=1638834949",
+        "SUSA MH-1 Peg Hammer": "https://sortdays.com/cdn/shop/files/Vancouver-SORT-Design-33_fa28a452-4ad3-4ecb-be1f-56482b74d009_1946x.jpg?v=1746229132",
+        "Breeze Moon Carabiner": "./images/black-carabiner.svg",
+        "Breeze Moon Multipurpose Cord": "https://breezemoon.co.kr/web/product/big/202312/c8ca2f3bd9afe2b1a205e2f5564288af.jpg",
+        "Breeze Moon Camping Peg": "./images/black-peg.svg",
+        "Slow Outdoor Factory Ultralight Table": "./images/ultralight-table.svg",
         "Helinox Sunset Chair (Black)": "https://helinox.com/cdn/shop/files/web_sunset_chair_coyote_tan_1_f4205e15-0da0-4e88-89fc-e14fc9be9684.jpg?v=1705682844&width=700",
+        "Snow Peak Entry IGT": "https://thepremierstore.com/cdn/shop/files/snowpeakentryIGTtable_1500x.jpg?v=1724432557",
+        "Snow Peak Home & Camp Burner": "https://www.japantrendshop.com/img/products/4655/4655-snow-peak-home-camp-burner-designer-stove-outdoor-1.jpg",
+        "Snow Peak Trek 900": "https://kream-phinf.pstatic.net/MjAyNTAzMDRfNzAg/MDAxNzQxMDUzMjUyMDcz.SEIZGg_HxYdrmdOp7sFfOWwwmzmmVyq1WNAchqT8p_4g.pTKwYn0279hhMXaCjIZJFhOJx_VBAcV1vnkvqb7j-Cog.PNG/a_94b0294bd1ca46c19359b4841b7a9475.png",
         "Stanley Adventure Cook Set": "https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-AdventureNestingTwoCupCookSet24ozStainlessSteel.png?v=1762181885&width=900",
+        "Dometic Patrol 20": "https://www.tapir-store.de/media/image/db/6b/04/dometic_kuehlbox_patrol_20l_glow_181838_600x600.webp",
+        "Claymore ULTRA3.0 M": "https://unby.itembox.cloud/product/061/000000006125/000000006125-01.jpg?size=l&t=20230507181038&w=ODAw",
+        "Snow Peak Pack & Carry Fireplace S": "https://www.snowpeak.com/cdn/shop/products/pack_and_carry_small_fireplace_st-031r_hero_01.jpg?v=1587495696&width=1067",
+        "Coleman Outdoor Wagon": "https://newellbrands.imgix.net/ef0bbd9a-7979-3161-bcc7-630bed25ba04/ef0bbd9a-7979-3161-bcc7-630bed25ba04.jpg?auto=format%2Ccompress&h=700&w=700",
       };
 
       const fallbackImageFor = (category, brand, item) =>
-        `https://placehold.co/900x640/f4f6f0/172018?text=${encodeURIComponent(`${brand}\n${item}\n${category}`)}`;
+        `https://placehold.co/900x640/ffffff/172018?text=${encodeURIComponent(`${brand}\n${item}\n${category}`)}`;
 
       const imageFor = (category, brand, item) =>
         productImageByItem[item] || fallbackImageFor(category, brand, item);
+      const statusColorFor = (status) => statusColor[status] || "var(--muted)";
+      const brandMark = (brand) => {
+        const clean = String(brand || "").replace(/\s+by\s+.*/i, "").trim();
+        if (clean.length <= 10) return clean;
+        return clean
+          .split(/\s+/)
+          .map((part) => part[0])
+          .join("")
+          .slice(0, 4);
+      };
 
       const baseGear = [
         ["Shared Gear", "Chair", "Helinox", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
         ["Shared Gear", "Table", "Helinox", "Helinox Table One", "690g", "₩170,000", "Owned"],
+        ["Shared Gear", "Table", "Slow Outdoor Factory", "Slow Outdoor Factory Ultralight Table", "-", "-", "Owned"],
         ["Shared Gear", "Trekking Pole", "LEKI", "LEKI Trekking Poles", "500g", "-", "Owned"],
-        ["Shared Gear", "Lantern", "Goal Zero", "Goal Zero Lighthouse Micro Flash ×3", "204g", "-", "Owned"],
+        ["Shared Gear", "Lantern", "Goal Zero", "Goal Zero Lighthouse Micro Flash", "204g", "-", "Owned", 3],
         ["Shared Gear", "Headlamp", "Claymore", "Claymore HEADY2", "72g", "₩60,000", "Wishlist"],
         ["Shared Gear", "Power Bank", "Nitecore", "Nitecore NB10000 Gen3", "150g", "₩100,000", "Wishlist"],
         ["Shared Gear", "Bluetooth Speaker", "QCY", "QCY SP2 Mini", "210g", "₩20,000", "Wishlist"],
@@ -784,12 +853,14 @@
         ["Backpacking", "Shelter", "Naturehike", "Naturehike Mongar UL 1P", "1480g", "-", "Owned"],
         ["Backpacking", "Sleep System", "Naturehike", "Naturehike LD350 Sleeping Bag", "760g", "-", "Owned"],
         ["Backpacking", "Sleep System", "Naturehike", "Naturehike 280 Down Sleeping Bag", "560g", "₩150,000", "Wishlist"],
-        ["Backpacking", "Sleep System", "Comet", "Comet Foam Pad", "340g", "-", "Owned"],
+        ["Backpacking", "Sleep System", "Comet by Coupang", "Comet Foam Pad", "340g", "-", "Owned"],
         ["Backpacking", "Sleep System", "PUROMONTE", "PUROMONTE Short Self Inflating Pad", "390g", "₩150,000", "Wishlist"],
         ["Backpacking", "Sleep System", "NEMO", "NEMO Ora Short Mummy", "375g", "₩150,000", "Wishlist"],
         ["Backpacking", "Cooking", "Barocook", "Barocook 850ml", "230g", "₩35,000", "Wishlist"],
         ["Backpacking", "Tools", "SUSA", "SUSA MH-1 Peg Hammer", "285g", "₩15,000", "Wishlist"],
-        ["Backpacking", "Tools", "SUSA", "Forged Stakes + Carabiners", "300g", "₩20,000", "Wishlist"],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Carabiner", "-", "-", "Owned", 5],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Multipurpose Cord", "-", "-", "Owned"],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Camping Peg", "-", "-", "Owned", 10],
         ["Auto Camping", "Furniture", "Helinox", "Helinox Sunset Chair (Black)", "1450g", "₩210,000", "Wishlist"],
         ["Auto Camping", "Furniture", "Snow Peak", "Snow Peak Entry IGT", "6500g", "₩250,000", "Dream Gear"],
         ["Auto Camping", "Kitchen", "Snow Peak", "Snow Peak Home & Camp Burner", "1400g", "₩160,000", "Wishlist"],
@@ -799,7 +870,7 @@
         ["Auto Camping", "Lighting", "Claymore", "Claymore ULTRA3.0 M", "860g", "₩130,000", "Wishlist"],
         ["Auto Camping", "Fire", "Snow Peak", "Snow Peak Pack & Carry Fireplace S", "1800g", "₩180,000", "Dream Gear"],
         ["Auto Camping", "Wagon", "Coleman", "Coleman Outdoor Wagon", "11000g", "₩140,000", "Wishlist"],
-      ].map(([section, category, brand, item, weight, price, status], index) => ({
+      ].map(([section, category, brand, item, weight, price, status, quantity = 1, purchaseLink = ""], index) => ({
         id: `base-${index}-${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
         section,
         category,
@@ -808,9 +879,9 @@
         weight,
         price,
         status,
+        quantity,
         image: imageFor(category, brand, item),
-        logo: logoByBrand[brand] || imageFor(category, brand, item),
-        purchaseLink: "",
+        purchaseLink,
       }));
 
       const requiredPackCategories = [
@@ -827,15 +898,46 @@
       const localKey = "zzee-camping-local-gear";
       const notesKey = "zzee-camping-gear-notes";
       const packKey = "zzee-camping-pack-preview";
-      const localGear = JSON.parse(localStorage.getItem(localKey) || "[]");
-      let notes = JSON.parse(localStorage.getItem(notesKey) || "{}");
-      let selectedPackIds = new Set(JSON.parse(localStorage.getItem(packKey) || "[]"));
+      const safeJSON = (key, fallback) => {
+        try {
+          return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+        } catch {
+          localStorage.removeItem(key);
+          return fallback;
+        }
+      };
+      const escapeHTML = (value) =>
+        String(value ?? "").replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          "\"": "&quot;",
+          "'": "&#39;",
+        })[char]);
+      const safeURL = (value) => {
+        const url = String(value || "").trim();
+        return /^https?:\/\//i.test(url) ? url : "";
+      };
+      const isAsdTestItem = (gear) =>
+        [gear?.item, gear?.brand, gear?.category].some((value) => String(value || "").trim().toLowerCase() === "asd");
+      let localGear = safeJSON(localKey, []).filter((gear) => !isAsdTestItem(gear));
+      localStorage.setItem(localKey, JSON.stringify(localGear));
+      let notes = safeJSON(notesKey, {});
+      let selectedPackIds = new Set(safeJSON(packKey, []));
 
       const allGear = () => [...baseGear, ...localGear];
       const isBackpackingCandidate = (gear) => gear.section === "Backpacking" || gear.section === "Shared Gear";
       const weightNumber = (weight) => Number(String(weight).replace(/[^0-9.]/g, "")) || 0;
       const priceNumber = (price) => Number(String(price).replace(/[^0-9]/g, "")) || 0;
       const won = (value) => value ? `₩${value.toLocaleString("ko-KR")}` : "-";
+      const compactPrice = (price) => {
+        const value = priceNumber(price);
+        if (!value) return "-";
+        if (value >= 10000) return `₩${Number((value / 10000).toFixed(value % 10000 ? 1 : 0))}만`;
+        if (value >= 1000) return `₩${Number((value / 1000).toFixed(value % 1000 ? 1 : 0))}천`;
+        return `₩${value}`;
+      };
+      const quantityLabel = (gear) => Number(gear.quantity || 1) > 1 ? `${gear.quantity}ea` : "";
       const gram = (value) => value >= 1000 ? `${(value / 1000).toFixed(2)}kg` : `${Math.round(value)}g`;
       const $ = (selector) => document.querySelector(selector);
 
@@ -878,48 +980,28 @@
       const renderCategoryOptions = () => {
         const current = $("#categoryFilter").value;
         const categories = [...new Set(allGear().map((gear) => gear.category))].sort((a, b) => a.localeCompare(b));
-        $("#categoryFilter").innerHTML = `<option value="All">All Categories</option>${categories.map((category) => `<option>${category}</option>`).join("")}`;
+        $("#categoryFilter").innerHTML = `<option value="All">All Categories</option>${categories.map((category) => `<option>${escapeHTML(category)}</option>`).join("")}`;
         $("#categoryFilter").value = categories.includes(current) ? current : "All";
       };
 
-      const renderStats = (gear) => {
-        const owned = allGear().filter((item) => item.status === "Owned");
-        const wishlist = allGear().filter((item) => item.status === "Wishlist");
-        const dream = allGear().filter((item) => item.status === "Dream Gear");
-        const ownedWeight = owned.reduce((sum, item) => sum + weightNumber(item.weight), 0);
-        const ownedCost = owned.reduce((sum, item) => sum + priceNumber(item.price), 0);
-        const backpackingWeight = allGear()
-          .filter((item) => selectedPackIds.has(item.id))
-          .reduce((sum, item) => sum + weightNumber(item.weight), 0);
-        const futureBudget = [...wishlist, ...dream].reduce((sum, item) => sum + priceNumber(item.price), 0);
-        $("#stats").innerHTML = `
-          <div class="stat"><span>Owned</span><strong>${owned.length}</strong></div>
-          <div class="stat"><span>Wishlist</span><strong>${wishlist.length}</strong></div>
-          <div class="stat"><span>Dream Gear</span><strong>${dream.length}</strong></div>
-          <div class="stat"><span>Total Weight</span><strong>${gram(ownedWeight)}</strong></div>
-          <div class="stat"><span>Purchase Total</span><strong>${won(ownedCost)}</strong></div>
-          <div class="stat"><span>Pack Preview</span><strong>${gram(backpackingWeight)}</strong></div>
-          <div class="stat"><span>Future Budget</span><strong>${won(futureBudget)}</strong></div>
-          <div class="stat"><span>Visible Cards</span><strong>${gear.length}</strong></div>
-          <div class="stat"><span>Categories</span><strong>${new Set(allGear().map((item) => item.category)).size}</strong></div>
-        `;
-      };
-
       const gearCard = (gear) => `
-        <article class="gear-card ${selectedPackIds.has(gear.id) ? "is-packed" : ""}" data-gear-id="${gear.id}" style="--status-color: ${statusColor[gear.status]}">
+        <article class="gear-card ${selectedPackIds.has(gear.id) ? "is-packed" : ""}" data-gear-id="${gear.id}" style="--status-color: ${statusColorFor(gear.status)}">
           <div class="gear-image">
-            <img src="${gear.image}" alt="${gear.item}" loading="lazy" onerror="this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
-            <span class="brand-logo"><img src="${gear.logo}" alt="${gear.brand} logo" loading="lazy" onerror="this.src='${imageFor(gear.category, gear.brand, gear.item)}'" /></span>
+            <img src="${escapeHTML(gear.image)}" alt="${escapeHTML(gear.item)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
+            <span class="brand-logo" title="${escapeHTML(gear.brand)}">${escapeHTML(brandMark(gear.brand))}</span>
           </div>
           <div class="gear-body">
             <div class="gear-title">
-              <span>${gear.section} · ${gear.category}</span>
-              <strong>${gear.item}</strong>
+              <span>${escapeHTML(gear.section)} · ${escapeHTML(gear.category)}</span>
+              <strong>${escapeHTML(gear.item)}</strong>
             </div>
-            <span class="status">${gear.status}</span>
+            <div class="status-row">
+              <span class="status">${escapeHTML(gear.status)}</span>
+              ${quantityLabel(gear) ? `<span class="qty">${escapeHTML(quantityLabel(gear))}</span>` : ""}
+            </div>
             <div class="gear-meta">
-              <div class="meta-box"><span>Weight</span><strong>${gear.weight || "-"}</strong></div>
-              <div class="meta-box"><span>Price</span><strong>${gear.price || "-"}</strong></div>
+              <div class="meta-box"><span>Weight</span><strong>${escapeHTML(gear.weight || "-")}</strong></div>
+              <div class="meta-box"><span>Price</span><strong title="${escapeHTML(gear.price || "-")}">${escapeHTML(compactPrice(gear.price))}</strong></div>
             </div>
             <div class="card-actions">
               <button class="card-action pack" type="button" data-pack-id="${gear.id}" ${gear.status === "Owned" && isBackpackingCandidate(gear) ? "" : "disabled"}>${selectedPackIds.has(gear.id) ? "Packed" : gear.status === "Owned" ? "Pack" : "Owned only"}</button>
@@ -978,7 +1060,7 @@
           <table class="pack-table">
             <thead><tr><th>Category</th><th>Item</th><th>Weight</th></tr></thead>
             <tbody>
-              ${items.map((gear) => `<tr><td>${gear.category}</td><td>${gear.item}</td><td>${gear.weight || "-"}</td></tr>`).join("")}
+              ${items.map((gear) => `<tr><td>${escapeHTML(gear.category)}</td><td>${escapeHTML(gear.item)}</td><td>${escapeHTML(gear.weight || "-")}</td></tr>`).join("")}
             </tbody>
           </table>
         ` : `<p class="lead">Pack 버튼으로 백패킹 미리보기 장비를 담아보세요.</p>`;
@@ -989,15 +1071,15 @@
         syncPackSelection();
         renderCategoryOptions();
         const gear = filteredGear();
-        renderStats(gear);
         renderPackPreview();
         const sections = ["Shared Gear", "Backpacking", "Auto Camping"];
         $("#inventory").innerHTML = sections.map((section) => {
           const items = gear.filter((item) => item.section === section);
           if (!items.length) return "";
           const weight = items.filter((item) => item.status === "Owned").reduce((sum, item) => sum + weightNumber(item.weight), 0);
+          const sectionId = section.toLowerCase().replace(/\s+/g, "-");
           return `
-            <section class="section">
+            <section class="section" id="${sectionId}">
               <div class="section-head">
                 <div>
                   <h2>${section}</h2>
@@ -1013,26 +1095,26 @@
       const openModal = (gear) => {
         const note = notes[gear.id] || {};
         $("#modalContent").innerHTML = `
-          <img class="modal-image" src="${gear.image}" alt="${gear.item}" onerror="this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
+          <img class="modal-image" src="${escapeHTML(gear.image)}" alt="${escapeHTML(gear.item)}" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImageFor(gear.category, gear.brand, gear.item)}'" />
           <div class="modal-body">
             <div class="modal-title">
               <div>
-                <span class="status" style="--status-color: ${statusColor[gear.status]}">${gear.status}</span>
-                <h2 id="modalTitle">${gear.item}</h2>
-                <p class="lead">${gear.brand} · ${gear.section} · ${gear.category} · ${gear.weight || "-"} · ${gear.price || "-"}</p>
+                <span class="status" style="--status-color: ${statusColorFor(gear.status)}">${escapeHTML(gear.status)}</span>
+                <h2 id="modalTitle">${escapeHTML(gear.item)}</h2>
+                <p class="lead">${escapeHTML(gear.brand)} · ${escapeHTML(gear.section)} · ${escapeHTML(gear.category)} · ${escapeHTML(gear.weight || "-")} · ${escapeHTML(gear.price || "-")}</p>
               </div>
               <button class="close" type="button" data-close-modal>×</button>
             </div>
             <form class="modal-form" id="noteForm">
-              <label>Purchase Date <input name="purchaseDate" value="${note.purchaseDate || ""}" placeholder="2026-07-06" /></label>
-              <label>Purchase Link <input name="purchaseLink" value="${note.purchaseLink || gear.purchaseLink || ""}" placeholder="https://..." /></label>
+              <label>Purchase Date <input name="purchaseDate" value="${escapeHTML(note.purchaseDate || "")}" placeholder="2026-07-06" /></label>
+              <label>Purchase Link <input name="purchaseLink" value="${escapeHTML(note.purchaseLink || gear.purchaseLink || "")}" placeholder="https://..." /></label>
               <label>Satisfaction
                 <div class="rating-row">
                   <input name="satisfaction" type="range" min="0" max="5" step="0.5" value="${note.satisfaction || 0}" />
-                  <output>${note.satisfaction || 0}/5</output>
+                  <output>${escapeHTML(note.satisfaction || 0)}/5</output>
                 </div>
               </label>
-              <label>Use Review <textarea name="review" placeholder="사용 후기, 장단점, 다음 캠핑에서 확인할 점">${note.review || ""}</textarea></label>
+              <label>Use Review <textarea name="review" placeholder="사용 후기, 장단점, 다음 캠핑에서 확인할 점">${escapeHTML(note.review || "")}</textarea></label>
               <button class="primary" type="submit">Save Memo</button>
             </form>
           </div>
@@ -1054,24 +1136,6 @@
         $("#gearModal").classList.remove("is-open");
         $("#gearModal").setAttribute("aria-hidden", "true");
       };
-
-      $("#gearForm").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = Object.fromEntries(new FormData(event.currentTarget));
-        const brand = data.brand.trim();
-        const item = data.item.trim();
-        localGear.push({
-          ...data,
-          id: `local-${Date.now()}-${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
-          brand,
-          item,
-          image: data.image || imageFor(data.category, brand, item),
-          logo: data.logo || logoByBrand[brand] || imageFor(data.category, brand, item),
-        });
-        localStorage.setItem(localKey, JSON.stringify(localGear));
-        event.currentTarget.reset();
-        renderInventory();
-      });
 
       ["#searchInput", "#statusFilter", "#sectionFilter", "#categoryFilter"].forEach((selector) => {
         $(selector).addEventListener("input", renderInventory);

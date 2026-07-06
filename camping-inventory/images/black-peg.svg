@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Black camping peg</title>
+  <desc id="desc">A simple black camping stake thumbnail on a white background.</desc>
+  <rect width="800" height="800" fill="#fff"/>
+  <g transform="translate(400 400) rotate(-35)">
+    <path d="M-34-250h68l-16 470-18 54-18-54z" fill="#171f18"/>
+    <path d="M-66-274h132c18 0 32 14 32 32v24H-98v-24c0-18 14-32 32-32z" fill="#20251f"/>
+    <path d="M-62-218H62" fill="none" stroke="#40483f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M-10-220l-8 420" fill="none" stroke="#3b433b" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+  </g>
+</svg>
