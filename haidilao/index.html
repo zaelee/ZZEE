@@ -356,8 +356,16 @@
           grid-template-columns: 1fr;
         }
 
+        .hero {
+          margin-bottom: 18px;
+        }
+
+        .hero-copy {
+          padding-bottom: 0;
+        }
+
         .hero-media {
-          min-height: 320px;
+          min-height: 220px;
         }
 
         .aside {
@@ -376,18 +384,52 @@
           width: 108px;
         }
 
+        h1 {
+          margin-top: 14px;
+          font-size: clamp(28px, 9vw, 42px);
+          line-height: 1.08;
+        }
+
+        .lead {
+          font-size: 15px;
+          line-height: 1.65;
+        }
+
+        .summary-card {
+          margin-top: 16px;
+          padding: 14px;
+        }
+
+        .summary-card p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
         .hero {
           gap: 14px;
         }
 
         .hero-media {
-          min-height: 250px;
+          min-height: 132px;
           border-radius: 14px;
+        }
+
+        .hero-media img {
+          width: min(58%, 220px);
+          height: 82px;
         }
 
         .section-inner,
         .aside-card {
           padding: 16px;
+        }
+
+        .section h2 {
+          font-size: 21px;
+        }
+
+        .section h3 {
+          margin-top: 18px;
         }
 
         .recipe,
@@ -402,6 +444,11 @@
           margin-right: -12px;
           padding-left: 12px;
           padding-right: 12px;
+        }
+
+        .quick-nav a {
+          padding: 9px 11px;
+          font-size: 12px;
         }
       }
     </style>
@@ -632,7 +679,7 @@
           <section class="aside-card source-note">
             공식 이미지 출처:
             <a href="https://www.haidilao.com/" target="_blank" rel="noreferrer">Haidilao official website</a>.
-            재료 이미지는 흰 배경 안에서 비율 유지 방식으로 표시했다.
+            대표 로고만 공식 이미지를 사용했다.
           </section>
         </aside>
       </div>
