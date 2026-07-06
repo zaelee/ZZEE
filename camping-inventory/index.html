@@ -267,6 +267,11 @@
         padding: 14px;
       }
 
+      .gear-card.is-packed {
+        outline: 3px solid color-mix(in srgb, var(--status-color) 44%, white);
+        outline-offset: -6px;
+      }
+
       .gear-title {
         display: grid;
         gap: 4px;
@@ -322,6 +327,29 @@
         color: var(--status-color);
         font-size: 12px;
         font-weight: 900;
+      }
+
+      .card-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .card-action {
+        min-height: 32px;
+        padding: 0 8px;
+        border-radius: 6px;
+        font-size: 12px;
+      }
+
+      .card-action.pack {
+        border-color: var(--status-color);
+        color: var(--status-color);
+      }
+
+      .card-action.memo {
+        background: #20231f;
+        color: white;
       }
 
       aside {
@@ -382,6 +410,54 @@
         height: 11px;
         border-radius: 999px;
         background: var(--dot);
+      }
+
+      .pack-table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        font-size: 12px;
+      }
+
+      .pack-table th,
+      .pack-table td {
+        padding: 8px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .pack-table th {
+        background: #edf4e9;
+        color: #344536;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .pack-table td:nth-child(3),
+      .pack-table th:nth-child(3) {
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .pack-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .checklist {
+        min-height: 170px;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+      .panel-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 8px;
       }
 
       .modal {
@@ -553,6 +629,17 @@
           </section>
 
           <section class="panel">
+            <h2>Backpacking Preview</h2>
+            <div id="packSummary" class="lead"></div>
+            <div id="packTable"></div>
+            <textarea class="checklist" id="checklistOutput" spellcheck="false"></textarea>
+            <div class="panel-actions">
+              <button type="button" id="copyChecklist">Copy</button>
+              <button type="button" id="resetPack">Reset</button>
+            </div>
+          </section>
+
+          <section class="panel">
             <h2>Add Local Item</h2>
             <form class="form-grid" id="gearForm">
               <label>Section
@@ -668,15 +755,26 @@
 
       const localKey = "zzee-camping-local-gear";
       const notesKey = "zzee-camping-gear-notes";
+      const packKey = "zzee-camping-pack-preview";
       const localGear = JSON.parse(localStorage.getItem(localKey) || "[]");
       let notes = JSON.parse(localStorage.getItem(notesKey) || "{}");
+      let selectedPackIds = new Set(JSON.parse(localStorage.getItem(packKey) || "[]"));
 
       const allGear = () => [...baseGear, ...localGear];
+      const isBackpackingCandidate = (gear) => gear.section === "Backpacking" || gear.section === "Shared Gear";
       const weightNumber = (weight) => Number(String(weight).replace(/[^0-9.]/g, "")) || 0;
       const priceNumber = (price) => Number(String(price).replace(/[^0-9]/g, "")) || 0;
       const won = (value) => value ? `₩${value.toLocaleString("ko-KR")}` : "-";
       const gram = (value) => value >= 1000 ? `${(value / 1000).toFixed(2)}kg` : `${Math.round(value)}g`;
       const $ = (selector) => document.querySelector(selector);
+
+      const ensureDefaultPack = () => {
+        if (selectedPackIds.size) return;
+        allGear()
+          .filter((gear) => gear.status === "Owned" && isBackpackingCandidate(gear))
+          .forEach((gear) => selectedPackIds.add(gear.id));
+        localStorage.setItem(packKey, JSON.stringify([...selectedPackIds]));
+      };
 
       const filters = () => ({
         query: $("#searchInput").value.trim().toLowerCase(),
@@ -709,8 +807,8 @@
         const dream = allGear().filter((item) => item.status === "Dream Gear");
         const ownedWeight = owned.reduce((sum, item) => sum + weightNumber(item.weight), 0);
         const ownedCost = owned.reduce((sum, item) => sum + priceNumber(item.price), 0);
-        const backpackingWeight = owned
-          .filter((item) => item.section === "Backpacking" || item.section === "Shared Gear")
+        const backpackingWeight = allGear()
+          .filter((item) => selectedPackIds.has(item.id))
           .reduce((sum, item) => sum + weightNumber(item.weight), 0);
         const futureBudget = [...wishlist, ...dream].reduce((sum, item) => sum + priceNumber(item.price), 0);
         $("#stats").innerHTML = `
@@ -719,7 +817,7 @@
           <div class="stat"><span>Dream Gear</span><strong>${dream.length}</strong></div>
           <div class="stat"><span>Total Weight</span><strong>${gram(ownedWeight)}</strong></div>
           <div class="stat"><span>Purchase Total</span><strong>${won(ownedCost)}</strong></div>
-          <div class="stat"><span>Backpacking Weight</span><strong>${gram(backpackingWeight)}</strong></div>
+          <div class="stat"><span>Pack Preview</span><strong>${gram(backpackingWeight)}</strong></div>
           <div class="stat"><span>Future Budget</span><strong>${won(futureBudget)}</strong></div>
           <div class="stat"><span>Visible Cards</span><strong>${gear.length}</strong></div>
           <div class="stat"><span>Categories</span><strong>${new Set(allGear().map((item) => item.category)).size}</strong></div>
@@ -727,7 +825,7 @@
       };
 
       const gearCard = (gear) => `
-        <button class="gear-card" type="button" data-gear-id="${gear.id}" style="--status-color: ${statusColor[gear.status]}">
+        <article class="gear-card ${selectedPackIds.has(gear.id) ? "is-packed" : ""}" data-gear-id="${gear.id}" style="--status-color: ${statusColor[gear.status]}">
           <div class="gear-image">
             <img src="${gear.image}" alt="${gear.item}" loading="lazy" />
             <span class="brand-logo"><img src="${gear.logo}" alt="${gear.brand} logo" loading="lazy" onerror="this.src='${imageFor(gear.brand, "")}'" /></span>
@@ -742,14 +840,49 @@
               <div class="meta-box"><span>Weight</span><strong>${gear.weight || "-"}</strong></div>
               <div class="meta-box"><span>Price</span><strong>${gear.price || "-"}</strong></div>
             </div>
+            <div class="card-actions">
+              <button class="card-action pack" type="button" data-pack-id="${gear.id}" ${isBackpackingCandidate(gear) ? "" : "disabled"}>${selectedPackIds.has(gear.id) ? "Packed" : "Pack"}</button>
+              <button class="card-action memo" type="button" data-memo-id="${gear.id}">Memo</button>
+            </div>
           </div>
-        </button>
+        </article>
       `;
+
+      const buildChecklist = (items) => {
+        const totalWeight = items.reduce((sum, item) => sum + weightNumber(item.weight), 0);
+        const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
+        return [
+          "# Backpacking Gear Checklist",
+          `Total Weight: ${gram(totalWeight)}`,
+          `Total Purchase Price: ${won(totalPrice)}`,
+          "",
+          ...items.map((gear) => `- [ ] ${gear.category} | ${gear.item} | ${gear.weight || "-"} | ${gear.status}`),
+        ].join("\n");
+      };
+
+      const renderPackPreview = () => {
+        const items = allGear()
+          .filter((gear) => selectedPackIds.has(gear.id))
+          .sort((a, b) => a.section.localeCompare(b.section) || a.category.localeCompare(b.category));
+        const totalWeight = items.reduce((sum, item) => sum + weightNumber(item.weight), 0);
+        const totalPrice = items.reduce((sum, item) => sum + priceNumber(item.price), 0);
+        $("#packSummary").textContent = `${items.length} items · ${gram(totalWeight)} · ${won(totalPrice)}`;
+        $("#packTable").innerHTML = items.length ? `
+          <table class="pack-table">
+            <thead><tr><th>Category</th><th>Item</th><th>Weight</th></tr></thead>
+            <tbody>
+              ${items.map((gear) => `<tr><td>${gear.category}</td><td>${gear.item}</td><td>${gear.weight || "-"}</td></tr>`).join("")}
+            </tbody>
+          </table>
+        ` : `<p class="lead">Pack 버튼으로 백패킹 미리보기 장비를 담아보세요.</p>`;
+        $("#checklistOutput").value = buildChecklist(items);
+      };
 
       const renderInventory = () => {
         renderCategoryOptions();
         const gear = filteredGear();
         renderStats(gear);
+        renderPackPreview();
         const sections = ["Shared Gear", "Backpacking", "Auto Camping"];
         $("#inventory").innerHTML = sections.map((section) => {
           const items = gear.filter((item) => item.section === section);
@@ -837,10 +970,35 @@
       });
 
       $("#inventory").addEventListener("click", (event) => {
-        const card = event.target.closest("[data-gear-id]");
-        if (!card) return;
-        const gear = allGear().find((item) => item.id === card.dataset.gearId);
-        if (gear) openModal(gear);
+        const packButton = event.target.closest("[data-pack-id]");
+        const memoButton = event.target.closest("[data-memo-id]");
+
+        if (packButton) {
+          const id = packButton.dataset.packId;
+          if (selectedPackIds.has(id)) {
+            selectedPackIds.delete(id);
+          } else {
+            selectedPackIds.add(id);
+          }
+          localStorage.setItem(packKey, JSON.stringify([...selectedPackIds]));
+          renderInventory();
+          return;
+        }
+
+        if (memoButton) {
+          const gear = allGear().find((item) => item.id === memoButton.dataset.memoId);
+          if (gear) openModal(gear);
+        }
+      });
+
+      $("#copyChecklist").addEventListener("click", async () => {
+        await navigator.clipboard?.writeText($("#checklistOutput").value);
+      });
+
+      $("#resetPack").addEventListener("click", () => {
+        selectedPackIds = new Set();
+        ensureDefaultPack();
+        renderInventory();
       });
 
       $("#gearModal").addEventListener("click", (event) => {
@@ -851,6 +1009,7 @@
         if (event.key === "Escape") closeModal();
       });
 
+      ensureDefaultPack();
       renderInventory();
     </script>
   </body>
