@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZZEE's Food Map</title>
-    <meta
-      name="description"
-      content="재리 맛집도 🍽️"
-    />
+    <meta name="description" content="재리 맛집도 🍽️" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="stylesheet"
@@ -23,12 +20,13 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script
-      defer
+      async
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
     <script defer src="./js/data.js"></script>
+    <script defer src="./js/naver-shared-restaurants.js"></script>
     <script defer src="./js/map.js"></script>
     <script defer src="./js/app.js"></script>
   </head>
@@ -36,15 +34,11 @@
     <header class="site-header">
       <a class="brand" href="./" aria-label="ZZEE's Food Map 홈">
         <span class="brand-mark">J</span>
-        <span>
-          <strong>ZZEE's Food Map</strong>
-        </span>
+        <span><strong>ZZEE's Food Map</strong></span>
       </a>
 
       <div class="header-actions">
-        <button class="update-button" id="updateIndicator" type="button" hidden>
-          Update 0
-        </button>
+        <button class="update-button" id="updateIndicator" type="button" hidden>Update 0</button>
         <button class="icon-button" id="addToggle" type="button" aria-label="맛집 추가 열기" title="맛집 추가">
           <span aria-hidden="true">+</span>
         </button>
@@ -58,22 +52,14 @@
       <section class="list-pane" aria-labelledby="archiveTitle">
         <div class="intro">
           <h1 id="archiveTitle">재리 맛집도 🍽️</h1>
-          <p>
-            🫡 반박시 님 말이 맞음
-          </p>
+          <p>반박시 님 말이 맞음 😎</p>
         </div>
 
         <form class="controls" id="controls" role="search">
           <label class="search-field">
             <span class="visually-hidden">맛집 검색</span>
-            <input id="searchInput" type="search" placeholder="가게명, 메뉴, 코멘트 검색" autocomplete="off" />
+            <input id="searchInput" type="search" placeholder="가게명, 동, 메뉴, 코멘트 검색" autocomplete="off" />
           </label>
-
-          <div class="area-tabs" aria-label="지역 필터">
-            <button class="area-tab is-active" type="button" data-filter="area" data-value="전체">전체</button>
-            <button class="area-tab" type="button" data-filter="area" data-value="건대">건대역</button>
-            <button class="area-tab" type="button" data-filter="area" data-value="성수">성수역</button>
-          </div>
 
           <div class="control-group" aria-label="카테고리 필터">
             <button class="chip is-active" type="button" data-filter="category" data-value="전체">전체</button>
@@ -148,7 +134,7 @@
       <section class="add-panel-card">
         <div class="add-panel-head">
           <div>
-            <p class="eyebrow">PRIVATE ADD</p>
+            <p class="eyebrow">비공개 추가</p>
             <h2 id="addTitle">맛집 추가</h2>
           </div>
           <button class="icon-button" type="button" data-close-add aria-label="맛집 추가 닫기">×</button>
@@ -172,22 +158,23 @@
             <input name="address" type="text" required />
           </label>
           <label>
-            <span>Status</span>
+            <span>검증 상태</span>
             <select name="verificationStatus">
-              <option value="검증전">PENDING</option>
-              <option value="검증후">VERIFIED</option>
+              <option value="검증전">검증전</option>
+              <option value="검증후">검증후</option>
             </select>
           </label>
           <section class="edit-fields span-2" data-edit-fields hidden>
             <label>
-              <span>Area</span>
+              <span>지역</span>
               <select name="area">
                 <option value="건대">건대</option>
                 <option value="성수">성수</option>
+                <option value="기타">기타</option>
               </select>
             </label>
             <label>
-              <span>Category</span>
+              <span>카테고리</span>
               <select name="category">
                 <option value="한식">한식</option>
                 <option value="중식">중식</option>
@@ -201,59 +188,59 @@
               </select>
             </label>
             <label>
-              <span>Jae Rating</span>
+              <span>재리 별점</span>
               <input name="rating" type="number" min="0" max="5" step="0.5" />
             </label>
             <label>
-              <span>Signature Menu</span>
+              <span>대표 메뉴</span>
               <input name="signatureMenu" type="text" />
             </label>
             <label>
-              <span>Price Range</span>
+              <span>가격대</span>
               <input name="priceRange" type="text" />
             </label>
             <label>
-              <span>Mood</span>
+              <span>분위기</span>
               <input name="mood" type="text" />
             </label>
             <label class="span-2">
-              <span>Jae Comment</span>
+              <span>재리 코멘트</span>
               <textarea name="jaeComment" rows="3"></textarea>
             </label>
             <label class="span-2">
-              <span>Menu Items</span>
+              <span>메뉴 목록</span>
               <textarea name="menuItems" rows="3" placeholder="메뉴명 | 가격"></textarea>
             </label>
             <label class="span-2">
-              <span>Main Image URL</span>
+              <span>대표 이미지 URL</span>
               <input name="image" type="url" />
             </label>
             <label>
-              <span>Kakao Rating</span>
+              <span>카카오 평점</span>
               <input name="kakaoRating" type="number" min="0" max="5" step="0.1" />
             </label>
             <label>
-              <span>Naver Rating</span>
+              <span>네이버 평점</span>
               <input name="naverRating" type="number" min="0" max="5" step="0.01" />
             </label>
             <label>
-              <span>Google Rating</span>
+              <span>구글 평점</span>
               <input name="googleRating" type="number" min="0" max="5" step="0.1" />
             </label>
             <label class="span-2">
-              <span>Kakao Link</span>
+              <span>카카오 링크</span>
               <input name="kakaoMapLink" type="url" />
             </label>
             <label class="span-2">
-              <span>Naver Link</span>
+              <span>네이버 링크</span>
               <input name="naverMapLink" type="url" />
             </label>
             <label class="span-2">
-              <span>Google Link</span>
+              <span>구글 링크</span>
               <input name="googleMapLink" type="url" />
             </label>
           </section>
-          <button class="text-button add-submit" type="submit">Add as pending</button>
+          <button class="text-button add-submit" type="submit">검증전으로 추가</button>
           <p class="form-message" id="addFormMessage" aria-live="polite"></p>
         </form>
       </section>

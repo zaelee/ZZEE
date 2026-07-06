@@ -405,12 +405,17 @@ select {
 .section-heading,
 .map-toolbar,
 .modal-title-row,
-.card-topline,
 .card-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .section-heading h2 {
@@ -550,6 +555,20 @@ select {
   color: white;
 }
 
+.rating-source {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.rating-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
 .star-rating {
   display: inline-flex;
   gap: 1px;
@@ -594,6 +613,7 @@ select {
 }
 
 .category-pill {
+  margin-left: auto;
   margin-right: 42px;
   padding: 4px 8px;
   border-radius: 999px;
