@@ -1022,6 +1022,30 @@ select {
   text-align: center;
 }
 
+@media (max-width: 1180px) {
+  .app-shell {
+    grid-template-columns: minmax(360px, 46vw) minmax(0, 1fr);
+  }
+
+  .list-pane {
+    padding: 24px 18px 34px;
+  }
+
+  .restaurant-card {
+    grid-template-columns: 78px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .card-thumb {
+    width: 78px;
+    height: 78px;
+  }
+
+  .verify-badge {
+    width: 78px;
+  }
+}
+
 @media (max-width: 960px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -1036,9 +1060,47 @@ select {
   .map-pane {
     position: relative;
     top: auto;
-    height: 62vh;
-    min-height: 420px;
+    height: 58vh;
+    min-height: 380px;
     border-top: 1px solid var(--line);
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .add-panel-card {
+    width: min(680px, calc(100vw - 32px));
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-pane {
+    height: 52vh;
+    min-height: 340px;
+  }
+
+  .modal-panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+
+  .modal-title-row,
+  .modal-actions {
+    display: grid;
+    gap: 10px;
+  }
+
+  .modal-rating {
+    white-space: normal;
   }
 }
 
@@ -1057,12 +1119,18 @@ select {
   }
 
   .list-pane {
+    order: 2;
     padding: 22px 14px 30px;
+  }
+
+  .map-pane {
+    order: 1;
   }
 
   .filter-row,
   .area-tabs,
   .add-form,
+  .edit-fields,
   .detail-list,
   .platform-grid {
     grid-template-columns: 1fr;
@@ -1086,6 +1154,7 @@ select {
     top: calc(var(--header-height) + 8px);
     right: 10px;
     width: calc(100vw - 20px);
+    max-height: calc(100dvh - var(--header-height) - 18px);
     padding: 14px;
   }
 
@@ -1099,5 +1168,56 @@ select {
 
   .modal-title-row {
     display: grid;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand strong {
+    display: block;
+    max-width: 58vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.12;
+  }
+
+  .intro p:not(.eyebrow) {
+    font-size: 14px;
+  }
+
+  .card-topline,
+  .card-title-row,
+  .card-meta {
+    gap: 7px;
+  }
+
+  .platform-mini {
+    grid-template-columns: 1fr;
+  }
+
+  .map-pane {
+    height: 48vh;
+    min-height: 300px;
+  }
+
+  .modal-panel {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .modal-body {
+    padding: 16px;
   }
 }

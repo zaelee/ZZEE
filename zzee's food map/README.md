@@ -1,4 +1,4 @@
-# 재리의 맛집 (Jae's Food Map)
+# ZZEE's Food Map
 
 건대와 성수 중심의 개인 맛집 아카이브 정적 웹사이트입니다. HTML, CSS, JavaScript만 사용하며 GitHub Pages 배포를 기준으로 구성했습니다.
 
