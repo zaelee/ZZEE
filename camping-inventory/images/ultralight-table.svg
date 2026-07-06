@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+  <title id="title">Ultralight camping table</title>
+  <desc id="desc">A compact ultralight camping table on a white product thumbnail background.</desc>
+  <rect width="900" height="640" fill="#fff"/>
+  <g transform="translate(110 165)">
+    <path d="M96 128h508c32 0 58 26 58 58v22H38v-22c0-32 26-58 58-58Z" fill="#2f3330"/>
+    <path d="M58 178h584" stroke="#fff" stroke-width="5" opacity=".28"/>
+    <path d="M140 129v79M228 129v79M316 129v79M404 129v79M492 129v79M580 129v79" stroke="#171917" stroke-width="7" opacity=".65"/>
+    <path d="M112 214 58 442M588 214l54 228M196 214l-96 228M504 214l96 228" stroke="#252925" stroke-width="17" stroke-linecap="round"/>
+    <path d="M111 214h478" stroke="#171917" stroke-width="16" stroke-linecap="round"/>
+    <path d="M93 330h514" stroke="#3d433d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M80 445h52M570 445h96" stroke="#171917" stroke-width="18" stroke-linecap="round"/>
+    <path d="M214 250h270c28 0 52 23 52 52v78H162v-78c0-29 23-52 52-52Z" fill="#111" opacity=".12"/>
+    <path d="M188 252h320" stroke="#111" stroke-width="9" stroke-linecap="round" opacity=".18"/>
+  </g>
+  <text x="450" y="586" text-anchor="middle" fill="#6b7068" font-family="Arial, sans-serif" font-size="28" font-weight="700">ULTRALIGHT TABLE</text>
+</svg>
