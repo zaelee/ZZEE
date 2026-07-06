@@ -33,6 +33,14 @@ const FoodMap = (() => {
     }).addTo(map);
 
     markersLayer = L.layerGroup().addTo(map);
+    mapElement()?.addEventListener("click", (event) => {
+      const detailButton = event.target.closest("[data-map-detail]");
+      if (!detailButton) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      onSelect?.(detailButton.dataset.mapDetail, { openModal: true });
+    });
     renderMarkers(restaurants, onSelect);
     setStatus("CARTO Voyager 지도 표시 중");
     onPlacesResolved?.();
@@ -81,11 +89,7 @@ const FoodMap = (() => {
         title: restaurant.name,
       })
         .bindPopup(popupContent(restaurant), { maxWidth: 260 })
-        .on("click", () => onSelect?.(restaurant.id, { openModal: false }))
-        .on("popupopen", (event) => {
-          const detailButton = event.popup.getElement()?.querySelector("[data-map-detail]");
-          detailButton?.addEventListener("click", () => onSelect?.(restaurant.id, { openModal: true }));
-        });
+        .on("click", () => onSelect?.(restaurant.id, { openModal: false }));
 
       marker.addTo(markersLayer);
       markers.set(restaurant.id, marker);
