@@ -50,6 +50,46 @@ const saveAddedRestaurants = () =>
 const saveEditedRestaurants = () =>
   localStorage.setItem("jae-food-edited-restaurants", JSON.stringify(state.editedRestaurants));
 
+const pendingUpdates = () => {
+  const added = state.addedRestaurants.map((restaurant) => ({ type: "ADD", restaurant }));
+  const edited = Object.entries(state.editedRestaurants).map(([id, restaurant]) => ({
+    type: "EDIT",
+    id,
+    restaurant,
+  }));
+  return [...added, ...edited];
+};
+
+const renderUpdateIndicator = () => {
+  const button = $("#updateIndicator");
+  if (!button) return;
+  const updates = pendingUpdates();
+  button.hidden = updates.length === 0;
+  button.textContent = `Update ${updates.length}`;
+  button.setAttribute("aria-label", `동기화 대기 ${updates.length}건`);
+};
+
+const showPendingUpdates = async () => {
+  const updates = pendingUpdates();
+  if (!updates.length) {
+    window.alert("동기화할 업데이트가 없습니다.");
+    return;
+  }
+
+  const payload = {
+    added: state.addedRestaurants,
+    edited: state.editedRestaurants,
+  };
+  const summary = updates.map((item, index) => `${index + 1}. ${item.type} ${item.restaurant.name}`).join("\n");
+
+  try {
+    await navigator.clipboard?.writeText(JSON.stringify(payload, null, 2));
+    window.alert(`동기화 대기 목록\n\n${summary}\n\n업데이트 JSON을 클립보드에 복사했습니다.`);
+  } catch {
+    window.alert(`동기화 대기 목록\n\n${summary}`);
+  }
+};
+
 const filteredRestaurants = () => {
   const normalizedQuery = state.query.trim().toLowerCase();
   return allRestaurants().filter((restaurant) => {
@@ -261,6 +301,7 @@ const setAddPanelMode = (restaurant = null, options = {}) => {
   form.elements.name.value = restaurant.name || "";
   form.elements.comment.value = restaurant.comment || "";
   form.elements.address.value = restaurant.address || "";
+  form.elements.verificationStatus.value = restaurant.verificationStatus || "검증전";
   form.elements.area.value = restaurant.area || "건대";
   form.elements.category.value = restaurant.category || "한식";
   form.elements.rating.value = restaurant.rating ?? "";
@@ -380,6 +421,7 @@ const bindEvents = () => {
   });
 
   $("#fitMap").addEventListener("click", () => FoodMap.fitToRestaurants(filteredRestaurants()));
+  $("#updateIndicator").addEventListener("click", showPendingUpdates);
   $("#addToggle").addEventListener("click", () => {
     const password = window.prompt("추가 비밀번호를 입력하세요.");
     if (password !== ADD_PASSWORD) {
@@ -447,6 +489,7 @@ const editOverridesFromForm = (formData, previous) => {
   return {
     area: formData.get("area") || previous.area,
     category: formData.get("category") || previous.category,
+    verificationStatus: formData.get("verificationStatus") || previous.verificationStatus || "검증전",
     rating: numberOrNull(formData.get("rating")),
     signatureMenu,
     menuItems: parseMenuItems(formData.get("menuItems") || "", signatureMenu),
@@ -482,6 +525,8 @@ const buildPendingRestaurant = ({
   const searchText = `${address} ${name}`.trim();
   const searchQuery = encodeURIComponent(searchText);
   const signatureMenu = overrides.signatureMenu || previous.signatureMenu || "대표 메뉴 확인 필요";
+  const verificationStatus = overrides.verificationStatus || (forcePending ? "검증전" : previous.verificationStatus || "검증전");
+  const isVerified = verificationStatus === "검증후";
 
   return {
     ...previous,
@@ -489,15 +534,15 @@ const buildPendingRestaurant = ({
     name,
     area,
     category,
-    rating: forcePending ? null : overrides.rating ?? previous.rating ?? null,
+    rating: isVerified ? overrides.rating ?? previous.rating ?? null : null,
     comment: comment || "검증 전 맛집 메모",
     signatureMenu,
     menuItems: overrides.menuItems || (previous.menuItems?.length ? previous.menuItems : buildMenuItems(signatureMenu)),
     priceRange: overrides.priceRange || previous.priceRange || priceByCategory[category],
     priceSource: forcePending ? "검증 대기" : previous.priceSource || "검증 대기",
-    verifiedAt: forcePending ? null : previous.verifiedAt || null,
-    verificationStatus: forcePending ? "검증전" : previous.verificationStatus || "검증전",
-    verificationNote: forcePending
+    verifiedAt: isVerified ? previous.verifiedAt || new Date().toISOString().slice(0, 10) : null,
+    verificationStatus,
+    verificationNote: !isVerified
       ? "이름, 한줄평, 주소만 입력된 검증 전 맛집입니다. 플랫폼 평점, 메뉴, 가격, 좌표는 추후 확인 필요."
       : previous.verificationNote || "수정된 로컬 덮어쓰기 데이터입니다.",
     mood: overrides.mood || moodByCategory[category],
@@ -539,7 +584,10 @@ const addRestaurant = (event) => {
   const localEditIndex = state.addedRestaurants.findIndex((item) => item.id === editId);
   const existingRestaurant = editId ? allRestaurants().find((item) => item.id === editId) : null;
   const previous = existingRestaurant || {};
-  const overrides = editId ? editOverridesFromForm(formData, previous) : {};
+  const selectedStatus = formData.get("verificationStatus") || "검증전";
+  const overrides = editId
+    ? editOverridesFromForm(formData, previous)
+    : { verificationStatus: selectedStatus };
   const id = editId || `local-${Date.now()}-${name.replace(/\s+/g, "-").toLowerCase()}`;
   const recommendedOrder = previous.recommendedOrder || 10000 + state.addedRestaurants.length;
   const restaurant = buildPendingRestaurant({
@@ -568,6 +616,7 @@ const addRestaurant = (event) => {
   form.reset();
   $("#editRestaurantId").value = "";
   message.textContent = editId ? `${name} pending edit saved.` : `${name} added as pending.`;
+  renderUpdateIndicator();
   renderCards();
   renderRecent();
   refreshMap();
@@ -582,6 +631,7 @@ const initTheme = () => {
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   bindEvents();
+  renderUpdateIndicator();
   renderCards();
   renderRecent();
   FoodMap.init(filteredRestaurants(), selectRestaurant, renderCards);

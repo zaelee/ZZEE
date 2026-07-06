@@ -108,11 +108,13 @@ a {
 
 .header-actions {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .icon-button,
 .text-button,
+.update-button,
 .chip,
 .area-tab,
 .favorite-button,
@@ -126,6 +128,7 @@ a {
 
 .icon-button:hover,
 .text-button:hover,
+.update-button:hover,
 .chip:hover,
 .area-tab:hover,
 .recent-list button:hover {
@@ -145,6 +148,20 @@ a {
   padding: 0 12px;
   border-radius: var(--radius);
   color: var(--muted);
+}
+
+.update-button {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.update-button[hidden] {
+  display: none;
 }
 
 .app-shell {

@@ -42,6 +42,9 @@
       </a>
 
       <div class="header-actions">
+        <button class="update-button" id="updateIndicator" type="button" hidden>
+          Update 0
+        </button>
         <button class="icon-button" id="addToggle" type="button" aria-label="맛집 추가 열기" title="맛집 추가">
           <span aria-hidden="true">+</span>
         </button>
@@ -167,6 +170,13 @@
           <label class="span-2">
             <span>주소</span>
             <input name="address" type="text" required />
+          </label>
+          <label>
+            <span>Status</span>
+            <select name="verificationStatus">
+              <option value="검증전">PENDING</option>
+              <option value="검증후">VERIFIED</option>
+            </select>
           </label>
           <section class="edit-fields span-2" data-edit-fields hidden>
             <label>
