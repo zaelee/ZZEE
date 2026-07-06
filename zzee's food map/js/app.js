@@ -50,6 +50,34 @@ const saveAddedRestaurants = () =>
 const saveEditedRestaurants = () =>
   localStorage.setItem("jae-food-edited-restaurants", JSON.stringify(state.editedRestaurants));
 
+const comparableValue = (value) => JSON.stringify(value ?? null);
+const editAppliedToSource = (source, edit) => {
+  const fields = ["rating", "comment", "signatureMenu", "priceRange", "verificationStatus", "address"];
+  return fields.every((field) => !(field in edit) || comparableValue(source[field]) === comparableValue(edit[field]));
+};
+
+const syncAppliedPendingUpdates = () => {
+  const sourceById = new Map(RESTAURANTS.map((restaurant) => [restaurant.id, restaurant]));
+  const sourceByName = new Map(RESTAURANTS.map((restaurant) => [restaurant.name, restaurant]));
+  const previousAddedCount = state.addedRestaurants.length;
+  const previousEditedCount = Object.keys(state.editedRestaurants).length;
+
+  state.addedRestaurants = state.addedRestaurants.filter((restaurant) => {
+    const source = sourceByName.get(restaurant.name);
+    return !(source && source.address === restaurant.address && source.comment === restaurant.comment);
+  });
+
+  state.editedRestaurants = Object.fromEntries(
+    Object.entries(state.editedRestaurants).filter(([id, restaurant]) => {
+      const source = sourceById.get(id) || sourceByName.get(restaurant.name);
+      return !(source && editAppliedToSource(source, restaurant));
+    })
+  );
+
+  if (state.addedRestaurants.length !== previousAddedCount) saveAddedRestaurants();
+  if (Object.keys(state.editedRestaurants).length !== previousEditedCount) saveEditedRestaurants();
+};
+
 const pendingUpdates = () => {
   const added = state.addedRestaurants.map((restaurant) => ({ type: "ADD", restaurant }));
   const edited = Object.entries(state.editedRestaurants).map(([id, restaurant]) => ({
@@ -630,6 +658,7 @@ const initTheme = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  syncAppliedPendingUpdates();
   bindEvents();
   renderUpdateIndicator();
   renderCards();

@@ -17,7 +17,7 @@ const seongsuBaseLng = 127.0557;
 
 const rawRestaurants = [
   ["해남닭집", "한식", 4.2, "식객 허영만에 소개된 통닭집", "통닭", "식객 허영만의 통닭집"],
-  ["정면", "한식", 5, "미쉐린 부추 고기국수, 깔끔한 국수바", "부추 고기국수", "건대에서 국수 먹고 싶을 때 가장 먼저 떠오르는 곳"],
+  ["정면", "한식", 4.5, "미쉐린 부추 고기국수, 깔끔한 국수바", "부추 고기국수", "건대에서 국수 먹고 싶을 때 가장 먼저 떠오르는 곳"],
   ["동대문곱창", "한식", 4, "엔시티 도영 단골로 알려진 곱창집", "곱창구이", "팬심을 빼고 봐도 곱창 컨디션이 좋은 편"],
   ["원조숯불소금구이", "한식", 3.5, "기름기 적은 치맛살과 멸치 향 강한 술밥", "치맛살", "수요미식회 계열의 오래된 고깃집 감성"],
   ["서북면옥", "한식", 3, "밍밍한 매력의 평양냉면집", "평양냉면", "간이 센 음식을 기대하면 아쉽고 슴슴함을 즐기면 좋음"],
@@ -83,6 +83,7 @@ const rawRestaurants = [
   ["라무라", "일식", 2, "합정에서 유명한 까만 라멘", "라멘", "독특한 비주얼의 라멘으로 기록"],
   ["도죠", "일식", 2, "깔끔한 사케동과 일식 식당", "사케동", "정갈한 일식 한 끼로 무난한 곳"],
   ["죠죠", "일식", 2, "분위기 좋은 오코노미야키 식당", "오코노미야키", "분위기와 철판 요리 무드가 강한 곳"],
+  ["오몬자", "일식", null, "몬자야끼 먹고 싶다 아직 안가봄", "몬자야끼", "방문 후 코멘트를 업데이트할 예정"],
   ["성수속향연", "중식", 3, "신라호텔 출신 주방장의 탕수육 맛집", "탕수육", "탕수육 기준으로 체크할 만한 중식"],
   ["중앙감속기", "중식", 1, "최현석의 퓨전 중식", "퓨전 중식", "유명세는 있지만 맛 평가는 보수적으로 기록"],
   ["데니스타코", "멕시칸", 2, "깔끔한 타코집", "타코", "성수에서 무난하게 타코 먹는 선택지"],
@@ -167,6 +168,7 @@ const seongsuRestaurantNames = new Set([
   "라무라",
   "도죠",
   "죠죠",
+  "오몬자",
   "성수속향연",
   "중앙감속기",
   "데니스타코",
@@ -187,6 +189,10 @@ const seongsuRestaurantNames = new Set([
   "텅 성수 스페이스",
   "마마젤라또",
   "어니언",
+]);
+
+const pendingRestaurantNames = new Set([
+  "오몬자",
 ]);
 
 const addressVerifiedAt = "2026-06-30";
@@ -227,6 +233,7 @@ const verifiedPlaceData = {
   보난자: { matchedName: "보난자커피 군자", address: "서울특별시 광진구 능동로 239-1 B동 1층 보난자커피", latitude: 37.5516342, longitude: 127.0763031 },
   꼬메노: { matchedName: "꼬메노", address: "서울특별시 광진구 군자로7길 29 1층 카페꼬메노", latitude: 37.5456057, longitude: 127.0691037 },
   최가회관: { matchedName: "최가커피회관", address: "서울특별시 광진구 능동로13길 30 지층", latitude: 37.5434026, longitude: 127.0706141 },
+  오몬자: { matchedName: "오몬자", address: "서울 성동구 연무장길 31-1 상가동 3층 301호", latitude: 37.54423235905416, longitude: 127.05477944742798 },
 };
 
 const kakaoCheckedAt = "2026-06-30";
@@ -5348,6 +5355,7 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
   const kakaoPlace = kakaoPlaceData[name];
   const naverPlace = naverPlaceData[name];
   const googlePlace = googlePlaceData[name];
+  const isPending = pendingRestaurantNames.has(name);
   const displayPlace = kakaoPlace || naverPlace || verifiedPlace;
   const ring = Math.floor(index / 8) + 1;
   const angle = (index * 47 * Math.PI) / 180;
@@ -5393,13 +5401,15 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
     menuItems: kakaoPlace?.menuItems?.length ? kakaoPlace.menuItems : buildMenuItems(signatureMenu),
     priceRange: kakaoPlace?.priceRange || priceByCategory[category],
     priceSource: kakaoPlace?.menuUpdatedAt ? `카카오맵 메뉴 기준 · ${kakaoPlace.menuUpdatedAt}` : "카카오맵 메뉴 가격 미표시",
-    verifiedAt: kakaoPlace?.checkedAt || (verifiedPlace ? addressVerifiedAt : null),
-    verificationStatus: kakaoPlace || verifiedPlace ? "검증후" : "검증전",
-    verificationNote: kakaoPlace
-      ? `카카오맵 상세/메뉴 API 기준 반영${kakaoPlace.matchedName !== name ? ` · 등록명: ${kakaoPlace.matchedName}` : ""}`
-      : verifiedPlace
-        ? `네이버 모바일 지도 검색 결과 기준 주소/좌표 반영${verifiedPlace.matchedName !== name ? ` · 등록명: ${verifiedPlace.matchedName}` : ""}`
-        : "정확 주소, 플랫폼 평점, 메뉴 가격 수동 확인 필요",
+    verifiedAt: isPending ? null : kakaoPlace?.checkedAt || (verifiedPlace ? addressVerifiedAt : null),
+    verificationStatus: isPending ? "검증전" : kakaoPlace || verifiedPlace ? "검증후" : "검증전",
+    verificationNote: isPending
+      ? "사용자 입력으로 추가된 검증 전 맛집입니다. 플랫폼 평점, 메뉴, 가격은 추후 확인 필요."
+      : kakaoPlace
+        ? `카카오맵 상세/메뉴 API 기준 반영${kakaoPlace.matchedName !== name ? ` · 등록명: ${kakaoPlace.matchedName}` : ""}`
+        : verifiedPlace
+          ? `네이버 모바일 지도 검색 결과 기준 주소/좌표 반영${verifiedPlace.matchedName !== name ? ` · 등록명: ${verifiedPlace.matchedName}` : ""}`
+          : "정확 주소, 플랫폼 평점, 메뉴 가격 수동 확인 필요",
     mood: moodByCategory[category],
     jaeComment,
     searchKeyword: mapSearchText,
