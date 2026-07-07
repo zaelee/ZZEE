@@ -65,6 +65,31 @@
         line-height: 1.7;
       }
 
+      .local-types {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .local-type {
+        display: inline-flex;
+        min-height: 25px;
+        align-items: center;
+        padding: 0 9px;
+        border: 1px solid rgba(25, 25, 23, 0.08);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.66);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .local-type.active {
+        color: var(--accent);
+        background: rgba(255, 107, 53, 0.1);
+      }
+
       .index-date,
       .updated-date {
         display: block;
@@ -264,6 +289,11 @@
       <header>
         <div>
           <h1>ZZEE</h1>
+          <div class="local-types" aria-label="Local index types">
+            <span class="local-type active">OSSE Local</span>
+            <span class="local-type">MyMacLocal</span>
+            <span class="local-type">MyWindowLocal</span>
+          </div>
           <p class="lead">작업 중인 웹 프로젝트와 로컬 도구를 한 번에 여는 개인 목차. 필요한 프로젝트로 바로 들어간다.</p>
           <time class="index-date" datetime="2026-07-07">Updated 2026-07-07</time>
         </div>
