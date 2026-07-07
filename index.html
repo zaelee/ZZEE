@@ -231,7 +231,7 @@
           <span>Archive & Tools</span>
         </div>
         <div class="grid">
-          <a class="project featured" href="./ZZEE%20Local%20Files%20(osse).url" download>
+          <a id="localShortcut" class="project featured" href="./ZZEE%20Local%20Files%20(osse).url" download>
             <div>
               <strong>이 컴퓨터의 로컬파일로 바로가기</strong>
               <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
@@ -319,5 +319,13 @@
 
       <footer>Local path: C:\Users\eo2jaelee\Documents\GitHub\ZZEE</footer>
     </main>
+    <script>
+      const localShortcut = document.getElementById("localShortcut");
+
+      if (localShortcut && window.location.protocol === "file:") {
+        localShortcut.href = "file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/";
+        localShortcut.removeAttribute("download");
+      }
+    </script>
   </body>
 </html>
