@@ -65,6 +65,24 @@
         line-height: 1.7;
       }
 
+      .index-date,
+      .updated-date {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .index-date {
+        margin-top: 8px;
+      }
+
+      .updated-date {
+        margin: -1px 0 9px;
+      }
+
       .home {
         display: inline-flex;
         min-height: 42px;
@@ -154,11 +172,6 @@
         color: var(--blue);
       }
 
-      .tag.updated {
-        background: rgba(23, 26, 22, 0.08);
-        color: var(--ink);
-      }
-
       footer {
         margin-top: 40px;
         color: var(--muted);
@@ -186,7 +199,8 @@
       <header>
         <div>
           <h1>Local Project Index (osse)</h1>
-          <p class="lead">이 컴퓨터의 로컬 ZZEE 폴더를 바로 여는 작업 목차. 모든 링크는 C:\Users\eo2jaelee\Documents\GitHub\ZZEE 기준이다. Updated 2026-07-07.</p>
+          <p class="lead">이 컴퓨터의 로컬 ZZEE 폴더를 바로 여는 작업 목차. 이 파일을 로컬에서 열면 항목도 로컬 파일로 열린다.</p>
+          <time class="index-date" datetime="2026-07-07">Updated 2026-07-07</time>
         </div>
         <a class="home" href="https://zaelee.github.io/ZZEE/">Online Index</a>
       </header>
@@ -194,58 +208,58 @@
       <section class="section" aria-labelledby="published-title">
         <h2 id="published-title">Published / Main</h2>
         <div class="grid">
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/zzee%27s%20food%20map/index.html">
+          <a class="card" href="../zzee%27s%20food%20map/index.html">
             <div>
               <strong>ZZEE's Food Map</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>재리 맛집도. 식당 데이터, 지도, 필터, 업데이트 흐름을 확인한다.</p>
             </div>
             <div class="meta">
               <span class="tag">Food</span>
               <span class="tag">Map</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/camping-inventory/index.html">
+          <a class="card" href="../camping-inventory/index.html">
             <div>
               <strong>Camping Inventory</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>캠핑 장비 카드, 보유 수량, 백패킹 프리뷰, 메모 기능을 확인한다.</p>
             </div>
             <div class="meta">
               <span class="tag green">Camping</span>
               <span class="tag green">Gear</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/haidilao/index.html">
+          <a class="card" href="../haidilao/index.html">
             <div>
               <strong>Haidilao Guide</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>하이디라오 주문 루틴과 추천 재료를 정리한 안내 페이지.</p>
             </div>
             <div class="meta">
               <span class="tag">Food</span>
               <span class="tag">Guide</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/blog-automation/index.html">
+          <a class="card" href="../blog-automation/index.html">
             <div>
               <strong>Blog Automation</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>블로그 입력과 작업 기록을 빠르게 정리하는 로컬 도구.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Blog</span>
               <span class="tag blue">Tool</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/dtd/index.html">
+          <a class="card" href="../dtd/index.html">
             <div>
               <strong>Dave the Diver</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>dtd 폴더의 게임 정보 페이지.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Game</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
         </div>
@@ -254,35 +268,35 @@
       <section class="section" aria-labelledby="local-only-title">
         <h2 id="local-only-title">Local Only / Test</h2>
         <div class="grid">
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/food-map/index.html">
+          <a class="card" href="../food-map/index.html">
             <div>
               <strong>Food Map Sandbox</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>별도 food-map 폴더. 실험용 지도/데이터 확인 공간.</p>
             </div>
             <div class="meta">
               <span class="tag">Sandbox</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/minigame/">
+          <a class="card" href="../minigame/">
             <div>
               <strong>Minigame Folder</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>미니게임 작업 폴더. 하위 게임 빌드를 모아둔다.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Local</span>
               <span class="tag blue">Game</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
-          <a class="card" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/study/">
+          <a class="card" href="../study/">
             <div>
               <strong>Study Folder</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>학습/실험 자료를 넣어두는 로컬 폴더.</p>
             </div>
             <div class="meta">
               <span class="tag green">Study</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
         </div>

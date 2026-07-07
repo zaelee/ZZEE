@@ -65,6 +65,24 @@
         line-height: 1.7;
       }
 
+      .index-date,
+      .updated-date {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .index-date {
+        margin-top: 8px;
+      }
+
+      .updated-date {
+        margin: -2px 0 10px;
+      }
+
       .stamp {
         display: grid;
         min-width: 148px;
@@ -175,11 +193,6 @@
         color: var(--blue);
       }
 
-      .tag.updated {
-        background: rgba(25, 25, 23, 0.08);
-        color: var(--ink);
-      }
-
       footer {
         margin-top: 42px;
         color: var(--muted);
@@ -207,8 +220,9 @@
         <div>
           <h1>ZZEE</h1>
           <p class="lead">작업 중인 웹 프로젝트와 로컬 도구를 한 번에 여는 개인 목차. 필요한 프로젝트로 바로 들어간다.</p>
+          <time class="index-date" datetime="2026-07-07">Updated 2026-07-07</time>
         </div>
-        <div class="stamp">GitHub Pages<br />Updated 2026-07-07</div>
+        <div class="stamp">GitHub Pages</div>
       </header>
 
       <section class="section" aria-labelledby="local-title">
@@ -220,13 +234,13 @@
           <a class="project featured" href="./local-project-index/index.html">
             <div>
               <strong>Local Project Index (osse)</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>웹에서는 목차 미리보기로 열고, 실제 로컬 파일 바로가기는 ZZEE 폴더의 .url 또는 .bat 파일을 더블클릭해서 연다.</p>
             </div>
             <div class="meta">
               <span class="tag">Local</span>
               <span class="tag">Index</span>
               <span class="tag">osse</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
         </div>
@@ -241,52 +255,52 @@
           <a class="project" href="./zzee%27s%20food%20map/index.html">
             <div>
               <strong>ZZEE's Food Map</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>재리 맛집도. 다녀온 곳과 가보고 싶은 곳을 지도, 필터, 상세 정보로 관리하는 개인 맛집 아카이브.</p>
             </div>
             <div class="meta">
               <span class="tag">Map</span>
               <span class="tag">Food</span>
               <span class="tag">LocalStorage</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
 
           <a class="project" href="./blog-automation/index.html">
             <div>
               <strong>Blog Automation</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>네이버 블로그 자동화 작업을 위한 입력 도구. 매장명, 코멘트, 사진 순서, 메모를 빠르게 정리한다.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Blog</span>
               <span class="tag blue">Input</span>
               <span class="tag blue">Local Tool</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
 
           <a class="project" href="./camping-inventory/index.html">
             <div>
               <strong>ZZEE's Camping Inventory</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>오토캠핑과 백패킹 장비 목록. 보유 장비와 위시리스트의 무게, 가격, 체크리스트를 한 번에 본다.</p>
             </div>
             <div class="meta">
               <span class="tag green">Camping</span>
               <span class="tag green">Inventory</span>
               <span class="tag green">Gear</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
 
           <a class="project" href="./haidilao/index.html">
             <div>
               <strong>Haidilao</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>하이디라오 200% 즐기는 방법. 탕 조합, 소스바, 추천 재료, 수타면과 VIP 팁까지 정리한다.</p>
             </div>
             <div class="meta">
               <span class="tag">Hot Pot</span>
               <span class="tag">Guide</span>
               <span class="tag">Food</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
         </div>
@@ -301,12 +315,12 @@
           <a class="project" href="./dtd/index.html">
             <div>
               <strong>Dave the Diver</strong>
+              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
               <p>dtd 폴더. 데이브 더 다이버 관련 게임 정보와 정리 페이지.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Game</span>
               <span class="tag blue">Guide</span>
-              <span class="tag updated">Updated 2026-07-07</span>
             </div>
           </a>
         </div>
