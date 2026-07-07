@@ -58,7 +58,7 @@
       }
 
       .lead {
-        max-width: 620px;
+        max-width: 680px;
         margin: 14px 0 0;
         color: var(--muted);
         font-size: 17px;
@@ -140,6 +140,11 @@
         line-height: 1.6;
       }
 
+      .project.featured {
+        border-color: rgba(255, 107, 53, 0.55);
+        background: linear-gradient(135deg, #fffefa 0%, #fff4ee 100%);
+      }
+
       .meta {
         display: flex;
         flex-wrap: wrap;
@@ -196,10 +201,30 @@
       <header>
         <div>
           <h1>ZZEE</h1>
-          <p class="lead">작업 중인 웹 프로젝트와 로컬 도구를 한 번에 여는 개인 목차. 필요한 건 여기서 바로 들어간다.</p>
+          <p class="lead">작업 중인 웹 프로젝트와 로컬 도구를 한 번에 여는 개인 목차. 필요한 프로젝트로 바로 들어간다.</p>
         </div>
         <div class="stamp">Project Index</div>
       </header>
+
+      <section class="section" aria-labelledby="local-title">
+        <div class="section-head">
+          <h2 id="local-title">Local</h2>
+          <span>Workspace Shortcuts</span>
+        </div>
+        <div class="grid">
+          <a class="project featured" href="./local-project-index/index.html">
+            <div>
+              <strong>Local Project Index (osse)</strong>
+              <p>로컬 작업용 프로젝트 목차. GitHub Pages에 올린 항목과 로컬에서만 만지는 테스트/도구 폴더를 따로 모아본다.</p>
+            </div>
+            <div class="meta">
+              <span class="tag">Local</span>
+              <span class="tag">Index</span>
+              <span class="tag">osse</span>
+            </div>
+          </a>
+        </div>
+      </section>
 
       <section class="section" aria-labelledby="information-title">
         <div class="section-head">
@@ -210,7 +235,7 @@
           <a class="project" href="./zzee%27s%20food%20map/index.html">
             <div>
               <strong>ZZEE's Food Map</strong>
-              <p>재리 맛집도. 건대와 성수 중심 맛집 아카이브, 지도, 필터, 상세 정보, 업데이트 큐.</p>
+              <p>재리 맛집도. 다녀온 곳과 가보고 싶은 곳을 지도, 필터, 상세 정보로 관리하는 개인 맛집 아카이브.</p>
             </div>
             <div class="meta">
               <span class="tag">Map</span>
@@ -222,7 +247,7 @@
           <a class="project" href="./blog-automation/index.html">
             <div>
               <strong>Blog Automation</strong>
-              <p>네이버 블로그 자동화 작업용 입력 도우미. 매장명, 코멘트, 사진 순서 메모를 빠르게 정리한다.</p>
+              <p>네이버 블로그 자동화 작업을 위한 입력 도구. 매장명, 코멘트, 사진 순서, 메모를 빠르게 정리한다.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Blog</span>
@@ -234,7 +259,7 @@
           <a class="project" href="./camping-inventory/index.html">
             <div>
               <strong>ZZEE's Camping Inventory</strong>
-              <p>오토캠핑과 백패킹 장비 목록. 보유/위시리스트, 무게, 가격, 통계를 한 번에 본다.</p>
+              <p>오토캠핑과 백패킹 장비 목록. 보유 장비와 위시리스트의 무게, 가격, 체크리스트를 한 번에 본다.</p>
             </div>
             <div class="meta">
               <span class="tag green">Camping</span>
@@ -246,7 +271,7 @@
           <a class="project" href="./haidilao/index.html">
             <div>
               <strong>Haidilao</strong>
-              <p>하이디라오 200% 즐기는 방법. 탕 조합, 소스바, 추천 재료, 수타면과 VIP 팁까지 한 번에 정리.</p>
+              <p>하이디라오 200% 즐기는 방법. 탕 조합, 소스바, 추천 재료, 수타면과 VIP 팁까지 정리한다.</p>
             </div>
             <div class="meta">
               <span class="tag">Hot Pot</span>
@@ -266,7 +291,7 @@
           <a class="project" href="./dtd/index.html">
             <div>
               <strong>Dave the Diver</strong>
-              <p>dtd 폴더. 데이브 더 다이버 초밥집 운영표와 공략 정보.</p>
+              <p>dtd 폴더. 데이브 더 다이버 관련 게임 정보와 정리 페이지.</p>
             </div>
             <div class="meta">
               <span class="tag blue">Game</span>
