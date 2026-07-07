@@ -163,6 +163,52 @@
         background: linear-gradient(135deg, #fffefa 0%, #fff4ee 100%);
       }
 
+      .local-card {
+        gap: 16px;
+      }
+
+      .copy-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+        margin-top: 14px;
+      }
+
+      .copy-path {
+        min-width: 0;
+        padding: 10px 11px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--ink);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        line-height: 1.35;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .copy-button {
+        min-height: 40px;
+        padding: 0 12px;
+        border: 1px solid rgba(255, 107, 53, 0.45);
+        border-radius: 8px;
+        background: var(--accent);
+        color: white;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 900;
+        transition: filter 160ms ease, transform 160ms ease;
+      }
+
+      .copy-button:hover {
+        filter: brightness(0.96);
+        transform: translateY(-1px);
+      }
+
       .meta {
         display: flex;
         flex-wrap: wrap;
@@ -211,6 +257,14 @@
         .grid {
           grid-template-columns: 1fr;
         }
+
+        .copy-row {
+          grid-template-columns: 1fr;
+        }
+
+        .copy-button {
+          justify-self: start;
+        }
       }
     </style>
   </head>
@@ -231,17 +285,21 @@
           <span>Archive & Tools</span>
         </div>
         <div class="grid">
-          <a class="project featured" href="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/index.html">
+          <article class="project featured local-card">
             <div>
-              <strong>이 컴퓨터의 로컬파일로 바로가기</strong>
+              <strong>OSSE Local</strong>
               <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
-              <p>현재 PC의 C:\Users\eo2jaelee\Documents\GitHub\ZZEE\index.html을 바로 연다.</p>
+              <p>이 컴퓨터의 로컬 프로젝트 인덱스 경로. 아래 주소를 복사해서 브라우저 주소창에 붙여넣으면 바로 열린다.</p>
+              <div class="copy-row">
+                <code id="localPath" class="copy-path">file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/index.html</code>
+                <button class="copy-button" type="button" data-copy-target="localPath">Copy</button>
+              </div>
             </div>
             <div class="meta">
-              <span class="tag">Local</span>
+              <span class="tag">OSSE Local</span>
               <span class="tag">osse</span>
             </div>
-          </a>
+          </article>
 
           <a class="project" href="./zzee%27s%20food%20map/index.html">
             <div>
@@ -319,5 +377,31 @@
 
       <footer>Local path: C:\Users\eo2jaelee\Documents\GitHub\ZZEE</footer>
     </main>
+    <script>
+      const copyButton = document.querySelector("[data-copy-target]");
+
+      copyButton?.addEventListener("click", async () => {
+        const target = document.getElementById(copyButton.dataset.copyTarget);
+        const text = target?.textContent?.trim();
+
+        if (!text) return;
+
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = "Copied";
+        } catch {
+          const range = document.createRange();
+          const selection = window.getSelection();
+          range.selectNodeContents(target);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          copyButton.textContent = "Selected";
+        }
+
+        window.setTimeout(() => {
+          copyButton.textContent = "Copy";
+        }, 1400);
+      });
+    </script>
   </body>
 </html>
