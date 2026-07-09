@@ -97,6 +97,13 @@
         font-size: 16px;
       }
 
+      .update-stamp {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
       .section-banners {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -707,6 +714,7 @@
         <div>
           <h1>🏕 ZZEE's Camping Inventory</h1>
           <p class="lead">오토캠핑과 백패킹 장비를 카드로 관리하는 로컬 인벤토리. 보유 장비의 총 무게, 구매 금액, 백패킹 무게를 자동 계산한다.</p>
+          <p class="update-stamp">Last updated: 2026-07-09 KST</p>
         </div>
         <nav class="section-banners" aria-label="장비 섹션 바로가기">
           <a class="section-banner" href="#shared-gear"><span>Section</span><strong>Shared Gear</strong></a>
@@ -806,15 +814,17 @@
         "PUROMONTE Short Self Inflating Pad": "https://item-shopping.c.yimg.jp/i/n/kyuzo-outdoor_pmt120",
         "NEMO Ora Short Mummy": "https://images.hardloop.fr/273324-large_default/nemo-ora-20s-sleeping-pad.jpg?h=auto&q=80&w=auto",
         "Barocook 850ml": "https://mgadistribution.ca/cdn/shop/products/BC-003.jpg?v=1638834949",
+        "Tierra Alpine Rocket Burner TYB-0402": "https://shopping-phinf.pstatic.net/main_8189359/81893594894.jpg?type=f300",
         "SUSA MH-1 Peg Hammer": "https://sortdays.com/cdn/shop/files/Vancouver-SORT-Design-33_fa28a452-4ad3-4ecb-be1f-56482b74d009_1946x.jpg?v=1746229132",
-        "Breeze Moon Carabiner": "./images/black-carabiner.svg",
-        "Breeze Moon Multipurpose Cord": "https://breezemoon.co.kr/web/product/big/202312/c8ca2f3bd9afe2b1a205e2f5564288af.jpg",
-        "Breeze Moon Camping Peg": "./images/black-peg.svg",
-        "Slow Outdoor Factory Ultralight Table": "./images/ultralight-table.svg",
+        "Breeze Moon Steel Carabiner 4mm": "https://shopping-phinf.pstatic.net/main_8628049/86280494951.jpg",
+        "Breeze Moon 50m Roll Cord (4mm)": "https://shop-phinf.pstatic.net/20241216_223/1734333457286jorgJ_JPEG/49349121851188583_1400385494.jpg?type=m450",
+        "Breeze Moon Forged Peg 20cm": "https://shop-phinf.pstatic.net/20241101_19/1730443443618KFfe7_JPEG/64576263729951864_705022412.jpg?type=m450",
+        "Slow Outdoor BPL Backpacking Table (White Danpla)": "https://shopping-phinf.pstatic.net/main_8244113/82441131415.jpg?type=f300",
         "Helinox Sunset Chair (Black)": "https://helinox.com/cdn/shop/files/web_sunset_chair_coyote_tan_1_f4205e15-0da0-4e88-89fc-e14fc9be9684.jpg?v=1705682844&width=700",
         "Snow Peak Entry IGT": "https://thepremierstore.com/cdn/shop/files/snowpeakentryIGTtable_1500x.jpg?v=1724432557",
         "Snow Peak Home & Camp Burner": "https://www.japantrendshop.com/img/products/4655/4655-snow-peak-home-camp-burner-designer-stove-outdoor-1.jpg",
         "Snow Peak Trek 900": "https://kream-phinf.pstatic.net/MjAyNTAzMDRfNzAg/MDAxNzQxMDUzMjUyMDcz.SEIZGg_HxYdrmdOp7sFfOWwwmzmmVyq1WNAchqT8p_4g.pTKwYn0279hhMXaCjIZJFhOJx_VBAcV1vnkvqb7j-Cog.PNG/a_94b0294bd1ca46c19359b4841b7a9475.png",
+        "Snow Peak Tableware Set L (TW-021K)": "https://cnch9bavquum.compat.objectstorage.ap-seoul-1.oraclecloud.com/SPKWEB-PRD-BUCKET1/goods/4b06d113-1639-4eb5-9d40-ef7e3da9c7cc/b2b5cff1-b0a2-4add-bb4a-23a31affdfae.jpg",
         "Stanley Adventure Cook Set": "https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-AdventureNestingTwoCupCookSet24ozStainlessSteel.png?v=1762181885&width=900",
         "Dometic Patrol 20": "https://www.tapir-store.de/media/image/db/6b/04/dometic_kuehlbox_patrol_20l_glow_181838_600x600.webp",
         "Claymore ULTRA3.0 M": "https://unby.itembox.cloud/product/061/000000006125/000000006125-01.jpg?size=l&t=20230507181038&w=ODAw",
@@ -841,7 +851,7 @@
       const baseGear = [
         ["Shared Gear", "Chair", "Helinox", "Helinox Chair Zero (Sand)", "510g", "₩180,000", "Owned"],
         ["Shared Gear", "Table", "Helinox", "Helinox Table One", "690g", "₩170,000", "Owned"],
-        ["Shared Gear", "Table", "Slow Outdoor Factory", "Slow Outdoor Factory Ultralight Table", "-", "-", "Owned"],
+        ["Shared Gear", "Table", "Slow Outdoor Factory", "Slow Outdoor BPL Backpacking Table (White Danpla)", "TBD", "KRW 11,900", "Owned", 1, "https://search.naver.com/search.naver?query=%EC%8A%AC%EB%A1%9C%EC%9A%B0%EC%95%84%EC%9B%83%EB%8F%84%EC%96%B4%20%EB%B0%B1%ED%8C%A8%ED%82%B9%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EC%B4%88%EA%B2%BD%EB%9F%89%20BPL"],
         ["Shared Gear", "Trekking Pole", "LEKI", "LEKI Trekking Poles", "500g", "-", "Owned"],
         ["Shared Gear", "Lantern", "Goal Zero", "Goal Zero Lighthouse Micro Flash", "204g", "-", "Owned", 3],
         ["Shared Gear", "Headlamp", "Claymore", "Claymore HEADY2", "72g", "₩60,000", "Wishlist"],
@@ -858,9 +868,9 @@
         ["Backpacking", "Sleep System", "NEMO", "NEMO Ora Short Mummy", "375g", "₩150,000", "Wishlist"],
         ["Backpacking", "Cooking", "Barocook", "Barocook 850ml", "230g", "₩35,000", "Wishlist"],
         ["Backpacking", "Tools", "SUSA", "SUSA MH-1 Peg Hammer", "285g", "₩15,000", "Wishlist"],
-        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Carabiner", "-", "-", "Owned", 5],
-        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Multipurpose Cord", "-", "-", "Owned"],
-        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Camping Peg", "-", "-", "Owned", 10],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Steel Carabiner 4mm", "TBD", "TBD", "Owned", 5, "https://search.naver.com/search.naver?query=%EB%B8%8C%EB%A6%AC%EC%A6%88%EB%AC%B8%20%EC%B9%B4%EB%9D%BC%EB%B9%84%EB%84%88%20%EA%B0%95%EC%B2%A0%204mm"],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon 50m Roll Cord (4mm)", "TBD", "KRW 12,800", "Owned", 1, "https://shopping.naver.com/logistics/products/11117613882"],
+        ["Backpacking", "Tools", "Breeze Moon", "Breeze Moon Forged Peg 20cm", "TBD", "KRW 1,200", "Owned", 10, "https://shopping.naver.com/logistics/products/6914729131"],
         ["Auto Camping", "Furniture", "Helinox", "Helinox Sunset Chair (Black)", "1450g", "₩210,000", "Wishlist"],
         ["Auto Camping", "Furniture", "Snow Peak", "Snow Peak Entry IGT", "6500g", "₩250,000", "Dream Gear"],
         ["Auto Camping", "Kitchen", "Snow Peak", "Snow Peak Home & Camp Burner", "1400g", "₩160,000", "Wishlist"],
@@ -870,6 +880,8 @@
         ["Auto Camping", "Lighting", "Claymore", "Claymore ULTRA3.0 M", "860g", "₩130,000", "Wishlist"],
         ["Auto Camping", "Fire", "Snow Peak", "Snow Peak Pack & Carry Fireplace S", "1800g", "₩180,000", "Dream Gear"],
         ["Auto Camping", "Wagon", "Coleman", "Coleman Outdoor Wagon", "11000g", "₩140,000", "Wishlist"],
+        ["Shared Gear", "Cooking", "Tierra", "Tierra Alpine Rocket Burner TYB-0402", "97g", "KRW 35,000", "Wishlist", 1, "https://search.naver.com/search.naver?query=%ED%8B%B0%EC%97%90%EB%9D%BC%20%EC%95%8C%ED%8C%8C%EC%9D%B8%20%EB%A1%9C%EC%BC%93%EB%B2%84%EB%84%88%20TYB-0402"],
+        ["Shared Gear", "Cooking", "Snow Peak", "Snow Peak Tableware Set L (TW-021K)", "440g", "KRW 62,000", "Wishlist", 1, "https://www.snowpeak.co.kr/products/detail?godCd=TW-021K"],
       ].map(([section, category, brand, item, weight, price, status, quantity = 1, purchaseLink = ""], index) => ({
         id: `base-${index}-${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
         section,
@@ -924,6 +936,15 @@
       localStorage.setItem(localKey, JSON.stringify(localGear));
       let notes = safeJSON(notesKey, {});
       let selectedPackIds = new Set(safeJSON(packKey, []));
+      const migratedPackIds = {
+        "base-19-breeze-moon-carabiner": "base-19-breeze-moon-steel-carabiner-4mm",
+      };
+      Object.entries(migratedPackIds).forEach(([from, to]) => {
+        if (selectedPackIds.has(from)) {
+          selectedPackIds.delete(from);
+          selectedPackIds.add(to);
+        }
+      });
 
       const allGear = () => [...baseGear, ...localGear];
       const isBackpackingCandidate = (gear) => gear.section === "Backpacking" || gear.section === "Shared Gear";
