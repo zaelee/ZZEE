@@ -3,7 +3,12 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+import { findChromeExecutable } from "./lib/chrome-path.mjs";
+import { requireProviderTermsAcknowledgement } from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("Rendered provider page");
+
+const chromePath = findChromeExecutable();
 const url = process.argv[2] || "https://map.naver.com/p/entry/place/20069127";
 const port = 9223 + Math.floor(Math.random() * 1000);
 const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), "jae-food-chrome-"));
@@ -97,4 +102,5 @@ try {
   socket.close();
 } finally {
   chrome.kill();
+  fs.rmSync(profileDir, { recursive: true, force: true });
 }

@@ -1,6 +1,14 @@
 import fs from "node:fs";
 import vm from "node:vm";
 
+import { distanceKm, latestCheckedAt } from "./lib/place-data-utils.mjs";
+
+if (!process.argv.includes("--allow-unsafe-write")) {
+  throw new Error(
+    "이 스크립트는 문자열 치환 방식의 레거시 도구입니다. apply-naver-data-safe.mjs로 미리보기 후 --write를 사용하세요.",
+  );
+}
+
 const dataPath = new URL("../js/data.js", import.meta.url);
 const naverResultsPath = new URL("../data/naver-place-results.json", import.meta.url);
 
@@ -16,24 +24,7 @@ globalThis.__kakaoPlaceData = typeof kakaoPlaceData === "undefined" ? {} : kakao
   context,
 );
 
-const checkedAt = "2026-06-30";
-
-const toRadians = (degrees) => (Number(degrees) * Math.PI) / 180;
-
-const distanceKm = (a, b) => {
-  if (!a?.latitude || !a?.longitude || !b?.latitude || !b?.longitude) return 0;
-
-  const earthRadiusKm = 6371;
-  const dLat = toRadians(b.latitude - a.latitude);
-  const dLng = toRadians(b.longitude - a.longitude);
-  const lat1 = toRadians(a.latitude);
-  const lat2 = toRadians(b.latitude);
-  const h =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-
-  return 2 * earthRadiusKm * Math.asin(Math.sqrt(h));
-};
+const checkedAt = latestCheckedAt(results);
 
 const compactPlaceData = Object.fromEntries(
   results
@@ -42,7 +33,8 @@ const compactPlaceData = Object.fromEntries(
 
       const reference = context.__kakaoPlaceData[result.requestedName] || context.__verifiedPlaceData[result.requestedName];
       const naverPoint = { latitude: result.latitude, longitude: result.longitude };
-      return distanceKm(reference, naverPoint) < 2.2;
+      const distance = distanceKm(reference, naverPoint);
+      return distance !== null && distance < 2.2;
     })
     .map((result) => [
       result.requestedName,

@@ -5372,21 +5372,36 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
       rating: kakaoPlace?.rating ?? null,
       reviewCount: kakaoPlace?.ratingCount ?? kakaoPlace?.reviewCount ?? null,
       checkedAt: kakaoPlace?.checkedAt ?? null,
-      note: kakaoPlace ? "카카오 평점 미표시" : "카카오 평점 미확인",
+      note:
+        kakaoPlace?.rating != null
+          ? "카카오 공개 평점"
+          : kakaoPlace
+            ? "카카오 평점 미표시"
+            : "카카오 평점 미확인",
     },
     naver: {
       label: "네이버",
       rating: naverPlace?.rating ?? null,
       reviewCount: naverPlace?.reviewCount ?? null,
       checkedAt: naverPlace?.checkedAt ?? null,
-      note: naverPlace ? "네이버 평점 미표시" : "네이버 평점 미확인",
+      note:
+        naverPlace?.rating != null
+          ? "네이버 공개 평점"
+          : naverPlace
+            ? "네이버 평점 미표시"
+            : "네이버 평점 미확인",
     },
     google: {
       label: "구글",
       rating: googlePlace?.rating ?? null,
       reviewCount: googlePlace?.reviewCount ?? null,
       checkedAt: googlePlace?.checkedAt ?? null,
-      note: googlePlace ? "구글 평점 미표시" : "구글 평점 미확인",
+      note:
+        googlePlace?.rating != null
+          ? "구글 공개 평점"
+          : googlePlace
+            ? "구글 평점 미표시"
+            : "구글 평점 미확인",
     },
   };
 

@@ -1,10 +1,19 @@
 import fs from "node:fs";
 
+import { latestCheckedAt } from "./lib/place-data-utils.mjs";
+
+if (!process.argv.includes("--allow-unsafe-write")) {
+  throw new Error(
+    "이 스크립트는 문자열 치환 방식의 레거시 도구입니다. apply-kakao-data-safe.mjs로 미리보기 후 --write를 사용하세요.",
+  );
+}
+
 const dataPath = new URL("../js/data.js", import.meta.url);
 const kakaoResultsPath = new URL("../data/kakao-place-results.json", import.meta.url);
 
 const source = fs.readFileSync(dataPath, "utf8");
 const results = JSON.parse(fs.readFileSync(kakaoResultsPath, "utf8"));
+const checkedAt = latestCheckedAt(results);
 
 const compactPlaceData = Object.fromEntries(
   results
@@ -32,7 +41,7 @@ const compactPlaceData = Object.fromEntries(
     ]),
 );
 
-const kakaoDataBlock = `const kakaoCheckedAt = "2026-06-30";
+const kakaoDataBlock = `const kakaoCheckedAt = "${checkedAt}";
 const kakaoPlaceData = ${JSON.stringify(compactPlaceData, null, 2)};
 `;
 
