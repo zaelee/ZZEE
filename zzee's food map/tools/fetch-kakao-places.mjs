@@ -1,6 +1,10 @@
 import fs from "node:fs";
 import vm from "node:vm";
 
+import { dateInKorea, requireProviderTermsAcknowledgement } from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("Kakao Map");
+
 const dataPath = new URL("../js/data.js", import.meta.url);
 const outputPath = new URL("../data/kakao-place-results.json", import.meta.url);
 const source = fs.readFileSync(dataPath, "utf8");
@@ -21,7 +25,8 @@ const restaurants = context.__rawRestaurants.map(([name, category, , , signature
   verifiedPlace: context.__verifiedPlaceData[name] ?? null,
 }));
 
-const checkedAt = "2026-06-30";
+const checkedAt = dateInKorea();
+const requestDelayMs = Math.max(700, Number(process.env.PLACE_FETCH_DELAY_MS) || 1000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const normalize = (value = "") => value.replace(/\s+/g, "").toLowerCase();
 const seongsuRestaurantNames = new Set([
@@ -114,7 +119,7 @@ const searchPlaces = async (restaurant) => {
     if (places.length) {
       return { query, places };
     }
-    await sleep(60);
+    await sleep(requestDelayMs);
   }
 
   return { query: queries[0], places: [] };
@@ -152,10 +157,12 @@ const scorePlace = (place, restaurant) => {
   return score;
 };
 
-const pickBestPlace = (places, restaurant) =>
-  places
+const pickBestPlace = (places, restaurant) => {
+  const best = places
     .map((place) => ({ place, score: scorePlace(place, restaurant) }))
     .sort((a, b) => b.score - a.score)[0] ?? null;
+  return best?.score >= 70 ? best : null;
+};
 
 const panelUrl = (confirmId) => `https://place-api.map.kakao.com/places/panel3/${confirmId}`;
 
@@ -223,6 +230,7 @@ for (const restaurant of restaurants) {
 
     const result = {
       requestedName: restaurant.name,
+      source: "Kakao Map 비공식 공개 엔드포인트 스냅샷",
       matched: true,
       query,
       score: best.score,
@@ -267,7 +275,7 @@ for (const restaurant of restaurants) {
     console.log(["ERR", restaurant.name, error.message].join("\t"));
   }
 
-  await sleep(180);
+  await sleep(requestDelayMs);
 }
 
 fs.writeFileSync(outputPath, `${JSON.stringify(results, null, 2)}\n`);

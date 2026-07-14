@@ -1,6 +1,15 @@
 import fs from "node:fs";
 import vm from "node:vm";
 
+import {
+  dateInKorea,
+  normalizePlaceName,
+  placeNameScore,
+  requireProviderTermsAcknowledgement,
+} from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("NAVER Map/Place");
+
 const dataPath = new URL("../js/data.js", import.meta.url);
 const source = fs.readFileSync(dataPath, "utf8");
 const context = {};
@@ -21,6 +30,8 @@ const restaurants = context.__rawRestaurants.map(([name, category]) => ({
 }));
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const checkedAt = dateInKorea();
+const requestDelayMs = Math.max(700, Number(process.env.PLACE_FETCH_DELAY_MS) || 1000);
 const seongsuRestaurantNames = new Set([
   "잠수교집",
   "꿉당",
@@ -86,6 +97,7 @@ const fetchText = async (url) => {
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
     },
   });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.text();
 };
 
@@ -141,23 +153,21 @@ const extractItems = (html) => {
   return [];
 };
 
-const normalize = (value = "") =>
-  String(value)
-    .replace(/&amp;/g, "&")
-    .replace(/[^\p{L}\p{N}]/gu, "")
-    .toLowerCase();
-
 const pickBest = (items, restaurant) => {
-  const target = normalize(restaurant.name);
-  const expectedAddress = normalize(restaurant.kakaoPlace?.address || restaurant.verifiedPlace?.address || "");
-
-  return (
-    items.find((item) => normalize(item.name) === target) ||
-    items.find((item) => normalize(item.name).includes(target)) ||
-    items.find((item) => expectedAddress && normalize(item.roadAddress || item.address || "").includes(expectedAddress.slice(0, 8))) ||
-    items[0] ||
-    null
+  const expectedAddress = normalizePlaceName(
+    restaurant.kakaoPlace?.address || restaurant.verifiedPlace?.address || "",
   );
+  const ranked = items
+    .map((item) => {
+      const nameScore = placeNameScore(restaurant.name, item.name);
+      const candidateAddress = normalizePlaceName(item.roadAddress || item.address || "");
+      const addressScore =
+        expectedAddress && candidateAddress.includes(expectedAddress.slice(0, 8)) ? 0.35 : 0;
+      return { item, score: nameScore + addressScore };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  return ranked[0]?.score >= 0.58 ? ranked[0].item : null;
 };
 
 const searchPlace = async (restaurant) => {
@@ -174,7 +184,7 @@ const searchPlace = async (restaurant) => {
     const items = extractItems(html);
     const item = pickBest(items, restaurant);
     if (item) return { query, item };
-    await sleep(80);
+    await sleep(requestDelayMs);
   }
 
   return { query: queries[0], item: null };
@@ -239,7 +249,7 @@ const fetchPlacePage = async (placeId) => {
     images = images.length ? images : collectNaverImages(html);
     rating = rating ?? findRatingCandidate(html);
     if (images.length && rating) break;
-    await sleep(80);
+    await sleep(requestDelayMs);
   }
 
   return { images, rating };
@@ -251,7 +261,7 @@ const fetchPlace = async (restaurant) => {
 
   return {
     query,
-    source: "Naver Map mobile search + Naver Place page",
+    source: "NAVER Map/Place 비공식 공개 화면 스냅샷",
     matched: Boolean(item),
     requestedName: restaurant.name,
     name: item?.name ?? null,
@@ -265,7 +275,7 @@ const fetchPlace = async (restaurant) => {
     tel: item?.tel ?? null,
     rating: pageData.rating,
     images: pageData.images,
-    checkedAt: "2026-06-30",
+    checkedAt,
   };
 };
 
@@ -290,11 +300,15 @@ for (const restaurant of restaurants) {
       matched: false,
       requestedName: restaurant.name,
       error: error.message,
+      checkedAt,
     });
     console.log(["ERR", restaurant.name, error.message].join("\t"));
   }
 
-  await sleep(150);
+  await sleep(requestDelayMs);
 }
 
-fs.writeFileSync(new URL("../data/naver-place-results.json", import.meta.url), JSON.stringify(results, null, 2));
+fs.writeFileSync(
+  new URL("../data/naver-place-results.json", import.meta.url),
+  `${JSON.stringify(results, null, 2)}\n`,
+);

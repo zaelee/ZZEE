@@ -1,0 +1,20 @@
+{
+  "name": "zzee-projects",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static personal projects and the ZZEE food-map data workflow.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "check": "npm run check:syntax && npm run check:links && npm run test && npm run validate:data && npm run smoke:food-map",
+    "check:syntax": "node tools/check-syntax.mjs",
+    "check:links": "node tools/check-local-links.mjs",
+    "test": "node --test \"zzee's food map/tools/tests/place-data-utils.test.mjs\"",
+    "validate:data": "node \"zzee's food map/tools/validate-place-data.mjs\"",
+    "smoke:food-map": "node \"zzee's food map/tools/smoke-map-runtime.mjs\"",
+    "preview:kakao": "node \"zzee's food map/tools/apply-kakao-data-safe.mjs\"",
+    "preview:naver": "node \"zzee's food map/tools/apply-naver-data-safe.mjs\""
+  }
+}
