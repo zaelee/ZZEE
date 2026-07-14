@@ -1,3 +1,7 @@
+import { requireProviderTermsAcknowledgement } from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("NAVER Map/Place");
+
 const queries = [
   "슈퍼슬라이더",
   "슈퍼슬라이더 건대",
@@ -31,6 +35,7 @@ for (const query of queries) {
       "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     },
   });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = await response.text();
   const match = extractFirst(html);
 

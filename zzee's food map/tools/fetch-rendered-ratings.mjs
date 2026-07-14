@@ -4,7 +4,12 @@ import os from "node:os";
 import path from "node:path";
 import vm from "node:vm";
 
-const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+import { findChromeExecutable } from "./lib/chrome-path.mjs";
+import { dateInKorea, requireProviderTermsAcknowledgement } from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("NAVER/Google rendered pages");
+
+const chromePath = findChromeExecutable();
 const dataPath = new URL("../js/data.js", import.meta.url);
 const outputPath = new URL("../data/rendered-rating-results.json", import.meta.url);
 const source = fs.readFileSync(dataPath, "utf8");
@@ -19,7 +24,7 @@ globalThis.__naverPlaceData = typeof naverPlaceData === "undefined" ? {} : naver
 );
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const checkedAt = "2026-06-30";
+const checkedAt = dateInKorea();
 const port = 9444 + Math.floor(Math.random() * 500);
 const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), "jae-food-ratings-"));
 
@@ -152,7 +157,6 @@ const googleUrl = (restaurant) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${restaurant.name} ${restaurant.address}`)}`;
 
 const results = [];
-const client = await createCdpClient();
 const onlyMissing = process.argv.includes("--missing");
 const restaurants = onlyMissing
   ? context.__restaurants.filter(
@@ -160,7 +164,9 @@ const restaurants = onlyMissing
     )
   : context.__restaurants;
 
+let client;
 try {
+  client = await createCdpClient();
   for (const restaurant of restaurants) {
     const naverPlace = context.__naverPlaceData[restaurant.name];
     const result = {
@@ -170,7 +176,7 @@ try {
     };
 
     try {
-      if ((!onlyMissing || !restaurant.platformRatings?.naver?.rating) && (naverPlace?.naverMapLink || restaurant.naverMapLink)) {
+      if ((!onlyMissing || restaurant.platformRatings?.naver?.rating == null) && (naverPlace?.naverMapLink || restaurant.naverMapLink)) {
         const text = await getRenderedText(client, naverPlace?.naverMapLink || restaurant.naverMapLink, 8500);
         result.naver = { ...result.naver, ...parseNaver(text), url: naverPlace?.naverMapLink || restaurant.naverMapLink };
       }
@@ -186,8 +192,8 @@ try {
           checkedAt: restaurant.platformRatings.google.checkedAt,
         };
       } else {
-      const text = await getRenderedText(client, result.google.url, 8500);
-      result.google = { ...result.google, ...parseGoogle(text, restaurant) };
+        const text = await getRenderedText(client, result.google.url, 8500);
+        result.google = { ...result.google, ...parseGoogle(text, restaurant) };
       }
     } catch (error) {
       result.google.error = error.message;
@@ -203,8 +209,9 @@ try {
     );
   }
 } finally {
-  client.close();
+  client?.close();
   chrome.kill();
+  fs.rmSync(profileDir, { recursive: true, force: true });
 }
 
-fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+fs.writeFileSync(outputPath, `${JSON.stringify(results, null, 2)}\n`);

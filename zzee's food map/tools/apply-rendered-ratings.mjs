@@ -1,21 +1,24 @@
 import fs from "node:fs";
 
+import { latestCheckedAt } from "./lib/place-data-utils.mjs";
+
 const dataPath = new URL("../js/data.js", import.meta.url);
 const ratingsPath = new URL("../data/rendered-rating-results.json", import.meta.url);
 
 const source = fs.readFileSync(dataPath, "utf8");
 const ratings = JSON.parse(fs.readFileSync(ratingsPath, "utf8"));
+const shouldWrite = process.argv.includes("--write");
 const existingGoogleBlock = source.match(/const googlePlaceData = (\{[\s\S]*?\});\n/)?.[1] ?? "{}";
 const existingGooglePlaceData = Function(`"use strict"; return (${existingGoogleBlock});`)();
 
-const checkedAt = "2026-06-30";
+const checkedAt = latestCheckedAt(ratings.flatMap((item) => [item.naver, item.google]));
 const byName = Object.fromEntries(ratings.map((item) => [item.name, item]));
 
 const googlePlaceData = {
   ...existingGooglePlaceData,
   ...Object.fromEntries(
   ratings
-    .filter((item) => item.google?.rating)
+    .filter((item) => item.google?.rating != null)
     .map((item) => [
       item.name,
       {
@@ -31,7 +34,7 @@ const googlePlaceData = {
 const updateNaverBlock = (block) =>
   block.replace(/"([^"]+)": \{[\s\S]*?\n  \}/g, (entry, name) => {
     const rating = byName[name]?.naver;
-    if (!rating) return entry;
+    if (!rating || rating.rating == null) return entry;
 
     let nextEntry = entry;
     nextEntry = nextEntry.replace(/"rating": (null|[\d.]+)/, `"rating": ${rating.rating ?? "null"}`);
@@ -69,13 +72,16 @@ nextSource = nextSource.replace(
   "    googleMapLink: googlePlace?.googleMapLink || `https://www.google.com/maps/search/?api=1&query=${searchQuery}`,",
 );
 
-fs.writeFileSync(dataPath, nextSource);
+if (shouldWrite) fs.writeFileSync(dataPath, nextSource);
 
 console.log(
   JSON.stringify(
     {
-      naverRatings: ratings.filter((item) => item.naver?.rating).length,
+      mode: shouldWrite ? "write" : "preview",
+      checkedAt,
+      naverRatings: ratings.filter((item) => item.naver?.rating != null).length,
       googleRatings: Object.keys(googlePlaceData).length,
+      next: shouldWrite ? "js/data.js 갱신 완료" : "검토 후 같은 명령에 --write를 추가하세요.",
     },
     null,
     2,

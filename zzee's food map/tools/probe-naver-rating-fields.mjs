@@ -1,3 +1,7 @@
+import { requireProviderTermsAcknowledgement } from "./lib/place-data-utils.mjs";
+
+requireProviderTermsAcknowledgement("NAVER Map/Place");
+
 const fetchText = async (url) => {
   const response = await fetch(url, {
     headers: {
@@ -5,6 +9,7 @@ const fetchText = async (url) => {
       "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     },
   });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.text();
 };
 
