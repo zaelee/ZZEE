@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="존재하지 않는 공간 레이블을 위한 움직이는 음악·이미지 프롬프트 노드 스튜디오">
+    <title>Zerune Studio · 음악·이미지 프롬프트 워크스페이스</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23090b0a'/%3E%3Cpath d='M12 52 32 8l20 44H12Zm12-8h16L32 26l-8 18Z' fill='%23d8ff73'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__signal" aria-hidden="true"></span>
+        <div>
+          <p class="brand__eyebrow">ZERUNE MUSIC WORKSPACE</p>
+          <h1>Zerune Studio <span>v2.0</span></h1>
+        </div>
+      </div>
+
+      <div class="preset-switcher" aria-label="콘셉트 프리셋 선택">
+        <button class="preset-button" type="button" data-preset="ryugyong_noodle_room">
+          <span>001</span> 류경호텔 105층
+        </button>
+        <button class="preset-button" type="button" data-preset="neon_edge_before_fall">
+          <span>002</span> 도시가 다시 타기 전
+        </button>
+      </div>
+
+      <div class="toolbar" aria-label="프로젝트 도구">
+        <button class="toolbar__primary" id="generateButton" type="button">결과 다시 만들기</button>
+        <button id="resetLayoutButton" type="button">현재 단계 배치 초기화</button>
+        <button id="exportJsonButton" type="button">JSON</button>
+        <button id="exportMarkdownButton" type="button">Markdown</button>
+        <button id="importButton" type="button">불러오기</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
+      </div>
+    </header>
+
+    <section class="flow-shell" aria-label="제작 단계">
+      <div class="context-strip" aria-live="polite">
+        <div>
+          <span class="context-strip__index" id="presetEyebrow">존재하지 않는 공간 001</span>
+          <strong id="presetName">류경호텔 105층</strong>
+          <span id="presetStatus">가상의 공간 서사</span>
+        </div>
+        <p><kbd>드래그</kbd> 현재 단계의 노드 이동 · 입력과 위치 자동 저장</p>
+      </div>
+      <nav class="flow-tabs" aria-label="제작 순서">
+        <button class="flow-tab" type="button" data-stage="concept"><span>01</span><strong>콘셉트</strong><small>장면과 클릭 제목</small></button>
+        <i aria-hidden="true">→</i>
+        <button class="flow-tab" type="button" data-stage="keywords"><span>02</span><strong>키워드</strong><small>음악·이미지 재료</small></button>
+        <i aria-hidden="true">→</i>
+        <button class="flow-tab" type="button" data-stage="sound"><span>03</span><strong>사운드 + 구조</strong><small>트랙 수와 기승전결</small></button>
+        <i aria-hidden="true">→</i>
+        <button class="flow-tab" type="button" data-stage="prompts"><span>04</span><strong>프롬프트</strong><small>음악 ↔ 이미지 ↔ 참고</small></button>
+      </nav>
+      <div class="stage-summary">
+        <div><span id="stageNumber">FLOW 01</span><strong id="stageTitle">콘셉트</strong></div>
+        <p id="stageDescription">한 문장으로 장면을 정하고 사람들이 누르고 싶은 제목을 고릅니다.</p>
+        <button id="nextStageButton" type="button">다음 단계 →</button>
+      </div>
+    </section>
+
+    <main class="workspace-shell">
+      <div class="viewport" id="viewport" aria-label="움직이는 노드 작업 공간">
+        <div class="board" id="board">
+          <svg class="wires" id="wires" aria-hidden="true"></svg>
+          <div id="nodes"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <template id="nodeTemplate">
+      <article class="node">
+        <header class="node__header">
+          <div>
+            <span class="node__index"></span>
+            <h2 class="node__title"></h2>
+          </div>
+          <div class="node__actions">
+            <button class="icon-button lock-button" type="button" title="노드 잠금" aria-label="노드 잠금">◇</button>
+          </div>
+        </header>
+        <div class="node__body"></div>
+      </article>
+    </template>
+
+    <script src="data/presets.js"></script>
+    <script src="js/prompt-engine.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

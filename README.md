@@ -8,6 +8,7 @@
 - `camping-inventory/`: 오토캠핑·백패킹 장비 인벤토리
 - `blog-automation/`: 네이버 블로그 입력 문서 생성 도우미
 - `zerune/`: AI 음악 브랜드·IP 사업 전략 보고서
+- `zerune-studio/`: 콘셉트에서 음악·이미지 프롬프트를 만드는 원격 작업 스튜디오
 - `haidilao/`: 하이디라오 이용 가이드
 - `dtd/`: 데이브 더 다이버 운영 공략표
 - `index.html`: 프로젝트 허브
@@ -21,6 +22,6 @@ mise install
 npm run check
 ```
 
-의존성이 없는 정적 사이트라 빌드 단계는 없습니다. `npm run check`는 JavaScript 구문, 데이터 스키마, 장소 매칭 유틸리티, 음식 지도 런타임을 검사합니다.
+의존성이 없는 정적 사이트라 빌드 단계는 없습니다. `npm run check`는 JavaScript 구문, 로컬 링크, Zerune Studio 프롬프트 엔진, 데이터 스키마, 장소 매칭 유틸리티, 음식 지도 런타임을 검사합니다.
 
 맛집 데이터 수집·적용 규칙은 [`zzee's food map/docs/DATA-PIPELINE.md`](zzee%27s%20food%20map/docs/DATA-PIPELINE.md)를 참고하세요.
