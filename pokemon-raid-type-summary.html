@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>포켓몬 GO 타입별 레이드 상위 추천</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --top-bg: #ffffff;
+      --paper: #ffffff;
+      --ink: #182230;
+      --muted: #667085;
+      --line: #d7deea;
+      --soft: #eef3f8;
+      --paper-soft: #fbfcff;
+      --special: #7a3ff2;
+      --raid: #0f766e;
+      --general: #b45309;
+      --legacyfree: #175cd3;
+      --shadow: 0 12px 26px rgba(16, 24, 40, 0.07);
+      --shadow-strong: 0 18px 34px rgba(16, 24, 40, 0.12);
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0d1320;
+      --top-bg: #111827;
+      --paper: #141b2a;
+      --ink: #edf2f7;
+      --muted: #9aa7b8;
+      --line: #2b3547;
+      --soft: #1c2636;
+      --paper-soft: #101827;
+      --special: #a78bfa;
+      --raid: #2dd4bf;
+      --general: #f59e0b;
+      --legacyfree: #60a5fa;
+      --shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+      --shadow-strong: 0 18px 34px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, var(--top-bg) 0, var(--bg) 230px),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", "Malgun Gothic", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1320px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 30px 0 44px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .source-link {
+      color: var(--legacyfree);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 22px;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      box-shadow: 0 8px 20px rgba(16, 24, 40, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab {
+      min-height: 38px;
+      border: 1px solid #ccd6e6;
+      border-radius: 8px;
+      padding: 8px 13px;
+      color: var(--ink);
+      background: var(--paper);
+      cursor: pointer;
+      font-weight: 700;
+      transition: border-color 140ms ease, background 140ms ease, color 140ms ease, transform 140ms ease;
+    }
+
+    .tab:hover {
+      border-color: var(--legacyfree);
+      color: var(--legacyfree);
+      transform: translateY(-1px);
+    }
+
+    .tab[aria-pressed="true"] {
+      border-color: var(--legacyfree);
+      color: #ffffff;
+      background: var(--legacyfree);
+    }
+
+    .toolbar-tools {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .search {
+      width: min(320px, 100%);
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--ink);
+      background: var(--paper);
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--legacyfree);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+    }
+
+    .theme-toggle {
+      min-width: 82px;
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 11px;
+      color: var(--ink);
+      background: var(--paper);
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--legacyfree);
+      color: var(--legacyfree);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      background: var(--paper);
+      box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+    }
+
+    .type-list {
+      display: grid;
+      gap: 34px;
+    }
+
+    .type-section {
+      --accent: #475467;
+      --type-soft: #eef3f8;
+      padding-top: 4px;
+    }
+
+    .type-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+    }
+
+    .type-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .type-name-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .type-en {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .type-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, var(--paper));
+    }
+
+    .type-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+      border-radius: 50%;
+      color: #ffffff;
+      background: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .type-count {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 5px 9px;
+      color: var(--muted);
+      background: var(--paper);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .pokemon-card {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      gap: 11px;
+      min-height: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+    }
+
+    .pokemon-card:hover {
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+      box-shadow: var(--shadow-strong);
+      transform: translateY(-2px);
+    }
+
+    .media-col {
+      display: grid;
+      align-self: start;
+      gap: 6px;
+    }
+
+    .image-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      align-self: start;
+      width: 100%;
+      min-height: 0;
+      aspect-ratio: 1;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .image-wrap img {
+      position: relative;
+      z-index: 1;
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      image-rendering: auto;
+    }
+
+    .card-body {
+      min-width: 0;
+      padding: 0;
+    }
+
+    .category {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 8px;
+      padding: 4px 8px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 4px 10px rgba(16, 24, 40, 0.08);
+    }
+
+    .category.special {
+      background: var(--special);
+    }
+
+    .category.raid {
+      background: var(--raid);
+    }
+
+    .category.general {
+      background: var(--general);
+    }
+
+    .category.legacyfree {
+      background: var(--legacyfree);
+    }
+
+    .name {
+      margin: 8px 0 7px;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .moves {
+      display: grid;
+      gap: 5px;
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .move-row {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 7px;
+      align-items: start;
+      min-height: 25px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 5px 7px;
+      background: var(--paper-soft);
+    }
+
+    .move-label {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .move-name {
+      color: var(--ink);
+    }
+
+    .stats {
+      display: block;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-height: 30px;
+      padding: 5px 7px;
+      background: var(--paper);
+      white-space: nowrap;
+    }
+
+    .stat.score-stat {
+      border-color: color-mix(in srgb, var(--accent) 28%, var(--line));
+      background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+    }
+
+    .stat-label {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .stat-value {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .score-stat .stat-value {
+      color: var(--accent);
+    }
+
+    .empty {
+      display: none;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      color: var(--muted);
+      background: var(--paper);
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1180px) {
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      header {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .app {
+        width: min(100% - 20px, 1240px);
+        padding-top: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .type-title {
+        gap: 8px;
+        font-size: 19px;
+      }
+
+      .type-name-wrap {
+        gap: 6px;
+      }
+
+      .type-en {
+        font-size: 11px;
+      }
+
+      .toolbar {
+        position: static;
+        align-items: stretch;
+        gap: 9px;
+      }
+
+      .tabs {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .tab {
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 7px 11px;
+        white-space: nowrap;
+      }
+
+      .toolbar-tools {
+        width: 100%;
+      }
+
+      .search {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .theme-toggle {
+        flex: 0 0 auto;
+        min-width: 74px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .pokemon-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px;
+      }
+
+      .media-col {
+        gap: 5px;
+      }
+
+      .image-wrap {
+        min-height: 0;
+      }
+
+      .image-wrap img {
+        width: min(76px, 72%);
+        height: min(76px, 72%);
+      }
+
+      .card-body {
+        padding: 0;
+      }
+
+      .category {
+        min-height: 22px;
+        padding: 4px 7px;
+        font-size: 10px;
+      }
+
+      .name {
+        margin: 6px 0;
+        font-size: 15px;
+      }
+
+      .moves {
+        gap: 5px;
+        margin-bottom: 0;
+        font-size: 11px;
+      }
+
+      .move-row {
+        grid-template-columns: 38px minmax(0, 1fr);
+        min-height: 24px;
+        padding: 4px 6px;
+      }
+
+      .move-label {
+        font-size: 10px;
+      }
+
+      .stat {
+        min-height: 27px;
+        padding: 5px 6px;
+      }
+
+      .stat-label {
+        font-size: 9px;
+      }
+
+      .stat-value {
+        font-size: 14px;
+      }
+
+      .legend {
+        max-height: 84px;
+        overflow: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>타입별 레이드 상위 포켓몬 정리</h1>
+        <p class="subtitle">
+          공개 시트 기준일은 2026. 7. 12.입니다. 각 타입마다 최상단 메가/특수 후보 1마리,
+          그림자·메가·특수·환상 포켓몬을 제외한 레이드 확보 후보 1마리와 일반 포획·진화 후보 1마리,
+          레거시 기술(*)이 없는 후보 1마리를 골랐습니다.
+          <a class="source-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-a0DcSGf2dITFS2ekiQkX2SJ6AHSY6FIuLJdzJUlkS4rdC6QabZnMcKJeKY7zwLK18XjYwfIl7DX4/pubhtml?gid=392792009&amp;single=true" target="_blank" rel="noreferrer">원본 시트</a>
+        </p>
+      </div>
+    </header>
+
+    <div class="toolbar" aria-label="보기 필터">
+      <div class="tabs">
+        <button class="tab" type="button" data-filter="all" aria-pressed="true">전체</button>
+        <button class="tab" type="button" data-filter="special" aria-pressed="false">메가/특수</button>
+        <button class="tab" type="button" data-filter="raid" aria-pressed="false">레이드</button>
+        <button class="tab" type="button" data-filter="general" aria-pressed="false">일반</button>
+        <button class="tab" type="button" data-filter="legacyfree" aria-pressed="false">비레거시</button>
+      </div>
+      <div class="toolbar-tools">
+        <input class="search" type="search" placeholder="타입 또는 포켓몬 검색" aria-label="타입 또는 포켓몬 검색">
+        <button class="theme-toggle" type="button" aria-pressed="false">다크</button>
+      </div>
+    </div>
+
+    <div class="legend" aria-label="선정 기준">
+      <span>특수: 메가, 원시, 합체, 검왕/방패왕, 블랙/화이트 큐레무</span>
+      <span>레이드: 전설/울트라비스트 등 레이드 계열 복수 확보 후보</span>
+      <span>일반: 비그림자·비메가·비환상 일반 포획/진화 후보</span>
+      <span>비레거시: * 없는 기술 + 전설/환상/울트라비스트 제외 + 앞 후보와 중복 없음</span>
+      <span>노말 타입은 원본 시트에 별도 블록이 없어 제외</span>
+    </div>
+
+    <div class="type-list" id="typeList"></div>
+    <div class="empty" id="emptyState">검색 결과가 없습니다.</div>
+
+    <footer>
+      종합(%), 기술명은 원본 시트 표기를 유지했습니다. 별표(*)와 이중 별표(**)도 시트의 기술 제한 표기입니다.
+      이미지는 PokemonDB 링크를 우선 사용하고, 로드 실패 시 PokeAPI의 외부 이미지로 대체됩니다.
+    </footer>
+  </main>
+
+  <script>
+    const typeStyles = {
+      "격투": ["#b42318", "#fff1ef", "격", "Fighting"],
+      "악": ["#2f2a2a", "#ebe6e2", "악", "Dark"],
+      "바위": ["#9a6b16", "#fff3d8", "암", "Rock"],
+      "땅": ["#a15c07", "#ffefd6", "지", "Ground"],
+      "물": ["#175cd3", "#e8f0ff", "수", "Water"],
+      "불꽃": ["#c2410c", "#fff0e6", "화", "Fire"],
+      "풀": ["#16803c", "#e8f7ed", "초", "Grass"],
+      "고스트": ["#5b3aa4", "#f0ebff", "령", "Ghost"],
+      "벌레": ["#5f7f12", "#eff7d6", "충", "Bug"],
+      "강철": ["#536878", "#edf2f7", "강", "Steel"],
+      "비행": ["#2b6cb0", "#e7f2ff", "비", "Flying"],
+      "독": ["#8b3aa8", "#f6eafe", "독", "Poison"],
+      "전기": ["#b88700", "#fff7cc", "전", "Electric"],
+      "드래곤": ["#3152a3", "#e9efff", "용", "Dragon"],
+      "에스퍼": ["#be2f6b", "#ffedf5", "염", "Psychic"],
+      "페어리": ["#c43f8f", "#ffedf7", "요", "Fairy"],
+      "얼음": ["#0086a8", "#e3f8ff", "빙", "Ice"]
+    };
+
+    const fallback = (id) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+
+    const pokemonData = [
+      {
+        type: "격투",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "루카리오(메가)", moves: "발경* / 파동탄", score: "104.9", dps: "41.3", er: "106.07", img: "https://img.pokemondb.net/artwork/large/mega-lucario.jpg", fallback: fallback(448) },
+          { slot: "raid", label: "레이드", name: "테라키온", moves: "두번차기 / 성스러운칼*", score: "75.0", dps: "30.3", er: "75.89", img: "https://img.pokemondb.net/artwork/large/terrakion.jpg", fallback: fallback(639) },
+          { slot: "general", label: "일반", name: "루카리오", moves: "발경* / 파동탄", score: "78.2", dps: "32.2", er: "79.10", img: "https://img.pokemondb.net/artwork/large/lucario.jpg", fallback: fallback(448) },
+          { slot: "legacyfree", label: "비레거시", name: "번치코", moves: "카운터 / 파동탄", score: "69.9", dps: "30.3", er: "70.73", img: "https://img.pokemondb.net/artwork/large/blaziken.jpg", fallback: fallback(257) }
+        ]
+      },
+      {
+        type: "악",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "마기라스(메가)", moves: "물기 / 세차게휘두르기", score: "111.6", dps: "30.5", er: "96.00", img: "https://img.pokemondb.net/artwork/large/mega-tyranitar.jpg", fallback: fallback(248) },
+          { slot: "raid", label: "레이드", name: "이벨타르", moves: "바크아웃 / 악의파동", score: "79.8", dps: "23.5", er: "68.70", img: "https://img.pokemondb.net/artwork/large/yveltal.jpg", fallback: fallback(717) },
+          { slot: "general", label: "일반", name: "마기라스", moves: "물기 / 세차게휘두르기", score: "86.9", dps: "25.4", er: "74.80", img: "https://img.pokemondb.net/artwork/large/tyranitar.jpg", fallback: fallback(248) },
+          { slot: "legacyfree", label: "비레거시", name: "대도각참", moves: "바크아웃 / 악의파동", score: "80.7", dps: "22.3", er: "69.50", img: "https://img.pokemondb.net/artwork/large/kingambit.jpg", fallback: fallback(983) }
+        ]
+      },
+      {
+        type: "바위",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "디안시(메가)", moves: "돌떨구기 / 스톤샤워", score: "100.0", dps: "31.5", er: "78.00", img: "https://img.pokemondb.net/artwork/large/mega-diancie.jpg", fallback: fallback(719) },
+          { slot: "raid", label: "레이드", name: "테라키온", moves: "떨어뜨리기 / 스톤샤워", score: "78.9", dps: "24.3", er: "61.60", img: "https://img.pokemondb.net/artwork/large/terrakion.jpg", fallback: fallback(639) },
+          { slot: "general", label: "일반", name: "킬라플로르", moves: "돌떨구기 / 메테오빔", score: "86.4", dps: "26.8", er: "67.50", img: "https://img.pokemondb.net/artwork/large/glimmora.jpg", fallback: fallback(970) },
+          { slot: "legacyfree", label: "비레거시", name: "램펄드", moves: "떨어뜨리기 / 스톤샤워", score: "81.7", dps: "28.4", er: "63.80", img: "https://img.pokemondb.net/artwork/large/rampardos.jpg", fallback: fallback(409) }
+        ]
+      },
+      {
+        type: "땅",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "그란돈(원시)", moves: "머드샷 / 단애의칼*", score: "100.0", dps: "34.4", er: "100.90", img: "https://img.pokemondb.net/artwork/large/primal-groudon.jpg", fallback: fallback(383) },
+          { slot: "raid", label: "레이드", name: "랜드로스(영물폼)", moves: "머드샷 / 열사의폭풍*", score: "74.3", dps: "30.6", er: "75.00", img: "https://img.pokemondb.net/artwork/large/landorus-therian.jpg", fallback: fallback(645) },
+          { slot: "general", label: "일반", name: "한카리아스", moves: "머드샷 / 대지의힘*", score: "69.4", dps: "24.6", er: "70.00", img: "https://img.pokemondb.net/artwork/large/garchomp.jpg", fallback: fallback(445) },
+          { slot: "legacyfree", label: "비레거시", name: "몰드류", moves: "진흙뿌리기 / 열사의대지", score: "67.8", dps: "25.6", er: "68.40", img: "https://img.pokemondb.net/artwork/large/excadrill.jpg", fallback: fallback(530) }
+        ]
+      },
+      {
+        type: "물",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "가이오가(원시)", moves: "폭포오르기 / 근원의파동*", score: "107.1", dps: "35.1", er: "95.00", img: "https://img.pokemondb.net/artwork/large/primal-kyogre.jpg", fallback: fallback(382) },
+          { slot: "raid", label: "레이드", name: "가이오가", moves: "폭포오르기 / 근원의파동*", score: "79.2", dps: "27.3", er: "70.20", img: "https://img.pokemondb.net/artwork/large/kyogre.jpg", fallback: fallback(382) },
+          { slot: "general", label: "일반", name: "인텔리레온", moves: "물대포 / 하이드로캐논*", score: "73.9", dps: "29.6", er: "65.50", img: "https://img.pokemondb.net/artwork/large/inteleon.jpg", fallback: fallback(818) },
+          { slot: "legacyfree", label: "비레거시", name: "킹크랩", moves: "거품 / 집게해머", score: "67.6", dps: "26.6", er: "60.00", img: "https://img.pokemondb.net/artwork/large/kingler.jpg", fallback: fallback(99) }
+        ]
+      },
+      {
+        type: "불꽃",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "리자몽(메가Y)", moves: "회오리불꽃 / 블라스트번*", score: "100.0", dps: "35.3", er: "97.40", img: "https://img.pokemondb.net/artwork/large/mega-charizard-y.jpg", fallback: fallback(6) },
+          { slot: "raid", label: "레이드", name: "두파팡", moves: "불태우기 / 깜짝헤드*", score: "93.1", dps: "38.1", er: "90.60", img: "https://img.pokemondb.net/artwork/large/blacephalon.jpg", fallback: fallback(806) },
+          { slot: "general", label: "일반", name: "불카모스", moves: "회오리불꽃 / 오버히트", score: "76.2", dps: "27.3", er: "74.20", img: "https://img.pokemondb.net/artwork/large/volcarona.jpg", fallback: fallback(637) },
+          { slot: "legacyfree", label: "비레거시", name: "샹델라", moves: "회오리불꽃 / 오버히트", score: "72.5", dps: "27.7", er: "70.60", img: "https://img.pokemondb.net/artwork/large/chandelure.jpg", fallback: fallback(609) }
+        ]
+      },
+      {
+        type: "풀",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "나무킹(메가)", moves: "씨기관총 / 하드플랜트*", score: "113.7", dps: "33.9", er: "86.40", img: "https://img.pokemondb.net/artwork/large/mega-sceptile.jpg", fallback: fallback(254) },
+          { slot: "raid", label: "레이드", name: "종이신도", moves: "잎날가르기 / 리프블레이드", score: "95.5", dps: "31.3", er: "72.50", img: "https://img.pokemondb.net/artwork/large/kartana.jpg", fallback: fallback(798) },
+          { slot: "general", label: "일반", name: "고릴타", moves: "잎날가르기 / 하드플랜트*", score: "88.6", dps: "26.5", er: "67.30", img: "https://img.pokemondb.net/artwork/large/rillaboom.jpg", fallback: fallback(812) },
+          { slot: "legacyfree", label: "비레거시", name: "로즈레이드", moves: "매지컬리프 / 풀묶기", score: "79.3", dps: "26.3", er: "60.30", img: "https://img.pokemondb.net/artwork/large/roserade.jpg", fallback: fallback(407) }
+        ]
+      },
+      {
+        type: "고스트",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "네크로즈마(새벽의날개)", moves: "섀도클로 / 섀도레이**", score: "100.0", dps: "37.7", er: "87.00", img: "https://img.pokemondb.net/artwork/large/necrozma-dawn-wings.jpg", fallback: fallback(800) },
+          { slot: "raid", label: "레이드", name: "두파팡", moves: "놀래키기 / 섀도볼", score: "72.2", dps: "32.4", er: "62.80", img: "https://img.pokemondb.net/artwork/large/blacephalon.jpg", fallback: fallback(806) },
+          { slot: "general", label: "일반", name: "샹델라", moves: "병상첨병 / 섀도볼", score: "68.0", dps: "28.5", er: "59.10", img: "https://img.pokemondb.net/artwork/large/chandelure.jpg", fallback: fallback(609) },
+          { slot: "legacyfree", label: "비레거시", name: "팬텀", moves: "섀도클로 / 섀도볼", score: "62.5", dps: "29.1", er: "54.30", img: "https://img.pokemondb.net/artwork/large/gengar.jpg", fallback: fallback(94) }
+        ]
+      },
+      {
+        type: "벌레",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "헤라크로스(메가)", moves: "연속자르기 / 메가혼", score: "100.0", dps: "32.2", er: "81.20", img: "https://img.pokemondb.net/artwork/large/mega-heracross.jpg", fallback: fallback(214) },
+          { slot: "raid", label: "레이드", name: "페로코체", moves: "벌레먹기 / 벌레의야단법석", score: "77.9", dps: "31.9", er: "63.20", img: "https://img.pokemondb.net/artwork/large/pheromosa.jpg", fallback: fallback(795) },
+          { slot: "general", label: "일반", name: "불카모스", moves: "벌레먹기 / 벌레의야단법석", score: "79.7", dps: "25.4", er: "64.70", img: "https://img.pokemondb.net/artwork/large/volcarona.jpg", fallback: fallback(637) },
+          { slot: "legacyfree", label: "비레거시", name: "핫삼", moves: "연속자르기 / 시저크로스", score: "69.3", dps: "22.2", er: "56.30", img: "https://img.pokemondb.net/artwork/large/scizor.jpg", fallback: fallback(212) }
+        ]
+      },
+      {
+        type: "강철",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "자시안(검왕)", moves: "메탈클로 / 거수참**", score: "126.2", dps: "40.4", er: "111.70", img: "https://img.pokemondb.net/artwork/large/zacian-crowned-sword.jpg", fallback: fallback(888) },
+          { slot: "raid", label: "레이드", name: "디아루가", moves: "메탈클로 / 아이언헤드", score: "72.4", dps: "25.4", er: "64.10", img: "https://img.pokemondb.net/artwork/large/dialga.jpg", fallback: fallback(483) },
+          { slot: "general", label: "일반", name: "메타그로스", moves: "불릿펀치 / 코멧펀치*", score: "86.7", dps: "28.2", er: "76.80", img: "https://img.pokemondb.net/artwork/large/metagross.jpg", fallback: fallback(376) },
+          { slot: "legacyfree", label: "비레거시", name: "루카리오", moves: "불릿펀치 / 코멧펀치", score: "72.2", dps: "26.6", er: "63.90", img: "https://img.pokemondb.net/artwork/large/lucario.jpg", fallback: fallback(448) }
+        ]
+      },
+      {
+        type: "비행",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "레쿠쟈(메가)", moves: "에어슬래시 / 화룡점정**", score: "137.0", dps: "43.6", er: "126.60", img: "https://img.pokemondb.net/artwork/large/mega-rayquaza.jpg", fallback: fallback(384) },
+          { slot: "raid", label: "레이드", name: "레쿠쟈", moves: "에어슬래시 / 화룡점정**", score: "99.2", dps: "33.7", er: "91.60", img: "https://img.pokemondb.net/artwork/large/rayquaza.jpg", fallback: fallback(384) },
+          { slot: "general", label: "일반", name: "보만다", moves: "불꽃엄니 / 공중날기", score: "83.5", dps: "28.2", er: "77.10", img: "https://img.pokemondb.net/artwork/large/salamence.jpg", fallback: fallback(373) },
+          { slot: "legacyfree", label: "비레거시", name: "워글", moves: "에어슬래시 / 공중날기", score: "69.8", dps: "25.9", er: "64.40", img: "https://img.pokemondb.net/artwork/large/braviary.jpg", fallback: fallback(628) }
+        ]
+      },
+      {
+        type: "독",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "독침붕(메가)", moves: "독찌르기 / 오물폭탄", score: "94.9", dps: "31.0", er: "78.30", img: "https://img.pokemondb.net/artwork/large/mega-beedrill.jpg", fallback: fallback(15) },
+          { slot: "raid", label: "레이드", name: "무한다이노", moves: "독찌르기 / 오물폭탄", score: "100.0", dps: "28.9", er: "82.50", img: "https://img.pokemondb.net/artwork/large/eternatus.jpg", fallback: fallback(890) },
+          { slot: "general", label: "일반", name: "로즈레이드", moves: "독찌르기 / 오물폭탄", score: "79.7", dps: "25.0", er: "65.80", img: "https://img.pokemondb.net/artwork/large/roserade.jpg", fallback: fallback(407) },
+          { slot: "legacyfree", label: "비레거시", name: "부르르룸", moves: "독찌르기 / 더스트슈트", score: "79.6", dps: "23.0", er: "65.70", img: "https://img.pokemondb.net/artwork/large/revavroom.jpg", fallback: fallback(966) }
+        ]
+      },
+      {
+        type: "전기",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "라이츄(메가Y)", moves: "전기쇼크 / 와일드볼트", score: "100.0", dps: "35.6", er: "80.10", img: fallback(26), fallback: fallback(26) },
+          { slot: "raid", label: "레이드", name: "제크로무", moves: "차지빔 / 크로스썬더*", score: "97.8", dps: "28.7", er: "78.30", img: "https://img.pokemondb.net/artwork/large/zekrom.jpg", fallback: fallback(644) },
+          { slot: "general", label: "일반", name: "자포코일", moves: "볼트체인지 / 와일드볼트", score: "80.6", dps: "24.7", er: "64.60", img: "https://img.pokemondb.net/artwork/large/magnezone.jpg", fallback: fallback(462) },
+          { slot: "legacyfree", label: "비레거시", name: "에레키블", moves: "전기쇼크 / 와일드볼트", score: "78.7", dps: "26.8", er: "63.00", img: "https://img.pokemondb.net/artwork/large/electivire.jpg", fallback: fallback(466) }
+        ]
+      },
+      {
+        type: "드래곤",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "레쿠쟈(메가)", moves: "드래곤테일 / 와이드브레이커*", score: "106.7", dps: "42.2", er: "93.10", img: "https://img.pokemondb.net/artwork/large/mega-rayquaza.jpg", fallback: fallback(384) },
+          { slot: "raid", label: "레이드", name: "무한다이노", moves: "드래곤테일 / 다이맥스포**", score: "112.8", dps: "43.8", er: "98.40", img: "https://img.pokemondb.net/artwork/large/eternatus.jpg", fallback: fallback(890) },
+          { slot: "general", label: "일반", name: "드닐레이브", moves: "용의숨결 / 대검돌격*", score: "82.2", dps: "34.2", er: "71.70", img: "https://img.pokemondb.net/artwork/large/baxcalibur.jpg", fallback: fallback(998) },
+          { slot: "legacyfree", label: "비레거시", name: "한카리아스", moves: "드래곤테일 / 와이드브레이커", score: "75.7", dps: "30.2", er: "66.10", img: "https://img.pokemondb.net/artwork/large/garchomp.jpg", fallback: fallback(445) }
+        ]
+      },
+      {
+        type: "에스퍼",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "뮤츠(메가Y)", moves: "염동력 / 사이코브레이크*", score: "123.5", dps: "44.6", er: "119.20", img: "https://img.pokemondb.net/artwork/large/mega-mewtwo-y.jpg", fallback: fallback(150) },
+          { slot: "raid", label: "레이드", name: "뮤츠", moves: "염동력 / 사이코브레이크*", score: "86.3", dps: "33.2", er: "83.40", img: "https://img.pokemondb.net/artwork/large/mewtwo.jpg", fallback: fallback(150) },
+          { slot: "general", label: "일반", name: "메타그로스", moves: "사념의박치기 / 사이코키네시스", score: "70.9", dps: "25.0", er: "68.40", img: "https://img.pokemondb.net/artwork/large/metagross.jpg", fallback: fallback(376) },
+          { slot: "legacyfree", label: "비레거시", name: "에브이", moves: "염동력 / 사이코키네시스", score: "65.4", dps: "27.0", er: "63.20", img: "https://img.pokemondb.net/artwork/large/espeon.jpg", fallback: fallback(196) }
+        ]
+      },
+      {
+        type: "페어리",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "가디안(메가)", moves: "애교부리기 / 매지컬샤인", score: "119.1", dps: "31.1", er: "86.30", img: "https://img.pokemondb.net/artwork/large/mega-gardevoir.jpg", fallback: fallback(282) },
+          { slot: "raid", label: "레이드", name: "러브로스(화신폼)", moves: "요정의바람 / 매지컬샤인", score: "100.0", dps: "26.9", er: "72.50", img: "https://img.pokemondb.net/artwork/large/enamorus-incarnate.jpg", fallback: fallback(905) },
+          { slot: "general", label: "일반", name: "토게키스", moves: "애교부리기 / 매지컬샤인", score: "89.1", dps: "21.9", er: "64.60", img: "https://img.pokemondb.net/artwork/large/togekiss.jpg", fallback: fallback(468) },
+          { slot: "legacyfree", label: "비레거시", name: "브리무음", moves: "애교부리기 / 매지컬샤인", score: "81.6", dps: "23.1", er: "59.10", img: "https://img.pokemondb.net/artwork/large/hatterene.jpg", fallback: fallback(858) }
+        ]
+      },
+      {
+        type: "얼음",
+        picks: [
+          { slot: "special", label: "메가/특수", name: "큐레무(화이트)", moves: "얼음엄니 / 콜드플레어**", score: "113.0", dps: "35.4", er: "86.80", img: "https://img.pokemondb.net/artwork/large/kyurem-white.jpg", fallback: fallback(646) },
+          { slot: "raid", label: "레이드", name: "큐레무", moves: "용의숨결 / 얼어붙은세계*", score: "77.9", dps: "25.0", er: "59.80", img: "https://img.pokemondb.net/artwork/large/kyurem.jpg", fallback: fallback(646) },
+          { slot: "general", label: "일반", name: "드닐레이브", moves: "얼음엄니 / 눈사태", score: "79.5", dps: "25.8", er: "61.00", img: "https://img.pokemondb.net/artwork/large/baxcalibur.jpg", fallback: fallback(998) },
+          { slot: "legacyfree", label: "비레거시", name: "불비달마(가라르)", moves: "얼음엄니 / 눈사태", score: "77.6", dps: "27.4", er: "59.60", img: "https://img.pokemondb.net/artwork/large/darmanitan-galarian-standard.jpg", fallback: fallback(555) }
+        ]
+      }
+    ];
+
+    const typeList = document.querySelector("#typeList");
+    const emptyState = document.querySelector("#emptyState");
+    const searchInput = document.querySelector(".search");
+    const themeToggle = document.querySelector(".theme-toggle");
+    const tabs = [...document.querySelectorAll(".tab")];
+    let activeFilter = "all";
+
+    function getInitialTheme() {
+      const savedTheme = localStorage.getItem("pokemonRaidTheme");
+      if (savedTheme === "dark" || savedTheme === "light") {
+        return savedTheme;
+      }
+
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("pokemonRaidTheme", theme);
+      themeToggle.textContent = theme === "dark" ? "라이트" : "다크";
+      themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+    }
+
+    setTheme(getInitialTheme());
+
+    function getMoves(pokemon) {
+      if (pokemon.fast && pokemon.charge) {
+        return [pokemon.fast, pokemon.charge];
+      }
+
+      const [fast = "", charge = ""] = pokemon.moves.split("/").map((move) => move.trim());
+      return [fast, charge];
+    }
+
+    function cardTemplate(pokemon) {
+      const [fast, charge] = getMoves(pokemon);
+
+      return `
+        <article class="pokemon-card" data-slot="${pokemon.slot}">
+          <div class="media-col">
+            <div class="image-wrap">
+              <img src="${pokemon.img}" data-fallback="${pokemon.fallback}" alt="${pokemon.name}" loading="lazy">
+            </div>
+            <div class="stats">
+              <span class="stat score-stat"><span class="stat-label">종합(%)</span><span class="stat-value">${pokemon.score}</span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="category ${pokemon.slot}">${pokemon.label}</span>
+            <h3 class="name">${pokemon.name}</h3>
+            <div class="moves">
+              <div class="move-row"><span class="move-label">일반</span><span class="move-name">${fast}</span></div>
+              <div class="move-row"><span class="move-label">차징</span><span class="move-name">${charge}</span></div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function render() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleSections = 0;
+
+      typeList.innerHTML = pokemonData.map((group) => {
+        const [accent, soft, icon, englishName] = typeStyles[group.type] || ["#475467", "#eef3f8", group.type.slice(0, 1), group.type];
+        const visiblePicks = group.picks.filter((pick) => {
+          const matchesFilter = activeFilter === "all" || pick.slot === activeFilter;
+          const haystack = `${group.type} ${pick.name} ${pick.moves}`.toLowerCase();
+          return matchesFilter && (!query || haystack.includes(query));
+        });
+
+        if (!visiblePicks.length) {
+          return "";
+        }
+
+        visibleSections += 1;
+
+        return `
+          <section class="type-section" style="--accent:${accent}; --type-soft:${soft}">
+            <div class="type-head">
+              <h2 class="type-title"><span class="type-icon" aria-hidden="true">${icon}</span><span class="type-name-wrap"><span>${group.type}</span><span class="type-en">${englishName}</span></span></h2>
+              <span class="type-count">${visiblePicks.length}개 후보</span>
+            </div>
+            <div class="cards">
+              ${visiblePicks.map(cardTemplate).join("")}
+            </div>
+          </section>
+        `;
+      }).join("");
+
+      emptyState.style.display = visibleSections ? "none" : "block";
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activeFilter = tab.dataset.filter;
+        tabs.forEach((item) => item.setAttribute("aria-pressed", String(item === tab)));
+        render();
+      });
+    });
+
+    searchInput.addEventListener("input", render);
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+    });
+
+    document.addEventListener("error", (event) => {
+      const img = event.target;
+      if (img.tagName !== "IMG") {
+        return;
+      }
+
+      const fallbackUrl = img.dataset.fallback;
+      if (fallbackUrl && img.src !== fallbackUrl) {
+        img.src = fallbackUrl;
+        img.dataset.fallback = "";
+      }
+    }, true);
+
+    render();
+  </script>
+</body>
+</html>
