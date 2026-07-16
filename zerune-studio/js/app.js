@@ -500,6 +500,7 @@
   }
 
   function renderMusic(body) {
+    body.append(makeElement("p", "callout", "ZERUNE 고정 무가사 잠금 · Mureka Instrumental 모드 전용. 가사·노래·대사·허밍·코러스·랩·보컬 찹·의미 없는 음절까지 모든 메인 및 트랙 프롬프트에서 금지합니다."));
     body.append(makeElement("p", "sync-bridge", `Mureka 규칙 · 한 번에 전체 ${state.fields.flagship}분을 요청하지 않고, 메인 사운드 바이블에 현재 막 하나만 붙여 ${generated.trackPlan.length}번 생성합니다.`));
     body.append(renderResultBlock("추천 · MASTER CONSISTENCY PROMPT", generated.masterPrompt, { recommended: true }));
     body.append(makeElement("span", "count-badge", `트랙 구조 ${generated.trackPlan.length}개 ↔ 트랙 프롬프트 ${generated.trackPrompts.length}개`));

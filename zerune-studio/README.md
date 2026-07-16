@@ -46,7 +46,8 @@
 ## Mureka 사용 시 주의
 
 - 이 정적 앱에 API 키를 입력하지 마세요.
-- 생성 프롬프트를 Mureka의 Instrumental 모드에 복사하되, 전체 플레이리스트를 한 번에 요청하지 않고 한 곡씩 생성합니다.
+- 모든 Zerune 작품은 무가사입니다. 엔진이 모든 메인·트랙 프롬프트의 처음과 끝에 강제 무가사 잠금을 고정해 가사·노래·대사·허밍·코러스·랩·보컬 찹·의미 없는 음절을 금지합니다.
+- 생성 프롬프트는 반드시 Mureka의 `Instrumental` 모드에 복사합니다. Song·Lyrics·보컬 생성 모드는 사용하지 않고, 전체 플레이리스트를 한 번에 요청하지 않으며 한 곡씩 생성합니다.
 - 처음에는 텍스트 프롬프트만으로 3개를 비교합니다. 음색은 좋은데 반복 모티프가 흔들릴 때만 3단계의 자체 MIDI를 `Melody ideas`에 넣습니다.
 - [Mureka 공식 파일 업로드 문서](https://platform.mureka.ai/docs/api/operations/post-v1-files-upload.html)는 `melody` 입력에 5–60초 MP3/M4A/MID를 지원하며 MIDI를 권장하고, `reference` 및 `instrumental` 오디오는 정확히 30초 MP3/M4A를 요구합니다.
 - Reference 오디오가 필요하면 자체 MIDI를 렌더링한 뒤 직접 녹음하거나 합성한 공간음만 더합니다. 상업음원, 기존 북한 노래, 애니메이션 OST, 대사, 타인의 연주는 업로드하지 않습니다.
