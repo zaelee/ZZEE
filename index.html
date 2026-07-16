@@ -229,6 +229,13 @@
         background: linear-gradient(135deg, #fffefa 0%, #fff4ee 100%);
       }
 
+      .project--hero {
+        grid-column: 1 / -1;
+        min-height: 170px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+      }
+
       .meta {
         display: flex;
         flex-wrap: wrap;
@@ -278,6 +285,11 @@
           grid-template-columns: 1fr;
         }
 
+        .project--hero {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+
         .stamp {
           width: min(260px, 100%);
         }
@@ -306,6 +318,27 @@
           </div>
         </aside>
       </header>
+
+      <section class="section" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <span>Creative Work</span>
+        </div>
+        <div class="grid">
+          <a class="project featured project--hero" href="./zerune-studio/index.html">
+            <div>
+              <strong>Zerune Studio</strong>
+              <time class="updated-date" datetime="2026-07-16">Updated 2026-07-16</time>
+              <p>콘셉트부터 Mureka 음악·이미지 프롬프트, 전체보기와 YouTube 복붙 입력까지 01–05 흐름으로 연결하는 제작 스튜디오.</p>
+            </div>
+            <div class="meta">
+              <span class="tag">Music</span>
+              <span class="tag">YouTube</span>
+              <span class="tag">Remote</span>
+            </div>
+          </a>
+        </div>
+      </section>
 
       <section class="section" aria-labelledby="information-title">
         <div class="section-head">
@@ -336,32 +369,6 @@
               <span class="tag blue">Blog</span>
               <span class="tag blue">Input</span>
               <span class="tag blue">Local Tool</span>
-            </div>
-          </a>
-
-          <a class="project featured" href="./zerune-studio/index.html">
-            <div>
-              <strong>Zerune Studio</strong>
-              <time class="updated-date" datetime="2026-07-16">Updated 2026-07-16</time>
-              <p>콘셉트부터 Mureka 음악·이미지 프롬프트, 전체보기와 YouTube 복붙 입력까지 01–05 흐름으로 연결하는 제작 스튜디오.</p>
-            </div>
-            <div class="meta">
-              <span class="tag">Music</span>
-              <span class="tag">YouTube</span>
-              <span class="tag">Remote</span>
-            </div>
-          </a>
-
-          <a class="project featured" href="./zerune/index.html">
-            <div>
-              <strong>AI Music Brand Report</strong>
-              <time class="updated-date" datetime="2026-07-15">Updated 2026-07-15</time>
-              <p>AI 생성 음악 유튜브 채널을 장기 브랜드·IP 사업으로 전환하기 위한 시장, 수익, 브랜딩, 제작, 성장 전략 보고서.</p>
-            </div>
-            <div class="meta">
-              <span class="tag blue">Research</span>
-              <span class="tag blue">AI Music</span>
-              <span class="tag blue">Strategy</span>
             </div>
           </a>
 

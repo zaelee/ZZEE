@@ -43,8 +43,11 @@ button { color: inherit; }
 .brand { display: flex; align-items: center; gap: 11px; min-width: 238px; }
 .brand__signal { width: 9px; height: 38px; background: var(--accent); box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 60%, transparent); }
 .brand__eyebrow { margin: 0 0 3px; color: var(--muted); font: 600 9px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.16em; }
+.brand__title-row { display: flex; align-items: center; gap: 9px; }
 .brand h1 { margin: 0; font: 700 19px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: -0.04em; }
 .brand h1 span { font-size: 9px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.brand-report-link { display: inline-flex; min-height: 22px; align-items: center; padding: 0 7px; border: 1px solid var(--line); border-radius: 2px; color: var(--muted); font: 700 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .04em; text-decoration: none; white-space: nowrap; }
+.brand-report-link:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
 .preset-switcher { display: flex; justify-content: center; gap: 7px; min-width: 0; }
 .preset-button,
@@ -190,6 +193,8 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-bottom-color: rgba
 .result-block.is-recommended { border-color: color-mix(in srgb, var(--accent) 55%, transparent); box-shadow: inset 3px 0 0 var(--accent); }
 .result-block__head { min-height: 34px; padding: 7px 8px; display: flex; justify-content: space-between; align-items: center; gap: 8px; border-bottom: 1px solid var(--line); }
 .result-block__head strong { color: var(--node-color); font: 700 9px ui-monospace, monospace; letter-spacing: .08em; }
+.character-count { margin-left: auto; color: var(--output); font: 700 8px ui-monospace, monospace; white-space: nowrap; }
+.character-count.is-over { color: var(--danger); }
 .copy-button { border: 0; background: transparent; color: var(--muted); font-size: 9px; cursor: pointer; padding: 3px; }
 .copy-button:hover { color: var(--node-color); }
 .result-text { margin: 0; padding: 10px; color: #d4dcd0; font-size: 10.5px; line-height: 1.62; white-space: pre-wrap; overflow-wrap: anywhere; }
