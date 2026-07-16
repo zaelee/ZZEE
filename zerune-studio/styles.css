@@ -97,6 +97,8 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-bottom-color: rgba
 .flow-tab.is-active { border-color: var(--accent); background: var(--accent-soft); }
 .flow-tab.is-active span, .flow-tab.is-active strong { color: var(--accent); }
 .flow-tab.is-complete span::after { content: " ✓"; }
+.flow-tab--overview { min-width: 155px; border-style: dashed; }
+.flow-tabs > .flow-tabs__divider { color: color-mix(in srgb, var(--accent) 45%, transparent); }
 
 .stage-summary { min-height: 52px; display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; align-items: center; gap: 18px; padding: 7px 18px; border-top: 1px solid var(--line); }
 .stage-summary div { display: flex; align-items: center; gap: 9px; }
@@ -226,6 +228,28 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-bottom-color: rgba
 .strategy-item { padding: 9px; border-left: 2px solid var(--node-color); background: #0b0e0c; }
 .strategy-item strong { display: block; margin-bottom: 3px; color: var(--node-color); font: 8px ui-monospace, monospace; text-transform: uppercase; }
 .strategy-item span { color: #c1c9bd; font-size: 10px; line-height: 1.45; }
+.source-download { width: 100%; margin-top: 10px; padding: 10px 12px; border: 1px solid var(--accent); border-radius: 2px; background: var(--accent-soft); color: var(--accent); font-weight: 800; cursor: pointer; }
+.source-download:hover { background: var(--accent); color: #0d100a; }
+.official-link { display: inline-block; margin-top: 10px; color: var(--node-color); font-size: 9px; text-decoration: none; }
+.official-link:hover { text-decoration: underline; }
+.official-links { display: flex; flex-wrap: wrap; gap: 7px 14px; }
+.youtube-status { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 13px; }
+.settings-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 13px; }
+
+.overview-actions { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px; border: 1px solid color-mix(in srgb, var(--accent) 52%, transparent); background: var(--accent-soft); }
+.overview-actions p { max-width: 780px; margin: 0; color: #dce6d7; font-size: 11px; line-height: 1.5; }
+.overview-copy-button { flex: 0 0 auto; padding: 10px 14px; border: 1px solid var(--accent); border-radius: 2px; background: var(--accent); color: #0b0e0c; font-size: 10px; font-weight: 800; cursor: pointer; }
+.overview-copy-button:hover { filter: brightness(1.08); }
+.overview-section { margin-top: 16px; padding: 13px; border: 1px solid var(--line); background: rgba(11, 14, 12, .7); }
+.overview-section__head { display: flex; align-items: center; gap: 10px; margin: -13px -13px 13px; padding: 10px 13px; border-bottom: 1px solid var(--line); }
+.overview-section__head span { color: var(--node-color); font: 800 10px ui-monospace, monospace; letter-spacing: .12em; }
+.overview-section__head h3 { margin: 0; font: 700 12px ui-monospace, monospace; }
+.overview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.overview-grid > .result-block { margin-bottom: 0; }
+.overview-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 12px; }
+.overview-prompt-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; clear: both; }
+.overview-prompt-list .track-prompt { margin-bottom: 0; }
+.overview-footnote { margin: 13px 0 0; color: #596157; font: 8px ui-monospace, monospace; text-align: right; }
 
 .timeline { display: grid; gap: 8px; }
 .timeline-item { position: relative; padding: 9px 9px 9px 12px; border: 1px solid var(--line); background: #0b0e0c; }
@@ -276,6 +300,7 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-bottom-color: rgba
   .flow-tabs { min-height: 68px; padding: 7px 10px; gap: 6px; }
   .flow-tabs > i { display: none; }
   .flow-tab { flex-basis: 145px; min-width: 145px; padding: 7px 8px; }
+  .flow-tab--overview { flex-basis: 125px; min-width: 125px; }
   .flow-tab small { font-size: 8px; }
   .stage-summary { grid-template-columns: 1fr auto; gap: 7px; padding: 7px 10px; }
   .stage-summary p { grid-column: 1 / -1; grid-row: 2; }
@@ -285,6 +310,8 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-bottom-color: rgba
   .node--xl { width: 580px; }
   .node--gallery { width: 1120px; }
   .reference-grid { grid-template-columns: repeat(5, 210px); overflow-x: auto; }
+  .settings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-grid, .overview-prompt-list { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
