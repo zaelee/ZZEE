@@ -501,8 +501,8 @@
 
   function renderMusic(body) {
     body.append(makeElement("p", "callout", "ZERUNE 고정 무가사 잠금 · Mureka Instrumental 모드 전용. 가사·노래·대사·허밍·코러스·랩·보컬 찹·의미 없는 음절까지 모든 메인 및 트랙 프롬프트에서 금지합니다."));
-    body.append(makeElement("p", "sync-bridge", `Mureka 규칙 · 한 번에 전체 ${state.fields.flagship}분을 요청하지 않고, 메인 사운드 바이블에 현재 막 하나만 붙여 ${generated.trackPlan.length}번 생성합니다.`));
-    body.append(renderResultBlock("추천 · MASTER CONSISTENCY PROMPT", generated.masterPrompt, { recommended: true }));
+    body.append(makeElement("p", "sync-bridge", `Mureka Style 제한 · 마스터 + 현재 트랙 구조를 합친 복사본은 항상 ${generated.murekaStyleLimit.toLocaleString("ko-KR")}자 이내입니다. 한 번에 전체 ${state.fields.flagship}분을 요청하지 않고 ${generated.trackPlan.length}번 나눠 생성합니다.`));
+    body.append(renderResultBlock("추천 · MASTER CONSISTENCY PROMPT", generated.masterPrompt, { recommended: true, characterLimit: generated.murekaStyleLimit }));
     body.append(makeElement("span", "count-badge", `트랙 구조 ${generated.trackPlan.length}개 ↔ 트랙 프롬프트 ${generated.trackPrompts.length}개`));
     generated.trackPrompts.forEach((track) => {
       const details = makeElement("details", "track-prompt");
@@ -514,7 +514,7 @@
       );
       const content = makeElement("div", "track-prompt__body");
       content.append(makeElement("p", "track-prompt__meta", `${track.phase} · ENERGY ${track.energy}/100`));
-      const result = renderResultBlock("MAIN + TRACK STRUCTURE", track.prompt);
+      const result = renderResultBlock("MAIN + TRACK STRUCTURE", track.prompt, { characterLimit: generated.murekaStyleLimit });
       content.append(result);
       details.append(summary, content);
       body.append(details);
@@ -716,7 +716,7 @@
     const prompts = makeOverviewSection("04", "프롬프트");
     const promptGrid = makeElement("div", "overview-grid");
     promptGrid.append(
-      renderResultBlock("추천 · MASTER MUSIC", generated.masterPrompt, { recommended: true }),
+      renderResultBlock("추천 · MASTER MUSIC", generated.masterPrompt, { recommended: true, characterLimit: generated.murekaStyleLimit }),
       renderResultBlock(`추천 · ${recommendedImage.label}`, recommendedImage.prompt, { recommended: true }),
     );
     prompts.append(promptGrid, makeElement("span", "count-badge", `구조 ${generated.trackPlan.length}개 ↔ 음악 프롬프트 ${generated.trackPrompts.length}개`));
@@ -730,7 +730,7 @@
         makeElement("small", "", `${track.start}–${track.end}`),
       );
       const content = makeElement("div", "track-prompt__body");
-      content.append(renderResultBlock("MAIN + TRACK STRUCTURE", track.prompt));
+      content.append(renderResultBlock("MAIN + TRACK STRUCTURE", track.prompt, { characterLimit: generated.murekaStyleLimit }));
       details.append(summaryElement, content);
       promptList.append(details);
     });
@@ -778,7 +778,13 @@
     const button = makeElement("button", "copy-button", "복사");
     button.type = "button";
     button.addEventListener("click", () => copyText(text));
-    head.append(title, button);
+    head.append(title);
+    if (options.characterLimit) {
+      const count = makeElement("span", "character-count", `${text.length.toLocaleString("ko-KR")} / ${options.characterLimit.toLocaleString("ko-KR")}자`);
+      count.classList.toggle("is-over", text.length > options.characterLimit);
+      head.append(count);
+    }
+    head.append(button);
     block.append(head, makeElement("p", "result-text", text));
     return block;
   }

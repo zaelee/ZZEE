@@ -8,12 +8,50 @@
 
   const compact = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
+  const MUREKA_STYLE_LIMIT = 1000;
+  const MUREKA_MASTER_LIMIT = 720;
+
+  const clip = (value, maxLength) => {
+    const text = compact(value);
+    if (text.length <= maxLength) return text;
+    if (maxLength <= 1) return text.slice(0, maxLength);
+    return `${text.slice(0, maxLength - 1).replace(/[\s,;:.]+$/g, "")}…`;
+  };
+
+  const clipMiddle = (value, maxLength) => {
+    const text = compact(value);
+    if (text.length <= maxLength) return text;
+    if (maxLength <= 1) return text.slice(0, maxLength);
+    const startLength = Math.ceil((maxLength - 1) / 2);
+    const endLength = maxLength - startLength - 1;
+    return `${text.slice(0, startLength).replace(/[\s,;:.]+$/g, "")}…${text.slice(-endLength).replace(/^[\s,;:.]+/g, "")}`;
+  };
+
+  const composeWithinLimit = ({ start, parts, end, limit, separator }) => {
+    const opening = compact(start);
+    const closing = compact(end);
+    const suffix = closing ? `${separator}${closing}` : "";
+    let output = opening;
+
+    for (const rawPart of parts) {
+      const part = compact(rawPart);
+      if (!part) continue;
+      const joiner = output ? separator : "";
+      const available = limit - output.length - joiner.length - suffix.length;
+      if (available <= 0) break;
+      output += `${joiner}${clip(part, available)}`;
+      if (part.length > available) break;
+    }
+
+    return `${output}${suffix}`;
+  };
+
   const INSTRUMENTAL_LOCK = compact(
-    "NON-NEGOTIABLE INSTRUMENTAL-ONLY LOCK: use Mureka Instrumental mode only; generate zero lyrics and zero human voice; no vocals; no singing; no lead or backing voice; no choir; no chant; no rap; no spoken word or dialogue; no whispering; no humming; no breathing; no screams, shouts, or counting; no vocal chops or voice samples; no syllables, phonemes, or non-lexical vocalizations such as ah, oh, ooh, la, or na; never introduce a singer or any voice at any point; express every melodic line with instruments only",
+    "NON-NEGOTIABLE INSTRUMENTAL ONLY: Mureka Instrumental mode. Zero lyrics, zero human voice. No vocals; no singing; no choir; no chant; no rap; no spoken word or dialogue; no whispering; no humming; no vocal chops or voice samples; no syllables, phonemes, or non-lexical vocalizations (ah/oh/ooh/la/na). Every melody uses instruments",
   );
 
   const INSTRUMENTAL_RECHECK = compact(
-    "FINAL ENFORCEMENT: remain 100 percent instrumental from the first second to the last; if any vocal element would appear, remove it and replace it with an instrumental timbre",
+    "FINAL ENFORCEMENT: 100 percent instrumental; reject and replace every voice",
   );
 
   const asciiBytes = (value) => Array.from(String(value), (character) => character.charCodeAt(0) & 0x7f);
@@ -141,43 +179,47 @@
   };
 
   const buildMasterPrompt = (preset, fields, trackCount) => {
-    const variant = preset.music.variants[preset.recommendedMusicVariant || 0];
-    const consistentTrackCount = trackCount || Math.max(1, Math.round(safeNumber(fields.chapters, preset.tracks.length)));
-    return [
-      INSTRUMENTAL_LOCK,
-      "Mureka reusable sound bible",
-      fields.genres,
-      `${fields.bpm} BPM`,
-      fields.key,
-      fields.meter,
-      fields.instruments,
-      fields.soundBalance,
-      fields.texture,
-      `core scene: ${preset.music.sceneAnchor || fields.concept}`,
-      `emotional identity: ${fields.emotion}`,
-      `narrative restraint: ${preset.music.promptRestraint || fields.corePrinciple}`,
-      `keep the same sound palette, mix space, recurring motif and tonal identity across ${consistentTrackCount} separate cues; generate only one cue at a time`,
-      "slow-burn tension, restrained peak, clean loopable tail for later extension and crossfade",
-      `recommended direction: ${variant.direction}`,
-      `avoid: ${fields.musicExclusions}`,
-      INSTRUMENTAL_RECHECK,
-    ].map(compact).filter(Boolean).join(", ");
+    const parts = [
+      `style: ${clip(fields.genres, 38)}; ${clip(fields.bpm, 8)} BPM`,
+    ];
+
+    if (preset.music.sceneAnchor) {
+      parts.push(
+        `scene: ${clip(preset.music.sceneAnchor, 60)}`,
+        `rule: ${clip(preset.music.promptRestraint, 60)}`,
+      );
+    } else {
+      parts.push(
+        `tone: ${clip(fields.key, 28)}`,
+        `mix: ${clipMiddle(fields.soundBalance, 90)}`,
+      );
+    }
+
+    parts.push(`avoid: ${clip(fields.musicExclusions, 90)}`);
+
+    return composeWithinLimit({
+      start: INSTRUMENTAL_LOCK,
+      parts,
+      end: INSTRUMENTAL_RECHECK,
+      limit: MUREKA_MASTER_LIMIT,
+      separator: ", ",
+    });
   };
 
   const buildTrackPrompts = (masterPrompt, trackPlan, fields = {}) => trackPlan.map((track) => ({
     ...track,
-    prompt: [
-      masterPrompt,
-      `Playlist act ${String(track.index).padStart(2, "0")} of ${String(trackPlan.length).padStart(2, "0")}`,
-      `planned edit slot ${track.start}–${track.end}; generate only this act as one self-contained cue, not the full ${fields.flagship || "30"}-minute playlist`,
-      `target about ${track.durationMinutes.toFixed(1)} minutes after extension and editing`,
-      `${track.phase} phase`,
-      `energy ${track.energy} out of 100`,
-      track.focus,
-      `leave a clean head and tail for ${fields.crossfade || "6–12초"} crossfade`,
-      "preserve the master motif and mix identity; change only density, foreground instrument and narrative function",
-      INSTRUMENTAL_RECHECK,
-    ].map(compact).filter(Boolean).join(". ") + ".",
+    prompt: composeWithinLimit({
+      start: masterPrompt,
+      parts: [
+        `Playlist act ${String(track.index).padStart(2, "0")} of ${String(trackPlan.length).padStart(2, "0")}`,
+        `generate only this act, not the full ${clip(fields.flagship || "30", 8)}-minute playlist`,
+        `cue: ${clip(track.phase, 18)}; E${track.energy}; ${clip(track.focus, 45)}`,
+        `same motif/mix; ${clip(fields.crossfade || "6–12초", 12)} clean head/tail`,
+      ],
+      end: INSTRUMENTAL_RECHECK,
+      limit: MUREKA_STYLE_LIMIT,
+      separator: ". ",
+    }),
   }));
 
   const buildReferencePlan = (preset) => {
@@ -522,6 +564,7 @@
     const masterPrompt = buildMasterPrompt(preset, fields, trackPlan.length);
     const result = {
       instrumentalLock: INSTRUMENTAL_LOCK,
+      murekaStyleLimit: MUREKA_STYLE_LIMIT,
       masterPrompt,
       trackPlan,
       trackPrompts: buildTrackPrompts(masterPrompt, trackPlan, fields),
@@ -540,6 +583,7 @@
 
   global.ImpossibleSpacesEngine = {
     instrumentalLock: INSTRUMENTAL_LOCK,
+    murekaStyleLimit: MUREKA_STYLE_LIMIT,
     buildDurationStrategy,
     buildImagePrompt,
     buildImagePrompts,
