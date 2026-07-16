@@ -8,6 +8,14 @@
 
   const compact = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
+  const INSTRUMENTAL_LOCK = compact(
+    "NON-NEGOTIABLE INSTRUMENTAL-ONLY LOCK: use Mureka Instrumental mode only; generate zero lyrics and zero human voice; no vocals; no singing; no lead or backing voice; no choir; no chant; no rap; no spoken word or dialogue; no whispering; no humming; no breathing; no screams, shouts, or counting; no vocal chops or voice samples; no syllables, phonemes, or non-lexical vocalizations such as ah, oh, ooh, la, or na; never introduce a singer or any voice at any point; express every melodic line with instruments only",
+  );
+
+  const INSTRUMENTAL_RECHECK = compact(
+    "FINAL ENFORCEMENT: remain 100 percent instrumental from the first second to the last; if any vocal element would appear, remove it and replace it with an instrumental timbre",
+  );
+
   const asciiBytes = (value) => Array.from(String(value), (character) => character.charCodeAt(0) & 0x7f);
 
   const uint32Bytes = (value) => [
@@ -136,7 +144,7 @@
     const variant = preset.music.variants[preset.recommendedMusicVariant || 0];
     const consistentTrackCount = trackCount || Math.max(1, Math.round(safeNumber(fields.chapters, preset.tracks.length)));
     return [
-      "Instrumental only; no vocals, choir, spoken word or literal dialogue",
+      INSTRUMENTAL_LOCK,
       "Mureka reusable sound bible",
       fields.genres,
       `${fields.bpm} BPM`,
@@ -152,6 +160,7 @@
       "slow-burn tension, restrained peak, clean loopable tail for later extension and crossfade",
       `recommended direction: ${variant.direction}`,
       `avoid: ${fields.musicExclusions}`,
+      INSTRUMENTAL_RECHECK,
     ].map(compact).filter(Boolean).join(", ");
   };
 
@@ -167,6 +176,7 @@
       track.focus,
       `leave a clean head and tail for ${fields.crossfade || "6–12초"} crossfade`,
       "preserve the master motif and mix identity; change only density, foreground instrument and narrative function",
+      INSTRUMENTAL_RECHECK,
     ].map(compact).filter(Boolean).join(". ") + ".",
   }));
 
@@ -511,6 +521,7 @@
     const trackPlan = buildTrackPlan(preset, fields);
     const masterPrompt = buildMasterPrompt(preset, fields, trackPlan.length);
     const result = {
+      instrumentalLock: INSTRUMENTAL_LOCK,
       masterPrompt,
       trackPlan,
       trackPrompts: buildTrackPrompts(masterPrompt, trackPlan, fields),
@@ -528,6 +539,7 @@
   };
 
   global.ImpossibleSpacesEngine = {
+    instrumentalLock: INSTRUMENTAL_LOCK,
     buildDurationStrategy,
     buildImagePrompt,
     buildImagePrompts,
