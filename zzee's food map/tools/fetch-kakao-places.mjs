@@ -5,8 +5,12 @@ import { dateInKorea, requireProviderTermsAcknowledgement } from "./lib/place-da
 
 requireProviderTermsAcknowledgement("Kakao Map");
 
+const boryeongOnly = process.argv.includes("--boryeong");
 const dataPath = new URL("../js/data.js", import.meta.url);
-const outputPath = new URL("../data/kakao-place-results.json", import.meta.url);
+const outputPath = new URL(
+  boryeongOnly ? "../data/boryeong-kakao-place-results.json" : "../data/kakao-place-results.json",
+  import.meta.url,
+);
 const source = fs.readFileSync(dataPath, "utf8");
 
 const context = {};
@@ -18,12 +22,17 @@ globalThis.__verifiedPlaceData = verifiedPlaceData;`,
   context,
 );
 
-const restaurants = context.__rawRestaurants.map(([name, category, , , signatureMenu]) => ({
-  name,
-  category,
-  signatureMenu,
-  verifiedPlace: context.__verifiedPlaceData[name] ?? null,
-}));
+const restaurants = context.__rawRestaurants
+  .map(([name, category, , , signatureMenu]) => ({
+    name,
+    category,
+    signatureMenu,
+    verifiedPlace: context.__verifiedPlaceData[name] ?? null,
+  }))
+  .filter(
+    (restaurant) =>
+      !boryeongOnly || restaurant.verifiedPlace?.address?.includes("보령시"),
+  );
 
 const checkedAt = dateInKorea();
 const requestDelayMs = Math.max(700, Number(process.env.PLACE_FETCH_DELAY_MS) || 1000);
@@ -83,7 +92,10 @@ const seongsuRestaurantNames = new Set([
   "어니언",
 ]);
 
-const areaHint = (restaurant) => (seongsuRestaurantNames.has(restaurant.name) ? "성수" : "건대");
+const areaHint = (restaurant) => {
+  if (restaurant.verifiedPlace?.address?.includes("보령시")) return "보령";
+  return seongsuRestaurantNames.has(restaurant.name) ? "성수" : "건대";
+};
 
 const headers = {
   accept: "application/json, text/plain, */*",

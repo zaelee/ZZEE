@@ -70,6 +70,10 @@ const categoryMeta = (category) => CATEGORY_META[category] || CATEGORY_META["한
 const isLocalRestaurant = (restaurant) => restaurant?.id?.startsWith("local-");
 const ratingLabel = (restaurant) =>
   restaurant.ratingLabel || (restaurant.ratingSource === "platformAverage" ? "평균별점" : "재리별점");
+const highRatingBadge = (restaurant) =>
+  shouldEmphasizeRating(restaurant)
+    ? `<span class="high-rating-badge" aria-label="평균 별점 4.5점 초과">4.5+</span>`
+    : "";
 
 const starText = (rating) => {
   if (!hasJaeRating(rating)) return "?";
@@ -238,6 +242,7 @@ const renderCards = () => {
             <span class="rating-cluster">
               <span class="stars ${emphasizeRating ? "is-high-rating" : ""}">${starHtml(restaurant.rating)}</span>
               ${hasJaeRating(restaurant.rating) ? `<span class="rating-source">${restaurant.rating.toFixed(1)} (${ratingLabel(restaurant)})</span>` : ""}
+              ${highRatingBadge(restaurant)}
             </span>
             <span class="category-pill">${restaurant.area} · ${restaurant.category}</span>
           </div>
@@ -281,7 +286,7 @@ const rememberRecent = (id) => {
 
 const platformRatingText = (platform) => {
   const rating = platformRating(platform);
-  return rating ? `평점 ${rating.toFixed(1)}` : "평점 없음";
+  return rating ? `평점 ${rating.toFixed(1)}` : platform?.note || "평점 없음";
 };
 
 const checkedText = (checkedAt) => (checkedAt ? `확인일 ${checkedAt}` : "확인 전");
@@ -327,7 +332,7 @@ const openModal = (restaurant) => {
         </div>
         <div class="modal-actions">
           <button class="text-button modal-edit" type="button" data-edit="${restaurant.id}">수정</button>
-          <span class="modal-rating ${shouldEmphasizeRating(restaurant) ? "is-high-rating" : ""}">${ratingLabel(restaurant)} ${starHtml(restaurant.rating)} ${hasJaeRating(restaurant.rating) ? restaurant.rating.toFixed(1) : "검증전"}</span>
+          <span class="modal-rating ${shouldEmphasizeRating(restaurant) ? "is-high-rating" : ""}">${ratingLabel(restaurant)} ${starHtml(restaurant.rating)} ${hasJaeRating(restaurant.rating) ? restaurant.rating.toFixed(1) : "검증전"} ${highRatingBadge(restaurant)}</span>
         </div>
       </div>
       <p class="modal-comment">${restaurant.jaeComment}</p>
@@ -516,6 +521,7 @@ const bindEvents = () => {
 
 const inferArea = (name, address, comment) => {
   const text = `${name} ${address} ${comment}`;
+  if (/보령|대천|원산도/.test(text)) return "보령";
   if (/성수|성동구|서울숲|뚝섬|송정동/.test(text)) return "성수";
   if (/건대|광진구|화양|자양|능동로/.test(text)) return "건대";
   return "기타";

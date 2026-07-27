@@ -4,7 +4,11 @@ import vm from "node:vm";
 import { assessPlaceMatch, latestCheckedAt } from "./lib/place-data-utils.mjs";
 
 const dataPath = new URL("../js/data.js", import.meta.url);
-const naverResultsPath = new URL("../data/naver-place-results.json", import.meta.url);
+const boryeongOnly = process.argv.includes("--boryeong");
+const naverResultsPath = new URL(
+  boryeongOnly ? "../data/boryeong-naver-place-results.json" : "../data/naver-place-results.json",
+  import.meta.url,
+);
 const source = fs.readFileSync(dataPath, "utf8");
 const results = JSON.parse(fs.readFileSync(naverResultsPath, "utf8"));
 const aliases = JSON.parse(
@@ -18,7 +22,8 @@ vm.runInContext(
   `${source}
 globalThis.__verifiedPlaceData = verifiedPlaceData;
 globalThis.__kakaoPlaceData = typeof kakaoPlaceData === "undefined" ? {} : kakaoPlaceData;
-globalThis.__seongsuRestaurantNames = typeof seongsuRestaurantNames === "undefined" ? new Set() : seongsuRestaurantNames;`,
+globalThis.__seongsuRestaurantNames = typeof seongsuRestaurantNames === "undefined" ? new Set() : seongsuRestaurantNames;
+globalThis.__naverPlaceData = typeof naverPlaceData === "undefined" ? {} : naverPlaceData;`,
   context,
 );
 
@@ -31,6 +36,7 @@ const assess = (result) => {
   const reference =
     context.__kakaoPlaceData[result.requestedName] ?? context.__verifiedPlaceData[result.requestedName] ?? null;
   const isSeongsu = context.__seongsuRestaurantNames.has(result.requestedName);
+  const isBoryeong = context.__verifiedPlaceData[result.requestedName]?.address?.includes("보령시");
   return assessPlaceMatch({
     requestedName: result.requestedName,
     matchedName: result.name,
@@ -40,7 +46,7 @@ const assess = (result) => {
     longitude: result.longitude,
     reference,
     aliases: aliases[result.requestedName] ?? [],
-    allowedDistricts: isSeongsu ? ["성동구"] : ["광진구", "성동구"],
+    allowedDistricts: isBoryeong ? ["보령시"] : isSeongsu ? ["성동구"] : ["광진구", "성동구"],
   });
 };
 
@@ -55,7 +61,7 @@ const skipped = assessedResults
     reasons: assessment.reasons,
   }));
 
-const compactPlaceData = Object.fromEntries(
+const acceptedPlaceData = Object.fromEntries(
   acceptedResults.map(({ result, assessment }) => [
     result.requestedName,
     {
@@ -73,21 +79,27 @@ const compactPlaceData = Object.fromEntries(
     },
   ]),
 );
+const compactPlaceData = boryeongOnly
+  ? { ...context.__naverPlaceData, ...acceptedPlaceData }
+  : acceptedPlaceData;
 
 const naverDataBlock = `const naverCheckedAt = "${checkedAt}";
 const naverPlaceData = ${JSON.stringify(compactPlaceData, null, 2)};
 `;
-const nextSource = source.replace(
-  /const naverCheckedAt = ".*?";\nconst naverPlaceData = [\s\S]*?;\n\nconst googleCheckedAt/,
-  `${naverDataBlock}\nconst googleCheckedAt`,
-);
-
-if (nextSource === source) throw new Error("Could not locate naverPlaceData block.");
+const naverDataPattern =
+  /const naverCheckedAt = ".*?";\r?\nconst naverPlaceData = [\s\S]*?;\r?\n\r?\nconst googleCheckedAt/;
+if (!naverDataPattern.test(source)) throw new Error("Could not locate naverPlaceData block.");
+const nextSource = source.replace(naverDataPattern, `${naverDataBlock}\nconst googleCheckedAt`);
 
 if (shouldWrite) {
   fs.writeFileSync(dataPath, nextSource);
   fs.writeFileSync(
-    new URL("../data/naver-skipped-results.json", import.meta.url),
+    new URL(
+      boryeongOnly
+        ? "../data/boryeong-naver-skipped-results.json"
+        : "../data/naver-skipped-results.json",
+      import.meta.url,
+    ),
     `${JSON.stringify(skipped, null, 2)}\n`,
   );
 }
@@ -96,8 +108,9 @@ console.log(
   JSON.stringify(
     {
       mode: shouldWrite ? "write" : "preview",
+      scope: boryeongOnly ? "boryeong" : "all",
       checkedAt,
-      applied: Object.keys(compactPlaceData).length,
+      applied: Object.keys(acceptedPlaceData).length,
       skipped: skipped.length,
       skippedResults: skipped,
       next: shouldWrite ? "js/data.js 갱신 완료" : "검토 후 같은 명령에 --write를 추가하세요.",

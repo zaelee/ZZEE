@@ -1,0 +1,19 @@
+[
+  {
+    "name": "고구려 수제 본 갈비",
+    "matchedName": "고구려수제본갈비",
+    "address": "경기 화성시 효행구 매송면 푸른들판로 1861-2",
+    "reasons": [
+      "허용 지역 밖 주소",
+      "기준 위치에서 104.88km"
+    ]
+  },
+  {
+    "name": "찬찬찬 해장국",
+    "matchedName": null,
+    "address": null,
+    "reasons": [
+      "장소 매칭 실패"
+    ]
+  }
+]

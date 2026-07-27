@@ -1,0 +1,771 @@
+[
+  {
+    "requestedName": "피자파티",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "보령 피자파티",
+    "score": 293,
+    "kakaoPlaceId": "10863094",
+    "matchedName": "피자파티",
+    "category": "피자",
+    "address": "충남 보령시 대흥로 44 2층",
+    "lotAddress": "대천동 328-6",
+    "latitude": 36.349729833515966,
+    "longitude": 126.59398036930263,
+    "kakaoMapLink": "https://place.map.kakao.com/10863094",
+    "rating": 4.3,
+    "ratingCount": 32,
+    "reviewCount": 301,
+    "menuItems": [
+      {
+        "name": "피자돈가스",
+        "price": 11500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      },
+      {
+        "name": "매운피자돈가스",
+        "price": 12500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      },
+      {
+        "name": "김치치즈돈가스",
+        "price": 12500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-10 00:16:54",
+    "priceRange": "11,500-12,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_102749_9140512_20240227021352_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/0cf4a6dadc0c810252c20f2923433ed3e1d061c1?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "오는정 손만두",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "오는정 손만두 충청남도 보령시 큰오랏2길 55",
+    "score": 258,
+    "kakaoPlaceId": "667610392",
+    "matchedName": "오는정손만두",
+    "category": "한식",
+    "address": "충남 보령시 큰오랏2길 55 1층",
+    "lotAddress": "동대동 1386",
+    "latitude": 36.35057113216906,
+    "longitude": 126.60734444931087,
+    "kakaoMapLink": "https://place.map.kakao.com/667610392",
+    "rating": 5,
+    "ratingCount": 7,
+    "reviewCount": 9,
+    "menuItems": [
+      {
+        "name": "버섯만두전골 (소)",
+        "price": 29000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 23:43:53"
+      },
+      {
+        "name": "칼만두국",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 23:39:36"
+      },
+      {
+        "name": "만두국",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 13:22:25"
+      }
+    ],
+    "menuUpdatedAt": "2026-07-20 17:38:50",
+    "priceRange": "10,000-29,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_105191_9140531_20240228052852_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/7ea80b579f6dd76fad61ea042859b67741608294?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "제일해물칼국수",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "제일해물칼국수 충청남도 보령시 대해로 46",
+    "score": 293,
+    "kakaoPlaceId": "1158090728",
+    "matchedName": "제일해물칼국수",
+    "category": "칼국수",
+    "address": "충남 보령시 대해로 46 1층",
+    "lotAddress": "궁촌동 25-6",
+    "latitude": 36.343755178823315,
+    "longitude": 126.59455053404234,
+    "kakaoMapLink": "https://place.map.kakao.com/1158090728",
+    "rating": 3.5,
+    "ratingCount": 33,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "해물칼국수",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-01 19:13:16"
+      },
+      {
+        "name": "왕만두",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-31 11:42:06"
+      }
+    ],
+    "menuUpdatedAt": "2024-10-01 19:13:16",
+    "priceRange": "7,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_101846_9140493_20240226032038_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/b2cff2c6a346f3faa716f322d9d7cc7a6db971b4?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "성지 보령본점",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "성지 보령본점 충청남도 보령시 동현로 88",
+    "score": 293,
+    "kakaoPlaceId": "46833190",
+    "matchedName": "성지 보령본점",
+    "category": "중국요리",
+    "address": "충남 보령시 동현로 88 1층",
+    "lotAddress": "동대동 380-3",
+    "latitude": 36.34718355042364,
+    "longitude": 126.61535990372946,
+    "kakaoMapLink": "https://place.map.kakao.com/46833190",
+    "rating": 4.8,
+    "ratingCount": 8,
+    "reviewCount": 17,
+    "menuItems": [
+      {
+        "name": "소고기짬뽕(2인이상)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:10:27"
+      },
+      {
+        "name": "유림만두(8개)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:28:42"
+      },
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 09:20:54"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-22 16:37:43",
+    "priceRange": "6,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_103776_9140531_20240228030037_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c131633399c02eb46b9509fcec6f96e5d9683f3b?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "조양 칼국수",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "조양 칼국수 충청남도 보령시 보령남로 125-7",
+    "score": 93,
+    "kakaoPlaceId": "372550342",
+    "matchedName": "조양칼국수 보령점",
+    "category": "칼국수",
+    "address": "충남 보령시 보령남로 125-7 1층",
+    "lotAddress": "명천동 592-5",
+    "latitude": 36.33439083520237,
+    "longitude": 126.60117943725774,
+    "kakaoMapLink": "https://place.map.kakao.com/372550342",
+    "rating": 1.9,
+    "ratingCount": 15,
+    "reviewCount": 133,
+    "menuItems": [
+      {
+        "name": "물총칼국수(보리밥)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 10:50:03"
+      },
+      {
+        "name": "비빔국수와 물총칼국수(보리밥)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 10:50:03"
+      },
+      {
+        "name": "콩국수 (여름메뉴)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-06 12:08:01"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-06 12:08:01",
+    "priceRange": "10,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_104055_9140512_20240227034524_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d5fe46b5129a1355720d0954e9f8f77cc5dc4597?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "김가네사골수제비",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "김가네사골수제비 충청남도 보령시 석서1길 57",
+    "score": 258,
+    "kakaoPlaceId": "9732813",
+    "matchedName": "김가네사골수제비",
+    "category": "수제비",
+    "address": "충남 보령시 석서1길 57",
+    "lotAddress": "신흑동 760-1",
+    "latitude": 36.32048503958234,
+    "longitude": 126.51830882876926,
+    "kakaoMapLink": "https://place.map.kakao.com/9732813",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 265,
+    "menuItems": [
+      {
+        "name": "사골수제비",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      },
+      {
+        "name": "김치수제비",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      },
+      {
+        "name": "도가니수제비",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-21 01:12:02",
+    "priceRange": "10,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103060_9140493_20240226035817_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/BD73EFCEF0054B279A65FD31FB69ED9F"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "키츠네야",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "키츠네야 충청남도 보령시 작은오랏5길 31 1층",
+    "score": 258,
+    "kakaoPlaceId": "689962522",
+    "matchedName": "키츠네야",
+    "category": "일식",
+    "address": "충남 보령시 작은오랏5길 31 1층",
+    "lotAddress": "동대동 1784",
+    "latitude": 36.3462879225107,
+    "longitude": 126.60490629521233,
+    "kakaoMapLink": "https://place.map.kakao.com/689962522",
+    "rating": 4,
+    "ratingCount": 16,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "후토마끼",
+        "price": 23000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-11 23:30:17"
+      },
+      {
+        "name": "카츠네스시(초밥12p)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-08 10:22:39"
+      },
+      {
+        "name": "초밥8p+메밀소바(점심특선)",
+        "price": 17000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-11 12:45:45"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-09 11:32:23",
+    "priceRange": "17,000-23,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140543/2_100555_9140543_20240228232612_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/939b215bb80155d5c1f44cfae05ac840c5c3faa4?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "고구려 수제 본 갈비",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "고구려 수제 본 갈비",
+    "score": 258,
+    "kakaoPlaceId": "1978644068",
+    "matchedName": "고구려수제본갈비",
+    "category": "한식",
+    "address": "경기 화성시 효행구 매송면 푸른들판로 1861-2",
+    "lotAddress": "매송면 야목리 376-2",
+    "latitude": 37.26693945503273,
+    "longitude": 126.87898023143424,
+    "kakaoMapLink": "https://place.map.kakao.com/1978644068",
+    "rating": 5,
+    "ratingCount": 2,
+    "reviewCount": 2,
+    "menuItems": [
+      {
+        "name": "김치찌개",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-12-11 00:12:35"
+      },
+      {
+        "name": "차돌된장찌개",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-12-11 00:12:35"
+      },
+      {
+        "name": "제육볶음",
+        "price": null,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-26 04:38:21"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-25 11:34:00",
+    "priceRange": null,
+    "priceSymbol": null,
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2025/05/9147724/2_101220_9147724_20250515032814_cube/right_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA0MjJfMjE2/MDAxNzc2ODIxNzAyODQ2.du7-SdtX5uT20XpaknpJlXhQACdrpE6QRdojoonIXK4g.SAtemkkiieH9namncDcldWIGZ10E1i7fwo9-mRUCbakg.JPEG/1776518892567.jpg?type=w773"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "조개까는남자",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "보령 조개까는남자",
+    "score": 258,
+    "kakaoPlaceId": "18760003",
+    "matchedName": "조개까는남자",
+    "category": "조개",
+    "address": "충남 보령시 해수욕장4길 16 1층",
+    "lotAddress": "신흑동 1982",
+    "latitude": 36.30586061812669,
+    "longitude": 126.51649265115816,
+    "kakaoMapLink": "https://place.map.kakao.com/18760003",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 2094,
+    "menuItems": [
+      {
+        "name": "우럭매운탕 (소)",
+        "price": 50000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 23:37:57"
+      },
+      {
+        "name": "우럭매운탕 (중)",
+        "price": 70000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-18 00:14:52"
+      },
+      {
+        "name": "우럭매운탕 (대)",
+        "price": 90000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 23:52:55"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-18 00:14:52",
+    "priceRange": "50,000-90,000원",
+    "priceSymbol": "₩₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103509_9140493_20240226042226_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA3MjZfMTQ5/MDAxNzg1MDU5NTgxMDc0.XAKXoXX1WhbPlZ0uFis8F2d8hN3DI1YkHd72DaJ6XJ4g.0dvFJyz7CPbzekjV0mPMwcRK5VvhluPZnN26JBSjuKAg.JPEG/SE-6c5142e8-0176-499d-bc60-3ad09ba34437.jpg?type=w966"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "윤가네 해물탕",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "보령 윤가네 해물탕",
+    "score": 293,
+    "kakaoPlaceId": "10672059",
+    "matchedName": "윤가네해물탕",
+    "category": "매운탕,해물탕",
+    "address": "충남 보령시 대해로 28",
+    "lotAddress": "궁촌동 7-14",
+    "latitude": 36.34433451529336,
+    "longitude": 126.59637886179881,
+    "kakaoMapLink": "https://place.map.kakao.com/10672059",
+    "rating": 2.6,
+    "ratingCount": 13,
+    "reviewCount": 11,
+    "menuItems": [
+      {
+        "name": "해물찜(대)",
+        "price": 70000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 04:14:02"
+      },
+      {
+        "name": "해물탕(대)",
+        "price": 65000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-04 22:40:19"
+      },
+      {
+        "name": "해물탕(중)",
+        "price": 55000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-04 22:41:19"
+      }
+    ],
+    "menuUpdatedAt": "2025-10-21 00:10:43",
+    "priceRange": "55,000-70,000원",
+    "priceSymbol": "₩₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_101828_9140493_20240226032026_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/5a05f1f245fe3e1d22fd5aa0325c6f018cc6a5a4?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "찬찬찬 해장국",
+    "matched": false,
+    "query": "보령 찬찬찬 해장국",
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "대포식당",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "대포식당 충청남도 보령시 작은오랏7길 36 1층",
+    "score": 258,
+    "kakaoPlaceId": "27235880",
+    "matchedName": "대포식당",
+    "category": "육류,고기",
+    "address": "충남 보령시 작은오랏7길 36",
+    "lotAddress": "동대동 1876",
+    "latitude": 36.34500503023266,
+    "longitude": 126.60393249288815,
+    "kakaoMapLink": "https://place.map.kakao.com/27235880",
+    "rating": 4.4,
+    "ratingCount": 7,
+    "reviewCount": 28,
+    "menuItems": [
+      {
+        "name": "통삼겹살(180g)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 23:30:02"
+      },
+      {
+        "name": "껍데기",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 22:38:19"
+      },
+      {
+        "name": "통목살(180g)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 23:45:46"
+      }
+    ],
+    "menuUpdatedAt": "2026-07-13 23:45:46",
+    "priceRange": "13,000-16,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140543/2_100824_9140543_20240228233943_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/f9855cbe765c89726844afee65ae109c504d5a7c?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "바이더오",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "바이더오 충청남도 보령시 오천면 원산도5길 89-23",
+    "score": 250,
+    "kakaoPlaceId": "1197283635",
+    "matchedName": "바이더오",
+    "category": "디저트카페",
+    "address": "충남 보령시 오천면 원산도5길 89-23 1-2층",
+    "lotAddress": "오천면 원산도리 1731",
+    "latitude": 36.38132551098656,
+    "longitude": 126.39696942200966,
+    "kakaoMapLink": "https://place.map.kakao.com/1197283635",
+    "rating": 4.1,
+    "ratingCount": 184,
+    "reviewCount": 512,
+    "menuItems": [
+      {
+        "name": "브라운치즈 아인슈페너 (ICE)",
+        "price": 8500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-02 16:39:31"
+      },
+      {
+        "name": "선셋에이드 (ICE)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-02 16:39:31"
+      },
+      {
+        "name": "아메리카노",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 11:43:57"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-03 23:42:07",
+    "priceRange": "6,500-8,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140592/2_102094_9140592_20240227003955_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/bda0bc4f4f7f2c4908d53038da30a283276777a4?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "플라르",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "플라르 충청남도 보령시 오천면 원산도2길 331-34",
+    "score": 170,
+    "kakaoPlaceId": "991012582",
+    "matchedName": "플라르베이커리카페",
+    "category": "제과,베이커리",
+    "address": "충남 보령시 오천면 원산도2길 331-34",
+    "lotAddress": "오천면 원산도리 544",
+    "latitude": 36.38492335990986,
+    "longitude": 126.43009186019503,
+    "kakaoMapLink": "https://place.map.kakao.com/991012582",
+    "rating": 3.9,
+    "ratingCount": 20,
+    "reviewCount": 261,
+    "menuItems": [
+      {
+        "name": "아메리카노",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-29 23:23:36"
+      }
+    ],
+    "menuUpdatedAt": "2025-04-29 23:23:36",
+    "priceRange": "6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2015/12/1014329/2_102677_1014329_20151201021115_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/9a80718803f69e7f513a3a16438f2db2f2f5e3b5?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "카페모카브레드",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "보령 카페모카브레드",
+    "score": 85,
+    "kakaoPlaceId": "2032657782",
+    "matchedName": "모카브레드",
+    "category": "디저트카페",
+    "address": "충남 보령시 해수욕장4길 84 1-2층",
+    "lotAddress": "신흑동 1917",
+    "latitude": 36.30871722164559,
+    "longitude": 126.51512552840298,
+    "kakaoMapLink": "https://place.map.kakao.com/2032657782",
+    "rating": 3.4,
+    "ratingCount": 36,
+    "reviewCount": 1249,
+    "menuItems": [
+      {
+        "name": "아메리카노(HOT)",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-11 23:47:45"
+      },
+      {
+        "name": "카페라떼(HOT)",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-11 23:15:47"
+      },
+      {
+        "name": "바닐라라떼(HOT)",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-12 00:21:49"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-29 13:53:54",
+    "priceRange": "5,000-6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103542_9140493_20240226042421_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/252ff7f376eaea47201ad53621b60fcef6a83c0c?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "커피인터뷰대천",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "커피인터뷰대천 충청남도 보령시 대천항1길 67-22",
+    "score": 85,
+    "kakaoPlaceId": "648331181",
+    "matchedName": "커피인터뷰 대천점",
+    "category": "카페",
+    "address": "충남 보령시 대천항1길 67-22",
+    "lotAddress": "신흑동 945-31",
+    "latitude": 36.3242560368919,
+    "longitude": 126.50518899615774,
+    "kakaoMapLink": "https://place.map.kakao.com/648331181",
+    "rating": 3.1,
+    "ratingCount": 20,
+    "reviewCount": 108,
+    "menuItems": [
+      {
+        "name": "코코넛커피",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-15 10:53:53"
+      },
+      {
+        "name": "아메리카노",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-14 20:00:12"
+      },
+      {
+        "name": "카페라떼",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-14 10:39:20"
+      }
+    ],
+    "menuUpdatedAt": "2023-11-28 15:06:10",
+    "priceRange": "5,000-7,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140592/2_106155_9140592_20240227052415_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA3MTNfMTc5/MDAxNzgzODc4MzA5MTUw.xGqkJhfR1kez71Q7h-HwyMktYU1SDWI0GvmbRmCsV20g.eiAPSSOMSXuhJQa34NdAyTf9tZs-sLmGnzAJ6tOWQ_wg.JPEG/1783878308753.jpg?type=w580"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "바다듬루프탑카페",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "바다듬루프탑카페 충청남도 보령시 대천항중앙길 76 위판장 3층",
+    "score": 165,
+    "kakaoPlaceId": "266030588",
+    "matchedName": "바다듬 루프탑카페",
+    "category": "카페",
+    "address": "충남 보령시 대천항중앙길 76 위판장 3층",
+    "lotAddress": "신흑동 950-122",
+    "latitude": 36.32777617947748,
+    "longitude": 126.50653437397456,
+    "kakaoMapLink": "https://place.map.kakao.com/266030588",
+    "rating": 3.9,
+    "ratingCount": 23,
+    "reviewCount": 531,
+    "menuItems": [
+      {
+        "name": "아메리카노",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-20 23:18:10"
+      },
+      {
+        "name": "바다듬라떼",
+        "price": 6300,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-20 09:23:16"
+      },
+      {
+        "name": "바다듬에이드",
+        "price": 6800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-21 09:32:06"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-21 09:32:06",
+    "priceRange": "5,000-6,800원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2019/07/1027990/2_100965_1027990_20190706003938_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/4701136EF0AF4618AFE8FD46E689CB6E"
+    ],
+    "checkedAt": "2026-07-27"
+  }
+]

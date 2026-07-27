@@ -10,6 +10,7 @@ import {
 
 requireProviderTermsAcknowledgement("NAVER Map/Place");
 
+const boryeongOnly = process.argv.includes("--boryeong");
 const dataPath = new URL("../js/data.js", import.meta.url);
 const source = fs.readFileSync(dataPath, "utf8");
 const context = {};
@@ -22,12 +23,17 @@ globalThis.__kakaoPlaceData = typeof kakaoPlaceData === "undefined" ? {} : kakao
   context,
 );
 
-const restaurants = context.__rawRestaurants.map(([name, category]) => ({
-  name,
-  category,
-  verifiedPlace: context.__verifiedPlaceData[name],
-  kakaoPlace: context.__kakaoPlaceData[name],
-}));
+const restaurants = context.__rawRestaurants
+  .map(([name, category]) => ({
+    name,
+    category,
+    verifiedPlace: context.__verifiedPlaceData[name],
+    kakaoPlace: context.__kakaoPlaceData[name],
+  }))
+  .filter(
+    (restaurant) =>
+      !boryeongOnly || restaurant.verifiedPlace?.address?.includes("보령시"),
+  );
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const checkedAt = dateInKorea();
@@ -86,7 +92,10 @@ const seongsuRestaurantNames = new Set([
   "어니언",
 ]);
 
-const areaHint = (restaurant) => (seongsuRestaurantNames.has(restaurant.name) ? "성수" : "건대");
+const areaHint = (restaurant) => {
+  if (restaurant.verifiedPlace?.address?.includes("보령시")) return "보령";
+  return seongsuRestaurantNames.has(restaurant.name) ? "성수" : "건대";
+};
 
 const fetchText = async (url) => {
   const response = await fetch(url, {
@@ -159,7 +168,10 @@ const pickBest = (items, restaurant) => {
   );
   const ranked = items
     .map((item) => {
-      const nameScore = placeNameScore(restaurant.name, item.name);
+      const nameScore = Math.max(
+        placeNameScore(restaurant.name, item.name),
+        placeNameScore(restaurant.verifiedPlace?.matchedName, item.name),
+      );
       const candidateAddress = normalizePlaceName(item.roadAddress || item.address || "");
       const addressScore =
         expectedAddress && candidateAddress.includes(expectedAddress.slice(0, 8)) ? 0.35 : 0;
@@ -173,6 +185,7 @@ const pickBest = (items, restaurant) => {
 const searchPlace = async (restaurant) => {
   const queries = [
     `${restaurant.name} ${restaurant.kakaoPlace?.address || restaurant.verifiedPlace?.address || areaHint(restaurant)}`,
+    `${restaurant.verifiedPlace?.matchedName || restaurant.name} ${restaurant.verifiedPlace?.address || areaHint(restaurant)}`,
     `${restaurant.name} ${areaHint(restaurant)}`,
     `${restaurant.name} ${areaHint(restaurant)}역`,
     restaurant.name,
@@ -220,8 +233,7 @@ const findRatingCandidate = (html) => {
   const decoded = decodeUrl(html);
   const patterns = [
     /"visitorReviewScore"\s*:\s*"?([0-5](?:\.\d)?)"?/i,
-    /"rating"\s*:\s*"?([0-5](?:\.\d)?)"?/i,
-    /"score"\s*:\s*"?([0-5](?:\.\d)?)"?/i,
+    /"visitorReviewAvgScore"\s*:\s*"?([0-5](?:\.\d)?)"?/i,
     /평점\s*([0-5](?:\.\d)?)/,
   ];
 
@@ -309,6 +321,9 @@ for (const restaurant of restaurants) {
 }
 
 fs.writeFileSync(
-  new URL("../data/naver-place-results.json", import.meta.url),
+  new URL(
+    boryeongOnly ? "../data/boryeong-naver-place-results.json" : "../data/naver-place-results.json",
+    import.meta.url,
+  ),
   `${JSON.stringify(results, null, 2)}\n`,
 );

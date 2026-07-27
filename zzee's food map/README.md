@@ -1,6 +1,6 @@
 # ZZEE's Food Map
 
-건대와 성수 중심의 개인 맛집 아카이브입니다. HTML, CSS, JavaScript만 사용하는 GitHub Pages용 정적 사이트입니다.
+건대·성수와 보령의 개인 맛집 아카이브입니다. HTML, CSS, JavaScript만 사용하는 GitHub Pages용 정적 사이트입니다.
 
 ## Run
 

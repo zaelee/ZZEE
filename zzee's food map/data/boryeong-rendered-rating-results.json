@@ -1,0 +1,387 @@
+[
+  {
+    "name": "피자파티",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/17472118"
+    },
+    "google": {
+      "rating": 4.7,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%94%BC%EC%9E%90%ED%8C%8C%ED%8B%B0%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%ED%9D%A5%EB%A1%9C%2044%202%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "피자파티 | 4.7",
+      "title": "피자파티 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%ED%94%BC%EC%9E%90%ED%8C%8C%ED%8B%B0/data=!3m1!4b1!4m6!3m5!1s0x357081f70d7620a1:0xe0abb6d2f292d393!8m2!3d36.3497498!4d126.5940198!16s%2Fg%2F11kp9ysn1w?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "오는정 손만두",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1741330704"
+    },
+    "google": {
+      "rating": 5,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EB%8A%94%EC%A0%95%20%EC%86%90%EB%A7%8C%EB%91%90%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%ED%81%B0%EC%98%A4%EB%9E%8F2%EA%B8%B8%2055%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "오는정손만두 | 5.0",
+      "title": "오는정손만두 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%98%A4%EB%8A%94%EC%A0%95%EC%86%90%EB%A7%8C%EB%91%90/data=!3m1!4b1!4m6!3m5!1s0x3570810021355f45:0x76a50e395e28ffcb!8m2!3d36.3505703!4d126.607351!16s%2Fg%2F11yz45x682?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "제일해물칼국수",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/17489516"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%9D%BC%ED%95%B4%EB%AC%BC%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%ED%95%B4%EB%A1%9C%2046%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "제일해물칼국수 | 4.1",
+      "title": "제일해물칼국수 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%A0%9C%EC%9D%BC%ED%95%B4%EB%AC%BC%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708091e37703ab:0xb41e37b4486459d5!8m2!3d36.3437795!4d126.594548!16s%2Fg%2F1tm0r1hd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "성지 보령본점",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1877918020"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%80%20%EB%B3%B4%EB%A0%B9%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8F%99%ED%98%84%EB%A1%9C%2088%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": null,
+      "debugLines": [
+        "평점",
+        "4.2",
+        "4.1",
+        "리뷰 없음",
+        "리뷰 없음",
+        "별표 개",
+        "Google 지도의 공개 리뷰에 대한 법적 공개사항 자세히 알아보기",
+        "별표 4.2개",
+        "별표 4.1개"
+      ],
+      "title": "성지 보령본점 충남 보령시 동현로 88 1층 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/search/%EC%84%B1%EC%A7%80+%EB%B3%B4%EB%A0%B9%EB%B3%B8%EC%A0%90+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EB%8F%99%ED%98%84%EB%A1%9C+88+1%EC%B8%B5/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "조양 칼국수",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1391449024"
+    },
+    "google": {
+      "rating": 3.8,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EC%96%91%20%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%B3%B4%EB%A0%B9%EB%82%A8%EB%A1%9C%20125-7%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "조양칼국수 | 3.8",
+      "title": "조양칼국수 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "김가네사골수제비",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/2145406212"
+    },
+    "google": {
+      "rating": 4.1,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B9%80%EA%B0%80%EB%84%A4%EC%82%AC%EA%B3%A8%EC%88%98%EC%A0%9C%EB%B9%84%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%84%9D%EC%84%9C1%EA%B8%B8%2057",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "김가네 사골수제비 | 4.1",
+      "title": "김가네 사골수제비 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EA%B9%80%EA%B0%80%EB%84%A4+%EC%82%AC%EA%B3%A8%EC%88%98%EC%A0%9C%EB%B9%84/data=!3m1!4b1!4m6!3m5!1s0x357084216f34c5fd:0x46c04a3aa8c55092!8m2!3d36.320456!4d126.5182979!16s%2Fg%2F1tdkpprd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "키츠네야",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1332902229"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%82%A4%EC%B8%A0%EB%84%A4%EC%95%BC%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%9E%91%EC%9D%80%EC%98%A4%EB%9E%8F5%EA%B8%B8%2031%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "키츠네야 | 4.4",
+      "title": "키츠네야 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%ED%82%A4%EC%B8%A0%EB%84%A4%EC%95%BC/data=!3m1!4b1!4m6!3m5!1s0x3570816853492709:0x81bdc98f600c13fc!8m2!3d36.3462515!4d126.6049118!16s%2Fg%2F11k9mzjr81?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "고구려 수제 본 갈비",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/37630534"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EA%B3%A0%EA%B5%AC%EB%A0%A4%20%EC%88%98%EC%A0%9C%20%EB%B3%B8%20%EA%B0%88%EB%B9%84%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%ED%81%B0%EC%98%A4%EB%9E%8F2%EA%B8%B8%2026",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": null,
+      "debugLines": [
+        "평점",
+        "4.6",
+        "4.6",
+        "4.1",
+        "4.5",
+        "4.1",
+        "4.1",
+        "4.6",
+        "4.1",
+        "4.0",
+        "3.9",
+        "4.2",
+        "별표 개",
+        "Google 지도의 공개 리뷰에 대한 법적 공개사항 자세히 알아보기",
+        "별표 4.6개",
+        "별표 4.6개",
+        "별표 4.1개",
+        "별표 4.5개",
+        "별표 4.1개",
+        "별표 4.1개",
+        "별표 4.6개",
+        "별표 4.1개",
+        "별표 4.0개",
+        "별표 3.9개",
+        "별표 4.2개"
+      ],
+      "title": "고구려 수제 본 갈비 충청남도 보령시 큰오랏2길 26 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/search/%EA%B3%A0%EA%B5%AC%EB%A0%A4+%EC%88%98%EC%A0%9C+%EB%B3%B8+%EA%B0%88%EB%B9%84+%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%ED%81%B0%EC%98%A4%EB%9E%8F2%EA%B8%B8+26/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "조개까는남자",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1539725382"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EA%B0%9C%EA%B9%8C%EB%8A%94%EB%82%A8%EC%9E%90%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A54%EA%B8%B8%2016%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "조개까는남자 | 4.0",
+      "title": "조개까는남자 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%A1%B0%EA%B0%9C%EA%B9%8C%EB%8A%94%EB%82%A8%EC%9E%90/data=!3m1!4b1!4m6!3m5!1s0x3570851539a6de9d:0x1c3f16ee44a22984!8m2!3d36.3058795!4d126.5164944!16s%2Fg%2F11g046xwpf?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "윤가네 해물탕",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/17489811"
+    },
+    "google": {
+      "rating": 3.8,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%9C%A4%EA%B0%80%EB%84%A4%20%ED%95%B4%EB%AC%BC%ED%83%95%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%ED%95%B4%EB%A1%9C%2028",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "윤가네해물탕 | 3.8",
+      "title": "윤가네해물탕 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%9C%A4%EA%B0%80%EB%84%A4%ED%95%B4%EB%AC%BC%ED%83%95/data=!3m1!4b1!4m6!3m5!1s0x3570808fb7b39be3:0x81edf21b3d89c9aa!8m2!3d36.3443436!4d126.5964016!16s%2Fg%2F1th7w7rd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "찬찬찬 해장국",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/13444490"
+    },
+    "google": {
+      "rating": 4.4,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B0%AC%EC%B0%AC%EC%B0%AC%20%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%B3%B4%EB%A0%B9%EB%B6%81%EB%A1%9C%2068",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "찬찬찬해장국 | 4.4",
+      "title": "찬찬찬해장국 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%B0%AC%EC%B0%AC%EC%B0%AC%ED%95%B4%EC%9E%A5%EA%B5%AD/data=!3m1!4b1!4m6!3m5!1s0x3570807d4d09e623:0x76f9ba0da6b5d1fd!8m2!3d36.3523461!4d126.5986371!16s%2Fg%2F1tx8r2ny?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "대포식당",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/36294925"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%8C%80%ED%8F%AC%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%9E%91%EC%9D%80%EC%98%A4%EB%9E%8F7%EA%B8%B8%2036",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "대포식당 | 4.3",
+      "title": "대포식당 충남 보령시 작은오랏7길 36 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/search/%EB%8C%80%ED%8F%AC%EC%8B%9D%EB%8B%B9+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EC%9E%91%EC%9D%80%EC%98%A4%EB%9E%8F7%EA%B8%B8+36/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "바이더오",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1712146041"
+    },
+    "google": {
+      "rating": 4.3,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%94%EC%9D%B4%EB%8D%94%EC%98%A4%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%98%A4%EC%B2%9C%EB%A9%B4%20%EC%9B%90%EC%82%B0%EB%8F%845%EA%B8%B8%2089-23%201-2%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "바이더오 | 4.3",
+      "title": "바이더오 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EB%B0%94%EC%9D%B4%EB%8D%94%EC%98%A4/data=!3m1!4b1!4m6!3m5!1s0x35709b55732afb77:0xf5c8ef66ffcf55f7!8m2!3d36.3813884!4d126.3976001!16s%2Fg%2F11py09ysrh?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "플라르",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1827453071"
+    },
+    "google": {
+      "rating": 4.6,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%94%8C%EB%9D%BC%EB%A5%B4%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%98%A4%EC%B2%9C%EB%A9%B4%20%EC%9B%90%EC%82%B0%EB%8F%842%EA%B8%B8%20331-34",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "플라르 | 4.6",
+      "title": "플라르 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%ED%94%8C%EB%9D%BC%EB%A5%B4/data=!3m1!4b1!4m6!3m5!1s0x35709d3c7243ac79:0x703c631f37532391!8m2!3d36.3850777!4d126.4295383!16s%2Fg%2F11yljvcxs5?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "카페모카브레드",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1274928531"
+    },
+    "google": {
+      "rating": 3.9,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%A0%88%EB%93%9C%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A54%EA%B8%B8%2084%201-2%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "카페모카브레드 | 3.9",
+      "title": "카페모카브레드 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%A0%88%EB%93%9C/data=!3m1!4b1!4m6!3m5!1s0x35708537ffcac1c1:0x94e3d0e64523bdc1!8m2!3d36.3086671!4d126.5151023!16s%2Fg%2F11j24hjwk_?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "커피인터뷰대천",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1609492966"
+    },
+    "google": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%EC%B2%9C%ED%95%AD1%EA%B8%B8%2067-22",
+      "nameAccepted": false,
+      "addressAccepted": true,
+      "evidence": null,
+      "debugLines": [
+        "3.3",
+        "리뷰 작성",
+        "별표 개",
+        "별표 3.3개",
+        "리뷰 작성"
+      ],
+      "title": "커피인터뷰 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  {
+    "name": "바다듬루프탑카페",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1635643270"
+    },
+    "google": {
+      "rating": 4.8,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%94%EB%8B%A4%EB%93%AC%EB%A3%A8%ED%94%84%ED%83%91%EC%B9%B4%ED%8E%98%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%EC%B2%9C%ED%95%AD%EC%A4%91%EC%95%99%EA%B8%B8%2076%20%EC%9C%84%ED%8C%90%EC%9E%A5%203%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "바다듬 루프탑 카페 보령점 | 4.8",
+      "title": "바다듬 루프탑 카페 보령점 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EB%B0%94%EB%8B%A4%EB%93%AC+%EB%A3%A8%ED%94%84%ED%83%91+%EC%B9%B4%ED%8E%98+%EB%B3%B4%EB%A0%B9%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x357085f14e3bc9c9:0x2b7e16b68fa0b893!8m2!3d36.3271466!4d126.5068524!16s%2Fg%2F11t7dgsp17?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  }
+]

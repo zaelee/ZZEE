@@ -1,0 +1,44 @@
+[
+  {
+    "name": "성지 보령본점",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1877918020"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "성지2호점 | 4.2",
+      "title": "성지2호점 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": []
+    }
+  },
+  {
+    "name": "커피인터뷰대천",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1609492966"
+    },
+    "google": {
+      "rating": 3.3,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%EC%B2%9C%ED%95%AD1%EA%B8%B8%2067-22",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "커피인터뷰 | 3.3",
+      "title": "커피인터뷰 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": []
+    }
+  }
+]

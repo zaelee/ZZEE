@@ -11,7 +11,18 @@ requireProviderTermsAcknowledgement("NAVER/Google rendered pages");
 
 const chromePath = findChromeExecutable();
 const dataPath = new URL("../js/data.js", import.meta.url);
-const outputPath = new URL("../data/rendered-rating-results.json", import.meta.url);
+const aliasesPath = new URL("../data/place-aliases.json", import.meta.url);
+const placeAliases = JSON.parse(fs.readFileSync(aliasesPath, "utf8"));
+const boryeongOnly = process.argv.includes("--boryeong");
+const targetedOnly = process.argv.some((argument) => argument.startsWith("--names="));
+const outputPath = new URL(
+  boryeongOnly
+    ? targetedOnly
+      ? "../data/boryeong-rendered-rating-probe.json"
+      : "../data/boryeong-rendered-rating-results.json"
+    : "../data/rendered-rating-results.json",
+  import.meta.url,
+);
 const source = fs.readFileSync(dataPath, "utf8");
 
 const context = {};
@@ -92,29 +103,52 @@ const createCdpClient = async () => {
   return { request, contexts, close: () => socket.close() };
 };
 
-const getRenderedText = async (client, url, waitMs) => {
+const getRenderedPage = async (client, url, waitMs) => {
   await client.request("Page.navigate", { url });
   await sleep(waitMs);
 
-  const texts = [];
+  const pages = [];
   for (const [contextId] of client.contexts) {
     const result = await client.request("Runtime.evaluate", {
       contextId,
       expression: `(() => {
         try {
-          return document.body && document.body.innerText ? document.body.innerText : "";
+          const bodyText = document.body?.innerText || "";
+          const ariaText = [...document.querySelectorAll("[aria-label]")]
+            .map((node) => node.getAttribute("aria-label"))
+            .filter(Boolean)
+            .join("\\n");
+          return {
+            bodyText,
+            ariaText,
+            title: document.title || "",
+            url: location.href,
+            placeLinks: [...document.querySelectorAll('a[href*="/maps/place/"]')]
+              .map((node) => ({
+                text: node.innerText || "",
+                ariaLabel: node.getAttribute("aria-label") || "",
+                href: node.href || "",
+              }))
+              .filter((entry) => entry.href)
+              .slice(0, 40),
+          };
         } catch {
-          return "";
+          return null;
         }
       })()`,
       returnByValue: true,
     });
 
-    const text = result.result?.result?.value;
-    if (text?.trim()) texts.push(text);
+    const page = result.result?.result?.value;
+    if (page?.bodyText?.trim()) pages.push(page);
   }
 
-  return texts.join("\n");
+  return pages.sort((a, b) => b.bodyText.length - a.bodyText.length)[0] || {
+    bodyText: "",
+    ariaText: "",
+    title: "",
+    url,
+  };
 };
 
 const parseNaver = (text) => {
@@ -130,39 +164,106 @@ const parseNaver = (text) => {
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const parseGoogle = (text, restaurant) => {
+const normalizeText = (value = "") =>
+  String(value)
+    .normalize("NFKC")
+    .replace(/[^\p{L}\p{N}]/gu, "")
+    .toLowerCase();
+
+const parseGoogle = (page, restaurant) => {
+  const text = `${page.bodyText}\n${page.ariaText}`;
   const lines = text
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(Boolean);
-  const target = restaurant.name.replace(/\s+/g, "");
+  const candidateNames = [restaurant.name, ...(placeAliases[restaurant.name] || [])];
+  const targets = candidateNames.map(normalizeText).filter(Boolean);
+  const normalizedTitle = normalizeText(page.title);
+  const matchingLines = lines.filter((line) => {
+    const normalizedLine = normalizeText(line);
+    return targets.some((target) => normalizedLine.includes(target) || target.includes(normalizedLine));
+  });
+  const nameAccepted =
+    targets.some((target) => normalizedTitle.includes(target) || target.includes(normalizedTitle)) ||
+    matchingLines.length > 0;
+  const addressTokens = restaurant.address
+    .split(/\s+/)
+    .map(normalizeText)
+    .filter((token) => token.length >= 2);
+  const addressAccepted = addressTokens.some((token) => normalizeText(text).includes(token));
 
   for (let index = 0; index < lines.length - 1; index += 1) {
-    const line = lines[index].replace(/\s+/g, "");
+    const line = normalizeText(lines[index]);
     const next = lines[index + 1];
-    if (line.includes(target) && /^[0-5](?:\.\d)?$/.test(next)) {
-      return { rating: Number(next), reviewCount: null };
+    if (targets.some((target) => line.includes(target) || target.includes(line)) && /^[0-5](?:\.\d)?$/.test(next)) {
+      return {
+        rating: Number(next),
+        reviewCount: null,
+        nameAccepted,
+        addressAccepted,
+        evidence: `${lines[index]} | ${next}`,
+      };
     }
   }
 
-  const pattern = new RegExp(`${escapeRegExp(restaurant.name)}\\s+([0-5](?:\\.\\d)?)`);
-  const match = text.match(pattern);
+  const ariaMatch =
+    text.match(/별(?:표)?\s*5개\s*만점에\s*([0-5](?:[.,]\d{1,2})?)/i) ||
+    text.match(/별표\s*([0-5](?:[.,]\d{1,2})?)개/i) ||
+    text.match(/평점\s*([0-5](?:[.,]\d{1,2})?)\s*(?:점|별)/i) ||
+    text.match(/([0-5](?:[.,]\d{1,2})?)\s*(?:별표|stars?)/i);
+  const namedMatch = candidateNames
+    .map((name) => text.match(new RegExp(`${escapeRegExp(name)}\\s+([0-5](?:[.,]\\d{1,2})?)`)))
+    .find(Boolean);
+  const match = nameAccepted ? ariaMatch || namedMatch : null;
+  const reviewMatch =
+    text.match(/리뷰\s*([\d,]+)개/i) ||
+    text.match(/([\d,]+)\s*(?:개의\s*)?(?:Google\s*)?리뷰/i) ||
+    text.match(/([\d,]+)\s+reviews?/i);
+  const debugLines = lines
+    .filter((line) => /[0-5][.,]\d|별|star|review|리뷰|평점/i.test(line))
+    .slice(0, 40);
   return {
-    rating: match ? Number(match[1]) : null,
-    reviewCount: null,
+    rating: match ? Number(match[1].replace(",", ".")) : null,
+    reviewCount: reviewMatch ? Number(reviewMatch[1].replace(/,/g, "")) : null,
+    nameAccepted,
+    addressAccepted,
+    evidence: match?.[0] ?? null,
+    debugLines,
   };
 };
 
+const GOOGLE_URL_OVERRIDES = {
+  "성지 보령본점":
+    "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
+};
+
 const googleUrl = (restaurant) =>
+  GOOGLE_URL_OVERRIDES[restaurant.name] ||
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${restaurant.name} ${restaurant.address}`)}`;
 
 const results = [];
 const onlyMissing = process.argv.includes("--missing");
+const googleOnly = process.argv.includes("--google-only");
+const scopedRestaurants = boryeongOnly
+  ? context.__restaurants.filter((restaurant) => restaurant.area === "보령")
+  : context.__restaurants;
+const namesArgument = process.argv.find((argument) => argument.startsWith("--names="));
+const requestedNames = new Set(
+  namesArgument
+    ? decodeURIComponent(namesArgument.slice("--names=".length))
+        .split("|")
+        .map((name) => name.trim())
+        .filter(Boolean)
+    : [],
+);
+const namedRestaurants = requestedNames.size
+  ? scopedRestaurants.filter((restaurant) => requestedNames.has(restaurant.name))
+  : scopedRestaurants;
 const restaurants = onlyMissing
-  ? context.__restaurants.filter(
+  ? namedRestaurants.filter(
       (restaurant) => !restaurant.platformRatings?.naver?.rating || !restaurant.platformRatings?.google?.rating,
     )
-  : context.__restaurants;
+  : namedRestaurants;
 
 let client;
 try {
@@ -176,9 +277,17 @@ try {
     };
 
     try {
-      if ((!onlyMissing || restaurant.platformRatings?.naver?.rating == null) && (naverPlace?.naverMapLink || restaurant.naverMapLink)) {
-        const text = await getRenderedText(client, naverPlace?.naverMapLink || restaurant.naverMapLink, 8500);
-        result.naver = { ...result.naver, ...parseNaver(text), url: naverPlace?.naverMapLink || restaurant.naverMapLink };
+      if (
+        !googleOnly &&
+        (!onlyMissing || restaurant.platformRatings?.naver?.rating == null) &&
+        (naverPlace?.naverMapLink || restaurant.naverMapLink)
+      ) {
+        const page = await getRenderedPage(client, naverPlace?.naverMapLink || restaurant.naverMapLink, 8500);
+        result.naver = {
+          ...result.naver,
+          ...parseNaver(`${page.bodyText}\n${page.ariaText}`),
+          url: page.url || naverPlace?.naverMapLink || restaurant.naverMapLink,
+        };
       }
     } catch (error) {
       result.naver.error = error.message;
@@ -192,14 +301,21 @@ try {
           checkedAt: restaurant.platformRatings.google.checkedAt,
         };
       } else {
-        const text = await getRenderedText(client, result.google.url, 8500);
-        result.google = { ...result.google, ...parseGoogle(text, restaurant) };
+        const page = await getRenderedPage(client, result.google.url, 8500);
+        result.google = {
+          ...result.google,
+          ...parseGoogle(page, restaurant),
+          title: page.title,
+          resolvedUrl: page.url,
+          placeLinks: page.placeLinks,
+        };
       }
     } catch (error) {
       result.google.error = error.message;
     }
 
     results.push(result);
+    fs.writeFileSync(outputPath, `${JSON.stringify(results, null, 2)}\n`);
     console.log(
       [
         restaurant.name,
@@ -211,7 +327,11 @@ try {
 } finally {
   client?.close();
   chrome.kill();
-  fs.rmSync(profileDir, { recursive: true, force: true });
+  try {
+    fs.rmSync(profileDir, { recursive: true, force: true, maxRetries: 4, retryDelay: 250 });
+  } catch (error) {
+    console.warn(`Chrome 임시 프로필 정리 보류: ${error.message}`);
+  }
 }
 
 fs.writeFileSync(outputPath, `${JSON.stringify(results, null, 2)}\n`);
