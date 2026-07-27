@@ -210,6 +210,7 @@ try {
       count: document.querySelector("#restaurantCount")?.textContent?.trim() || "",
       categories: [...document.querySelectorAll(".category-section h2")].map((node) => node.textContent.trim()),
       names: [...document.querySelectorAll(".restaurant-name")].map((node) => node.textContent.trim()),
+      comments: [...document.querySelectorAll(".restaurant-comment")].map((node) => node.textContent.trim()),
       highRatingNames: [...document.querySelectorAll("tr.is-high .restaurant-name")].map((node) => node.textContent.trim()),
       links: [...document.querySelectorAll(".map-links a")].length,
       appLinks: [...document.querySelectorAll(".map-links a[data-map-app]")].length,
@@ -235,6 +236,8 @@ try {
           count: table.count,
           categories: table.categories,
           rows: table.names.length,
+          comments: table.comments.length,
+          invalidComments: table.comments.filter((comment) => !comment || /^별점\s*:?\s*$/.test(comment)),
           highRatingNames: table.highRatingNames,
           mapLinks: table.links,
           appLinks: table.appLinks,
@@ -252,6 +255,9 @@ try {
 
   if (table.count !== "18" || table.names.length !== 18 || !table.names.includes("수정식당")) {
     throw new Error("보령 분류표의 음식점 수 또는 수정식당 포함 상태 오류");
+  }
+  if (table.comments.length !== 18 || table.comments.some((comment) => !comment || /^별점\s*:?\s*$/.test(comment))) {
+    throw new Error("보령 분류표 한줄 특징 표시 오류");
   }
   if (table.categories.join("|") !== "한식|중식|일식|디저트|양식") {
     throw new Error(`보령 분류 순서 오류: ${table.categories.join(", ")}`);

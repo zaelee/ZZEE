@@ -244,7 +244,7 @@
 
       table {
         width: 100%;
-        min-width: 860px;
+        min-width: 1180px;
         border-collapse: collapse;
       }
 
@@ -296,6 +296,13 @@
         min-width: 260px;
         color: var(--muted);
         font-size: 13px;
+      }
+
+      .restaurant-comment {
+        min-width: 310px;
+        color: #4f535a;
+        font-size: 13px;
+        line-height: 1.55;
       }
 
       .score {
@@ -461,6 +468,28 @@
           .replaceAll('"', "&quot;")
           .replaceAll("'", "&#039;");
 
+      const oneLineComment = (restaurant) => {
+        const comment = String(restaurant.comment || "").trim();
+        if (comment && !/^별점\s*:?\s*$/.test(comment)) return comment;
+
+        const placeLabel =
+          {
+            한식: "한식당",
+            중식: "중식당",
+            일식: "일식당",
+            디저트: "카페·디저트점",
+            양식: "양식당",
+          }[restaurant.category] || "음식점";
+        const menuNames = (restaurant.menuItems || [])
+          .map((menu) => menu.name)
+          .filter(Boolean)
+          .slice(0, 2);
+        if (menuNames.length) {
+          return `${menuNames.join("과 ")}이 대표 메뉴인 보령 ${placeLabel}`;
+        }
+        return `${restaurant.signatureMenu || "대표 메뉴"}를 내는 보령 ${placeLabel}`;
+      };
+
       const allRestaurants = [
         ...(typeof RESTAURANTS === "undefined" ? [] : RESTAURANTS),
         ...(typeof NAVER_SHARED_RESTAURANTS === "undefined"
@@ -534,6 +563,7 @@
                       <span>${escapeHtml(restaurant.name)}</span>
                     </div>
                   </td>
+                  <td class="restaurant-comment">${escapeHtml(oneLineComment(restaurant))}</td>
                   <td class="address">${escapeHtml(restaurant.address)}</td>
                   ${PLATFORM_KEYS.map(
                     (key) =>
@@ -563,6 +593,7 @@
                   <thead>
                     <tr>
                       <th scope="col">음식점</th>
+                      <th scope="col">한줄 특징</th>
                       <th scope="col">주소</th>
                       <th scope="col" class="score">K</th>
                       <th scope="col" class="score">N</th>
