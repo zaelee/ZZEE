@@ -110,9 +110,11 @@ const rawRestaurants = [
   ["오는정 손만두", "한식", null, "직접 빚은 만두를 버섯전골과 칼만두국으로 즐기는 손만두집", "버섯만두전골", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["제일해물칼국수", "한식", null, "바지락 해물칼국수에 왕만두를 곁들이기 좋은 보령 칼국수집", "해물칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["성지 보령본점", "중식", null, "불향 나는 소고기짬뽕과 유림만두가 대표인 점심 중심 중식당", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
-  ["조양 칼국수", "한식", null, "물총칼국수와 비빔국수, 보리밥을 푸짐하게 먹는 칼국수집", "물총칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["성지 2호점", "중식", null, "지도 플랫폼에 따라 보령본점·2호점으로 함께 표기되는 동현로 88의 중식당", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["오양칼국수", "한식", null, "물총칼국수와 비빔국수, 보리밥을 푸짐하게 먹는 칼국수집", "물총칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["김가네사골수제비", "한식", null, "사골 육수에 끓인 수제비와 김치·도가니 수제비가 중심인 집", "사골수제비", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["키츠네야", "일식", null, "키츠네스시와 후토마끼, 고등어봉초밥을 내는 보령 일식당", "키츠네스시", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["키레이나", "일식", null, "안심·등심·닭안심 카츠를 1만3천원대에 고르는 보령 일식당", "안심카츠", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["고구려 수제 본 갈비", "한식", null, "양념 소갈비살과 수제 돼지구이를 숯불에 굽는 보령 고깃집", "양념황제소갈비살", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["조개까는남자", "한식", null, "대천해수욕장 앞에서 조개구이·활어회·해산물 세트를 내는 집", "모듬조개구이", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["윤가네 해물탕", "한식", null, "해물탕과 해물찜, 꽃게장을 함께 고를 수 있는 보령 해물요리집", "해물탕", "방문 후 개인 코멘트를 업데이트할 예정"],
@@ -123,6 +125,7 @@ const rawRestaurants = [
   ["카페모카브레드", "디저트", null, "오전 8시부터 빵과 대천소금라떼를 즐기는 대천 오션뷰 카페", "대천소금라떼", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["커피인터뷰대천", "디저트", null, "대천항 언덕에서 바다와 석양을 보는 오션뷰 카페", "우유아이스크림", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["바다듬루프탑카페", "디저트", null, "대천항 전망과 넓은 루프탑을 갖춘 수협 위판장 3층 카페", "바다듬크림라떼", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["황해원", "중식", null, "오징어와 돼지고기를 넣은 짬뽕, 짜장면, 짬뽕밥 세 메뉴에 집중하는 노포 중식당", "짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
 ];
 
 const priceByCategory = {
@@ -215,9 +218,11 @@ const boryeongRestaurantNames = new Set([
   "오는정 손만두",
   "제일해물칼국수",
   "성지 보령본점",
-  "조양 칼국수",
+  "성지 2호점",
+  "오양칼국수",
   "김가네사골수제비",
   "키츠네야",
+  "키레이나",
   "고구려 수제 본 갈비",
   "조개까는남자",
   "윤가네 해물탕",
@@ -228,6 +233,7 @@ const boryeongRestaurantNames = new Set([
   "카페모카브레드",
   "커피인터뷰대천",
   "바다듬루프탑카페",
+  "황해원",
 ]);
 
 const pendingRestaurantNames = new Set([
@@ -278,9 +284,11 @@ const verifiedPlaceData = {
   "오는정 손만두": { matchedName: "오는정손만두", address: "충청남도 보령시 큰오랏2길 55", latitude: 36.3505687, longitude: 126.6073513 },
   제일해물칼국수: { matchedName: "제일해물칼국수", address: "충청남도 보령시 대해로 46", latitude: 36.3438084, longitude: 126.5946276 },
   "성지 보령본점": { matchedName: "성지 보령본점", address: "충청남도 보령시 동현로 88", latitude: 36.3471826528238, longitude: 126.615361022136 },
-  "조양 칼국수": { matchedName: "조양칼국수", address: "충청남도 보령시 보령남로 125-7", latitude: 36.3344152, longitude: 126.6011688 },
+  "성지 2호점": { matchedName: "성지 2호점", address: "충청남도 보령시 동현로 88", latitude: 36.3471344, longitude: 126.6154333 },
+  오양칼국수: { matchedName: "오양칼국수", address: "충청남도 보령시 보령남로 125-7", latitude: 36.3344152, longitude: 126.6011688 },
   김가네사골수제비: { matchedName: "김가네사골수제비", address: "충청남도 보령시 석서1길 57", latitude: 36.3205539496, longitude: 126.5183160067 },
   키츠네야: { matchedName: "키츠네야", address: "충청남도 보령시 작은오랏5길 31 1층", latitude: 36.3462989, longitude: 126.6048973 },
+  키레이나: { matchedName: "키레이나", address: "충청남도 보령시 명천로2길 11", latitude: 36.33728749, longitude: 126.60889701 },
   "고구려 수제 본 갈비": { matchedName: "고구려수제본갈비", address: "충청남도 보령시 큰오랏2길 26", latitude: 36.3493276, longitude: 126.6064586 },
   조개까는남자: { matchedName: "조개까는남자", address: "충청남도 보령시 해수욕장4길 16", latitude: 36.30586061812669, longitude: 126.51649265115816 },
   "윤가네 해물탕": { matchedName: "윤가네해물탕", address: "충청남도 보령시 대해로 28", latitude: 36.3443382, longitude: 126.5963863 },
@@ -291,6 +299,7 @@ const verifiedPlaceData = {
   카페모카브레드: { matchedName: "카페모카브레드", address: "충청남도 보령시 해수욕장4길 84 1층", latitude: 36.3086671, longitude: 126.5151023 },
   커피인터뷰대천: { matchedName: "커피인터뷰 대천", address: "충청남도 보령시 대천항1길 67-22", latitude: 36.3241043, longitude: 126.5048257 },
   바다듬루프탑카페: { matchedName: "바다듬 루프탑카페 보령점", address: "충청남도 보령시 대천항중앙길 76 위판장 3층", latitude: 36.3273818, longitude: 126.5066687 },
+  황해원: { matchedName: "황해원", address: "충청남도 보령시 성주면 심원계곡로 4", latitude: 36.33605655, longitude: 126.6508211 },
 };
 
 const boryeongPlaceSources = {
@@ -298,9 +307,11 @@ const boryeongPlaceSources = {
   "오는정 손만두": { provider: "diningcode", providerPlaceId: "f3goJr31oUNh", sourceUrl: "https://www.diningcode.com/profile.php?rid=f3goJr31oUNh", checkedAt: "2026-07-27" },
   제일해물칼국수: { provider: "diningcode", providerPlaceId: "KB4JtqpS0VaC", sourceUrl: "https://www.diningcode.com/profile.php?rid=KB4JtqpS0VaC", checkedAt: "2026-07-27" },
   "성지 보령본점": { provider: "placeview", providerPlaceId: "NDY4MzMxOTAg", sourceUrl: "https://www.placeview.co.kr/id/NDY4MzMxOTAg", checkedAt: "2026-07-27" },
-  "조양 칼국수": { provider: "diningcode", providerPlaceId: "YqXEHCsX617R", sourceUrl: "https://www.diningcode.com/profile.php?rid=YqXEHCsX617R", checkedAt: "2026-07-27" },
+  "성지 2호점": { provider: "diningcode", providerPlaceId: "immpPnHL1gX9", sourceUrl: "https://www.diningcode.com/profile.php?rid=immpPnHL1gX9", checkedAt: "2026-07-27" },
+  오양칼국수: { provider: "diningcode", providerPlaceId: "YqXEHCsX617R", sourceUrl: "https://www.diningcode.com/profile.php?rid=YqXEHCsX617R", checkedAt: "2026-07-27" },
   김가네사골수제비: { provider: "chungnam-tour", providerPlaceId: "rstNo:11", sourceUrl: "https://tour.chungnam.go.kr/prog/rst/kor/sub02_03_02/view.do?rstNo=11", checkedAt: "2026-07-27" },
   키츠네야: { provider: "diningcode", providerPlaceId: "S1siZ2WwLg3Q", sourceUrl: "https://www.diningcode.com/profile.php?rid=S1siZ2WwLg3Q", checkedAt: "2026-07-27" },
+  키레이나: { provider: "tabling", providerPlaceId: "677cd72766de5f0698924386", sourceUrl: "https://www.tabling.co.kr/place/677cd72766de5f0698924386", checkedAt: "2026-07-27" },
   "고구려 수제 본 갈비": { provider: "diningcode", providerPlaceId: "s2kUxrWeWCjA", sourceUrl: "https://www.diningcode.com/profile.php?rid=s2kUxrWeWCjA", checkedAt: "2026-07-27" },
   조개까는남자: { provider: "placeview", providerPlaceId: "MTg3NjAwMDMg", sourceUrl: "https://www.placeview.co.kr/id/MTg3NjAwMDMg", checkedAt: "2026-07-27" },
   "윤가네 해물탕": { provider: "diningcode", providerPlaceId: "lL9RHwdnm1tB", sourceUrl: "https://www.diningcode.com/profile.php?rid=lL9RHwdnm1tB", checkedAt: "2026-07-27" },
@@ -311,6 +322,7 @@ const boryeongPlaceSources = {
   카페모카브레드: { provider: "google", providerPlaceId: "0x35708537ffcac1c1:0x94e3d0e64523bdc1", sourceUrl: "https://www.tel-co.net/cafe/spot/10994", checkedAt: "2026-07-27" },
   커피인터뷰대천: { provider: "google", providerPlaceId: "0x3570854832518e75:0x34962fb5f31e1914", sourceUrl: "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EB%B3%B4%EB%A0%B9", checkedAt: "2026-07-27" },
   바다듬루프탑카페: { provider: "diningcode", providerPlaceId: "CP13KWXqkl6h", sourceUrl: "https://www.diningcode.com/profile.php?rid=CP13KWXqkl6h", checkedAt: "2026-07-27" },
+  황해원: { provider: "boryeong-city", providerPlaceId: "041-933-5051", sourceUrl: "https://www.brcn.go.kr/prog/franchise2/kor/sub05_04_08_06/list.do?pageIndex=301", checkedAt: "2026-07-27" },
 };
 
 const boryeongEditorialData = {
@@ -349,7 +361,16 @@ const boryeongEditorialData = {
     priceRange: "8천-1만1천원",
     sourceLabel: "카카오맵·다이닝코드 공개 메뉴",
   },
-  "조양 칼국수": {
+  "성지 2호점": {
+    menuItems: [
+      { name: "탕수육", price: 17000 },
+      { name: "고추짜장", price: 10000 },
+      { name: "소고기짬뽕", price: 11000 },
+    ],
+    priceRange: "1만-1만7천원",
+    sourceLabel: "테이블링 공개 메뉴",
+  },
+  오양칼국수: {
     menuItems: [
       { name: "물총칼국수(보리밥)", price: 10000 },
       { name: "비빔국수와 물총칼국수", price: 11000 },
@@ -375,6 +396,15 @@ const boryeongEditorialData = {
     ],
     priceRange: "1만7천-2만3천원",
     sourceLabel: "카카오맵·다이닝코드 공개 메뉴",
+  },
+  키레이나: {
+    menuItems: [
+      { name: "안심카츠", price: 13000 },
+      { name: "등심카츠", price: 13000 },
+      { name: "닭안심카츠", price: 13000 },
+    ],
+    priceRange: "1만3천원",
+    sourceLabel: "테이블링 공개 메뉴",
   },
   "고구려 수제 본 갈비": {
     menuItems: [
@@ -465,6 +495,15 @@ const boryeongEditorialData = {
     ],
     priceRange: "6,300-1만원",
     sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  황해원: {
+    menuItems: [
+      { name: "짬뽕", price: 10000 },
+      { name: "짜장면", price: 7000 },
+      { name: "짬뽕밥", price: 10000 },
+    ],
+    priceRange: "7천-1만원",
+    sourceLabel: "카카오맵·한국관광공사 공개 메뉴",
   },
 };
 
@@ -3840,7 +3879,7 @@ const kakaoPlaceData = {
     "kakaoMapLink": "https://place.map.kakao.com/46833190",
     "rating": 4.8,
     "ratingCount": 8,
-    "reviewCount": 17,
+    "reviewCount": 18,
     "menuItems": [
       {
         "name": "소고기짬뽕(2인이상)",
@@ -3874,7 +3913,51 @@ const kakaoPlaceData = {
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 0.00014140322518289538
   },
-  "조양 칼국수": {
+  "성지 2호점": {
+    "matchedName": "성지 보령본점",
+    "kakaoPlaceId": "46833190",
+    "address": "충남 보령시 동현로 88 1층",
+    "lotAddress": "동대동 380-3",
+    "latitude": 36.34718355042364,
+    "longitude": 126.61535990372946,
+    "kakaoMapLink": "https://place.map.kakao.com/46833190",
+    "rating": 4.8,
+    "ratingCount": 8,
+    "reviewCount": 18,
+    "menuItems": [
+      {
+        "name": "소고기짬뽕(2인이상)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:10:27"
+      },
+      {
+        "name": "유림만두(8개)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:28:42"
+      },
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 09:20:54"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-22 16:37:43",
+    "priceRange": "6,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_103776_9140531_20240228030037_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c131633399c02eb46b9509fcec6f96e5d9683f3b?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.007385
+  },
+  "오양칼국수": {
     "matchedName": "조양칼국수 보령점",
     "kakaoPlaceId": "372550342",
     "address": "충남 보령시 보령남로 125-7 1층",
@@ -4343,6 +4426,94 @@ const kakaoPlaceData = {
     ],
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 0.0454740339494502
+  },
+  "키레이나": {
+    "matchedName": "키레이나",
+    "kakaoPlaceId": "36036952",
+    "address": "충남 보령시 명천로2길 11 상가 1층",
+    "lotAddress": "명천동 1156",
+    "latitude": 36.337289297993614,
+    "longitude": 126.60889922467484,
+    "kakaoMapLink": "https://place.map.kakao.com/36036952",
+    "rating": 4.4,
+    "ratingCount": 24,
+    "reviewCount": 106,
+    "menuItems": [
+      {
+        "name": "안심카츠",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-07 10:34:02"
+      },
+      {
+        "name": "등심카츠",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-07 10:34:02"
+      },
+      {
+        "name": "카레",
+        "price": 2000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-11 23:58:36"
+      }
+    ],
+    "menuUpdatedAt": "2026-05-11 23:58:36",
+    "priceRange": "2,000-13,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_104344_9140512_20240227040024_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/4f5cb0a7b499b990efe3ffdaf0968210d84344e5?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.00028243406186146135
+  },
+  "황해원": {
+    "matchedName": "황해원",
+    "kakaoPlaceId": "10046975",
+    "address": "충남 보령시 성주면 심원계곡로 4 1층",
+    "lotAddress": "성주면 성주리 196-1",
+    "latitude": 36.33605655139887,
+    "longitude": 126.65082110480101,
+    "kakaoMapLink": "https://place.map.kakao.com/10046975",
+    "rating": 3.4,
+    "ratingCount": 58,
+    "reviewCount": 114,
+    "menuItems": [
+      {
+        "name": "짬뽕",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      },
+      {
+        "name": "짜장면",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      },
+      {
+        "name": "짬뽕밥",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-04 22:56:06",
+    "priceRange": "7,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140407/2_101560_9140407_20240207034811_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/dce3d19a6c5af374d41d01b3135189b62c73f3ba?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 4.573103901892215e-7
   }
 };
 
@@ -5840,7 +6011,28 @@ const naverPlaceData = {
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/1877918020/home",
     "ratingCheckedAt": "2026-07-27"
   },
-  "조양 칼국수": {
+  "성지 2호점": {
+    "matchedName": "성지 보령본점",
+    "naverPlaceId": 1877918020,
+    "address": "충청남도 보령시 동현로 88 1층",
+    "lotAddress": "충청남도 보령시 동대동 380-3 1층",
+    "latitude": 36.3471884,
+    "longitude": 126.6153467,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1877918020",
+    "rating": 4.58,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230612_52/16865448664619hVGo_JPEG/20220424103114.jpg",
+      "https://ldb-phinf.pstatic.net/20220910_55/1662765150261W3BOi_JPEG/20220424103114.jpg",
+      "https://ldb-phinf.pstatic.net/20220910_61/16627656380752jDIe_JPEG/1658296548232-6.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.007385,
+    "reviewCount": 291,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1877918020/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "오양칼국수": {
     "matchedName": "조양칼국수",
     "naverPlaceId": 1391449024,
     "address": "충청남도 보령시 보령남로 125-7",
@@ -6045,7 +6237,7 @@ const naverPlaceData = {
     ],
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 0.002924714958115231,
-    "reviewCount": 2047,
+    "reviewCount": 2048,
     "ratingSourceField": "placeDetail.base.visitorReviewsScore",
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/1827453071/home",
     "ratingCheckedAt": "2026-07-27"
@@ -6111,6 +6303,48 @@ const naverPlaceData = {
     "reviewCount": 2878,
     "ratingSourceField": "placeDetail.base.visitorReviewsScore",
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/1635643270/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "키레이나": {
+    "matchedName": "키레이나",
+    "naverPlaceId": 1263372742,
+    "address": "충청남도 보령시 명천로2길 11 1층 상가",
+    "lotAddress": "충청남도 보령시 명천동 1156 1층 상가",
+    "latitude": 36.3372796,
+    "longitude": 126.608899,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1263372742",
+    "rating": 4.89,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20240414_84/1713069863281bgwSn_JPEG/KakaoTalk_20240414_134159171_04.jpg",
+      "https://ldb-phinf.pstatic.net/20240414_48/1713069893815tDL3q_JPEG/KakaoTalk_20240414_134159171_03.jpg",
+      "https://ldb-phinf.pstatic.net/20240414_147/1713069933134trVf0_JPEG/KakaoTalk_20240414_134159171_05.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.001078555456222869,
+    "reviewCount": 949,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1263372742/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "황해원": {
+    "matchedName": "황해원",
+    "naverPlaceId": 17504316,
+    "address": "충청남도 보령시 성주면 심원계곡로 4",
+    "lotAddress": "충청남도 보령시 성주면 성주리 196-1",
+    "latitude": 36.3360542,
+    "longitude": 126.6508327,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17504316",
+    "rating": 4.35,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20250715_148/1752536071066wiVIG_PNG/1000001260.png",
+      "https://ldb-phinf.pstatic.net/20160225_27/1456378834746BfpCt_JPEG/176175547053680_0.jpg",
+      "https://ldb-phinf.pstatic.net/20160225_130/1456378834811kvdhz_JPEG/176175547053680_1.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0010710297375946985,
+    "reviewCount": 1067,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/17504316/home",
     "ratingCheckedAt": "2026-07-27"
   }
 };
@@ -6613,12 +6847,12 @@ const googlePlaceData = {
     "checkedAt": "2026-07-27",
     "note": "구글 지도 공개 업체 평점"
   },
-  "조양 칼국수": {
+  "오양칼국수": {
     "rating": 3.8,
     "reviewCount": null,
-    "googleMapLink": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
-    "matchedName": "조양칼국수",
-    "sourceUrl": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "googleMapLink": "https://www.google.com/maps/search/%EC%98%A4%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EB%B3%B4%EB%A0%B9%EB%82%A8%EB%A1%9C+125-7+1%EC%B8%B5/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "오양칼국수 충남 보령시 보령남로 125-7 1층",
+    "sourceUrl": "https://www.google.com/maps/search/%EC%98%A4%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EB%B3%B4%EB%A0%B9%EB%82%A8%EB%A1%9C+125-7+1%EC%B8%B5/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
     "evidence": "조양칼국수 | 3.8",
     "checkedAt": "2026-07-27",
     "note": "구글 지도 공개 업체 평점"
@@ -6723,14 +6957,13 @@ const googlePlaceData = {
     "note": "구글 지도 공개 업체 평점"
   },
   "커피인터뷰대천": {
-    "rating": 3.3,
+    "rating": null,
     "reviewCount": null,
     "googleMapLink": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
-    "matchedName": "커피인터뷰",
+    "matchedName": null,
     "sourceUrl": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
-    "evidence": "커피인터뷰 | 3.3",
     "checkedAt": "2026-07-27",
-    "note": "구글 지도 공개 업체 평점"
+    "note": "동일 업체의 공개 구글 평점을 확인하지 못함"
   },
   "바다듬루프탑카페": {
     "rating": 4.8,
@@ -6739,6 +6972,36 @@ const googlePlaceData = {
     "matchedName": "바다듬 루프탑 카페 보령점",
     "sourceUrl": "https://www.google.com/maps/place/%EB%B0%94%EB%8B%A4%EB%93%AC+%EB%A3%A8%ED%94%84%ED%83%91+%EC%B9%B4%ED%8E%98+%EB%B3%B4%EB%A0%B9%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x357085f14e3bc9c9:0x2b7e16b68fa0b893!8m2!3d36.3271466!4d126.5068524!16s%2Fg%2F11t7dgsp17?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
     "evidence": "바다듬 루프탑 카페 보령점 | 4.8",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "성지 2호점": {
+    "rating": 4.2,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "성지2호점",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "성지2호점 | 4.2",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "키레이나": {
+    "rating": 5,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%ED%82%A4%EB%A0%88%EC%9D%B4%EB%82%98/data=!3m1!4b1!4m6!3m5!1s0x3570810022825b0d:0xb92834ea4f7fd366!8m2!3d36.3372732!4d126.6088961!16s%2Fg%2F11xck19npp?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "키레이나",
+    "sourceUrl": "https://www.google.com/maps/place/%ED%82%A4%EB%A0%88%EC%9D%B4%EB%82%98/data=!3m1!4b1!4m6!3m5!1s0x3570810022825b0d:0xb92834ea4f7fd366!8m2!3d36.3372732!4d126.6088961!16s%2Fg%2F11xck19npp?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "키레이나 | 5.0",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "황해원": {
+    "rating": 4,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%ED%99%A9%ED%95%B4%EC%9B%90/data=!3m1!4b1!4m6!3m5!1s0x35707faa422b8067:0x59f528891b728d20!8m2!3d36.3360387!4d126.6508301!16s%2Fg%2F1th1rz2g?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "황해원",
+    "sourceUrl": "https://www.google.com/maps/place/%ED%99%A9%ED%95%B4%EC%9B%90/data=!3m1!4b1!4m6!3m5!1s0x35707faa422b8067:0x59f528891b728d20!8m2!3d36.3360387!4d126.6508301!16s%2Fg%2F1th1rz2g?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "황해원 | 4.0",
     "checkedAt": "2026-07-27",
     "note": "구글 지도 공개 업체 평점"
   }
