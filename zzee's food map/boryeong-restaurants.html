@@ -276,6 +276,22 @@
         font-weight: 900;
       }
 
+      .restaurant-cell {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .restaurant-image {
+        width: 62px;
+        height: 48px;
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--bg);
+        object-fit: cover;
+      }
+
       .address {
         min-width: 260px;
         color: var(--muted);
@@ -399,6 +415,7 @@
         <span>G 구글</span>
         <span>— 공개 평점 미확인</span>
         <span>평균 4.5 초과는 4.5+ 표시</span>
+        <span>K·N은 휴대폰에서 지도 앱으로 열림</span>
       </div>
 
       <nav class="category-nav" id="categoryNav" aria-label="분류 바로가기"></nav>
@@ -414,6 +431,7 @@
 
     <script src="./js/data.js"></script>
     <script src="./js/naver-shared-restaurants.js"></script>
+    <script src="./js/map-app-links.js"></script>
     <script>
       const CATEGORY_ORDER = ["한식", "중식", "일식", "디저트", "양식"];
       const PLATFORM_KEYS = ["kakao", "naver", "google"];
@@ -480,14 +498,14 @@
 
       const mapLinks = (restaurant) =>
         [
-          ["kakao", restaurant.kakaoMapLink],
-          ["naver", restaurant.naverMapLink],
-          ["google", restaurant.googleMapLink],
+          ["kakao", "K"],
+          ["naver", "N"],
+          ["google", "G"],
         ]
-          .filter(([, url]) => url)
+          .filter(([key]) => restaurant[`${key}MapLink`])
           .map(
-            ([key, url]) =>
-              `<a href="${escapeHtml(url)}" target="_blank" rel="noopener" aria-label="${PLATFORM_SHORT[key]} 지도에서 ${escapeHtml(restaurant.name)} 보기">${PLATFORM_SHORT[key]}</a>`
+            ([key, label]) =>
+              `<a ${window.MapAppLinks.anchorAttributes(key, restaurant)} aria-label="${PLATFORM_SHORT[key]} 지도에서 ${escapeHtml(restaurant.name)} 보기">${label}</a>`
           )
           .join("");
 
@@ -497,9 +515,25 @@
             .map((restaurant) => {
               const average = platformAverage(restaurant);
               const isHigh = average > 4.5;
+              const fallbackImage =
+                CATEGORY_META[restaurant.category]?.image ||
+                CATEGORY_META["한식"]?.image ||
+                "";
+              const representativeImage =
+                restaurant.images?.find(Boolean) || fallbackImage;
               return `
                 <tr class="${isHigh ? "is-high" : ""}">
-                  <td class="restaurant-name">${escapeHtml(restaurant.name)}</td>
+                  <td class="restaurant-name">
+                    <div class="restaurant-cell">
+                      <img
+                        class="restaurant-image"
+                        src="${escapeHtml(representativeImage)}"
+                        alt="${escapeHtml(restaurant.name)} 대표 이미지"
+                        onerror="this.onerror=null;this.src='${escapeHtml(fallbackImage)}'"
+                      />
+                      <span>${escapeHtml(restaurant.name)}</span>
+                    </div>
+                  </td>
                   <td class="address">${escapeHtml(restaurant.address)}</td>
                   ${PLATFORM_KEYS.map(
                     (key) =>

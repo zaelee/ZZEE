@@ -187,6 +187,23 @@ try {
     url: `http://127.0.0.1:${port}/boryeong-restaurants.html?verify=category-table`,
   });
   await sleep(2500);
+  await send("Runtime.evaluate", {
+    expression: `Promise.race([
+      Promise.all(
+        [...document.querySelectorAll(".restaurant-image")].map(
+          (image) =>
+            image.complete
+              ? Promise.resolve()
+              : new Promise((resolve) => {
+                  image.addEventListener("load", resolve, { once: true });
+                  image.addEventListener("error", resolve, { once: true });
+                })
+        )
+      ),
+      new Promise((resolve) => setTimeout(resolve, 5000)),
+    ])`,
+    awaitPromise: true,
+  });
 
   const tableEvaluation = await send("Runtime.evaluate", {
     expression: `(() => ({
@@ -195,6 +212,12 @@ try {
       names: [...document.querySelectorAll(".restaurant-name")].map((node) => node.textContent.trim()),
       highRatingNames: [...document.querySelectorAll("tr.is-high .restaurant-name")].map((node) => node.textContent.trim()),
       links: [...document.querySelectorAll(".map-links a")].length,
+      appLinks: [...document.querySelectorAll(".map-links a[data-map-app]")].length,
+      images: [...document.querySelectorAll(".restaurant-image")].map((image) => ({
+        name: image.closest("tr")?.querySelector(".restaurant-name")?.textContent?.trim() || "",
+        complete: image.complete,
+        width: image.naturalWidth,
+      })),
     }))()`,
     returnByValue: true,
   });
@@ -214,6 +237,12 @@ try {
           rows: table.names.length,
           highRatingNames: table.highRatingNames,
           mapLinks: table.links,
+          appLinks: table.appLinks,
+          images: table.images.length,
+          loadedImages: table.images.filter((image) => image.complete && image.width > 0).length,
+          missingImages: table.images
+            .filter((image) => !image.complete || image.width <= 0)
+            .map((image) => image.name),
         },
       },
       null,
@@ -231,6 +260,10 @@ try {
     throw new Error(`보령 분류표 4.5+ 대상 오류: ${table.highRatingNames.join(", ")}`);
   }
   if (table.links < 50) throw new Error("보령 분류표 지도 링크 누락");
+  if (table.appLinks !== 36) throw new Error("보령 분류표 카카오·네이버 앱 링크 누락");
+  if (table.images.length !== 18 || table.images.some((image) => !image.complete || image.width <= 0)) {
+    throw new Error("보령 분류표 대표 이미지 표시 오류");
+  }
 } finally {
   socket?.close();
   server.close();
