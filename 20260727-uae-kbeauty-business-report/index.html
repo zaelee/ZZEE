@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="한국 화장품의 UAE 두바이 수입·유통 사업을 투자 검토 관점에서 분석한 시장·조직·제품·실행 보고서">
+  <title>UAE 두바이 K-Beauty 수입·유통 사업 검토안</title>
+  <style>
+    :root {
+      --ink: #18211c;
+      --muted: #667269;
+      --paper: #f7f5ef;
+      --card: #fffef9;
+      --line: #dcded5;
+      --green: #164f3b;
+      --green-soft: #dfece4;
+      --gold: #b98235;
+      --gold-soft: #f3e8d6;
+      --red: #9d3f36;
+      --red-soft: #f5e4df;
+      --shadow: 0 16px 45px rgba(30, 48, 38, .08);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 1%, rgba(185, 130, 53, .11), transparent 27rem),
+        linear-gradient(180deg, #f9f7f1 0%, var(--paper) 100%);
+      font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", Inter, system-ui, sans-serif;
+      line-height: 1.68;
+      word-break: keep-all;
+    }
+
+    a { color: var(--green); text-underline-offset: 3px; }
+    a:hover { color: #0b3425; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+    .skip:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      padding: .75rem 1rem;
+      background: #fff;
+      border-radius: 8px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(220, 222, 213, .9);
+      background: rgba(249, 247, 241, .92);
+      backdrop-filter: blur(14px);
+    }
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 60px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brandmark {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brandmark span:first-child {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      color: white;
+      background: var(--green);
+      font-size: .78rem;
+    }
+    .toplinks {
+      display: flex;
+      gap: .4rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .toplinks a {
+      padding: .4rem .65rem;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .toplinks a:hover { color: var(--green); background: var(--green-soft); }
+
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      padding: 88px 0 54px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(300px, .75fr);
+      gap: 42px;
+      align-items: end;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1.2rem;
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 850px;
+      margin-bottom: 1.35rem;
+      font-family: Georgia, "Noto Serif KR", serif;
+      font-size: clamp(2.55rem, 5.2vw, 5.25rem);
+      line-height: 1.06;
+      letter-spacing: -.055em;
+    }
+    .lead {
+      max-width: 780px;
+      margin-bottom: 0;
+      color: #4e5c53;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
+    }
+    .hero-meta {
+      padding: 1.45rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 249, .8);
+      box-shadow: var(--shadow);
+    }
+    .hero-meta dl { margin: 0; }
+    .hero-meta div {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: .8rem;
+      padding: .72rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-meta div:last-child { border: 0; }
+    dt { color: var(--muted); font-size: .8rem; font-weight: 700; }
+    dd { margin: 0; font-size: .9rem; font-weight: 750; }
+
+    .decision {
+      margin-bottom: 72px;
+      padding: clamp(1.5rem, 4vw, 2.7rem);
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 2rem;
+      border: 1px solid #b9d1c1;
+      border-radius: 24px;
+      background: var(--green);
+      color: white;
+      box-shadow: 0 24px 60px rgba(22, 79, 59, .2);
+    }
+    .decision-label {
+      align-self: start;
+      padding: .75rem 1rem;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .decision h2 {
+      margin-bottom: .65rem;
+      font-size: clamp(1.6rem, 3vw, 2.45rem);
+      line-height: 1.25;
+    }
+    .decision p { margin-bottom: 0; color: rgba(255,255,255,.83); }
+
+    .section { padding: 34px 0 78px; scroll-margin-top: 78px; }
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 2rem;
+    }
+    .kicker {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: .65rem;
+      font-family: Georgia, "Noto Serif KR", serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+    h3 {
+      margin-bottom: .7rem;
+      font-size: 1.12rem;
+      line-height: 1.4;
+    }
+    .section-head p { color: var(--muted); }
+
+    .grid { display: grid; gap: 1rem; }
+    .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 10px 28px rgba(37, 50, 42, .045);
+    }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .metric strong {
+      display: block;
+      margin-bottom: .25rem;
+      color: var(--green);
+      font-family: Georgia, serif;
+      font-size: clamp(1.75rem, 3vw, 2.7rem);
+      line-height: 1;
+    }
+    .metric span { color: var(--muted); font-size: .86rem; }
+    .source {
+      display: inline-flex;
+      min-width: 1.55rem;
+      height: 1.55rem;
+      margin-left: .18rem;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #b9cec0;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: .69rem;
+      font-weight: 900;
+      line-height: 1;
+      text-decoration: none;
+      vertical-align: .15em;
+    }
+    .source:hover { background: var(--green); color: white; }
+    .note {
+      margin-top: 1rem;
+      padding: 1rem 1.15rem;
+      border-left: 4px solid var(--gold);
+      background: var(--gold-soft);
+      color: #654d2d;
+      font-size: .9rem;
+    }
+    .warn {
+      border-left-color: var(--red);
+      background: var(--red-soft);
+      color: #6f302a;
+    }
+    .plain-list { margin: .5rem 0 0; padding-left: 1.15rem; }
+    .plain-list li + li { margin-top: .38rem; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 10px 30px rgba(37, 50, 42, .045);
+    }
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: .89rem;
+    }
+    th, td {
+      padding: .95rem 1rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #48534c;
+      background: #f0f1eb;
+      font-size: .77rem;
+      letter-spacing: .025em;
+    }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #fbfaf5; }
+    .money { white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .status {
+      display: inline-block;
+      padding: .23rem .55rem;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+    .status.hold { background: var(--gold-soft); color: #7b5723; }
+    .status.stop { background: var(--red-soft); color: var(--red); }
+
+    .channel {
+      position: relative;
+      overflow: hidden;
+    }
+    .channel::after {
+      content: attr(data-order);
+      position: absolute;
+      right: .9rem;
+      bottom: -.7rem;
+      color: rgba(22,79,59,.06);
+      font: 900 5rem/1 Georgia, serif;
+    }
+    .channel b {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--green);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .org {
+      padding: 1.6rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      text-align: center;
+    }
+    .org-ceo {
+      width: min(360px, 100%);
+      margin: 0 auto 2.2rem;
+      padding: 1rem;
+      border-radius: 14px;
+      background: var(--green);
+      color: white;
+      font-weight: 900;
+      position: relative;
+    }
+    .org-ceo::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 1px;
+      height: 2.2rem;
+      background: var(--line);
+    }
+    .org-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem;
+    }
+    .org-node {
+      padding: .95rem .65rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f8f7f1;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    .org-node small {
+      display: block;
+      margin-top: .2rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .role-card { padding: 0; overflow: hidden; }
+    .role-title {
+      padding: 1.05rem 1.2rem;
+      border-bottom: 1px solid var(--line);
+      background: #f1f2ec;
+    }
+    .role-title strong { display: block; }
+    .role-title span { color: var(--muted); font-size: .8rem; }
+    .role-body { padding: 1.15rem 1.2rem; }
+    .role-body dl { margin: 0; }
+    .role-body div + div { margin-top: .8rem; }
+    .role-body dt { margin-bottom: .16rem; color: var(--green); }
+    .role-body dd { color: #4d5951; font-size: .86rem; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      counter-reset: phase;
+    }
+    .phase {
+      position: relative;
+      padding: 1.35rem;
+      counter-increment: phase;
+      border-top: 4px solid var(--green);
+    }
+    .phase::before {
+      content: "0" counter(phase);
+      display: block;
+      margin-bottom: .65rem;
+      color: var(--gold);
+      font: 800 1.1rem Georgia, serif;
+    }
+    .phase .months {
+      display: inline-block;
+      margin-bottom: .55rem;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 800;
+    }
+    .gate {
+      margin-top: 1rem;
+      padding-top: .8rem;
+      border-top: 1px dashed var(--line);
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .formula {
+      padding: clamp(1.3rem, 3vw, 2.2rem);
+      border-radius: var(--radius);
+      background: #1e2922;
+      color: white;
+    }
+    .formula-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      align-items: center;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: clamp(.9rem, 2vw, 1.15rem);
+    }
+    .formula-line span {
+      padding: .4rem .6rem;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 7px;
+      background: rgba(255,255,255,.07);
+    }
+    .formula p { margin: 1rem 0 0; color: rgba(255,255,255,.7); font-size: .85rem; }
+
+    .risk-high { color: var(--red); font-weight: 850; }
+    .risk-mid { color: #99641c; font-weight: 850; }
+    .risk-low { color: var(--green); font-weight: 850; }
+
+    .sources {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: sources;
+    }
+    .sources li {
+      counter-increment: sources;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: .65rem;
+      padding: .8rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .85rem;
+    }
+    .sources li::before {
+      content: counter(sources);
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 900;
+    }
+    .sources li:last-child { border-bottom: 0; }
+    .sources strong { display: block; margin-bottom: .12rem; }
+    .sources span { color: var(--muted); }
+
+    footer {
+      padding: 30px 0 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 62px; }
+      .decision { grid-template-columns: 1fr; gap: 1rem; }
+      .cols-4, .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cols-3, .org-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toplinks a:nth-child(n+5) { display: none; }
+    }
+    @media (max-width: 620px) {
+      .wrap, .topbar-inner { width: min(100% - 22px, var(--max)); }
+      .brandmark span:last-child { display: none; }
+      .toplinks a { font-size: .76rem; padding-inline: .5rem; }
+      .hero { padding-top: 46px; }
+      h1 { font-size: 2.65rem; }
+      .cols-2, .cols-3, .cols-4, .timeline, .org-row { grid-template-columns: 1fr; }
+      .section { padding-bottom: 58px; }
+      .decision { border-radius: 18px; }
+      .card { padding: 1.15rem; }
+    }
+    @media print {
+      body { background: white; font-size: 10pt; }
+      .topbar { display: none; }
+      .wrap { width: 100%; }
+      .hero { padding: 30px 0; }
+      .section { padding: 22px 0; break-inside: avoid; }
+      .card, .table-wrap, .org { box-shadow: none; }
+      .decision { background: white; color: black; border: 2px solid var(--green); box-shadow: none; }
+      .decision p { color: #444; }
+      a { color: inherit; text-decoration: none; }
+      .source { border-color: #888; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brandmark" href="../index.html"><span>Z</span><span>ZZEE Reports</span></a>
+      <nav class="toplinks" aria-label="보고서 목차">
+        <a href="#market">시장</a>
+        <a href="#products">제품</a>
+        <a href="#organization">조직</a>
+        <a href="#roadmap">12개월</a>
+        <a href="#economics">손익</a>
+        <a href="#risk">위험</a>
+        <a href="#sources">출처</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Investor Review · Dubai, UAE</span>
+          <h1>UAE 두바이<br>K‑Beauty 사업 검토안</h1>
+          <p class="lead">한국 화장품의 사입·수입·유통 사업을 시장성, 규제, 제품 포트폴리오, 조직 역량, 12개월 실행 가능성의 관점에서 검토한 창업 준비 보고서입니다.</p>
+        </div>
+        <aside class="hero-meta" aria-label="보고서 정보">
+          <dl>
+            <div><dt>기준일</dt><dd>2026-07-27</dd></div>
+            <div><dt>대상 시장</dt><dd>UAE 두바이 → GCC 확장</dd></div>
+            <div><dt>사업 단계</dt><dd>Pre-seed / 시장 검증 전</dd></div>
+            <div><dt>판단</dt><dd>조건부 진행(Conditional Go)</dd></div>
+            <div><dt>통화</dt><dd>AED, VAT 포함 소매가 기준</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="decision" aria-label="투자 판단">
+        <div class="decision-label">Conditional Go</div>
+        <div>
+          <h2>시장은 매력적이지만, 현재 팀은 아직 “투자 가능한 유통사”가 아니다.</h2>
+          <p>유명 K‑Beauty 제품을 단순 사입하면 UAE의 병행수입·온라인 할인 경쟁에 노출된다. 초기 8–12개 SKU, 적법한 현지 수입·등록 체계, 전업 CEO, 재주문이 확인되는 B2B 채널을 먼저 만들고 난 뒤 독점권과 자체 브랜드로 이동해야 한다.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="market">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">01 · Market</span>
+          <h2>큰 시장보다 중요한 것은<br>성장하는 세부 시장이다</h2>
+          <p>기관마다 ‘뷰티 전체’와 ‘화장품·퍼스널케어’의 범위가 달라 시장 규모가 다르게 나온다. 투자안에서는 단일 숫자를 섞지 않고 정의별로 구분했다.</p>
+        </div>
+
+        <div class="grid cols-4">
+          <article class="card metric">
+            <strong>US$1.16B</strong>
+            <span>UAE 뷰티·퍼스널케어 광의 시장 추정 <a class="source" href="#src-1" aria-label="출처 1">1</a></span>
+          </article>
+          <article class="card metric">
+            <strong>US$395.4M</strong>
+            <span>2025년 협의 화장품 시장, 2031년 US$504.6M 전망 <a class="source" href="#src-2" aria-label="출처 2">2</a></span>
+          </article>
+          <article class="card metric">
+            <strong>AED 1.81B</strong>
+            <span>2025년 UAE 스킨케어, 2029년 AED 2.13B 전망 <a class="source" href="#src-3" aria-label="출처 3">3</a></span>
+          </article>
+          <article class="card metric">
+            <strong>+91%</strong>
+            <span>2024년 한국 화장품의 대 UAE 수출 증가율 <a class="source" href="#src-4" aria-label="출처 4">4</a></span>
+          </article>
+        </div>
+
+        <div class="grid cols-3" style="margin-top: 1rem;">
+          <article class="card">
+            <h3>소비자 기반</h3>
+            <p>두바이의 2024년 말 상주 인구는 424만 8,200명이며, 근무·관광 등 일시 체류를 포함한 주간 활동 인구는 593만 7,800명에 달한다. 다국적 거주자와 관광객을 함께 보는 상품·언어 설계가 필요하다. <a class="source" href="#src-5" aria-label="출처 5">5</a></p>
+          </article>
+          <article class="card">
+            <h3>디지털 구매 습관</h3>
+            <p>UAE·사우디 소비자의 73%가 소셜미디어를 통해 구매한 경험이 있고, UAE 소비자의 모바일 온라인 쇼핑 비중은 조사국 중 가장 높은 37%였다. SNS는 인지도 매체가 아니라 판매 채널이다. <a class="source" href="#src-6" aria-label="출처 6">6</a><a class="source" href="#src-7" aria-label="출처 7">7</a></p>
+          </article>
+          <article class="card">
+            <h3>성장 구간</h3>
+            <p>Mass가 2025년 시장의 67.65%를 차지하지만, Premium은 연 7.1%, Natural/Organic은 7.6%, Online은 9.11% 성장 전망이다. ‘무조건 저가’보다 효능 근거가 있는 중가 제품이 유리하다. <a class="source" href="#src-2" aria-label="출처 2">2</a></p>
+          </article>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 1rem;">
+          <table>
+            <thead>
+              <tr><th>핵심 소비층</th><th>구매 동기</th><th>적합 제품</th><th>메시지·채널</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>20–35세 디지털 네이티브</td><td>틱톡·인스타그램 화제성, 전후 비교, 합리적 가격</td><td>토너, 앰플, 패치, 립, 쿠션</td><td>영어 중심 숏폼, 마이크로 크리에이터, Amazon/Noon/DTC</td></tr>
+              <tr><td>민감·트러블 피부층</td><td>더마·저자극·성분 투명성</td><td>약산성 클렌저, 센텔라, 판테놀, 장벽 크림</td><td>약국·전문 리테일, 성분 설명, 과장 없는 효능 콘텐츠</td></tr>
+              <tr><td>프리미엄 거주자·관광객</td><td>고급 경험, 선물성, 신제품 발견</td><td>프리미엄 세럼, 마스크, 바디케어, 디바이스</td><td>Sephora/Faces형 리테일, 호텔·살롱, 팝업</td></tr>
+              <tr><td>남아시아·중동 가족 소비층</td><td>가격 대비 용량, 보습, 톤·색상 적합성</td><td>보습·바디, 멀티팩, 넓은 셰이드 메이크업</td><td>아랍어·영어, 커뮤니티 크리에이터, 프로모션 번들</td></tr>
+              <tr><td>B2B 바이어</td><td>회전율, 독점성, 안정 공급, 판촉 지원</td><td>검증된 히어로 SKU + 독점 가능한 신생 브랜드</td><td>샘플·판매 데이터·등록 완료 자료를 갖춘 제안</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid cols-3" style="margin-top: 1rem;">
+          <article class="card channel" data-order="1">
+            <b>Discovery</b>
+            <h3>SNS·크리에이터</h3>
+            <p>현지 피부 고민과 사용법을 보여 주고 DTC·마켓플레이스로 전환한다. 광고성 게시물은 UAE 광고 허가와 표기 의무를 확인해야 한다. <a class="source" href="#src-17" aria-label="출처 17">17</a></p>
+          </article>
+          <article class="card channel" data-order="2">
+            <b>Validation</b>
+            <h3>DTC·마켓플레이스</h3>
+            <p>Amazon/Noon과 자사몰로 가격·검색 수요를 확인한다. 단, 플랫폼 수수료와 할인 후 실제 기여이익을 채널별로 분리한다.</p>
+          </article>
+          <article class="card channel" data-order="3">
+            <b>Scale</b>
+            <h3>약국·뷰티 리테일·B2B</h3>
+            <p>Life/Boots/Aster, Sephora/Faces/Ulta 등 목적별 채널에 진입한다. UAE 유통은 약국·전문 뷰티·온라인이 병존한다. <a class="source" href="#src-2" aria-label="출처 2">2</a></p>
+          </article>
+        </div>
+
+        <div class="note warn">
+          <strong>경쟁 현실:</strong> COSRX, Anua, Beauty of Joseon 등은 이미 UAE 전문 리테일과 온라인에서 판매된다. Olive Young–Life Pharmacy, JKOSMEC–Apparel Group 같은 한국 사업자의 현지 확장 사례도 있어 “한국 제품을 가져온다” 자체는 차별화가 아니다. 가격 통제권, UAE/GCC 유통권, 현지 콘텐츠·재고 운영 능력이 차별점이 되어야 한다. <a class="source" href="#src-2" aria-label="출처 2">2</a><a class="source" href="#src-8" aria-label="출처 8">8</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">02 · Assortment</span>
+          <h2>처음에는 “종류”보다<br>팔리는 이유를 좁혀야 한다</h2>
+          <p>초기 포트폴리오는 수분·진정·장벽·트러블이라는 UAE 기후와 소비 수요에 맞춰 8–12개 SKU로 제한한다. 현지 가격은 조사일의 판매·할인가로 변동될 수 있다.</p>
+        </div>
+
+        <div class="grid cols-4">
+          <article class="card"><h3>1. 클렌징</h3><p>약산성 젤·폼, 오일. 스킨케어 진입 가격대이자 재구매가 빠르다. UAE 클렌저 시장은 2025–2029년 연 5% 성장 전망이다. <a class="source" href="#src-3" aria-label="출처 3">3</a></p></article>
+          <article class="card"><h3>2. 수분·진정</h3><p>토너, 히알루론산 세럼, 센텔라 앰플. 더위·냉방·민감 피부를 함께 겨냥한다.</p></article>
+          <article class="card"><h3>3. 장벽·트러블</h3><p>판테놀·세라마이드 크림, 하이드로콜로이드 패치. 효능 메시지가 명확하고 약국 채널과도 맞는다.</p></article>
+          <article class="card"><h3>4. 선케어</h3><p>수요는 크지만 온라인 할인, SPF 표시·효능 주장, 등록 범주를 먼저 검증한다. 2단계 제품군으로 둔다.</p></article>
+          <article class="card"><h3>5. 마스크</h3><p>시트·하이드로겔. 체험·시딩에는 유리하지만 일회성 유행과 낮은 재구매를 경계한다.</p></article>
+          <article class="card"><h3>6. 색조</h3><p>립 틴트와 쿠션. 셰이드 포용성이 핵심이며, 소수 색상 대량 사입보다 미니·테스트 판매가 우선이다.</p></article>
+          <article class="card"><h3>7. 프리미엄 바디</h3><p>바디 장벽·보습 크림. K‑Beauty의 얼굴 중심 경쟁을 피하면서 객단가를 높일 수 있다. <a class="source" href="#src-2" aria-label="출처 2">2</a></p></article>
+          <article class="card"><h3>8. 뷰티 디바이스</h3><p>고객 관심은 높지만 높은 재고액·A/S·전기 적합성 부담이 있다. 초기에는 예약판매·제휴 방식이 안전하다.</p></article>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 1.2rem;">
+          <table>
+            <thead>
+              <tr><th>추천 제품 / 종류</th><th>UAE 관찰가</th><th>역할</th><th>초기 판단</th><th>근거</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>COSRX Low pH Good Morning Gel Cleanser</strong><br>약산성 클렌저</td><td class="money">AED 39–69</td><td>진입가·재구매</td><td><span class="status">테스트</span></td><td><a href="#src-19">Faces/COSRX</a></td></tr>
+              <tr><td><strong>Anua Heartleaf 77% Soothing Toner</strong><br>진정 토너</td><td class="money">AED 82–109</td><td>SNS 히어로 SKU</td><td><span class="status">테스트</span></td><td><a href="#src-20">Watsons/Anua</a></td></tr>
+              <tr><td><strong>Torriden Dive‑In Hyaluronic Acid Serum</strong><br>수분 세럼</td><td class="money">AED 74–99</td><td>기후 맞춤 수분</td><td><span class="status">테스트</span></td><td><a href="#src-21">Watsons/Torriden</a></td></tr>
+              <tr><td><strong>SKIN1004 Centella Ampoule</strong><br>진정 앰플</td><td class="money">AED 74–119</td><td>민감 피부</td><td><span class="status">테스트</span></td><td><a href="#src-18">UAE K‑Beauty 리테일</a></td></tr>
+              <tr><td><strong>Beauty of Joseon Glow Serum</strong><br>브라이트닝 세럼</td><td class="money">AED 64–85</td><td>인지도·선물</td><td><span class="status">테스트</span></td><td><a href="#src-18">UAE K‑Beauty 리테일</a></td></tr>
+              <tr><td><strong>Dr. Althea 345 Relief Cream</strong><br>장벽 크림</td><td class="money">AED 89–119</td><td>중가 객단가</td><td><span class="status">테스트</span></td><td><a href="#src-18">UAE K‑Beauty 리테일</a></td></tr>
+              <tr><td><strong>COSRX Acne Pimple Master Patch</strong><br>트러블 패치</td><td class="money">AED 19–25</td><td>충동구매·번들</td><td><span class="status">테스트</span></td><td><a href="#src-19">Faces/COSRX</a></td></tr>
+              <tr><td><strong>Some By Mi Beta Panthenol Repair Body Cream</strong><br>바디 장벽</td><td class="money">AED 98.70</td><td>카테고리 차별화</td><td><span class="status">테스트</span></td><td><a href="#src-25">Life Pharmacy</a></td></tr>
+              <tr><td><strong>Biodance Collagen Mask</strong><br>하이드로겔 마스크</td><td class="money">AED 79+</td><td>시딩·체험</td><td><span class="status hold">소량</span></td><td><a href="#src-18">UAE K‑Beauty 리테일</a></td></tr>
+              <tr><td><strong>Beauty of Joseon Relief Sun</strong><br>선케어</td><td class="money">AED 32–105</td><td>고수요·고경쟁</td><td><span class="status hold">2단계</span></td><td><a href="#src-18">가격 편차 확인</a></td></tr>
+              <tr><td><strong>Rom&amp;nd Glasting Water Tint</strong><br>립 틴트</td><td class="money">AED 69</td><td>색조 유입</td><td><span class="status hold">소량</span></td><td><a href="#src-22">Watsons/Rom&amp;nd</a></td></tr>
+              <tr><td><strong>TIRTIR Mask Fit Red Cushion</strong><br>쿠션 파운데이션</td><td class="money">AED 49–129</td><td>셰이드 수요</td><td><span class="status hold">미니/6색</span></td><td><a href="#src-23">Faces/TIRTIR</a></td></tr>
+              <tr><td><strong>VT Reedle Shot</strong><br>스피큘 앰플</td><td class="money">약 AED 135</td><td>화제성</td><td><span class="status stop">보류</span></td><td>자극·표현·VOC 위험</td></tr>
+              <tr><td><strong>Medicube AGE‑R</strong><br>뷰티 디바이스</td><td class="money">AED 489–997</td><td>프리미엄</td><td><span class="status stop">재고 금지</span></td><td>예약판매·제휴만</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <strong>추천 원칙:</strong> 위 제품은 “바로 대량 사입” 목록이 아니다. 공급권·GMP·자유판매증명서·성분표·시험성적서·UAE 등록 가능성, 유통기한, 실제 상시 판매가를 확인한 뒤 브랜드당 2–3개 SKU만 20–50개씩 테스트한다. 유명 브랜드를 확보하지 못하면 동일 효능의 UAE/GCC 독점 가능한 중소 브랜드로 교체하는 편이 낫다.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="regulation">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">03 · Regulation & Operations</span>
+          <h2>등록은 서류 업무가 아니라<br>사업 모델의 선행 조건이다</h2>
+          <p>제품 분류와 판매 지역에 따라 관할 절차가 달라질 수 있다. UAE 법인·수입자와 현지 규제 전문가가 제품별로 확인해야 하며, 아래는 투자 검토용 운영 체크리스트다.</p>
+        </div>
+
+        <div class="grid cols-2">
+          <article class="card">
+            <h3>제품 적합성·등록 준비</h3>
+            <ul class="plain-list">
+              <li>유효한 UAE 사업자·수입 활동 라이선스</li>
+              <li>GSO 1943 기준의 인정 시험성적서</li>
+              <li>전성분과 배합비, 제품 안전성 보고서, CoA</li>
+              <li>한국 자유판매증명서, 제조사 GMP, 유통계약서</li>
+              <li>아랍어·영어 표시사항과 최종 패키지 아트워크</li>
+              <li>브랜드·원산지·카테고리별 인증 범위 확인</li>
+            </ul>
+            <p class="note">MOIAT 안내 카드상 1개 인증서에 동일 브랜드·원산지·카테고리 기준 최대 25 SKU가 가능하며, 표기 수수료는 심사 AED 670와 인증 AED 620이다. 시험·번역·대행비는 별도다. <a class="source" href="#src-9" aria-label="출처 9">9</a><a class="source" href="#src-10" aria-label="출처 10">10</a></p>
+          </article>
+          <article class="card">
+            <h3>분류·표시 리스크</h3>
+            <ul class="plain-list">
+              <li>일반 화장품과 의료적 효능을 주장하는 제품을 구분</li>
+              <li>“치료·재생·여드름 제거” 등 문구는 분류를 바꿀 수 있음</li>
+              <li>두바이 판매 제품은 Dubai Municipality 서비스와 Montaji 절차 확인</li>
+              <li>인플루언서 유·무상 광고의 UAE 광고 허가·번호 표시 확인</li>
+              <li>미등록 제품은 전시·판매 전에 차단하는 내부 승인 체계 운영</li>
+            </ul>
+            <p class="note warn">EDE의 의료적 효능 화장품 등 보건제품 등록은 별도 절차가 될 수 있고, 공식 안내상 처리 목표가 45근무일이다. 제품을 먼저 발주한 뒤 분류를 확인하면 재고가 묶인다. <a class="source" href="#src-11" aria-label="출처 11">11</a><a class="source" href="#src-12" aria-label="출처 12">12</a><a class="source" href="#src-17" aria-label="출처 17">17</a></p>
+          </article>
+        </div>
+
+        <div class="grid cols-4" style="margin-top: 1rem;">
+          <article class="card"><h3>1. 권리 확인</h3><p>브랜드의 UAE/GCC 기존 계약, 온라인 판매권, 상표권, 리셀러 허용 범위를 계약서로 확인한다.</p></article>
+          <article class="card"><h3>2. 등록 가능성</h3><p>PO 전에 현지 RA가 성분·표현·라벨·시험자료의 갭을 서면으로 판정한다.</p></article>
+          <article class="card"><h3>3. 통관·창고</h3><p>HS code, 원산지, 인보이스, 유통기한, 온도 조건을 통관사·3PL과 사전 점검한다. GCC 공동관세의 일반 세율은 CIF 기준 5%다. <a class="source" href="#src-13" aria-label="출처 13">13</a></p></article>
+          <article class="card"><h3>4. 판매 승인</h3><p>등록번호, 배치, 라벨 버전, 콘텐츠 표현을 SKU master에 연결하고 승인된 재고만 출고한다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="organization">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">04 · Organization</span>
+          <h2>직함보다 먼저<br>매출·규제·재고의 책임자를 정한다</h2>
+          <p>현재 여섯 명은 소싱·브랜드·크리에이티브·PR에 강점이 몰려 있다. 반면 전업 경영, 규제 전문성, B2B 영업, 재무·재고 운영은 부족하다.</p>
+        </div>
+
+        <div class="org" aria-label="권장 조직도">
+          <div class="org-ceo">CEO &amp; UAE General Manager<small style="display:block; opacity:.72; font-weight:600;">박재원 · 조건부</small></div>
+          <div class="org-row">
+            <div class="org-node">COO &amp; Head of Merchandising<small>송승연</small></div>
+            <div class="org-node">Key Account &amp; Channel Sales<small>신규 채용 필수</small></div>
+            <div class="org-node">Head of Brand &amp; Growth<small>노수민</small></div>
+            <div class="org-node">Creative Director<small>이정재</small></div>
+            <div class="org-node">Creator Partnerships &amp; PR Lead<small>조은비</small></div>
+            <div class="org-node">Quality Ops &amp; Regulatory Coordinator<small>노현지 + 외부 UAE RA</small></div>
+          </div>
+        </div>
+        <p class="note"><strong>수정 이유:</strong> 요청안처럼 CEO–MD–BD–Brand–Art–PR–Regulatory를 한 줄의 상하관계로 두면 의사결정이 느리고 전문 역할이 왜곡된다. 초기 스타트업은 CEO 아래에 상품·영업·성장·규제를 병렬로 두고, 송승연이 COO로 한국 공급과 실행 운영을 묶는 구조가 적합하다.</p>
+
+        <div class="table-wrap" style="margin-top: 1rem;">
+          <table>
+            <thead>
+              <tr><th>현재 인원</th><th>권장 직책</th><th>평가·수정 사항</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>박재원</td><td>CEO &amp; UAE General Manager</td><td>두바이 거주·다국적 고객 경험·현지 동선·네트워크 접근성은 초기 시장 학습 속도를 높인다. 그러나 승무원 경력 자체가 유통 P&amp;L·바이어 협상·법인 운영 능력을 증명하지는 않는다. 전업 전환과 LOI 성과가 CEO 선임 조건이다.</td></tr>
+              <tr><td>송승연</td><td>COO &amp; Head of Merchandising</td><td>MD보다 넓게 한국 브랜드 소싱, 발주, 마진, 판매 분석, 재고 운영을 총괄한다. 박재원이 비전업이면 임시 CEO를 맡을 1순위다.</td></tr>
+              <tr><td>노수민</td><td>Head of Brand &amp; Growth</td><td>Brand Manager의 전략·캠페인과 성장 KPI를 통합한다. 조은비·이정재와 겹치는 캠페인 실행 범위를 명확히 나눈다.</td></tr>
+              <tr><td>이정재</td><td>Creative Director</td><td>Art Director보다 브랜드 시스템, 상세페이지, 촬영, 광고 소재까지 포괄하는 명칭이 적합하다. 마케팅 방향은 노수민, 표현 품질은 이정재가 최종 책임진다.</td></tr>
+              <tr><td>노현지</td><td>Quality Operations &amp; Regulatory Coordinator</td><td>치위생사 경력은 위생·검수·VOC 정리에 도움이 되지만 UAE 화장품 규제 책임자 자격을 대신하지 못한다. 초기에는 Coordinator로 두고 현지 공인 RA·시험기관·통관사와 함께 일한다.</td></tr>
+              <tr><td>조은비</td><td>Creator Partnerships &amp; PR Lead</td><td>스타일링·셀럽 네트워크를 시딩과 행사에 활용한다. 인플루언서 선정의 최종 기준은 친분이 아니라 CAC, 코드 매출, 콘텐츠 사용권, 광고 허가다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2rem;">직책별 책임·KPI·역량·협업</h3>
+        <div class="grid cols-3">
+          <article class="card role-card">
+            <div class="role-title"><strong>CEO &amp; UAE GM</strong><span>박재원 · 조건부</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>전략·자금·현지 법인·매출·핵심 제휴와 최종 의사결정</dd></div>
+              <div><dt>KPI</dt><dd>매출, 기여이익, 현금 잔존기간, 20개 바이어 미팅, 3개 LOI, 20개 판매처</dd></div>
+              <div><dt>필요 역량</dt><dd>P&amp;L, 협상, UAE 사업 관행, 채용·갈등 관리, 영어</dd></div>
+              <div><dt>협업</dt><dd>전 기능 + 외부 법무·회계·규제</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>COO &amp; Head of Merchandising</strong><span>송승연</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>브랜드 발굴, 공급 협상, 발주, 원가·마진, 수요·재고 계획</dd></div>
+              <div><dt>KPI</dt><dd>매입원가율 30–35% 이하, 품절률 8% 이하, 재고회전 4회+, 폐기 2% 이하</dd></div>
+              <div><dt>필요 역량</dt><dd>엑셀·데이터, 공급계약, 수요예측, 실행 관리</dd></div>
+              <div><dt>협업</dt><dd>CEO, 영업, 규제, 3PL, 공급사</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Key Account &amp; Channel Sales</strong><span>신규 채용</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>약국·리테일·살롱·이커머스 입점, 주문·채권·프로모션 관리</dd></div>
+              <div><dt>KPI</dt><dd>활성 거래처, 재주문율 50%+, 매출총이익 35%+, DSO 45일 이하</dd></div>
+              <div><dt>필요 역량</dt><dd>UAE FMCG/뷰티 바이어 네트워크, Arabic/English, sell-in/sell-out</dd></div>
+              <div><dt>협업</dt><dd>CEO, COO, Brand, 물류·재무</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Head of Brand &amp; Growth</strong><span>노수민</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>시장 포지셔닝, 성장 계획, 캠페인·예산, 채널별 메시지</dd></div>
+              <div><dt>KPI</dt><dd>CAC, ROAS, DTC 기여이익 15%+, 재구매율 15%+, 브랜드 검색량</dd></div>
+              <div><dt>필요 역량</dt><dd>퍼포먼스 분석, 고객 조사, 영어 카피, 예산 배분</dd></div>
+              <div><dt>협업</dt><dd>Creative, PR, Sales, MD</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Creative Director</strong><span>이정재</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>비주얼 시스템, 현지 상세페이지, 촬영·광고 소재, 브랜드 가이드</dd></div>
+              <div><dt>KPI</dt><dd>소재 CTR/CVR 개선, 제작 리드타임, 채널 자산 완성률, 콘텐츠 재사용률</dd></div>
+              <div><dt>필요 역량</dt><dd>패키지·디지털 디자인, AI 제작 QA, 다문화 표현 감수성</dd></div>
+              <div><dt>협업</dt><dd>Brand, PR, Regulatory, 공급 브랜드</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Creator Partnerships &amp; PR Lead</strong><span>조은비</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>크리에이터 발굴·계약·시딩, 행사, earned media, 콘텐츠 사용권</dd></div>
+              <div><dt>KPI</dt><dd>시딩 게시율, 코드 매출, 유효 CPM/CAC, 사용권 확보율, 행사 리드</dd></div>
+              <div><dt>필요 역량</dt><dd>관계 구축, 계약·브리프, 소셜 분석, UAE 광고 규정 이해</dd></div>
+              <div><dt>협업</dt><dd>Brand, Creative, Regulatory, CEO</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Quality Ops &amp; Regulatory Coordinator</strong><span>노현지 + 외부 UAE RA</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>제품·배치 검수, 등록 문서 추적, 라벨·표현 검토, VOC·리콜 기록</dd></div>
+              <div><dt>KPI</dt><dd>출시 전 등록 100%, 중대 부적합 0건, VOC 48시간 응답, 문서 완결률</dd></div>
+              <div><dt>필요 역량</dt><dd>문서 통제, 성분·GSO 기본 이해, 품질사고 대응, 세밀함</dd></div>
+              <div><dt>협업</dt><dd>외부 RA·시험소·통관, COO, Creative, CS</dd></div>
+            </dl></div>
+          </article>
+          <article class="card role-card">
+            <div class="role-title"><strong>Fractional Finance · Legal · Logistics</strong><span>외부 전문 파트너</span></div>
+            <div class="role-body"><dl>
+              <div><dt>핵심 책임</dt><dd>부가세·법인세·회계, 계약·상표, 통관·창고·라스트마일</dd></div>
+              <div><dt>KPI</dt><dd>월 마감, 세무 신고, 현금예측, 통관 리드타임, 출고 정확도</dd></div>
+              <div><dt>필요 역량</dt><dd>UAE 실무 라이선스와 현지 레퍼런스</dd></div>
+              <div><dt>협업</dt><dd>CEO·COO 중심, 전 기능 지원</dd></div>
+            </dl></div>
+          </article>
+        </div>
+
+        <h3 style="margin-top: 2rem;">CEO 후보 평가 — 이력 정보만으로 산정한 임시 점수</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>후보</th><th>사업 판단</th><th>매출 창출</th><th>의사결정</th><th>글로벌 적합</th><th>팀 관리</th><th>합계 / 25</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>박재원</strong></td><td>3</td><td>4</td><td>3</td><td>5</td><td>3</td><td><strong>18</strong></td></tr>
+              <tr><td><strong>송승연</strong></td><td>4</td><td>4</td><td>4</td><td>2</td><td>3</td><td><strong>17</strong></td></tr>
+              <tr><td>노수민</td><td>3</td><td>3</td><td>3</td><td>2</td><td>3</td><td>14</td></tr>
+              <tr><td>이정재</td><td>3</td><td>2</td><td>3</td><td>2</td><td>3</td><td>13</td></tr>
+              <tr><td>조은비</td><td>2</td><td>3</td><td>3</td><td>2</td><td>3</td><td>13</td></tr>
+              <tr><td>노현지</td><td>2</td><td>2</td><td>3</td><td>2</td><td>3</td><td>12</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note warn">
+          <strong>최종 선정: 박재원 — 단, 조건부.</strong> 현지 거주와 국제 서비스 경험은 조사 비용·문화 해석·미팅 접근 시간을 줄이는 실질적 자산이다. 그러나 이것은 모방 불가능한 해자가 아니며 CEO 역량의 충분조건도 아니다. ① 전업 또는 주 4일 이상 투입, ② 현 직장 겸업·비자·이해상충 적법성 확인, ③ 90일 내 바이어 20곳 미팅과 3개 LOI, ④ 주간 P&amp;L·KPI 운영을 조건으로 한다. 충족하지 못하면 송승연이 임시 CEO/COO, 박재원은 UAE Country BD를 맡는다.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">05 · 12-Month Roadmap</span>
+          <h2>사입 규모가 아니라<br>검증 강도를 단계별로 키운다</h2>
+          <p>각 단계는 일정이 아니라 통과 조건이다. 기준을 못 넘으면 다음 발주·채용·브랜드 확장을 멈춘다.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="card phase">
+            <span class="months">Month 1–3</span>
+            <h3>시장조사·브랜드 선정</h3>
+            <ul class="plain-list">
+              <li>소비자 인터뷰 30명</li>
+              <li>바이어 인터뷰 20곳</li>
+              <li>한국 브랜드 20개 접촉</li>
+              <li>8–12 SKU shortlist</li>
+              <li>규제·권리·원가 사전검토</li>
+            </ul>
+            <div class="gate">Gate: 3개 브랜드 서류 확보 · 예상 landed cost가 실제 판매가의 30–35% 이하</div>
+          </article>
+          <article class="card phase">
+            <span class="months">Month 4–6</span>
+            <h3>사입·테스트 판매</h3>
+            <ul class="plain-list">
+              <li>SKU당 20–50개 입고</li>
+              <li>DTC·마켓플레이스 동시 테스트</li>
+              <li>마이크로 크리에이터 20–30명</li>
+              <li>리뷰·VOC·반품 사유 기록</li>
+              <li>채널별 기여이익 계산</li>
+            </ul>
+            <div class="gate">Gate: 90일 판매율 65% · DTC 기여이익 15% · 재구매 15% · 반품 5% 미만</div>
+          </article>
+          <article class="card phase">
+            <span class="months">Month 7–9</span>
+            <h3>두바이 유통망 확보</h3>
+            <ul class="plain-list">
+              <li>활성 B2B 거래처 10–15곳</li>
+              <li>약국·살롱·부티크 구분 제안</li>
+              <li>매장별 sell-out 데이터</li>
+              <li>3PL·재고 보충 SLA</li>
+              <li>채권 한도·회수 프로세스</li>
+            </ul>
+            <div class="gate">Gate: B2B 재주문 50% · 매출총이익 35% · 매출채권 45일 이하</div>
+          </article>
+          <article class="card phase">
+            <span class="months">Month 10–12</span>
+            <h3>승자 확대·독점 협상</h3>
+            <ul class="plain-list">
+              <li>승자 SKU만 15–20개로 확대</li>
+              <li>오프라인 판매처 20곳</li>
+              <li>상위 브랜드 독점권 협상</li>
+              <li>UAE 외 GCC 권리 옵션</li>
+              <li>2년차 자금 계획</li>
+            </ul>
+            <div class="gate">Gate: 재고회전 4회 · 3개월 연속 기여이익 흑자 · 1개 이상 유통권</div>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>자체 브랜드 전환 조건:</strong> 한 기능 카테고리 누적 1,000개 이상 판매, 검증된 리뷰 300건, B2B 재주문, 목표 가격의 규제·원가 검증, 최소 18개월 현금 잔존기간을 모두 충족한 후 시작한다. 1년 차에 유통과 PB 개발을 동시에 하면 현금·규제·브랜딩 집중도가 분산된다.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="economics">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">06 · Unit Economics & Capital</span>
+          <h2>매출보다 먼저<br>할인 후 남는 돈을 본다</h2>
+          <p>아래 수치는 투자 검토를 위한 예시다. 실제 사업계획에는 UAE 법인, RA, 통관, 3PL, 매체별 견적과 공급사 MOQ를 반영해야 한다.</p>
+        </div>
+
+        <div class="formula">
+          <div class="formula-line">
+            <span>소비자가 AED 100</span><b>→</b>
+            <span>VAT 제외 95.24</span><b>→</b>
+            <span>리테일러 40–45%</span><b>→</b>
+            <span>납품매출 52–57</span><b>→</b>
+            <span>목표 landed cost 31–34</span>
+          </div>
+          <p>리테일 납품에서 유통사 매출총이익 40%를 확보하려면 landed cost는 대체로 실제 상시 판매가의 30–35% 안에 들어와야 한다. UAE VAT는 5%이며 의무 등록 기준은 과세 공급 AED 375,000이다. <a class="source" href="#src-14" aria-label="출처 14">14</a></p>
+        </div>
+
+        <div class="grid cols-2" style="margin-top: 1rem;">
+          <div class="table-wrap">
+            <table style="min-width: 520px;">
+              <thead><tr><th>초기 12개월 자금 항목</th><th>예상 범위</th></tr></thead>
+              <tbody>
+                <tr><td>법인·라이선스·회계</td><td class="money">AED 30k–60k</td></tr>
+                <tr><td>등록·시험·번역·라벨</td><td class="money">AED 30k–80k</td></tr>
+                <tr><td>초기·보충 재고</td><td class="money">AED 80k–140k</td></tr>
+                <tr><td>운송·관세·3PL</td><td class="money">AED 25k–45k</td></tr>
+                <tr><td>콘텐츠·시딩·광고</td><td class="money">AED 60k–90k</td></tr>
+                <tr><td>예비 현금</td><td class="money">AED 75k–100k</td></tr>
+                <tr><td><strong>합계</strong></td><td class="money"><strong>AED 300k–450k</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <article class="card">
+            <h3>투자 중단 기준</h3>
+            <ul class="plain-list">
+              <li>landed cost가 실제 상시 판매가의 35% 초과</li>
+              <li>DTC 기여이익률 15% 미만</li>
+              <li>B2B 매출총이익률 35% 미만</li>
+              <li>90일 sell-through 50% 미만</li>
+              <li>등록 서류·온라인 판매권·지역 권리 불완전</li>
+              <li>대표가 전업하지 못하고 현지 매출 책임자가 없음</li>
+            </ul>
+            <p class="note">AED는 미 달러에 약 3.6725로 고정되어 USD 변동은 제한적이지만, 실제 원가에는 KRW/USD 환율이 영향을 준다. UAE 법인세는 과세소득 AED 375,000까지 0%, 초과분은 9%가 기본이다. <a class="source" href="#src-15" aria-label="출처 15">15</a><a class="source" href="#src-16" aria-label="출처 16">16</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="risk">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">07 · Risk Register</span>
+          <h2>가장 위험한 것은<br>팔리지 않는 제품보다 멈춘 제품이다</h2>
+          <p>확률과 영향은 현재 정보에 기반한 초기 평가다. 대표·COO가 매월 업데이트해야 한다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>위험</th><th>초기 등급</th><th>현실적 영향</th><th>대응·오너</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>제품 분류·등록 지연</td><td class="risk-high">높음</td><td>판매 금지, 재고·출시 일정 고착</td><td>PO 전 RA gap assessment, 문서 완결 체크 / Regulatory</td></tr>
+              <tr><td>통관·라벨 불일치</td><td class="risk-high">높음</td><td>보류·반송·재라벨 비용</td><td>샘플 라벨 승인, 통관사 사전 검토 / COO</td></tr>
+              <tr><td>재고·유통기한</td><td class="risk-high">높음</td><td>할인·폐기·현금 부족</td><td>20–50개 테스트, FEFO, 주간 sell-through / COO</td></tr>
+              <tr><td>병행수입·가격 붕괴</td><td class="risk-high">높음</td><td>리테일 입점 거절, 마진 소멸</td><td>실거래가 모니터링, MAP·지역권·독점 신생 브랜드 / CEO</td></tr>
+              <tr><td>인플루언서 비용·허가</td><td class="risk-high">높음</td><td>CAC 상승, 콘텐츠 삭제·규제 위험</td><td>마이크로 테스트, 코드 매출, 허가 확인 / PR·Brand</td></tr>
+              <tr><td>창업자 겸업·운영 공백</td><td class="risk-high">높음</td><td>바이어 응답·통관·사고 대응 지연</td><td>전업 CEO 조건, 대리권과 근무 SLA / 이사회</td></tr>
+              <tr><td>B2B 채권 회수</td><td class="risk-mid">중상</td><td>매출 성장 중 현금 고갈</td><td>거래처 한도, 선금·45일 조건, 연체 차단 / Sales·Finance</td></tr>
+              <tr><td>문화·피부톤·성분 차이</td><td class="risk-mid">중상</td><td>낮은 전환, VOC·평판 악화</td><td>다국적 패널 테스트, 아랍어·영어, 셰이드 다양성 / Brand</td></tr>
+              <tr><td>환율</td><td class="risk-mid">중간</td><td>KRW/USD 원가 변동</td><td>견적 유효기간, 분할 발주, 목표 마진 buffer / COO·Finance</td></tr>
+              <tr><td>품질·부작용·리콜</td><td class="risk-high">높음</td><td>법적·평판 손실</td><td>배치 추적, 보험, VOC triage, 리콜 SOP / Regulatory</td></tr>
+              <tr><td>운송·지정학 변수</td><td class="risk-mid">중상</td><td>리드타임·운임 급등</td><td>안전재고 기준, 복수 운송사, 비상 시나리오 / COO</td></tr>
+              <tr><td>위조품·비공식 판매자</td><td class="risk-mid">중상</td><td>가격·신뢰 훼손</td><td>공식 판매자 표시, 배치 확인, 플랫폼 신고 / CEO·Brand</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recommendation">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">08 · Investment Recommendation</span>
+          <h2>지금 투자할 것은 재고가 아니라<br>검증 시스템이다</h2>
+        </div>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>90일 내 해야 할 일</h3>
+            <ul class="plain-list">
+              <li>박재원의 전업·법적 근무 가능성 확인</li>
+              <li>현지 규제대행사 2–3곳 견적 비교</li>
+              <li>바이어 20곳과 소비자 30명 인터뷰</li>
+              <li>브랜드 20곳에 표준 정보요청서 발송</li>
+              <li>SKU별 landed cost·권리·서류 데이터룸 구축</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>초기 투자 조건</h3>
+            <ul class="plain-list">
+              <li>전업 CEO와 주간 KPI 책임</li>
+              <li>3개 브랜드의 등록 서류 완결</li>
+              <li>최소 3개 바이어 LOI</li>
+              <li>8–12 SKU의 목표 단위경제성</li>
+              <li>12개월 현금계획과 중단 기준</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>투자 결론</h3>
+            <p><span class="status hold">조건부 진행</span></p>
+            <p>UAE의 K‑Beauty 수요와 디지털 구매 환경은 긍정적이다. 그러나 현 팀만으로는 규제·채널 영업·재무 운영이 부족하다. 외부 RA와 현지 Key Account 영업을 보강하고 6개월 테스트 데이터가 확인될 때 본격 재고 투자를 집행하는 것이 합리적이다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Sources & Method</span>
+          <h2>출처와 해석 기준</h2>
+          <p>정부·공공기관·기업 공식 발표와 UAE 현지 리테일 페이지를 우선 사용했다. 가격은 2026-07-27 조사 시점의 노출가이며 할인·재고에 따라 달라질 수 있다. 시장 규모는 기관별 범위가 달라 그대로 병기했다.</p>
+        </div>
+        <ol class="sources">
+          <li id="src-1"><div><strong>U.S. International Trade Administration</strong><a href="https://www.trade.gov/market-intelligence/united-arab-emirates-beauty-and-personal-care-market-growing" target="_blank" rel="noopener">United Arab Emirates Beauty and Personal Care Market Growing</a><span>UAE 광의 뷰티·퍼스널케어 시장, 채널·기회.</span></div></li>
+          <li id="src-2"><div><strong>KOTRA 해외시장뉴스</strong><a href="https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?CONTENTS_NO=1&amp;MENU_ID=180&amp;SITE_NO=3&amp;bbsGbn=243&amp;bbsSn=243&amp;pNttSn=241013" target="_blank" rel="noopener">2026년 UAE 뷰티 시장 동향</a><span>시장 규모·성장률, 채널, 트렌드, 성공 사례, 가격·규제 리스크.</span></div></li>
+          <li id="src-3"><div><strong>KOTRA 해외시장뉴스</strong><a href="https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?CONTENTS_NO=2&amp;MENU_ID=190&amp;SITE_NO=3&amp;bbsGbn=254&amp;bbsSn=254&amp;pNttSn=232260" target="_blank" rel="noopener">UAE 클렌징·스킨케어 시장 동향</a><span>스킨케어·클렌저 시장 전망, 한국 수입 비중, 인기 세부 품목.</span></div></li>
+          <li id="src-4"><div><strong>Korea.net · 대한민국 정부</strong><a href="https://www.korea.net/NewsFocus/Business/view?articleId=272319" target="_blank" rel="noopener">Korean cosmetics exports top USD 10B</a><span>2024년 한국 화장품 수출과 UAE 증가율.</span></div></li>
+          <li id="src-5"><div><strong>Dubai Data and Statistics Establishment</strong><a href="https://www.dsc.gov.ae/Publication/Population%20Bulletin%20Emirate%20of%20Dubai%20-%202024.pdf" target="_blank" rel="noopener">Population Bulletin – Emirate of Dubai 2024 (PDF)</a><span>두바이 상주·주간 활동 인구.</span></div></li>
+          <li id="src-6"><div><strong>Deloitte Middle East</strong><a href="https://www.deloitte.com/middle-east/en/about/press-room/deloitte-digital-consumer-trends-2025-report-reveals-ai-adoption-surge-social-commerce-boom-and-changing-digital-behaviors-in-the-uaeand-ksa.html" target="_blank" rel="noopener">Digital Consumer Trends 2025</a><span>UAE·사우디 소셜커머스 구매 경험.</span></div></li>
+          <li id="src-7"><div><strong>Visa UAE</strong><a href="https://ae.visamiddleeast.com/en_AE/about-visa/newsroom/press-releases/prl-02072025.html" target="_blank" rel="noopener">UAE mobile shopping behavior</a><span>모바일 온라인 쇼핑 비중.</span></div></li>
+          <li id="src-8"><div><strong>Apparel Group</strong><a href="https://www.apparelgroup.com/en/news/apparel-group-brings-korean-skincare-brand-jkosmec-to-uae/" target="_blank" rel="noopener">JKOSMEC launch in UAE</a><span>현지 대형 유통 파트너를 통한 한국 스킨케어 확장 사례.</span></div></li>
+          <li id="src-9"><div><strong>UAE Ministry of Industry and Advanced Technology</strong><a href="https://moiat.gov.ae/en/services/issue-conformity-certificates-for-regulated-products?search=ecas" target="_blank" rel="noopener">Issue Conformity Certificates for Regulated Products</a><span>규제 제품 적합성 인증 공식 서비스.</span></div></li>
+          <li id="src-10"><div><strong>MOIAT</strong><a href="https://eservices.moiat.gov.ae/backend/api/v1.1/UploadAttachment/GetAttachmentByRecordId?download=true&amp;recordAttachmentId=649245" target="_blank" rel="noopener">Cosmetics and Personal Care Products – Regulation Card (PDF)</a><span>필요 서류, GSO 1943, 수수료, 인증 범위.</span></div></li>
+          <li id="src-11"><div><strong>Dubai Municipality</strong><a href="https://www.dm.gov.ae/dubai-municipality-services/" target="_blank" rel="noopener">Dubai Municipality Services</a><span>소비자 제품·Montaji 관련 공식 서비스 진입점.</span></div></li>
+          <li id="src-12"><div><strong>Emirates Drug Establishment</strong><a href="https://www.ede.gov.ae/w/issuance-of-marketing-authorization-for-a-healthcare-product" target="_blank" rel="noopener">Marketing Authorization for a Healthcare Product</a><span>의료적 효능 화장품 등 보건제품 등록 범위와 처리 안내.</span></div></li>
+          <li id="src-13"><div><strong>UAE ICP</strong><a href="https://icp.gov.ae/en/customs-union-for-gcc/" target="_blank" rel="noopener">Customs Union for GCC States</a><span>GCC 공동관세 일반 원칙과 5% 세율.</span></div></li>
+          <li id="src-14"><div><strong>UAE Federal Tax Authority</strong><a href="https://tax.gov.ae/en/taxes/Vat/vat.topics/registration.for.vat.aspx" target="_blank" rel="noopener">Registration for VAT</a><span>VAT 5%, 의무·자발적 등록 기준.</span></div></li>
+          <li id="src-15"><div><strong>UAE Federal Tax Authority</strong><a href="https://tax.gov.ae/en/faq.aspx?keyword=What+are+the+UAE+CT+rates%3F" target="_blank" rel="noopener">Corporate Tax rates FAQ</a><span>법인세 기본 세율 구간.</span></div></li>
+          <li id="src-16"><div><strong>Central Bank of the UAE</strong><a href="https://www.centralbank.ae/en/our-operations/monetary-policy-and-domestic-markets/how-the-monetary-system-works/" target="_blank" rel="noopener">How the monetary system works</a><span>AED와 USD의 고정환율 체계.</span></div></li>
+          <li id="src-17"><div><strong>UAE Media Council</strong><a href="https://uaemc.gov.ae/en/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D9%85%D8%B9%D9%84%D9%86/" target="_blank" rel="noopener">Advertiser Permit</a><span>SNS 광고 허가, 계정 등록과 허가번호 표시.</span></div></li>
+          <li id="src-18"><div><strong>UAE 현지 K‑Beauty 리테일</strong><a href="https://www.watsons.ae/collections/skincare-k-beauty" target="_blank" rel="noopener">Watsons UAE K‑Beauty</a> · <a href="https://www.lifepharmacy.com/category/korean-beauty/" target="_blank" rel="noopener">Life Pharmacy Korean Beauty</a><span>브랜드 입점, 품목과 가격대 교차 확인.</span></div></li>
+          <li id="src-19"><div><strong>Faces UAE</strong><a href="https://www.faces.ae/en/brands/cosrx" target="_blank" rel="noopener">COSRX</a><span>클렌저·패치 등 UAE 판매가 확인.</span></div></li>
+          <li id="src-20"><div><strong>Watsons UAE</strong><a href="https://www.watsons.ae/collections/anua?page=1" target="_blank" rel="noopener">Anua</a><span>Heartleaf 토너 등 UAE 판매가 확인.</span></div></li>
+          <li id="src-21"><div><strong>Watsons UAE</strong><a href="https://www.watsons.ae/products/torriden-dive-in-low-molecular-hyaluronic-acid-serum-50-50ml" target="_blank" rel="noopener">Torriden Dive‑In Serum</a><span>수분 세럼 판매가 확인.</span></div></li>
+          <li id="src-22"><div><strong>Watsons UAE</strong><a href="https://www.watsons.ae/products/glasting-water-lip-tint-4g" target="_blank" rel="noopener">Rom&amp;nd Glasting Water Lip Tint</a><span>립 틴트 판매가 확인.</span></div></li>
+          <li id="src-23"><div><strong>Faces UAE</strong><a href="https://www.faces.ae/en/p/tirtir-mask-fit-red-cushion-585017196170.html" target="_blank" rel="noopener">TIRTIR Mask Fit Red Cushion</a><span>쿠션 판매가와 셰이드 범위 확인.</span></div></li>
+          <li id="src-24"><div><strong>Life Pharmacy</strong><a href="https://www.lifepharmacy.com/category/korean-beauty/" target="_blank" rel="noopener">Korean Beauty</a><span>UAE 약국 채널의 K‑Beauty 범위·가격 확인.</span></div></li>
+          <li id="src-25"><div><strong>Life Pharmacy</strong><a href="https://www.lifepharmacy.com/product/some-by-mi-beta-panthenol-repair-body-cream-200ml-94457" target="_blank" rel="noopener">Some By Mi Beta Panthenol Repair Body Cream</a><span>프리미엄 바디 제품 판매가 확인.</span></div></li>
+        </ol>
+        <div class="note warn">
+          <strong>면책:</strong> 본 문서는 공개자료 기반의 사업 검토안이며 법률·세무·의료·규제 자문이 아니다. 실제 수입 전 제품별 분류, 성분, 라벨, 광고 문구, 관세 코드, 라이선스를 UAE 관할기관 및 현지 전문기관과 재확인해야 한다.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>UAE Dubai K‑Beauty Business Review</span>
+      <span>Updated 2026-07-27 · ZZEE Reports</span>
+    </div>
+  </footer>
+</body>
+</html>
