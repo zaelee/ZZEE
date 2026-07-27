@@ -211,9 +211,10 @@ try {
       categories: [...document.querySelectorAll(".category-section h2")].map((node) => node.textContent.trim()),
       names: [...document.querySelectorAll(".restaurant-name")].map((node) => node.textContent.trim()),
       comments: [...document.querySelectorAll(".restaurant-comment")].map((node) => node.textContent.trim()),
-      highRatingNames: [...document.querySelectorAll("tr.is-high .restaurant-name")].map((node) => node.textContent.trim()),
+      highRatingNames: [...document.querySelectorAll(".restaurant-card.is-high .restaurant-name")].map((node) => node.textContent.trim()),
       links: [...document.querySelectorAll(".map-links a")].length,
       appLinks: [...document.querySelectorAll(".map-links a[data-map-app]")].length,
+      horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
       images: [...document.querySelectorAll(".restaurant-image")].map((image) => ({
         name: image.closest("tr")?.querySelector(".restaurant-name")?.textContent?.trim() || "",
         complete: image.complete,
@@ -228,6 +229,24 @@ try {
     captureBeyondViewport: true,
   });
   fs.writeFileSync(screenshotPath, Buffer.from(tableScreenshot.data, "base64"));
+  await send("Emulation.setDeviceMetricsOverride", {
+    width: 390,
+    height: 844,
+    deviceScaleFactor: 1,
+    mobile: true,
+  });
+  await sleep(300);
+  const mobileLayoutEvaluation = await send("Runtime.evaluate", {
+    expression: `({
+      horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+      stackedCards: [...document.querySelectorAll(".restaurant-card")].every(
+        (card) => getComputedStyle(card).gridTemplateColumns.split(" ").length === 1
+      ),
+    })`,
+    returnByValue: true,
+  });
+  const mobileLayout = mobileLayoutEvaluation.result.value;
+  await send("Emulation.clearDeviceMetricsOverride");
 
   console.log(
     JSON.stringify(
@@ -241,6 +260,9 @@ try {
           highRatingNames: table.highRatingNames,
           mapLinks: table.links,
           appLinks: table.appLinks,
+          horizontalOverflow: table.horizontalOverflow,
+          mobileHorizontalOverflow: mobileLayout.horizontalOverflow,
+          mobileStackedCards: mobileLayout.stackedCards,
           images: table.images.length,
           loadedImages: table.images.filter((image) => image.complete && image.width > 0).length,
           missingImages: table.images
@@ -267,6 +289,9 @@ try {
   }
   if (table.links < 50) throw new Error("보령 분류표 지도 링크 누락");
   if (table.appLinks !== 36) throw new Error("보령 분류표 카카오·네이버 앱 링크 누락");
+  if (table.horizontalOverflow || mobileLayout.horizontalOverflow || !mobileLayout.stackedCards) {
+    throw new Error("보령 분류표 반응형 카드 레이아웃 오류");
+  }
   if (table.images.length !== 18 || table.images.some((image) => !image.complete || image.width <= 0)) {
     throw new Error("보령 분류표 대표 이미지 표시 오류");
   }
