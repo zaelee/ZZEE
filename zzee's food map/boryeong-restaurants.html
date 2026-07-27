@@ -255,11 +255,14 @@
       }
 
       .restaurant-image {
+        display: block;
         width: 100%;
-        height: 100%;
-        min-height: 240px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        align-self: start;
         background: var(--bg);
         object-fit: cover;
+        object-position: center;
       }
 
       .restaurant-info {
@@ -475,11 +478,6 @@
 
         .restaurant-card {
           grid-template-columns: 1fr;
-        }
-
-        .restaurant-image {
-          height: 220px;
-          min-height: 0;
         }
 
         .restaurant-info {
