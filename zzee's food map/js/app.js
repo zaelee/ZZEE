@@ -301,7 +301,7 @@ const platformRows = (restaurant) => {
 
   return Object.entries(restaurant.platformRatings)
     .map(([key, platform]) => `
-      <a class="platform-link ${platformRating(platform) > 4.5 ? "is-high-rating" : ""}" href="${links[key]}" target="_blank" rel="noreferrer">
+      <a class="platform-link ${platformRating(platform) > 4.5 ? "is-high-rating" : ""}" ${window.MapAppLinks.anchorAttributes(key, { ...restaurant, [`${key}MapLink`]: links[key] })}>
         <strong>${platform.label}</strong>
         <span>${platformRatingText(platform)}</span>
         <small>${checkedText(platform.checkedAt)}</small>
