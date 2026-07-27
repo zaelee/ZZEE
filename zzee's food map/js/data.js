@@ -109,8 +109,8 @@ const rawRestaurants = [
   ["피자파티", "양식", null, "피자돈까스와 레트로한 분위기로 알려진 보령 시내 경양식집", "피자돈까스", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["오는정 손만두", "한식", null, "직접 빚은 만두를 버섯전골과 칼만두국으로 즐기는 손만두집", "버섯만두전골", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["제일해물칼국수", "한식", null, "바지락 해물칼국수에 왕만두를 곁들이기 좋은 보령 칼국수집", "해물칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
-  ["성지 보령본점", "중식", null, "불향 나는 소고기짬뽕과 유림만두가 대표인 점심 중심 중식당", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
-  ["성지 2호점", "중식", null, "지도 플랫폼에 따라 보령본점·2호점으로 함께 표기되는 동현로 88의 중식당", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["성지 보령본점", "중식", null, "주포면에서 차돌짬뽕과 유림만두로 이름난 점심 중심 본점", "차돌짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["성지 2호점", "중식", null, "동현로 88에 있으며 지도에는 성지 보령본점으로도 등록된 별도 2호점", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["오양칼국수", "한식", null, "물총칼국수와 비빔국수, 보리밥을 푸짐하게 먹는 칼국수집", "물총칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["김가네사골수제비", "한식", null, "사골 육수에 끓인 수제비와 김치·도가니 수제비가 중심인 집", "사골수제비", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["키츠네야", "일식", null, "키츠네스시와 후토마끼, 고등어봉초밥을 내는 보령 일식당", "키츠네스시", "방문 후 개인 코멘트를 업데이트할 예정"],
@@ -285,8 +285,8 @@ const verifiedPlaceData = {
   피자파티: { matchedName: "피자파티", address: "충청남도 보령시 대흥로 44", latitude: 36.3497498, longitude: 126.5940198 },
   "오는정 손만두": { matchedName: "오는정손만두", address: "충청남도 보령시 큰오랏2길 55", latitude: 36.3505687, longitude: 126.6073513 },
   제일해물칼국수: { matchedName: "제일해물칼국수", address: "충청남도 보령시 대해로 46", latitude: 36.3438084, longitude: 126.5946276 },
-  "성지 보령본점": { matchedName: "성지 보령본점", address: "충청남도 보령시 동현로 88", latitude: 36.3471826528238, longitude: 126.615361022136 },
-  "성지 2호점": { matchedName: "성지 2호점", address: "충청남도 보령시 동현로 88", latitude: 36.3471344, longitude: 126.6154333 },
+  "성지 보령본점": { matchedName: "성지", address: "충청남도 보령시 주포면 보령읍성길 80-28", latitude: 36.41502768, longitude: 126.58845622 },
+  "성지 2호점": { matchedName: "성지 보령본점", address: "충청남도 보령시 동현로 88 1층", latitude: 36.34718355042364, longitude: 126.61535990372946 },
   오양칼국수: { matchedName: "오양칼국수", address: "충청남도 보령시 보령남로 125-7", latitude: 36.3344152, longitude: 126.6011688 },
   김가네사골수제비: { matchedName: "김가네사골수제비", address: "충청남도 보령시 석서1길 57", latitude: 36.3205539496, longitude: 126.5183160067 },
   키츠네야: { matchedName: "키츠네야", address: "충청남도 보령시 작은오랏5길 31 1층", latitude: 36.3462989, longitude: 126.6048973 },
@@ -309,7 +309,7 @@ const boryeongPlaceSources = {
   피자파티: { provider: "google", providerPlaceId: "0x357081f70d7620a1:0xe0abb6d2f292d393", sourceUrl: "https://www.tel-co.net/food/spot/8773", checkedAt: "2026-07-27" },
   "오는정 손만두": { provider: "diningcode", providerPlaceId: "f3goJr31oUNh", sourceUrl: "https://www.diningcode.com/profile.php?rid=f3goJr31oUNh", checkedAt: "2026-07-27" },
   제일해물칼국수: { provider: "diningcode", providerPlaceId: "KB4JtqpS0VaC", sourceUrl: "https://www.diningcode.com/profile.php?rid=KB4JtqpS0VaC", checkedAt: "2026-07-27" },
-  "성지 보령본점": { provider: "placeview", providerPlaceId: "NDY4MzMxOTAg", sourceUrl: "https://www.placeview.co.kr/id/NDY4MzMxOTAg", checkedAt: "2026-07-27" },
+  "성지 보령본점": { provider: "naver", providerPlaceId: "1096461319", sourceUrl: "https://map.naver.com/p/entry/place/1096461319", checkedAt: "2026-07-27" },
   "성지 2호점": { provider: "diningcode", providerPlaceId: "immpPnHL1gX9", sourceUrl: "https://www.diningcode.com/profile.php?rid=immpPnHL1gX9", checkedAt: "2026-07-27" },
   오양칼국수: { provider: "diningcode", providerPlaceId: "YqXEHCsX617R", sourceUrl: "https://www.diningcode.com/profile.php?rid=YqXEHCsX617R", checkedAt: "2026-07-27" },
   김가네사골수제비: { provider: "chungnam-tour", providerPlaceId: "rstNo:11", sourceUrl: "https://tour.chungnam.go.kr/prog/rst/kor/sub02_03_02/view.do?rstNo=11", checkedAt: "2026-07-27" },
@@ -3883,48 +3883,45 @@ const kakaoPlaceData = {
     "matchDistanceKm": 0.009092025529465015
   },
   "성지 보령본점": {
-    "matchedName": "성지 보령본점",
-    "kakaoPlaceId": "46833190",
-    "address": "충남 보령시 동현로 88 1층",
-    "lotAddress": "동대동 380-3",
-    "latitude": 36.34718355042364,
-    "longitude": 126.61535990372946,
-    "kakaoMapLink": "https://place.map.kakao.com/46833190",
-    "rating": 4.8,
-    "ratingCount": 8,
-    "reviewCount": 18,
+    "matchedName": "성지",
+    "kakaoPlaceId": "358954080",
+    "address": "충남 보령시 주포면 보령읍성길 80-28",
+    "lotAddress": "주포면 보령리 252",
+    "latitude": 36.41502768,
+    "longitude": 126.58845622,
+    "kakaoMapLink": "https://place.map.kakao.com/358954080",
+    "rating": 4.2,
+    "ratingCount": 93,
+    "reviewCount": 132,
     "menuItems": [
       {
-        "name": "소고기짬뽕(2인이상)",
+        "name": "차돌짬뽕",
         "price": 11000,
         "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 23:10:27"
+        "isRecommended": true
       },
       {
-        "name": "유림만두(8개)",
+        "name": "짬뽕",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false
+      },
+      {
+        "name": "유림만두",
         "price": 8000,
         "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 23:28:42"
-      },
-      {
-        "name": "짜장면",
-        "price": 6000,
-        "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 09:20:54"
+        "isRecommended": true
       }
     ],
-    "menuUpdatedAt": "2026-06-22 16:37:43",
-    "priceRange": "6,000-11,000원",
+    "menuUpdatedAt": "2026-07-27",
+    "priceRange": "8,000-11,000원",
     "priceSymbol": "₩₩",
     "images": [
-      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_103776_9140531_20240228030037_cube/left_800.jpg",
-      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c131633399c02eb46b9509fcec6f96e5d9683f3b?original"
+      "https://t1.daumcdn.net/local/kakaomapPhoto/review/fcc9561ccfc81add0dab0cb24755673e7ad4f52271d734e8783b961b39ce1dff",
+      "https://t1.daumcdn.net/local/kakaomapPhoto/review/02c715f4c0f9d7d6bf5e6f3163cba4a158ff405d2233deb19c5912a5dddb7aed"
     ],
     "checkedAt": "2026-07-27",
-    "matchDistanceKm": 0.00014140322518289538
+    "matchDistanceKm": 0
   },
   "성지 2호점": {
     "matchedName": "성지 보령본점",
@@ -6048,24 +6045,23 @@ const naverPlaceData = {
     "ratingCheckedAt": "2026-07-27"
   },
   "성지 보령본점": {
-    "matchedName": "성지 보령본점",
-    "naverPlaceId": 1877918020,
-    "address": "충청남도 보령시 동현로 88 1층",
-    "lotAddress": "충청남도 보령시 동대동 380-3 1층",
-    "latitude": 36.3471884,
-    "longitude": 126.6153467,
-    "naverMapLink": "https://map.naver.com/p/entry/place/1877918020",
-    "rating": 4.58,
+    "matchedName": "성지",
+    "naverPlaceId": 1096461319,
+    "address": "충청남도 보령시 주포면 보령읍성길 80-28",
+    "lotAddress": "충청남도 보령시 주포면 보령리 252",
+    "latitude": 36.41502768,
+    "longitude": 126.58845622,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1096461319",
+    "rating": null,
     "images": [
-      "https://ldb-phinf.pstatic.net/20230612_52/16865448664619hVGo_JPEG/20220424103114.jpg",
-      "https://ldb-phinf.pstatic.net/20220910_55/1662765150261W3BOi_JPEG/20220424103114.jpg",
-      "https://ldb-phinf.pstatic.net/20220910_61/16627656380752jDIe_JPEG/1658296548232-6.jpg"
+      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA2MjJfNDQg%2FMDAxNzgyMDg0NzcyNjc5.W64rmdWSpaePZlEimmwnkT4WderCZodiVJ_l0kpcJgAg.7GOEv7cJMa2gc5jtzNhXlS2ynjM9J4AqdiwIGQCiGskg.JPEG%2F900_1782084769224.jpg%2F900x507",
+      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA2MjJfMTk4%2FMDAxNzgyMDg0NzczOTI1.edyngdjeiMZeJSE_kPpX5dGP83gulW05vuK_9ptqz4Eg.Z8d63_eMhtRTxcb4c1zYiDjNk1zhaA-fLfL8Qiau8AMg.JPEG%2F900_1782084768416.jpg%2F900x507"
     ],
     "checkedAt": "2026-07-27",
-    "matchDistanceKm": 0.0012996862500731408,
-    "reviewCount": 291,
-    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
-    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1877918020/home",
+    "matchDistanceKm": 0,
+    "reviewCount": 781,
+    "ratingSourceField": null,
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1096461319/home",
     "ratingCheckedAt": "2026-07-27"
   },
   "성지 2호점": {
@@ -6916,12 +6912,12 @@ const googlePlaceData = {
     "note": "구글 지도 공개 업체 평점"
   },
   "성지 보령본점": {
-    "rating": 4.2,
+    "rating": 4.1,
     "reviewCount": null,
-    "googleMapLink": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
-    "matchedName": "성지2호점",
-    "sourceUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
-    "evidence": "성지2호점 | 4.2",
+    "googleMapLink": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8",
+    "matchedName": "성지",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8",
+    "evidence": "성지 | 4.1",
     "checkedAt": "2026-07-27",
     "note": "구글 지도 공개 업체 평점"
   },
@@ -7101,6 +7097,20 @@ const mergeRestaurantImages = (...groups) => {
   return [...new Set(urls)];
 };
 
+const boryeongRepresentativeImages = {
+  제일해물칼국수: "https://d12zq4w4guyljn.cloudfront.net/300_300_20240802012854327_photo_ea94d1fec849.webp",
+  "성지 보령본점": "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA2MjJfMTk4%2FMDAxNzgyMDg0NzczOTI1.edyngdjeiMZeJSE_kPpX5dGP83gulW05vuK_9ptqz4Eg.Z8d63_eMhtRTxcb4c1zYiDjNk1zhaA-fLfL8Qiau8AMg.JPEG%2F900_1782084768416.jpg%2F900x507",
+  김가네사골수제비: "https://pup-review-phinf.pstatic.net/MjAyNjA1MTdfOSAg/MDAxNzc5MDA1NTc1OTA5.Mp-ZcKWtH7ac5UImhnq2wcjhWDuhNwY4YCZVK3dyXB8g.XxvYd5gxlHUcjy8olVE_aqowHm8a1bQ-byLmpLnCXIgg.JPEG/2417097E-6B2E-47D5-8139-D80AD3009E55.jpeg",
+  "고구려 수제 본 갈비": "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEwMTZfNCAg%2FMDAxNjY1OTIwNTkxMjg1.scbK5ZMg8E0n55Phj4yzmLPfE0naaVTDvIBrsB696Wwg.nkXjgUa-AGatWC2DuJAGghnxAKFcUyHp-VR6VYUXo_Ig.JPEG%2FF2BBB1FB-7A5C-4650-90F7-363217A92BDE.jpeg",
+  "윤가네 해물탕": "https://pup-review-phinf.pstatic.net/MjAyNTA2MTFfMTYz/MDAxNzQ5NjIwMDE0NzI5.bMjWdLg8ru5jZr57KB4CgKtR-KYWvWdAdvBHfdv-ofIg.O-zJOsCwynQPqkLRbbd9lTc3nt_f94EOJL-HXNTZU04g.JPEG/D8174CE2-CBC9-4CFC-90C1-2A14F4813BBE.jpeg",
+  바이더오: "https://t1.daumcdn.net/local/kakaomapPhoto/review/bda0bc4f4f7f2c4908d53038da30a283276777a4?original",
+  플라르: "https://t1.daumcdn.net/local/kakaomapPhoto/review/9a80718803f69e7f513a3a16438f2db2f2f5e3b5?original",
+  카페모카브레드: "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjAzMDJfMjQ0%2FMDAxNzcyNDM1MDI5ODMz.CThX_aP9_v7zHAFS8t_KIZ-l5do5A6BeHN3DZUUEXNEg.dgKA2kEIVbWX7ZGGyj2FIwWK-I3hTohWIjwTW1V1JAMg.JPEG%2F900%25EF%25BC%25BF20260131%25EF%25BC%25BF123910.jpg%2F900x1200",
+  커피인터뷰대천: "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240720_164%2F1721458653439LKfcm_JPEG%2F20240720_133015.jpg",
+  바다듬루프탑카페: "https://t1.kakaocdn.net/mystore/4701136EF0AF4618AFE8FD46E689CB6E",
+  황해원: "https://ldb-phinf.pstatic.net/20160225_27/1456378834746BfpCt_JPEG/176175547053680_0.jpg",
+};
+
 const RESTAURANTS = rawRestaurants.map((item, index) => {
   const [name, category, rating, comment, signatureMenu, jaeComment] = item;
   const verifiedPlace = verifiedPlaceData[name];
@@ -7209,7 +7219,12 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
       (isBoryeong ? "충청남도 보령시" : seongsuRestaurantNames.has(name) ? "서울 성동구 성수역 인근" : "서울 광진구 건대입구역 인근"),
     latitude: displayPlace?.latitude || latitude,
     longitude: displayPlace?.longitude || longitude,
-    images: mergeRestaurantImages(naverPlace?.images || [], kakaoPlace?.images || [], [CATEGORY_META[category].image]),
+    images: mergeRestaurantImages(
+      [boryeongRepresentativeImages[name]],
+      naverPlace?.images || [],
+      kakaoPlace?.images || [],
+      [CATEGORY_META[category].image],
+    ),
     recommendedOrder: index + 1,
   };
 });

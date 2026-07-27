@@ -9589,10 +9589,10 @@ const NAVER_SHARED_RESTAURANTS = [
     "latitude": 36.34492199162865,
     "longitude": 126.59849234784714,
     "images": [
+      "https://t1.daumcdn.net/local/kakaomapPhoto/review/b1f3bdc3267aecbd11836ba391ba6ee00e3c4584?original",
       "https://ldb-phinf.pstatic.net/20240323_127/1711188844147cezir_JPEG/IMG_0833.jpeg",
       "https://ldb-phinf.pstatic.net/20240323_204/17111888558659YNAm_JPEG/IMG_0833.jpeg",
-      "https://ldb-phinf.pstatic.net/20220820_53/1660977688096LwMXE_JPEG/3EA6E6FE-17E6-4655-822E-A3C5146C3C72.jpeg",
-      "http://t1.daumcdn.net/local/kakaomapPhoto/review/b1f3bdc3267aecbd11836ba391ba6ee00e3c4584?original"
+      "https://ldb-phinf.pstatic.net/20220820_53/1660977688096LwMXE_JPEG/3EA6E6FE-17E6-4655-822E-A3C5146C3C72.jpeg"
     ],
     "recommendedOrder": 20114,
     "importedFrom": {
