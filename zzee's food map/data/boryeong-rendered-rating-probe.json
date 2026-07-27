@@ -3,20 +3,20 @@
     "name": "성지 보령본점",
     "naver": {
       "rating": null,
-      "reviewCount": null,
+      "reviewCount": 781,
       "checkedAt": "2026-07-27",
-      "url": "https://map.naver.com/p/entry/place/1877918020"
+      "url": "https://map.naver.com/p/entry/place/1096461319"
     },
     "google": {
-      "rating": 4.2,
+      "rating": 4.1,
       "reviewCount": null,
       "checkedAt": "2026-07-27",
-      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
+      "url": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8",
       "nameAccepted": true,
       "addressAccepted": true,
-      "evidence": "성지2호점 | 4.2",
-      "title": "성지2호점 - Google 지도",
-      "resolvedUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "evidence": "성지 | 4.1",
+      "title": "성지 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8",
       "placeLinks": []
     }
   },

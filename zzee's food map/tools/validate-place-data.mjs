@@ -28,6 +28,7 @@ const rawNames = context.__rawRestaurants.map(([name]) => name);
 const boryeongRestaurants = context.__restaurants.filter((restaurant) =>
   context.__boryeongRestaurantNames.has(restaurant.name),
 );
+const boryeongNaverNoPublicRating = new Set(["성지 보령본점"]);
 const aliases = JSON.parse(
   fs.readFileSync(new URL("../data/place-aliases.json", import.meta.url), "utf8"),
 );
@@ -63,7 +64,10 @@ for (const name of context.__boryeongRestaurantNames) {
   if (!restaurant?.images?.some((url) => /^https:\/\//.test(url))) {
     errors.push(`보령.${name}: 외부 대표 사진 없음`);
   }
-  if (!Number.isFinite(restaurant?.platformRatings?.naver?.rating)) {
+  if (
+    !boryeongNaverNoPublicRating.has(name) &&
+    !Number.isFinite(restaurant?.platformRatings?.naver?.rating)
+  ) {
     errors.push(`보령.${name}: 네이버 업체 평균 별점 없음`);
   }
   if (restaurant?.platformRatings?.naver?.rating != null) {

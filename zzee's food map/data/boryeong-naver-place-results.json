@@ -66,24 +66,23 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "성지 보령본점 충청남도 보령시 동현로 88",
+    "query": "성지 충청남도 보령시 주포면 보령읍성길 80-28",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": true,
     "requestedName": "성지 보령본점",
-    "name": "성지 보령본점",
+    "name": "성지",
     "category": "중식당",
-    "address": "충청남도 보령시 동현로 88 1층",
-    "lotAddress": "충청남도 보령시 동대동 380-3 1층",
-    "latitude": 36.3471884,
-    "longitude": 126.6153467,
-    "naverPlaceId": 1877918020,
-    "naverMapLink": "https://map.naver.com/p/entry/place/1877918020",
-    "tel": "0507-1305-7980",
+    "address": "충청남도 보령시 주포면 보령읍성길 80-28",
+    "lotAddress": "충청남도 보령시 주포면 보령리 252",
+    "latitude": 36.41502768,
+    "longitude": 126.58845622,
+    "naverPlaceId": 1096461319,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1096461319",
+    "tel": "041-934-3378",
     "rating": null,
     "images": [
-      "https://ldb-phinf.pstatic.net/20230612_52/16865448664619hVGo_JPEG/20220424103114.jpg",
-      "https://ldb-phinf.pstatic.net/20220910_55/1662765150261W3BOi_JPEG/20220424103114.jpg",
-      "https://ldb-phinf.pstatic.net/20220910_61/16627656380752jDIe_JPEG/1658296548232-6.jpg"
+      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA2MjJfMTk4%2FMDAxNzgyMDg0NzczOTI1.edyngdjeiMZeJSE_kPpX5dGP83gulW05vuK_9ptqz4Eg.Z8d63_eMhtRTxcb4c1zYiDjNk1zhaA-fLfL8Qiau8AMg.JPEG%2F900_1782084768416.jpg%2F900x507",
+      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA2MjJfNDQg%2FMDAxNzgyMDg0NzcyNjc5.W64rmdWSpaePZlEimmwnkT4WderCZodiVJ_l0kpcJgAg.7GOEv7cJMa2gc5jtzNhXlS2ynjM9J4AqdiwIGQCiGskg.JPEG%2F900_1782084769224.jpg%2F900x507"
     ],
     "checkedAt": "2026-07-27"
   },

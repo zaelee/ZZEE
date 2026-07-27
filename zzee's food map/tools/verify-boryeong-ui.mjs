@@ -177,7 +177,9 @@ try {
   if (missing.length || requestedCards.length !== expectedNames.length) {
     throw new Error("보령 검색에서 요청 식당이 누락되었습니다.");
   }
-  if (missingNaverRatings.length) throw new Error("네이버 평점 표시 누락");
+  if (missingNaverRatings.join("|") !== "성지 보령본점") {
+    throw new Error(`네이버 평점 표시 누락 범위 오류: ${missingNaverRatings.join(", ")}`);
+  }
   if (missingGoogleRatings.join("|") !== "고구려 수제 본 갈비|커피인터뷰대천") {
     throw new Error(`구글 평점 표시 누락 범위 오류: ${missingGoogleRatings.join(", ")}`);
   }
@@ -215,12 +217,19 @@ try {
       categories: [...document.querySelectorAll(".category-section h2")].map((node) => node.textContent.trim()),
       names: [...document.querySelectorAll(".restaurant-name")].map((node) => node.textContent.trim()),
       comments: [...document.querySelectorAll(".restaurant-comment")].map((node) => node.textContent.trim()),
+      menus: [...document.querySelectorAll(".restaurant-card")].map((card) => ({
+        name: card.querySelector(".restaurant-name")?.textContent?.trim() || "",
+        items: [...card.querySelectorAll(".menu-item")].map((item) => ({
+          name: item.querySelector(".menu-name")?.textContent?.trim() || "",
+          price: item.querySelector(".menu-price")?.textContent?.trim() || "",
+        })),
+      })),
       highRatingNames: [...document.querySelectorAll(".restaurant-card.is-high .restaurant-name")].map((node) => node.textContent.trim()),
       links: [...document.querySelectorAll(".map-links a")].length,
       appLinks: [...document.querySelectorAll(".map-links a[data-map-app]")].length,
       horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
       images: [...document.querySelectorAll(".restaurant-image")].map((image) => ({
-        name: image.closest("tr")?.querySelector(".restaurant-name")?.textContent?.trim() || "",
+        name: image.closest(".restaurant-card")?.querySelector(".restaurant-name")?.textContent?.trim() || "",
         complete: image.complete,
         width: image.naturalWidth,
       })),
@@ -261,6 +270,10 @@ try {
           rows: table.names.length,
           comments: table.comments.length,
           invalidComments: table.comments.filter((comment) => !comment || /^별점\s*:?\s*$/.test(comment)),
+          menus: table.menus.length,
+          missingMenuPrices: table.menus
+            .filter((menu) => menu.items.length < 2 || menu.items.some((item) => !item.name || !/^[0-9,]+원$/.test(item.price)))
+            .map((menu) => menu.name),
           highRatingNames: table.highRatingNames,
           mapLinks: table.links,
           appLinks: table.appLinks,
@@ -284,6 +297,16 @@ try {
   }
   if (table.comments.length !== 22 || table.comments.some((comment) => !comment || /^별점\s*:?\s*$/.test(comment))) {
     throw new Error("보령 분류표 한줄 특징 표시 오류");
+  }
+  if (
+    table.menus.length !== 22 ||
+    table.menus.some(
+      (menu) =>
+        menu.items.length < 2 ||
+        menu.items.some((item) => !item.name || !/^[0-9,]+원$/.test(item.price)),
+    )
+  ) {
+    throw new Error("보령 분류표 대표 메뉴 가격 표시 오류");
   }
   if (table.categories.join("|") !== "한식|중식|일식|디저트|양식") {
     throw new Error(`보령 분류 순서 오류: ${table.categories.join(", ")}`);

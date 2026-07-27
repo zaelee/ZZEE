@@ -143,48 +143,45 @@
     "requestedName": "성지 보령본점",
     "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
     "matched": true,
-    "query": "성지 보령본점 충청남도 보령시 동현로 88",
-    "score": 293,
-    "kakaoPlaceId": "46833190",
-    "matchedName": "성지 보령본점",
+    "query": "성지 충청남도 보령시 주포면 보령읍성길 80-28",
+    "score": 300,
+    "kakaoPlaceId": "358954080",
+    "matchedName": "성지",
     "category": "중국요리",
-    "address": "충남 보령시 동현로 88 1층",
-    "lotAddress": "동대동 380-3",
-    "latitude": 36.34718355042364,
-    "longitude": 126.61535990372946,
-    "kakaoMapLink": "https://place.map.kakao.com/46833190",
-    "rating": 4.8,
-    "ratingCount": 8,
-    "reviewCount": 18,
+    "address": "충남 보령시 주포면 보령읍성길 80-28",
+    "lotAddress": "주포면 보령리 252",
+    "latitude": 36.41502768,
+    "longitude": 126.58845622,
+    "kakaoMapLink": "https://place.map.kakao.com/358954080",
+    "rating": 4.2,
+    "ratingCount": 93,
+    "reviewCount": 132,
     "menuItems": [
       {
-        "name": "소고기짬뽕(2인이상)",
+        "name": "차돌짬뽕",
         "price": 11000,
         "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 23:10:27"
+        "isRecommended": true
       },
       {
-        "name": "유림만두(8개)",
+        "name": "짬뽕",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false
+      },
+      {
+        "name": "유림만두",
         "price": 8000,
         "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 23:28:42"
-      },
-      {
-        "name": "짜장면",
-        "price": 6000,
-        "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-05-14 09:20:54"
+        "isRecommended": true
       }
     ],
-    "menuUpdatedAt": "2026-06-22 16:37:43",
-    "priceRange": "6,000-11,000원",
+    "menuUpdatedAt": "2026-07-27",
+    "priceRange": "8,000-11,000원",
     "priceSymbol": "₩₩",
     "images": [
-      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_103776_9140531_20240228030037_cube/left_800.jpg",
-      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c131633399c02eb46b9509fcec6f96e5d9683f3b?original"
+      "https://t1.daumcdn.net/local/kakaomapPhoto/review/fcc9561ccfc81add0dab0cb24755673e7ad4f52271d734e8783b961b39ce1dff",
+      "https://t1.daumcdn.net/local/kakaomapPhoto/review/02c715f4c0f9d7d6bf5e6f3163cba4a158ff405d2233deb19c5912a5dddb7aed"
     ],
     "checkedAt": "2026-07-27"
   },

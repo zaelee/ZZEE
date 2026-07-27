@@ -63,31 +63,25 @@
     "name": "성지 보령본점",
     "naver": {
       "rating": null,
-      "reviewCount": null,
+      "reviewCount": 781,
       "checkedAt": "2026-07-27",
-      "url": "https://map.naver.com/p/entry/place/1877918020"
+      "url": "https://map.naver.com/p/entry/place/1096461319"
     },
     "google": {
-      "rating": null,
+      "rating": 4.1,
       "reviewCount": null,
       "checkedAt": "2026-07-27",
-      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%80%20%EB%B3%B4%EB%A0%B9%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8F%99%ED%98%84%EB%A1%9C%2088%201%EC%B8%B5",
+      "url": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8",
       "nameAccepted": true,
       "addressAccepted": true,
-      "evidence": null,
+      "evidence": "성지 | 4.1",
       "debugLines": [
-        "평점",
-        "4.2",
+        "성지",
         "4.1",
-        "리뷰 없음",
-        "리뷰 없음",
-        "별표 개",
-        "Google 지도의 공개 리뷰에 대한 법적 공개사항 자세히 알아보기",
-        "별표 4.2개",
-        "별표 4.1개"
+        "음식점 · 주포면 보령리 252"
       ],
-      "title": "성지 보령본점 충남 보령시 동현로 88 1층 - Google 지도",
-      "resolvedUrl": "https://www.google.com/maps/search/%EC%84%B1%EC%A7%80+%EB%B3%B4%EB%A0%B9%EB%B3%B8%EC%A0%90+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EB%8F%99%ED%98%84%EB%A1%9C+88+1%EC%B8%B5/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+      "title": "성지 충남 보령시 주포면 보령읍성길 80-28 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%80/data=!4m7!3m6!1s0x357a7f695fdb2eb9:0x72eb34103d206bcc!8m2!3d36.4149801!4d126.5885524!16s%2Fg%2F11mvznh2f8"
     }
   },
   {
