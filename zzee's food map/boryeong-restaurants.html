@@ -234,93 +234,125 @@
         font-weight: 800;
       }
 
-      .table-wrap {
-        overflow-x: auto;
+      .restaurant-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .restaurant-card {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 14px;
         background: var(--surface);
         box-shadow: var(--shadow);
       }
 
-      table {
-        width: 100%;
-        min-width: 1180px;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        padding: 15px 14px;
-        border-bottom: 1px solid var(--line);
-        text-align: left;
-        vertical-align: middle;
-      }
-
-      th {
-        background: #fbfbf8;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 900;
-      }
-
-      tbody tr:last-child td {
-        border-bottom: 0;
-      }
-
-      tbody tr.is-high {
-        background: linear-gradient(90deg, var(--accent-soft), transparent 72%);
-      }
-
-      .restaurant-name {
-        min-width: 164px;
-        font-weight: 900;
-      }
-
-      .restaurant-cell {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+      .restaurant-card.is-high {
+        border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+        background: linear-gradient(100deg, var(--accent-soft), var(--surface) 55%);
       }
 
       .restaurant-image {
-        width: 62px;
-        height: 48px;
-        flex: 0 0 auto;
-        border: 1px solid var(--line);
-        border-radius: 9px;
+        width: 100%;
+        height: 100%;
+        min-height: 190px;
         background: var(--bg);
         object-fit: cover;
       }
 
-      .address {
-        min-width: 260px;
-        color: var(--muted);
-        font-size: 13px;
+      .restaurant-info {
+        display: grid;
+        min-width: 0;
+        gap: 11px;
+        padding: 20px 22px;
+      }
+
+      .restaurant-heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .restaurant-name {
+        margin: 0;
+        font-size: clamp(20px, 2.4vw, 25px);
+        letter-spacing: -0.03em;
+        font-weight: 900;
       }
 
       .restaurant-comment {
-        min-width: 310px;
-        color: #4f535a;
+        margin: 0;
+        color: #41454c;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .address {
+        display: flex;
+        gap: 8px;
+        align-items: baseline;
+        margin: 0;
+        color: var(--muted);
         font-size: 13px;
-        line-height: 1.55;
+        line-height: 1.5;
       }
 
-      .score {
-        width: 68px;
+      .address strong {
+        flex: 0 0 auto;
+        color: var(--text);
+        font-size: 11px;
+      }
+
+      .details-row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: auto;
+      }
+
+      .ratings {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+      }
+
+      .rating-item {
+        min-width: 66px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: color-mix(in srgb, var(--surface) 88%, var(--bg));
         font-variant-numeric: tabular-nums;
-        font-weight: 850;
-        text-align: center;
       }
 
-      .average {
-        min-width: 104px;
+      .rating-item small,
+      .rating-item strong {
+        display: block;
+      }
+
+      .rating-item small {
+        margin-bottom: 3px;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 850;
+      }
+
+      .rating-item strong {
+        font-size: 15px;
+      }
+
+      .rating-item.average strong {
         color: var(--accent);
         font-weight: 950;
       }
 
       .high-badge {
         min-height: 23px;
-        margin-left: 5px;
         padding: 0 7px;
         background: var(--accent);
         color: white;
@@ -329,19 +361,22 @@
 
       .map-links {
         display: flex;
-        gap: 5px;
+        gap: 7px;
+        flex-wrap: wrap;
+        margin-left: auto;
       }
 
       .map-links a {
-        display: inline-grid;
-        width: 28px;
-        height: 28px;
-        place-items: center;
+        display: inline-flex;
+        min-height: 38px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12px;
         border: 1px solid var(--line);
-        border-radius: 999px;
+        border-radius: 9px;
         background: var(--surface);
         color: var(--muted);
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 900;
       }
 
@@ -384,6 +419,37 @@
 
         .count-card {
           width: fit-content;
+        }
+
+        .restaurant-card {
+          grid-template-columns: 1fr;
+        }
+
+        .restaurant-image {
+          height: 220px;
+          min-height: 0;
+        }
+
+        .restaurant-info {
+          padding: 18px;
+        }
+
+        .details-row,
+        .ratings,
+        .map-links {
+          width: 100%;
+        }
+
+        .rating-item {
+          flex: 1 1 64px;
+        }
+
+        .map-links {
+          margin-left: 0;
+        }
+
+        .map-links a {
+          flex: 1 1 92px;
         }
       }
     </style>
@@ -443,6 +509,7 @@
       const CATEGORY_ORDER = ["한식", "중식", "일식", "디저트", "양식"];
       const PLATFORM_KEYS = ["kakao", "naver", "google"];
       const PLATFORM_SHORT = { kakao: "K", naver: "N", google: "G" };
+      const PLATFORM_NAME = { kakao: "카카오", naver: "네이버", google: "구글" };
 
       const validRating = (value) =>
         Number.isFinite(value) && value > 0 && value <= 5;
@@ -527,9 +594,9 @@
 
       const mapLinks = (restaurant) =>
         [
-          ["kakao", "K"],
-          ["naver", "N"],
-          ["google", "G"],
+          ["kakao", "카카오맵"],
+          ["naver", "네이버지도"],
+          ["google", "구글지도"],
         ]
           .filter(([key]) => restaurant[`${key}MapLink`])
           .map(
@@ -540,7 +607,7 @@
 
       document.querySelector("#categorySections").innerHTML = groups
         .map((group) => {
-          const rows = group.restaurants
+          const cards = group.restaurants
             .map((restaurant) => {
               const average = platformAverage(restaurant);
               const isHigh = average > 4.5;
@@ -551,33 +618,42 @@
               const representativeImage =
                 restaurant.images?.find(Boolean) || fallbackImage;
               return `
-                <tr class="${isHigh ? "is-high" : ""}">
-                  <td class="restaurant-name">
-                    <div class="restaurant-cell">
-                      <img
-                        class="restaurant-image"
-                        src="${escapeHtml(representativeImage)}"
-                        alt="${escapeHtml(restaurant.name)} 대표 이미지"
-                        onerror="this.onerror=null;this.src='${escapeHtml(fallbackImage)}'"
-                      />
-                      <span>${escapeHtml(restaurant.name)}</span>
+                <article class="restaurant-card ${isHigh ? "is-high" : ""}">
+                  <img
+                    class="restaurant-image"
+                    src="${escapeHtml(representativeImage)}"
+                    alt="${escapeHtml(restaurant.name)} 대표 이미지"
+                    onerror="this.onerror=null;this.src='${escapeHtml(fallbackImage)}'"
+                  />
+                  <div class="restaurant-info">
+                    <div class="restaurant-heading">
+                      <h3 class="restaurant-name">${escapeHtml(restaurant.name)}</h3>
+                      ${isHigh ? '<span class="high-badge">4.5+</span>' : ""}
                     </div>
-                  </td>
-                  <td class="restaurant-comment">${escapeHtml(oneLineComment(restaurant))}</td>
-                  <td class="address">${escapeHtml(restaurant.address)}</td>
-                  ${PLATFORM_KEYS.map(
-                    (key) =>
-                      `<td class="score">${formatRating(
-                        restaurant.platformRatings?.[key]?.rating,
-                        key === "naver" ? 2 : 1
-                      )}</td>`
-                  ).join("")}
-                  <td class="average">
-                    ${average === null ? "—" : average.toFixed(1)}
-                    ${isHigh ? '<span class="high-badge">4.5+</span>' : ""}
-                  </td>
-                  <td><div class="map-links">${mapLinks(restaurant)}</div></td>
-                </tr>
+                    <p class="restaurant-comment">${escapeHtml(oneLineComment(restaurant))}</p>
+                    <p class="address"><strong>주소</strong><span>${escapeHtml(restaurant.address)}</span></p>
+                    <div class="details-row">
+                      <div class="ratings" aria-label="${escapeHtml(restaurant.name)} 플랫폼 별점">
+                        ${PLATFORM_KEYS.map(
+                          (key) => `
+                            <span class="rating-item">
+                              <small>${PLATFORM_NAME[key]}</small>
+                              <strong>${formatRating(
+                                restaurant.platformRatings?.[key]?.rating,
+                                key === "naver" ? 2 : 1
+                              )}</strong>
+                            </span>
+                          `
+                        ).join("")}
+                        <span class="rating-item average">
+                          <small>평균</small>
+                          <strong>${average === null ? "—" : average.toFixed(1)}</strong>
+                        </span>
+                      </div>
+                      <div class="map-links">${mapLinks(restaurant)}</div>
+                    </div>
+                  </div>
+                </article>
               `;
             })
             .join("");
@@ -588,23 +664,7 @@
                 <h2>${group.category}</h2>
                 <span>${group.restaurants.length}곳</span>
               </div>
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">음식점</th>
-                      <th scope="col">한줄 특징</th>
-                      <th scope="col">주소</th>
-                      <th scope="col" class="score">K</th>
-                      <th scope="col" class="score">N</th>
-                      <th scope="col" class="score">G</th>
-                      <th scope="col">평균</th>
-                      <th scope="col">지도</th>
-                    </tr>
-                  </thead>
-                  <tbody>${rows}</tbody>
-                </table>
-              </div>
+              <div class="restaurant-list">${cards}</div>
             </section>
           `;
         })
