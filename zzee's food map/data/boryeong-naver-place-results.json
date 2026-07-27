@@ -22,7 +22,7 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "오는정 손만두 충청남도 보령시 큰오랏2길 55",
+    "query": "오는정손만두 충청남도 보령시 큰오랏2길 55",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": true,
     "requestedName": "오는정 손만두",
@@ -88,25 +88,39 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "조양 칼국수 충청남도 보령시 보령남로 125-7",
+    "query": "성지 2호점 충청남도 보령시 동현로 88",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
-    "matched": true,
-    "requestedName": "조양 칼국수",
-    "name": "조양칼국수",
-    "category": "칼국수,만두",
-    "address": "충청남도 보령시 보령남로 125-7",
-    "lotAddress": "충청남도 보령시 명천동 592-5",
-    "latitude": 36.3344152,
-    "longitude": 126.6011688,
-    "naverPlaceId": 1391449024,
-    "naverMapLink": "https://map.naver.com/p/entry/place/1391449024",
-    "tel": "041-934-5556",
+    "matched": false,
+    "requestedName": "성지 2호점",
+    "name": null,
+    "category": null,
+    "address": null,
+    "lotAddress": null,
+    "latitude": null,
+    "longitude": null,
+    "naverPlaceId": null,
+    "naverMapLink": null,
+    "tel": null,
     "rating": null,
-    "images": [
-      "https://ldb-phinf.pstatic.net/20230725_283/1690251892682KLk9Y_JPEG/KakaoTalk_20230725_104915314_08.jpg",
-      "https://ldb-phinf.pstatic.net/20220913_210/1663032159173iIWOR_JPEG/6.jpg",
-      "https://ldb-phinf.pstatic.net/20220510_50/1652151138812DgzHl_JPEG/20211018_132153.jpg"
-    ],
+    "images": [],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "query": "오양칼국수 충남 보령시 보령남로 125-7 1층",
+    "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
+    "matched": false,
+    "requestedName": "오양칼국수",
+    "name": null,
+    "category": null,
+    "address": null,
+    "lotAddress": null,
+    "latitude": null,
+    "longitude": null,
+    "naverPlaceId": null,
+    "naverMapLink": null,
+    "tel": null,
+    "rating": null,
+    "images": [],
     "checkedAt": "2026-07-27"
   },
   {
@@ -150,6 +164,28 @@
       "https://ldb-phinf.pstatic.net/20240505_294/1714912265184dCswO_JPEG/IMG_4579.jpeg",
       "https://ldb-phinf.pstatic.net/20230516_261/1684201120450JVNI2_JPEG/IMG_0396.jpeg",
       "https://ldb-phinf.pstatic.net/20230516_73/1684201120015oW7bq_JPEG/IMG_0398.jpeg"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "query": "키레이나 충청남도 보령시 명천로2길 11",
+    "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
+    "matched": true,
+    "requestedName": "키레이나",
+    "name": "키레이나",
+    "category": "돈가스",
+    "address": "충청남도 보령시 명천로2길 11 1층 상가",
+    "lotAddress": "충청남도 보령시 명천동 1156 1층 상가",
+    "latitude": 36.3372796,
+    "longitude": 126.608899,
+    "naverPlaceId": 1263372742,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1263372742",
+    "tel": "",
+    "rating": null,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20240414_84/1713069863281bgwSn_JPEG/KakaoTalk_20240414_134159171_04.jpg",
+      "https://ldb-phinf.pstatic.net/20240414_48/1713069893815tDL3q_JPEG/KakaoTalk_20240414_134159171_03.jpg",
+      "https://ldb-phinf.pstatic.net/20240414_147/1713069933134trVf0_JPEG/KakaoTalk_20240414_134159171_05.jpg"
     ],
     "checkedAt": "2026-07-27"
   },
@@ -198,7 +234,7 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "윤가네 해물탕 충청남도 보령시 대해로 28",
+    "query": "윤가네해물탕 충청남도 보령시 대해로 28",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": true,
     "requestedName": "윤가네 해물탕",
@@ -286,7 +322,7 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "플라르 충청남도 보령시 오천면 원산도2길 331-34",
+    "query": "플라르 베이커리 카페 충청남도 보령시 오천면 원산도2길 331-34",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": true,
     "requestedName": "플라르",
@@ -330,7 +366,7 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "커피인터뷰대천 충청남도 보령시 대천항1길 67-22",
+    "query": "커피인터뷰 대천 충청남도 보령시 대천항1길 67-22",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": true,
     "requestedName": "커피인터뷰대천",
@@ -370,6 +406,28 @@
       "https://ldb-phinf.pstatic.net/20251104_142/1762221755093bcoqx_GIF/88a95dfd-e56e-47e5-8153-d00e3f77baea-1762221702269-afec6f90-3446-4579-9f39-92ad4.gif",
       "https://ldb-phinf.pstatic.net/20250916_294/1758008623121iiMdv_GIF/IMG_1298.gif",
       "https://ldb-phinf.pstatic.net/20250803_117/1754224391623Kh23B_JPEG/F5ABA5C5-F4FB-4B23-8A8C-27EC52E7F174.jpeg"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "query": "황해원 충청남도 보령시 성주면 심원계곡로 4",
+    "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
+    "matched": true,
+    "requestedName": "황해원",
+    "name": "황해원",
+    "category": "중식당",
+    "address": "충청남도 보령시 성주면 심원계곡로 4",
+    "lotAddress": "충청남도 보령시 성주면 성주리 196-1",
+    "latitude": 36.3360542,
+    "longitude": 126.6508327,
+    "naverPlaceId": 17504316,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17504316",
+    "tel": "041-933-5051",
+    "rating": null,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20250715_148/1752536071066wiVIG_PNG/1000001260.png",
+      "https://ldb-phinf.pstatic.net/20160225_27/1456378834746BfpCt_JPEG/176175547053680_0.jpg",
+      "https://ldb-phinf.pstatic.net/20160225_130/1456378834811kvdhz_JPEG/176175547053680_1.jpg"
     ],
     "checkedAt": "2026-07-27"
   }

@@ -16,9 +16,11 @@ const expectedNames = [
   "오는정 손만두",
   "제일해물칼국수",
   "성지 보령본점",
-  "조양 칼국수",
+  "성지 2호점",
+  "오양칼국수",
   "김가네사골수제비",
   "키츠네야",
+  "키레이나",
   "고구려 수제 본 갈비",
   "조개까는남자",
   "윤가네 해물탕",
@@ -29,6 +31,7 @@ const expectedNames = [
   "카페모카브레드",
   "커피인터뷰대천",
   "바다듬루프탑카페",
+  "황해원",
 ];
 
 const mimeTypes = {
@@ -174,11 +177,11 @@ try {
     throw new Error("보령 검색에서 요청 식당이 누락되었습니다.");
   }
   if (missingNaverRatings.length) throw new Error("네이버 평점 표시 누락");
-  if (missingGoogleRatings.join("|") !== "고구려 수제 본 갈비") {
+  if (missingGoogleRatings.join("|") !== "고구려 수제 본 갈비|커피인터뷰대천") {
     throw new Error(`구글 평점 표시 누락 범위 오류: ${missingGoogleRatings.join(", ")}`);
   }
   if (missingAverageLabels.length) throw new Error("평균별점 라벨 표시 누락");
-  if (highRatingNames.join("|") !== "피자파티|오는정 손만두") {
+  if (highRatingNames.join("|") !== "피자파티|오는정 손만두|키레이나") {
     throw new Error(`4.5+ 배지 대상 오류: ${highRatingNames.join(", ")}`);
   }
   if (errors.length) throw new Error("브라우저 런타임 오류 발생");
@@ -275,24 +278,24 @@ try {
     ),
   );
 
-  if (table.count !== "18" || table.names.length !== 18 || !table.names.includes("수정식당")) {
+  if (table.count !== "21" || table.names.length !== 21 || !table.names.includes("수정식당")) {
     throw new Error("보령 분류표의 음식점 수 또는 수정식당 포함 상태 오류");
   }
-  if (table.comments.length !== 18 || table.comments.some((comment) => !comment || /^별점\s*:?\s*$/.test(comment))) {
+  if (table.comments.length !== 21 || table.comments.some((comment) => !comment || /^별점\s*:?\s*$/.test(comment))) {
     throw new Error("보령 분류표 한줄 특징 표시 오류");
   }
   if (table.categories.join("|") !== "한식|중식|일식|디저트|양식") {
     throw new Error(`보령 분류 순서 오류: ${table.categories.join(", ")}`);
   }
-  if (table.highRatingNames.join("|") !== "오는정 손만두|피자파티") {
+  if (table.highRatingNames.join("|") !== "오는정 손만두|키레이나|피자파티") {
     throw new Error(`보령 분류표 4.5+ 대상 오류: ${table.highRatingNames.join(", ")}`);
   }
-  if (table.links < 50) throw new Error("보령 분류표 지도 링크 누락");
-  if (table.appLinks !== 36) throw new Error("보령 분류표 카카오·네이버 앱 링크 누락");
+  if (table.links < 60) throw new Error("보령 분류표 지도 링크 누락");
+  if (table.appLinks !== 42) throw new Error("보령 분류표 카카오·네이버 앱 링크 누락");
   if (table.horizontalOverflow || mobileLayout.horizontalOverflow || !mobileLayout.stackedCards) {
     throw new Error("보령 분류표 반응형 카드 레이아웃 오류");
   }
-  if (table.images.length !== 18 || table.images.some((image) => !image.complete || image.width <= 0)) {
+  if (table.images.length !== 21 || table.images.some((image) => !image.complete || image.width <= 0)) {
     throw new Error("보령 분류표 대표 이미지 표시 오류");
   }
 } finally {

@@ -235,6 +235,8 @@ const parseGoogle = (page, restaurant) => {
 const GOOGLE_URL_OVERRIDES = {
   "성지 보령본점":
     "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
+  "성지 2호점":
+    "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
 };
 
 const googleUrl = (restaurant) =>

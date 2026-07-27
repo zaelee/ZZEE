@@ -155,7 +155,7 @@
     "kakaoMapLink": "https://place.map.kakao.com/46833190",
     "rating": 4.8,
     "ratingCount": 8,
-    "reviewCount": 17,
+    "reviewCount": 18,
     "menuItems": [
       {
         "name": "소고기짬뽕(2인이상)",
@@ -189,52 +189,15 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "requestedName": "조양 칼국수",
-    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
-    "matched": true,
-    "query": "조양 칼국수 충청남도 보령시 보령남로 125-7",
-    "score": 93,
-    "kakaoPlaceId": "372550342",
-    "matchedName": "조양칼국수 보령점",
-    "category": "칼국수",
-    "address": "충남 보령시 보령남로 125-7 1층",
-    "lotAddress": "명천동 592-5",
-    "latitude": 36.33439083520237,
-    "longitude": 126.60117943725774,
-    "kakaoMapLink": "https://place.map.kakao.com/372550342",
-    "rating": 1.9,
-    "ratingCount": 15,
-    "reviewCount": 133,
-    "menuItems": [
-      {
-        "name": "물총칼국수(보리밥)",
-        "price": 10000,
-        "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2025-03-13 10:50:03"
-      },
-      {
-        "name": "비빔국수와 물총칼국수(보리밥)",
-        "price": 11000,
-        "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2025-03-13 10:50:03"
-      },
-      {
-        "name": "콩국수 (여름메뉴)",
-        "price": 10000,
-        "desc": null,
-        "isRecommended": false,
-        "sourceUpdatedAt": "2026-04-06 12:08:01"
-      }
-    ],
-    "menuUpdatedAt": "2026-04-06 12:08:01",
-    "priceRange": "10,000-11,000원",
-    "priceSymbol": "₩₩",
-    "images": [
-      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_104055_9140512_20240227034524_cube/right_800.jpg",
-      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d5fe46b5129a1355720d0954e9f8f77cc5dc4597?original"
-    ],
+    "requestedName": "성지 2호점",
+    "matched": false,
+    "query": "성지 2호점 충청남도 보령시 동현로 88",
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "오양칼국수",
+    "matched": false,
+    "query": "오양칼국수 충청남도 보령시 보령남로 125-7",
     "checkedAt": "2026-07-27"
   },
   {
@@ -332,6 +295,55 @@
     "images": [
       "https://map.kakaocdn.net/map_roadview/2024/02/9140543/2_100555_9140543_20240228232612_cube/left_800.jpg",
       "http://t1.daumcdn.net/local/kakaomapPhoto/review/939b215bb80155d5c1f44cfae05ac840c5c3faa4?original"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "키레이나",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "보령 키레이나",
+    "score": 293,
+    "kakaoPlaceId": "36036952",
+    "matchedName": "키레이나",
+    "category": "돈까스,우동",
+    "address": "충남 보령시 명천로2길 11 상가 1층",
+    "lotAddress": "명천동 1156",
+    "latitude": 36.337289297993614,
+    "longitude": 126.60889922467484,
+    "kakaoMapLink": "https://place.map.kakao.com/36036952",
+    "rating": 4.4,
+    "ratingCount": 24,
+    "reviewCount": 106,
+    "menuItems": [
+      {
+        "name": "안심카츠",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-07 10:34:02"
+      },
+      {
+        "name": "등심카츠",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-11-07 10:34:02"
+      },
+      {
+        "name": "카레",
+        "price": 2000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-11 23:58:36"
+      }
+    ],
+    "menuUpdatedAt": "2026-05-11 23:58:36",
+    "priceRange": "2,000-13,000원",
+    "priceSymbol": "₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_104344_9140512_20240227040024_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/4f5cb0a7b499b990efe3ffdaf0968210d84344e5?original"
     ],
     "checkedAt": "2026-07-27"
   },
@@ -765,6 +777,55 @@
     "images": [
       "https://map.kakaocdn.net/map_roadview/2019/07/1027990/2_100965_1027990_20190706003938_cube/right_800.jpg",
       "http://t1.kakaocdn.net/mystore/4701136EF0AF4618AFE8FD46E689CB6E"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "requestedName": "황해원",
+    "source": "Kakao Map 비공식 공개 엔드포인트 스냅샷",
+    "matched": true,
+    "query": "황해원 충청남도 보령시 성주면 심원계곡로 4",
+    "score": 293,
+    "kakaoPlaceId": "10046975",
+    "matchedName": "황해원",
+    "category": "중국요리",
+    "address": "충남 보령시 성주면 심원계곡로 4 1층",
+    "lotAddress": "성주면 성주리 196-1",
+    "latitude": 36.33605655139887,
+    "longitude": 126.65082110480101,
+    "kakaoMapLink": "https://place.map.kakao.com/10046975",
+    "rating": 3.4,
+    "ratingCount": 58,
+    "reviewCount": 114,
+    "menuItems": [
+      {
+        "name": "짬뽕",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      },
+      {
+        "name": "짜장면",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      },
+      {
+        "name": "짬뽕밥",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-27 09:59:30"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-04 22:56:06",
+    "priceRange": "7,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140407/2_101560_9140407_20240207034811_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/dce3d19a6c5af374d41d01b3135189b62c73f3ba?original"
     ],
     "checkedAt": "2026-07-27"
   }

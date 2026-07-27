@@ -68,23 +68,6 @@
     "error": null
   },
   {
-    "requestedName": "조양 칼국수",
-    "expectedName": "조양칼국수",
-    "expectedAddress": "충청남도 보령시 보령남로 125-7",
-    "naverPlaceId": "1391449024",
-    "naverMapLink": "https://map.naver.com/p/entry/place/1391449024",
-    "sourceUrl": "https://m.place.naver.com/restaurant/1391449024/home",
-    "sourceField": "placeDetail.base.visitorReviewsScore",
-    "checkedAt": "2026-07-27",
-    "ok": true,
-    "status": 200,
-    "matchedName": "조양칼국수",
-    "nameAccepted": true,
-    "rating": 4.62,
-    "reviewCount": 609,
-    "error": null
-  },
-  {
     "requestedName": "김가네사골수제비",
     "expectedName": "김가네사골수제비",
     "expectedAddress": "충청남도 보령시 석서1길 57",
@@ -116,6 +99,23 @@
     "nameAccepted": true,
     "rating": 4.88,
     "reviewCount": 187,
+    "error": null
+  },
+  {
+    "requestedName": "키레이나",
+    "expectedName": "키레이나",
+    "expectedAddress": "충청남도 보령시 명천로2길 11 1층 상가",
+    "naverPlaceId": "1263372742",
+    "naverMapLink": "https://map.naver.com/p/entry/place/1263372742",
+    "sourceUrl": "https://m.place.naver.com/restaurant/1263372742/home",
+    "sourceField": "placeDetail.base.visitorReviewsScore",
+    "checkedAt": "2026-07-27",
+    "ok": true,
+    "status": 200,
+    "matchedName": "키레이나",
+    "nameAccepted": true,
+    "rating": 4.89,
+    "reviewCount": 949,
     "error": null
   },
   {
@@ -234,7 +234,7 @@
     "matchedName": "플라르",
     "nameAccepted": true,
     "rating": 4.75,
-    "reviewCount": 2047,
+    "reviewCount": 2048,
     "error": null
   },
   {
@@ -286,6 +286,23 @@
     "nameAccepted": true,
     "rating": 4.6,
     "reviewCount": 2878,
+    "error": null
+  },
+  {
+    "requestedName": "황해원",
+    "expectedName": "황해원",
+    "expectedAddress": "충청남도 보령시 성주면 심원계곡로 4",
+    "naverPlaceId": "17504316",
+    "naverMapLink": "https://map.naver.com/p/entry/place/17504316",
+    "sourceUrl": "https://m.place.naver.com/restaurant/17504316/home",
+    "sourceField": "placeDetail.base.visitorReviewsScore",
+    "checkedAt": "2026-07-27",
+    "ok": true,
+    "status": 200,
+    "matchedName": "황해원",
+    "nameAccepted": true,
+    "rating": 4.35,
+    "reviewCount": 1067,
     "error": null
   }
 ]

@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "name": "성지 2호점",
+    "matchedName": null,
+    "address": null,
+    "reasons": [
+      "장소 매칭 실패"
+    ]
+  },
+  {
+    "name": "오양칼국수",
+    "matchedName": null,
+    "address": null,
+    "reasons": [
+      "장소 매칭 실패"
+    ]
+  }
+]

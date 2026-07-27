@@ -44,9 +44,11 @@ const summary = vm.runInContext(
       "오는정 손만두",
       "제일해물칼국수",
       "성지 보령본점",
-      "조양 칼국수",
+      "성지 2호점",
+      "오양칼국수",
       "김가네사골수제비",
       "키츠네야",
+      "키레이나",
       "고구려 수제 본 갈비",
       "조개까는남자",
       "윤가네 해물탕",
@@ -57,6 +59,7 @@ const summary = vm.runInContext(
       "카페모카브레드",
       "커피인터뷰대천",
       "바다듬루프탑카페",
+      "황해원",
     ];
     const boryeongSearchMatches = combined.filter((restaurant) =>
       [

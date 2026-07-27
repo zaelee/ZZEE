@@ -21,23 +21,97 @@
     }
   },
   {
-    "name": "커피인터뷰대천",
+    "name": "성지 2호점",
     "naver": {
       "rating": null,
       "reviewCount": null,
       "checkedAt": "2026-07-27",
-      "url": "https://map.naver.com/p/entry/place/1609492966"
+      "url": "https://map.naver.com/p/entry/place/1877918020"
     },
     "google": {
-      "rating": 3.3,
+      "rating": 4.2,
       "reviewCount": null,
       "checkedAt": "2026-07-27",
-      "url": "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%EC%B2%9C%ED%95%AD1%EA%B8%B8%2067-22",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90&query_place_id=ChIJvSEFZtN_cDUR_lIPTqxyx-8",
       "nameAccepted": true,
       "addressAccepted": true,
-      "evidence": "커피인터뷰 | 3.3",
-      "title": "커피인터뷰 - Google 지도",
-      "resolvedUrl": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "evidence": "성지2호점 | 4.2",
+      "title": "성지2호점 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": []
+    }
+  },
+  {
+    "name": "오양칼국수",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1391449024"
+    },
+    "google": {
+      "rating": 3.8,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%B3%B4%EB%A0%B9%EB%82%A8%EB%A1%9C%20125-7%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "조양칼국수 | 3.8",
+      "title": "오양칼국수 충남 보령시 보령남로 125-7 1층 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/search/%EC%98%A4%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EB%B3%B4%EB%A0%B9%EB%82%A8%EB%A1%9C+125-7+1%EC%B8%B5/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": [
+        {
+          "text": "오양손칼국수",
+          "ariaLabel": "오양손칼국수",
+          "href": "https://www.google.com/maps/place/%EC%98%A4%EC%96%91%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98/data=!4m7!3m6!1s0x35707f00543284bd:0x264117f76a8faa07!8m2!3d36.3328363!4d126.620179!16s%2Fg%2F11vyg036g_!19sChIJvYQyVAB_cDURB6qPavcXQSY?authuser=0&hl=ko&rclk=1"
+        },
+        {
+          "text": "조양칼국수",
+          "ariaLabel": "조양칼국수",
+          "href": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!4m7!3m6!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490!19sChIJkUvv_5iAcDUR8qOBQMBNv1o?authuser=0&hl=ko&rclk=1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "키레이나",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/1263372742"
+    },
+    "google": {
+      "rating": 5,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%82%A4%EB%A0%88%EC%9D%B4%EB%82%98%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%AA%85%EC%B2%9C%EB%A1%9C2%EA%B8%B8%2011%20%EC%83%81%EA%B0%80%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "키레이나 | 5.0",
+      "title": "키레이나 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%ED%82%A4%EB%A0%88%EC%9D%B4%EB%82%98/data=!3m1!4b1!4m6!3m5!1s0x3570810022825b0d:0xb92834ea4f7fd366!8m2!3d36.3372732!4d126.6088961!16s%2Fg%2F11xck19npp?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": []
+    }
+  },
+  {
+    "name": "황해원",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/17504316"
+    },
+    "google": {
+      "rating": 4,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%ED%99%A9%ED%95%B4%EC%9B%90%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EC%84%B1%EC%A3%BC%EB%A9%B4%20%EC%8B%AC%EC%9B%90%EA%B3%84%EA%B3%A1%EB%A1%9C%204%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "황해원 | 4.0",
+      "title": "황해원 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%ED%99%A9%ED%95%B4%EC%9B%90/data=!3m1!4b1!4m6!3m5!1s0x35707faa422b8067:0x59f528891b728d20!8m2!3d36.3360387!4d126.6508301!16s%2Fg%2F1th1rz2g?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
       "placeLinks": []
     }
   }
