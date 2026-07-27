@@ -14,6 +14,8 @@ const baseLat = 37.5404;
 const baseLng = 127.0692;
 const seongsuBaseLat = 37.5446;
 const seongsuBaseLng = 127.0557;
+const boryeongBaseLat = 36.3333;
+const boryeongBaseLng = 126.6128;
 
 const rawRestaurants = [
   ["해남닭집", "한식", 4.2, "식객 허영만에 소개된 통닭집", "통닭", "식객 허영만의 통닭집"],
@@ -104,6 +106,23 @@ const rawRestaurants = [
   ["텅 성수 스페이스", "디저트", 2, "힙하고 생각보다 큰 카페", "커피와 디저트", "큰 공간과 성수다운 분위기가 강한 카페"],
   ["마마젤라또", "디저트", 2, "콘이 맛있는 힙한 젤라또", "젤라또", "젤라또보다 콘까지 같이 기억나는 곳"],
   ["어니언", "디저트", 1, "천장 허무는 감성 카페의 시초", "커피와 베이커리", "성수 감성 카페의 원형처럼 기록"],
+  ["피자파티", "양식", null, "피자돈까스와 레트로한 분위기로 알려진 보령 시내 경양식집", "피자돈까스", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["오는정 손만두", "한식", null, "직접 빚은 만두를 버섯전골과 칼만두국으로 즐기는 손만두집", "버섯만두전골", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["제일해물칼국수", "한식", null, "바지락 해물칼국수에 왕만두를 곁들이기 좋은 보령 칼국수집", "해물칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["성지 보령본점", "중식", null, "불향 나는 소고기짬뽕과 유림만두가 대표인 점심 중심 중식당", "소고기짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["조양 칼국수", "한식", null, "물총칼국수와 비빔국수, 보리밥을 푸짐하게 먹는 칼국수집", "물총칼국수", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["김가네사골수제비", "한식", null, "사골 육수에 끓인 수제비와 김치·도가니 수제비가 중심인 집", "사골수제비", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["키츠네야", "일식", null, "키츠네스시와 후토마끼, 고등어봉초밥을 내는 보령 일식당", "키츠네스시", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["고구려 수제 본 갈비", "한식", null, "양념 소갈비살과 수제 돼지구이를 숯불에 굽는 보령 고깃집", "양념황제소갈비살", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["조개까는남자", "한식", null, "대천해수욕장 앞에서 조개구이·활어회·해산물 세트를 내는 집", "모듬조개구이", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["윤가네 해물탕", "한식", null, "해물탕과 해물찜, 꽃게장을 함께 고를 수 있는 보령 해물요리집", "해물탕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["찬찬찬 해장국", "한식", null, "아침 일찍 황태해장국과 육개장을 먹을 수 있는 보령 해장국집", "황태해장국", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["대포식당", "한식", null, "국내산 암돼지 삼겹살과 통목살을 내는 저녁 고깃집", "암돼지 삼겹살", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["바이더오", "디저트", null, "원산도 바다 전망과 야외 테라스를 갖춘 대형 오션뷰 카페", "브라운치즈 아인슈페너", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["플라르", "디저트", null, "원산도에서 소금빵과 크루아상류를 고를 수 있는 베이커리 카페", "게살새우소금빵", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["카페모카브레드", "디저트", null, "오전 8시부터 빵과 대천소금라떼를 즐기는 대천 오션뷰 카페", "대천소금라떼", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["커피인터뷰대천", "디저트", null, "대천항 언덕에서 바다와 석양을 보는 오션뷰 카페", "우유아이스크림", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["바다듬루프탑카페", "디저트", null, "대천항 전망과 넓은 루프탑을 갖춘 수협 위판장 3층 카페", "바다듬크림라떼", "방문 후 개인 코멘트를 업데이트할 예정"],
 ];
 
 const priceByCategory = {
@@ -191,8 +210,29 @@ const seongsuRestaurantNames = new Set([
   "어니언",
 ]);
 
+const boryeongRestaurantNames = new Set([
+  "피자파티",
+  "오는정 손만두",
+  "제일해물칼국수",
+  "성지 보령본점",
+  "조양 칼국수",
+  "김가네사골수제비",
+  "키츠네야",
+  "고구려 수제 본 갈비",
+  "조개까는남자",
+  "윤가네 해물탕",
+  "찬찬찬 해장국",
+  "대포식당",
+  "바이더오",
+  "플라르",
+  "카페모카브레드",
+  "커피인터뷰대천",
+  "바다듬루프탑카페",
+]);
+
 const pendingRestaurantNames = new Set([
   "오몬자",
+  ...boryeongRestaurantNames,
 ]);
 
 const addressVerifiedAt = "2026-06-30";
@@ -234,9 +274,205 @@ const verifiedPlaceData = {
   꼬메노: { matchedName: "꼬메노", address: "서울특별시 광진구 군자로7길 29 1층 카페꼬메노", latitude: 37.5456057, longitude: 127.0691037 },
   최가회관: { matchedName: "최가커피회관", address: "서울특별시 광진구 능동로13길 30 지층", latitude: 37.5434026, longitude: 127.0706141 },
   오몬자: { matchedName: "오몬자", address: "서울 성동구 연무장길 31-1 상가동 3층 301호", latitude: 37.54423235905416, longitude: 127.05477944742798 },
+  피자파티: { matchedName: "피자파티", address: "충청남도 보령시 대흥로 44", latitude: 36.3497498, longitude: 126.5940198 },
+  "오는정 손만두": { matchedName: "오는정손만두", address: "충청남도 보령시 큰오랏2길 55", latitude: 36.3505687, longitude: 126.6073513 },
+  제일해물칼국수: { matchedName: "제일해물칼국수", address: "충청남도 보령시 대해로 46", latitude: 36.3438084, longitude: 126.5946276 },
+  "성지 보령본점": { matchedName: "성지 보령본점", address: "충청남도 보령시 동현로 88", latitude: 36.3471826528238, longitude: 126.615361022136 },
+  "조양 칼국수": { matchedName: "조양칼국수", address: "충청남도 보령시 보령남로 125-7", latitude: 36.3344152, longitude: 126.6011688 },
+  김가네사골수제비: { matchedName: "김가네사골수제비", address: "충청남도 보령시 석서1길 57", latitude: 36.3205539496, longitude: 126.5183160067 },
+  키츠네야: { matchedName: "키츠네야", address: "충청남도 보령시 작은오랏5길 31 1층", latitude: 36.3462989, longitude: 126.6048973 },
+  "고구려 수제 본 갈비": { matchedName: "고구려수제본갈비", address: "충청남도 보령시 큰오랏2길 26", latitude: 36.3493276, longitude: 126.6064586 },
+  조개까는남자: { matchedName: "조개까는남자", address: "충청남도 보령시 해수욕장4길 16", latitude: 36.30586061812669, longitude: 126.51649265115816 },
+  "윤가네 해물탕": { matchedName: "윤가네해물탕", address: "충청남도 보령시 대해로 28", latitude: 36.3443382, longitude: 126.5963863 },
+  "찬찬찬 해장국": { matchedName: "찬찬찬해장국", address: "충청남도 보령시 보령북로 68", latitude: 36.3523153, longitude: 126.5987097 },
+  대포식당: { matchedName: "대포식당", address: "충청남도 보령시 작은오랏7길 36 1층", latitude: 36.3449959, longitude: 126.6039729 },
+  바이더오: { matchedName: "바이더오", address: "충청남도 보령시 오천면 원산도5길 89-23", latitude: 36.3813220788286, longitude: 126.396957479116 },
+  플라르: { matchedName: "플라르 베이커리 카페", address: "충청남도 보령시 오천면 원산도2길 331-34", latitude: 36.3849004, longitude: 126.4301078 },
+  카페모카브레드: { matchedName: "카페모카브레드", address: "충청남도 보령시 해수욕장4길 84 1층", latitude: 36.3086671, longitude: 126.5151023 },
+  커피인터뷰대천: { matchedName: "커피인터뷰 대천", address: "충청남도 보령시 대천항1길 67-22", latitude: 36.3241043, longitude: 126.5048257 },
+  바다듬루프탑카페: { matchedName: "바다듬 루프탑카페 보령점", address: "충청남도 보령시 대천항중앙길 76 위판장 3층", latitude: 36.3273818, longitude: 126.5066687 },
 };
 
-const kakaoCheckedAt = "2026-06-30";
+const boryeongPlaceSources = {
+  피자파티: { provider: "google", providerPlaceId: "0x357081f70d7620a1:0xe0abb6d2f292d393", sourceUrl: "https://www.tel-co.net/food/spot/8773", checkedAt: "2026-07-27" },
+  "오는정 손만두": { provider: "diningcode", providerPlaceId: "f3goJr31oUNh", sourceUrl: "https://www.diningcode.com/profile.php?rid=f3goJr31oUNh", checkedAt: "2026-07-27" },
+  제일해물칼국수: { provider: "diningcode", providerPlaceId: "KB4JtqpS0VaC", sourceUrl: "https://www.diningcode.com/profile.php?rid=KB4JtqpS0VaC", checkedAt: "2026-07-27" },
+  "성지 보령본점": { provider: "placeview", providerPlaceId: "NDY4MzMxOTAg", sourceUrl: "https://www.placeview.co.kr/id/NDY4MzMxOTAg", checkedAt: "2026-07-27" },
+  "조양 칼국수": { provider: "diningcode", providerPlaceId: "YqXEHCsX617R", sourceUrl: "https://www.diningcode.com/profile.php?rid=YqXEHCsX617R", checkedAt: "2026-07-27" },
+  김가네사골수제비: { provider: "chungnam-tour", providerPlaceId: "rstNo:11", sourceUrl: "https://tour.chungnam.go.kr/prog/rst/kor/sub02_03_02/view.do?rstNo=11", checkedAt: "2026-07-27" },
+  키츠네야: { provider: "diningcode", providerPlaceId: "S1siZ2WwLg3Q", sourceUrl: "https://www.diningcode.com/profile.php?rid=S1siZ2WwLg3Q", checkedAt: "2026-07-27" },
+  "고구려 수제 본 갈비": { provider: "diningcode", providerPlaceId: "s2kUxrWeWCjA", sourceUrl: "https://www.diningcode.com/profile.php?rid=s2kUxrWeWCjA", checkedAt: "2026-07-27" },
+  조개까는남자: { provider: "placeview", providerPlaceId: "MTg3NjAwMDMg", sourceUrl: "https://www.placeview.co.kr/id/MTg3NjAwMDMg", checkedAt: "2026-07-27" },
+  "윤가네 해물탕": { provider: "diningcode", providerPlaceId: "lL9RHwdnm1tB", sourceUrl: "https://www.diningcode.com/profile.php?rid=lL9RHwdnm1tB", checkedAt: "2026-07-27" },
+  "찬찬찬 해장국": { provider: "diningcode", providerPlaceId: "eQ0klw7cMTDV", sourceUrl: "https://www.diningcode.com/profile.php?rid=eQ0klw7cMTDV", checkedAt: "2026-07-27" },
+  대포식당: { provider: "diningcode", providerPlaceId: "mxEnGFs19gg0", sourceUrl: "https://www.diningcode.com/profile.php?rid=mxEnGFs19gg0", checkedAt: "2026-07-27" },
+  바이더오: { provider: "k-trip-tips", providerPlaceId: "2828944", sourceUrl: "https://www.ktriptips.com/kor/food/2828944", checkedAt: "2026-07-27" },
+  플라르: { provider: "diningcode", providerPlaceId: "i4lhvrVtUgFk", sourceUrl: "https://www.diningcode.com/profile.php?rid=i4lhvrVtUgFk", checkedAt: "2026-07-27" },
+  카페모카브레드: { provider: "google", providerPlaceId: "0x35708537ffcac1c1:0x94e3d0e64523bdc1", sourceUrl: "https://www.tel-co.net/cafe/spot/10994", checkedAt: "2026-07-27" },
+  커피인터뷰대천: { provider: "google", providerPlaceId: "0x3570854832518e75:0x34962fb5f31e1914", sourceUrl: "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EB%B3%B4%EB%A0%B9", checkedAt: "2026-07-27" },
+  바다듬루프탑카페: { provider: "diningcode", providerPlaceId: "CP13KWXqkl6h", sourceUrl: "https://www.diningcode.com/profile.php?rid=CP13KWXqkl6h", checkedAt: "2026-07-27" },
+};
+
+const boryeongEditorialData = {
+  피자파티: {
+    menuItems: [
+      { name: "피자돈까스", price: 11500 },
+      { name: "김치피자돈까스", price: 12500 },
+      { name: "매운피자돈까스", price: 12500 },
+    ],
+    priceRange: "11,500-12,500원",
+    sourceLabel: "여행의기술 공개 메뉴",
+  },
+  "오는정 손만두": {
+    menuItems: [
+      { name: "버섯만두전골 (소)", price: 29000 },
+      { name: "칼만두국", price: 10000 },
+      { name: "찐만두", price: 10000 },
+    ],
+    priceRange: "1만-2만9천원",
+    sourceLabel: "카카오맵·다이닝코드 공개 메뉴",
+  },
+  제일해물칼국수: {
+    menuItems: [
+      { name: "해물칼국수(바지락)", price: 10000 },
+      { name: "왕만두", price: 7000 },
+    ],
+    priceRange: "7천-1만원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  "성지 보령본점": {
+    menuItems: [
+      { name: "소고기짬뽕", price: 11000 },
+      { name: "짬뽕", price: 9000 },
+      { name: "유림만두", price: 8000 },
+    ],
+    priceRange: "8천-1만1천원",
+    sourceLabel: "카카오맵·다이닝코드 공개 메뉴",
+  },
+  "조양 칼국수": {
+    menuItems: [
+      { name: "물총칼국수(보리밥)", price: 10000 },
+      { name: "비빔국수와 물총칼국수", price: 11000 },
+      { name: "콩국수(여름)", price: 10000 },
+    ],
+    priceRange: "1만-1만1천원",
+    sourceLabel: "카카오맵 공개 메뉴",
+  },
+  김가네사골수제비: {
+    menuItems: [
+      { name: "사골수제비", price: 10000 },
+      { name: "김치수제비", price: 12000 },
+      { name: "도가니수제비", price: 15000 },
+    ],
+    priceRange: "1만-1만5천원",
+    sourceLabel: "카카오맵 공개 메뉴",
+  },
+  키츠네야: {
+    menuItems: [
+      { name: "키츠네스시", price: 20000 },
+      { name: "후토마끼", price: 23000 },
+      { name: "초밥 8p+메밀소바(점심)", price: 17000 },
+    ],
+    priceRange: "1만7천-2만3천원",
+    sourceLabel: "카카오맵·다이닝코드 공개 메뉴",
+  },
+  "고구려 수제 본 갈비": {
+    menuItems: [
+      { name: "양념황제소갈비살 1kg", price: 80000 },
+      { name: "양념황제소갈비살 600g", price: 60000 },
+      { name: "수제양념돼지구이 230g", price: 13000 },
+    ],
+    priceRange: "1만3천-8만원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  조개까는남자: {
+    menuItems: [
+      { name: "조개구이+활어회+해산물+식사 (소)", price: 100000 },
+      { name: "키조개+왕가리비 치즈 양념 (소)", price: 60000 },
+      { name: "모듬조개구이 (소)", price: 60000 },
+    ],
+    priceRange: "6만-10만원",
+    sourceLabel: "테이블링 공개 메뉴",
+  },
+  "윤가네 해물탕": {
+    menuItems: [
+      { name: "해물찜 (대)", price: 70000 },
+      { name: "해물탕 (대)", price: 65000 },
+      { name: "해물탕 (중)", price: 55000 },
+    ],
+    priceRange: "5만5천-7만원",
+    sourceLabel: "카카오맵 공개 메뉴",
+  },
+  "찬찬찬 해장국": {
+    menuItems: [
+      { name: "황태해장국", price: 9000 },
+      { name: "갈비탕", price: 10000 },
+      { name: "육개장", price: 9000 },
+    ],
+    priceRange: "9천-1만원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  대포식당: {
+    menuItems: [
+      { name: "국내산 암돼지 삼겹살", price: 16000 },
+      { name: "국내산 암돼지 목삼겹", price: 16000 },
+      { name: "양푼비빔밥", price: 4000 },
+    ],
+    priceRange: "4천-1만6천원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  바이더오: {
+    menuItems: [
+      { name: "브라운치즈 아인슈페너", price: 8500 },
+      { name: "선셋에이드", price: 8000 },
+      { name: "아메리카노", price: 6500 },
+    ],
+    priceRange: "6,500-8,500원",
+    sourceLabel: "카카오맵·K-TRIP TIPS 공개 메뉴",
+  },
+  플라르: {
+    menuItems: [
+      { name: "게살새우소금빵", price: 6500 },
+      { name: "찰떡모카크루아상", price: 6500 },
+      { name: "소금빵", price: 4000 },
+    ],
+    priceRange: "4천-6,500원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  카페모카브레드: {
+    menuItems: [
+      { name: "대천소금라떼", price: 7500 },
+      { name: "양파빵", price: 5500 },
+      { name: "아메리카노 HOT", price: 5000 },
+    ],
+    priceRange: "5천-7,500원",
+    sourceLabel: "여행의기술 공개 메뉴",
+  },
+  커피인터뷰대천: {
+    menuItems: [
+      { name: "우유아이스크림", price: 7000 },
+      { name: "망고아이스크림", price: 7500 },
+      { name: "헤이즐넛라떼", price: 6500 },
+    ],
+    priceRange: "6,500-7,500원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+  바다듬루프탑카페: {
+    menuItems: [
+      { name: "바다듬크림라떼", price: 6800 },
+      { name: "바다듬라떼", price: 6300 },
+      { name: "반건조 오징어 버터구이", price: 10000 },
+    ],
+    priceRange: "6,300-1만원",
+    sourceLabel: "다이닝코드 공개 메뉴",
+  },
+};
+
+for (const [name, source] of Object.entries(boryeongPlaceSources)) {
+  Object.assign(verifiedPlaceData[name], source);
+}
+
+const kakaoCheckedAt = "2026-07-27";
 const kakaoPlaceData = {
   "해남닭집": {
     "matchedName": "해남닭집",
@@ -3468,10 +3704,649 @@ const kakaoPlaceData = {
       "http://t1.kakaocdn.net/mystore/D759B82401654920ABB1E17978FCF06F"
     ],
     "checkedAt": "2026-06-30"
+  },
+  "피자파티": {
+    "matchedName": "피자파티",
+    "kakaoPlaceId": "10863094",
+    "address": "충남 보령시 대흥로 44 2층",
+    "lotAddress": "대천동 328-6",
+    "latitude": 36.349729833515966,
+    "longitude": 126.59398036930263,
+    "kakaoMapLink": "https://place.map.kakao.com/10863094",
+    "rating": 4.3,
+    "ratingCount": 32,
+    "reviewCount": 301,
+    "menuItems": [
+      {
+        "name": "피자돈가스",
+        "price": 11500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      },
+      {
+        "name": "매운피자돈가스",
+        "price": 12500,
+        "desc": null,
+        "isRecommended": true,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      },
+      {
+        "name": "김치치즈돈가스",
+        "price": 12500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-08-20 13:56:04"
+      }
+    ],
+    "menuUpdatedAt": "2025-09-10 00:16:54",
+    "priceRange": "11,500-12,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_102749_9140512_20240227021352_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/0cf4a6dadc0c810252c20f2923433ed3e1d061c1?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.004171267498337569
+  },
+  "오는정 손만두": {
+    "matchedName": "오는정손만두",
+    "kakaoPlaceId": "667610392",
+    "address": "충남 보령시 큰오랏2길 55 1층",
+    "lotAddress": "동대동 1386",
+    "latitude": 36.35057113216906,
+    "longitude": 126.60734444931087,
+    "kakaoMapLink": "https://place.map.kakao.com/667610392",
+    "rating": 5,
+    "ratingCount": 7,
+    "reviewCount": 9,
+    "menuItems": [
+      {
+        "name": "버섯만두전골 (소)",
+        "price": 29000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 23:43:53"
+      },
+      {
+        "name": "칼만두국",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 23:39:36"
+      },
+      {
+        "name": "만두국",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-08-26 13:22:25"
+      }
+    ],
+    "menuUpdatedAt": "2026-07-20 17:38:50",
+    "priceRange": "10,000-29,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_105191_9140531_20240228052852_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/7ea80b579f6dd76fad61ea042859b67741608294?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0006704893786160385
+  },
+  "제일해물칼국수": {
+    "matchedName": "제일해물칼국수",
+    "kakaoPlaceId": "1158090728",
+    "address": "충남 보령시 대해로 46 1층",
+    "lotAddress": "궁촌동 25-6",
+    "latitude": 36.343755178823315,
+    "longitude": 126.59455053404234,
+    "kakaoMapLink": "https://place.map.kakao.com/1158090728",
+    "rating": 3.5,
+    "ratingCount": 33,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "해물칼국수",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-10-01 19:13:16"
+      },
+      {
+        "name": "왕만두",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-01-31 11:42:06"
+      }
+    ],
+    "menuUpdatedAt": "2024-10-01 19:13:16",
+    "priceRange": "7,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_101846_9140493_20240226032038_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/b2cff2c6a346f3faa716f322d9d7cc7a6db971b4?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.009092025529465015
+  },
+  "성지 보령본점": {
+    "matchedName": "성지 보령본점",
+    "kakaoPlaceId": "46833190",
+    "address": "충남 보령시 동현로 88 1층",
+    "lotAddress": "동대동 380-3",
+    "latitude": 36.34718355042364,
+    "longitude": 126.61535990372946,
+    "kakaoMapLink": "https://place.map.kakao.com/46833190",
+    "rating": 4.8,
+    "ratingCount": 8,
+    "reviewCount": 17,
+    "menuItems": [
+      {
+        "name": "소고기짬뽕(2인이상)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:10:27"
+      },
+      {
+        "name": "유림만두(8개)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 23:28:42"
+      },
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-05-14 09:20:54"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-22 16:37:43",
+    "priceRange": "6,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140531/2_103776_9140531_20240228030037_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/c131633399c02eb46b9509fcec6f96e5d9683f3b?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.00014140322518289538
+  },
+  "조양 칼국수": {
+    "matchedName": "조양칼국수 보령점",
+    "kakaoPlaceId": "372550342",
+    "address": "충남 보령시 보령남로 125-7 1층",
+    "lotAddress": "명천동 592-5",
+    "latitude": 36.33439083520237,
+    "longitude": 126.60117943725774,
+    "kakaoMapLink": "https://place.map.kakao.com/372550342",
+    "rating": 1.9,
+    "ratingCount": 15,
+    "reviewCount": 133,
+    "menuItems": [
+      {
+        "name": "물총칼국수(보리밥)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 10:50:03"
+      },
+      {
+        "name": "비빔국수와 물총칼국수(보리밥)",
+        "price": 11000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 10:50:03"
+      },
+      {
+        "name": "콩국수 (여름메뉴)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-06 12:08:01"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-06 12:08:01",
+    "priceRange": "10,000-11,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_104055_9140512_20240227034524_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/d5fe46b5129a1355720d0954e9f8f77cc5dc4597?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0028719145414621543
+  },
+  "김가네사골수제비": {
+    "matchedName": "김가네사골수제비",
+    "kakaoPlaceId": "9732813",
+    "address": "충남 보령시 석서1길 57",
+    "lotAddress": "신흑동 760-1",
+    "latitude": 36.32048503958234,
+    "longitude": 126.51830882876926,
+    "kakaoMapLink": "https://place.map.kakao.com/9732813",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 265,
+    "menuItems": [
+      {
+        "name": "사골수제비",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      },
+      {
+        "name": "김치수제비",
+        "price": 12000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      },
+      {
+        "name": "도가니수제비",
+        "price": 15000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-02-21 01:11:02"
+      }
+    ],
+    "menuUpdatedAt": "2026-02-21 01:12:02",
+    "priceRange": "10,000-15,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103060_9140493_20240226035817_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/BD73EFCEF0054B279A65FD31FB69ED9F"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.007689382808806204
+  },
+  "키츠네야": {
+    "matchedName": "키츠네야",
+    "kakaoPlaceId": "689962522",
+    "address": "충남 보령시 작은오랏5길 31 1층",
+    "lotAddress": "동대동 1784",
+    "latitude": 36.3462879225107,
+    "longitude": 126.60490629521233,
+    "kakaoMapLink": "https://place.map.kakao.com/689962522",
+    "rating": 4,
+    "ratingCount": 16,
+    "reviewCount": 69,
+    "menuItems": [
+      {
+        "name": "후토마끼",
+        "price": 23000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-11 23:30:17"
+      },
+      {
+        "name": "카츠네스시(초밥12p)",
+        "price": 20000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-08 10:22:39"
+      },
+      {
+        "name": "초밥8p+메밀소바(점심특선)",
+        "price": 17000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-06-11 12:45:45"
+      }
+    ],
+    "menuUpdatedAt": "2026-01-09 11:32:23",
+    "priceRange": "17,000-23,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140543/2_100555_9140543_20240228232612_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/939b215bb80155d5c1f44cfae05ac840c5c3faa4?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0014625327291152939
+  },
+  "조개까는남자": {
+    "matchedName": "조개까는남자",
+    "kakaoPlaceId": "18760003",
+    "address": "충남 보령시 해수욕장4길 16 1층",
+    "lotAddress": "신흑동 1982",
+    "latitude": 36.30586061812669,
+    "longitude": 126.51649265115816,
+    "kakaoMapLink": "https://place.map.kakao.com/18760003",
+    "rating": null,
+    "ratingCount": null,
+    "reviewCount": 2094,
+    "menuItems": [
+      {
+        "name": "우럭매운탕 (소)",
+        "price": 50000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 23:37:57"
+      },
+      {
+        "name": "우럭매운탕 (중)",
+        "price": 70000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-18 00:14:52"
+      },
+      {
+        "name": "우럭매운탕 (대)",
+        "price": 90000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-17 23:52:55"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-18 00:14:52",
+    "priceRange": "50,000-90,000원",
+    "priceSymbol": "₩₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103509_9140493_20240226042226_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA3MjZfMTQ5/MDAxNzg1MDU5NTgxMDc0.XAKXoXX1WhbPlZ0uFis8F2d8hN3DI1YkHd72DaJ6XJ4g.0dvFJyz7CPbzekjV0mPMwcRK5VvhluPZnN26JBSjuKAg.JPEG/SE-6c5142e8-0176-499d-bc60-3ad09ba34437.jpg?type=w966"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0
+  },
+  "윤가네 해물탕": {
+    "matchedName": "윤가네해물탕",
+    "kakaoPlaceId": "10672059",
+    "address": "충남 보령시 대해로 28",
+    "lotAddress": "궁촌동 7-14",
+    "latitude": 36.34433451529336,
+    "longitude": 126.59637886179881,
+    "kakaoMapLink": "https://place.map.kakao.com/10672059",
+    "rating": 2.6,
+    "ratingCount": 13,
+    "reviewCount": 11,
+    "menuItems": [
+      {
+        "name": "해물찜(대)",
+        "price": 70000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-05 04:14:02"
+      },
+      {
+        "name": "해물탕(대)",
+        "price": 65000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-04 22:40:19"
+      },
+      {
+        "name": "해물탕(중)",
+        "price": 55000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-09-04 22:41:19"
+      }
+    ],
+    "menuUpdatedAt": "2025-10-21 00:10:43",
+    "priceRange": "55,000-70,000원",
+    "priceSymbol": "₩₩₩₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_101828_9140493_20240226032026_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/5a05f1f245fe3e1d22fd5aa0325c6f018cc6a5a4?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.000782105217593901
+  },
+  "대포식당": {
+    "matchedName": "대포식당",
+    "kakaoPlaceId": "27235880",
+    "address": "충남 보령시 작은오랏7길 36",
+    "lotAddress": "동대동 1876",
+    "latitude": 36.34500503023266,
+    "longitude": 126.60393249288815,
+    "kakaoMapLink": "https://place.map.kakao.com/27235880",
+    "rating": 4.4,
+    "ratingCount": 7,
+    "reviewCount": 28,
+    "menuItems": [
+      {
+        "name": "통삼겹살(180g)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 23:30:02"
+      },
+      {
+        "name": "껍데기",
+        "price": 13000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 22:38:19"
+      },
+      {
+        "name": "통목살(180g)",
+        "price": 16000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-07-13 23:45:46"
+      }
+    ],
+    "menuUpdatedAt": "2026-07-13 23:45:46",
+    "priceRange": "13,000-16,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140543/2_100824_9140543_20240228233943_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/f9855cbe765c89726844afee65ae109c504d5a7c?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.003758703750975111
+  },
+  "바이더오": {
+    "matchedName": "바이더오",
+    "kakaoPlaceId": "1197283635",
+    "address": "충남 보령시 오천면 원산도5길 89-23 1-2층",
+    "lotAddress": "오천면 원산도리 1731",
+    "latitude": 36.38132551098656,
+    "longitude": 126.39696942200966,
+    "kakaoMapLink": "https://place.map.kakao.com/1197283635",
+    "rating": 4.1,
+    "ratingCount": 184,
+    "reviewCount": 512,
+    "menuItems": [
+      {
+        "name": "브라운치즈 아인슈페너 (ICE)",
+        "price": 8500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-02 16:39:31"
+      },
+      {
+        "name": "선셋에이드 (ICE)",
+        "price": 8000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-01-02 16:39:31"
+      },
+      {
+        "name": "아메리카노",
+        "price": 6500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-03-13 11:43:57"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-03 23:42:07",
+    "priceRange": "6,500-8,500원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140592/2_102094_9140592_20240227003955_cube/right_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/bda0bc4f4f7f2c4908d53038da30a283276777a4?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0011352195623304821
+  },
+  "플라르": {
+    "matchedName": "플라르베이커리카페",
+    "kakaoPlaceId": "991012582",
+    "address": "충남 보령시 오천면 원산도2길 331-34",
+    "lotAddress": "오천면 원산도리 544",
+    "latitude": 36.38492335990986,
+    "longitude": 126.43009186019503,
+    "kakaoMapLink": "https://place.map.kakao.com/991012582",
+    "rating": 3.9,
+    "ratingCount": 20,
+    "reviewCount": 261,
+    "menuItems": [
+      {
+        "name": "아메리카노",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-04-29 23:23:36"
+      }
+    ],
+    "menuUpdatedAt": "2025-04-29 23:23:36",
+    "priceRange": "6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2015/12/1014329/2_102677_1014329_20151201021115_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/9a80718803f69e7f513a3a16438f2db2f2f5e3b5?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.002924714958115231
+  },
+  "카페모카브레드": {
+    "matchedName": "모카브레드",
+    "kakaoPlaceId": "2032657782",
+    "address": "충남 보령시 해수욕장4길 84 1-2층",
+    "lotAddress": "신흑동 1917",
+    "latitude": 36.30871722164559,
+    "longitude": 126.51512552840298,
+    "kakaoMapLink": "https://place.map.kakao.com/2032657782",
+    "rating": 3.4,
+    "ratingCount": 36,
+    "reviewCount": 1249,
+    "menuItems": [
+      {
+        "name": "아메리카노(HOT)",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-11 23:47:45"
+      },
+      {
+        "name": "카페라떼(HOT)",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-11 23:15:47"
+      },
+      {
+        "name": "바닐라라떼(HOT)",
+        "price": 6000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2023-08-12 00:21:49"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-29 13:53:54",
+    "priceRange": "5,000-6,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140493/2_103542_9140493_20240226042421_cube/left_800.jpg",
+      "http://t1.daumcdn.net/local/kakaomapPhoto/review/252ff7f376eaea47201ad53621b60fcef6a83c0c?original"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.005949246176361876
+  },
+  "커피인터뷰대천": {
+    "matchedName": "커피인터뷰 대천점",
+    "kakaoPlaceId": "648331181",
+    "address": "충남 보령시 대천항1길 67-22",
+    "lotAddress": "신흑동 945-31",
+    "latitude": 36.3242560368919,
+    "longitude": 126.50518899615774,
+    "kakaoMapLink": "https://place.map.kakao.com/648331181",
+    "rating": 3.1,
+    "ratingCount": 20,
+    "reviewCount": 108,
+    "menuItems": [
+      {
+        "name": "코코넛커피",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-15 10:53:53"
+      },
+      {
+        "name": "아메리카노",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-14 20:00:12"
+      },
+      {
+        "name": "카페라떼",
+        "price": 5500,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2021-04-14 10:39:20"
+      }
+    ],
+    "menuUpdatedAt": "2023-11-28 15:06:10",
+    "priceRange": "5,000-7,000원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140592/2_106155_9140592_20240227052415_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA3MTNfMTc5/MDAxNzgzODc4MzA5MTUw.xGqkJhfR1kez71Q7h-HwyMktYU1SDWI0GvmbRmCsV20g.eiAPSSOMSXuhJQa34NdAyTf9tZs-sLmGnzAJ6tOWQ_wg.JPEG/1783878308753.jpg?type=w580"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.03666015780199406
+  },
+  "바다듬루프탑카페": {
+    "matchedName": "바다듬 루프탑카페",
+    "kakaoPlaceId": "266030588",
+    "address": "충남 보령시 대천항중앙길 76 위판장 3층",
+    "lotAddress": "신흑동 950-122",
+    "latitude": 36.32777617947748,
+    "longitude": 126.50653437397456,
+    "kakaoMapLink": "https://place.map.kakao.com/266030588",
+    "rating": 3.9,
+    "ratingCount": 23,
+    "reviewCount": 531,
+    "menuItems": [
+      {
+        "name": "아메리카노",
+        "price": 5000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-20 23:18:10"
+      },
+      {
+        "name": "바다듬라떼",
+        "price": 6300,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-20 09:23:16"
+      },
+      {
+        "name": "바다듬에이드",
+        "price": 6800,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-04-21 09:32:06"
+      }
+    ],
+    "menuUpdatedAt": "2026-04-21 09:32:06",
+    "priceRange": "5,000-6,800원",
+    "priceSymbol": "₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2019/07/1027990/2_100965_1027990_20190706003938_cube/right_800.jpg",
+      "http://t1.kakaocdn.net/mystore/4701136EF0AF4618AFE8FD46E689CB6E"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0454740339494502
   }
 };
 
-const naverCheckedAt = "2026-06-30";
+const naverCheckedAt = "2026-07-27";
 const naverPlaceData = {
   "해남닭집": {
     "matchedName": "해남닭집",
@@ -3482,7 +4357,7 @@ const naverPlaceData = {
     "longitude": 127.0699822,
     "naverMapLink": "https://map.naver.com/p/entry/place/20069127",
     "rating": 4.53,
-        "reviewCount": 786,
+    "reviewCount": 786,
     "images": [
       "https://ldb-phinf.pstatic.net/20210706_97/1625499079756jhvh4_JPEG/qpNGt7N4Afth-YWQuMrXC5aY.jpg",
       "https://ldb-phinf.pstatic.net/20240915_272/1726376599613VJSh0_JPEG/919.jpg",
@@ -3499,7 +4374,7 @@ const naverPlaceData = {
     "longitude": 127.0687052,
     "naverMapLink": "https://map.naver.com/p/entry/place/1765453403",
     "rating": 4.86,
-        "reviewCount": 2511,
+    "reviewCount": 2511,
     "images": [
       "https://ldb-phinf.pstatic.net/20250609_24/1749475964859TIBsr_JPEG/IMG_5841.jpeg",
       "https://ldb-phinf.pstatic.net/20250609_128/1749475972982ShVII_JPEG/IMG_5840.jpeg",
@@ -3516,7 +4391,7 @@ const naverPlaceData = {
     "longitude": 127.0660391,
     "naverMapLink": "https://map.naver.com/p/entry/place/32090089",
     "rating": 4.66,
-        "reviewCount": 731,
+    "reviewCount": 731,
     "images": [
       "https://ldb-phinf.pstatic.net/20191222_96/1576987558273hHnDV_JPEG/k-uxhYyVwBggrb1eFAwi0lOh.jpg",
       "https://ldb-phinf.pstatic.net/20221020_189/1666261760281NqMjJ_JPEG/7DC078FB-4FCC-47B7-B8B8-353E4CB29A75.jpeg"
@@ -3532,7 +4407,7 @@ const naverPlaceData = {
     "longitude": 127.0676569,
     "naverMapLink": "https://map.naver.com/p/entry/place/20844012",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNjAxMjlfMTk3/MDAxNzY5NjY3ODgzMTYw.lRZNjSPApD__d8A_rkECA2FXqZbjMwLuC-zvwFmDgfEg.httDRpTmy6yweY-H4bwAqZCcFivCfkAM3uVDOhN1nhQg.PNG/%C3%83%C2%AC%C3%82%C2%8B%C3%82%C2%AC%C3%83%C2%AC%C3%82%C2%9E%C3%82%C2%A5_%C3%83%C2%AC%C3%82%C2%8B%C3%82%C2%9C%C3%83%C2%AD%C3%82%C2%82%C3%82%C2%B4_%C3%83%C2%AC%C3%82%C2%A3%C3%82%C2%BC%C3%83%C2%AB%C3%82%C2%AC%C3%82%C2%B8_%C3%83%C2%AC%C3%82%C2%99%C3%82.png",
       "https://pup-review-phinf.pstatic.net/MjAyNTA4MTdfMTQx/MDAxNzU1NDIyMzk3Njgw.mDJkeHi1wywio5hT40hcR1D_FKNLbwBrLgcU4lZdaVcg.xAe5M-7trnHc3e1Fd-QWS_bCiprYm_xRdn79N9jlCp8g.JPEG/IMG_7063.jpeg",
@@ -3549,7 +4424,7 @@ const naverPlaceData = {
     "longitude": 127.0853467,
     "naverMapLink": "https://map.naver.com/p/entry/place/11727906",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250505_67/1746407573015dc6II_JPEG/IMG_4057.jpeg",
       "https://ldb-phinf.pstatic.net/20150831_137/1441030738247q5Ht8_JPEG/11727906_0.jpg",
@@ -3566,7 +4441,7 @@ const naverPlaceData = {
     "longitude": 127.0723468,
     "naverMapLink": "https://map.naver.com/p/entry/place/20912981",
     "rating": 4.35,
-        "reviewCount": 2512,
+    "reviewCount": 2512,
     "images": [
       "https://ldb-phinf.pstatic.net/20251212_130/1765544907266AHJMx_JPEG/20251212_205046.jpg",
       "https://ldb-phinf.pstatic.net/20200221_221/1582270411176nMkbz_JPEG/JtMwiXXASzJSTuU7qP9Z_fdQ.jpeg.jpg",
@@ -3583,7 +4458,7 @@ const naverPlaceData = {
     "longitude": 127.0718608,
     "naverMapLink": "https://map.naver.com/p/entry/place/35357402",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNTA4MzFfNjkg/MDAxNzU2NjMwNzYyNjQ5.7ZKHY-1CONhXKf3FXlv97CrAnWcU_xuw3u63HsuSn98g.sLNbwAC3uLaPC1FAVJBAJwORxn-lc8MdsWeOp32OzwAg.JPEG/20250814_132648.jpg",
       "https://ldb-phinf.pstatic.net/20211117_186/1637085529774Us44S_JPEG/%B1%EF%B6%D2_%BB%EF%B0%E3%BB%EC_%C7%D1%C6%C7.jpg",
@@ -3600,7 +4475,7 @@ const naverPlaceData = {
     "longitude": 127.0693913,
     "naverMapLink": "https://map.naver.com/p/entry/place/1393442096",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250729_222/1753777091797I3E6v_JPEG/%BD%A1%BA%D2%BE%E7%B3%E4%B5%DE%B0%ED%B1%E2_%C5%D7%C0%CC%BA%ED%BF%C0%B4%F5%BF%EB_%B8%DE%B4%BA%BB%E7%C1%F8.jpg",
       "https://ldb-phinf.pstatic.net/20250724_136/1753348081097b7OCU_JPEG/%B5%DE%B0%ED%B1%E2.jpg",
@@ -3633,7 +4508,7 @@ const naverPlaceData = {
     "longitude": 127.0686643,
     "naverMapLink": "https://map.naver.com/p/entry/place/1436916083",
     "rating": 4.4,
-        "reviewCount": 1121,
+    "reviewCount": 1121,
     "images": [
       "https://ldb-phinf.pstatic.net/20201113_285/1605252606079IltjJ_JPEG/UVMygig5rxrHBlzXfaSiBA3q.JPG.jpg",
       "https://ldb-phinf.pstatic.net/20201113_6/1605252628675xRhbz_JPEG/-6_L_1Orfiv-TqPNWUPw36nR.JPG.jpg",
@@ -3650,7 +4525,7 @@ const naverPlaceData = {
     "longitude": 127.0689155,
     "naverMapLink": "https://map.naver.com/p/entry/place/17994062",
     "rating": 4.39,
-        "reviewCount": 1284,
+    "reviewCount": 1284,
     "images": [
       "https://ldb-phinf.pstatic.net/20260119_40/1768822807503IakBv_JPEG/image.jpg",
       "https://ldb-phinf.pstatic.net/20260119_292/1768822576475bK2c1_JPEG/image.jpg",
@@ -3667,7 +4542,7 @@ const naverPlaceData = {
     "longitude": 127.0707236,
     "naverMapLink": "https://map.naver.com/p/entry/place/18834914",
     "rating": 4.27,
-        "reviewCount": 1205,
+    "reviewCount": 1205,
     "images": [
       "https://ldb-phinf.pstatic.net/20230626_64/1687766367847Wd1B4_JPEG/IMG_0550.jpeg",
       "https://ldb-phinf.pstatic.net/20230626_274/168776649312721SFp_JPEG/IMG_0555.jpeg",
@@ -3684,7 +4559,7 @@ const naverPlaceData = {
     "longitude": 127.0693479,
     "naverMapLink": "https://map.naver.com/p/entry/place/32794440",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20200514_164/1589464927264QgA3s_JPEG/OBFBUPKk8V9G9xOn9hA3bj2c.jpg",
       "https://ldb-phinf.pstatic.net/20200514_166/1589464896920lsIwD_JPEG/SqmUXCMvZtChWtpMpGf6JAW7.jpg",
@@ -3701,7 +4576,7 @@ const naverPlaceData = {
     "longitude": 127.0651039,
     "naverMapLink": "https://map.naver.com/p/entry/place/13154500",
     "rating": 4.29,
-        "reviewCount": 1631,
+    "reviewCount": 1631,
     "images": [
       "https://ldb-phinf.pstatic.net/20221019_22/1666151866648wT7Rz_JPEG/IMG_7433.JPG",
       "https://ldb-phinf.pstatic.net/20221019_275/1666152102613tMYkD_JPEG/IMG_7951.JPG",
@@ -3718,7 +4593,7 @@ const naverPlaceData = {
     "longitude": 127.0692665,
     "naverMapLink": "https://map.naver.com/p/entry/place/11836177",
     "rating": 4.42,
-        "reviewCount": 2499,
+    "reviewCount": 2499,
     "images": [
       "https://ldb-phinf.pstatic.net/20260602_215/1780392567630LhMpu_JPEG/KakaoTalk_20260601_131000349_10.jpg",
       "https://ldb-phinf.pstatic.net/20201116_42/1605526882536Ofxh4_JPEG/Rirl23M6iKqQLDj1RnHXx_Od.jpg",
@@ -3735,7 +4610,7 @@ const naverPlaceData = {
     "longitude": 127.0708958,
     "naverMapLink": "https://map.naver.com/p/entry/place/1755431931",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250329_118/1743228218475PNtvY_JPEG/1000013390.jpg",
       "https://ldb-phinf.pstatic.net/20250329_89/1743228011842Nvqtj_JPEG/1000013392.jpg",
@@ -3752,7 +4627,7 @@ const naverPlaceData = {
     "longitude": 127.0697234,
     "naverMapLink": "https://map.naver.com/p/entry/place/1929531895",
     "rating": 4.57,
-        "reviewCount": 3235,
+    "reviewCount": 3235,
     "images": [
       "https://ldb-phinf.pstatic.net/20260304_195/17725632445208FC9B_JPEG/1000071843.jpg",
       "https://ldb-phinf.pstatic.net/20251218_279/1766062784083aDj9W_JPEG/1.jpg",
@@ -3769,7 +4644,7 @@ const naverPlaceData = {
     "longitude": 127.0729933,
     "naverMapLink": "https://map.naver.com/p/entry/place/1494321970",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNjA2MDFfMjIy/MDAxNzgwMzEyMjA0Njg3.XrRXt8g-yJCGWtx9zgJl3WTV33XtxHhZmwMIoliHaIYg.ZMRyl1iRmns6JGPghgP4r8Y3d7fxikhd-QVczGV2BjQg.JPEG/IMG_2339.jpeg",
       "https://ldb-phinf.pstatic.net/20201230_249/1609305244229oMcmW_JPEG/u8YvvJEtaPZQVtbZp8sU_qdD.jpeg.jpg",
@@ -3786,7 +4661,7 @@ const naverPlaceData = {
     "longitude": 127.0664981,
     "naverMapLink": "https://map.naver.com/p/entry/place/1359051109",
     "rating": 4.53,
-        "reviewCount": 6849,
+    "reviewCount": 6849,
     "images": [
       "https://ldb-phinf.pstatic.net/20171222_273/1513909993152wbpV8_JPEG/fM-4sk2LkYUe0jmd83plu51X.JPG.jpg",
       "https://ldb-phinf.pstatic.net/20171222_65/151391003987560ndg_JPEG/rDlNRA3oBSqew6IzU4ZpuivL.JPG.jpg",
@@ -3803,7 +4678,7 @@ const naverPlaceData = {
     "longitude": 127.0715598,
     "naverMapLink": "https://map.naver.com/p/entry/place/20757891",
     "rating": 4.48,
-        "reviewCount": 4628,
+    "reviewCount": 4628,
     "images": [
       "https://ldb-phinf.pstatic.net/20221113_279/1668323664644zsJDP_JPEG/E4275242-6EDA-4A77-B9AE-A1FD7BFC677F.jpeg",
       "https://ldb-phinf.pstatic.net/20221113_162/166832374827970thm_JPEG/B057231D-4BD9-4051-941A-B43F3B7FFCCB.jpeg",
@@ -3820,7 +4695,7 @@ const naverPlaceData = {
     "longitude": 127.0662637,
     "naverMapLink": "https://map.naver.com/p/entry/place/34203618",
     "rating": 4.49,
-        "reviewCount": 1,
+    "reviewCount": 1,
     "images": [
       "https://ldb-phinf.pstatic.net/20191121_87/15743047607866sr9t_JPEG/3JhLSTOkw79xvNPSZ8QJRRB7.JPG.jpg",
       "https://ldb-phinf.pstatic.net/20191121_290/1574304787563RuMyG_JPEG/e4esgeEi22tuQ5FY3WlFSXF4.JPG.jpg",
@@ -3837,7 +4712,7 @@ const naverPlaceData = {
     "longitude": 127.0665993,
     "naverMapLink": "https://map.naver.com/p/entry/place/12966607",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20190213_77/15500360744298Y1Uz_JPEG/jASlCskCiE3Wk91j1gbiaz6F.jpg",
       "https://ldb-phinf.pstatic.net/20220504_218/1651634066457BNeab_JPEG/%BC%DB%C8%AD%BE%E7%B2%BF%C4%A1.JPG",
@@ -3854,7 +4729,7 @@ const naverPlaceData = {
     "longitude": 127.0686744,
     "naverMapLink": "https://map.naver.com/p/entry/place/1479756144",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20210513_23/1620889811073WduRH_JPEG/tMLWPkCAX_VV5fDFpMV7Rw8S.jpg",
       "https://ldb-phinf.pstatic.net/20210513_246/1620889876651Ia0Er_JPEG/uwKkMBvs0gQsF1voUwSXzqM9.jpg",
@@ -3871,7 +4746,7 @@ const naverPlaceData = {
     "longitude": 127.0710627,
     "naverMapLink": "https://map.naver.com/p/entry/place/1580083114",
     "rating": 4.7,
-        "reviewCount": 750,
+    "reviewCount": 750,
     "images": [
       "https://ldb-phinf.pstatic.net/20250910_267/1757498330602jLAF0_JPEG/302B145E-1F13-4ECA-8AC0-B470962F7290.jpeg",
       "https://ldb-phinf.pstatic.net/20250318_298/17422924773804pwWR_JPEG/IMG_3904.jpeg",
@@ -3888,7 +4763,7 @@ const naverPlaceData = {
     "longitude": 127.0677047,
     "naverMapLink": "https://map.naver.com/p/entry/place/1788087862",
     "rating": 4.52,
-        "reviewCount": 2811,
+    "reviewCount": 2811,
     "images": [
       "https://ldb-phinf.pstatic.net/20220521_157/1653071808518dRViR_JPEG/Screenshot_20220425-143544_Gallery.jpg",
       "https://ldb-phinf.pstatic.net/20240927_106/1727377162603l91Ws_JPEG/IMG_1441.JPG",
@@ -3905,7 +4780,7 @@ const naverPlaceData = {
     "longitude": 127.0717001,
     "naverMapLink": "https://map.naver.com/p/entry/place/760819243",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20210328_268/1616916588407HxXe7_JPEG/5uyA9YsZiX6deMUDxh_OQAFG.jpg",
       "https://ldb-phinf.pstatic.net/20210328_237/161691662224306XBa_JPEG/3rgDjjlzYI1WLSunZIAbKUWp.jpg",
@@ -3922,7 +4797,7 @@ const naverPlaceData = {
     "longitude": 127.0652057,
     "naverMapLink": "https://map.naver.com/p/entry/place/1040714903",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260502_225/1777687374984nee2k_JPEG/1000003564.jpg",
       "https://ldb-phinf.pstatic.net/20260502_300/1777687630413PQWRi_JPEG/1000008274.jpg",
@@ -3939,7 +4814,7 @@ const naverPlaceData = {
     "longitude": 127.0701571,
     "naverMapLink": "https://map.naver.com/p/entry/place/32089668",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20200316_273/1584333926916isMg1_PNG/LqaOSa7ArPUmvaB540KTAL4w.png",
       "https://ldb-phinf.pstatic.net/20150901_192/1441074093103rGACl_JPEG/166851515150624_1.jpg",
@@ -3956,7 +4831,7 @@ const naverPlaceData = {
     "longitude": 127.0688595,
     "naverMapLink": "https://map.naver.com/p/entry/place/1267891433",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20200115_102/1579082949064oWETw_JPEG/o_1DeWjJscuxMiW4TfzEB7Wk.jpg",
       "https://ldb-phinf.pstatic.net/20190624_115/1561332214168gLLbz_JPEG/wEwnNH-iIHEzQ4S0MIopTZUm.jpg",
@@ -3973,7 +4848,7 @@ const naverPlaceData = {
     "longitude": 127.0698905,
     "naverMapLink": "https://map.naver.com/p/entry/place/1720361242",
     "rating": 4.6,
-        "reviewCount": 2046,
+    "reviewCount": 2046,
     "images": [
       "https://ldb-phinf.pstatic.net/20220408_218/1649409922458sCAUC_JPEG/DSC04824_1280.JPG",
       "https://ldb-phinf.pstatic.net/20220408_155/1649410044330C8v6b_JPEG/DSC04875_1280.JPG",
@@ -3990,7 +4865,7 @@ const naverPlaceData = {
     "longitude": 127.0701674,
     "naverMapLink": "https://map.naver.com/p/entry/place/1134743279",
     "rating": 4.39,
-        "reviewCount": 1940,
+    "reviewCount": 1940,
     "images": [
       "https://ldb-phinf.pstatic.net/20240415_76/1713161683321R4Tjs_PNG/%B6%F3%B1%B8%B6%F3%C0%DA%B3%C4.png",
       "https://ldb-phinf.pstatic.net/20240415_65/17131615648070aIHM_PNG/%B9%D9%C1%FA%B6%F3%C0%DA%B3%C4.png",
@@ -4007,7 +4882,7 @@ const naverPlaceData = {
     "longitude": 127.0700617,
     "naverMapLink": "https://map.naver.com/p/entry/place/37475126",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240309_54/17099362196672WTz9_JPEG/IMG_0075.jpeg",
       "https://ldb-phinf.pstatic.net/20240309_300/1709936251565QjrLn_JPEG/IMG_0076.jpeg",
@@ -4024,7 +4899,7 @@ const naverPlaceData = {
     "longitude": 127.0763031,
     "naverMapLink": "https://map.naver.com/p/entry/place/1689645997",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20220921_87/1663725440286UcUAF_JPEG/%28%C7%CA%C5%CD%C4%BF%C7%C7%29Colombia_El_carmen_2.jpg",
       "https://ldb-phinf.pstatic.net/20220921_265/1663725440289C3Hp4_JPEG/%28%C7%CA%C5%CD%C4%BF%C7%C7%29Colombia_El_carmen_1.jpg",
@@ -4041,7 +4916,7 @@ const naverPlaceData = {
     "longitude": 127.0691037,
     "naverMapLink": "https://map.naver.com/p/entry/place/20322289",
     "rating": 4.71,
-        "reviewCount": 815,
+    "reviewCount": 815,
     "images": [
       "https://ldb-phinf.pstatic.net/20240604_266/1717465090328hqPJg_JPEG/IMG_3145.jpeg",
       "https://pup-review-phinf.pstatic.net/MjAyNTEyMTdfMjIw/MDAxNzY1OTI4Mzg2NDkz.fmEHk3V71CHmAe7IZxaLimbY_w5r-aQH0db7GMjT64wg.citTtDf0114YldD30qAjkCwOOE-fRzAedHlBLHZb_U0g.JPEG/IMG_7298.jpeg",
@@ -4058,7 +4933,7 @@ const naverPlaceData = {
     "longitude": 127.0706141,
     "naverMapLink": "https://map.naver.com/p/entry/place/1332129677",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250706_229/17517718772262Fzs7_JPEG/IMG_7415.jpeg",
       "https://ldb-phinf.pstatic.net/20250710_20/1752148668393HLvXw_JPEG/IMG_7443.jpeg",
@@ -4075,7 +4950,7 @@ const naverPlaceData = {
     "longitude": 127.059245,
     "naverMapLink": "https://map.naver.com/p/entry/place/1920277706",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260430_141/1777509885253QuQiq_JPEG/KakaoTalk_20260422_175121681_02.jpg",
       "https://ldb-phinf.pstatic.net/20260430_71/1777509873502gbpwC_JPEG/KakaoTalk_20260422_175121681_01.jpg",
@@ -4092,7 +4967,7 @@ const naverPlaceData = {
     "longitude": 127.0575635,
     "naverMapLink": "https://map.naver.com/p/entry/place/1739440199",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20220905_84/1662366985454qSzqi_JPEG/%B4%EB%C7%A5%B8%DE%B4%BA.JPG",
       "https://ldb-phinf.pstatic.net/20220905_300/1662366961311sminQ_JPEG/%B4%EB%C7%A5%B8%DE%B4%BA.JPG",
@@ -4109,7 +4984,7 @@ const naverPlaceData = {
     "longitude": 127.0330078,
     "naverMapLink": "https://map.naver.com/p/entry/place/1328684927",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20190610_180/15601551850769XUty_JPEG/nmyyVu4D_Ne95o1MXRxN3J_3.jpg",
       "https://ldb-phinf.pstatic.net/20190610_170/1560155195785znxCO_JPEG/xYq91s-RWTlUFmRw4T8JZ2j4.jpg",
@@ -4126,7 +5001,7 @@ const naverPlaceData = {
     "longitude": 127.0546753,
     "naverMapLink": "https://map.naver.com/p/entry/place/12770339",
     "rating": 4.68,
-        "reviewCount": 257,
+    "reviewCount": 257,
     "images": [
       "https://ldb-phinf.pstatic.net/20251005_206/1759671534689HrNws_JPEG/1000045802.jpg",
       "https://ldb-phinf.pstatic.net/20251005_280/1759671547646maVmN_JPEG/1000045801.jpg",
@@ -4143,7 +5018,7 @@ const naverPlaceData = {
     "longitude": 127.0539622,
     "naverMapLink": "https://map.naver.com/p/entry/place/1594044291",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250224_31/17403598821931AY5P_JPEG/%C7%C1%B8%AE%B9%CC%BE%F6--%C2%F7%B5%B9-%B8%F0%B5%D2-%B0%F5%C5%C1_%BC%BA%BC%F6%C1%A1.JPG",
       "https://ldb-phinf.pstatic.net/20231128_213/1701148101976YoVNu_PNG/%B4%C9%B5%BF%B9%CC%B3%AA%B8%AE%B0%F5%C5%C1%2815%2C000%29.PNG",
@@ -4160,7 +5035,7 @@ const naverPlaceData = {
     "longitude": 127.0566502,
     "naverMapLink": "https://map.naver.com/p/entry/place/1818902068",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20251205_98/17648946069597oYpd_JPEG/%BA%B8%B8%AE%B5%C8%C0%E5.jpg",
       "https://ldb-phinf.pstatic.net/20240321_300/1711013105029AbIOi_JPEG/1.%BA%B8%B8%AE%B5%C8%C0%E5%B1%B9%BC%F6_%282%29.jpg",
@@ -4177,7 +5052,7 @@ const naverPlaceData = {
     "longitude": 127.0556892,
     "naverMapLink": "https://map.naver.com/p/entry/place/1559602117",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20241120_30/1732092253788MMumS_JPEG/%C7%CF%BF%EC_%B0%F8%C5%C1_%BA%B8%C5%EB_02.jpg",
       "https://ldb-phinf.pstatic.net/20241120_11/1732092252842UzQCu_JPEG/%C7%CF%BF%EC_%B0%F8%C5%C1_%BA%B8%C5%EB_01.jpg",
@@ -4194,7 +5069,7 @@ const naverPlaceData = {
     "longitude": 127.0580599,
     "naverMapLink": "https://map.naver.com/p/entry/place/2026535112",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250605_97/1749102914119x8Eds_JPEG/250528_%BD%C7%BA%F1%BF%C19983.jpg",
       "https://ldb-phinf.pstatic.net/20250605_106/1749102965747YPri5_JPEG/250528_%BD%C7%BA%F1%BF%C19991.jpg",
@@ -4211,7 +5086,7 @@ const naverPlaceData = {
     "longitude": 127.0553145,
     "naverMapLink": "https://map.naver.com/p/entry/place/1580152953",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240109_40/1704777701194n4MDs_PNG/1._%BD%BA%C5%D7%C0%CC%C5%A9%BC%DC%B9%E4.png",
       "https://ldb-phinf.pstatic.net/20240109_18/1704777708554Nv0cm_PNG/2._%B5%B5%B9%CC%B0%FC%C0%DA%BC%DC%B9%E4.png",
@@ -4228,7 +5103,7 @@ const naverPlaceData = {
     "longitude": 127.0567604,
     "naverMapLink": "https://map.naver.com/p/entry/place/1057264169",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230901_65/1693535985227kysYc_JPEG/KakaoTalk_20230801_160127326_05.jpg",
       "https://ldb-phinf.pstatic.net/20230901_109/1693535992478fgjwj_JPEG/KakaoTalk_20230801_160127326_04.jpg",
@@ -4245,7 +5120,7 @@ const naverPlaceData = {
     "longitude": 127.0577743,
     "naverMapLink": "https://map.naver.com/p/entry/place/1001495826",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230105_12/1672898136002pHJSn_JPEG/C4BDB1D8-DBA5-4D01-A026-869C268172FE.jpeg",
       "https://ldb-phinf.pstatic.net/20230105_81/1672898091229oxngV_JPEG/570D0A27-C5BA-4833-920A-769F858D8391.jpeg",
@@ -4262,7 +5137,7 @@ const naverPlaceData = {
     "longitude": 127.0526591,
     "naverMapLink": "https://map.naver.com/p/entry/place/1227114216",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260519_172/1779189206761y73la_JPEG/IMG_4521.jpg",
       "https://ldb-phinf.pstatic.net/20220722_39/1658489511789llOX6_JPEG/0D69A458-C3C9-4FCB-8530-8EB4B31C304E.JPG",
@@ -4279,7 +5154,7 @@ const naverPlaceData = {
     "longitude": 127.0564655,
     "naverMapLink": "https://map.naver.com/p/entry/place/1026594418",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20251203_73/1764717131010ypzbH_JPEG/img_0013_1x1.JPG",
       "https://ldb-phinf.pstatic.net/20251203_138/1764717051392FMCmL_JPEG/img_0068_1x1_%C5%BA_%C1%A4%B5%B5%B8%A6_%C1%D9%C0%D3.JPG",
@@ -4296,7 +5171,7 @@ const naverPlaceData = {
     "longitude": 127.0520827,
     "naverMapLink": "https://map.naver.com/p/entry/place/1882528663",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20231011_72/1697024286763yWdJ1_PNG/Classic.png",
       "https://ldb-phinf.pstatic.net/20231011_143/1697024293416sXgTN_PNG/grandpa.png",
@@ -4313,7 +5188,7 @@ const naverPlaceData = {
     "longitude": 127.0546824,
     "naverMapLink": "https://map.naver.com/p/entry/place/1566517542",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20241113_173/1731495757781SE8iR_JPEG/%B9%CC%B5%E9%B9%F6%B0%C5.jpg",
       "https://ldb-phinf.pstatic.net/20240603_204/1717377951022njy44_JPEG/KakaoTalk_20240521_180351141.jpg",
@@ -4330,7 +5205,7 @@ const naverPlaceData = {
     "longitude": 127.0507762,
     "naverMapLink": "https://map.naver.com/p/entry/place/1909402080",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260616_295/1781588159008CS63G_JPEG/%B3%C3_%B4%DF%B4%D9%B8%AE%BB%EC_%BD%D2%B1%B9%BC%F6.jpg",
       "https://ldb-phinf.pstatic.net/20240424_187/1713948376920NY6tm_JPEG/KakaoTalk_20240419_194548821_03.jpg",
@@ -4347,7 +5222,7 @@ const naverPlaceData = {
     "longitude": 127.0550993,
     "naverMapLink": "https://map.naver.com/p/entry/place/1963449777",
     "rating": 4.52,
-        "reviewCount": 1987,
+    "reviewCount": 1987,
     "images": [
       "https://ldb-phinf.pstatic.net/20190108_256/1546912185056Wzm2Y_JPEG/RMlUCiS6VK74q7IY3z5B3iT7.jpg",
       "https://ldb-phinf.pstatic.net/20190108_177/1546912150303isYoq_JPEG/nAPsWl-SQ_qlah7KHx1QWYci.jpg",
@@ -4364,7 +5239,7 @@ const naverPlaceData = {
     "longitude": 127.0540044,
     "naverMapLink": "https://map.naver.com/p/entry/place/1465603515",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250107_53/1736254145792fSNrr_JPEG/IMG_2907.jpeg",
       "https://ldb-phinf.pstatic.net/20200417_54/1587110582306tSkJI_JPEG/NQtRGwRYFtsoRxSGhlAJFc44.jpg",
@@ -4381,7 +5256,7 @@ const naverPlaceData = {
     "longitude": 127.0557818,
     "naverMapLink": "https://map.naver.com/p/entry/place/1957072341",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240708_109/1720430849645WGoBb_JPEG/%BD%D2%B1%B9%BC%F6.jpg",
       "https://ldb-phinf.pstatic.net/20240824_266/1724489521931PJDnS_JPEG/KakaoTalk_20240824_175001178.jpg",
@@ -4398,7 +5273,7 @@ const naverPlaceData = {
     "longitude": 127.0566909,
     "naverMapLink": "https://map.naver.com/p/entry/place/1683846629",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250926_247/1758894780063l2wWL_JPEG/IMG_5518.jpeg",
       "https://ldb-phinf.pstatic.net/20230511_151/1683807595259eaqKx_JPEG/IMG_0352.jpeg",
@@ -4415,7 +5290,7 @@ const naverPlaceData = {
     "longitude": 127.056438,
     "naverMapLink": "https://map.naver.com/p/entry/place/1057225152",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230627_253/1687834285312CKqGt_JPEG/MAN00054.jpg",
       "https://ldb-phinf.pstatic.net/20210325_32/1616645146889c7NuM_PNG/image.png",
@@ -4432,7 +5307,7 @@ const naverPlaceData = {
     "longitude": 127.0542761,
     "naverMapLink": "https://map.naver.com/p/entry/place/1118354814",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250318_82/1742287014130yQA8g_JPEG/IMG_9385.jpeg",
       "https://ldb-phinf.pstatic.net/20250318_125/1742287207901VCmwE_JPEG/9F0E69DE-D98E-4622-BA23-97B73328B098.jpeg",
@@ -4449,7 +5324,7 @@ const naverPlaceData = {
     "longitude": 127.0544591,
     "naverMapLink": "https://map.naver.com/p/entry/place/1080140629",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20221021_193/1666340983295agsX6_JPEG/8BDE1983-90FA-40C1-A42B-8A7CC1EE64EF.jpeg",
       "https://ldb-phinf.pstatic.net/20221021_105/1666341224271YtLia_JPEG/8A74B7D6-C4C3-4A20-BCCF-5FFF9EC3664B.jpeg",
@@ -4466,7 +5341,7 @@ const naverPlaceData = {
     "longitude": 127.0551985,
     "naverMapLink": "https://map.naver.com/p/entry/place/1933103682",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250806_116/1754461100629vGJ1p_JPEG/1000022368.jpg",
       "https://ldb-phinf.pstatic.net/20260128_115/1769584655076gXNuD_JPEG/1000024895.jpg",
@@ -4483,7 +5358,7 @@ const naverPlaceData = {
     "longitude": 127.0530996,
     "naverMapLink": "https://map.naver.com/p/entry/place/1716744205",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240430_231/1714483924327EcXzY_JPEG/7EC44E71-AE52-4318-92EA-7CCBD7E8FEEB.jpeg",
       "https://ldb-phinf.pstatic.net/20240430_105/1714483991425HlM2l_JPEG/35EBCC1C-8C26-4036-8394-C7CA21480E35.jpeg",
@@ -4500,7 +5375,7 @@ const naverPlaceData = {
     "longitude": 127.0539046,
     "naverMapLink": "https://map.naver.com/p/entry/place/1133279249",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20241021_164/1729487882353caPyk_PNG/SOBAMAE_BRANDING_MAKETING_V1__61.png",
       "https://ldb-phinf.pstatic.net/20241021_55/1729489391462pTOWr_PNG/SOBAMAE_BRANDING_MAKETING_V1_%BD%BA%C6%E4%BC%C8%C5%D9%B5%BF.png",
@@ -4517,7 +5392,7 @@ const naverPlaceData = {
     "longitude": 127.0554483,
     "naverMapLink": "https://map.naver.com/p/entry/place/1778707941",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230419_271/1681870203629TkSyK_JPEG/KakaoTalk_20230419_102831742_05.jpg",
       "https://ldb-phinf.pstatic.net/20230419_84/1681870248288o7jMD_JPEG/KakaoTalk_20230419_102831742_13.jpg",
@@ -4534,7 +5409,7 @@ const naverPlaceData = {
     "longitude": 127.0543476,
     "naverMapLink": "https://map.naver.com/p/entry/place/1398181678",
     "rating": 4.65,
-        "reviewCount": 727,
+    "reviewCount": 727,
     "images": [
       "https://ldb-phinf.pstatic.net/20220509_154/1652078567923Bj1eo_JPEG/KakaoTalk_20220509_105939947_01.jpg",
       "https://ldb-phinf.pstatic.net/20220509_186/1652078580416OLRig_JPEG/KakaoTalk_20220509_105939947_02.jpg",
@@ -4551,7 +5426,7 @@ const naverPlaceData = {
     "longitude": 127.0559804,
     "naverMapLink": "https://map.naver.com/p/entry/place/1989241430",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230522_57/16847329668989mWrw_JPEG/F20AA12D-CD6D-4327-8D83-85229E11CB41.jpeg",
       "https://ldb-phinf.pstatic.net/20230522_21/1684732874023EozAG_JPEG/3854A6E2-A19E-4624-9001-5C37AD49DC9E.jpeg",
@@ -4568,7 +5443,7 @@ const naverPlaceData = {
     "longitude": 127.0578707,
     "naverMapLink": "https://map.naver.com/p/entry/place/1093763709",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230207_230/16757532832911tc6i_JPEG/1631031049677-3.jpg",
       "https://ldb-phinf.pstatic.net/20210908_292/1631026800107CkYNx_JPEG/beIAPaFzLiKKWqCNLFiNulIJ.jpg",
@@ -4585,7 +5460,7 @@ const naverPlaceData = {
     "longitude": 127.0609786,
     "naverMapLink": "https://map.naver.com/p/entry/place/1006460400",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260303_63/1772509137328h5IN8_PNG/%B8%F3%C0%DA%BE%DF%B3%A2_%BC%BC%C6%AE.png",
       "https://ldb-phinf.pstatic.net/20260303_85/1772509072835lKW0L_PNG/%B8%ED%B6%F5%B8%F3%C0%DA%BE%DF%B3%A2.png",
@@ -4602,7 +5477,7 @@ const naverPlaceData = {
     "longitude": 127.0554901,
     "naverMapLink": "https://map.naver.com/p/entry/place/1772785792",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240229_62/17091878322500Ifmg_JPEG/KakaoTalk_20240228_162754897_11.jpg",
       "https://ldb-phinf.pstatic.net/20240229_94/1709186947725J2766_JPEG/KakaoTalk_20240228_153052662.jpg",
@@ -4619,7 +5494,7 @@ const naverPlaceData = {
     "longitude": 127.0511192,
     "naverMapLink": "https://map.naver.com/p/entry/place/20937806",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250609_91/1749440268438dW4KI_JPEG/%B9%DF%BB%E7%B9%CD%B2%E3%B9%D9%B7%CE%BF%EC_02.jpg",
       "https://ldb-phinf.pstatic.net/20221228_92/1672192013918Ns7Cg_JPEG/%B8%B6%B6%F3%C5%A9%B8%B2%C2%AB%BB%CD_0813%28O%29.jpg",
@@ -4636,7 +5511,7 @@ const naverPlaceData = {
     "longitude": 127.0539571,
     "naverMapLink": "https://map.naver.com/p/entry/place/1656481040",
     "rating": 4.52,
-        "reviewCount": 876,
+    "reviewCount": 876,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNTA3MDhfMjcg/MDAxNzUxOTgzODAzODAy.K2HF61Gfdw1hDGz43cgyKWh7jPkU-Fp4vQ6DQwQcIxcg.6OugNoideBqdyoE6mpuWkfIfL6rkZ000q7Ik2_Yuz_Yg.JPEG/weverse_20250701174143.jpg",
       "https://ldb-phinf.pstatic.net/20240129_245/17065037001826QTn7_JPEG/%B4%D9%BF%EE%B7%CE%B5%E5.jpeg.jpg",
@@ -4653,7 +5528,7 @@ const naverPlaceData = {
     "longitude": 127.0539036,
     "naverMapLink": "https://map.naver.com/p/entry/place/20765291",
     "rating": 4.4,
-        "reviewCount": 369,
+    "reviewCount": 369,
     "images": [
       "https://ldb-phinf.pstatic.net/20181012_196/1539309576011qRs0o_JPEG/K0E1oN6wC1eCok9LBmCiF1-d.jpg",
       "https://ldb-phinf.pstatic.net/20230315_121/1678871111129Gxb28_JPEG/1678871039613.jpg"
@@ -4669,7 +5544,7 @@ const naverPlaceData = {
     "longitude": 127.054387,
     "naverMapLink": "https://map.naver.com/p/entry/place/11721256",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20191020_166/15715629787278M1Hw_JPEG/E69ekAleEjpoSsUzvkV3ROyG.jpg",
       "https://ldb-phinf.pstatic.net/20200611_102/15918567916517Y3NK_JPEG/Ybi-iCx9-NrK3KQBzbcRg4tj.jpg",
@@ -4686,7 +5561,7 @@ const naverPlaceData = {
     "longitude": 127.05437,
     "naverMapLink": "https://map.naver.com/p/entry/place/19862383",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250805_175/1754385368070EyDVm_PNG/5071.png",
       "https://ldb-phinf.pstatic.net/20250805_223/17543853779275snBm_PNG/5071.png",
@@ -4703,7 +5578,7 @@ const naverPlaceData = {
     "longitude": 127.054162,
     "naverMapLink": "https://map.naver.com/p/entry/place/1081045129",
     "rating": 4.81,
-        "reviewCount": 1186,
+    "reviewCount": 1186,
     "images": [
       "https://ldb-phinf.pstatic.net/20220707_145/1657189436977vfmbu_JPEG/KakaoTalk_Photo_2022-07-07-19-23-33_001.jpeg",
       "https://ldb-phinf.pstatic.net/20220707_219/1657189487293IPbr3_JPEG/KakaoTalk_Photo_2022-07-07-19-23-33_002.jpeg",
@@ -4720,7 +5595,7 @@ const naverPlaceData = {
     "longitude": 127.0507944,
     "naverMapLink": "https://map.naver.com/p/entry/place/1250194088",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20241001_220/1727755465017Vn5EU_JPEG/P1038192_copy.jpg",
       "https://ldb-phinf.pstatic.net/20241001_59/17277554549181gajc_JPEG/P1038226_copy.jpg",
@@ -4737,7 +5612,7 @@ const naverPlaceData = {
     "longitude": 127.0566125,
     "naverMapLink": "https://map.naver.com/p/entry/place/1038370038",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20221011_90/1665460558866mndlg_JPEG/%BC%BA%BC%F6%C6%BC%B7%EB9.jpg",
       "https://ldb-phinf.pstatic.net/20231204_15/1701696381376phqHe_PNG/%BD%BA%C5%A9%B8%B0%BC%A6_2023-12-04_%BF%C0%C8%C4_4.02.56.png",
@@ -4754,7 +5629,7 @@ const naverPlaceData = {
     "longitude": 127.0595433,
     "naverMapLink": "https://map.naver.com/p/entry/place/1404930910",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230628_273/1687941792513IxAze_PNG/%B8%DE%B4%BA%C0%CC%B9%CC%C1%F6.png",
       "https://ldb-phinf.pstatic.net/20200608_154/1591582693057VcSd1_JPEG/9OPxCtXoKOnNBiNHIolyizFn.jpeg.jpg",
@@ -4771,7 +5646,7 @@ const naverPlaceData = {
     "longitude": 127.0518223,
     "naverMapLink": "https://map.naver.com/p/entry/place/1306390433",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNTEwMDdfMjAg/MDAxNzU5ODQ3OTA1MTYy.4ayRGbp8FXxsDijzY44NMAr7Cf6h9FjnthaopHHG_e4g.jEu6Ct3JhJSrVtBHM8ERGGgjGn6jM3gfrzd4VVYYpH0g.JPEG/2CAAE1EB-9E01-4A8E-9F2E-A7E7A81AED4F.jpeg",
       "https://pup-review-phinf.pstatic.net/MjAyNTEwMDdfMjQw/MDAxNzU5ODQ3OTA1MTEy.FL3dArixl6We2PknBM4vc_Dw-aXn6ppROrd6Yl7w-7wg.iTUB-N29lSDReEUae_EPwlqigGOq4JnOgxBR3NuOCjMg.JPEG/AA076D6D-82E6-4B31-819F-E992A29EF34D.jpeg",
@@ -4788,7 +5663,7 @@ const naverPlaceData = {
     "longitude": 127.0555808,
     "naverMapLink": "https://map.naver.com/p/entry/place/2058486345",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20260323_150/1774249030069xs0RE_JPEG/%BE%C6%C0%CC%BD%BA%C5%A9%B8%B2.jpeg",
       "https://ldb-phinf.pstatic.net/20260401_180/1775032181994AxhRC_JPEG/%B4%F5%BA%ED.jpeg",
@@ -4805,7 +5680,7 @@ const naverPlaceData = {
     "longitude": 127.0555087,
     "naverMapLink": "https://map.naver.com/p/entry/place/1022429915",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230814_195/1691999239582SBeqD_JPEG/KakaoTalk_20230814_164205841.jpg",
       "https://ldb-phinf.pstatic.net/20230821_10/1692624841117gCCt1_JPEG/KakaoTalk_20230821_223246131.jpg",
@@ -4822,7 +5697,7 @@ const naverPlaceData = {
     "longitude": 127.0595824,
     "naverMapLink": "https://map.naver.com/p/entry/place/1543901744",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://pup-review-phinf.pstatic.net/MjAyNTEwMDhfNjEg/MDAxNzU5OTAwMjgwMzg0.AGWuZGyjNeE2tDxqbHrHIYZsaVhWWmfudQz0xYE_dI4g._0XuVKzP37btL_SZVNHJWhsAfg0P18IbVX3yzkST-Gkg.JPEG/1000039581.jpg.jpg?type=w1500_60_sharpen",
       "https://ldb-phinf.pstatic.net/20230130_144/1675004532064XV2GF_JPEG/FD87FA77-C527-4EA8-A8D4-113D8175FCAE.jpeg",
@@ -4839,7 +5714,7 @@ const naverPlaceData = {
     "longitude": 127.0615718,
     "naverMapLink": "https://map.naver.com/p/entry/place/1217287130",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20230801_126/1690850935506jXnia_JPEG/AC1C62FF-0CBA-418E-B288-20EBDB87E525.jpeg",
       "https://ldb-phinf.pstatic.net/20231010_264/1696912910364i1mlT_JPEG/IMG_7504.jpeg",
@@ -4856,7 +5731,7 @@ const naverPlaceData = {
     "longitude": 127.05596,
     "naverMapLink": "https://map.naver.com/p/entry/place/1057884253",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20250130_218/1738245841975sVEEB_JPEG/2cup.jpg",
       "https://ldb-phinf.pstatic.net/20250130_134/1738245889919tMqKm_JPEG/3cup.jpg",
@@ -4873,17 +5748,374 @@ const naverPlaceData = {
     "longitude": 127.0581051,
     "naverMapLink": "https://map.naver.com/p/entry/place/38561949",
     "rating": null,
-        "reviewCount": null,
+    "reviewCount": null,
     "images": [
       "https://ldb-phinf.pstatic.net/20240124_90/1706082401528Vyp3j_JPEG/%BE%C6%B8%DE.jpg",
       "https://ldb-phinf.pstatic.net/20240124_19/1706082437147oKDvv_JPEG/%C3%CA%C4%DD%B8%B4.jpg",
       "https://ldb-phinf.pstatic.net/20240124_284/1706084521562jFw7D_JPEG/%BA%A3%C0%CC%C4%BF%B8%AE_%C6%CE%B5%B5%B8%A3_6000.jpg"
     ],
     "checkedAt": "2026-06-30"
+  },
+  "피자파티": {
+    "matchedName": "피자파티",
+    "naverPlaceId": 17472118,
+    "address": "충청남도 보령시 대흥로 44",
+    "lotAddress": "충청남도 보령시 대천동 328-6",
+    "latitude": 36.3497651,
+    "longitude": 126.5939814,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17472118",
+    "rating": 4.66,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20250529_177/1748506177802Sj88u_PNG/1000005881.png",
+      "https://ldb-phinf.pstatic.net/20250529_99/1748506184913BUo5V_PNG/1000005884.png",
+      "https://ldb-phinf.pstatic.net/20250529_260/174850619123566K9R_PNG/1000005882.png"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0039225403639289525,
+    "reviewCount": 861,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/17472118/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "오는정 손만두": {
+    "matchedName": "오는정 손만두",
+    "naverPlaceId": 1741330704,
+    "address": "충청남도 보령시 큰오랏2길 55 1층 오는정 손만두",
+    "lotAddress": "충청남도 보령시 동대동 1386 1층 오는정 손만두",
+    "latitude": 36.3505686,
+    "longitude": 126.6073513,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1741330704",
+    "rating": 4.8,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20251003_106/1759487069436o0nbC_JPEG/IMG_7081.jpeg",
+      "https://ldb-phinf.pstatic.net/20251003_191/1759493258711CrmAw_JPEG/IMG_7088.jpeg",
+      "https://ldb-phinf.pstatic.net/20251003_126/1759492503606p7m0S_JPEG/IMG_7084.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.000675051160541606,
+    "reviewCount": 104,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1741330704/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "제일해물칼국수": {
+    "matchedName": "제일해물칼국수",
+    "naverPlaceId": 17489516,
+    "address": "충청남도 보령시 대해로 46",
+    "lotAddress": "충청남도 보령시 궁촌동 25-6",
+    "latitude": 36.3438084,
+    "longitude": 126.5946276,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17489516",
+    "rating": 4.37,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20240617_245/1718627176634SYzlE_JPEG/Screenshot_20240617_212551.jpg",
+      "https://ldb-phinf.pstatic.net/20180904_178/1536024546285oTSrS_JPEG/32F1AekMjLsmoL453elUCc-l.jpg",
+      "https://ldb-phinf.pstatic.net/20201006_192/1601973579760Lrvjz_JPEG/DP4M_kg4Jch3_JlDLxZIr_6C.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.009092025529465015,
+    "reviewCount": 1264,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/17489516/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "성지 보령본점": {
+    "matchedName": "성지 보령본점",
+    "naverPlaceId": 1877918020,
+    "address": "충청남도 보령시 동현로 88 1층",
+    "lotAddress": "충청남도 보령시 동대동 380-3 1층",
+    "latitude": 36.3471884,
+    "longitude": 126.6153467,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1877918020",
+    "rating": 4.58,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230612_52/16865448664619hVGo_JPEG/20220424103114.jpg",
+      "https://ldb-phinf.pstatic.net/20220910_55/1662765150261W3BOi_JPEG/20220424103114.jpg",
+      "https://ldb-phinf.pstatic.net/20220910_61/16627656380752jDIe_JPEG/1658296548232-6.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0012996862500731408,
+    "reviewCount": 291,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1877918020/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "조양 칼국수": {
+    "matchedName": "조양칼국수",
+    "naverPlaceId": 1391449024,
+    "address": "충청남도 보령시 보령남로 125-7",
+    "lotAddress": "충청남도 보령시 명천동 592-5",
+    "latitude": 36.3344152,
+    "longitude": 126.6011688,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1391449024",
+    "rating": 4.62,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230725_283/1690251892682KLk9Y_JPEG/KakaoTalk_20230725_104915314_08.jpg",
+      "https://ldb-phinf.pstatic.net/20220913_210/1663032159173iIWOR_JPEG/6.jpg",
+      "https://ldb-phinf.pstatic.net/20220510_50/1652151138812DgzHl_JPEG/20211018_132153.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0028719145414621543,
+    "reviewCount": 609,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1391449024/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "김가네사골수제비": {
+    "matchedName": "김가네사골수제비",
+    "naverPlaceId": 2145406212,
+    "address": "충청남도 보령시 석서1길 57",
+    "lotAddress": "충청남도 보령시 신흑동 760-1",
+    "latitude": 36.3204863,
+    "longitude": 126.5183282,
+    "naverMapLink": "https://map.naver.com/p/entry/place/2145406212",
+    "rating": 3.09,
+    "images": [
+      "https://pup-review-phinf.pstatic.net/MjAyNjA1MDZfMTEw/MDAxNzc4MDY3MDczNTcw.D3RHEK7Gl7KBKITrISlOvQdK5nrBRnzVqLcA014bVU8g.iKV4VGOiJJ2AilXamyq1GYB3J-YPiOUt54T2TN69kY8g.JPEG/20260501_144603.jpg.jpg",
+      "https://pup-review-phinf.pstatic.net/MjAyNjA1MTdfOSAg/MDAxNzc5MDA1NTc1OTA5.Mp-ZcKWtH7ac5UImhnq2wcjhWDuhNwY4YCZVK3dyXB8g.XxvYd5gxlHUcjy8olVE_aqowHm8a1bQ-byLmpLnCXIgg.JPEG/2417097E-6B2E-47D5-8139-D80AD3009E55.jpeg",
+      "https://pup-review-phinf.pstatic.net/MjAyNjA3MjVfMjYw/MDAxNzg0OTQzMTI1NjQw.GZkt36G4fi1fdTaQhow4ofekhD6uWPFvX7g_3wGHmiQg.pjIFmsepojAPkW3KPkK9mlNgQhUnDt4mbrSx9AS9b40g.JPEG/20260117_124538.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0017411493024188421,
+    "reviewCount": 47,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/2145406212/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "키츠네야": {
+    "matchedName": "키츠네야",
+    "naverPlaceId": 1332902229,
+    "address": "충청남도 보령시 작은오랏5길 31 1층",
+    "lotAddress": "충청남도 보령시 동대동 1784 1층",
+    "latitude": 36.3462989,
+    "longitude": 126.6048973,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1332902229",
+    "rating": 4.88,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20240505_294/1714912265184dCswO_JPEG/IMG_4579.jpeg",
+      "https://ldb-phinf.pstatic.net/20230516_261/1684201120450JVNI2_JPEG/IMG_0396.jpeg",
+      "https://ldb-phinf.pstatic.net/20230516_73/1684201120015oW7bq_JPEG/IMG_0398.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0014625327291152939,
+    "reviewCount": 187,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1332902229/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "고구려 수제 본 갈비": {
+    "matchedName": "고구려 수제 본 갈비",
+    "naverPlaceId": 37630534,
+    "address": "충청남도 보령시 큰오랏2길 26",
+    "lotAddress": "충청남도 보령시 동대동 1644",
+    "latitude": 36.3493276,
+    "longitude": 126.6064586,
+    "naverMapLink": "https://map.naver.com/p/entry/place/37630534",
+    "rating": 4.34,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230403_3/1680485985896qzEEk_JPEG/31672006-2132-4B83-8CAF-CA9A84706F06.jpeg",
+      "https://ldb-phinf.pstatic.net/20210131_163/1612076699173MSxvi_JPEG/duyRoRIDbbc2XEQgkEt2COY-.jpg",
+      "https://ldb-phinf.pstatic.net/20210131_233/16120767416039JbPB_JPEG/tJZLDDgDSTEFQevNPGP699QA.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0,
+    "reviewCount": 151,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/37630534/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "조개까는남자": {
+    "matchedName": "조개까는남자",
+    "naverPlaceId": 1539725382,
+    "address": "충청남도 보령시 해수욕장4길 16 조개까는남자",
+    "lotAddress": "충청남도 보령시 신흑동 1982 조개까는남자",
+    "latitude": 36.305829,
+    "longitude": 126.5164592,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1539725382",
+    "rating": 4.79,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20250303_111/1741009519614fuxDS_JPEG/IMG_5944.jpeg",
+      "https://ldb-phinf.pstatic.net/20250313_145/1741865807444Y6F3n_JPEG/IMG_6028.jpeg",
+      "https://ldb-phinf.pstatic.net/20250307_232/1741282172005kUj38_JPEG/IMG_5965.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.004620142281216421,
+    "reviewCount": 14233,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1539725382/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "윤가네 해물탕": {
+    "matchedName": "윤가네해물탕",
+    "naverPlaceId": 17489811,
+    "address": "충청남도 보령시 대해로 28",
+    "lotAddress": "충청남도 보령시 궁촌동 7-14",
+    "latitude": 36.3443382,
+    "longitude": 126.5963863,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17489811",
+    "rating": 4.42,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20200622_1/1592796807984ElSTS_JPEG/koFYmbi6WSfp4FAUGlUbkLp-.JPG.jpg",
+      "https://ldb-phinf.pstatic.net/20200626_259/1593160800292B7Axj_JPEG/zlCXMZoXsY9A-BTeZ-7-1sGz.jpg",
+      "https://pup-review-phinf.pstatic.net/MjAyNTA2MTFfMTYz/MDAxNzQ5NjIwMDE0NzI5.bMjWdLg8ru5jZr57KB4CgKtR-KYWvWdAdvBHfdv-ofIg.O-zJOsCwynQPqkLRbbd9lTc3nt_f94EOJL-HXNTZU04g.JPEG/D8174CE2-CBC9-4CFC-90C1-2A14F4813BBE.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.000782105217593901,
+    "reviewCount": 409,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/17489811/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "찬찬찬 해장국": {
+    "matchedName": "찬찬찬해장국",
+    "naverPlaceId": 13444490,
+    "address": "충청남도 보령시 보령북로 68",
+    "lotAddress": "충청남도 보령시 대천동 108-11",
+    "latitude": 36.3523153,
+    "longitude": 126.5987097,
+    "naverMapLink": "https://map.naver.com/p/entry/place/13444490",
+    "rating": 4.49,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20210608_114/1623124314520tvn8H_JPEG/GTG94aCLfsc0x-mEGa_Ta9Qg.jpeg.jpg",
+      "https://ldb-phinf.pstatic.net/20210608_190/1623125938449safzP_JPEG/pdHk_ZFAFOsU6k5BUKQneP6v.jpeg.jpg",
+      "https://ldb-phinf.pstatic.net/20220625_90/1656136649727ESkbI_JPEG/2AE06C03-794C-4C0A-BD45-C085B9695519.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0,
+    "reviewCount": 174,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/13444490/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "대포식당": {
+    "matchedName": "대포식당",
+    "naverPlaceId": 36294925,
+    "address": "충청남도 보령시 작은오랏7길 36 1층 대포식당",
+    "lotAddress": "충청남도 보령시 동대동 1876 1층 대포식당",
+    "latitude": 36.3449959,
+    "longitude": 126.6039729,
+    "naverMapLink": "https://map.naver.com/p/entry/place/36294925",
+    "rating": 4.66,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230910_253/16943128595623fAqK_JPEG/1000055025.jpg",
+      "https://ldb-phinf.pstatic.net/20190407_112/15546058552626eMhT_JPEG/tu5jcKTI5IitPYu0LQRKU4Gd.jpg",
+      "https://ldb-phinf.pstatic.net/20230118_148/1673974734095NmW40_JPEG/22-11-30-23-34-40-053_photo.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.003758703750975111,
+    "reviewCount": 366,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/36294925/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "바이더오": {
+    "matchedName": "바이더오",
+    "naverPlaceId": 1712146041,
+    "address": "충청남도 보령시 오천면 원산도5길 89-23 카페 바이더오",
+    "lotAddress": "충청남도 보령시 오천면 원산도리 1731 카페 바이더오",
+    "latitude": 36.3813243,
+    "longitude": 126.39696,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1712146041",
+    "rating": 4.54,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20210319_187/16161337319147zfhi_JPEG/RbSzJqXuQXezWUbWDvrkxAfh.jpg",
+      "https://ldb-phinf.pstatic.net/20210319_198/1616133191959JoVm8_JPEG/V3kfAwdNH4W5Zpv7JDQbLWgO.jpg",
+      "https://ldb-phinf.pstatic.net/20210318_287/1616033280680T29FK_JPEG/0IRPhaRCcmpEiQoE7JWW19vb.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0008541543246202522,
+    "reviewCount": 5203,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1712146041/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "플라르": {
+    "matchedName": "플라르",
+    "naverPlaceId": 1827453071,
+    "address": "충청남도 보령시 오천면 원산도2길 331-34",
+    "lotAddress": "충청남도 보령시 오천면 원산도리 544",
+    "latitude": 36.3849004,
+    "longitude": 126.4301078,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1827453071",
+    "rating": 4.75,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20250428_179/1745807209216JDrfK_JPEG/DSC09590_-_%BA%B9%BB%E7%BA%BB.jpg",
+      "https://ldb-phinf.pstatic.net/20250428_1/1745807516252CRCTd_JPEG/DSC09629.jpg",
+      "https://ldb-phinf.pstatic.net/20250428_41/1745807968584DkBkI_JPEG/DSC09536_-_%BA%B9%BB%E7%BA%BB.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.002924714958115231,
+    "reviewCount": 2047,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1827453071/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "카페모카브레드": {
+    "matchedName": "카페모카브레드",
+    "naverPlaceId": 1274928531,
+    "address": "충청남도 보령시 해수욕장4길 84 1층 카페모카브레드",
+    "lotAddress": "충청남도 보령시 신흑동 1917 1층 카페모카브레드",
+    "latitude": 36.3086788,
+    "longitude": 126.5150977,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1274928531",
+    "rating": 4.32,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20260202_288/1769999118070s8G1U_JPEG/1000005673.jpg",
+      "https://ldb-phinf.pstatic.net/20260202_219/1769999029282fq2r2_JPEG/1000005704.jpg",
+      "https://ldb-phinf.pstatic.net/20260203_200/17700804674707Al9X_JPEG/1000005844.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.00494675255176478,
+    "reviewCount": 1901,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1274928531/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "커피인터뷰대천": {
+    "matchedName": "커피인터뷰 대천",
+    "naverPlaceId": 1609492966,
+    "address": "충청남도 보령시 대천항1길 67-22 커피인터뷰",
+    "lotAddress": "충청남도 보령시 신흑동 945-31 커피인터뷰",
+    "latitude": 36.3242691,
+    "longitude": 126.5049027,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1609492966",
+    "rating": 4.52,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20240720_168/17214562548247kcKV_JPEG/IMG_9679.jpg",
+      "https://ldb-phinf.pstatic.net/20240720_224/1721456372884q5ifB_JPEG/IMG_9683.jpg",
+      "https://ldb-phinf.pstatic.net/20240720_54/1721452718018Ix6hu_JPEG/IMG_9674.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.025689584345139755,
+    "reviewCount": 986,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1609492966/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "바다듬루프탑카페": {
+    "matchedName": "바다듬 루프탑카페",
+    "naverPlaceId": 1635643270,
+    "address": "충청남도 보령시 대천항중앙길 76 위판장 3층",
+    "lotAddress": "충청남도 보령시 신흑동 950-122 위판장 3층",
+    "latitude": 36.3273818,
+    "longitude": 126.5066687,
+    "naverMapLink": "https://map.naver.com/p/entry/place/1635643270",
+    "rating": 4.6,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20251104_142/1762221755093bcoqx_GIF/88a95dfd-e56e-47e5-8153-d00e3f77baea-1762221702269-afec6f90-3446-4579-9f39-92ad4.gif",
+      "https://ldb-phinf.pstatic.net/20250916_294/1758008623121iiMdv_GIF/IMG_1298.gif",
+      "https://ldb-phinf.pstatic.net/20250803_117/1754224391623Kh23B_JPEG/F5ABA5C5-F4FB-4B23-8A8C-27EC52E7F174.jpeg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.0454740339494502,
+    "reviewCount": 2878,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/1635643270/home",
+    "ratingCheckedAt": "2026-07-27"
   }
 };
 
-const googleCheckedAt = "2026-06-30";
+const googleCheckedAt = "2026-07-27";
 const googlePlaceData = {
   "해남닭집": {
     "rating": 4.1,
@@ -5340,6 +6572,175 @@ const googlePlaceData = {
     "reviewCount": null,
     "googleMapLink": "https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C9%EA%B8%B8%208%201-2%EC%B8%B5",
     "checkedAt": "2026-06-30"
+  },
+  "피자파티": {
+    "rating": 4.7,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%ED%94%BC%EC%9E%90%ED%8C%8C%ED%8B%B0/data=!3m1!4b1!4m6!3m5!1s0x357081f70d7620a1:0xe0abb6d2f292d393!8m2!3d36.3497498!4d126.5940198!16s%2Fg%2F11kp9ysn1w?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "피자파티",
+    "sourceUrl": "https://www.google.com/maps/place/%ED%94%BC%EC%9E%90%ED%8C%8C%ED%8B%B0/data=!3m1!4b1!4m6!3m5!1s0x357081f70d7620a1:0xe0abb6d2f292d393!8m2!3d36.3497498!4d126.5940198!16s%2Fg%2F11kp9ysn1w?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "피자파티 | 4.7",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "오는정 손만두": {
+    "rating": 5,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%98%A4%EB%8A%94%EC%A0%95%EC%86%90%EB%A7%8C%EB%91%90/data=!3m1!4b1!4m6!3m5!1s0x3570810021355f45:0x76a50e395e28ffcb!8m2!3d36.3505703!4d126.607351!16s%2Fg%2F11yz45x682?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "오는정손만두",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%98%A4%EB%8A%94%EC%A0%95%EC%86%90%EB%A7%8C%EB%91%90/data=!3m1!4b1!4m6!3m5!1s0x3570810021355f45:0x76a50e395e28ffcb!8m2!3d36.3505703!4d126.607351!16s%2Fg%2F11yz45x682?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "오는정손만두 | 5.0",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "제일해물칼국수": {
+    "rating": 4.1,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%A0%9C%EC%9D%BC%ED%95%B4%EB%AC%BC%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708091e37703ab:0xb41e37b4486459d5!8m2!3d36.3437795!4d126.594548!16s%2Fg%2F1tm0r1hd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "제일해물칼국수",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%A0%9C%EC%9D%BC%ED%95%B4%EB%AC%BC%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708091e37703ab:0xb41e37b4486459d5!8m2!3d36.3437795!4d126.594548!16s%2Fg%2F1tm0r1hd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "제일해물칼국수 | 4.1",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "성지 보령본점": {
+    "rating": 4.2,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "성지2호점",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%84%B1%EC%A7%802%ED%98%B8%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x35707fd3660521bd:0xefc772ac4e0f52fe!8m2!3d36.3471344!4d126.6154333!16s%2Fg%2F11scqg5y_s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "성지2호점 | 4.2",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "조양 칼국수": {
+    "rating": 3.8,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "조양칼국수",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%A1%B0%EC%96%91%EC%B9%BC%EA%B5%AD%EC%88%98/data=!3m1!4b1!4m6!3m5!1s0x35708098ffef4b91:0x5abf4dc04081a3f2!8m2!3d36.33419!4d126.6013566!16s%2Fg%2F11qg0yv490?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "조양칼국수 | 3.8",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "김가네사골수제비": {
+    "rating": 4.1,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EA%B9%80%EA%B0%80%EB%84%A4+%EC%82%AC%EA%B3%A8%EC%88%98%EC%A0%9C%EB%B9%84/data=!3m1!4b1!4m6!3m5!1s0x357084216f34c5fd:0x46c04a3aa8c55092!8m2!3d36.320456!4d126.5182979!16s%2Fg%2F1tdkpprd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "김가네 사골수제비",
+    "sourceUrl": "https://www.google.com/maps/place/%EA%B9%80%EA%B0%80%EB%84%A4+%EC%82%AC%EA%B3%A8%EC%88%98%EC%A0%9C%EB%B9%84/data=!3m1!4b1!4m6!3m5!1s0x357084216f34c5fd:0x46c04a3aa8c55092!8m2!3d36.320456!4d126.5182979!16s%2Fg%2F1tdkpprd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "김가네 사골수제비 | 4.1",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "키츠네야": {
+    "rating": 4.4,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%ED%82%A4%EC%B8%A0%EB%84%A4%EC%95%BC/data=!3m1!4b1!4m6!3m5!1s0x3570816853492709:0x81bdc98f600c13fc!8m2!3d36.3462515!4d126.6049118!16s%2Fg%2F11k9mzjr81?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "키츠네야",
+    "sourceUrl": "https://www.google.com/maps/place/%ED%82%A4%EC%B8%A0%EB%84%A4%EC%95%BC/data=!3m1!4b1!4m6!3m5!1s0x3570816853492709:0x81bdc98f600c13fc!8m2!3d36.3462515!4d126.6049118!16s%2Fg%2F11k9mzjr81?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "키츠네야 | 4.4",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "고구려 수제 본 갈비": {
+    "rating": null,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/search/%EA%B3%A0%EA%B5%AC%EB%A0%A4+%EC%88%98%EC%A0%9C+%EB%B3%B8+%EA%B0%88%EB%B9%84+%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%ED%81%B0%EC%98%A4%EB%9E%8F2%EA%B8%B8+26/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": null,
+    "sourceUrl": "https://www.google.com/maps/search/%EA%B3%A0%EA%B5%AC%EB%A0%A4+%EC%88%98%EC%A0%9C+%EB%B3%B8+%EA%B0%88%EB%B9%84+%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%ED%81%B0%EC%98%A4%EB%9E%8F2%EA%B8%B8+26/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "checkedAt": "2026-07-27",
+    "note": "동일 업체의 공개 구글 평점을 확인하지 못함"
+  },
+  "조개까는남자": {
+    "rating": 4,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%A1%B0%EA%B0%9C%EA%B9%8C%EB%8A%94%EB%82%A8%EC%9E%90/data=!3m1!4b1!4m6!3m5!1s0x3570851539a6de9d:0x1c3f16ee44a22984!8m2!3d36.3058795!4d126.5164944!16s%2Fg%2F11g046xwpf?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "조개까는남자",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%A1%B0%EA%B0%9C%EA%B9%8C%EB%8A%94%EB%82%A8%EC%9E%90/data=!3m1!4b1!4m6!3m5!1s0x3570851539a6de9d:0x1c3f16ee44a22984!8m2!3d36.3058795!4d126.5164944!16s%2Fg%2F11g046xwpf?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "조개까는남자 | 4.0",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "윤가네 해물탕": {
+    "rating": 3.8,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%9C%A4%EA%B0%80%EB%84%A4%ED%95%B4%EB%AC%BC%ED%83%95/data=!3m1!4b1!4m6!3m5!1s0x3570808fb7b39be3:0x81edf21b3d89c9aa!8m2!3d36.3443436!4d126.5964016!16s%2Fg%2F1th7w7rd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "윤가네해물탕",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%9C%A4%EA%B0%80%EB%84%A4%ED%95%B4%EB%AC%BC%ED%83%95/data=!3m1!4b1!4m6!3m5!1s0x3570808fb7b39be3:0x81edf21b3d89c9aa!8m2!3d36.3443436!4d126.5964016!16s%2Fg%2F1th7w7rd?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "윤가네해물탕 | 3.8",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "찬찬찬 해장국": {
+    "rating": 4.4,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%B0%AC%EC%B0%AC%EC%B0%AC%ED%95%B4%EC%9E%A5%EA%B5%AD/data=!3m1!4b1!4m6!3m5!1s0x3570807d4d09e623:0x76f9ba0da6b5d1fd!8m2!3d36.3523461!4d126.5986371!16s%2Fg%2F1tx8r2ny?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "찬찬찬해장국",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%B0%AC%EC%B0%AC%EC%B0%AC%ED%95%B4%EC%9E%A5%EA%B5%AD/data=!3m1!4b1!4m6!3m5!1s0x3570807d4d09e623:0x76f9ba0da6b5d1fd!8m2!3d36.3523461!4d126.5986371!16s%2Fg%2F1tx8r2ny?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "찬찬찬해장국 | 4.4",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "대포식당": {
+    "rating": 4.3,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/search/%EB%8C%80%ED%8F%AC%EC%8B%9D%EB%8B%B9+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EC%9E%91%EC%9D%80%EC%98%A4%EB%9E%8F7%EA%B8%B8+36/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "대포식당 충남 보령시 작은오랏7길 36",
+    "sourceUrl": "https://www.google.com/maps/search/%EB%8C%80%ED%8F%AC%EC%8B%9D%EB%8B%B9+%EC%B6%A9%EB%82%A8+%EB%B3%B4%EB%A0%B9%EC%8B%9C+%EC%9E%91%EC%9D%80%EC%98%A4%EB%9E%8F7%EA%B8%B8+36/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "대포식당 | 4.3",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "바이더오": {
+    "rating": 4.3,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EB%B0%94%EC%9D%B4%EB%8D%94%EC%98%A4/data=!3m1!4b1!4m6!3m5!1s0x35709b55732afb77:0xf5c8ef66ffcf55f7!8m2!3d36.3813884!4d126.3976001!16s%2Fg%2F11py09ysrh?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "바이더오",
+    "sourceUrl": "https://www.google.com/maps/place/%EB%B0%94%EC%9D%B4%EB%8D%94%EC%98%A4/data=!3m1!4b1!4m6!3m5!1s0x35709b55732afb77:0xf5c8ef66ffcf55f7!8m2!3d36.3813884!4d126.3976001!16s%2Fg%2F11py09ysrh?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "바이더오 | 4.3",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "플라르": {
+    "rating": 4.6,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%ED%94%8C%EB%9D%BC%EB%A5%B4/data=!3m1!4b1!4m6!3m5!1s0x35709d3c7243ac79:0x703c631f37532391!8m2!3d36.3850777!4d126.4295383!16s%2Fg%2F11yljvcxs5?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "플라르",
+    "sourceUrl": "https://www.google.com/maps/place/%ED%94%8C%EB%9D%BC%EB%A5%B4/data=!3m1!4b1!4m6!3m5!1s0x35709d3c7243ac79:0x703c631f37532391!8m2!3d36.3850777!4d126.4295383!16s%2Fg%2F11yljvcxs5?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "플라르 | 4.6",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "카페모카브레드": {
+    "rating": 3.9,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%A0%88%EB%93%9C/data=!3m1!4b1!4m6!3m5!1s0x35708537ffcac1c1:0x94e3d0e64523bdc1!8m2!3d36.3086671!4d126.5151023!16s%2Fg%2F11j24hjwk_?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "카페모카브레드",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%A0%88%EB%93%9C/data=!3m1!4b1!4m6!3m5!1s0x35708537ffcac1c1:0x94e3d0e64523bdc1!8m2!3d36.3086671!4d126.5151023!16s%2Fg%2F11j24hjwk_?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "카페모카브레드 | 3.9",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "커피인터뷰대천": {
+    "rating": 3.3,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "커피인터뷰",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0/data=!3m1!4b1!4m6!3m5!1s0x3570854832518e75:0x34962fb5f31e1914!8m2!3d36.3241043!4d126.5048257!16s%2Fg%2F11jqqvt2n3?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "커피인터뷰 | 3.3",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "바다듬루프탑카페": {
+    "rating": 4.8,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EB%B0%94%EB%8B%A4%EB%93%AC+%EB%A3%A8%ED%94%84%ED%83%91+%EC%B9%B4%ED%8E%98+%EB%B3%B4%EB%A0%B9%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x357085f14e3bc9c9:0x2b7e16b68fa0b893!8m2!3d36.3271466!4d126.5068524!16s%2Fg%2F11t7dgsp17?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "바다듬 루프탑 카페 보령점",
+    "sourceUrl": "https://www.google.com/maps/place/%EB%B0%94%EB%8B%A4%EB%93%AC+%EB%A3%A8%ED%94%84%ED%83%91+%EC%B9%B4%ED%8E%98+%EB%B3%B4%EB%A0%B9%EC%A0%90/data=!3m1!4b1!4m6!3m5!1s0x357085f14e3bc9c9:0x2b7e16b68fa0b893!8m2!3d36.3271466!4d126.5068524!16s%2Fg%2F11t7dgsp17?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "바다듬 루프탑 카페 보령점 | 4.8",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
   }
 };
 
@@ -5355,13 +6756,15 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
   const kakaoPlace = kakaoPlaceData[name];
   const naverPlace = naverPlaceData[name];
   const googlePlace = googlePlaceData[name];
+  const editorial = boryeongEditorialData[name];
   const isPending = pendingRestaurantNames.has(name);
   const displayPlace = kakaoPlace || naverPlace || verifiedPlace;
   const ring = Math.floor(index / 8) + 1;
   const angle = (index * 47 * Math.PI) / 180;
-  const fallbackLat = seongsuRestaurantNames.has(name) ? seongsuBaseLat : baseLat;
-  const fallbackLng = seongsuRestaurantNames.has(name) ? seongsuBaseLng : baseLng;
-  const areaKeyword = seongsuRestaurantNames.has(name) ? "성수" : "건대";
+  const isBoryeong = boryeongRestaurantNames.has(name);
+  const fallbackLat = isBoryeong ? boryeongBaseLat : seongsuRestaurantNames.has(name) ? seongsuBaseLat : baseLat;
+  const fallbackLng = isBoryeong ? boryeongBaseLng : seongsuRestaurantNames.has(name) ? seongsuBaseLng : baseLng;
+  const areaKeyword = isBoryeong ? "보령" : seongsuRestaurantNames.has(name) ? "성수" : "건대";
   const latitude = +(fallbackLat + Math.sin(angle) * 0.0017 * ring).toFixed(6);
   const longitude = +(fallbackLng + Math.cos(angle) * 0.0022 * ring).toFixed(6);
   const mapSearchText = displayPlace ? `${displayPlace.address} ${name}` : `${areaKeyword} ${name}`;
@@ -5377,7 +6780,9 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
           ? "카카오 공개 평점"
           : kakaoPlace
             ? "카카오 평점 미표시"
-            : "카카오 평점 미확인",
+            : isBoryeong
+              ? "카카오 공개 평점 확인 불가"
+              : "카카오 평점 미확인",
     },
     naver: {
       label: "네이버",
@@ -5388,20 +6793,24 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
         naverPlace?.rating != null
           ? "네이버 공개 평점"
           : naverPlace
-            ? "네이버 평점 미표시"
+            ? isBoryeong
+              ? "네이버 플레이스 공개 평균 별점 없음"
+              : "네이버 평점 미표시"
             : "네이버 평점 미확인",
     },
     google: {
       label: "구글",
       rating: googlePlace?.rating ?? null,
       reviewCount: googlePlace?.reviewCount ?? null,
-      checkedAt: googlePlace?.checkedAt ?? null,
+      checkedAt: googlePlace?.checkedAt ?? (isBoryeong ? "2026-07-27" : null),
       note:
         googlePlace?.rating != null
           ? "구글 공개 평점"
           : googlePlace
             ? "구글 평점 미표시"
-            : "구글 평점 미확인",
+            : isBoryeong
+              ? "구글 동일 업체 공개 평점 없음"
+              : "구글 평점 미확인",
     },
   };
 
@@ -5411,15 +6820,27 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
     area: areaKeyword,
     category,
     rating,
+    ratingSource: isBoryeong ? "platformAverage" : undefined,
+    ratingLabel: isBoryeong ? "평균별점" : undefined,
     comment,
     signatureMenu,
-    menuItems: kakaoPlace?.menuItems?.length ? kakaoPlace.menuItems : buildMenuItems(signatureMenu),
-    priceRange: kakaoPlace?.priceRange || priceByCategory[category],
-    priceSource: kakaoPlace?.menuUpdatedAt ? `카카오맵 메뉴 기준 · ${kakaoPlace.menuUpdatedAt}` : "카카오맵 메뉴 가격 미표시",
+    menuItems: editorial?.menuItems?.length
+      ? editorial.menuItems
+      : kakaoPlace?.menuItems?.length
+        ? kakaoPlace.menuItems
+        : buildMenuItems(signatureMenu),
+    priceRange: editorial?.priceRange || kakaoPlace?.priceRange || priceByCategory[category],
+    priceSource: editorial
+      ? `${editorial.sourceLabel} · 2026-07-27 확인`
+      : kakaoPlace?.menuUpdatedAt
+        ? `카카오맵 메뉴 기준 · ${kakaoPlace.menuUpdatedAt}`
+        : "카카오맵 메뉴 가격 미표시",
     verifiedAt: isPending ? null : kakaoPlace?.checkedAt || (verifiedPlace ? addressVerifiedAt : null),
     verificationStatus: isPending ? "검증전" : kakaoPlace || verifiedPlace ? "검증후" : "검증전",
     verificationNote: isPending
-      ? "사용자 입력으로 추가된 검증 전 맛집입니다. 플랫폼 평점, 메뉴, 가격은 추후 확인 필요."
+      ? isBoryeong
+        ? "주소·메뉴·대표 사진은 공개 장소 정보로 확인했습니다. 개인 평가는 방문 후 입력할 항목입니다."
+        : "사용자 입력으로 추가된 검증 전 맛집입니다. 플랫폼 평점, 메뉴, 가격은 추후 확인 필요."
       : kakaoPlace
         ? `카카오맵 상세/메뉴 API 기준 반영${kakaoPlace.matchedName !== name ? ` · 등록명: ${kakaoPlace.matchedName}` : ""}`
         : verifiedPlace
@@ -5432,7 +6853,9 @@ const RESTAURANTS = rawRestaurants.map((item, index) => {
     kakaoMapLink: kakaoPlace?.kakaoMapLink || `https://map.kakao.com/link/search/${searchQuery}`,
     googleMapLink: googlePlace?.googleMapLink || `https://www.google.com/maps/search/?api=1&query=${searchQuery}`,
     platformRatings,
-    address: displayPlace?.address || (seongsuRestaurantNames.has(name) ? "서울 성동구 성수역 인근" : "서울 광진구 건대입구역 인근"),
+    address:
+      displayPlace?.address ||
+      (isBoryeong ? "충청남도 보령시" : seongsuRestaurantNames.has(name) ? "서울 성동구 성수역 인근" : "서울 광진구 건대입구역 인근"),
     latitude: displayPlace?.latitude || latitude,
     longitude: displayPlace?.longitude || longitude,
     images: mergeRestaurantImages(naverPlace?.images || [], kakaoPlace?.images || [], [CATEGORY_META[category].image]),

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보령 음식점 분류표 | ZZEE's Food Map</title>
+    <meta
+      name="description"
+      content="ZZEE's Food Map에 등록된 보령 음식점을 한식, 중식, 일식, 디저트, 양식 순서로 정리한 표입니다."
+    />
+    <style>
+      :root {
+        --accent: #ff6b35;
+        --accent-soft: #fff0e9;
+        --bg: #f7f7f4;
+        --surface: #ffffff;
+        --text: #202124;
+        --muted: #71757d;
+        --line: #e7e4dd;
+        --green: #2f7d4a;
+        --shadow: 0 18px 48px rgba(34, 31, 26, 0.08);
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top right, rgba(255, 107, 53, 0.14), transparent 30rem),
+          var(--bg);
+        color: var(--text);
+        font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 68px;
+        padding: 12px clamp(18px, 4vw, 48px);
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border-radius: 9px;
+        background: var(--accent);
+        color: white;
+      }
+
+      .top-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 38px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--surface);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 850;
+        transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(38px, 7vw, 76px) 0 80px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 14ch;
+        margin-bottom: 12px;
+        font-size: clamp(38px, 7vw, 72px);
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+      }
+
+      .hero-copy {
+        max-width: 48rem;
+        margin-bottom: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .count-card {
+        min-width: 150px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .count-card strong,
+      .count-card span {
+        display: block;
+      }
+
+      .count-card strong {
+        color: var(--accent);
+        font-size: 38px;
+        line-height: 1;
+      }
+
+      .count-card span {
+        margin-top: 7px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 34px;
+      }
+
+      .legend span,
+      .category-nav a,
+      .high-badge {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .legend span {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+      }
+
+      .category-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 26px;
+      }
+
+      .category-nav a {
+        border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .category-section {
+        margin-top: 28px;
+        scroll-margin-top: 88px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 10px;
+      }
+
+      .section-head h2 {
+        margin-bottom: 0;
+        font-size: clamp(24px, 4vw, 34px);
+        letter-spacing: -0.035em;
+      }
+
+      .section-head span {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      table {
+        width: 100%;
+        min-width: 860px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 15px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      th {
+        background: #fbfbf8;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      tbody tr.is-high {
+        background: linear-gradient(90deg, var(--accent-soft), transparent 72%);
+      }
+
+      .restaurant-name {
+        min-width: 164px;
+        font-weight: 900;
+      }
+
+      .address {
+        min-width: 260px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .score {
+        width: 68px;
+        font-variant-numeric: tabular-nums;
+        font-weight: 850;
+        text-align: center;
+      }
+
+      .average {
+        min-width: 104px;
+        color: var(--accent);
+        font-weight: 950;
+      }
+
+      .high-badge {
+        min-height: 23px;
+        margin-left: 5px;
+        padding: 0 7px;
+        background: var(--accent);
+        color: white;
+        font-size: 10px;
+      }
+
+      .map-links {
+        display: flex;
+        gap: 5px;
+      }
+
+      .map-links a {
+        display: inline-grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--surface);
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 900;
+      }
+
+      .map-links a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .notice {
+        margin: 30px 0 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--green);
+        border-radius: 0 10px 10px 0;
+        background: color-mix(in srgb, var(--green) 8%, var(--surface));
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      footer {
+        margin-top: 36px;
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .topbar {
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        .brand span:last-child {
+          display: none;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .count-card {
+          width: fit-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="ZZEE's Food Map으로 돌아가기">
+        <span class="brand-mark">J</span>
+        <span>ZZEE's Food Map</span>
+      </a>
+      <nav class="top-actions" aria-label="페이지 이동">
+        <a class="button" href="./index.html">맛집 지도</a>
+        <a class="button" href="../index.html">ZZEE 홈</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="pageTitle">
+        <div>
+          <p class="eyebrow">BORYEONG RESTAURANT LIST</p>
+          <h1 id="pageTitle">보령 음식점 분류표</h1>
+          <p class="hero-copy">
+            보령 주소로 등록된 음식점을 한식, 중식, 일식, 디저트, 양식 순서로 모았습니다.
+            K·N·G 점수와 유효한 플랫폼 점수의 평균을 함께 확인할 수 있습니다.
+          </p>
+        </div>
+        <div class="count-card" aria-label="등록 음식점 수">
+          <strong id="restaurantCount">0</strong>
+          <span>보령 음식점</span>
+        </div>
+      </section>
+
+      <div class="legend" aria-label="별점 출처 안내">
+        <span>K 카카오</span>
+        <span>N 네이버</span>
+        <span>G 구글</span>
+        <span>— 공개 평점 미확인</span>
+        <span>평균 4.5 초과는 4.5+ 표시</span>
+      </div>
+
+      <nav class="category-nav" id="categoryNav" aria-label="분류 바로가기"></nav>
+      <div id="categorySections"></div>
+
+      <p class="notice">
+        플랫폼 평점은 2026-07-27 확인 스냅샷이며, 각 플랫폼에서 값이 공개된 항목만 평균에 포함합니다.
+        수정식당은 기존 등록 항목이지만 주소가 보령이라 이 표에 포함했습니다.
+      </p>
+
+      <footer>Updated 2026-07-27 · ZZEE's Food Map</footer>
+    </main>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/naver-shared-restaurants.js"></script>
+    <script>
+      const CATEGORY_ORDER = ["한식", "중식", "일식", "디저트", "양식"];
+      const PLATFORM_KEYS = ["kakao", "naver", "google"];
+      const PLATFORM_SHORT = { kakao: "K", naver: "N", google: "G" };
+
+      const validRating = (value) =>
+        Number.isFinite(value) && value > 0 && value <= 5;
+
+      const platformAverage = (restaurant) => {
+        const ratings = PLATFORM_KEYS
+          .map((key) => restaurant.platformRatings?.[key]?.rating)
+          .filter(validRating);
+        if (!ratings.length) return null;
+        return Math.round(
+          (ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length) * 10
+        ) / 10;
+      };
+
+      const formatRating = (value, digits = 1) =>
+        validRating(value) ? Number(value).toFixed(digits) : "—";
+
+      const escapeHtml = (value = "") =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const allRestaurants = [
+        ...(typeof RESTAURANTS === "undefined" ? [] : RESTAURANTS),
+        ...(typeof NAVER_SHARED_RESTAURANTS === "undefined"
+          ? []
+          : NAVER_SHARED_RESTAURANTS),
+      ];
+
+      const seen = new Set();
+      const boryeongRestaurants = allRestaurants.filter((restaurant) => {
+        const isBoryeong =
+          restaurant.area === "보령" ||
+          String(restaurant.address || "").includes("보령");
+        const key = restaurant.id || `${restaurant.name}-${restaurant.address}`;
+        if (!isBoryeong || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      const groups = CATEGORY_ORDER.map((category) => ({
+        category,
+        restaurants: boryeongRestaurants.filter(
+          (restaurant) => restaurant.category === category
+        ),
+      })).filter((group) => group.restaurants.length);
+
+      document.querySelector("#restaurantCount").textContent =
+        boryeongRestaurants.length;
+
+      document.querySelector("#categoryNav").innerHTML = groups
+        .map(
+          (group) =>
+            `<a href="#category-${encodeURIComponent(group.category)}">${group.category} ${group.restaurants.length}</a>`
+        )
+        .join("");
+
+      const mapLinks = (restaurant) =>
+        [
+          ["kakao", restaurant.kakaoMapLink],
+          ["naver", restaurant.naverMapLink],
+          ["google", restaurant.googleMapLink],
+        ]
+          .filter(([, url]) => url)
+          .map(
+            ([key, url]) =>
+              `<a href="${escapeHtml(url)}" target="_blank" rel="noopener" aria-label="${PLATFORM_SHORT[key]} 지도에서 ${escapeHtml(restaurant.name)} 보기">${PLATFORM_SHORT[key]}</a>`
+          )
+          .join("");
+
+      document.querySelector("#categorySections").innerHTML = groups
+        .map((group) => {
+          const rows = group.restaurants
+            .map((restaurant) => {
+              const average = platformAverage(restaurant);
+              const isHigh = average > 4.5;
+              return `
+                <tr class="${isHigh ? "is-high" : ""}">
+                  <td class="restaurant-name">${escapeHtml(restaurant.name)}</td>
+                  <td class="address">${escapeHtml(restaurant.address)}</td>
+                  ${PLATFORM_KEYS.map(
+                    (key) =>
+                      `<td class="score">${formatRating(
+                        restaurant.platformRatings?.[key]?.rating,
+                        key === "naver" ? 2 : 1
+                      )}</td>`
+                  ).join("")}
+                  <td class="average">
+                    ${average === null ? "—" : average.toFixed(1)}
+                    ${isHigh ? '<span class="high-badge">4.5+</span>' : ""}
+                  </td>
+                  <td><div class="map-links">${mapLinks(restaurant)}</div></td>
+                </tr>
+              `;
+            })
+            .join("");
+
+          return `
+            <section class="category-section" id="category-${encodeURIComponent(group.category)}">
+              <div class="section-head">
+                <h2>${group.category}</h2>
+                <span>${group.restaurants.length}곳</span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">음식점</th>
+                      <th scope="col">주소</th>
+                      <th scope="col" class="score">K</th>
+                      <th scope="col" class="score">N</th>
+                      <th scope="col" class="score">G</th>
+                      <th scope="col">평균</th>
+                      <th scope="col">지도</th>
+                    </tr>
+                  </thead>
+                  <tbody>${rows}</tbody>
+                </table>
+              </div>
+            </section>
+          `;
+        })
+        .join("");
+    </script>
+  </body>
+</html>
