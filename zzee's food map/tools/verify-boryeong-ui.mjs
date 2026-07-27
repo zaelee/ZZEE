@@ -182,6 +182,55 @@ try {
     throw new Error(`4.5+ 배지 대상 오류: ${highRatingNames.join(", ")}`);
   }
   if (errors.length) throw new Error("브라우저 런타임 오류 발생");
+
+  await send("Page.navigate", {
+    url: `http://127.0.0.1:${port}/boryeong-restaurants.html?verify=category-table`,
+  });
+  await sleep(2500);
+
+  const tableEvaluation = await send("Runtime.evaluate", {
+    expression: `(() => ({
+      count: document.querySelector("#restaurantCount")?.textContent?.trim() || "",
+      categories: [...document.querySelectorAll(".category-section h2")].map((node) => node.textContent.trim()),
+      names: [...document.querySelectorAll(".restaurant-name")].map((node) => node.textContent.trim()),
+      highRatingNames: [...document.querySelectorAll("tr.is-high .restaurant-name")].map((node) => node.textContent.trim()),
+      links: [...document.querySelectorAll(".map-links a")].length,
+    }))()`,
+    returnByValue: true,
+  });
+  const table = tableEvaluation.result.value;
+  const tableScreenshot = await send("Page.captureScreenshot", {
+    format: "png",
+    captureBeyondViewport: true,
+  });
+  fs.writeFileSync(screenshotPath, Buffer.from(tableScreenshot.data, "base64"));
+
+  console.log(
+    JSON.stringify(
+      {
+        summaryPage: {
+          count: table.count,
+          categories: table.categories,
+          rows: table.names.length,
+          highRatingNames: table.highRatingNames,
+          mapLinks: table.links,
+        },
+      },
+      null,
+      2,
+    ),
+  );
+
+  if (table.count !== "18" || table.names.length !== 18 || !table.names.includes("수정식당")) {
+    throw new Error("보령 분류표의 음식점 수 또는 수정식당 포함 상태 오류");
+  }
+  if (table.categories.join("|") !== "한식|중식|일식|디저트|양식") {
+    throw new Error(`보령 분류 순서 오류: ${table.categories.join(", ")}`);
+  }
+  if (table.highRatingNames.join("|") !== "오는정 손만두|피자파티") {
+    throw new Error(`보령 분류표 4.5+ 대상 오류: ${table.highRatingNames.join(", ")}`);
+  }
+  if (table.links < 50) throw new Error("보령 분류표 지도 링크 누락");
 } finally {
   socket?.close();
   server.close();
