@@ -60,6 +60,7 @@ const summary = vm.runInContext(
       "커피인터뷰대천",
       "바다듬루프탑카페",
       "황해원",
+      "영풍각",
     ];
     const boryeongSearchMatches = combined.filter((restaurant) =>
       [

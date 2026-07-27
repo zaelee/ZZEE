@@ -88,7 +88,7 @@
     "checkedAt": "2026-07-27"
   },
   {
-    "query": "성지 2호점 충청남도 보령시 동현로 88",
+    "query": "성지 2호점 충남 보령시 동현로 88 1층",
     "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
     "matched": false,
     "requestedName": "성지 2호점",
@@ -428,6 +428,28 @@
       "https://ldb-phinf.pstatic.net/20250715_148/1752536071066wiVIG_PNG/1000001260.png",
       "https://ldb-phinf.pstatic.net/20160225_27/1456378834746BfpCt_JPEG/176175547053680_0.jpg",
       "https://ldb-phinf.pstatic.net/20160225_130/1456378834811kvdhz_JPEG/176175547053680_1.jpg"
+    ],
+    "checkedAt": "2026-07-27"
+  },
+  {
+    "query": "영풍각 충청남도 보령시 대흥로 55",
+    "source": "NAVER Map/Place 비공식 공개 화면 스냅샷",
+    "matched": true,
+    "requestedName": "영풍각",
+    "name": "영풍각",
+    "category": "중식당",
+    "address": "충청남도 보령시 대흥로 55 영풍각",
+    "lotAddress": "충청남도 보령시 대천동 337-23 영풍각",
+    "latitude": 36.3500064,
+    "longitude": 126.592566,
+    "naverPlaceId": 17470538,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17470538",
+    "tel": "0507-1497-2350",
+    "rating": null,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20210701_80/1625066850972LztpO_JPEG/BokStHXQ2O-UuWgq_CpVXw9P.jpeg.jpg",
+      "https://ldb-phinf.pstatic.net/20220803_144/1659512738395XkQBh_JPEG/BEC444C3-45D0-448B-A1A7-67E2006190EC.jpeg",
+      "https://ldb-phinf.pstatic.net/20210630_39/1625055054917ojwBI_JPEG/r1-rp_aDKBAKBGCIAYrFm-nL.jpeg.jpg"
     ],
     "checkedAt": "2026-07-27"
   }

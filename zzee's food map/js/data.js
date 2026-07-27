@@ -126,6 +126,7 @@ const rawRestaurants = [
   ["커피인터뷰대천", "디저트", null, "대천항 언덕에서 바다와 석양을 보는 오션뷰 카페", "우유아이스크림", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["바다듬루프탑카페", "디저트", null, "대천항 전망과 넓은 루프탑을 갖춘 수협 위판장 3층 카페", "바다듬크림라떼", "방문 후 개인 코멘트를 업데이트할 예정"],
   ["황해원", "중식", null, "오징어와 돼지고기를 넣은 짬뽕, 짜장면, 짬뽕밥 세 메뉴에 집중하는 노포 중식당", "짬뽕", "방문 후 개인 코멘트를 업데이트할 예정"],
+  ["영풍각", "중식", null, "짜장과 짬뽕 사이의 매콤한 보령식 라조면을 2인 이상 주문할 수 있는 대흥로 중식당", "라조면", "방문 후 개인 코멘트를 업데이트할 예정"],
 ];
 
 const priceByCategory = {
@@ -234,6 +235,7 @@ const boryeongRestaurantNames = new Set([
   "커피인터뷰대천",
   "바다듬루프탑카페",
   "황해원",
+  "영풍각",
 ]);
 
 const pendingRestaurantNames = new Set([
@@ -300,6 +302,7 @@ const verifiedPlaceData = {
   커피인터뷰대천: { matchedName: "커피인터뷰 대천", address: "충청남도 보령시 대천항1길 67-22", latitude: 36.3241043, longitude: 126.5048257 },
   바다듬루프탑카페: { matchedName: "바다듬 루프탑카페 보령점", address: "충청남도 보령시 대천항중앙길 76 위판장 3층", latitude: 36.3273818, longitude: 126.5066687 },
   황해원: { matchedName: "황해원", address: "충청남도 보령시 성주면 심원계곡로 4", latitude: 36.33605655, longitude: 126.6508211 },
+  영풍각: { matchedName: "영풍각", address: "충청남도 보령시 대흥로 55", latitude: 36.34997737, longitude: 126.59257095 },
 };
 
 const boryeongPlaceSources = {
@@ -323,6 +326,7 @@ const boryeongPlaceSources = {
   커피인터뷰대천: { provider: "google", providerPlaceId: "0x3570854832518e75:0x34962fb5f31e1914", sourceUrl: "https://www.google.com/maps/search/?api=1&query=%EC%BB%A4%ED%94%BC%EC%9D%B8%ED%84%B0%EB%B7%B0%EB%8C%80%EC%B2%9C%20%EB%B3%B4%EB%A0%B9", checkedAt: "2026-07-27" },
   바다듬루프탑카페: { provider: "diningcode", providerPlaceId: "CP13KWXqkl6h", sourceUrl: "https://www.diningcode.com/profile.php?rid=CP13KWXqkl6h", checkedAt: "2026-07-27" },
   황해원: { provider: "boryeong-city", providerPlaceId: "041-933-5051", sourceUrl: "https://www.brcn.go.kr/prog/franchise2/kor/sub05_04_08_06/list.do?pageIndex=301", checkedAt: "2026-07-27" },
+  영풍각: { provider: "tabling", providerPlaceId: "677cd12866de5f06988766eb", sourceUrl: "https://www.tabling.co.kr/place/677cd12866de5f06988766eb", checkedAt: "2026-07-27" },
 };
 
 const boryeongEditorialData = {
@@ -504,6 +508,15 @@ const boryeongEditorialData = {
     ],
     priceRange: "7천-1만원",
     sourceLabel: "카카오맵·한국관광공사 공개 메뉴",
+  },
+  영풍각: {
+    menuItems: [
+      { name: "라조면 (2인 이상)", price: 10000 },
+      { name: "짜장면", price: 7000 },
+      { name: "짬뽕", price: 9000 },
+    ],
+    priceRange: "7천-1만원",
+    sourceLabel: "테이블링·다이닝코드 공개 메뉴",
   },
 };
 
@@ -4514,6 +4527,50 @@ const kakaoPlaceData = {
     ],
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 4.573103901892215e-7
+  },
+  "영풍각": {
+    "matchedName": "영풍각",
+    "kakaoPlaceId": "11191056",
+    "address": "충남 보령시 대흥로 55 1층",
+    "lotAddress": "대천동 337-23",
+    "latitude": 36.34997736514256,
+    "longitude": 126.59257095187407,
+    "kakaoMapLink": "https://place.map.kakao.com/11191056",
+    "rating": 3.7,
+    "ratingCount": 7,
+    "reviewCount": 30,
+    "menuItems": [
+      {
+        "name": "라조면(2인이상)",
+        "price": 10000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2026-06-30 11:44:01"
+      },
+      {
+        "name": "짜장면",
+        "price": 7000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2024-07-19 01:46:48"
+      },
+      {
+        "name": "간짜장",
+        "price": 9000,
+        "desc": null,
+        "isRecommended": false,
+        "sourceUpdatedAt": "2025-10-14 10:35:27"
+      }
+    ],
+    "menuUpdatedAt": "2026-06-30 11:44:01",
+    "priceRange": "7,000-10,000원",
+    "priceSymbol": "₩₩",
+    "images": [
+      "https://map.kakaocdn.net/map_roadview/2024/02/9140512/2_102736_9140512_20240227021321_cube/left_800.jpg",
+      "https://postfiles.pstatic.net/MjAyNjA2MjlfMTA2/MDAxNzgyNzI0OTk3Njc3.VS8zmE4cV9zFq8HtKmQdav41lt7I39RE4-T-UwYPZVgg.7KY_an4KeJupWbgUCP8t2gaBuKJ7m3eFffEZp86IVHog.JPEG/SE-c4bf75c0-96b2-4eef-8af4-cb229bf9750c.jpg?type=w773"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 5.655987943968106e-7
   }
 };
 
@@ -6132,7 +6189,7 @@ const naverPlaceData = {
     ],
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 0.004620142281216421,
-    "reviewCount": 14233,
+    "reviewCount": 14235,
     "ratingSourceField": "placeDetail.base.visitorReviewsScore",
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/1539725382/home",
     "ratingCheckedAt": "2026-07-27"
@@ -6237,7 +6294,7 @@ const naverPlaceData = {
     ],
     "checkedAt": "2026-07-27",
     "matchDistanceKm": 0.002924714958115231,
-    "reviewCount": 2048,
+    "reviewCount": 2047,
     "ratingSourceField": "placeDetail.base.visitorReviewsScore",
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/1827453071/home",
     "ratingCheckedAt": "2026-07-27"
@@ -6345,6 +6402,27 @@ const naverPlaceData = {
     "reviewCount": 1067,
     "ratingSourceField": "placeDetail.base.visitorReviewsScore",
     "ratingSourceUrl": "https://m.place.naver.com/restaurant/17504316/home",
+    "ratingCheckedAt": "2026-07-27"
+  },
+  "영풍각": {
+    "matchedName": "영풍각",
+    "naverPlaceId": 17470538,
+    "address": "충청남도 보령시 대흥로 55 영풍각",
+    "lotAddress": "충청남도 보령시 대천동 337-23 영풍각",
+    "latitude": 36.3500064,
+    "longitude": 126.592566,
+    "naverMapLink": "https://map.naver.com/p/entry/place/17470538",
+    "rating": 4.39,
+    "images": [
+      "https://ldb-phinf.pstatic.net/20210701_80/1625066850972LztpO_JPEG/BokStHXQ2O-UuWgq_CpVXw9P.jpeg.jpg",
+      "https://ldb-phinf.pstatic.net/20220803_144/1659512738395XkQBh_JPEG/BEC444C3-45D0-448B-A1A7-67E2006190EC.jpeg",
+      "https://ldb-phinf.pstatic.net/20210630_39/1625055054917ojwBI_JPEG/r1-rp_aDKBAKBGCIAYrFm-nL.jpeg.jpg"
+    ],
+    "checkedAt": "2026-07-27",
+    "matchDistanceKm": 0.003258845113674432,
+    "reviewCount": 283,
+    "ratingSourceField": "placeDetail.base.visitorReviewsScore",
+    "ratingSourceUrl": "https://m.place.naver.com/restaurant/17470538/home",
     "ratingCheckedAt": "2026-07-27"
   }
 };
@@ -7002,6 +7080,16 @@ const googlePlaceData = {
     "matchedName": "황해원",
     "sourceUrl": "https://www.google.com/maps/place/%ED%99%A9%ED%95%B4%EC%9B%90/data=!3m1!4b1!4m6!3m5!1s0x35707faa422b8067:0x59f528891b728d20!8m2!3d36.3360387!4d126.6508301!16s%2Fg%2F1th1rz2g?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
     "evidence": "황해원 | 4.0",
+    "checkedAt": "2026-07-27",
+    "note": "구글 지도 공개 업체 평점"
+  },
+  "영풍각": {
+    "rating": 4.2,
+    "reviewCount": null,
+    "googleMapLink": "https://www.google.com/maps/place/%EC%98%81%ED%92%8D%EA%B0%81/data=!3m1!4b1!4m6!3m5!1s0x357081ef42f6ecd5:0x36901c67b4c731bf!8m2!3d36.3499745!4d126.5925621!16s%2Fg%2F11kk1rl6tq?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "matchedName": "영풍각",
+    "sourceUrl": "https://www.google.com/maps/place/%EC%98%81%ED%92%8D%EA%B0%81/data=!3m1!4b1!4m6!3m5!1s0x357081ef42f6ecd5:0x36901c67b4c731bf!8m2!3d36.3499745!4d126.5925621!16s%2Fg%2F11kk1rl6tq?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+    "evidence": "영풍각 | 4.2",
     "checkedAt": "2026-07-27",
     "note": "구글 지도 공개 업체 평점"
   }

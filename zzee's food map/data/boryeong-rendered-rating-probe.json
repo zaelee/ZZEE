@@ -114,5 +114,26 @@
       "resolvedUrl": "https://www.google.com/maps/place/%ED%99%A9%ED%95%B4%EC%9B%90/data=!3m1!4b1!4m6!3m5!1s0x35707faa422b8067:0x59f528891b728d20!8m2!3d36.3360387!4d126.6508301!16s%2Fg%2F1th1rz2g?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
       "placeLinks": []
     }
+  },
+  {
+    "name": "영풍각",
+    "naver": {
+      "rating": null,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://map.naver.com/p/entry/place/17470538"
+    },
+    "google": {
+      "rating": 4.2,
+      "reviewCount": null,
+      "checkedAt": "2026-07-27",
+      "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%81%ED%92%8D%EA%B0%81%20%EC%B6%A9%EB%82%A8%20%EB%B3%B4%EB%A0%B9%EC%8B%9C%20%EB%8C%80%ED%9D%A5%EB%A1%9C%2055%201%EC%B8%B5",
+      "nameAccepted": true,
+      "addressAccepted": true,
+      "evidence": "영풍각 | 4.2",
+      "title": "영풍각 - Google 지도",
+      "resolvedUrl": "https://www.google.com/maps/place/%EC%98%81%ED%92%8D%EA%B0%81/data=!3m1!4b1!4m6!3m5!1s0x357081ef42f6ecd5:0x36901c67b4c731bf!8m2!3d36.3499745!4d126.5925621!16s%2Fg%2F11kk1rl6tq?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
+      "placeLinks": []
+    }
   }
 ]

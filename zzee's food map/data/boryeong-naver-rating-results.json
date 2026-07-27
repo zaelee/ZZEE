@@ -149,7 +149,7 @@
     "matchedName": "조개까는남자",
     "nameAccepted": true,
     "rating": 4.79,
-    "reviewCount": 14233,
+    "reviewCount": 14235,
     "error": null
   },
   {
@@ -234,7 +234,7 @@
     "matchedName": "플라르",
     "nameAccepted": true,
     "rating": 4.75,
-    "reviewCount": 2048,
+    "reviewCount": 2047,
     "error": null
   },
   {
@@ -303,6 +303,23 @@
     "nameAccepted": true,
     "rating": 4.35,
     "reviewCount": 1067,
+    "error": null
+  },
+  {
+    "requestedName": "영풍각",
+    "expectedName": "영풍각",
+    "expectedAddress": "충청남도 보령시 대흥로 55 영풍각",
+    "naverPlaceId": "17470538",
+    "naverMapLink": "https://map.naver.com/p/entry/place/17470538",
+    "sourceUrl": "https://m.place.naver.com/restaurant/17470538/home",
+    "sourceField": "placeDetail.base.visitorReviewsScore",
+    "checkedAt": "2026-07-27",
+    "ok": true,
+    "status": 200,
+    "matchedName": "영풍각",
+    "nameAccepted": true,
+    "rating": 4.39,
+    "reviewCount": 283,
     "error": null
   }
 ]
