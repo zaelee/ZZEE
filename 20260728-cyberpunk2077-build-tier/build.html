@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0d10" />
+    <meta name="description" content="사이버펑크 2077 빌드 상세 공략" />
+    <title>빌드 공략 · 사이버펑크 2077 빌드 티어 연구소</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./data.js" defer></script>
+    <script src="./final-setups.js" defer></script>
+    <script src="./gear-data.js" defer></script>
+    <script src="./enhanced-data.js" defer></script>
+    <script src="./build.js" defer></script>
+  </head>
+  <body class="detail-body">
+    <header class="detail-topbar">
+      <a href="./index.html">← 전체 티어표</a>
+      <button id="print-button" type="button">공략 인쇄</button>
+    </header>
+
+    <main id="build-detail" class="detail-main" hidden>
+      <section class="detail-hero">
+        <div>
+          <p id="detail-eyebrow" class="eyebrow"></p>
+          <h1 id="detail-title"></h1>
+          <p id="detail-verdict" class="detail-verdict"></p>
+          <div id="detail-tags" class="tag-row"></div>
+        </div>
+        <aside class="rank-panel" aria-label="빌드 평가">
+          <div class="rank-letter"><span id="detail-tier"></span><small>TIER</small></div>
+          <dl>
+            <div><dt>조작 난이도</dt><dd id="detail-difficulty"></dd></div>
+            <div><dt>세팅 부담</dt><dd id="detail-setup"></dd></div>
+            <div><dt>공략 버전</dt><dd id="detail-version"></dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-card detail-card-wide priority-card">
+          <p class="section-kicker">ATTRIBUTES &amp; PERKS</p>
+          <h2>최종 특전</h2>
+          <p class="section-intro">육성 과정은 생략하고 원문 작성자가 올린 최종 특전 화면만 표시합니다.</p>
+          <div id="final-attribute-media" class="final-media"></div>
+        </article>
+
+        <article class="detail-card detail-card-wide cyberware-card">
+          <p class="section-kicker">CYBERWARE</p>
+          <h2>최종 사이버웨어</h2>
+          <p class="section-intro">슬롯별 장착 과정과 대체안은 생략하고 원문의 최종 사이버웨어 화면만 표시합니다.</p>
+          <div id="final-cyberware-media" class="final-media"></div>
+        </article>
+
+        <article class="detail-card detail-card-wide gear-card-section">
+          <p class="section-kicker">WEAPONS &amp; GEAR</p>
+          <h2>핵심 무기·장비와 획득처</h2>
+          <p class="section-intro">공략에 지정된 주력·보조 장비입니다. 각 카드에서 장비 종류와 빌드 내 역할, 획득처를 바로 확인할 수 있습니다.</p>
+          <div id="gear-cards" class="gear-cards"></div>
+        </article>
+
+        <article class="detail-card detail-card-wide">
+          <p class="section-kicker">COMBAT LOOP</p>
+          <h2>이 순서로 싸우세요</h2>
+          <ol id="detail-loop" class="combat-loop"></ol>
+        </article>
+
+        <article class="detail-card">
+          <p class="section-kicker">CORE LOADOUT</p>
+          <h2>핵심 구성</h2>
+          <dl class="loadout-list">
+            <div><dt>운영체제</dt><dd id="detail-os"></dd></div>
+            <div><dt>주무기</dt><dd id="detail-weapons"></dd></div>
+            <div><dt>필수 세팅</dt><dd id="detail-core"></dd></div>
+          </dl>
+        </article>
+
+        <article class="detail-card">
+          <p class="section-kicker">WHY THIS TIER</p>
+          <h2>이 티어인 이유</h2>
+          <p id="detail-reason" class="body-copy"></p>
+        </article>
+
+        <article class="detail-card">
+          <p class="section-kicker">UPSIDE</p>
+          <h2>강점</h2>
+          <ul id="detail-strengths" class="check-list"></ul>
+        </article>
+
+        <article class="detail-card danger-card">
+          <p class="section-kicker">WATCH OUT</p>
+          <h2>주의점</h2>
+          <ul id="detail-weaknesses" class="check-list"></ul>
+        </article>
+
+        <article class="detail-card detail-card-wide">
+          <p class="section-kicker">PROGRESSION</p>
+          <h2>육성·완성 시점</h2>
+          <p id="detail-progression" class="body-copy"></p>
+        </article>
+      </section>
+
+      <section class="source-panel">
+        <div>
+          <p class="section-kicker">SOURCE</p>
+          <h2>원문 공략 확인</h2>
+          <p id="detail-source-note"></p>
+        </div>
+        <a id="detail-source" target="_blank" rel="noreferrer">디시인사이드 원문 ↗</a>
+      </section>
+
+      <nav class="detail-nav" aria-label="다른 빌드">
+        <a id="prev-build" href="#"></a>
+        <a id="next-build" href="#"></a>
+      </nav>
+    </main>
+
+    <main id="not-found" class="not-found" hidden>
+      <p class="eyebrow">404 / BUILD NOT FOUND</p>
+      <h1>해당 빌드를 찾지 못했습니다.</h1>
+      <a href="./index.html">전체 티어표로 돌아가기</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="디시인사이드 사이버펑크 2077 빌드 모음의 38개 공략을 패치 2.31 기준으로 분석한 A-F 티어, 난이도, 특성·사이버웨어 상세 가이드."
+    />
+    <meta name="theme-color" content="#0a0d10" />
+    <title>사이버펑크 2077 빌드 티어 연구소 · ZZEE</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./data.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#tier-board">티어표로 바로가기</a>
+    <header class="hero">
+      <nav class="topbar" aria-label="상단 탐색">
+        <a class="brand" href="../index.html" aria-label="ZZEE 프로젝트 허브로 이동">
+          <span class="brand-mark">Z</span>
+          <span>ZZEE / BUILD LAB</span>
+        </a>
+        <a
+          class="source-link"
+          href="https://gall.dcinside.com/mgallery/board/view/?id=cyberpunk2077&amp;no=408150"
+          target="_blank"
+          rel="noreferrer"
+        >
+          원본 모음 ↗
+        </a>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow"><span>PATCH 2.31</span> / VERY HARD 기준</p>
+          <h1>38개 빌드,<br /><em>한 장으로 끝.</em></h1>
+          <p class="hero-copy">
+            성능은 A–F 세로축, 조작 난이도는 가로축으로 분리했습니다.
+            카드마다 특성 우선순위·필수 특전·슬롯별 사이버웨어·원문 세팅 이미지를 정리한 전용 공략 창이 새 탭으로 열립니다.
+          </p>
+        </div>
+        <div class="hero-panel" aria-label="분석 요약">
+          <span class="crosshair" aria-hidden="true"></span>
+          <p>ANALYSIS COMPLETE</p>
+          <strong><span id="build-total">38</span><small>BUILDS</small></strong>
+          <dl>
+            <div><dt>평가축</dt><dd>화력 · 생존 · 범용성 · 세팅</dd></div>
+            <div><dt>난이도</dt><dd>조작 부담만 별도 평가</dd></div>
+            <div><dt>최종 검토</dt><dd>2026.07.28</dd></div>
+          </dl>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="method" aria-labelledby="method-title">
+        <div>
+          <p class="section-kicker">HOW TO READ</p>
+          <h2 id="method-title">티어와 난이도는 다릅니다.</h2>
+        </div>
+        <div class="method-cards">
+          <article>
+            <span>01</span>
+            <h3>티어 = 결과</h3>
+            <p>A는 매우 어려움에서도 강하고 안정적입니다. F는 약함이 아니라 원문 삭제로 검증할 수 없는 항목을 포함합니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>난이도 = 손</h3>
+            <p>오른쪽으로 갈수록 에임, 무기 교체, 퀵핵 대기열, 공중 대시 같은 실전 조작이 늘어납니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>세팅 = 공략 창</h3>
+            <p>특성·필수 특전과 10개 사이버웨어 슬롯, 대체 장비, 원문 세팅 이미지를 공략마다 따로 펼쳐봅니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="controls-shell" aria-label="빌드 필터">
+        <div class="controls">
+          <label class="search-field">
+            <span>SEARCH</span>
+            <input id="search-input" type="search" placeholder="빌드, 무기, 운영체제 검색" autocomplete="off" />
+          </label>
+          <label>
+            <span>운영체제</span>
+            <select id="os-filter">
+              <option value="all">전체 OS</option>
+            </select>
+          </label>
+          <label>
+            <span>티어</span>
+            <select id="tier-filter">
+              <option value="all">A–F 전체</option>
+              <option value="A">A 티어</option>
+              <option value="B">B 티어</option>
+              <option value="C">C 티어</option>
+              <option value="D">D 티어</option>
+              <option value="E">E 티어</option>
+              <option value="F">F 티어</option>
+            </select>
+          </label>
+          <button id="reset-filters" type="button">초기화</button>
+        </div>
+        <p class="result-line" aria-live="polite">
+          <span id="result-count">38</span>개 빌드 표시 중
+          <span class="result-hint">카드를 누르면 새 공략 창이 열립니다.</span>
+        </p>
+      </section>
+
+      <section id="tier-board" class="board-shell" aria-labelledby="board-title">
+        <div class="board-heading">
+          <div>
+            <p class="section-kicker">TIER × CONTROL</p>
+            <h2 id="board-title">빌드 전투 지도</h2>
+          </div>
+          <div class="axis-note" aria-hidden="true">
+            <span>가벼움</span>
+            <i></i>
+            <span>고수</span>
+          </div>
+        </div>
+        <div class="board-scroll" tabindex="0" aria-label="가로로 스크롤 가능한 빌드 티어표">
+          <div id="tier-grid" class="tier-grid"></div>
+        </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <strong>조건에 맞는 빌드가 없습니다.</strong>
+          <p>검색어를 줄이거나 필터를 초기화해 보세요.</p>
+        </div>
+      </section>
+
+      <section class="notes" aria-labelledby="notes-title">
+        <div>
+          <p class="section-kicker">FIELD NOTES</p>
+          <h2 id="notes-title">평가 전에 꼭 읽기</h2>
+        </div>
+        <div class="note-list">
+          <p><span>01</span> 원본 글은 2023–2025년에 작성됐습니다. 2.31에서 큰 전투 밸런스 변경은 없었지만, 버그·드롭 위치·모드 의존 조합은 달라질 수 있습니다.</p>
+          <p><span>02</span> 같은 티어 안에서는 순위를 매기지 않았습니다. 잠입·넷러닝·근접처럼 목적이 다른 빌드를 한 줄로 세우지 않았습니다.</p>
+          <p><span>03</span> 체인라이트닝 스패밍 글은 원문이 삭제되어 제목과 구성만 확인됐습니다. 그래서 성능 단정 대신 F(검증 불가)로 격리했습니다.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>개인 분석 자료 · 원문 작성자들의 공략을 요약했으며 원문 링크를 함께 제공합니다.</p>
+      <time datetime="2026-07-28">Updated 2026-07-28</time>
+    </footer>
+
+    <template id="build-card-template">
+      <a class="build-card" target="_blank" rel="noopener">
+        <span class="card-line"></span>
+        <div class="card-top">
+          <span class="card-os"></span>
+          <span class="card-index"></span>
+        </div>
+        <h3></h3>
+        <p class="card-weapons"></p>
+        <p class="card-summary"></p>
+        <div class="card-footer">
+          <span class="card-version"></span>
+          <span class="card-open">공략 열기 ↗</span>
+        </div>
+      </a>
+    </template>
+  </body>
+</html>
