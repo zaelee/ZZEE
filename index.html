@@ -135,12 +135,15 @@
       .grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
         gap: 14px;
+        align-items: stretch;
       }
 
       .project {
         display: grid;
-        min-height: 190px;
+        min-height: 240px;
+        height: 100%;
         padding: 18px;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -178,13 +181,6 @@
       .project.featured {
         border-color: rgba(255, 107, 53, 0.55);
         background: linear-gradient(135deg, #fffefa 0%, #fff4ee 100%);
-      }
-
-      .project--hero {
-        grid-column: 1 / -1;
-        min-height: 170px;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 24px;
       }
 
       .meta {
@@ -232,11 +228,6 @@
           grid-template-columns: 1fr;
         }
 
-        .project--hero {
-          grid-template-columns: 1fr;
-          gap: 0;
-        }
-
       }
     </style>
   </head>
@@ -256,6 +247,19 @@
           <span>Creative Work</span>
         </div>
         <div class="grid">
+          <a class="project featured" href="./zerune-studio/index.html">
+            <div>
+              <strong>Zerune Studio</strong>
+              <time class="updated-date" datetime="2026-07-16">Updated 2026-07-16</time>
+              <p>콘셉트부터 Mureka 음악·이미지 프롬프트, 전체보기와 YouTube 복붙 입력까지 01–05 흐름으로 연결하는 제작 스튜디오.</p>
+            </div>
+            <div class="meta">
+              <span class="tag">Music</span>
+              <span class="tag">YouTube</span>
+              <span class="tag">Remote</span>
+            </div>
+          </a>
+
           <!-- CODEX:DATED-PROJECTS:START -->
           <a class="project featured" href="./20260727-uae-kbeauty-business-report/index.html">
             <div>
@@ -270,19 +274,6 @@
             </div>
           </a>
           <!-- CODEX:DATED-PROJECTS:END -->
-
-          <a class="project featured project--hero" href="./zerune-studio/index.html">
-            <div>
-              <strong>Zerune Studio</strong>
-              <time class="updated-date" datetime="2026-07-16">Updated 2026-07-16</time>
-              <p>콘셉트부터 Mureka 음악·이미지 프롬프트, 전체보기와 YouTube 복붙 입력까지 01–05 흐름으로 연결하는 제작 스튜디오.</p>
-            </div>
-            <div class="meta">
-              <span class="tag">Music</span>
-              <span class="tag">YouTube</span>
-              <span class="tag">Remote</span>
-            </div>
-          </a>
 
           <a class="project" href="./blog-automation/index.html">
             <div>
@@ -389,19 +380,6 @@
               <span class="tag blue">Pokemon</span>
               <span class="tag blue">Raid</span>
               <span class="tag blue">Type</span>
-            </div>
-          </a>
-
-          <a class="project" href="./minecraft/index.html">
-            <div>
-              <strong>Minecraft Bedrock 생존 공략집</strong>
-              <time class="updated-date" datetime="2026-07-10">Updated 2026-07-10</time>
-              <p>친구 야생 생존을 위한 진행 순서, 장비, 주민·네더·엔드 공략을 정리한 웹 가이드.</p>
-            </div>
-            <div class="meta">
-              <span class="tag blue">Minecraft</span>
-              <span class="tag blue">Guide</span>
-              <span class="tag">Bedrock</span>
             </div>
           </a>
 
