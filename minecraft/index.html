@@ -1,0 +1,2028 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Minecraft Bedrock 친구 야생 생존 공략집</title>
+  <!--
+    Future update checklist:
+    1. Open the official Release Changelogs page and confirm the newest stable Bedrock release.
+    2. Exclude Preview/Beta/Experimental/Java changelogs from TARGET_VERSION.
+    3. Confirm iPhone App Store current version, preferably with the Apple lookup API when the page cache lags.
+    4. Re-check Bedrock villager, iron golem, mob spawning, light, and recipe pages.
+    5. Re-test seed candidates in the current stable Bedrock worldgen baseline.
+    6. Refresh source count, verified date, images, and copy/search tests.
+  -->
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3efe2;
+      --paper: #fffaf0;
+      --paper-2: #eee3cc;
+      --ink: #20241e;
+      --muted: #5b6258;
+      --line: #cfc1a3;
+      --stone: #6d706a;
+      --moss: #355b41;
+      --moss-2: #54745b;
+      --clay: #b8613c;
+      --amber: #c9942e;
+      --water: #3d7180;
+      --danger: #9d3f33;
+      --shadow: 0 14px 34px rgba(53, 43, 25, 0.12);
+      --radius: 8px;
+      --touch: 44px;
+      --max: 1180px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171a16;
+        --paper: #20261f;
+        --paper-2: #293027;
+        --ink: #f1eadb;
+        --muted: #bbc4b7;
+        --line: #4b5148;
+        --stone: #aeb4aa;
+        --moss: #8ab08b;
+        --moss-2: #678f6c;
+        --clay: #db8058;
+        --amber: #e2b456;
+        --water: #6da7b5;
+        --danger: #f0917c;
+        --shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background:
+        linear-gradient(90deg, rgba(90, 96, 78, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(90, 96, 78, 0.04) 1px, transparent 1px),
+        var(--bg);
+      background-size: 26px 26px;
+      color: var(--ink);
+      font-family: var(--font);
+      line-height: 1.58;
+      letter-spacing: 0;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      overflow-wrap: anywhere;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--water);
+      text-underline-offset: 0.18em;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button,
+    .button-link {
+      min-height: var(--touch);
+      min-width: var(--touch);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0.62rem 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      touch-action: manipulation;
+    }
+
+    button:hover,
+    .button-link:hover {
+      border-color: var(--moss);
+      box-shadow: 0 0 0 3px rgba(53, 91, 65, 0.15);
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 3px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      z-index: 20;
+      transform: translateY(-140%);
+      background: var(--paper);
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    .shell {
+      width: min(calc(100% - 24px), var(--max));
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: clamp(1rem, 3vw, 2.5rem) 0 1.2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: center;
+    }
+
+    .hero-grid > *,
+    .card-grid > *,
+    .tip-grid > *,
+    .recipe-grid > *,
+    .seed-grid > *,
+    .stage-grid > *,
+    .source-grid > *,
+    .trouble-grid > * {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.7rem;
+      color: var(--moss);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 7vw, 4.6rem);
+      max-width: 11ch;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.55rem, 4vw, 2.4rem);
+    }
+
+    h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+    }
+
+    .lead {
+      max-width: 66ch;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.16rem);
+    }
+
+    .hero-media {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--paper-2);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media img,
+    .seed-media img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--paper-2);
+    }
+
+    figcaption {
+      padding: 0.65rem 0.8rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .badge-row,
+    .chip-row,
+    .button-row,
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      gap: 0.4rem;
+      padding: 0.28rem 0.62rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.88rem;
+      font-weight: 750;
+      max-width: 100%;
+      min-width: 0;
+      flex-wrap: wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .badge strong {
+      color: var(--moss);
+    }
+
+    .stats-grid,
+    .card-grid,
+    .tip-grid,
+    .recipe-grid,
+    .seed-grid,
+    .stage-grid,
+    .source-grid {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 1.25rem;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.72);
+      padding: 0.82rem;
+      min-width: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .stat {
+        background: rgba(32, 38, 31, 0.76);
+      }
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--ink);
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin-top: 1rem;
+      border-left: 4px solid var(--amber);
+      background: var(--paper);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      color: var(--muted);
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 0.7rem 0;
+      background: color-mix(in srgb, var(--bg) 91%, transparent);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-panel {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) auto;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .search-field {
+      position: relative;
+      min-width: 0;
+    }
+
+    .search-field input {
+      width: 100%;
+      min-height: var(--touch);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0.72rem 0.9rem;
+    }
+
+    .filter-list {
+      display: flex;
+      gap: 0.45rem;
+      overflow-x: auto;
+      padding-bottom: 0.15rem;
+      scrollbar-width: thin;
+    }
+
+    .filter-list button[aria-pressed="true"] {
+      background: var(--moss);
+      color: #fffaf0;
+      border-color: var(--moss);
+    }
+
+    .result-count {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    main {
+      padding: 1.25rem 0 3rem;
+    }
+
+    section {
+      scroll-margin-top: 98px;
+      padding: clamp(1.25rem, 3.5vw, 2.3rem) 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: end;
+      margin-bottom: 1rem;
+    }
+
+    .section-head p {
+      max-width: 70ch;
+      color: var(--muted);
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .tip-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .recipe-grid,
+    .seed-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .source-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .note-card,
+    .tip-card,
+    .recipe-card,
+    .seed-card,
+    .source-card,
+    .farm-card,
+    .trouble-card,
+    .excluded-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(53, 43, 25, 0.06);
+    }
+
+    .tip-card[data-hidden="true"],
+    .note-card[data-hidden="true"],
+    .recipe-card[data-hidden="true"],
+    .seed-card[data-hidden="true"],
+    .farm-card[data-hidden="true"],
+    .trouble-card[data-hidden="true"],
+    .excluded-card[data-hidden="true"] {
+      display: none;
+    }
+
+    .summary,
+    .small,
+    .source-line {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .source-line {
+      margin: 0.75rem 0 0;
+    }
+
+    .field-list {
+      display: grid;
+      gap: 0.45rem;
+      margin: 0;
+    }
+
+    .field-list div {
+      display: grid;
+      grid-template-columns: 7.2rem minmax(0, 1fr);
+      gap: 0.65rem;
+      align-items: start;
+    }
+
+    dt {
+      color: var(--moss);
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    dd {
+      margin: 0;
+      min-width: 0;
+      color: var(--ink);
+      font-size: 0.93rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      padding: 0;
+      margin: 0.65rem 0 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      padding: 0.15rem 0.45rem;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 0.65rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 1.5rem minmax(0, 1fr);
+      gap: 0.55rem;
+      align-items: start;
+    }
+
+    .check-list li::before {
+      content: "";
+      width: 0.95rem;
+      height: 0.95rem;
+      margin-top: 0.32rem;
+      border: 2px solid var(--moss);
+      border-radius: 3px;
+      background: linear-gradient(135deg, transparent 45%, var(--amber) 46% 55%, transparent 56%);
+    }
+
+    .craft-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.25rem;
+      width: min(100%, 240px);
+      margin: 0.75rem 0;
+    }
+
+    .craft-grid span {
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0.25rem;
+      background: var(--paper-2);
+      color: var(--ink);
+      font-size: clamp(0.62rem, 2.5vw, 0.78rem);
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .craft-grid .empty {
+      background: transparent;
+      color: transparent;
+    }
+
+    .recipe-meta,
+    .score-grid {
+      display: grid;
+      gap: 0.45rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 0.75rem;
+    }
+
+    .recipe-meta span,
+    .score-grid span {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0.35rem 0.45rem;
+      background: color-mix(in srgb, var(--paper-2) 74%, transparent);
+      font-size: 0.82rem;
+      color: var(--muted);
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .seed-value {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+      margin: 0.75rem 0;
+    }
+
+    .seed-value code {
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0.62rem;
+      background: var(--paper-2);
+      font-size: 0.95rem;
+    }
+
+    .icon-button {
+      width: var(--touch);
+      padding: 0;
+      font-weight: 900;
+    }
+
+    details {
+      margin-top: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--paper-2) 72%, transparent);
+      padding: 0.65rem 0.75rem;
+    }
+
+    summary {
+      cursor: pointer;
+      min-height: 2rem;
+      font-weight: 800;
+      color: var(--moss);
+    }
+
+    details > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .diagram {
+      display: grid;
+      gap: 0.25rem;
+      margin: 0.85rem 0;
+      max-width: 360px;
+    }
+
+    .diagram-row {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 0.25rem;
+    }
+
+    .cell {
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background: var(--paper-2);
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .wall { background: color-mix(in srgb, var(--stone) 28%, var(--paper)); }
+    .light { background: color-mix(in srgb, var(--amber) 36%, var(--paper)); }
+    .path { background: color-mix(in srgb, var(--water) 18%, var(--paper)); }
+    .trap { background: color-mix(in srgb, var(--clay) 28%, var(--paper)); }
+    .safe { background: color-mix(in srgb, var(--moss) 24%, var(--paper)); }
+
+    .farm-layout {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 0.8rem;
+    }
+
+    .farm-layout span {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--paper-2);
+      padding: 0.65rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+      min-width: 0;
+    }
+
+    .trouble-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.65rem;
+      font-size: 0.9rem;
+    }
+
+    .mini-table th,
+    .mini-table td {
+      border-top: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      padding: 0.55rem 0.25rem;
+    }
+
+    .mini-table th {
+      color: var(--moss);
+      width: 32%;
+    }
+
+    .copy-live {
+      min-height: 1.5rem;
+      margin: 0.5rem 0 0;
+      color: var(--moss);
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .quick-links {
+      margin-top: 1rem;
+    }
+
+    .quick-links a {
+      min-height: 2.45rem;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      padding: 0.35rem 0.7rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-bottom: 2rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .stats-grid,
+      .card-grid,
+      .tip-grid,
+      .recipe-grid,
+      .seed-grid,
+      .source-grid,
+      .trouble-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        width: min(calc(100% - 18px), var(--max));
+      }
+
+      .toolbar {
+        position: static;
+      }
+
+      .field-list div,
+      .recipe-meta,
+      .score-grid,
+      .farm-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .seed-value {
+        align-items: stretch;
+      }
+
+      .diagram-row {
+        gap: 0.18rem;
+      }
+
+      .cell {
+        font-size: 0.62rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .toolbar,
+      .skip-link,
+      button {
+        display: none !important;
+      }
+
+      .note-card,
+      .tip-card,
+      .recipe-card,
+      .seed-card,
+      .source-card,
+      .farm-card,
+      .trouble-card,
+      .excluded-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      details {
+        border-color: #888;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#content" class="skip-link">본문으로 건너뛰기</a>
+
+  <header class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">iPhone Bedrock Edition · Hard · 친구 2-6명 · 치트 없음</p>
+        <h1>Minecraft Bedrock 친구 야생 생존 공략집</h1>
+        <p class="lead">중급 생존팀이 “오늘 밤 바로 쓸 수 있는” 기준으로 정리한 현장 노트입니다. 명령어, 크리에이티브, 애드온, 모드, 복제, 버그성 꼼수는 제외했고, 스포일러성 구조물과 좌표성 정보는 접어두었습니다.</p>
+        <div class="badge-row" aria-label="최신 버전 확인 배지">
+          <span class="badge"><strong>TARGET_VERSION</strong> Bedrock 26.33</span>
+          <span class="badge"><strong>FEATURE_BASELINE</strong> 26.30 Chaos Cubed</span>
+          <span class="badge"><strong>WORLDGEN_BASELINE</strong> 26.30</span>
+          <span class="badge"><strong>VERIFIED_DATE</strong> 2026-07-10</span>
+        </div>
+        <p class="notice">공식 26.33 핫픽스는 2026년 7월 9일 게시되었고 플랫폼 승인 순서대로 배포된다고 안내되었습니다. Apple lookup 기준 iPhone App Store 현재 버전도 26.33으로 확인했습니다. 26.33은 바닐라 생존 월드 생성 변경이 아닌 핫픽스라, 생존 콘텐츠 기준선은 26.30 Chaos Cubed로 둡니다.</p>
+        <div class="stats-grid" aria-label="문서 메타데이터">
+          <div class="stat"><span>출처 수</span><strong>34</strong></div>
+          <div class="stat"><span>팁 카드</span><strong>30</strong></div>
+          <div class="stat"><span>조합 카드</span><strong>14</strong></div>
+          <div class="stat"><span>시드 후보</span><strong>8</strong></div>
+        </div>
+        <nav class="quick-links" aria-label="빠른 이동">
+          <a href="#checklist">체크리스트</a>
+          <a href="#tips">생존 팁</a>
+          <a href="#recipes">조합법</a>
+          <a href="#seeds">시드</a>
+          <a href="#defense">기지 방어</a>
+          <a href="#farms">농장</a>
+          <a href="#sources">출처</a>
+        </nav>
+      </div>
+      <figure class="hero-media">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/db/86/77db860c-9b7e-f5ee-c849-f98640e6f9c9/e8534913-e159-4489-a2b2-ff14785e2ca9_LushCaves_2208x1242_GB.png/406x228bb.png" alt="Minecraft Bedrock의 동굴 탐험 참고 이미지" loading="eager" decoding="async">
+        <figcaption>공식 App Store 스크린샷 기반 참고 이미지입니다. 특정 시드의 실제 화면은 아닙니다.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="shell">
+      <div class="search-panel" role="search">
+        <label class="search-field">
+          <span class="sr-only">공략 검색</span>
+          <input id="guideSearch" type="search" autocomplete="off" placeholder="검색: 철공장, 빌리저, citizen farm, 아이언 팜, 씨드">
+        </label>
+        <div class="button-row">
+          <button type="button" id="spoilerToggle" aria-pressed="false">스포일러 표시</button>
+          <button type="button" id="clearSearch">초기화</button>
+        </div>
+      </div>
+      <div class="filter-list" aria-label="빠른 필터">
+        <button type="button" data-filter="all" aria-pressed="true">전체</button>
+        <button type="button" data-filter="hard" aria-pressed="false">Hard</button>
+        <button type="button" data-filter="mobile" aria-pressed="false">iPhone</button>
+        <button type="button" data-filter="farm" aria-pressed="false">농장</button>
+        <button type="button" data-filter="villager" aria-pressed="false">주민</button>
+        <button type="button" data-filter="recipe" aria-pressed="false">조합</button>
+        <button type="button" data-filter="seed" aria-pressed="false">시드</button>
+        <button type="button" data-filter="defense" aria-pressed="false">방어</button>
+      </div>
+      <p class="result-count" id="resultStatus" aria-live="polite">검색 가능한 카드 0개 표시 중</p>
+    </div>
+  </div>
+
+  <main id="content" class="shell">
+    <section id="checklist">
+      <div class="section-head">
+        <div>
+          <h2>핵심 체크리스트</h2>
+          <p>Hard 생존은 “잘 싸우는 것”보다 “죽을 상황을 줄이는 것”이 훨씬 강합니다. 아래만 맞춰도 친구 서버의 첫 주가 훨씬 안정됩니다.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <article class="note-card searchable" data-tags="hard mobile defense" data-search="core checklist hard iphone 방어 하드모드">
+          <h3>시작 전 세계 설정</h3>
+          <ul class="check-list">
+            <li>Survival, Hard, 치트 끔, 실험 기능 끔, 기본 월드 생성.</li>
+            <li>좌표 표시를 켜면 탐험팀 위치 공유가 쉬워집니다. 명령어가 아닙니다.</li>
+            <li>Realms나 멀티 서버에서는 백업 주기를 정합니다. 업데이트 전 백업은 습관입니다.</li>
+          </ul>
+        </article>
+        <article class="note-card searchable" data-tags="hard defense villager" data-search="first night village zombie door 주민 보호">
+          <h3>첫 3일 생존</h3>
+          <ul class="check-list">
+            <li>각자 침대와 식량 20개 이상, 방패, 물 양동이, 보트, 64블록을 확보합니다.</li>
+            <li>마을을 발견하면 주민을 집 안에 가두기보다, 문 앞 2칸 진입로와 밝은 지붕부터 만듭니다.</li>
+            <li>잠을 미루면 팬텀이 생기므로 탐험조도 주기적으로 침대에 들어갑니다.</li>
+          </ul>
+        </article>
+        <article class="note-card searchable" data-tags="farm villager mobile" data-search="iron farm villager breeder crop farm simulation distance 주민 농장 시뮬레이션">
+          <h3>농장 운영 원칙</h3>
+          <ul class="check-list">
+            <li>철공장, 주민 증식장, 거래소, 작물 농장은 서로 떨어뜨려 POI 꼬임을 줄입니다.</li>
+            <li>Bedrock 농장은 플레이어 시뮬레이션 거리 안에서만 안정적으로 돕니다.</li>
+            <li>모바일에서는 과도한 호퍼와 주민 밀집이 프레임 저하를 만들 수 있어 모듈별로 끊습니다.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div class="section-head">
+        <div>
+          <h2>중급 생존 팁 30</h2>
+          <p>각 팁은 Hard, iPhone 터치 조작, Bedrock 차이를 기준으로 썼습니다. “재미 영향”은 친구들과 했을 때 분위기를 얼마나 살리는지에 대한 체감값입니다.</p>
+        </div>
+      </div>
+      <div class="tip-grid">
+        <article class="tip-card searchable" data-tags="hard mobile defense" data-search="emergency kit 방패 물양동이 보트 블록">
+          <h3>01. 핫바 4종 보험을 고정한다</h3>
+          <p class="summary">방패, 물 양동이, 보트, 64블록은 장비가 아니라 보험입니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>Hard에서는 낙하, 좀비 압박, 스켈레톤 시야, 용암 실수가 한 번에 사망으로 이어집니다.</dd></div>
+            <div><dt>적용</dt><dd>핫바 위치를 팀 공통으로 정하고, 전투 전 빈손 슬롯을 만들지 않습니다.</dd></div>
+            <div><dt>시기</dt><dd>철 1세트 전부터 엔드 탐험까지.</dd></div>
+            <div><dt>위험</dt><dd>물 양동이는 네더에서 쓸 수 없으므로 네더용 블록과 보트 경로를 따로 둡니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>터치 조작은 급전환이 느리니 슬롯 순서를 몸에 익히는 쪽이 더 안정적입니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s12">S12</a>, <a href="#s13">S13</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="mobile" data-search="coordinates map route iPhone 좌표 길찾기">
+          <h3>02. 좌표 스크린샷을 문화로 만든다</h3>
+          <p class="summary">“여기 어디야?”가 반복되면 탐험 속도가 반으로 줄어듭니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>친구 2-6명은 흩어지는 순간 구조 비용이 큽니다.</dd></div>
+            <div><dt>적용</dt><dd>기지, 포털, 마을, 광산 입구, 사망 위치는 채팅이나 공유 앨범에 남깁니다.</dd></div>
+            <div><dt>시기</dt><dd>월드 첫날부터.</dd></div>
+            <div><dt>위험</dt><dd>좌표 공유가 과하면 탐험의 놀라움이 줄 수 있으니 구조물 좌표는 접어둡니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>좌표 표시는 치트가 아니며 iPhone에서도 월드 설정에서 켤 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s03">S03</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="light level 0 spawnproof torch slab 조명 스폰방지">
+          <h3>03. 횃불보다 “스폰 바닥”을 먼저 본다</h3>
+          <p class="summary">현행 Bedrock 오버월드의 일반 적대몹은 대체로 조도 0 조건을 봅니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>지붕 위, 계단 옆, 울타리 안쪽 한 칸이 실제 사고 지점입니다.</dd></div>
+            <div><dt>적용</dt><dd>기지 안은 밝히고, 지붕과 벽 위는 하프블록, 버튼, 카펫류 등 스폰 방지 표면으로 정리합니다.</dd></div>
+            <div><dt>시기</dt><dd>집 지붕이 생기는 순간.</dd></div>
+            <div><dt>위험</dt><dd>철 골렘 스폰 표면은 별도 규칙이 있으므로 철공장 주변은 일반 스폰 방지 감각으로만 판단하지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>네더 몹에는 예외가 있으니 오버월드 방어 원칙으로 한정합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s12">S12</a>, <a href="#s13">S13</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense villager" data-search="zombie villager hard conversion 주민 좀비 감염">
+          <h3>04. Hard의 주민 감염 100%를 이용하되 의존하지 않는다</h3>
+          <p class="summary">Hard에서는 좀비가 주민을 죽일 때 좀비 주민 전환 확률이 100%입니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>실수로 주민이 맞아도 복구 가능성이 있지만, 치료 준비가 없으면 그냥 사고입니다.</dd></div>
+            <div><dt>적용</dt><dd>거래소는 2중문, 밝은 천장, 비상 격리칸을 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>마을 발견 직후와 거래소 건설 전.</dd></div>
+            <div><dt>위험</dt><dd>치료 할인만 노리고 일부러 감염시키는 운영은 초반 팀 분위기를 망칠 수 있습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>주민과 좀비의 추적, 문, 침대 연결은 Java식 설계와 다르게 꼬일 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s10">S10</a>, <a href="#s14">S14</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="door zombie wooden copper door 하드 문 좀비">
+          <h3>05. Hard 기지 정문은 문 하나로 끝내지 않는다</h3>
+          <p class="summary">나무문과 구리문은 좀비 파괴 리스크가 있으므로 문 앞 구조가 중요합니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>문 뒤에 바로 침대나 주민이 있으면 밤 사이에 방어선이 무너집니다.</dd></div>
+            <div><dt>적용</dt><dd>문 앞 2칸을 꺾은 통로로 만들고, 안쪽에는 울타리문이나 트랩도어 보조선을 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>첫 영구 기지부터.</dd></div>
+            <div><dt>위험</dt><dd>철문만 쓰면 친구들이 갇히기 쉬우므로 버튼 위치를 양쪽에서 보이게 둡니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>문이 차지한 공간도 스폰 안전 공간으로 착각하지 않습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s14">S14</a>, <a href="#s15">S15</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="spider wall roof 거미 벽 지붕">
+          <h3>06. 거미는 벽보다 처마로 막는다</h3>
+          <p class="summary">거미는 벽을 탈 수 있으므로 수직벽만 믿으면 안 됩니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>기지 외벽은 높아도 지붕 가장자리가 비어 있으면 침투 루트가 됩니다.</dd></div>
+            <div><dt>적용</dt><dd>벽 위 한 칸 바깥으로 하프블록 처마를 두거나 지붕 위를 스폰 방지합니다.</dd></div>
+            <div><dt>시기</dt><dd>둘레벽을 세우는 시점.</dd></div>
+            <div><dt>위험</dt><dd>처마를 너무 낮게 만들면 플레이어 동선과 시야를 가립니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock 거미는 마그마 블록 등 일부 표면에서 등반 차이가 있으나 기본 원칙은 처마입니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s16">S16</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="skeleton line of sight bow corner 스켈레톤 시야">
+          <h3>07. 스켈레톤은 거리보다 시야를 끊는다</h3>
+          <p class="summary">활몹은 탁 트인 정면전보다 모서리 싸움에서 훨씬 안전합니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>Hard 초반 방어구가 약할 때 스켈레톤 연속 사격은 사망 원인 1순위입니다.</dd></div>
+            <div><dt>적용</dt><dd>광산과 기지 입구에 1칸 기둥, L자 벽, 낮은 엄폐를 의도적으로 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>동굴 탐험 전.</dd></div>
+            <div><dt>위험</dt><dd>기둥 뒤에 크리퍼가 붙는 상황을 막으려면 후방 조명도 같이 봅니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>26.30에서 난이도별 스켈레톤류 공격 간격 조정이 포함되어 최신 기준으로 봅니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s05">S05</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense mobile" data-search="phantom sleep cats ocelot 팬텀 수면 고양이">
+          <h3>08. 팬텀 타이머는 팀 단위로 관리한다</h3>
+          <p class="summary">침대에 들어가지 않은 시간이 길어지면 팬텀이 밤 탐험을 끊습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>팬텀은 iPhone 시야 회전이 느린 플레이어를 특히 괴롭힙니다.</dd></div>
+            <div><dt>적용</dt><dd>원정 전 각자 침대에 한 번 들어가고, 옥상 작업장에는 고양이를 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>3일 이상 잠을 거른 뒤부터 상시.</dd></div>
+            <div><dt>위험</dt><dd>침대가 스폰 지점을 바꾸므로 위험 지역 침대는 회수 여부를 정합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock 팬텀은 고양이와 오셀롯을 피하며, Hard에서는 무리 수가 늘 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s17">S17</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="mobile hard" data-search="role split multiplayer friends 역할 분담">
+          <h3>09. 팀 역할은 직업이 아니라 “오늘의 책임”으로 둔다</h3>
+          <p class="summary">광부, 정찰, 건축, 농장, 보급을 돌아가며 맡으면 지루함이 줄어듭니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>2-6명 서버는 한 명이 전부 해버리면 나머지가 구경꾼이 됩니다.</dd></div>
+            <div><dt>적용</dt><dd>30분 단위로 역할을 바꾸고, 보급 담당은 침대와 음식 재고만 봅니다.</dd></div>
+            <div><dt>시기</dt><dd>서버 첫날부터 엔더 드래곤 전까지.</dd></div>
+            <div><dt>위험</dt><dd>역할을 너무 엄격히 나누면 자유 탐험 맛이 줄어듭니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>iPhone 플레이어는 정밀 건축보다 정찰, 수확, 보급이 더 편할 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s03">S03</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="farm villager" data-search="poi bed job site villager 주민 작업대 침대">
+          <h3>10. 주민 작업대와 침대는 이름표처럼 관리한다</h3>
+          <p class="summary">주민 농장 실패의 대부분은 “누가 어느 침대와 작업대를 잡았는지”입니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>철공장, 브리더, 거래소가 가까우면 마을 중심과 POI가 흔들립니다.</dd></div>
+            <div><dt>적용</dt><dd>작업대는 한 번에 하나씩 놓고, 연결 확인 후 다음 주민으로 넘어갑니다.</dd></div>
+            <div><dt>시기</dt><dd>첫 사서 뽑기 전.</dd></div>
+            <div><dt>위험</dt><dd>벽 너머 작업대도 잡을 수 있어 “안 보이니 괜찮다”가 통하지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock 주민은 16블록 반경과 높이 차 조건에서 작업대를 찾는 식으로 동작할 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s10">S10</a>, <a href="#s11">S11</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="farm villager" data-search="mob griefing villager food farmer crop 주민 음식 작물">
+          <h3>11. 주민 작물 농장은 mobGriefing에 묶인다</h3>
+          <p class="summary">치트 없이 기본 규칙이면 주민이 작물을 줍고 공유하지만, 설정이 바뀌면 멈춥니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>농부 주민이 수확, 재식재, 음식 공유를 해야 브리더와 작물 농장이 돕니다.</dd></div>
+            <div><dt>적용</dt><dd>당근, 감자, 비트, 밀 중 하나로 통일하고, 초반에는 당근이나 감자가 편합니다.</dd></div>
+            <div><dt>시기</dt><dd>브리더 제작 전.</dd></div>
+            <div><dt>위험</dt><dd>아이템을 너무 많이 쌓으면 모바일에서 렉과 분실이 생깁니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>농부는 씨앗과 밀까지 다루지만, 일반 주민과 음식 보유 기준이 다릅니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s10">S10</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="farm" data-search="simulation distance farms iron farm crop 시뮬레이션 거리">
+          <h3>12. 농장이 안 돌면 먼저 시뮬레이션 거리를 의심한다</h3>
+          <p class="summary">멀리 떨어진 농장은 예쁘게 지어도 멈춘 것처럼 보일 수 있습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>Bedrock은 플레이어 주변 시뮬레이션 거리 안에서 엔티티와 농장 처리가 안정됩니다.</dd></div>
+            <div><dt>적용</dt><dd>철공장과 작물 농장은 AFK 대기점에서 실제로 보이는 거리보다 시뮬레이션 거리를 기준으로 배치합니다.</dd></div>
+            <div><dt>시기</dt><dd>자동화 시작 전.</dd></div>
+            <div><dt>위험</dt><dd>마을 중심을 억지로 한곳에 몰면 다른 주민 시스템과 충돌합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>철 골렘 스폰 조건에도 마을이 플레이어 시뮬레이션 거리 안에 있어야 한다는 기준이 중요합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s08">S08</a>, <a href="#s09">S09</a>, <a href="#s12">S12</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense mobile" data-search="nether portal safety 네더 포털 안전">
+          <h3>13. 네더 포털은 상자보다 먼저 벽을 세운다</h3>
+          <p class="summary">포털 앞이 뚫려 있으면 로딩 직후 공격을 맞습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>친구 서버는 한 명이 포털 앞에서 죽으면 구조대도 같은 곳에서 죽기 쉽습니다.</dd></div>
+            <div><dt>적용</dt><dd>양쪽 포털을 5x5 이상 방으로 감싸고, 바닥은 낙하 없는 재료와 조명으로 정리합니다.</dd></div>
+            <div><dt>시기</dt><dd>첫 네더 입장 직후.</dd></div>
+            <div><dt>위험</dt><dd>포털 기반 엔티티 이동 꼼수나 청크 언로드 설계는 이 문서에서 제외합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>모바일은 로딩 후 조작 복귀가 늦을 수 있으므로 안전방이 더 중요합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s12">S12</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe mobile" data-search="scaffolding 비계 건축 낙하">
+          <h3>14. 높은 건축은 비계부터 만든다</h3>
+          <p class="summary">비계는 임시 구조물을 빠르게 세우고 철거하는 데 특화되어 있습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>모바일에서 점프 배치 실수는 낙하 사고와 블록 낭비를 부릅니다.</dd></div>
+            <div><dt>적용</dt><dd>높은 지붕, 외벽, 농장 수직층 작업은 흙 기둥 대신 비계를 씁니다.</dd></div>
+            <div><dt>시기</dt><dd>대나무와 실을 얻은 뒤.</dd></div>
+            <div><dt>위험</dt><dd>Bedrock에서는 비계 내부 스폰 조건에 예외가 있으니 방어 바닥으로 믿지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>비계는 6블록 바깥까지 지지되며, Bedrock의 상호작용 박스 차이가 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s30">S30</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe farm" data-search="hopper lag mobile 호퍼 렉">
+          <h3>15. 호퍼 라인은 짧고 확인 가능하게 만든다</h3>
+          <p class="summary">호퍼는 편하지만, 모바일 멀티에서 과하면 체감 렉이 빨리 옵니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>철공장, 작물 농장, 자동 화로가 늘수록 아이템 흐름 디버깅이 어려워집니다.</dd></div>
+            <div><dt>적용</dt><dd>상자 앞 1-2줄만 쓰고, 중간 점검 상자를 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>자동 수거를 처음 붙일 때.</dd></div>
+            <div><dt>위험</dt><dd>호퍼 잠금 레드스톤을 모르면 아이템이 막힌 것처럼 보입니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>호퍼는 레드스톤 신호로 잠기며, 퇴비통과 위아래 상호작용할 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s20">S20</a>, <a href="#s25">S25</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe farm" data-search="observer redstone 관측기 레드스톤">
+          <h3>16. 관측기는 “변화 감지기”로 기억한다</h3>
+          <p class="summary">관측기는 복잡한 회로보다 수확, 문, 물 흐름 타이밍에 먼저 씁니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>중급 생존의 자동화는 거창한 회로보다 작물 성장과 아이템 흐름 감지에서 시작합니다.</dd></div>
+            <div><dt>적용</dt><dd>사탕수수, 대나무, 호박, 문 열림 감지에 1개씩 테스트합니다.</dd></div>
+            <div><dt>시기</dt><dd>석영을 얻은 뒤.</dd></div>
+            <div><dt>위험</dt><dd>방향을 반대로 놓으면 신호가 엉뚱한 곳으로 나갑니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock 관측기 펄스 길이와 지연은 Java 설명과 다를 수 있어 현장 테스트가 안전합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s18">S18</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe defense" data-search="composter bonemeal farmer 퇴비통 뼛가루 농부">
+          <h3>17. 퇴비통은 농부 작업대이자 뼛가루 은행이다</h3>
+          <p class="summary">음식 쓰레기 처리, 농부 고정, 자동 뼛가루 수거를 한 번에 해결합니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>초반 뼛가루는 나무, 작물, 염료, 꽃 재배 속도를 올립니다.</dd></div>
+            <div><dt>적용</dt><dd>농장 옆에 퇴비통을 두고 아래 호퍼로 뼛가루만 빼는 구조를 씁니다.</dd></div>
+            <div><dt>시기</dt><dd>마을 농장 확보 직후.</dd></div>
+            <div><dt>위험</dt><dd>농부가 엉뚱한 퇴비통을 잡으면 농장 설계가 꼬입니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock 퇴비통은 물에 잠길 수 있고, 농부 작업 소리와 동작이 다르게 보일 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s25">S25</a>, <a href="#s10">S10</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe mobile" data-search="stonecutter building cost 석재 절단기 계단 반블록">
+          <h3>18. 석재 절단기는 장식 블록 비용을 줄인다</h3>
+          <p class="summary">계단과 벽, 새 26.30 돌 계열 블록을 만들 때 낭비가 줄어듭니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>친구 서버 기지는 기능만큼 보기 좋은 동선이 중요합니다.</dd></div>
+            <div><dt>적용</dt><dd>성벽, 길, 지붕, 지하실 장식은 제작대보다 석재 절단기에서 먼저 확인합니다.</dd></div>
+            <div><dt>시기</dt><dd>철 1개와 돌 3개를 여유 있게 쓸 수 있을 때.</dd></div>
+            <div><dt>위험</dt><dd>Bedrock은 사용 가능한 석재 변형 범위가 Java와 일부 다를 수 있습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>26.30 기준 유황, 진사 계열 절단 조합도 생존 건축 후보가 됩니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s05">S05</a>, <a href="#s26">S26</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="lightning fire spread raid village 번개 화재 레이드">
+          <h3>19. 마을 옆 기지는 불과 레이드를 분리한다</h3>
+          <p class="summary">목조 지붕, 주민, 레이드 동선이 겹치면 평화로운 마을이 전장이 됩니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>주민 손실은 철공장, 거래, 브리더까지 연쇄적으로 무너뜨립니다.</dd></div>
+            <div><dt>적용</dt><dd>거래소와 기지는 마을 중심에서 떨어뜨리고, 레이드가 나면 전용 출입구에서 싸웁니다.</dd></div>
+            <div><dt>시기</dt><dd>첫 약탈자 전초기지 발견 전.</dd></div>
+            <div><dt>위험</dt><dd>불 번짐을 켜둔 월드에서는 목조 지붕 위 번개와 용암 장식을 조심합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>이 문서는 레이드 농장이나 습격 유도 꼼수는 다루지 않습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s10">S10</a>, <a href="#s12">S12</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard mobile" data-search="inventory ender chest valuables 엔더상자 귀중품">
+          <h3>20. 엔더 상자는 “죽어도 안 잃을 물건” 전용이다</h3>
+          <p class="summary">친구 서버의 갈등은 보통 다이아보다 분실 책임에서 옵니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>엔더 상자는 플레이어별 저장소라 공동 상자보다 안전합니다.</dd></div>
+            <div><dt>적용</dt><dd>지도, 여분 날개, 수선 도구, 네더 귀환 키트는 개인 엔더 상자에 둡니다.</dd></div>
+            <div><dt>시기</dt><dd>블레이즈와 엔더 진주 확보 후.</dd></div>
+            <div><dt>위험</dt><dd>실크 터치가 없으면 부술 때 엔더 상자 자체가 아니라 흑요석만 회수됩니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>엔더 상자는 호퍼, 드로퍼, 비교기와 상호작용하지 않습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s29">S29</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard mobile" data-search="food saturation baked potato bread steak 음식">
+          <h3>21. 음식은 종류보다 공급 루틴이 먼저다</h3>
+          <p class="summary">좋은 음식 한 종류보다 “매번 출발 전에 채우는 상자”가 강합니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>Hard에서는 회복 지연이 전투와 낙하 사고를 키웁니다.</dd></div>
+            <div><dt>적용</dt><dd>기지 출입구에 원정 식량 상자를 두고 한 사람당 32개 기준으로 보급합니다.</dd></div>
+            <div><dt>시기</dt><dd>농장 1개가 안정된 뒤.</dd></div>
+            <div><dt>위험</dt><dd>주민 브리더용 음식과 플레이어 식량을 같은 상자에 두면 재고가 흐려집니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>주민용 음식 기준은 플레이어 식량 판단과 다르니 따로 관리합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s10">S10</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="baby zombie gap trapdoor 아기 좀비 틈">
+          <h3>22. 한 칸 틈은 아기 좀비 기준으로 본다</h3>
+          <p class="summary">“사람은 못 지나가니까 안전”은 Hard 밤에 통하지 않습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>아기 좀비는 빠르고 작아서 문틈, 반블록 동선에서 사고를 냅니다.</dd></div>
+            <div><dt>적용</dt><dd>동물 우리와 주민 대기실 앞은 하프블록 틈 대신 울타리문 또는 완전 블록으로 막습니다.</dd></div>
+            <div><dt>시기</dt><dd>마을 주변 방어 전.</dd></div>
+            <div><dt>위험</dt><dd>탈출구를 너무 복잡하게 만들면 플레이어도 빠져나오기 어렵습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock의 일부 아기 좀비는 자연 생성 시 탈것을 타는 경우가 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s14">S14</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="seed hard" data-search="sulfur cave chaos cubed 유황 동굴 씨드 시드">
+          <h3>23. 26.30 새 지형은 장비를 갖추고 들어간다</h3>
+          <p class="summary">Sulfur Cave는 볼거리가 많지만 초반 무장 없이 깊게 들어가면 귀환이 어렵습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>새 블록, 유황 큐브, 지하 수로가 탐험 욕구를 자극합니다.</dd></div>
+            <div><dt>적용</dt><dd>물, 블록, 방패, 예비 곡괭이, 귀환 표식 없이 깊은 동굴 하강을 금합니다.</dd></div>
+            <div><dt>시기</dt><dd>철 장비와 식량 루틴 이후.</dd></div>
+            <div><dt>위험</dt><dd>새 기능에 정신 팔려 팀원이 흩어지는 것이 가장 위험합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Chaos Cubed 콘텐츠는 26.30 기준 생존 콘텐츠로 확인됩니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s05">S05</a>, <a href="#s06">S06</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="mobile" data-search="touch controls split stack iphone 터치 조작">
+          <h3>24. iPhone에서는 전투 전 인벤토리를 줄인다</h3>
+          <p class="summary">화면이 작을수록 선택지가 많은 인벤토리는 실수를 부릅니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>급할 때 잘못 든 아이템 하나가 낙하와 전투 손실로 이어집니다.</dd></div>
+            <div><dt>적용</dt><dd>원정 전 건축 재료, 광물, 잡템을 내려놓고 전투 핫바를 고정합니다.</dd></div>
+            <div><dt>시기</dt><dd>동굴, 네더, 보스전 전.</dd></div>
+            <div><dt>위험</dt><dd>비상 블록과 음식까지 내려놓지 않도록 체크리스트를 만듭니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>App Store는 iPhone/iPad 지원 Bedrock Edition으로 안내합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s03">S03</a>, <a href="#s04">S04</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard defense" data-search="emergency path escape tunnel 비상통로">
+          <h3>25. 모든 기지에는 보이지 않는 비상통로를 둔다</h3>
+          <p class="summary">정문이 막혔을 때 나갈 길이 없으면 기지는 감옥이 됩니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>크리퍼 구멍, 습격, 좀비 포위, 네더 포털 사고 모두 우회로가 답입니다.</dd></div>
+            <div><dt>적용</dt><dd>기지 안쪽에서만 열 수 있는 2x2 지하 통로를 농장 뒤나 물가로 연결합니다.</dd></div>
+            <div><dt>시기</dt><dd>영구 기지 외벽 전.</dd></div>
+            <div><dt>위험</dt><dd>통로 내부 조명과 스폰 방지가 빠지면 더 위험한 길이 됩니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>모바일 조작 실수 대비로 계단 폭은 2칸 이상이 편합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 중간</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s12">S12</a>, <a href="#s13">S13</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe farm" data-search="blast furnace smoker furnace 용광로 화로">
+          <h3>26. 광물 처리와 음식 처리를 분리한다</h3>
+          <p class="summary">용광로는 광물과 금속 장비, 일반 화로는 범용 처리로 나눕니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>친구 서버는 누가 어떤 연료를 어디에 넣었는지 금방 흐려집니다.</dd></div>
+            <div><dt>적용</dt><dd>광물 상자, 연료 상자, 완성품 상자를 일직선으로 놓고 표지판을 붙입니다.</dd></div>
+            <div><dt>시기</dt><dd>철과 구리가 쌓이기 시작할 때.</dd></div>
+            <div><dt>위험</dt><dd>용광로는 모든 아이템을 굽지 못하므로 음식 라인을 섞지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock에서는 용광로가 피스톤에 밀릴 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>중간 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s27">S27</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard seed" data-search="trial chamber ancient city spoiler 탐험 스포일러">
+          <h3>27. 구조물 공략은 팀 동의 뒤에 연다</h3>
+          <p class="summary">중급자 서버에서는 효율보다 발견의 맛이 오래 갑니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>한 명이 모든 좌표와 보상을 말해버리면 탐험 동기가 줄어듭니다.</dd></div>
+            <div><dt>적용</dt><dd>고대 도시, 시련의 회랑, 저택, 엔드 도시는 스포일러 담당만 정보를 엽니다.</dd></div>
+            <div><dt>시기</dt><dd>다이아 장비 이후.</dd></div>
+            <div><dt>위험</dt><dd>준비 없이 들어가면 장비 손실이 큽니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>이 문서의 스포일러 버튼은 details를 열 뿐 모달을 쓰지 않습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 중간</dd></div>
+          </dl>
+          <details data-spoiler>
+            <summary>스포일러 준비 노트</summary>
+            <p>고대 도시는 양털, 침묵 이동, 귀환 표식, 빈 인벤토리가 핵심입니다. 엔드 도시는 엔더 진주, 낙하 완화 장비, 블록, 물 양동이, 예비 음식이 필요합니다.</p>
+          </details>
+          <p class="source-line">출처 <a href="#s12">S12</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="farm villager" data-search="iron farm golem bed 20 10 철공장 골렘">
+          <h3>28. 철공장은 “20침대 10주민”부터 의심한다</h3>
+          <p class="summary">Bedrock 철공장은 Java식 공포 기반 구조가 아닙니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>잘못된 Java 영상대로 만들면 주민은 있는데 골렘이 나오지 않습니다.</dd></div>
+            <div><dt>적용</dt><dd>20침대, 10주민, 침대 연결, 작업대 근무, 스폰 플랫폼을 순서대로 확인합니다.</dd></div>
+            <div><dt>시기</dt><dd>첫 자동 철 확보 전.</dd></div>
+            <div><dt>위험</dt><dd>벨, 침대, 작업대 추가가 마을 중심을 바꾸면 스폰 위치가 이동합니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>골렘 스폰 범위는 마을 중심 기준 17x13x17로 다룹니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s08">S08</a>, <a href="#s09">S09</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="recipe hard" data-search="firework elytra rocket 폭죽 로켓 겉날개">
+          <h3>29. 폭죽 로켓은 별 없는 버전을 기본으로 만든다</h3>
+          <p class="summary">겉날개 부스트용 폭죽에 폭죽 별을 넣으면 플레이어가 피해를 입을 수 있습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>후반 이동 속도는 서버의 탐험 반경을 확 넓힙니다.</dd></div>
+            <div><dt>적용</dt><dd>종이 1개와 화약 1-3개로 만든 폭죽을 이동용으로 따로 보관합니다.</dd></div>
+            <div><dt>시기</dt><dd>겉날개 획득 후.</dd></div>
+            <div><dt>위험</dt><dd>전투용 폭죽과 이동용 폭죽을 같은 상자에 두지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>Bedrock에서는 석궁 폭죽 충돌 동작이 Java와 다르게 보일 수 있습니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>높음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s28">S28</a></p>
+        </article>
+
+        <article class="tip-card searchable" data-tags="hard mobile seed" data-search="update backup version 26.33 월드 백업">
+          <h3>30. 업데이트 전에는 “새 월드 테스트”를 먼저 한다</h3>
+          <p class="summary">26.33 같은 핫픽스도 플랫폼별 배포 타이밍이 다를 수 있습니다.</p>
+          <dl class="field-list">
+            <div><dt>왜 유용한가</dt><dd>친구 중 한 명만 버전이 다르면 접속 문제가 생기거나 기능 기준이 어긋납니다.</dd></div>
+            <div><dt>적용</dt><dd>접속 전 모두 App Store 업데이트를 확인하고, 기존 월드는 백업 뒤 엽니다.</dd></div>
+            <div><dt>시기</dt><dd>공식 릴리스 다음날과 서버 재개 전.</dd></div>
+            <div><dt>위험</dt><dd>Preview/Beta 자료를 안정 버전 공략으로 섞지 않습니다.</dd></div>
+            <div><dt>Bedrock 노트</dt><dd>공식 26.33 게시글은 플랫폼 승인에 따라 순차 배포될 수 있다고 안내합니다.</dd></div>
+            <div><dt>재미/신뢰</dt><dd>낮음 / 높음</dd></div>
+          </dl>
+          <p class="source-line">출처 <a href="#s01">S01</a>, <a href="#s02">S02</a>, <a href="#s04">S04</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="recipes">
+      <div class="section-head">
+        <div>
+          <h2>자주 까먹는 조합법 14</h2>
+          <p>모든 조합은 현행 Bedrock 생존에서 쓰기 쉬운 것 위주입니다. 빈 칸은 실제 제작대 빈 칸입니다.</p>
+        </div>
+      </div>
+      <div class="recipe-grid">
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="observer 관측기 quartz redstone">
+          <h3>관측기</h3>
+          <div class="craft-grid" aria-label="관측기 3x3 조합">
+            <span>조약돌</span><span>조약돌</span><span>조약돌</span>
+            <span>레드스톤</span><span>레드스톤</span><span>석영</span>
+            <span>조약돌</span><span>조약돌</span><span>조약돌</span>
+          </div>
+          <p>변화 감지용 자동화의 시작점입니다. 방향을 반대로 놓는 실수가 가장 흔합니다.</p>
+          <div class="recipe-meta"><span>재료: 조약돌 6, 레드스톤 2, 네더 석영 1</span><span>결과: 1개</span><span>용도: 사탕수수, 대나무, 호박</span><span>주의: Bedrock 펄스 지연 확인</span></div>
+          <p class="source-line">출처 <a href="#s18">S18</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="comparator 비교기 redstone quartz">
+          <h3>레드스톤 비교기</h3>
+          <div class="craft-grid" aria-label="비교기 3x3 조합">
+            <span class="empty">빈칸</span><span>레드스톤 횃불</span><span class="empty">빈칸</span>
+            <span>레드스톤 횃불</span><span>석영</span><span>레드스톤 횃불</span>
+            <span>돌</span><span>돌</span><span>돌</span>
+          </div>
+          <p>상자, 퇴비통, 화로 상태를 읽는 회로용입니다.</p>
+          <div class="recipe-meta"><span>재료: 횃불 3, 석영 1, 돌 3</span><span>결과: 1개</span><span>용도: 아이템 감지</span><span>주의: 중계기와 헷갈림</span></div>
+          <p class="source-line">출처 <a href="#s19">S19</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="repeater 중계기 delay redstone">
+          <h3>레드스톤 중계기</h3>
+          <div class="craft-grid" aria-label="중계기 3x3 조합">
+            <span class="empty">빈칸</span><span class="empty">빈칸</span><span class="empty">빈칸</span>
+            <span>레드스톤 횃불</span><span>레드스톤</span><span>레드스톤 횃불</span>
+            <span>돌</span><span>돌</span><span>돌</span>
+          </div>
+          <p>신호 연장과 지연 조절에 씁니다.</p>
+          <div class="recipe-meta"><span>재료: 횃불 2, 레드스톤 1, 돌 3</span><span>결과: 1개</span><span>용도: 문, 피스톤, 타이머</span><span>주의: 비교기와 기능 다름</span></div>
+          <p class="source-line">출처 <a href="#s19b">S19b</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm defense" data-search="dispenser 발사기 bow redstone">
+          <h3>발사기</h3>
+          <div class="craft-grid" aria-label="발사기 3x3 조합">
+            <span>조약돌</span><span>조약돌</span><span>조약돌</span>
+            <span>조약돌</span><span>활</span><span>조약돌</span>
+            <span>조약돌</span><span>레드스톤</span><span>조약돌</span>
+          </div>
+          <p>물, 용암, 화살, 폭죽 등 “사용”이 필요한 아이템 자동화에 씁니다.</p>
+          <div class="recipe-meta"><span>재료: 조약돌 7, 활 1, 레드스톤 1</span><span>결과: 1개</span><span>용도: 물 수문, 방어 장치</span><span>주의: 드로퍼와 다름</span></div>
+          <p class="source-line">출처 <a href="#s21">S21</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="dropper 공급기 redstone item elevator">
+          <h3>공급기</h3>
+          <div class="craft-grid" aria-label="공급기 3x3 조합">
+            <span>조약돌</span><span>조약돌</span><span>조약돌</span>
+            <span>조약돌</span><span class="empty">빈칸</span><span>조약돌</span>
+            <span>조약돌</span><span>레드스톤</span><span>조약돌</span>
+          </div>
+          <p>아이템을 떨어뜨리거나 컨테이너로 밀어 넣는 블록입니다.</p>
+          <div class="recipe-meta"><span>재료: 조약돌 7, 레드스톤 1</span><span>결과: 1개</span><span>용도: 아이템 엘리베이터</span><span>주의: 아이템을 사용하지 않음</span></div>
+          <p class="source-line">출처 <a href="#s22">S22</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="hopper 호퍼 chest iron">
+          <h3>호퍼</h3>
+          <div class="craft-grid" aria-label="호퍼 3x3 조합">
+            <span>철</span><span class="empty">빈칸</span><span>철</span>
+            <span>철</span><span>상자</span><span>철</span>
+            <span class="empty">빈칸</span><span>철</span><span class="empty">빈칸</span>
+          </div>
+          <p>아이템 수거의 기본입니다. 너무 길게 잇지 말고 점검 상자를 둡니다.</p>
+          <div class="recipe-meta"><span>재료: 철 5, 상자 1</span><span>결과: 1개</span><span>용도: 수거, 분류, 화로</span><span>주의: 신호 받으면 잠김</span></div>
+          <p class="source-line">출처 <a href="#s20">S20</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe farm" data-search="piston 피스톤 iron planks">
+          <h3>피스톤</h3>
+          <div class="craft-grid" aria-label="피스톤 3x3 조합">
+            <span>판자</span><span>판자</span><span>판자</span>
+            <span>조약돌</span><span>철</span><span>조약돌</span>
+            <span>조약돌</span><span>레드스톤</span><span>조약돌</span>
+          </div>
+          <p>블록 밀기, 수확, 문, 안전장치에 자주 쓰입니다.</p>
+          <div class="recipe-meta"><span>재료: 판자 3, 조약돌 4, 철 1, 레드스톤 1</span><span>결과: 1개</span><span>용도: 수확기, 문</span><span>주의: 최대 12블록 밀기</span></div>
+          <p class="source-line">출처 <a href="#s23">S23</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe villager" data-search="lectern 강연대 librarian 사서">
+          <h3>강연대</h3>
+          <div class="craft-grid" aria-label="강연대 3x3 조합">
+            <span>나무 반블록</span><span>나무 반블록</span><span>나무 반블록</span>
+            <span class="empty">빈칸</span><span>책장</span><span class="empty">빈칸</span>
+            <span class="empty">빈칸</span><span>나무 반블록</span><span class="empty">빈칸</span>
+          </div>
+          <p>사서 주민 작업대입니다. 수선, 효율, 보호 거래를 준비할 때 필요합니다.</p>
+          <div class="recipe-meta"><span>재료: 나무 반블록 4, 책장 1</span><span>결과: 1개</span><span>용도: 사서, 책 표시</span><span>주의: 작업대 연결 확인</span></div>
+          <p class="source-line">출처 <a href="#s24">S24</a>, <a href="#s10">S10</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe villager farm" data-search="composter 퇴비통 farmer">
+          <h3>퇴비통</h3>
+          <div class="craft-grid" aria-label="퇴비통 3x3 조합">
+            <span>나무 반블록</span><span class="empty">빈칸</span><span>나무 반블록</span>
+            <span>나무 반블록</span><span class="empty">빈칸</span><span>나무 반블록</span>
+            <span>나무 반블록</span><span>나무 반블록</span><span>나무 반블록</span>
+          </div>
+          <p>농부 작업대이자 뼛가루 생산 장치입니다.</p>
+          <div class="recipe-meta"><span>재료: 나무 반블록 7</span><span>결과: 1개</span><span>용도: 농부, 뼛가루</span><span>주의: 대나무는 퇴비 불가</span></div>
+          <p class="source-line">출처 <a href="#s25">S25</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe" data-search="stonecutter 석재 절단기 mason">
+          <h3>석재 절단기</h3>
+          <div class="craft-grid" aria-label="석재 절단기 3x3 조합">
+            <span class="empty">빈칸</span><span class="empty">빈칸</span><span class="empty">빈칸</span>
+            <span class="empty">빈칸</span><span>철</span><span class="empty">빈칸</span>
+            <span>돌 계열</span><span>돌 계열</span><span>돌 계열</span>
+          </div>
+          <p>Bedrock에서는 돌, 화강암, 섬록암, 안산암과 polished 변형을 조합 재료로 쓸 수 있습니다.</p>
+          <div class="recipe-meta"><span>재료: 철 1, 돌 계열 3</span><span>결과: 1개</span><span>용도: 건축, 석공</span><span>주의: 조약돌이 아닌 돌 계열</span></div>
+          <p class="source-line">출처 <a href="#s26">S26</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe" data-search="blast furnace 용광로 armorer">
+          <h3>용광로</h3>
+          <div class="craft-grid" aria-label="용광로 3x3 조합">
+            <span>철</span><span>철</span><span>철</span>
+            <span>철</span><span>화로</span><span>철</span>
+            <span>매끄러운 돌</span><span>매끄러운 돌</span><span>매끄러운 돌</span>
+          </div>
+          <p>광석과 금속 장비를 일반 화로보다 빠르게 처리합니다.</p>
+          <div class="recipe-meta"><span>재료: 철 5, 화로 1, 매끄러운 돌 3</span><span>결과: 1개</span><span>용도: 광물 처리, 갑옷 제조인</span><span>주의: 음식은 불가</span></div>
+          <p class="source-line">출처 <a href="#s27">S27</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe" data-search="firework rocket 폭죽 로켓 elytra">
+          <h3>폭죽 로켓</h3>
+          <div class="craft-grid" aria-label="폭죽 로켓 기본 조합">
+            <span class="empty">빈칸</span><span class="empty">빈칸</span><span class="empty">빈칸</span>
+            <span>종이</span><span class="empty">빈칸</span><span class="empty">빈칸</span>
+            <span>화약</span><span class="empty">빈칸</span><span class="empty">빈칸</span>
+          </div>
+          <p>겉날개용은 폭죽 별 없이 만듭니다. 화약 1-3개로 비행 지속 시간이 달라집니다.</p>
+          <div class="recipe-meta"><span>재료: 종이 1, 화약 1-3</span><span>결과: 3개</span><span>용도: 겉날개, 축하</span><span>주의: 별 넣으면 피해 가능</span></div>
+          <p class="source-line">출처 <a href="#s28">S28</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe" data-search="ender chest 엔더 상자 obsidian">
+          <h3>엔더 상자</h3>
+          <div class="craft-grid" aria-label="엔더 상자 3x3 조합">
+            <span>흑요석</span><span>흑요석</span><span>흑요석</span>
+            <span>흑요석</span><span>엔더의 눈</span><span>흑요석</span>
+            <span>흑요석</span><span>흑요석</span><span>흑요석</span>
+          </div>
+          <p>개인별 보관함입니다. 실크 터치 없이 부수면 흑요석만 돌아옵니다.</p>
+          <div class="recipe-meta"><span>재료: 흑요석 8, 엔더의 눈 1</span><span>결과: 1개</span><span>용도: 귀중품 보관</span><span>주의: 호퍼와 상호작용 안 함</span></div>
+          <p class="source-line">출처 <a href="#s29">S29</a></p>
+        </article>
+
+        <article class="recipe-card searchable" data-tags="recipe mobile" data-search="scaffolding 비계 bamboo string">
+          <h3>비계</h3>
+          <div class="craft-grid" aria-label="비계 3x3 조합">
+            <span>대나무</span><span>실</span><span>대나무</span>
+            <span>대나무</span><span class="empty">빈칸</span><span>대나무</span>
+            <span>대나무</span><span class="empty">빈칸</span><span>대나무</span>
+          </div>
+          <p>기둥과 임시 다리를 빠르게 만들고 철거합니다.</p>
+          <div class="recipe-meta"><span>재료: 대나무 6, 실 1</span><span>결과: 6개</span><span>용도: 건축, 낙하 완화</span><span>주의: Bedrock 스폰 예외 확인</span></div>
+          <p class="source-line">출처 <a href="#s30">S30</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="seeds">
+      <div class="section-head">
+        <div>
+          <h2>추천 생존 시드 후보 8</h2>
+          <p>시드는 문자열 그대로 복사합니다. 큰 숫자를 숫자로 변환하지 않도록 copy 버튼도 문자열만 다룹니다. 이미지는 공식 App Store 참고 이미지이며, 실제 해당 시드 스크린샷이 아닌 경우를 카드마다 명시했습니다.</p>
+        </div>
+      </div>
+      <div id="copyStatus" class="copy-live" aria-live="polite"></div>
+      <div class="seed-grid">
+        <article class="seed-card searchable" data-tags="seed hard farm" data-search="taiga village sulfur cave spawn 7799795438475881279 시드 씨드" data-seed="7799795438475881279">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/07/47/6f/07476fcd-1ecf-18ca-e7f7-364d6c6cd5e1/pr_source.png/406x228bb.png" alt="타이가와 마을 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Taiga Village and Sulfur Cave at Spawn</h3>
+          <div class="seed-value"><code>7799795438475881279</code><button class="icon-button copy-seed" type="button" aria-label="7799795438475881279 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33</li><li>기준: 26.30 worldgen</li><li>스포일러: 낮음</li></ul>
+          <p>타이가 스폰, 근처 마을, 스폰 아래 Lush Cave와 Sulfur Cave를 노리는 새 콘텐츠 체험형 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 4/5</span><span>친구 플레이 4/5</span><span>새 기능 5/5</span><span>위험: 동굴 하강</span></div>
+          <p class="source-line">검증 출처 <a href="#s33">S33</a>, <a href="#s05">S05</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>원문은 스폰 아래 동굴과 서쪽 마을을 언급합니다. 정확 좌표 대신 표식 블록과 밝은 귀환로를 먼저 놓고 내려가세요.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed hard" data-search="desert sulfur crater 934598 사막 유황 크레이터" data-seed="934598">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/74/a6/ed/74a6ed67-e5e9-a1ae-3233-225b651d6bf0/pr_source.png/406x228bb.png" alt="사막과 지형 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Desert Sulfur Crater</h3>
+          <div class="seed-value"><code>934598</code><button class="icon-button copy-seed" type="button" aria-label="934598 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33</li><li>기준: 26.30 worldgen</li><li>스포일러: 중간</li></ul>
+          <p>사막 평지와 표면 크레이터형 Sulfur Cave를 노리는 탐험 중심 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 2/5</span><span>친구 플레이 5/5</span><span>새 기능 5/5</span><span>위험: 식량 부족</span></div>
+          <p class="source-line">검증 출처 <a href="#s33">S33</a>, <a href="#s06">S06</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>원문은 스폰 부근 표면 크레이터를 강조합니다. 사막 시작은 나무와 음식이 약하므로 한 명은 표면 보급, 한 명은 크레이터 정찰을 맡습니다.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed villager farm hard" data-search="four villages spawn 302304127329527063 주민 마을 네개" data-seed="302304127329527063">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/be/4f/92/be4f92ef-8b4b-94e3-cd78-da32db4193b0/pr_source.png/406x228bb.png" alt="마을과 초원 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Four Villages at Spawn</h3>
+          <div class="seed-value"><code>302304127329527063</code><button class="icon-button copy-seed" type="button" aria-label="302304127329527063 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33</li><li>기준: 26.30 worldgen</li><li>스포일러: 낮음</li></ul>
+          <p>스폰 근처 여러 마을을 활용해 침대, 식량, 주민 기반을 빠르게 확보하는 협동 생존 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 5/5</span><span>친구 플레이 5/5</span><span>농장 전환 5/5</span><span>위험: POI 혼선</span></div>
+          <p class="source-line">검증 출처 <a href="#s33">S33</a>, <a href="#s10">S10</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>마을이 많을수록 철공장과 거래소 위치를 별도로 잡아야 합니다. 첫날은 마을을 약탈하지 말고 주민 보호선을 먼저 만듭니다.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed hard defense villager" data-search="tundra village pillager outpost 8217141073327038961 약탈자 전초기지" data-seed="8217141073327038961">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/03/ee/6403eee1-4fbf-6b89-d2ec-6fc410182689/pr_source.png/406x228bb.png" alt="눈 지형과 전초기지 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Tundra Village and Pillager Outpost</h3>
+          <div class="seed-value"><code>8217141073327038961</code><button class="icon-button copy-seed" type="button" aria-label="8217141073327038961 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33</li><li>기준: 26.30 worldgen</li><li>스포일러: 중간</li></ul>
+          <p>툰드라 마을과 약탈자 전초기지를 초반 도전으로 삼는 전투형 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 2/5</span><span>친구 플레이 5/5</span><span>전투 맛 5/5</span><span>위험: 습격 유발</span></div>
+          <p class="source-line">검증 출처 <a href="#s33">S33</a>, <a href="#s12">S12</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>전초기지는 첫날 바로 털기보다 마을 주민을 실내 보호하고 방패와 활을 만든 뒤 접근합니다.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed hard" data-search="cherry grove valley trial chambers 5634847558771179357 벚나무 시련의 회랑" data-seed="5634847558771179357">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1f/6b/4e/1f6b4ef1-3ebb-526a-b6fb-a0d1301e30df/b66be1fb-63e6-48ee-b33e-201f6e5229b1_TrailsAndTales_Apple_2208x1242_EN.png/406x228bb.png" alt="벚나무 숲 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Cherry Grove Valley with Trial Chambers</h3>
+          <div class="seed-value"><code>5634847558771179357</code><button class="icon-button copy-seed" type="button" aria-label="5634847558771179357 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33</li><li>기준: 26.30 worldgen</li><li>스포일러: 높음</li></ul>
+          <p>건축용 벚나무 계곡과 중후반 도전 구조물을 함께 보는 장기 서버형 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 4/5</span><span>친구 플레이 5/5</span><span>탐험성 5/5</span><span>위험: 구조물 스포일러</span></div>
+          <p class="source-line">검증 출처 <a href="#s33">S33</a>, <a href="#s05">S05</a></p>
+          <details data-spoiler><summary>구조물 접근 노트</summary><p>원문은 여러 Trial Chambers와 저택, 버섯 바이옴을 언급합니다. 위치를 바로 찾기보다, 팀이 동의한 날에 지도와 침대, 귀환 표식을 갖추고 출발하세요.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed villager farm" data-search="survival island villages 2218715947278290213 섬 마을" data-seed="2218715947278290213">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a2/ed/c4/a2edc497-b844-0e65-a682-f427f4e7505c/pr_source.png/406x228bb.png" alt="섬과 물가 생존 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Survival Island Villages</h3>
+          <div class="seed-value"><code>2218715947278290213</code><button class="icon-button copy-seed" type="button" aria-label="2218715947278290213 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33 후보</li><li>기준: 2026 일반 시드</li><li>스포일러: 낮음</li></ul>
+          <p>섬 마을 기반으로 초반 자원과 생활권을 안정시키는 느긋한 친구 서버 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 4/5</span><span>친구 플레이 4/5</span><span>건축성 4/5</span><span>위험: 바다 이동</span></div>
+          <p class="source-line">검증 출처 <a href="#s31">S31</a>, <a href="#s32">S32</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>TechRadar는 스폰 근처 마을과 여러 섬 마을, 버섯섬 접근성을 언급합니다. 26.33에서 구조물 위치는 새 월드 테스트로 확인하세요.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed hard" data-search="incredible hollow mountain 8486672581758651406 hollow mountain 동굴 산" data-seed="8486672581758651406">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/eb/58/4aeb585d-ec15-a57b-7475-9de908d27446/dbcfdd4e-840f-4b82-824a-4db2201f31d6_Goat_2208x1242_GB.png/406x228bb.png" alt="산악 지형 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Incredible Hollow Mountain</h3>
+          <div class="seed-value"><code>8486672581758651406</code><button class="icon-button copy-seed" type="button" aria-label="8486672581758651406 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33 후보</li><li>기준: 2026 일반 시드</li><li>스포일러: 중간</li></ul>
+          <p>속이 빈 산, 광산, 저택 탐험을 장기 목표로 삼는 산악 베이스 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 3/5</span><span>친구 플레이 5/5</span><span>탐험성 5/5</span><span>위험: 어두운 내부</span></div>
+          <p class="source-line">검증 출처 <a href="#s31">S31</a>, <a href="#s32">S32</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>숲에서 시작해 속이 빈 산으로 이동하는 흐름입니다. 내부를 기지로 쓰려면 지붕과 벽면 스폰 방지부터 끝냅니다.</p></details>
+        </article>
+
+        <article class="seed-card searchable" data-tags="seed" data-search="cherry blossom biome 1861965201489179097 벚나무 바이옴" data-seed="1861965201489179097">
+          <figure class="seed-media">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d7/85/2c/d7852cb7-013e-16ed-e77d-734eec50cc70/pr_source.png/406x228bb.png" alt="밝은 야외 탐험 분위기의 참고 이미지" loading="lazy" decoding="async">
+            <figcaption>공식 App Store 참고 이미지, 실제 시드 화면 아님. 출처: <a href="#s34">S34</a></figcaption>
+          </figure>
+          <h3>Cherry Blossom Biome</h3>
+          <div class="seed-value"><code>1861965201489179097</code><button class="icon-button copy-seed" type="button" aria-label="1861965201489179097 시드 복사">⧉</button></div>
+          <ul class="tag-list"><li>대상: Bedrock 26.33 후보</li><li>기준: 2026 일반 시드</li><li>스포일러: 낮음</li></ul>
+          <p>벚나무 목재와 마을, 폐허 포털을 곁들인 건축 친화형 후보입니다.</p>
+          <div class="score-grid"><span>초반 안정 4/5</span><span>친구 플레이 4/5</span><span>건축성 5/5</span><span>위험: 낮은 도전도</span></div>
+          <p class="source-line">검증 출처 <a href="#s31">S31</a>, <a href="#s32">S32</a></p>
+          <details data-spoiler><summary>스폰 주변 노트</summary><p>원문은 벚나무 바이옴, 가까운 마을, 노출된 폐허 포털을 언급합니다. 장식 건축 담당에게 가장 만족도가 높습니다.</p></details>
+        </article>
+      </div>
+    </section>
+
+    <section id="defense">
+      <div class="section-head">
+        <div>
+          <h2>Hard 난이도 기지 방어</h2>
+          <p>Hard는 Hardcore가 아닙니다. 죽으면 월드는 계속되지만, 장비 손실과 주민 손실은 친구 서버의 리듬을 크게 흔듭니다.</p>
+        </div>
+      </div>
+      <div class="stage-grid card-grid">
+        <article class="farm-card searchable" data-tags="hard defense" data-search="stage one base defense light door">
+          <h3>1단계: 밤을 버티는 집</h3>
+          <p>외벽보다 지붕, 문 앞 꺾임, 실내 조명, 침대 위치를 먼저 만듭니다.</p>
+          <div class="diagram" aria-label="1단계 방어 도식">
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell light">등</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span></div>
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell safe">침</span><span class="cell safe">상</span><span class="cell safe">상</span><span class="cell light">등</span><span class="cell safe">상</span><span class="cell safe">작</span><span class="cell safe">대</span><span class="cell wall">벽</span></div>
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell path">길</span><span class="cell path">길</span><span class="cell path">길</span><span class="cell trap">문</span><span class="cell wall">벽</span><span class="cell path">길</span><span class="cell path">길</span><span class="cell wall">벽</span></div>
+          </div>
+          <ul class="check-list"><li>문 뒤 바로 침대를 두지 않습니다.</li><li>지붕 위와 처마를 스폰 방지합니다.</li><li>비상 상자에는 음식, 블록, 예비 방패를 둡니다.</li></ul>
+        </article>
+        <article class="farm-card searchable" data-tags="hard defense villager" data-search="stage two village defense raid spider baby zombie">
+          <h3>2단계: 주민과 작업대 보호</h3>
+          <p>주민은 거래와 철공장 기반입니다. 마을은 예쁘게 열어두기보다 먼저 살아 있게 만듭니다.</p>
+          <div class="diagram" aria-label="2단계 방어 도식">
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell light">등</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell light">등</span><span class="cell wall">벽</span><span class="cell wall">벽</span></div>
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell safe">주</span><span class="cell safe">민</span><span class="cell wall">벽</span><span class="cell path">길</span><span class="cell wall">벽</span><span class="cell safe">침</span><span class="cell safe">대</span><span class="cell wall">벽</span></div>
+            <div class="diagram-row"><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell trap">문</span><span class="cell path">꺾</span><span class="cell path">길</span><span class="cell trap">문</span><span class="cell wall">벽</span><span class="cell wall">벽</span><span class="cell wall">벽</span></div>
+          </div>
+          <ul class="check-list"><li>아기 좀비 틈, 거미 처마, 스켈레톤 시야를 따로 봅니다.</li><li>마을 중심 주변에 불필요한 침대와 작업대를 놓지 않습니다.</li><li>습격은 마을 내부가 아니라 외곽 방어선에서 끊습니다.</li></ul>
+        </article>
+        <article class="farm-card searchable" data-tags="hard defense" data-search="stage three nether portal emergency route">
+          <h3>3단계: 포털과 비상 동선</h3>
+          <p>기지, 네더 포털, 농장, 마을을 잇는 길은 밝고 넓고 되돌아오기 쉬워야 합니다.</p>
+          <div class="diagram" aria-label="3단계 방어 도식">
+            <div class="diagram-row"><span class="cell safe">기</span><span class="cell path">길</span><span class="cell light">등</span><span class="cell path">길</span><span class="cell wall">문</span><span class="cell wall">방</span><span class="cell wall">벽</span><span class="cell trap">포</span><span class="cell trap">털</span></div>
+            <div class="diagram-row"><span class="cell path">비</span><span class="cell path">상</span><span class="cell path">로</span><span class="cell wall">벽</span><span class="cell safe">상</span><span class="cell safe">자</span><span class="cell light">등</span><span class="cell wall">벽</span><span class="cell wall">벽</span></div>
+            <div class="diagram-row"><span class="cell safe">물</span><span class="cell path">탈</span><span class="cell path">출</span><span class="cell path">로</span><span class="cell path">길</span><span class="cell light">등</span><span class="cell path">길</span><span class="cell path">길</span><span class="cell safe">농</span></div>
+          </div>
+          <ul class="check-list"><li>포털 양쪽에 안전방을 만듭니다.</li><li>비상로는 내부에서만 열 수 있게 둡니다.</li><li>불 번짐과 번개 위험이 있는 목조 지붕은 장식보다 안전을 먼저 봅니다.</li></ul>
+        </article>
+      </div>
+      <p class="source-line">핵심 출처 <a href="#s12">S12</a>, <a href="#s13">S13</a>, <a href="#s14">S14</a>, <a href="#s15">S15</a>, <a href="#s16">S16</a>, <a href="#s17">S17</a></p>
+    </section>
+
+    <section id="farms">
+      <div class="section-head">
+        <div>
+          <h2>Bedrock 농장 3종</h2>
+          <p>이 문서는 Java 공포 기반 철공장, 포털 언로드, 복제, 버그성 구조를 쓰지 않습니다. Bedrock 안정 조건부터 맞춥니다.</p>
+        </div>
+      </div>
+
+      <article id="iron-farm" class="farm-card searchable" data-tags="farm villager hard" data-search="iron farm 아이언 팜 철공장 bedrock golem 20 beds 10 villagers">
+        <h3>철공장: Bedrock 전용 체크</h3>
+        <p>Bedrock 철공장은 주민이 겁먹어서 골렘을 부르는 Java식 구조가 아닙니다. 마을 조건, 침대, 작업대 근무, 스폰 공간이 핵심입니다.</p>
+        <div class="farm-layout">
+          <span>침대: 최소 20개, 모든 주민이 침대에 연결</span>
+          <span>주민: 최소 10명, 75% 이상이 최근 작업대 근무</span>
+          <span>스폰 범위: 마을 중심 기준 17x13x17</span>
+          <span>대기점: 마을이 플레이어 시뮬레이션 거리 안</span>
+        </div>
+        <table class="mini-table">
+          <tr><th>증상</th><td>골렘이 안 나옴</td></tr>
+          <tr><th>먼저 볼 것</th><td>침대 연결, 작업대 접근, 불필요한 벨/침대, 스폰 플랫폼 위 2x3x2 여유 공간.</td></tr>
+          <tr><th>금지</th><td>포털로 골렘을 보내는 언로드 꼼수, Java식 좀비 공포 설계.</td></tr>
+        </table>
+        <p class="source-line">출처 <a href="#s08">S08</a>, <a href="#s09">S09</a></p>
+      </article>
+
+      <article id="villager-breeder" class="farm-card searchable" data-tags="farm villager" data-search="villager breeder 브리더 주민 증식장 bed food">
+        <h3>주민 증식장: 침대와 음식</h3>
+        <p>주민 증식은 직업이 아니라 침대 여유와 음식 보유가 핵심입니다. 최소 2명의 성인 주민, 접근 가능한 침대, 충분한 음식이 필요합니다.</p>
+        <div class="farm-layout">
+          <span>기본: 성인 주민 2명 이상</span>
+          <span>침대: 새 주민 수만큼 여유 침대</span>
+          <span>음식: 빵 3개 또는 당근/감자/비트 12개</span>
+          <span>주의: mobGriefing 꺼짐이면 음식 줍기 불가</span>
+        </div>
+        <table class="mini-table">
+          <tr><th>증상</th><td>하트만 뜨고 실패</td></tr>
+          <tr><th>먼저 볼 것</th><td>침대 위 공간, 침대 접근성, 음식 수량, 다른 마을과의 거리.</td></tr>
+          <tr><th>운영 팁</th><td>철공장과 같은 마을로 인식되지 않도록 충분히 떨어뜨리고, 완성 주민은 32블록 이상 멀리 이동시켜 연결을 끊습니다.</td></tr>
+        </table>
+        <p class="source-line">출처 <a href="#s10">S10</a>, <a href="#s11">S11</a></p>
+      </article>
+
+      <article id="crop-farm" class="farm-card searchable" data-tags="farm villager" data-search="villager crop farm citizen farm 주민 작물 농장 farmer">
+        <h3>주민 작물 농장: 농부의 손이 닿아야 한다</h3>
+        <p>농부 주민은 밀, 당근, 감자, 비트를 수확하고 다시 심습니다. 자동화는 아이템을 어떻게 빼앗을지가 아니라 농부가 계속 일할 수 있는지를 먼저 봅니다.</p>
+        <div class="farm-layout">
+          <span>작물: 당근/감자 추천, 밀은 씨앗 관리 필요</span>
+          <span>작업대: 퇴비통 1개를 확실히 연결</span>
+          <span>수거: 물길 또는 호퍼 수거는 짧게</span>
+          <span>보호: 밤과 번개, 좀비 진입 차단</span>
+        </div>
+        <table class="mini-table">
+          <tr><th>증상</th><td>농부가 가만히 있음</td></tr>
+          <tr><th>먼저 볼 것</th><td>퇴비통 연결, 인벤토리 포화, 작물 성장 단계, mobGriefing 설정.</td></tr>
+          <tr><th>Bedrock 노트</th><td>26.30에는 농부가 작물을 심는 동안 끼는 문제 수정도 포함되어 있습니다.</td></tr>
+        </table>
+        <p class="source-line">출처 <a href="#s05">S05</a>, <a href="#s10">S10</a>, <a href="#s25">S25</a></p>
+      </article>
+    </section>
+
+    <section id="troubleshooting">
+      <div class="section-head">
+        <div>
+          <h2>문제 해결</h2>
+          <p>친구 서버에서 자주 나는 “왜 안 돼?”를 증상 기준으로 정리했습니다.</p>
+        </div>
+      </div>
+      <div class="trouble-grid">
+        <article class="trouble-card searchable" data-tags="farm villager" data-search="iron farm not working 철공장 안됨">
+          <h3>철공장</h3>
+          <table class="mini-table"><tr><th>골렘 없음</th><td>침대 20개, 주민 10명, 침대 연결, 작업대 근무, 스폰 플랫폼 범위를 순서대로 확인.</td></tr><tr><th>엉뚱한 곳에 스폰</th><td>마을 중심이 움직였을 가능성. 불필요한 침대와 벨을 제거하고 플랫폼 범위를 다시 잡음.</td></tr><tr><th>느림</th><td>플레이어 대기점이 시뮬레이션 거리 밖이거나 기존 골렘이 근처에 남아 있음.</td></tr></table>
+        </article>
+        <article class="trouble-card searchable" data-tags="farm villager" data-search="villager breeder not working 주민 증식장 안됨">
+          <h3>주민 증식장</h3>
+          <table class="mini-table"><tr><th>하트 실패</th><td>여유 침대, 침대 위 공간, 접근성, 음식 보유량 확인.</td></tr><tr><th>음식 안 줍기</th><td>mobGriefing 설정이 꺼져 있으면 주민이 아이템을 줍지 못함.</td></tr><tr><th>직업 꼬임</th><td>주변 작업대를 모두 치운 뒤 원하는 작업대만 하나씩 놓음.</td></tr></table>
+        </article>
+        <article class="trouble-card searchable" data-tags="hard defense" data-search="mobs spawning base 기지 몹 스폰">
+          <h3>기지 스폰</h3>
+          <table class="mini-table"><tr><th>실내 스폰</th><td>조도 0인 바닥, 지붕 위, 계단 아래를 확인.</td></tr><tr><th>거미 침투</th><td>수직벽 위 처마가 없는지 확인.</td></tr><tr><th>아기 좀비</th><td>문틈, 하프블록 틈, 우리 입구를 완전 차단.</td></tr></table>
+        </article>
+        <article class="trouble-card searchable" data-tags="mobile seed" data-search="copy seed iphone 시드 복사 안됨">
+          <h3>시드 복사</h3>
+          <table class="mini-table"><tr><th>복사 실패</th><td>브라우저 권한이 막히면 fallback textarea 방식으로 복사합니다.</td></tr><tr><th>다른 월드</th><td>시드를 숫자로 변환하지 말고 문자열 그대로 입력.</td></tr><tr><th>구조물 차이</th><td>26.33 안정 버전, 기본 월드 생성, 실험 기능 꺼짐을 확인.</td></tr></table>
+        </article>
+      </div>
+    </section>
+
+    <section id="excluded">
+      <div class="section-head">
+        <div>
+          <h2>의도적으로 제외한 것</h2>
+          <p>이 문서는 오래 가는 친구 생존 서버 기준입니다. 빠르지만 서버 경험을 망치거나 버전 안정성이 낮은 항목은 제외했습니다.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <article class="excluded-card searchable" data-tags="hard" data-search="excluded cheat command creative mod addon duplication">
+          <h3>치트/명령어/크리에이티브</h3>
+          <p>월드 규칙을 바꾸는 명령어, 크리에이티브 보급, 구조물 좌표 순간이동은 생존 운영에서 제외합니다.</p>
+        </article>
+        <article class="excluded-card searchable" data-tags="farm" data-search="excluded exploit duplication bug portal unload">
+          <h3>복제와 버그성 농장</h3>
+          <p>아이템 복제, 포털 언로드 꼼수, 몹 AI 오류를 이용한 과도한 장치는 최신 버전 안정성과 친구 서버 재미를 모두 해칩니다.</p>
+        </article>
+        <article class="excluded-card searchable" data-tags="seed" data-search="excluded preview beta experimental java">
+          <h3>Preview/Beta/Java 혼합</h3>
+          <p>Preview, Beta, Experimental, Java 전용 수치와 구조는 Bedrock iPhone 안정 버전 공략에 섞지 않습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head">
+        <div>
+          <h2>출처와 업데이트 로그</h2>
+          <p>확인일은 2026-07-10입니다. Wiki류는 페이지 기준 확인이며, 공식 릴리스와 App Store 값으로 최신 안정 버전을 확정했습니다.</p>
+        </div>
+      </div>
+      <div class="source-grid">
+        <article id="s01" class="source-card"><h3>S01 Release Changelogs</h3><p class="small">공식 Minecraft Feedback 릴리스 목록. 최신 Bedrock 26.33 항목 확인.</p><a href="https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs">열기</a></article>
+        <article id="s02" class="source-card"><h3>S02 Bedrock 26.33 Hotfix</h3><p class="small">2026-07-09 게시, 플랫폼 승인에 따른 순차 배포 안내와 핫픽스 내용.</p><a href="https://feedback.minecraft.net/hc/en-us/articles/47262667617677-Minecraft-Bedrock-Edition-26-33-Hotfix-Changelog">열기</a></article>
+        <article id="s03" class="source-card"><h3>S03 App Store</h3><p class="small">Minecraft: Play with Friends, iPhone/iPad, Bedrock Edition 설명.</p><a href="https://apps.apple.com/us/app/minecraft-play-with-friends/id479516143">열기</a></article>
+        <article id="s04" class="source-card"><h3>S04 Apple Lookup API</h3><p class="small">id 479516143, country us 기준 version 26.33, currentVersionReleaseDate 2026-07-09T16:42:52Z 확인.</p><a href="https://itunes.apple.com/lookup?id=479516143&amp;country=us">열기</a></article>
+        <article id="s05" class="source-card"><h3>S05 Bedrock 26.30 Changelog</h3><p class="small">Chaos Cubed, Sulfur Cave, Sulfur Cube, Cinnabar/Sulfur 블록과 수정사항 기준.</p><a href="https://feedback.minecraft.net/hc/en-us/articles/46570672409997-Minecraft-Bedrock-Edition-26-30-Changelog-Chaos-Cubed">열기</a></article>
+        <article id="s06" class="source-card"><h3>S06 Chaos Cubed Drop</h3><p class="small">공식 Minecraft.net 업데이트 소개, 유황 동굴과 유황 큐브 설명.</p><a href="https://www.minecraft.net/en-us/updates/chaos-cubed-drop">열기</a></article>
+        <article id="s08" class="source-card"><h3>S08 Iron Golem</h3><p class="small">Bedrock 마을 골렘 스폰 조건, 침대/주민/작업대 기준.</p><a href="https://minecraft.wiki/w/Iron_Golem">열기</a></article>
+        <article id="s09" class="source-card"><h3>S09 Iron Golem Farming</h3><p class="small">Bedrock 철공장 조건과 17x13x17 스폰 범위.</p><a href="https://minecraft.wiki/w/Tutorial:Iron_golem_farming">열기</a></article>
+        <article id="s10" class="source-card"><h3>S10 Villager</h3><p class="small">주민 작업대, 침대, 음식, 번식, 농부 행동 기준.</p><a href="https://minecraft.wiki/w/Villager">열기</a></article>
+        <article id="s11" class="source-card"><h3>S11 Villager Farming</h3><p class="small">주민 증식장 기본 조건과 침대, 음식 포인트 기준.</p><a href="https://minecraft.wiki/w/Tutorial:Villager_farming">열기</a></article>
+        <article id="s12" class="source-card"><h3>S12 Mob Spawning</h3><p class="small">Bedrock 스폰과 디스폰, 시뮬레이션 거리 참고.</p><a href="https://minecraft.wiki/w/Mob_spawning">열기</a></article>
+        <article id="s13" class="source-card"><h3>S13 Light</h3><p class="small">조도와 적대몹 스폰 조건, Bedrock 조도 변화 기록.</p><a href="https://minecraft.wiki/w/Light">열기</a></article>
+        <article id="s14" class="source-card"><h3>S14 Zombie</h3><p class="small">Hard 주민 감염, 아기 좀비, 추적 행동 기준.</p><a href="https://minecraft.wiki/w/Zombie">열기</a></article>
+        <article id="s15" class="source-card"><h3>S15 Door</h3><p class="small">문 공간과 좀비의 문 파괴 관련 Bedrock 소리/행동 참고.</p><a href="https://minecraft.wiki/w/Door">열기</a></article>
+        <article id="s16" class="source-card"><h3>S16 Spider</h3><p class="small">거미 스폰, 등반, 조도별 행동 참고.</p><a href="https://minecraft.wiki/w/Spider">열기</a></article>
+        <article id="s17" class="source-card"><h3>S17 Phantom</h3><p class="small">불면 시간, Bedrock 스폰 범위, 고양이 회피 행동.</p><a href="https://minecraft.wiki/w/Phantom">열기</a></article>
+        <article id="s18" class="source-card"><h3>S18 Observer</h3><p class="small">관측기 조합과 Bedrock 펄스 차이 참고.</p><a href="https://minecraft.wiki/w/Observer">열기</a></article>
+        <article id="s19" class="source-card"><h3>S19 Comparator</h3><p class="small">비교기 조합과 컨테이너 상태 읽기.</p><a href="https://minecraft.wiki/w/Redstone_Comparator">열기</a></article>
+        <article id="s19b" class="source-card"><h3>S19b Repeater</h3><p class="small">중계기 조합과 지연 단계.</p><a href="https://minecraft.wiki/w/Redstone_Repeater">열기</a></article>
+        <article id="s20" class="source-card"><h3>S20 Hopper</h3><p class="small">호퍼 조합, 잠금, 아이템 이동.</p><a href="https://minecraft.wiki/w/Hopper">열기</a></article>
+        <article id="s21" class="source-card"><h3>S21 Dispenser</h3><p class="small">발사기 조합과 사용형 아이템 처리.</p><a href="https://minecraft.wiki/w/Dispenser">열기</a></article>
+        <article id="s22" class="source-card"><h3>S22 Dropper</h3><p class="small">공급기 조합과 컨테이너 밀어넣기.</p><a href="https://minecraft.wiki/w/Dropper">열기</a></article>
+        <article id="s23" class="source-card"><h3>S23 Piston</h3><p class="small">피스톤 조합, 밀기 한계, Bedrock 지연.</p><a href="https://minecraft.wiki/w/Piston">열기</a></article>
+        <article id="s24" class="source-card"><h3>S24 Lectern</h3><p class="small">강연대 조합과 사서 작업대 기준.</p><a href="https://minecraft.wiki/w/Lectern">열기</a></article>
+        <article id="s25" class="source-card"><h3>S25 Composter</h3><p class="small">퇴비통 조합, 농부 작업대, 호퍼 상호작용.</p><a href="https://minecraft.wiki/w/Composter">열기</a></article>
+        <article id="s26" class="source-card"><h3>S26 Stonecutter</h3><p class="small">석재 절단기 조합, Bedrock 돌 계열 재료와 26.x 블록.</p><a href="https://minecraft.wiki/w/Stonecutter">열기</a></article>
+        <article id="s27" class="source-card"><h3>S27 Blast Furnace</h3><p class="small">용광로 조합과 제련 가능 범위.</p><a href="https://minecraft.wiki/w/Blast_Furnace">열기</a></article>
+        <article id="s28" class="source-card"><h3>S28 Firework Rocket</h3><p class="small">폭죽 로켓 조합과 겉날개 부스트 주의.</p><a href="https://minecraft.wiki/w/Firework_Rocket">열기</a></article>
+        <article id="s29" class="source-card"><h3>S29 Ender Chest</h3><p class="small">엔더 상자 조합, 개인 저장, 실크 터치 드롭.</p><a href="https://minecraft.wiki/w/Ender_Chest">열기</a></article>
+        <article id="s30" class="source-card"><h3>S30 Scaffolding</h3><p class="small">비계 조합, Bedrock 설치/스폰 차이.</p><a href="https://minecraft.wiki/w/Scaffolding">열기</a></article>
+        <article id="s31" class="source-card"><h3>S31 TechRadar Seeds 2026</h3><p class="small">2026 일반 생존 시드 후보와 seed 문자열.</p><a href="https://www.techradar.com/how-to/best-minecraft-seeds">열기</a></article>
+        <article id="s32" class="source-card"><h3>S32 PC Gamer Seeds 2026</h3><p class="small">Bedrock/Pocket Edition 호환성 설명과 Bedrock 시드 섹션 참고.</p><a href="https://www.pcgamer.com/best-minecraft-seeds/">열기</a></article>
+        <article id="s33" class="source-card"><h3>S33 Times of India Bedrock 26.30 Seeds</h3><p class="small">Bedrock 26.30 전용 시드 5개와 Chaos Cubed 지형 후보.</p><a href="https://timesofindia.indiatimes.com/sports/esports/minecraft/5-best-minecraft-bedrock-seeds-for-26-30/articleshow/132127355.cms">열기</a></article>
+        <article id="s34" class="source-card"><h3>S34 App Store Image Assets</h3><p class="small">Mojang/Minecraft 공식 App Store 스크린샷 URL. 시드 실제 화면이 아닌 참고 이미지로만 사용.</p><a href="https://itunes.apple.com/lookup?id=479516143&amp;country=us">열기</a></article>
+      </div>
+      <p class="footer-note">업데이트 로그: 2026-07-10, Bedrock 26.33 / iPhone App Store 26.33 확인. 26.30 Chaos Cubed를 생존 콘텐츠와 월드 생성 기준선으로 설정. 시드 이미지는 모두 외부 HTTPS 공식 App Store 이미지이며 실제 시드 스크린샷이 아닐 수 있음을 카드에 표기.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var aliases = {
+        "citizen farm": "villager farm 주민 작물 농장",
+        "빌리저": "주민 villager",
+        "아이언 팜": "철공장 iron farm",
+        "브리더": "주민 증식장 villager breeder",
+        "하드모드": "hard 하드",
+        "씨드": "시드 seed",
+        "seed": "시드 씨드",
+        "villager": "주민 빌리저",
+        "iron farm": "철공장 아이언 팜",
+        "crop farm": "작물 농장 citizen farm"
+      };
+
+      var searchInput = document.getElementById("guideSearch");
+      var clearButton = document.getElementById("clearSearch");
+      var status = document.getElementById("resultStatus");
+      var filterButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+      var spoilerButton = document.getElementById("spoilerToggle");
+      var copyStatus = document.getElementById("copyStatus");
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".searchable"));
+      var activeFilter = "all";
+
+      function normalize(text) {
+        return String(text || "").toLowerCase().replace(/\s+/g, " ").trim();
+      }
+
+      function expandQuery(query) {
+        var base = normalize(query);
+        var output = base;
+        Object.keys(aliases).forEach(function (key) {
+          if (base.indexOf(key) !== -1) {
+            output += " " + aliases[key];
+          }
+        });
+        return output;
+      }
+
+      function cardText(card) {
+        return normalize([
+          card.textContent,
+          card.getAttribute("data-search"),
+          card.getAttribute("data-tags")
+        ].join(" "));
+      }
+
+      function applySearch() {
+        var query = expandQuery(searchInput.value);
+        var terms = query ? query.split(" ").filter(Boolean) : [];
+        var visible = 0;
+
+        cards.forEach(function (card) {
+          var tags = " " + normalize(card.getAttribute("data-tags")) + " ";
+          var filterMatch = activeFilter === "all" || tags.indexOf(" " + activeFilter + " ") !== -1;
+          var text = cardText(card);
+          var queryMatch = terms.every(function (term) {
+            return text.indexOf(term) !== -1;
+          });
+          var show = filterMatch && queryMatch;
+          card.dataset.hidden = show ? "false" : "true";
+          if (show) {
+            visible += 1;
+          }
+        });
+
+        status.textContent = "검색 가능한 카드 " + visible + "개 표시 중";
+      }
+
+      function fallbackCopy(text) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.top = "-1000px";
+        document.body.appendChild(area);
+        area.select();
+        try {
+          document.execCommand("copy");
+          return Promise.resolve();
+        } catch (error) {
+          return Promise.reject(error);
+        } finally {
+          document.body.removeChild(area);
+        }
+      }
+
+      function copyText(text) {
+        var value = String(text);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(value).catch(function () {
+            return fallbackCopy(value);
+          });
+        }
+        return fallbackCopy(value);
+      }
+
+      function setSpoilers(open) {
+        document.querySelectorAll("details[data-spoiler]").forEach(function (detail) {
+          detail.open = open;
+        });
+        spoilerButton.setAttribute("aria-pressed", open ? "true" : "false");
+        spoilerButton.textContent = open ? "스포일러 숨기기" : "스포일러 표시";
+        try {
+          localStorage.setItem("minecraftGuideSpoilers", open ? "open" : "closed");
+        } catch (error) {
+          // localStorage may be unavailable in strict browser modes.
+        }
+      }
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          activeFilter = button.getAttribute("data-filter");
+          filterButtons.forEach(function (item) {
+            item.setAttribute("aria-pressed", item === button ? "true" : "false");
+          });
+          applySearch();
+        });
+      });
+
+      searchInput.addEventListener("input", applySearch);
+      clearButton.addEventListener("click", function () {
+        searchInput.value = "";
+        activeFilter = "all";
+        filterButtons.forEach(function (item) {
+          item.setAttribute("aria-pressed", item.getAttribute("data-filter") === "all" ? "true" : "false");
+        });
+        applySearch();
+        searchInput.focus();
+      });
+
+      spoilerButton.addEventListener("click", function () {
+        var nextOpen = spoilerButton.getAttribute("aria-pressed") !== "true";
+        setSpoilers(nextOpen);
+      });
+
+      document.querySelectorAll(".copy-seed").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var card = button.closest(".seed-card");
+          var seed = card ? card.getAttribute("data-seed") : "";
+          copyText(seed).then(function () {
+            copyStatus.textContent = "시드 복사됨: " + seed;
+          }).catch(function () {
+            copyStatus.textContent = "복사에 실패했습니다. 시드를 길게 눌러 직접 복사하세요.";
+          });
+        });
+      });
+
+      try {
+        if (localStorage.getItem("minecraftGuideSpoilers") === "open") {
+          setSpoilers(true);
+        }
+      } catch (error) {
+        setSpoilers(false);
+      }
+
+      applySearch();
+    }());
+  </script>
+</body>
+</html>

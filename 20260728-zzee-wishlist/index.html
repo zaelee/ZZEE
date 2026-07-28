@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e8">
+  <meta name="description" content="ZZEE가 직접 고른 메이커 장비, 트레이닝 웨어, 보호대와 카메라 위시리스트. 공식 구매처와 가격 비교 링크를 한곳에 모았습니다.">
+  <title>ZZEE’ WISHLIST — 오래 쓸 물건만</title>
+  <style>
+    :root {
+      --paper: #f2f0e8;
+      --paper-2: #e8e4d8;
+      --ink: #171815;
+      --muted: #66685f;
+      --line: #c9c6ba;
+      --acid: #d9ff43;
+      --blue: #2657ff;
+      --coral: #ff6a4d;
+      --white: #fff;
+      --shadow: 0 20px 60px rgba(24, 25, 21, .09);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 9% 7%, rgba(217, 255, 67, .68), transparent 18rem),
+        linear-gradient(180deg, var(--paper), #f8f7f1 38%, var(--paper));
+      font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 99;
+      padding: 10px 14px;
+      color: var(--white);
+      background: var(--ink);
+      border-radius: 999px;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px clamp(18px, 4vw, 58px);
+      border-bottom: 1px solid rgba(23, 24, 21, .12);
+      background: rgba(242, 240, 232, .86);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: var(--white);
+      background: var(--ink);
+      border-radius: 50%;
+    }
+
+    .top-meta {
+      color: var(--muted);
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-align: right;
+    }
+
+    .hero {
+      width: min(1480px, 100%);
+      margin: 0 auto;
+      padding: clamp(54px, 8vw, 120px) clamp(18px, 4vw, 58px) 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, .65fr);
+      gap: clamp(28px, 6vw, 90px);
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 38px;
+      height: 3px;
+      content: "";
+      background: var(--ink);
+    }
+
+    h1 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(3.4rem, 10vw, 9.8rem);
+      font-weight: 900;
+      letter-spacing: -.085em;
+      line-height: .82;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--ink);
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 30px 0 0;
+      font-size: clamp(1rem, 1.6vw, 1.28rem);
+      letter-spacing: -.02em;
+    }
+
+    .hero-note {
+      position: relative;
+      padding: 26px;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-note::after {
+      position: absolute;
+      right: -38px;
+      bottom: -58px;
+      width: 140px;
+      height: 140px;
+      content: "";
+      background: var(--acid);
+      border-radius: 50%;
+    }
+
+    .hero-note strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--acid);
+      font-size: 1.1rem;
+    }
+
+    .hero-note p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: .93rem;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: min(1480px, calc(100% - clamp(36px, 8vw, 116px)));
+      margin: 10px auto 0;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .58);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 25px;
+      border-right: 1px solid var(--line);
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric-label {
+      display: block;
+      margin-bottom: 13px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      display: block;
+      font-size: clamp(1.45rem, 2.8vw, 2.35rem);
+      font-weight: 900;
+      letter-spacing: -.055em;
+      line-height: 1;
+    }
+
+    .metric small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+
+    .controls-wrap {
+      position: sticky;
+      top: 63px;
+      z-index: 15;
+      width: min(1480px, 100%);
+      margin: 0 auto;
+      padding: 28px clamp(18px, 4vw, 58px) 18px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, .88);
+      border: 1px solid rgba(23, 24, 21, .12);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(23, 24, 21, .06);
+      backdrop-filter: blur(16px);
+    }
+
+    .filter-button {
+      min-height: 40px;
+      padding: 8px 14px;
+      color: var(--ink);
+      background: transparent;
+      border: 0;
+      border-radius: 11px;
+      cursor: pointer;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .filter-button:hover,
+    .filter-button:focus-visible {
+      background: var(--paper-2);
+      outline: none;
+    }
+
+    .filter-button[aria-pressed="true"] {
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .search {
+      flex: 1 1 210px;
+      min-width: 0;
+      min-height: 40px;
+      margin-left: auto;
+      padding: 8px 14px;
+      background: var(--paper);
+      border: 1px solid transparent;
+      border-radius: 11px;
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(38, 87, 255, .12);
+    }
+
+    .catalogue {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 20px;
+      width: min(1480px, 100%);
+      margin: 0 auto;
+      padding: 10px clamp(18px, 4vw, 58px) 100px;
+    }
+
+    .card {
+      grid-column: span 4;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .82);
+      border: 1px solid rgba(23, 24, 21, .16);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 44px rgba(25, 26, 22, .045);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .card.featured {
+      grid-column: span 6;
+    }
+
+    .card[hidden] {
+      display: none;
+    }
+
+    .media {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(217, 255, 67, .45), transparent 58%),
+        #e9e9e4;
+      border-bottom: 1px solid rgba(23, 24, 21, .1);
+    }
+
+    .media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 30px;
+      mix-blend-mode: multiply;
+      transition: transform .35s ease;
+    }
+
+    .card:hover .media img {
+      transform: scale(1.035);
+    }
+
+    .media.dark {
+      background: #20211f;
+    }
+
+    .media.dark img {
+      mix-blend-mode: normal;
+    }
+
+    .variant-switcher {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      padding: 12px;
+      background: #f3f3ee;
+      border-bottom: 1px solid rgba(23, 24, 21, .12);
+    }
+
+    .variant-button {
+      display: flex;
+      min-width: 0;
+      min-height: 78px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 4px;
+      padding: 10px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid rgba(23, 24, 21, .15);
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: left;
+      transition: color .18s ease, background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .variant-button:hover,
+    .variant-button:focus-visible {
+      border-color: var(--ink);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    .variant-button[aria-pressed="true"] {
+      color: var(--white);
+      background: var(--ink);
+      border-color: var(--ink);
+      box-shadow: inset 0 3px 0 var(--acid);
+    }
+
+    .variant-rank {
+      color: var(--blue);
+      font-size: .58rem;
+      font-weight: 950;
+      letter-spacing: .1em;
+    }
+
+    .variant-button[aria-pressed="true"] .variant-rank {
+      color: var(--acid);
+    }
+
+    .variant-button strong {
+      overflow-wrap: anywhere;
+      font-size: .71rem;
+      letter-spacing: -.025em;
+      line-height: 1.15;
+    }
+
+    .variant-button small {
+      color: var(--muted);
+      font-size: .61rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .variant-button[aria-pressed="true"] small {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .rank,
+    .choice {
+      position: absolute;
+      top: 16px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .rank {
+      left: 16px;
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .choice {
+      right: 16px;
+      background: var(--acid);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .09);
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: clamp(21px, 2.3vw, 30px);
+    }
+
+    .category {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2vw, 2rem);
+      letter-spacing: -.045em;
+      line-height: 1.12;
+    }
+
+    .model {
+      min-height: 1.4em;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .77rem;
+      font-weight: 700;
+    }
+
+    .price-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: end;
+      margin: 22px 0 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 800;
+    }
+
+    .price {
+      display: block;
+      font-size: clamp(1.35rem, 2.35vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .compare-price {
+      color: var(--coral);
+      font-size: .77rem;
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .compare-price s {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .reason {
+      margin: 0 0 18px;
+      font-size: .92rem;
+      letter-spacing: -.015em;
+    }
+
+    .specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .specs li {
+      padding: 7px 10px;
+      background: var(--paper);
+      border-radius: 8px;
+      color: #3f413b;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .camera-bundle {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 9px;
+      align-items: center;
+      width: min(184px, calc(100% - 32px));
+      padding: 8px 10px 8px 8px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .94);
+      border: 1px solid rgba(255, 255, 255, .72);
+      border-radius: 13px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .24);
+      text-decoration: none;
+      backdrop-filter: blur(12px);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .camera-bundle:hover,
+    .camera-bundle:focus-visible {
+      background: var(--acid);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    .camera-bundle img,
+    .media.dark .camera-bundle img {
+      width: 54px;
+      height: 54px;
+      padding: 3px;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 9px;
+      mix-blend-mode: multiply;
+      transform: none;
+    }
+
+    .card:hover .camera-bundle img {
+      transform: none;
+    }
+
+    .camera-bundle-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      line-height: 1.14;
+    }
+
+    .camera-bundle-copy small {
+      margin-bottom: 3px;
+      color: var(--blue);
+      font-size: .54rem;
+      font-weight: 950;
+      letter-spacing: .06em;
+    }
+
+    .camera-bundle-copy strong {
+      overflow: hidden;
+      font-size: .68rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .camera-bundle-price {
+      margin-top: 3px;
+      color: var(--coral);
+      font-size: .66rem;
+      font-style: normal;
+      font-weight: 950;
+    }
+
+    .watch {
+      margin: auto 0 18px;
+      padding: 13px 14px;
+      background: #f7f2df;
+      border-left: 3px solid #d9a500;
+      border-radius: 0 10px 10px 0;
+      color: #5b4a16;
+      font-size: .76rem;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 44px;
+      padding: 10px 13px;
+      border: 1px solid var(--ink);
+      border-radius: 11px;
+      font-size: .75rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .action.primary {
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .action:hover,
+    .action:focus-visible {
+      color: var(--ink);
+      background: var(--acid);
+      outline: none;
+    }
+
+    .save-button {
+      grid-column: 1 / -1;
+      min-height: 42px;
+      color: var(--muted);
+      background: transparent;
+      border: 1px dashed var(--line);
+      border-radius: 11px;
+      cursor: pointer;
+      font-size: .73rem;
+      font-weight: 800;
+    }
+
+    .save-button:hover,
+    .save-button:focus-visible,
+    .save-button[aria-pressed="true"] {
+      color: var(--ink);
+      background: #fff8f5;
+      border-color: var(--coral);
+      outline: none;
+    }
+
+    .save-button[aria-pressed="true"]::before {
+      content: "♥ ";
+      color: var(--coral);
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      display: none;
+      padding: 70px 20px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty.visible {
+      display: block;
+    }
+
+    .buy-plan {
+      width: min(1364px, calc(100% - clamp(36px, 8vw, 116px)));
+      margin: 0 auto 100px;
+      padding: clamp(26px, 4vw, 50px);
+      color: var(--white);
+      background: var(--blue);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .buy-plan h2 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 4.4rem);
+      letter-spacing: -.065em;
+      line-height: 1;
+    }
+
+    .buy-plan > p {
+      max-width: 720px;
+      margin: 0 0 28px;
+      color: rgba(255, 255, 255, .8);
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .22);
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 18px;
+    }
+
+    .plan-step {
+      min-height: 170px;
+      padding: 24px;
+      background: rgba(38, 87, 255, .92);
+    }
+
+    .plan-step b {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 30px;
+      place-items: center;
+      color: var(--blue);
+      background: var(--acid);
+      border-radius: 50%;
+    }
+
+    .plan-step strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .plan-step span {
+      color: rgba(255, 255, 255, .72);
+      font-size: .8rem;
+    }
+
+    footer {
+      padding: 0 clamp(18px, 4vw, 58px) 60px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      width: min(1364px, 100%);
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    .footer-inner p:last-child {
+      text-align: right;
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-note {
+        max-width: 520px;
+      }
+
+      .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .metric:nth-child(2) {
+        border-right: 0;
+      }
+
+      .metric:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .card,
+      .card.featured {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .top-meta {
+        display: none;
+      }
+
+      .controls-wrap {
+        position: static;
+      }
+
+      .controls {
+        border-radius: 14px;
+      }
+
+      .search {
+        flex-basis: 100%;
+        order: -1;
+        margin-left: 0;
+      }
+
+      .card,
+      .card.featured {
+        grid-column: 1 / -1;
+      }
+
+      .plan-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner p:last-child {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:nth-child(2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:last-child {
+        border-bottom: 0;
+      }
+
+      .actions {
+        grid-template-columns: 1fr;
+      }
+
+      .save-button {
+        grid-column: auto;
+      }
+
+      .variant-switcher {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+      }
+
+      .variant-button {
+        min-width: 142px;
+        scroll-snap-align: start;
+      }
+
+      .camera-bundle {
+        right: 12px;
+        bottom: 12px;
+        grid-template-columns: 48px minmax(0, 1fr);
+        width: 164px;
+      }
+
+      .camera-bundle img,
+      .media.dark .camera-bundle img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#wishlist">목록으로 바로가기</a>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="ZZEE 프로젝트 허브로 이동">
+      <span class="brand-mark">Z</span>
+      ZZEE Projects
+    </a>
+    <div class="top-meta">PRICE CHECK · 2026.07.28 KST</div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Buy less, choose better</p>
+          <h1 id="page-title">ZZEE’<span>WISHLIST</span></h1>
+          <p class="hero-copy">
+            대충 싼 물건이 아니라, 오래 쓰고 자주 꺼낼 물건만 골랐다.
+            공식 사양과 국내 가격을 다시 확인하고, 바로 살 곳과 할인 찾을 곳까지 한 장에 정리한 구매 보드.
+          </p>
+        </div>
+        <aside class="hero-note">
+          <strong>가격 보는 법</strong>
+          <p>굵은 가격은 공식몰 또는 확인 가능한 대표 판매가입니다. 빨간 가격은 2026년 7월 28일에 확인한 비교가라 결제 직전 재확인이 필요해요.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="위시리스트 요약">
+      <div class="metric">
+        <span class="metric-label">Curated items</span>
+        <span class="metric-value">09</span>
+        <small>요청 품목 전부 반영</small>
+      </div>
+      <div class="metric">
+        <span class="metric-label">KRW subtotal</span>
+        <span class="metric-value">₩8.81M</span>
+        <small>기본 선택·추천 렌즈 포함, 뮬러 제외</small>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Best value pick</span>
+        <span class="metric-value">A1 mini</span>
+        <small>처음 쓰는 3D 프린터 추천</small>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Saved</span>
+        <span class="metric-value" id="saved-count">0</span>
+        <small>이 브라우저에만 저장</small>
+      </div>
+    </section>
+
+    <div class="controls-wrap">
+      <div class="controls" aria-label="제품 필터">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">전체 9</button>
+        <button class="filter-button" type="button" data-filter="gear" aria-pressed="false">메이커·홈</button>
+        <button class="filter-button" type="button" data-filter="wear" aria-pressed="false">웨어</button>
+        <button class="filter-button" type="button" data-filter="training" aria-pressed="false">트레이닝</button>
+        <button class="filter-button" type="button" data-filter="recovery" aria-pressed="false">보호대</button>
+        <button class="filter-button" type="button" data-filter="camera" aria-pressed="false">카메라</button>
+        <input class="search" id="product-search" type="search" placeholder="제품명·브랜드 검색" aria-label="제품명 또는 브랜드 검색">
+      </div>
+    </div>
+
+    <section class="catalogue" id="wishlist" aria-label="위시리스트 제품">
+      <article class="card featured" data-category="gear" data-search="bambu lab a1 mini 3d printer 뱀부랩 가성비 3d 프린터">
+        <div class="media">
+          <span class="rank">01 · MAKER</span>
+          <span class="choice">BEST VALUE</span>
+          <img src="./assets/bambu-a1-mini.png" alt="Bambu Lab A1 mini 3D 프린터" width="720" height="720">
+        </div>
+        <div class="card-body">
+          <p class="category">가성비 3D 프린터 · 최종 선택</p>
+          <h2>Bambu Lab A1 mini</h2>
+          <p class="model">PF002-M · 단품 기준</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">공식 세일가</span>
+              <span class="price">₩309,000</span>
+            </div>
+            <div class="compare-price"><s>정가 ₩503,000</s>약 39%↓</div>
+          </div>
+          <p class="reason">조립·레벨링에 시간을 쓰지 않고 바로 출력하고 싶을 때 가장 설득력 있는 입문기. 자동 보정과 앱 모니터링까지 기본이라 첫 실패 비용을 줄이기 좋다.</p>
+          <ul class="specs">
+            <li>180×180×180mm</li>
+            <li>최대 500mm/s</li>
+            <li>풀 오토 캘리브레이션</li>
+            <li>PLA·PETG·TPU</li>
+            <li>AMS lite 4색 지원</li>
+          </ul>
+          <p class="watch">체크: 헬멧·대형 소품은 출력 면적이 작을 수 있습니다. ABS·ASA처럼 챔버가 필요한 재료는 공식적으로 비추천.</p>
+          <div class="actions">
+            <a class="action primary" href="https://kr.store.bambulab.com/products/a1-mini" target="_blank" rel="noopener noreferrer">공식 구매 <span>↗</span></a>
+            <a class="action" href="https://prod.danawa.com/info/?deliveryYN=Y&amp;pcode=75538655" target="_blank" rel="noopener noreferrer">다나와 비교 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="bambu-a1-mini" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card featured" data-category="camera" data-search="sony alpha a7r v a7r5 a7rm5 sel2470gm2 fe 24-70 f2.8 gm ii 소니 알파 7 r 마크 5 카메라 렌즈 표준줌 금계륵투">
+        <div class="media dark">
+          <span class="rank">09 · CAMERA</span>
+          <span class="choice">61 MP</span>
+          <img src="./assets/sony-a7rv.png" alt="Sony Alpha 7R V 미러리스 카메라 바디" width="800" height="600">
+          <a class="camera-bundle" href="https://www.sony.co.kr/lenses/products/sel2470gm2" target="_blank" rel="noopener noreferrer" aria-label="추천 렌즈 FE 24-70mm F2.8 GM II, 약 264만원 추가, 소니 공식 정보 열기">
+            <img src="./assets/sony-sel2470gm2.png" alt="" width="1200" height="1200" aria-hidden="true">
+            <span class="camera-bundle-copy">
+              <small>같이 쓰는 렌즈</small>
+              <strong>24–70 GM II</strong>
+              <em class="camera-bundle-price">(+264만)</em>
+            </span>
+          </a>
+        </div>
+        <div class="card-body">
+          <p class="category">고해상도 풀프레임</p>
+          <h2>Sony α7R V</h2>
+          <p class="model">ILCE-7RM5 · 바디 단품 · A7R M5</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">국내 판매가 기준</span>
+              <span class="price">₩5,290,000</span>
+            </div>
+            <div class="compare-price">정품 여부 필수 확인</div>
+          </div>
+          <p class="reason">제품·패션·풍경처럼 크롭과 디테일이 중요한 촬영에 맞는 R 라인. 전용 AI 프로세싱 유닛 덕분에 고화소와 피사체 인식 AF를 함께 가져간다.</p>
+          <ul class="specs">
+            <li>61.0MP 풀프레임</li>
+            <li>AI 피사체 인식</li>
+            <li>8K 24p</li>
+            <li>4K 60p</li>
+            <li>5축 손떨림 보정</li>
+          </ul>
+          <p class="watch">체크: 바디·렌즈 모두 정품 여부와 공식 행사·보상판매를 먼저 비교하세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://www.sony.co.kr/interchangeable-lens-cameras/products/ilce-7rm5" target="_blank" rel="noopener noreferrer">공식 제품 <span>↗</span></a>
+            <a class="action" href="https://www.ssg.com/item/itemView.ssg?itemId=1000529169910" target="_blank" rel="noopener noreferrer">SSG 할인 확인 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="sony-a7rv-sel2470gm2" data-save-label="바디+렌즈 조합" aria-pressed="false">바디+렌즈 조합 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-category="gear" data-search="brother ja1400 홈미싱 부라더 미싱 재봉틀">
+        <div class="media">
+          <span class="rank">02 · HOME</span>
+          <img src="./assets/brother-ja1400.webp" alt="Brother JA1400 가정용 미싱" width="454" height="454">
+        </div>
+        <div class="card-body">
+          <p class="category">홈미싱</p>
+          <h2>Brother JA1400</h2>
+          <p class="model">기계식 입문형 · 220V 국내 판매 모델</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">오늘의집 확인가</span>
+              <span class="price">₩175,000</span>
+            </div>
+            <div class="compare-price">검색가 ₩167K~</div>
+          </div>
+          <p class="reason">바짓단·파우치·기본 수선부터 시작하기 좋은 단순한 기계식 구성. 다이얼 선택과 발판 방식이라 전자식 기능을 배우기 전에 봉제 기본기를 익히기 쉽다.</p>
+          <ul class="specs">
+            <li>14가지 스티치</li>
+            <li>분당 750땀</li>
+            <li>4단계 단춧구멍</li>
+            <li>LED 조명</li>
+            <li>수평가마·프리암</li>
+          </ul>
+          <p class="watch">체크: 판매처별 확장 테이블·수강증·노루발 구성 차이가 큽니다. 본체만 싼지, 사은품 포함인지 비교하세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://store.ohou.se/goods/2075096" target="_blank" rel="noopener noreferrer">오늘의집 구매 <span>↗</span></a>
+            <a class="action" href="https://search.danawa.com/dsearch.php?query=%EB%B6%80%EB%9D%BC%EB%8D%94ja1400" target="_blank" rel="noopener noreferrer">다나와 검색 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="brother-ja1400" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-category="wear training" data-search="lululemon license to train linerless shorts 7 룰루레몬 라이선스 투 트레인 쇼츠">
+        <div class="media">
+          <span class="rank">03 · WEAR</span>
+          <img src="./assets/lululemon-ltt.jpg" alt="룰루레몬 라이선스 투 트레인 라이너리스 쇼츠 7인치 블랙" width="800" height="800">
+        </div>
+        <div class="card-body">
+          <p class="category">트레이닝 쇼츠</p>
+          <h2>License to Train 7″</h2>
+          <p class="model">라이너리스 쇼츠 · 업데이트</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">공식 판매가</span>
+              <span class="price">₩125,000</span>
+            </div>
+            <div class="compare-price">색상별 세일 확인</div>
+          </div>
+          <p class="reason">웨이트·크로스핏처럼 바닥과 기구에 자주 닿는 운동용. 얇은 포켓과 웨이스트밴드, 마모에 강한 속건 원단이 데일리 쇼츠와 구분되는 핵심이다.</p>
+          <ul class="specs">
+            <li>7인치</li>
+            <li>라이너 없음</li>
+            <li>마모 저항</li>
+            <li>땀 배출·속건</li>
+            <li>지퍼 포켓</li>
+          </ul>
+          <p class="watch">체크: 컬러마다 가격과 재고가 다릅니다. 한국 표기 M은 KR 100, L은 KR 105 기준이므로 평소 바지 실측과 비교하세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://www.lululemon.co.kr/ko-kr/p/%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%ED%88%AC-%ED%8A%B8%EB%A0%88%EC%9D%B8-%EB%9D%BC%EC%9D%B4%EB%84%88%EB%A6%AC%EC%8A%A4-%EC%87%BC%EC%B8%A0-7%22-%2A%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/157712410.html" target="_blank" rel="noopener noreferrer">공식 구매 <span>↗</span></a>
+            <a class="action" href="https://www.lululemon.co.kr/ko-kr/c/mens-we-made-too-much" target="_blank" rel="noopener noreferrer">공식 세일 확인 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="lululemon-ltt" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-product-card="ua" data-category="wear training" data-search="under armour unstoppable project rock vanish woven launch 2in1 shorts 언더아머 언스타퍼블 배니시 우븐 론치 투인원 쇼츠">
+        <div class="media">
+          <span class="rank">04 · WEAR</span>
+          <span class="choice" data-product-field="choice">1순위 · TRAIN</span>
+          <img data-product-image src="./assets/ua-vanish.jpg" alt="언더아머 배니시 우븐 2.0 남성 6인치 쇼츠" width="800" height="1000">
+        </div>
+        <div class="variant-switcher" aria-label="언더아머 후보 선택">
+          <button class="variant-button" type="button" data-product-option="ua-vanish" aria-pressed="true">
+            <span class="variant-rank">1순위 · TRAIN</span>
+            <strong>Vanish Woven</strong>
+            <small>₩69,000</small>
+          </button>
+          <button class="variant-button" type="button" data-product-option="ua-unstoppable" aria-pressed="false">
+            <span class="variant-rank">2순위 · PREMIUM</span>
+            <strong>Unstoppable</strong>
+            <small>정가 ₩99,000</small>
+          </button>
+          <button class="variant-button" type="button" data-product-option="ua-launch" aria-pressed="false">
+            <span class="variant-rank">3순위 · RUN</span>
+            <strong>Launch 2-in-1</strong>
+            <small>정가 ₩55,000</small>
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="sr-only" data-product-announcer aria-live="polite"></div>
+          <p class="category" data-product-field="category">언더아머 · 트레이닝 1순위</p>
+          <h2 data-product-field="title">UA Vanish Woven 2.0</h2>
+          <p class="model" data-product-field="model">남성 6인치 쇼츠 · 6009865</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label" data-product-field="priceLabel">한국 공식 판매가</span>
+              <span class="price" data-product-field="price">₩69,000</span>
+            </div>
+            <div class="compare-price" data-product-field="compare">신상품</div>
+          </div>
+          <p class="reason" data-product-field="reason">웨이트와 고강도 운동에 가장 직접적인 1순위. 6인치 길이, 4방향 스트레치와 측면 메쉬가 깊은 동작에서 움직임과 통기성의 균형을 잡는다.</p>
+          <ul class="specs" data-product-specs>
+            <li>인심 15.2cm</li>
+            <li>4방향 스트레치</li>
+            <li>측면 메쉬</li>
+            <li>초경량 우븐</li>
+            <li>안감 없음</li>
+          </ul>
+          <p class="watch" data-product-field="watch">체크: 러닝 전용 수납이나 2-in-1 라이너가 필요하면 Launch가 더 맞습니다. 이 제품은 오픈형 핸드 포켓 구성입니다.</p>
+          <div class="actions">
+            <a class="action primary" data-product-link="primary" href="https://www.underarmour.co.kr/ko-kr/p/%ED%95%98%EC%9D%98/ua_%EB%B0%B0%EB%8B%88%EC%8B%9C_%EC%9A%B0%EB%B8%90_2.0/6009865.html" target="_blank" rel="noopener noreferrer">한국 공식 구매 <span>↗</span></a>
+            <a class="action" data-product-link="secondary" href="https://www.underarmour.co.kr/ko-kr/c/outlet/" target="_blank" rel="noopener noreferrer">UA 시즌오프 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="ua-vanish" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-product-card="nb" data-category="wear training" data-search="new balance men 2in1 rc shorts 7 rc essential shorts 5 뉴발란스 쇼츠 nb dry nbnvg26221 nbnvg36211 ms41283">
+        <div class="media">
+          <span class="rank">05 · RUN</span>
+          <span class="choice" data-product-field="choice">공식가 1위</span>
+          <img data-product-image src="./assets/new-balance-rc.jpg" alt="뉴발란스 MEN 2in1 RC 쇼츠 7인치 블랙" width="800" height="800">
+        </div>
+        <div class="variant-switcher" aria-label="뉴발란스 후보 선택">
+          <button class="variant-button" type="button" data-product-option="nb-2in1-rc7" aria-pressed="true">
+            <span class="variant-rank">1순위 · PREMIUM</span>
+            <strong>2in1 RC 7″</strong>
+            <small>₩99,900</small>
+          </button>
+          <button class="variant-button" type="button" data-product-option="nb-rc7" aria-pressed="false">
+            <span class="variant-rank">2순위 · RACE</span>
+            <strong>RC Short 7″</strong>
+            <small>정가 $64.99</small>
+          </button>
+          <button class="variant-button" type="button" data-product-option="nb-essential5" aria-pressed="false">
+            <span class="variant-rank">3순위 · VALUE</span>
+            <strong>RC Essential 5″</strong>
+            <small>₩69,900</small>
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="sr-only" data-product-announcer aria-live="polite"></div>
+          <p class="category" data-product-field="category">뉴발란스 · 공식가 기준 1순위</p>
+          <h2 data-product-field="title">MEN 2in1 RC Shorts 7″</h2>
+          <p class="model" data-product-field="model">NBNVG26221 · 블랙/브라운</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label" data-product-field="priceLabel">한국 공식 판매가</span>
+              <span class="price" data-product-field="price">₩99,900</span>
+            </div>
+            <div class="compare-price" data-product-field="compare"><s>공식 ₩99,900</s>다나와 ₩94,310</div>
+          </div>
+          <p class="reason" data-product-field="reason">세 후보 중 한국 공식가가 가장 높은 7인치 미드라이즈. NB DRY, 사이드 트임, 작은 물건용 히든 포켓으로 러닝뿐 아니라 실내 운동과 일상까지 활용 범위가 넓다.</p>
+          <ul class="specs" data-product-specs>
+            <li>7인치</li>
+            <li>NB DRY</li>
+            <li>사이드 포켓</li>
+            <li>내부 히든 포켓</li>
+            <li>밑단 트임</li>
+          </ul>
+          <p class="watch" data-product-field="watch">중요: 이름은 “2in1”이지만 공식 상세와 Q&amp;A 모두 이너브리프가 없는 디자인이라고 안내합니다.</p>
+          <div class="actions">
+            <a class="action primary" data-product-link="primary" href="https://pay.nbkorea.com/product/productDetail.action?colCode=19&amp;styleCode=NBNVG26221" target="_blank" rel="noopener noreferrer">한국 공식 구매 <span>↗</span></a>
+            <a class="action" data-product-link="secondary" href="https://prod.danawa.com/info/?pcode=104941712" target="_blank" rel="noopener noreferrer">다나와 비교 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="nb-2in1-rc7" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-category="training" data-search="rpm session4 jump rope 줄넘기 알피엠 세션4 스피드로프 더블언더">
+        <div class="media dark">
+          <span class="rank">06 · TRAIN</span>
+          <img src="./assets/rpm-session4.jpg" alt="RPM Training Session4 스피드 줄넘기" width="1800" height="1800">
+        </div>
+        <div class="card-body">
+          <p class="category">스피드 줄넘기</p>
+          <h2>RPM Session4</h2>
+          <p class="model">True Black · 코팅 케이블 기본</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">공식 판매가</span>
+              <span class="price">$65</span>
+            </div>
+            <div class="compare-price">국내 비교 ₩85K~</div>
+          </div>
+          <p class="reason">더블언더를 배우고 기록까지 가져갈 대표 스피드로프. 듀얼 베어링과 케이블 비틀림을 줄이는 2축 회전이 손목 부담과 회전 손실을 줄여준다.</p>
+          <ul class="specs">
+            <li>듀얼 베어링</li>
+            <li>알루미늄 핸들</li>
+            <li>2축 회전</li>
+            <li>12ft 코팅 케이블</li>
+            <li>길이 조절·교체</li>
+          </ul>
+          <p class="watch">체크: 국내 에디션은 13만원대까지 올라갑니다. 디자인보다 기본 성능이 목적이면 일반 Session4 재고를 먼저 찾으세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://rpmtraining.com/products/session4" target="_blank" rel="noopener noreferrer">공식 구매 <span>↗</span></a>
+            <a class="action" href="https://prod.danawa.com/info/?pcode=18852632" target="_blank" rel="noopener noreferrer">다나와 비교 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="rpm-session4" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-category="recovery" data-search="mueller sports brace adjustable knee support 6441 뮬러 스포츠보호대 무릎">
+        <div class="media">
+          <span class="rank">07 · SUPPORT</span>
+          <img src="./assets/mueller-knee.jpg" alt="Mueller Adjustable Knee Support 6441 무릎보호대" width="900" height="900">
+        </div>
+        <div class="card-body">
+          <p class="category">뮬러 스포츠보호대 · 무릎</p>
+          <h2>Adjustable Knee Support</h2>
+          <p class="model">Mueller 6441 · 좌우 공용</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">미국 공식가</span>
+              <span class="price">$28.99</span>
+            </div>
+            <div class="compare-price">국내가는 판매처별 확인</div>
+          </div>
+          <p class="reason">크리오로지 손목보호대와 부위가 겹치지 않게 고른 기본 무릎 서포트. 랩 방식이라 압박을 직접 조절하고 좌우 무릎에 번갈아 쓸 수 있다.</p>
+          <ul class="specs">
+            <li>SKU 6441</li>
+            <li>좌우 공용</li>
+            <li>원사이즈</li>
+            <li>조절식 압박</li>
+            <li>무릎둘레 30.5~53.3cm</li>
+          </ul>
+          <p class="watch">체크: 기본 압박용이지 측면 흔들림을 강하게 막는 힌지형은 아닙니다. 통증·부상 상태는 의료진에게 먼저 확인하세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://www.muellersportsmed.com/b2c-us/en/Open-Catalogue/By-Body-Part/Knee-Braces-%26-Sleeves/ADJUSTABLE-KNEE-SUPPORT-BLACK/p/6441" target="_blank" rel="noopener noreferrer">공식 제품 <span>↗</span></a>
+            <a class="action" href="https://search.shopping.naver.com/search/all?query=%EB%AE%AC%EB%9F%AC%206441%20%EB%AC%B4%EB%A6%8E%EB%B3%B4%ED%98%B8%EB%8C%80" target="_blank" rel="noopener noreferrer">네이버 최저가 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="mueller-6441" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-category="recovery training" data-search="chriology weightlifting wrist wrap 크리오로지 손목보호대 역도선수용 손목붕대 블랙">
+        <div class="media">
+          <span class="rank">08 · SUPPORT</span>
+          <img src="./assets/chriology-wrist.jpg" alt="크리오로지 역도선수용 손목붕대 블랙" width="600" height="600">
+        </div>
+        <div class="card-body">
+          <p class="category">손목 서포트</p>
+          <h2>크리오로지 손목붕대</h2>
+          <p class="model">역도선수용 · 블랙 · 국내 생산</p>
+          <div class="price-box">
+            <div>
+              <span class="price-label">공식 판매가</span>
+              <span class="price">₩22,000</span>
+            </div>
+            <div class="compare-price">G마켓 쿠폰가 ₩19,800</div>
+          </div>
+          <p class="reason">프레스·역도 동작에서 손목 각도를 단단히 잡는 국내 브랜드 제품. 신축 슬리브보다 감는 강도를 직접 조절하기 좋아 중량 운동용으로 명확하다.</p>
+          <ul class="specs">
+            <li>역도용 랩 타입</li>
+            <li>강도 직접 조절</li>
+            <li>좌우 한 쌍</li>
+            <li>국내 생산</li>
+            <li>기본 블랙</li>
+          </ul>
+          <p class="watch">체크: 너무 세게 감으면 저림이 생길 수 있습니다. 세트 사이에는 압박을 풀고, 봉제·벨크로 상태를 주기적으로 확인하세요.</p>
+          <div class="actions">
+            <a class="action primary" href="https://chriology.co.kr/product/%EC%97%AD%EB%8F%84%EC%84%A0%EC%88%98%EC%9A%A9-%EC%86%90%EB%AA%A9%EB%B6%95%EB%8C%80%EB%B8%94%EB%9E%99/88/" target="_blank" rel="noopener noreferrer">공식 구매 <span>↗</span></a>
+            <a class="action" href="https://item.gmarket.co.kr/Item?goodscode=1954667777" target="_blank" rel="noopener noreferrer">G마켓 할인 <span>↗</span></a>
+            <button class="save-button" type="button" data-save="chriology-wrist" aria-pressed="false">1순위로 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <p class="empty" id="empty-state">검색 조건에 맞는 제품이 없습니다.</p>
+    </section>
+
+    <section class="buy-plan" aria-labelledby="buy-plan-title">
+      <h2 id="buy-plan-title">BUY SMARTER, NOT FASTER.</h2>
+      <p>세일 문구보다 실제 사용 순서가 먼저. 이 리스트는 다음처럼 사면 실패 확률이 낮습니다.</p>
+      <div class="plan-grid">
+        <div class="plan-step">
+          <b>1</b>
+          <strong>몸에 닿는 것부터</strong>
+          <span>쇼츠와 보호대는 사이즈·반품 조건을 먼저 확인하고 한 번에 한 모델씩.</span>
+        </div>
+        <div class="plan-step">
+          <b>2</b>
+          <strong>작은 장비로 습관 확인</strong>
+          <span>줄넘기와 미싱을 실제로 꾸준히 쓰는지 본 뒤 큰 메이커 장비로 확장.</span>
+        </div>
+        <div class="plan-step">
+          <b>3</b>
+          <strong>카메라는 행사 때</strong>
+          <span>α7R V는 정가 즉시 결제보다 공식 보상판매·사은품·정품 재고를 비교.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>가격·재고는 2026-07-28 KST 확인 기준이며 예고 없이 달라질 수 있습니다. 결제 전 판매자, 정품 여부, 배송비와 반품 조건을 다시 확인하세요.</p>
+      <p>제품 이미지는 각 브랜드·판매처의 대표 상품 이미지를 위시리스트 미리보기 용도로 사용했습니다. © ZZEE</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const cards = [...document.querySelectorAll(".card")];
+      const filters = [...document.querySelectorAll(".filter-button")];
+      const search = document.querySelector("#product-search");
+      const emptyState = document.querySelector("#empty-state");
+      const savedCount = document.querySelector("#saved-count");
+      const saveButtons = [...document.querySelectorAll("[data-save]")];
+      const variantCards = [...document.querySelectorAll("[data-product-card]")];
+      const storageKey = "zzee-wishlist-saved-v1";
+      const variantStorageKey = "zzee-wishlist-variants-v2";
+      const productVariants = {
+        ua: {
+          "ua-unstoppable": {
+            image: "./assets/ua-unstoppable.jpg",
+            alt: "언더아머 프로젝트 락 언스타퍼블 남성 쇼츠",
+            width: 800,
+            height: 1000,
+            choice: "2순위 · PREMIUM",
+            category: "언더아머 · 프리미엄 2순위",
+            title: "Project Rock Unstoppable",
+            model: "남성 8인치 쇼츠 · 1370467",
+            priceLabel: "현재 공식 세일가",
+            price: "₩29,700",
+            original: "₩99,000",
+            compare: "70% OFF",
+            reason: "정가는 가장 높지만 트레이닝 집중도에서는 2순위. UA Storm 발수와 신축 우븐, 지퍼 포켓을 갖춰 운동 전후·이동·가벼운 트레이닝까지 한 벌로 쓰기 좋다.",
+            specs: ["인심 20.32cm", "UA Storm 발수", "4방향 스트레치", "지퍼 포켓", "안감 없음"],
+            watch: "체크: 현재 공식몰은 70% 할인 중이라 실구매가는 오히려 가장 낮습니다. 정가·소재 등급을 기준으로 메인에 두었고, 재고와 사이즈가 빠르게 줄 수 있습니다.",
+            primary: {
+              label: "공식 세일 구매",
+              href: "https://www.underarmour.co.kr/ko-kr/p/%EC%95%84%EC%9A%B0%ED%84%B0_and_unstoppable_%EC%BB%AC%EB%A0%89%EC%85%98/%EB%82%A8%EC%84%B1_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EB%9D%BD_%EC%96%B8%EC%8A%A4%ED%83%80%ED%8D%BC%EB%B8%94_%EC%87%BC%EC%B8%A0/1370467.html"
+            },
+            secondary: {
+              label: "UA 시즌오프",
+              href: "https://www.underarmour.co.kr/ko-kr/c/outlet/"
+            },
+            saveId: "ua-unstoppable"
+          },
+          "ua-vanish": {
+            image: "./assets/ua-vanish.jpg",
+            alt: "언더아머 배니시 우븐 2.0 남성 6인치 쇼츠",
+            width: 800,
+            height: 1000,
+            choice: "1순위 · TRAIN",
+            category: "언더아머 · 트레이닝 1순위",
+            title: "UA Vanish Woven 2.0",
+            model: "남성 6인치 쇼츠 · 6009865",
+            priceLabel: "한국 공식 판매가",
+            price: "₩69,000",
+            original: "",
+            compare: "신상품",
+            reason: "웨이트와 고강도 운동에 가장 직접적인 1순위. 6인치 길이, 4방향 스트레치와 측면 메쉬가 깊은 동작에서 움직임과 통기성의 균형을 잡는다.",
+            specs: ["인심 15.2cm", "4방향 스트레치", "측면 메쉬", "초경량 우븐", "안감 없음"],
+            watch: "체크: 러닝 전용 수납이나 2-in-1 라이너가 필요하면 Launch가 더 맞습니다. 이 제품은 오픈형 핸드 포켓 구성입니다.",
+            primary: {
+              label: "한국 공식 구매",
+              href: "https://www.underarmour.co.kr/ko-kr/p/%ED%95%98%EC%9D%98/ua_%EB%B0%B0%EB%8B%88%EC%8B%9C_%EC%9A%B0%EB%B8%90_2.0/6009865.html"
+            },
+            secondary: {
+              label: "UA 시즌오프",
+              href: "https://www.underarmour.co.kr/ko-kr/c/outlet/"
+            },
+            saveId: "ua-vanish"
+          },
+          "ua-launch": {
+            image: "./assets/ua-launch.jpg",
+            alt: "언더아머 론치 남성 5인치 투인원 쇼츠",
+            width: 800,
+            height: 1000,
+            choice: "3순위 · RUN",
+            category: "언더아머 · 러닝 3순위",
+            title: "UA Launch 5″ 2-in-1",
+            model: "남성 투인원 쇼츠 · 1372631",
+            priceLabel: "현재 공식 세일가",
+            price: "₩38,500",
+            original: "₩55,000",
+            compare: "30% OFF",
+            reason: "러닝을 우선한다면 가장 기능이 명확한 후보. 초경량 우븐 바깥감에 컴프레션 이너와 파워메쉬 휴대전화 포켓을 더해 흔들림과 쓸림을 줄인다.",
+            specs: ["아우터 5인치", "이너 7인치", "컴프레션 안감", "측면 메쉬", "휴대전화 포켓"],
+            watch: "체크: 공식 페이지에서 품절로 표시될 수 있습니다. 재입고·컬러별 재고는 Launch 컬렉션과 시즌오프 페이지에서 다시 확인하세요.",
+            primary: {
+              label: "공식 제품 확인",
+              href: "https://www.underarmour.co.kr/ko-kr/p/%ED%95%98%EC%9D%98/%EB%82%A8%EC%84%B1_ua_%EB%A1%A0%EC%B9%98_5%EC%9D%B8%EC%B9%98_%ED%88%AC%EC%9D%B8%EC%9B%90_%EC%87%BC%EC%B8%A0/1372631.html"
+            },
+            secondary: {
+              label: "Launch 재고",
+              href: "https://www.underarmour.co.kr/ko-kr/c/ua-launch/"
+            },
+            saveId: "ua-launch"
+          }
+        },
+        nb: {
+          "nb-2in1-rc7": {
+            image: "./assets/new-balance-rc.jpg",
+            alt: "뉴발란스 MEN 2in1 RC 쇼츠 7인치 블랙",
+            width: 800,
+            height: 800,
+            choice: "공식가 1위",
+            category: "뉴발란스 · 공식가 기준 1순위",
+            title: "MEN 2in1 RC Shorts 7″",
+            model: "NBNVG26221 · 블랙/브라운",
+            priceLabel: "한국 공식 판매가",
+            price: "₩99,900",
+            original: "공식 ₩99,900",
+            compare: "다나와 ₩94,310",
+            reason: "세 후보 중 한국 공식가가 가장 높은 7인치 미드라이즈. NB DRY, 사이드 트임, 작은 물건용 히든 포켓으로 러닝뿐 아니라 실내 운동과 일상까지 활용 범위가 넓다.",
+            specs: ["7인치", "NB DRY", "사이드 포켓", "내부 히든 포켓", "밑단 트임"],
+            watch: "중요: 이름은 “2in1”이지만 공식 상세와 Q&A 모두 이너브리프가 없는 디자인이라고 안내합니다.",
+            primary: {
+              label: "한국 공식 구매",
+              href: "https://pay.nbkorea.com/product/productDetail.action?colCode=19&styleCode=NBNVG26221"
+            },
+            secondary: {
+              label: "다나와 비교",
+              href: "https://prod.danawa.com/info/?pcode=104941712"
+            },
+            saveId: "nb-2in1-rc7"
+          },
+          "nb-rc7": {
+            image: "./assets/nb-rc7.jpg",
+            alt: "뉴발란스 RC Short 7인치 블랙 남성 러닝 쇼츠",
+            width: 800,
+            height: 800,
+            choice: "2순위 · RACE",
+            category: "뉴발란스 · 레이스 2순위",
+            title: "RC Short 7″",
+            model: "MS41283BK · 미국 공식 모델",
+            priceLabel: "미국 공식 세일가",
+            price: "$45.49",
+            original: "$64.99",
+            compare: "30% OFF",
+            reason: "기록 러닝에 가장 특화된 후보. 천공 4방향 스트레치 우븐, 심리스 내장 브리프, 후면 지퍼 포켓과 내부 드롭인 포켓이 달릴 때의 흔들림을 줄인다.",
+            specs: ["7인치", "NB DRY", "내장 브리프", "4방향 스트레치", "리플렉티브"],
+            watch: "체크: 미국 공식 판매 모델이라 국내 정식 재고와 가격은 다를 수 있습니다. 해외배송비·관부가세·반품 조건을 포함해 계산하세요.",
+            primary: {
+              label: "미국 공식 구매",
+              href: "https://www.newbalance.com/pd/rc-short-7/MS41283.html"
+            },
+            secondary: {
+              label: "국내 판매 검색",
+              href: "https://search.shopping.naver.com/search/all?query=%EB%89%B4%EB%B0%9C%EB%9E%80%EC%8A%A4%20RC%20%EC%87%BC%EC%B8%A0%207%EC%9D%B8%EC%B9%98"
+            },
+            saveId: "nb-rc7"
+          },
+          "nb-essential5": {
+            image: "./assets/nb-essential5.jpg",
+            alt: "뉴발란스 MEN RC 에센셜 쇼츠 5인치 블랙",
+            width: 1200,
+            height: 1200,
+            choice: "3순위 · VALUE",
+            category: "뉴발란스 · 가성비 3순위",
+            title: "MEN RC Essential Shorts 5″",
+            model: "NBNVG36211 · 블랙/레드/다크베이지",
+            priceLabel: "한국 공식 판매가",
+            price: "₩69,900",
+            original: "",
+            compare: "2026 NEW",
+            reason: "짧은 기장과 이너브리프를 원하는 러너에게 맞는 가성비 후보. 5인치 기장, NB DRY와 히든 포켓을 갖춰 스피드 훈련과 더운 날에 유리하다.",
+            specs: ["5인치", "NB DRY", "이너브리프 있음", "내부 히든 포켓", "밑단 트임"],
+            watch: "체크: 공식 Q&A에서 초기 상세 오류를 정정해 이너브리프가 있는 제품이라고 확인했습니다. 사이즈별 재고는 결제 전에 다시 확인하세요.",
+            primary: {
+              label: "한국 공식 구매",
+              href: "https://pay.nbkorea.com/product/productDetail.action?colCode=19&styleCode=NBNVG36211"
+            },
+            secondary: {
+              label: "국내 가격 검색",
+              href: "https://search.shopping.naver.com/search/all?query=NBNVG36211"
+            },
+            saveId: "nb-essential5"
+          }
+        }
+      };
+      let activeFilter = "all";
+      let saved = [];
+      let selectedVariants = {};
+
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        if (!Array.isArray(saved)) saved = [];
+      } catch {
+        saved = [];
+      }
+
+      saved = [...new Set(saved.map((id) => {
+        if (id === "nb-rc-shorts") return "nb-2in1-rc7";
+        if (id === "sony-a7rv") return "sony-a7rv-sel2470gm2";
+        return id;
+      }))];
+
+      try {
+        selectedVariants = JSON.parse(localStorage.getItem(variantStorageKey) || "{}");
+        if (!selectedVariants || Array.isArray(selectedVariants) || typeof selectedVariants !== "object") {
+          selectedVariants = {};
+        }
+      } catch {
+        selectedVariants = {};
+      }
+
+      const updateSaved = () => {
+        saveButtons.forEach((button) => {
+          const isSaved = saved.includes(button.dataset.save);
+          const customLabel = button.dataset.saveLabel;
+          button.setAttribute("aria-pressed", String(isSaved));
+          button.textContent = customLabel
+            ? (isSaved ? `${customLabel} 저장됨` : `${customLabel} 저장`)
+            : (isSaved ? "1순위에 저장됨" : "1순위로 저장");
+        });
+        savedCount.textContent = String(saved.length);
+      };
+
+      const setActionLink = (link, data) => {
+        link.href = data.href;
+        const arrow = document.createElement("span");
+        arrow.textContent = "↗";
+        arrow.setAttribute("aria-hidden", "true");
+        link.replaceChildren(document.createTextNode(`${data.label} `), arrow);
+      };
+
+      const selectVariant = (card, key, announce = false, persist = false) => {
+        const group = card.dataset.productCard;
+        const product = productVariants[group]?.[key];
+        if (!product) return;
+
+        ["choice", "category", "title", "model", "priceLabel", "price", "reason", "watch"].forEach((field) => {
+          const target = card.querySelector(`[data-product-field="${field}"]`);
+          if (target) target.textContent = product[field];
+        });
+
+        const image = card.querySelector("[data-product-image]");
+        image.src = product.image;
+        image.alt = product.alt;
+        image.width = product.width;
+        image.height = product.height;
+
+        const compare = card.querySelector('[data-product-field="compare"]');
+        compare.replaceChildren();
+        if (product.original) {
+          const original = document.createElement("s");
+          original.textContent = product.original;
+          compare.append(original);
+        }
+        compare.append(document.createTextNode(product.compare));
+
+        const specs = card.querySelector("[data-product-specs]");
+        specs.replaceChildren(...product.specs.map((spec) => {
+          const item = document.createElement("li");
+          item.textContent = spec;
+          return item;
+        }));
+
+        setActionLink(card.querySelector('[data-product-link="primary"]'), product.primary);
+        setActionLink(card.querySelector('[data-product-link="secondary"]'), product.secondary);
+
+        const saveButton = card.querySelector("[data-save]");
+        saveButton.dataset.save = product.saveId;
+        card.querySelectorAll("[data-product-option]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.productOption === key));
+        });
+
+        selectedVariants[group] = key;
+        if (persist) {
+          try {
+            localStorage.setItem(variantStorageKey, JSON.stringify(selectedVariants));
+          } catch {
+            // Variant switching still works when storage is disabled.
+          }
+        }
+
+        if (announce) {
+          card.querySelector("[data-product-announcer]").textContent = `${product.title} 정보로 변경했습니다.`;
+        }
+        updateSaved();
+      };
+
+      const applyFilters = () => {
+        const query = search.value.trim().toLocaleLowerCase("ko");
+        let visible = 0;
+
+        cards.forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          const matchesFilter = activeFilter === "all" || categories.includes(activeFilter);
+          const matchesSearch = !query || card.dataset.search.toLocaleLowerCase("ko").includes(query);
+          const show = matchesFilter && matchesSearch;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        emptyState.classList.toggle("visible", visible === 0);
+      };
+
+      filters.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          filters.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+          applyFilters();
+        });
+      });
+
+      search.addEventListener("input", applyFilters);
+
+      variantCards.forEach((card) => {
+        const group = card.dataset.productCard;
+        const fallback = card.querySelector('[data-product-option][aria-pressed="true"]')?.dataset.productOption;
+        const initial = productVariants[group]?.[selectedVariants[group]] ? selectedVariants[group] : fallback;
+        selectVariant(card, initial);
+
+        card.querySelectorAll("[data-product-option]").forEach((button) => {
+          button.addEventListener("click", () => {
+            selectVariant(card, button.dataset.productOption, true, true);
+          });
+        });
+      });
+
+      saveButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.dataset.save;
+          saved = saved.includes(id) ? saved.filter((item) => item !== id) : [...saved, id];
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(saved));
+          } catch {
+            // The page still works when storage is disabled.
+          }
+          updateSaved();
+        });
+      });
+
+      updateSaved();
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>

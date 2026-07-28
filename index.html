@@ -111,7 +111,7 @@
       .stamp {
         display: grid;
         gap: 9px;
-        min-width: 148px;
+        min-width: 190px;
         min-height: 86px;
         align-content: center;
         border: 1px solid var(--line);
@@ -136,6 +136,8 @@
       }
 
       .local-copy,
+      .local-link,
+      .local-action,
       .local-placeholder {
         display: inline-flex;
         min-height: 25px;
@@ -148,14 +150,18 @@
         font: inherit;
         font-size: 11px;
         font-weight: 900;
+        text-decoration: none;
       }
 
-      .local-copy {
+      .local-copy,
+      .local-action {
         cursor: pointer;
         transition: background 160ms ease, color 160ms ease;
       }
 
-      .local-copy:hover {
+      .local-copy:hover,
+      .local-link:hover,
+      .local-action:hover {
         background: rgba(255, 107, 53, 0.12);
         color: var(--accent);
       }
@@ -205,10 +211,25 @@
         transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
       }
 
+      .project-button {
+        width: 100%;
+        color: inherit;
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        appearance: none;
+      }
+
       .project:hover {
         border-color: var(--accent);
         box-shadow: var(--shadow);
         transform: translateY(-3px);
+      }
+
+      .project:focus-visible {
+        border-color: var(--accent);
+        outline: 3px solid rgba(255, 107, 53, 0.2);
+        outline-offset: 3px;
       }
 
       .project strong {
@@ -227,6 +248,22 @@
       .project.featured {
         border-color: rgba(255, 107, 53, 0.55);
         background: linear-gradient(135deg, #fffefa 0%, #fff4ee 100%);
+      }
+
+      .project.local-only {
+        cursor: default;
+      }
+
+      .project.local-only:hover {
+        border-color: var(--line);
+        box-shadow: 0 10px 28px rgba(25, 25, 23, 0.05);
+        transform: none;
+      }
+
+      .local-action {
+        border: 0;
+        padding: 0 10px;
+        min-height: 26px;
       }
 
       .project--hero {
@@ -307,14 +344,14 @@
             <span class="local-type">MyWindowLocal</span>
           </div>
           <p class="lead">작업 중인 웹 프로젝트와 로컬 도구를 한 번에 여는 개인 목차. 필요한 프로젝트로 바로 들어간다.</p>
-          <time class="index-date" datetime="2026-07-27">Updated 2026-07-27</time>
+          <time class="index-date" datetime="2026-07-28">Updated 2026-07-28</time>
         </div>
         <aside class="stamp" aria-label="Local shortcuts">
-          <div class="stamp-title">GitHub Pages</div>
+          <div class="stamp-title">Quick Access</div>
           <div class="local-shortcuts">
             <button class="local-copy" type="button" data-copy-value="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/index.html">OSSE Local</button>
-            <span class="local-placeholder">MyMacLocal</span>
-            <span class="local-placeholder">MyWindowLocal</span>
+            <a class="local-link" href="https://chatgpt.com/download/" target="_blank" rel="noopener">ChatGPT Work</a>
+            <a class="local-link" href="codex://skills">Codex Skills</a>
           </div>
         </aside>
       </header>
@@ -326,6 +363,18 @@
         </div>
         <div class="grid">
           <!-- CODEX:DATED-PROJECTS:START -->
+          <a class="project featured" href="./20260728-zzee-wishlist/index.html">
+            <div>
+              <strong>ZZEE’ WISHLIST</strong>
+              <time class="updated-date" datetime="2026-07-28">Updated 2026-07-28</time>
+              <p>3D 프린터·홈미싱·웨어·보호대·카메라를 정리하고, UA·NB 후보 비교와 α7R V 범용 렌즈 조합까지 담은 구매 보드.</p>
+            </div>
+            <div class="meta">
+              <span class="tag">Wishlist</span>
+              <span class="tag">Gear</span>
+              <span class="tag">Price Check</span>
+            </div>
+          </a>
           <a class="project featured" href="./20260727-uae-kbeauty-business-report/index.html">
             <div>
               <strong>UAE 두바이 K-Beauty 사업 검토안</strong>
@@ -352,6 +401,32 @@
               <span class="tag">Remote</span>
             </div>
           </a>
+
+          <a class="project" href="https://onlineosse-code.github.io/ldsf/" target="_blank" rel="noopener noreferrer">
+            <div>
+              <strong>LDSF Brand Operating System</strong>
+              <time class="updated-date" datetime="2026-06-30">Updated 2026-06-30</time>
+              <p>Laundry Surfing의 브랜드 운영 체계와 1.0·2.0 문서를 한곳에서 보는 공개 프로젝트.</p>
+            </div>
+            <div class="meta">
+              <span class="tag">Brand OS</span>
+              <span class="tag">Laundry Surfing</span>
+              <span class="tag green">Remote</span>
+            </div>
+          </a>
+
+          <article class="project local-only">
+            <div>
+              <strong>Terra del Tuono · 한국어</strong>
+              <time class="updated-date" datetime="2026-07-10">Updated 2026-07-10</time>
+              <p>Terra del Tuono 브랜드 콘텐츠를 한국어로 구성한 로컬 정적 사이트.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/osse/terradeltuono_kr_site/index.html">Open local</button>
+              <span class="tag">Brand Site</span>
+              <span class="tag blue">Local only</span>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -361,10 +436,23 @@
           <span>Archive & Tools</span>
         </div>
         <div class="grid">
+          <button class="project project-button" type="button" data-protected-href="https://docs.google.com/spreadsheets/u/1/d/1OlrzITB9tUOkQLZTWTsJ_jYfGkZYCqtwbO40VXjuHwM/edit?gid=1297364454&amp;pli=1&amp;authuser=1#gid=1297364454">
+            <div>
+              <strong>OSSE Information Sheet</strong>
+              <time class="updated-date" datetime="2026-07-28">Updated 2026-07-28</time>
+              <p>Google Sheets 자료로 이동하는 잠금 바로가기. 열기 전에 ZZEE 비밀번호를 확인한다.</p>
+            </div>
+            <div class="meta">
+              <span class="tag green">Google Sheets</span>
+              <span class="tag">Password</span>
+              <span class="tag blue">Shortcut</span>
+            </div>
+          </button>
+
           <a class="project" href="./zzee%27s%20food%20map/index.html">
             <div>
               <strong>ZZEE's Food Map</strong>
-              <time class="updated-date" datetime="2026-07-07">Updated 2026-07-07</time>
+              <time class="updated-date" datetime="2026-07-27">Updated 2026-07-27</time>
               <p>재리 맛집도. 다녀온 곳과 가보고 싶은 곳을 지도, 필터, 상세 정보로 관리하는 개인 맛집 아카이브.</p>
             </div>
             <div class="meta">
@@ -434,6 +522,19 @@
           <span>Games & Play</span>
         </div>
         <div class="grid">
+          <a class="project featured" href="https://gemini.google.com/gem/1E07Y1HLDfBCCobXteYEnp69Ipd8DBihR?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <div>
+              <strong>Gemini Entertainment Gem</strong>
+              <time class="updated-date" datetime="2026-07-28">Updated 2026-07-28</time>
+              <p>공유된 Gemini Gem을 바로 여는 엔터테인먼트 제작·아이디어 도구.</p>
+            </div>
+            <div class="meta">
+              <span class="tag blue">Gemini</span>
+              <span class="tag">AI</span>
+              <span class="tag green">Shortcut</span>
+            </div>
+          </a>
+
           <a class="project" href="./dtd/index.html">
             <div>
               <strong>Dave the Diver</strong>
@@ -445,30 +546,238 @@
               <span class="tag blue">Guide</span>
             </div>
           </a>
+
+          <a class="project" href="./minecraft/index.html">
+            <div>
+              <strong>Minecraft Bedrock 생존 공략집</strong>
+              <time class="updated-date" datetime="2026-07-10">Updated 2026-07-10</time>
+              <p>친구 야생 생존을 위한 진행 순서, 장비, 주민·네더·엔드 공략을 정리한 웹 가이드.</p>
+            </div>
+            <div class="meta">
+              <span class="tag blue">Minecraft</span>
+              <span class="tag blue">Guide</span>
+              <span class="tag">Bedrock</span>
+            </div>
+          </a>
+
+          <a class="project" href="./minigame/Build%20Your%20Vegemil%20Factory/index.html">
+            <div>
+              <strong>베지밀 팩토리 클릭커</strong>
+              <time class="updated-date" datetime="2026-06-18">Updated 2026-06-18</time>
+              <p>생산 설비와 업그레이드를 키우며 베지밀 공장을 운영하는 브라우저 클릭커 게임.</p>
+            </div>
+            <div class="meta">
+              <span class="tag blue">Mini Game</span>
+              <span class="tag">Clicker</span>
+              <span class="tag green">Vegemil</span>
+            </div>
+          </a>
+
+          <a class="project" href="./minigame/Simkong%27s%20Adventure/index.html">
+            <div>
+              <strong>Simkong's Adventure</strong>
+              <time class="updated-date" datetime="2026-06-18">Updated 2026-06-18</time>
+              <p>Sunny Pop Squadron 캐릭터로 플레이하는 가벼운 브라우저 미니게임.</p>
+            </div>
+            <div class="meta">
+              <span class="tag blue">Mini Game</span>
+              <span class="tag">Arcade</span>
+              <span class="tag green">Local Score</span>
+            </div>
+          </a>
+
+          <article class="project local-only">
+            <div>
+              <strong>Tekken Character Usage UI</strong>
+              <time class="updated-date" datetime="2026-07-22">Updated 2026-07-22</time>
+              <p>철권 6·TTT2·7·8의 캐릭터 사용률과 랭킹 화면을 수집한 디자인 참고 자료.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/20260722-tekken-character-usage-ui/">Open folder</button>
+              <span class="tag blue">Tekken</span>
+              <span class="tag">Reference</span>
+              <span class="tag blue">Local only</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>OSSEscape</strong>
+              <time class="updated-date" datetime="2026-07-10">Updated 2026-07-10</time>
+              <p>OSSE 로컬 방탈출 프로젝트. 기존 실행 바로가기로 게임을 시작한다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/OSSEsecpae/START_OSSEscape.cmd">Run shortcut</button>
+              <span class="tag blue">Escape Game</span>
+              <span class="tag green">Executable</span>
+              <span class="tag blue">Local only</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="local-workspace-title">
+        <div class="section-head">
+          <h2 id="local-workspace-title">Local Workspace</h2>
+          <span>Windows shortcuts</span>
+        </div>
+        <div class="grid">
+          <article class="project local-only">
+            <div>
+              <strong>AI Dev Environment</strong>
+              <time class="updated-date" datetime="2026-07-21">Updated 2026-07-21</time>
+              <p>Python 3.14, Node.js 24 LTS, Git, PowerShell 7, Codex CLI와 실행 바로가기를 실제 Windows 사용자 환경에 구성했다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/20260721-ai-dev-environment-setup/start-codex.cmd">Start Codex</button>
+              <span class="tag green">Executable</span>
+              <span class="tag blue">Local only</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>Annual Leave Calculator</strong>
+              <time class="updated-date" datetime="2026-07-16">Updated 2026-07-16</time>
+              <p>연차 계산기 로컬 프로젝트. 저장소 밖의 단일 원본을 복제하지 않고 바로 연다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/annual-leave-calculator/index.html">Open local</button>
+              <span class="tag blue">Local only</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>Prompt Autocomplete</strong>
+              <time class="updated-date" datetime="2026-07-14">Updated 2026-07-14</time>
+              <p>프롬프트 자동완성 로컬 도구. 기존 시작 스크립트를 그대로 연결한다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/tools/prompt-autocomplete/start-prompt-autocomplete.cmd">Run shortcut</button>
+              <span class="tag green">Executable</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>Contact Sheet Generator</strong>
+              <time class="updated-date" datetime="2026-07-08">Updated 2026-07-08</time>
+              <p>이미지 콘택트시트를 만드는 PowerShell 도구의 기존 실행 파일을 연결한다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/%EC%BD%98%ED%83%9D%EC%8A%A4%EC%8B%9C%ED%8A%B8%EC%83%9D%EC%84%B1%EA%B8%B0/%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0.bat">Run shortcut</button>
+              <span class="tag green">Executable</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>T-money Bus Watch</strong>
+              <time class="updated-date" datetime="2026-07-10">Updated 2026-07-10</time>
+              <p>티머니 버스 모니터링 PowerShell 스크립트의 로컬 바로가기.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/tmoney_bus_watch/watch-tmoney-1820.ps1">Open script</button>
+              <span class="tag green">Executable</span>
+            </div>
+          </article>
+
+          <article class="project local-only">
+            <div>
+              <strong>PGSharp APK Analysis</strong>
+              <time class="updated-date" datetime="2026-07-14">Updated 2026-07-14</time>
+              <p>PGSharp APK 구조를 살펴보기 위한 로컬 분석 자료. 대용량 디컴파일 파일은 공개 배포에서 제외한다.</p>
+            </div>
+            <div class="meta">
+              <button class="local-action" type="button" data-local-path="file:///C:/Users/eo2jaelee/Documents/GitHub/ZZEE/pgsharp/">Open folder</button>
+              <span class="tag">APK Analysis</span>
+              <span class="tag blue">Private local</span>
+            </div>
+          </article>
         </div>
       </section>
 
       <footer>Local path: C:\Users\eo2jaelee\Documents\GitHub\ZZEE</footer>
     </main>
     <script>
-      const copyButton = document.querySelector("[data-copy-value]");
-
-      copyButton?.addEventListener("click", async () => {
-        const text = copyButton.dataset.copyValue;
-
-        if (!text) return;
-
+      const copyText = async (text) => {
         try {
           await navigator.clipboard.writeText(text);
-          copyButton.textContent = "Copied";
+          return true;
         } catch {
           window.prompt("Copy local path", text);
-          copyButton.textContent = "Copy";
+          return false;
         }
+      };
 
-        window.setTimeout(() => {
-          copyButton.textContent = "OSSE Local";
-        }, 1400);
+      document.querySelectorAll("[data-copy-value]").forEach((copyButton) => {
+        const originalLabel = copyButton.textContent;
+
+        copyButton.addEventListener("click", async () => {
+          const text = copyButton.dataset.copyValue;
+          if (!text) return;
+          await copyText(text);
+          copyButton.textContent = "Copied";
+          window.setTimeout(() => {
+            copyButton.textContent = originalLabel;
+          }, 1400);
+        });
+      });
+
+      document.querySelectorAll("[data-local-path]").forEach((localButton) => {
+        const originalLabel = localButton.textContent;
+
+        localButton.addEventListener("click", async () => {
+          const path = localButton.dataset.localPath;
+          if (!path) return;
+          if (window.location.protocol === "file:") {
+            window.location.href = path;
+            return;
+          }
+          await copyText(path);
+          localButton.textContent = "Local path copied";
+          window.setTimeout(() => {
+            localButton.textContent = originalLabel;
+          }, 1600);
+        });
+      });
+
+      const verifyInformationPasscode = async (passcode) => {
+        if (!window.crypto?.subtle || !passcode) return false;
+        const data = new TextEncoder().encode(passcode);
+        const digest = await window.crypto.subtle.digest("SHA-256", data);
+        const hash = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+        return hash === "9b5673b6a4d40df0a597b3510f433da22b8af6fb898fbfb559da2d70a4aa24f9";
+      };
+
+      document.querySelectorAll("[data-protected-href]").forEach((protectedLink) => {
+        protectedLink.addEventListener("click", async () => {
+          const target = protectedLink.dataset.protectedHref;
+          if (!target) return;
+
+          let unlocked = false;
+          try {
+            unlocked = window.sessionStorage.getItem("zzee-information-unlocked") === "1";
+          } catch {
+            unlocked = false;
+          }
+
+          if (!unlocked) {
+            const passcode = window.prompt("ZZEE 비밀번호를 입력하세요.");
+            if (!(await verifyInformationPasscode(passcode))) {
+              window.alert("비밀번호가 맞지 않습니다.");
+              return;
+            }
+            try {
+              window.sessionStorage.setItem("zzee-information-unlocked", "1");
+            } catch {
+              // Session storage may be unavailable in strict browser modes.
+            }
+          }
+
+          window.open(target, "_blank", "noopener,noreferrer");
+        });
       });
     </script>
   </body>

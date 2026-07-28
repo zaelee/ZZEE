@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Pop Squadron</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topline">
+      <div>
+        <p class="eyebrow">Webtoon Arcade</p>
+        <h1>Sunny Pop Squadron</h1>
+      </div>
+      <button id="restartButton" class="ghost-button" type="button">Restart</button>
+    </header>
+
+    <section class="hud" aria-label="Game status">
+      <div class="hud-card">
+        <span>Score</span>
+        <strong id="scoreValue">0</strong>
+      </div>
+      <div class="hud-card">
+        <span>High</span>
+        <strong id="highScoreValue">0</strong>
+      </div>
+      <div class="hud-card">
+        <span>Lives</span>
+        <strong id="livesValue">3</strong>
+      </div>
+      <div class="hud-card">
+        <span>Stage</span>
+        <strong id="waveValue">1/5</strong>
+      </div>
+      <div class="hud-card">
+        <span>Combo</span>
+        <strong id="comboValue">0x</strong>
+      </div>
+      <div class="hud-card power-card">
+        <span>Power</span>
+        <strong id="powerValue">Ready</strong>
+      </div>
+    </section>
+
+    <section class="stage-frame">
+      <canvas id="gameCanvas" width="900" height="700" aria-label="Sunny Pop Squadron game canvas"></canvas>
+      <div id="screenOverlay" class="screen-overlay">
+        <div class="overlay-panel">
+          <p id="overlayKicker" class="overlay-kicker">Arcade Mission</p>
+          <h2 id="overlayTitle">Sunny Pop Squadron</h2>
+          <p id="overlayText">A cheerful yellow mascot is ready to clean up a very weird galaxy.</p>
+          <button id="overlayButton" class="start-button" type="button">Start Game</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
