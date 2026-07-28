@@ -293,7 +293,7 @@
       <section class="section" aria-labelledby="information-title">
         <div class="section-head">
           <h2 id="information-title">Information</h2>
-          <button class="section-shortcut" type="button" data-protected-href="https://docs.google.com/spreadsheets/u/1/d/1OlrzITB9tUOkQLZTWTsJ_jYfGkZYCqtwbO40VXjuHwM/edit?gid=1297364454&amp;pli=1&amp;authuser=1#gid=1297364454" aria-label="비밀번호를 입력하고 OSSE Information Sheet 열기">zoney</button>
+          <button class="section-shortcut" type="button" data-protected-href="https://docs.google.com/spreadsheets/u/1/d/1OlrzITB9tUOkQLZTWTsJ_jYfGkZYCqtwbO40VXjuHwM/edit?gid=1297364454&amp;pli=1&amp;authuser=1#gid=1297364454" aria-label="비밀번호를 입력하고 OSSE Information Sheet 열기">zoney 🔒</button>
           <span>Archive & Tools</span>
         </div>
         <div class="grid">
@@ -428,24 +428,10 @@
           const target = protectedLink.dataset.protectedHref;
           if (!target) return;
 
-          let unlocked = false;
-          try {
-            unlocked = window.sessionStorage.getItem("zzee-information-unlocked") === "1";
-          } catch {
-            unlocked = false;
-          }
-
-          if (!unlocked) {
-            const passcode = window.prompt("ZZEE 비밀번호를 입력하세요.");
-            if (!(await verifyInformationPasscode(passcode))) {
-              window.alert("비밀번호가 맞지 않습니다.");
-              return;
-            }
-            try {
-              window.sessionStorage.setItem("zzee-information-unlocked", "1");
-            } catch {
-              // Session storage may be unavailable in strict browser modes.
-            }
+          const passcode = window.prompt("zoney 비밀번호를 입력하세요.");
+          if (!(await verifyInformationPasscode(passcode))) {
+            window.alert("비밀번호가 맞지 않습니다.");
+            return;
           }
 
           window.open(target, "_blank", "noopener,noreferrer");
