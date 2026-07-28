@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>베지밀 팩토리 클릭커</title>
+  <style>
+    :root {
+      --cream: #f5ecd1;
+      --cream-deep: #e7d8ae;
+      --green: #287447;
+      --green-dark: #1f5d39;
+      --panel: rgba(255, 253, 247, 0.94);
+      --line: #ded2b1;
+      --ink: #243027;
+      --muted: #667064;
+      --gold: #d99a24;
+      --red: #a73d34;
+      --tier-accent: #287447;
+      --tier-secondary: #d99a24;
+      --tier-glow: rgba(40, 116, 71, 0.18);
+      --scene-top: #fffdf8;
+      --scene-mid: #f5edcf;
+      --scene-floor: #cdbf94;
+      --shadow: 0 18px 44px rgba(39, 51, 35, 0.15);
+    }
+
+    body[data-grade="2"] {
+      --tier-accent: #16866d;
+      --tier-secondary: #d68d2d;
+      --tier-glow: rgba(22, 134, 109, 0.2);
+      --scene-top: #f4fff8;
+      --scene-mid: #dcefd7;
+      --scene-floor: #b9c890;
+    }
+
+    body[data-grade="3"] {
+      --tier-accent: #2c7095;
+      --tier-secondary: #d3a02d;
+      --tier-glow: rgba(44, 112, 149, 0.2);
+      --scene-top: #f6fbff;
+      --scene-mid: #ddebf0;
+      --scene-floor: #aebdc2;
+    }
+
+    body[data-grade="4"] {
+      --tier-accent: #6d6a2a;
+      --tier-secondary: #c97b2d;
+      --tier-glow: rgba(109, 106, 42, 0.2);
+      --scene-top: #fffdf0;
+      --scene-mid: #ece5b8;
+      --scene-floor: #bcb47b;
+    }
+
+    body[data-grade="5"] {
+      --tier-accent: #b85830;
+      --tier-secondary: #287447;
+      --tier-glow: rgba(184, 88, 48, 0.22);
+      --scene-top: #fff8f2;
+      --scene-mid: #f0ddc5;
+      --scene-floor: #bf9d76;
+    }
+
+    body[data-grade="6"] {
+      --tier-accent: #3b7f8f;
+      --tier-secondary: #c99222;
+      --tier-glow: rgba(59, 127, 143, 0.22);
+      --scene-top: #f4ffff;
+      --scene-mid: #d7ecea;
+      --scene-floor: #9dbdb8;
+    }
+
+    body[data-grade="7"] {
+      --tier-accent: #91602f;
+      --tier-secondary: #23825a;
+      --tier-glow: rgba(145, 96, 47, 0.22);
+      --scene-top: #fffaf2;
+      --scene-mid: #eddfc7;
+      --scene-floor: #b79a73;
+    }
+
+    body[data-grade="8"] {
+      --tier-accent: #3f6fbd;
+      --tier-secondary: #d89a24;
+      --tier-glow: rgba(63, 111, 189, 0.22);
+      --scene-top: #f7fbff;
+      --scene-mid: #dce7f8;
+      --scene-floor: #a9b9d6;
+    }
+
+    body[data-grade="9"] {
+      --tier-accent: #6f5fa8;
+      --tier-secondary: #d5a326;
+      --tier-glow: rgba(111, 95, 168, 0.2);
+      --scene-top: #fbf8ff;
+      --scene-mid: #e7e0f2;
+      --scene-floor: #b7add0;
+    }
+
+    body[data-grade="10"] {
+      --tier-accent: #145f4d;
+      --tier-secondary: #d7a322;
+      --tier-glow: rgba(20, 95, 77, 0.26);
+      --scene-top: #f8fff8;
+      --scene-mid: #dcefd1;
+      --scene-floor: #9fb879;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(40, 116, 71, 0.12), transparent 38%),
+        radial-gradient(circle at 78% 14%, var(--tier-glow), transparent 26%),
+        linear-gradient(180deg, var(--cream), #faf3dd 54%, var(--cream-deep));
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .game-shell {
+      width: min(1560px, 100%);
+      height: 100svh;
+      margin: 0 auto;
+      padding: clamp(8px, 1vw, 14px);
+      display: grid;
+      grid-template-columns: minmax(270px, 0.9fr) minmax(440px, 1.28fr) minmax(350px, 1fr);
+      gap: clamp(8px, 1vw, 14px);
+      overflow: hidden;
+    }
+
+    .panel {
+      min-width: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      overflow: hidden;
+      border: 1px solid rgba(222, 210, 177, 0.96);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .panel-header {
+      min-height: 62px;
+      padding: 12px 14px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 34%),
+        linear-gradient(135deg, var(--green), var(--green-dark));
+    }
+
+    .panel-header h1,
+    .panel-header h2 {
+      margin: 0;
+      font-size: clamp(1rem, 1.18vw, 1.2rem);
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .panel-header p {
+      margin: 4px 0 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .left-body {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      overflow: hidden;
+    }
+
+    .stats-grid {
+      padding: 9px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff9eb, #f9efd2);
+    }
+
+    .stat-tile {
+      min-width: 0;
+      min-height: 64px;
+      padding: 8px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 253, 247, 0.9));
+    }
+
+    .stat-tile.wide {
+      grid-column: 1 / -1;
+      min-height: 74px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 850;
+      line-height: 1.2;
+    }
+
+    .stat-value,
+    .metric strong,
+    .ribbon-chip b {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-value {
+      margin-top: 4px;
+      color: var(--green-dark);
+      font-size: clamp(1rem, 1.62vw, 1.5rem);
+      font-weight: 950;
+      line-height: 1.08;
+    }
+
+    .stat-sub {
+      min-width: 0;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 760;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .click-zone {
+      position: relative;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      place-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 40%, var(--tier-glow), transparent 34%),
+        repeating-linear-gradient(90deg, rgba(40, 116, 71, 0.035) 0 1px, transparent 1px 30px),
+        linear-gradient(180deg, #fffdf7, #f6edcf);
+    }
+
+    .bottle-button {
+      position: relative;
+      width: min(70%, 250px);
+      max-height: calc(100% - 8px);
+      aspect-ratio: 0.55;
+      padding: 0;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      cursor: pointer;
+      filter: drop-shadow(0 22px 28px rgba(31, 93, 57, 0.22));
+      transition: transform 130ms ease, filter 130ms ease;
+      touch-action: manipulation;
+    }
+
+    .bottle-button::before,
+    .bottle-button::after {
+      content: "";
+      position: absolute;
+      inset: 18% -16% 8%;
+      z-index: -1;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--tier-glow), transparent 62%);
+      transform: scale(0.92);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .bottle-button::after {
+      inset: 46% -8% 18%;
+      background: radial-gradient(circle, rgba(217, 154, 36, 0.2), transparent 68%);
+    }
+
+    .bottle-button:hover {
+      transform: translateY(-3px);
+      filter: drop-shadow(0 26px 30px rgba(31, 93, 57, 0.28));
+    }
+
+    .bottle-button:hover::before {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    .bottle-button:active {
+      transform: translateY(2px) scale(0.985);
+    }
+
+    .bottle-button:focus-visible,
+    .buy-button:focus-visible,
+    .bulk-button:focus-visible,
+    .reset-button:focus-visible {
+      outline: 3px solid rgba(40, 116, 71, 0.28);
+      outline-offset: 2px;
+    }
+
+    .bottle-svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tier-stroke {
+      stroke: var(--tier-accent);
+    }
+
+    .tier-fill {
+      fill: var(--tier-accent);
+    }
+
+    .tier-secondary {
+      fill: var(--tier-secondary);
+    }
+
+    .click-ribbon {
+      width: calc(100% - 18px);
+      margin: 0 9px 9px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .ribbon-chip {
+      min-width: 0;
+      padding: 7px 7px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+
+    .ribbon-chip b {
+      display: block;
+      color: var(--green-dark);
+      font-size: 0.84rem;
+      line-height: 1.1;
+    }
+
+    .ribbon-chip span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.61rem;
+      font-weight: 850;
+      line-height: 1.1;
+    }
+
+    .floating-money {
+      position: absolute;
+      z-index: 8;
+      pointer-events: none;
+      color: var(--green-dark);
+      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      font-weight: 950;
+      text-shadow: 0 2px 0 #fff, 0 8px 18px rgba(31, 93, 57, 0.22);
+      animation: floatUp 850ms ease-out forwards;
+      white-space: nowrap;
+    }
+
+    .floating-money.special {
+      color: var(--red);
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 12px) scale(0.9);
+      }
+      16% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -70px) scale(1.06);
+      }
+    }
+
+    .center-body {
+      min-height: 0;
+      padding: 9px;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: 8px;
+      overflow: hidden;
+      background: #fcf8ed;
+    }
+
+    .factory-metrics {
+      display: grid;
+      grid-template-columns: 1.25fr repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      min-width: 0;
+      min-height: 60px;
+      padding: 8px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .grade-metric {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 247, 0.8)),
+        linear-gradient(135deg, var(--tier-glow), transparent);
+    }
+
+    .grade-medal {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background:
+        radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.46), transparent 34%),
+        linear-gradient(135deg, var(--tier-accent), var(--tier-secondary));
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.28), 0 8px 18px var(--tier-glow);
+      font-size: 0.78rem;
+      font-weight: 950;
+    }
+
+    .grade-info {
+      min-width: 0;
+    }
+
+    .grade-name {
+      color: var(--green-dark);
+      font-size: 0.82rem;
+      font-weight: 950;
+      line-height: 1.15;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .grade-progress {
+      height: 7px;
+      margin-top: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(36, 48, 39, 0.1);
+    }
+
+    .grade-progress span {
+      display: block;
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--tier-accent), var(--tier-secondary));
+      transition: width 240ms ease;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 3px;
+      color: var(--green-dark);
+      font-size: clamp(0.88rem, 1.22vw, 1.1rem);
+      line-height: 1.12;
+    }
+
+    .factory-scene {
+      position: relative;
+      min-height: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, var(--scene-top) 0 38%, var(--scene-mid) 38% 72%, var(--scene-floor) 72% 100%);
+    }
+
+    .factory-scene::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 78% 20%, var(--tier-glow), transparent 28%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 40%);
+    }
+
+    .factory-scene::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 64px;
+      height: 58px;
+      opacity: 0.24;
+      background:
+        linear-gradient(90deg, transparent 0 5%, var(--tier-accent) 5% 10%, transparent 10% 13%, var(--tier-accent) 13% 22%, transparent 22% 29%, var(--tier-accent) 29% 34%, transparent 34% 38%, var(--tier-accent) 38% 48%, transparent 48% 54%, var(--tier-accent) 54% 64%, transparent 64% 71%, var(--tier-accent) 71% 78%, transparent 78% 84%, var(--tier-accent) 84% 91%, transparent 91% 100%);
+      clip-path: polygon(0 100%, 0 56%, 6% 56%, 6% 32%, 12% 32%, 12% 72%, 18% 72%, 18% 22%, 25% 22%, 25% 64%, 33% 64%, 33% 36%, 40% 36%, 40% 100%);
+    }
+
+    .lab-sign,
+    .grade-showpiece {
+      position: absolute;
+      z-index: 2;
+      border: 1px solid rgba(40, 116, 71, 0.2);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+    }
+
+    .lab-sign {
+      top: 10px;
+      left: 10px;
+      padding: 7px 9px;
+      color: var(--green-dark);
+      font-size: 0.7rem;
+      font-weight: 950;
+      letter-spacing: 0.02em;
+    }
+
+    .grade-showpiece {
+      top: 10px;
+      right: 10px;
+      min-width: 118px;
+      padding: 8px 10px;
+      text-align: right;
+    }
+
+    .grade-showpiece b {
+      display: block;
+      color: var(--tier-accent);
+      font-size: 0.74rem;
+      line-height: 1.12;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .grade-showpiece span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.61rem;
+      font-weight: 850;
+      line-height: 1.1;
+    }
+
+    .window-row {
+      position: absolute;
+      top: 52px;
+      left: 12px;
+      right: 12px;
+      height: 48px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .window {
+      border: 2px solid color-mix(in srgb, var(--tier-accent) 32%, #fff);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), color-mix(in srgb, var(--tier-accent) 12%, #effff7));
+    }
+
+    .machine-yard {
+      position: absolute;
+      z-index: 1;
+      inset: 112px 12px 74px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      min-height: 0;
+    }
+
+    .factory-unit {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      padding: 7px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(40, 116, 71, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.66);
+      opacity: 0.36;
+      transform: scale(0.96);
+      transition: opacity 160ms ease, transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+
+    .factory-unit.active {
+      opacity: 1;
+      transform: scale(1);
+      border-color: color-mix(in srgb, var(--tier-accent) 36%, #fff);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 253, 247, 0.86)),
+        radial-gradient(circle at 50% 18%, var(--tier-glow), transparent 54%);
+    }
+
+    .factory-unit.active .spin {
+      animation: spin 4s linear infinite;
+      transform-origin: center;
+    }
+
+    .factory-unit.active .pulse {
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    .machine-icon {
+      width: min(46px, 76%);
+      height: min(46px, 76%);
+      color: var(--tier-accent);
+    }
+
+    .machine-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .unit-level {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      min-width: 28px;
+      padding: 3px 6px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--tier-accent), var(--green-dark));
+      font-size: 0.61rem;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .unit-name {
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      color: var(--muted);
+      font-size: 0.57rem;
+      font-weight: 850;
+      line-height: 1.15;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.42;
+        transform: translateY(-3px);
+      }
+      48% {
+        opacity: 1;
+        transform: translateY(5px);
+      }
+    }
+
+    .conveyor {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      bottom: 26px;
+      height: 38px;
+      border-top: 4px solid #606861;
+      border-bottom: 4px solid #606861;
+      background:
+        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent),
+        repeating-linear-gradient(90deg, #80877e 0 26px, #697268 26px 52px);
+    }
+
+    .belt-bottle {
+      position: absolute;
+      z-index: 3;
+      bottom: 42px;
+      width: 22px;
+      height: 48px;
+      border: 3px solid rgba(31, 93, 57, 0.75);
+      border-radius: 8px 8px 10px 10px;
+      background: linear-gradient(180deg, #fff, #f3e7bd);
+      animation: moveBottle 6s linear infinite;
+    }
+
+    .belt-bottle::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: -13px;
+      height: 15px;
+      border: 3px solid rgba(31, 93, 57, 0.75);
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+      background: #fff;
+    }
+
+    .belt-bottle::after {
+      content: "V";
+      position: absolute;
+      left: 3px;
+      right: 3px;
+      top: 15px;
+      padding: 2px 0;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--tier-accent);
+      font-size: 0.62rem;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .belt-bottle.bottle-b {
+      animation-delay: -1.5s;
+    }
+
+    .belt-bottle.bottle-c {
+      animation-delay: -3s;
+    }
+
+    .belt-bottle.bottle-d {
+      animation-delay: -4.5s;
+    }
+
+    @keyframes moveBottle {
+      from {
+        left: -40px;
+      }
+      to {
+        left: calc(100% + 40px);
+      }
+    }
+
+    .factory-pop {
+      position: absolute;
+      right: 14px;
+      bottom: 74px;
+      z-index: 6;
+      pointer-events: none;
+      color: var(--tier-secondary);
+      font-size: 1rem;
+      font-weight: 950;
+      text-shadow: 0 2px 0 #fff;
+      animation: factoryEarn 820ms ease-out forwards;
+      white-space: nowrap;
+    }
+
+    @keyframes factoryEarn {
+      0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.94);
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-46px) scale(1.05);
+      }
+    }
+
+    .event-log {
+      min-height: 58px;
+      max-height: 70px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .event-title {
+      margin: 0 0 4px;
+      color: var(--green-dark);
+      font-size: 0.71rem;
+      font-weight: 950;
+    }
+
+    .event-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 2px;
+    }
+
+    .event-list li {
+      color: var(--muted);
+      font-size: 0.67rem;
+      font-weight: 760;
+      line-height: 1.18;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .right-panel {
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+    }
+
+    .shop-toolbar {
+      min-height: 50px;
+      padding: 8px 9px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffdf7, #f7efd7);
+    }
+
+    .bulk-note {
+      min-width: 0;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 820;
+      line-height: 1.18;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .bulk-button {
+      height: 34px;
+      padding: 0 11px;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent),
+        linear-gradient(135deg, var(--tier-accent), var(--green-dark));
+      font-size: 0.72rem;
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform 130ms ease, box-shadow 130ms ease, filter 130ms ease;
+      white-space: nowrap;
+    }
+
+    .bulk-button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 9px 18px var(--tier-glow);
+      filter: saturate(1.08);
+    }
+
+    .bulk-button:disabled {
+      cursor: not-allowed;
+      color: #858b84;
+      background: #d9d8d0;
+      box-shadow: none;
+    }
+
+    .shop {
+      min-height: 0;
+      padding: 8px;
+      display: grid;
+      grid-template-rows: repeat(8, minmax(0, 1fr));
+      gap: 7px;
+      overflow: hidden;
+      background: #faf6e9;
+    }
+
+    .upgrade-card {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, #fff, #fffdf7);
+      transition: border-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+    }
+
+    .upgrade-card.affordable {
+      border-color: color-mix(in srgb, var(--tier-accent) 48%, var(--line));
+      box-shadow: inset 3px 0 0 var(--tier-accent);
+    }
+
+    .upgrade-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(39, 51, 35, 0.09);
+    }
+
+    .upgrade-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--tier-accent);
+      background:
+        radial-gradient(circle at 38% 24%, rgba(255, 255, 255, 0.9), transparent 38%),
+        color-mix(in srgb, var(--tier-accent) 14%, #fff);
+    }
+
+    .upgrade-icon svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    .upgrade-main {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 4px;
+    }
+
+    .upgrade-title-row {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+    }
+
+    .upgrade-title {
+      min-width: 0;
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.77rem;
+      font-weight: 950;
+      line-height: 1.22;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .upgrade-level {
+      flex: 0 0 auto;
+      padding: 2px 6px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--tier-accent);
+      font-size: 0.61rem;
+      font-weight: 950;
+    }
+
+    .upgrade-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.65rem;
+      font-weight: 740;
+      line-height: 1.22;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .buy-row {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(92px, 0.68fr);
+      gap: 6px;
+      align-items: center;
+    }
+
+    .effect-pill {
+      min-width: 0;
+      padding: 5px 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--green-dark);
+      background: #fff9eb;
+      font-size: 0.61rem;
+      font-weight: 950;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .buy-button {
+      min-width: 0;
+      height: 30px;
+      padding: 0 8px;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--green);
+      font-size: 0.66rem;
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform 130ms ease, background 130ms ease, box-shadow 130ms ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .buy-button:hover:not(:disabled) {
+      background: var(--green-dark);
+      box-shadow: 0 8px 15px rgba(31, 93, 57, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .buy-button:active:not(:disabled),
+    .bulk-button:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    .buy-button:disabled {
+      cursor: not-allowed;
+      color: #858b84;
+      background: #d9d8d0;
+      box-shadow: none;
+    }
+
+    .save-bar {
+      min-height: 42px;
+      padding: 8px 9px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .save-status {
+      min-width: 0;
+      color: var(--muted);
+      font-size: 0.67rem;
+      font-weight: 800;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .reset-button {
+      flex: 0 0 auto;
+      height: 28px;
+      padding: 0 9px;
+      border: 1px solid rgba(184, 70, 50, 0.32);
+      border-radius: 8px;
+      color: var(--red);
+      background: #fff;
+      font-size: 0.67rem;
+      font-weight: 950;
+      cursor: pointer;
+      transition: background 130ms ease, transform 130ms ease;
+    }
+
+    .reset-button:hover {
+      background: #fff1ed;
+      transform: translateY(-1px);
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 14px;
+      z-index: 20;
+      max-width: min(420px, calc(100% - 24px));
+      padding: 10px 12px;
+      border-radius: 8px;
+      color: #fff;
+      background: rgba(31, 93, 57, 0.94);
+      font-size: 0.82rem;
+      font-weight: 850;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 12px);
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-height: 780px) {
+      .panel-header {
+        min-height: 50px;
+        padding: 9px 12px;
+      }
+
+      .panel-header p,
+      .upgrade-description {
+        display: none;
+      }
+
+      .stat-tile {
+        min-height: 56px;
+        padding: 7px 8px;
+      }
+
+      .stat-tile.wide {
+        min-height: 60px;
+      }
+
+      .stats-grid,
+      .center-body,
+      .shop {
+        padding: 7px;
+      }
+
+      .shop-toolbar {
+        min-height: 43px;
+        padding: 6px 8px;
+      }
+
+      .metric {
+        min-height: 52px;
+      }
+
+      .machine-yard {
+        inset: 94px 10px 66px;
+      }
+
+      .window-row {
+        top: 39px;
+        height: 42px;
+      }
+
+      .event-log {
+        min-height: 48px;
+      }
+
+      .buy-button {
+        height: 27px;
+      }
+    }
+
+    @media (max-width: 1120px) {
+      body {
+        overflow: auto;
+      }
+
+      .game-shell {
+        height: auto;
+        min-height: 100svh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "left right"
+          "center center";
+      }
+
+      .left-panel {
+        grid-area: left;
+      }
+
+      .center-panel {
+        grid-area: center;
+        min-height: 620px;
+      }
+
+      .right-panel {
+        grid-area: right;
+        min-height: 650px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .game-shell {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "left"
+          "center"
+          "right";
+      }
+
+      .center-panel,
+      .right-panel {
+        min-height: 620px;
+      }
+
+      .factory-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grade-metric {
+        grid-column: 1 / -1;
+      }
+
+      .machine-yard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body data-grade="1">
+  <main class="game-shell">
+    <section class="panel left-panel" aria-label="생산 현황">
+      <header class="panel-header">
+        <h1>베지밀 팩토리 클릭커</h1>
+        <p>실제 병 디자인의 느낌을 살린 연구실형 클릭커입니다.</p>
+      </header>
+
+      <div class="left-body">
+        <div class="stats-grid">
+          <div class="stat-tile wide">
+            <div class="stat-label">현재 자금</div>
+            <div class="stat-value" id="moneyDisplay">₩0</div>
+            <div class="stat-sub" id="clickResultDisplay">1병 판매 기준 ₩10</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-label">클릭 수익</div>
+            <div class="stat-value" id="clickIncomeDisplay">₩10</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-label">자동 생산</div>
+            <div class="stat-value" id="bpsDisplay">0병/초</div>
+          </div>
+        </div>
+
+        <div class="click-zone" id="clickStage">
+          <button class="bottle-button" id="mainBottle" type="button" aria-label="베지밀 병 판매">
+            <svg class="bottle-svg" viewBox="0 0 240 430" role="img" aria-labelledby="bottleTitle">
+              <title id="bottleTitle">베지밀 유리병 스타일 일러스트</title>
+              <defs>
+                <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#84251f" />
+                  <stop offset="45%" stop-color="#b94b3d" />
+                  <stop offset="100%" stop-color="#5c1714" />
+                </linearGradient>
+                <linearGradient id="glassGrad" x1="12%" y1="0%" x2="90%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="28%" stop-color="#fffdf4" />
+                  <stop offset="58%" stop-color="#f3ead1" />
+                  <stop offset="100%" stop-color="#e3cf95" />
+                </linearGradient>
+                <linearGradient id="soyFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#fffaf0" />
+                  <stop offset="100%" stop-color="#eadcae" />
+                </linearGradient>
+                <linearGradient id="labelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="42%" stop-color="#eff8ea" />
+                  <stop offset="100%" stop-color="#63a861" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="120" cy="402" rx="70" ry="16" fill="rgba(36,48,39,0.18)" />
+              <path d="M85 43h70v48c0 23 24 40 34 67 9 24 14 52 14 82v96c0 41-25 65-83 65s-83-24-83-65v-96c0-30 5-58 14-82 10-27 34-44 34-67V43Z" fill="url(#glassGrad)" stroke="#1f5d39" stroke-width="6" />
+              <path d="M79 61h82v39H79z" fill="rgba(255,255,255,0.72)" />
+              <rect x="76" y="18" width="88" height="33" rx="12" fill="url(#capGrad)" stroke="#5b1715" stroke-width="4" />
+              <path d="M80 20h80" stroke="rgba(255,255,255,0.34)" stroke-width="5" stroke-linecap="round" />
+              <path d="M60 158c15-16 105-20 121 0 12 15 16 52 14 105-1 36-8 69-18 86H63c-10-17-17-50-18-86-2-53 2-90 15-105Z" fill="url(#labelGrad)" />
+              <path d="M45 222c30 16 53 22 75 22s45-6 75-22v61c-24 20-49 30-75 30s-51-10-75-30v-61Z" class="tier-fill" opacity="0.92" />
+              <g opacity="0.95">
+                <ellipse cx="90" cy="293" rx="12" ry="24" fill="#59a64a" transform="rotate(-38 90 293)" />
+                <ellipse cx="112" cy="299" rx="13" ry="28" fill="#72bd55" transform="rotate(-16 112 299)" />
+                <ellipse cx="138" cy="294" rx="12" ry="25" fill="#4f9f45" transform="rotate(24 138 294)" />
+                <circle cx="81" cy="317" r="11" fill="#c8d35a" />
+                <circle cx="104" cy="323" r="12" fill="#d9df78" />
+                <circle cx="129" cy="319" r="11" fill="#cbd861" />
+                <circle cx="153" cy="313" r="10" fill="#dce486" />
+              </g>
+              <g>
+                <circle cx="120" cy="219" r="48" fill="#f05a38" />
+                <circle cx="120" cy="219" r="40" fill="#fffdf7" />
+                <circle cx="120" cy="219" r="34" class="tier-fill" />
+                <text x="120" y="213" text-anchor="middle" fill="#fff" font-size="25" font-weight="900">베지밀</text>
+                <text x="120" y="239" text-anchor="middle" fill="#fff" font-size="22" font-weight="900">B</text>
+              </g>
+              <path d="M71 76h23v67H79c-16 14-24 38-25 73v109c0 31 11 49 32 56" fill="none" stroke="#ffffff" stroke-width="9" opacity="0.48" stroke-linecap="round" />
+              <path d="M158 109c14 13 25 39 26 81" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="6" stroke-linecap="round" />
+              <text x="120" y="361" text-anchor="middle" fill="#fffdf7" font-size="13" font-weight="900">190ml SOY MILK</text>
+            </svg>
+          </button>
+
+          <div class="click-ribbon">
+            <div class="ribbon-chip">
+              <b id="bottlesPerClickDisplay">1병</b>
+              <span>클릭 판매</span>
+            </div>
+            <div class="ribbon-chip">
+              <b id="unitPriceDisplay">₩10</b>
+              <span>병당 단가</span>
+            </div>
+            <div class="ribbon-chip">
+              <b id="totalMultiplierDisplay">x1.00</b>
+              <span>판매 배율</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel center-panel" aria-label="공장 시각화">
+      <header class="panel-header">
+        <h2>정식품 성장 공장</h2>
+        <p>누적 레벨 10마다 공장 등급과 그래픽이 한 단계씩 진화합니다.</p>
+      </header>
+
+      <div class="center-body">
+        <div class="factory-metrics">
+          <div class="metric grade-metric">
+            <div class="grade-medal" id="gradeMedal">G1</div>
+            <div class="grade-info">
+              <div class="grade-name" id="gradeNameDisplay">연구실 창업</div>
+              <div class="grade-progress" aria-label="다음 등급 진행도"><span id="gradeProgressBar"></span></div>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="stat-label">초당 매출</div>
+            <strong id="autoIncomeDisplay">₩0</strong>
+          </div>
+          <div class="metric">
+            <div class="stat-label">해외 주문</div>
+            <strong id="exportChanceDisplay">0%</strong>
+          </div>
+          <div class="metric">
+            <div class="stat-label">누적 레벨</div>
+            <strong id="totalLevelDisplay">0</strong>
+          </div>
+        </div>
+
+        <div class="factory-scene" id="factoryFloor">
+          <div class="lab-sign">DR. CHUNG'S FOOD LAB</div>
+          <div class="grade-showpiece">
+            <b id="sceneGradeName">연구실 창업</b>
+            <span id="sceneGradeCopy">작은 실험대에서 시작</span>
+          </div>
+          <div class="window-row" aria-hidden="true">
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+          </div>
+          <div class="machine-yard" id="machineYard"></div>
+          <div class="conveyor" aria-hidden="true"></div>
+          <div class="belt-bottle bottle-a" aria-hidden="true"></div>
+          <div class="belt-bottle bottle-b" aria-hidden="true"></div>
+          <div class="belt-bottle bottle-c" aria-hidden="true"></div>
+          <div class="belt-bottle bottle-d" aria-hidden="true"></div>
+        </div>
+
+        <div class="event-log">
+          <p class="event-title">최근 판매 이벤트</p>
+          <ul class="event-list" id="eventList">
+            <li>첫 베지밀 생산 준비 완료</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel right-panel" aria-label="업그레이드 상점">
+      <header class="panel-header">
+        <h2>스킬 업그레이드</h2>
+        <p>구매 가능한 스킬은 일괄구매로 빠르게 정리할 수 있습니다.</p>
+      </header>
+
+      <div class="shop-toolbar">
+        <div class="bulk-note" id="bulkHint">구매 가능한 스킬을 자동으로 싼 것부터 구매합니다.</div>
+        <button class="bulk-button" id="bulkBuyButton" type="button">일괄구매</button>
+      </div>
+
+      <div class="shop" id="upgradeShop"></div>
+
+      <div class="save-bar">
+        <span class="save-status" id="saveStatus">자동 저장 대기 중</span>
+        <button class="reset-button" id="resetButton" type="button">초기화</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // 저장 키와 자동 저장 간격입니다.
+    const STORAGE_KEY = "vegemilFactoryClickerState";
+    const SAVE_INTERVAL_MS = 10000;
+
+    // 누적 업그레이드 레벨 10마다 바뀌는 10단계 등급입니다.
+    const gradeTiers = [
+      { tier: 1, min: 0, name: "연구실 창업", copy: "작은 실험대에서 시작" },
+      { tier: 2, min: 10, name: "동네 두유 공방", copy: "맷돌과 손포장 라인" },
+      { tier: 3, min: 20, name: "초기 생산소", copy: "작은 자동 설비 가동" },
+      { tier: 4, min: 30, name: "정식품 연구동", copy: "품질 연구실 확장" },
+      { tier: 5, min: 40, name: "베지밀 A/B 라인", copy: "클래식 병 라인 완성" },
+      { tier: 6, min: 50, name: "친환경 스마트팩토리", copy: "효율형 설비 전환" },
+      { tier: 7, min: 60, name: "전국 물류 허브", copy: "대형 출고망 확보" },
+      { tier: 8, min: 70, name: "아시아 수출기지", copy: "해외 주문 급증" },
+      { tier: 9, min: 80, name: "글로벌 브랜드 캠퍼스", copy: "신제품 런칭 센터" },
+      { tier: 10, min: 90, name: "월드 베지밀 엠파이어", copy: "세계 두유 제국 완성" }
+    ];
+
+    // 업그레이드 효과는 여러 타입을 조합할 수 있습니다.
+    const upgrades = [
+      {
+        id: "freshBeans",
+        name: "신선한 콩 수확",
+        description: "좋은 콩을 골라 병당 판매 단가를 올립니다.",
+        baseCost: 50,
+        level: 0,
+        icon: "bean",
+        effects: [{ type: "unitPrice", amount: 10 }],
+        effectLabel: "+₩10/병"
+      },
+      {
+        id: "bundleSale",
+        name: "두 병 세트 판매",
+        description: "한 번 누를 때 팔리는 병 수가 늘어납니다.",
+        baseCost: 260,
+        level: 0,
+        icon: "bundle",
+        effects: [{ type: "bottlesPerClick", amount: 1 }],
+        effectLabel: "+1병/클릭"
+      },
+      {
+        id: "millstone",
+        name: "맷돌 가동",
+        description: "전통 맷돌이 천천히 자동 생산을 시작합니다.",
+        baseCost: 120,
+        level: 0,
+        icon: "mill",
+        effects: [{ type: "autoBottles", amount: 1 }],
+        effectLabel: "+1병/초"
+      },
+      {
+        id: "earlyLab",
+        name: "초기 연구소 유치",
+        description: "연구소 공정으로 자동 생산과 단가를 함께 올립니다.",
+        baseCost: 850,
+        level: 0,
+        icon: "lab",
+        effects: [
+          { type: "autoBottles", amount: 10 },
+          { type: "unitPrice", amount: 5 }
+        ],
+        effectLabel: "+10병/초, +₩5/병"
+      },
+      {
+        id: "classicLine",
+        name: "베지밀 A/B 자동화 라인",
+        description: "클래식 생산 라인으로 출고량이 크게 증가합니다.",
+        baseCost: 4200,
+        level: 0,
+        icon: "line",
+        effects: [
+          { type: "autoBottles", amount: 50 },
+          { type: "bottlesPerClick", amount: 1 }
+        ],
+        effectLabel: "+50병/초, +1병/클릭"
+      },
+      {
+        id: "ecoFacility",
+        name: "친환경 설비 도입",
+        description: "효율 좋은 설비가 전체 판매 배율을 강화합니다.",
+        baseCost: 22000,
+        level: 0,
+        icon: "leaf",
+        effects: [
+          { type: "autoBottles", amount: 200 },
+          { type: "saleMultiplier", amount: 0.06 }
+        ],
+        effectLabel: "+200병/초, 배율 +6%"
+      },
+      {
+        id: "newProduct",
+        name: "신제품 런칭",
+        description: "신제품 화제성으로 클릭 보너스와 브랜드 배율이 붙습니다.",
+        baseCost: 56000,
+        level: 0,
+        icon: "spark",
+        effects: [
+          { type: "productMultiplier", amount: 0.18 },
+          { type: "launchPower", amount: 1 }
+        ],
+        effectLabel: "배율 +18%, 런칭 보너스"
+      },
+      {
+        id: "globalExport",
+        name: "글로벌 수출 계약",
+        description: "해외진출 계약으로 대량 주문과 수출 배율이 발생합니다.",
+        baseCost: 120000,
+        level: 0,
+        icon: "globe",
+        effects: [
+          { type: "autoBottles", amount: 1000 },
+          { type: "exportMultiplier", amount: 0.24 },
+          { type: "exportChance", amount: 0.025 }
+        ],
+        effectLabel: "+1000병/초, 해외 주문"
+      }
+    ];
+
+    const state = {
+      money: 0,
+      bps: 0,
+      clickValue: 10,
+      bottlesPerClick: 1,
+      saleMultiplier: 1,
+      productMultiplier: 1,
+      exportMultiplier: 1,
+      exportChance: 0,
+      launchPower: 0,
+      totalClicks: 0,
+      lifetimeEarned: 0,
+      upgradeLevels: upgrades.reduce((levels, upgrade) => {
+        levels[upgrade.id] = upgrade.level;
+        return levels;
+      }, {}),
+      recentEvents: ["첫 베지밀 생산 준비 완료"],
+      lastSaveText: "준비됨"
+    };
+
+    const els = {
+      moneyDisplay: document.getElementById("moneyDisplay"),
+      clickResultDisplay: document.getElementById("clickResultDisplay"),
+      clickIncomeDisplay: document.getElementById("clickIncomeDisplay"),
+      bpsDisplay: document.getElementById("bpsDisplay"),
+      bottlesPerClickDisplay: document.getElementById("bottlesPerClickDisplay"),
+      unitPriceDisplay: document.getElementById("unitPriceDisplay"),
+      totalMultiplierDisplay: document.getElementById("totalMultiplierDisplay"),
+      gradeMedal: document.getElementById("gradeMedal"),
+      gradeNameDisplay: document.getElementById("gradeNameDisplay"),
+      gradeProgressBar: document.getElementById("gradeProgressBar"),
+      sceneGradeName: document.getElementById("sceneGradeName"),
+      sceneGradeCopy: document.getElementById("sceneGradeCopy"),
+      autoIncomeDisplay: document.getElementById("autoIncomeDisplay"),
+      exportChanceDisplay: document.getElementById("exportChanceDisplay"),
+      totalLevelDisplay: document.getElementById("totalLevelDisplay"),
+      mainBottle: document.getElementById("mainBottle"),
+      clickStage: document.getElementById("clickStage"),
+      upgradeShop: document.getElementById("upgradeShop"),
+      machineYard: document.getElementById("machineYard"),
+      factoryFloor: document.getElementById("factoryFloor"),
+      eventList: document.getElementById("eventList"),
+      bulkHint: document.getElementById("bulkHint"),
+      bulkBuyButton: document.getElementById("bulkBuyButton"),
+      saveStatus: document.getElementById("saveStatus"),
+      resetButton: document.getElementById("resetButton"),
+      toast: document.getElementById("toast")
+    };
+
+    function formatFullWon(value) {
+      return new Intl.NumberFormat("ko-KR", {
+        style: "currency",
+        currency: "KRW",
+        maximumFractionDigits: 0
+      }).format(Math.floor(value));
+    }
+
+    // 너무 큰 숫자는 칸을 넘지 않도록 한국식 단위로 짧게 보여줍니다.
+    function formatCompactNumber(value) {
+      const number = Number(value) || 0;
+      const sign = number < 0 ? "-" : "";
+      const abs = Math.abs(number);
+      const units = [
+        { value: 1e20, label: "해" },
+        { value: 1e16, label: "경" },
+        { value: 1e12, label: "조" },
+        { value: 1e8, label: "억" },
+        { value: 1e4, label: "만" }
+      ];
+
+      if (abs < 10000) return `${sign}${Math.floor(abs).toLocaleString("ko-KR")}`;
+
+      const unit = units.find((item) => abs >= item.value);
+      if (!unit) return `${sign}${Math.floor(abs).toLocaleString("ko-KR")}`;
+
+      const scaled = abs / unit.value;
+      const digits = scaled < 10 ? 2 : scaled < 100 ? 1 : 0;
+      const text = scaled.toFixed(digits).replace(/\.0+$/, "").replace(/(\.\d*[1-9])0+$/, "$1");
+      return `${sign}${text}${unit.label}`;
+    }
+
+    function formatWon(value) {
+      return `₩${formatCompactNumber(value)}`;
+    }
+
+    function formatNumber(value) {
+      return formatCompactNumber(value);
+    }
+
+    function setCompactText(element, text, fullText) {
+      element.textContent = text;
+      element.title = fullText || text;
+    }
+
+    function getUpgradeCost(upgrade) {
+      return Math.floor(upgrade.baseCost * Math.pow(1.15, upgrade.level));
+    }
+
+    function getLevel(id) {
+      return upgrades.find((upgrade) => upgrade.id === id)?.level || 0;
+    }
+
+    function getTotalLevel() {
+      return upgrades.reduce((sum, upgrade) => sum + upgrade.level, 0);
+    }
+
+    function getCurrentGrade() {
+      const totalLevel = getTotalLevel();
+      const index = Math.min(gradeTiers.length - 1, Math.floor(totalLevel / 10));
+      return gradeTiers[index];
+    }
+
+    function getGradeProgress() {
+      const grade = getCurrentGrade();
+      if (grade.tier >= 10) return 100;
+      return Math.min(100, ((getTotalLevel() - grade.min) / 10) * 100);
+    }
+
+    function getTotalMultiplier() {
+      return state.saleMultiplier * state.productMultiplier * state.exportMultiplier;
+    }
+
+    function getClickIncome() {
+      return Math.floor(state.clickValue * state.bottlesPerClick * getTotalMultiplier());
+    }
+
+    function getAutoIncome() {
+      return Math.floor(state.bps * state.clickValue * getTotalMultiplier());
+    }
+
+    // 업그레이드 레벨을 기준으로 실제 생산 수치를 매번 다시 계산합니다.
+    function recalculateProduction() {
+      state.bps = 0;
+      state.clickValue = 10;
+      state.bottlesPerClick = 1;
+      state.saleMultiplier = 1;
+      state.productMultiplier = 1;
+      state.exportMultiplier = 1;
+      state.exportChance = 0;
+      state.launchPower = 0;
+
+      upgrades.forEach((upgrade) => {
+        state.upgradeLevels[upgrade.id] = upgrade.level;
+
+        upgrade.effects.forEach((effect) => {
+          const value = effect.amount * upgrade.level;
+
+          if (effect.type === "autoBottles") state.bps += value;
+          if (effect.type === "unitPrice") state.clickValue += value;
+          if (effect.type === "bottlesPerClick") state.bottlesPerClick += value;
+          if (effect.type === "saleMultiplier") state.saleMultiplier += value;
+          if (effect.type === "productMultiplier") state.productMultiplier += value;
+          if (effect.type === "exportMultiplier") state.exportMultiplier += value;
+          if (effect.type === "exportChance") state.exportChance += value;
+          if (effect.type === "launchPower") state.launchPower += value;
+        });
+      });
+
+      state.exportChance = Math.min(state.exportChance, 0.36);
+    }
+
+    function getIconMarkup(icon) {
+      const common = 'viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"';
+      const icons = {
+        bean: `<svg ${common}><path d="M44 12c11 10 9 28-2 38s-27 10-34-2c-6-11 1-26 13-34 8-5 17-7 23-2Z"/><path d="M41 16C28 23 19 33 15 47"/></svg>`,
+        bundle: `<svg ${common}><path d="M19 16h15v37H19z"/><path d="M32 11h15v42H32z"/><path d="M19 30h15M32 28h15"/><path class="pulse" d="M13 55h40"/></svg>`,
+        mill: `<svg ${common}><circle class="spin" cx="32" cy="31" r="18"/><circle cx="32" cy="31" r="6"/><path d="M32 7v8M32 47v10M8 31h8M48 31h8M15 14l6 6M43 42l7 7M49 14l-6 6M21 42l-7 7"/></svg>`,
+        lab: `<svg ${common}><path d="M24 8h16"/><path d="M28 8v17L14 50c-2 4 1 8 6 8h24c5 0 8-4 6-8L36 25V8"/><path class="pulse" d="M23 43h18"/><path d="M25 34h14"/></svg>`,
+        line: `<svg ${common}><path d="M8 44h48"/><path d="M13 44V22h13v22"/><path d="M38 44V14h13v30"/><path class="pulse" d="M28 26h8"/><path d="M11 52h42"/></svg>`,
+        leaf: `<svg ${common}><path d="M52 12C28 12 12 25 12 44c0 6 4 10 10 10 21 0 30-20 30-42Z"/><path d="M15 50c8-15 18-24 34-34"/></svg>`,
+        spark: `<svg ${common}><path class="pulse" d="M32 6l5 17 17 5-17 5-5 17-5-17-17-5 17-5 5-17Z"/><path d="M50 45l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z"/></svg>`,
+        globe: `<svg ${common}><circle cx="32" cy="32" r="23"/><path d="M9 32h46"/><path d="M32 9c8 7 12 15 12 23s-4 16-12 23C24 48 20 40 20 32s4-16 12-23Z"/><path class="pulse" d="M17 18c8 4 22 4 30 0"/><path d="M17 46c8-4 22-4 30 0"/></svg>`
+      };
+
+      return icons[icon] || icons.bean;
+    }
+
+    function buildStaticUI() {
+      els.upgradeShop.innerHTML = "";
+      els.machineYard.innerHTML = "";
+
+      upgrades.forEach((upgrade) => {
+        const card = document.createElement("article");
+        card.className = "upgrade-card";
+        card.id = `upgrade-${upgrade.id}`;
+        card.innerHTML = `
+          <div class="upgrade-icon" aria-hidden="true">${getIconMarkup(upgrade.icon)}</div>
+          <div class="upgrade-main">
+            <div class="upgrade-title-row">
+              <h3 class="upgrade-title" title="${upgrade.name}">${upgrade.name}</h3>
+              <span class="upgrade-level" data-level="${upgrade.id}">Lv. 0</span>
+            </div>
+            <p class="upgrade-description">${upgrade.description}</p>
+            <div class="buy-row">
+              <span class="effect-pill" data-effect="${upgrade.id}" title="${upgrade.effectLabel}">${upgrade.effectLabel}</span>
+              <button class="buy-button" type="button" data-buy="${upgrade.id}">구매</button>
+            </div>
+          </div>
+        `;
+        els.upgradeShop.appendChild(card);
+
+        const unit = document.createElement("div");
+        unit.className = "factory-unit";
+        unit.id = `factory-${upgrade.id}`;
+        unit.innerHTML = `
+          <span class="unit-level" data-factory-level="${upgrade.id}">Lv. 0</span>
+          <div class="machine-icon" aria-hidden="true">${getIconMarkup(upgrade.icon)}</div>
+          <span class="unit-name" title="${upgrade.name}">${upgrade.name}</span>
+        `;
+        els.machineYard.appendChild(unit);
+      });
+    }
+
+    // 화면의 숫자, 등급, 구매 가능 상태를 최신 상태로 맞춥니다.
+    function render() {
+      const totalLevel = getTotalLevel();
+      const clickIncome = getClickIncome();
+      const autoIncome = getAutoIncome();
+      const grade = getCurrentGrade();
+      const progress = getGradeProgress();
+      const affordableNow = upgrades.filter((upgrade) => state.money >= getUpgradeCost(upgrade)).length;
+
+      document.body.dataset.grade = String(grade.tier);
+
+      setCompactText(els.moneyDisplay, formatWon(state.money), formatFullWon(state.money));
+      setCompactText(
+        els.clickResultDisplay,
+        `${formatNumber(state.bottlesPerClick)}병 판매 기준 ${formatWon(clickIncome)}`,
+        `${Math.floor(state.bottlesPerClick).toLocaleString("ko-KR")}병 판매 기준 ${formatFullWon(clickIncome)}`
+      );
+      setCompactText(els.clickIncomeDisplay, formatWon(clickIncome), formatFullWon(clickIncome));
+      setCompactText(els.bpsDisplay, `${formatNumber(state.bps)}병/초`, `${Math.floor(state.bps).toLocaleString("ko-KR")}병/초`);
+      setCompactText(els.bottlesPerClickDisplay, `${formatNumber(state.bottlesPerClick)}병`, `${Math.floor(state.bottlesPerClick).toLocaleString("ko-KR")}병`);
+      setCompactText(els.unitPriceDisplay, formatWon(state.clickValue), formatFullWon(state.clickValue));
+      els.totalMultiplierDisplay.textContent = `x${getTotalMultiplier().toFixed(2)}`;
+      setCompactText(els.autoIncomeDisplay, formatWon(autoIncome), formatFullWon(autoIncome));
+      els.exportChanceDisplay.textContent = `${Math.round(state.exportChance * 100)}%`;
+      setCompactText(els.totalLevelDisplay, `Lv.${formatNumber(totalLevel)}`, `Lv.${totalLevel.toLocaleString("ko-KR")}`);
+
+      els.gradeMedal.textContent = `G${grade.tier}`;
+      els.gradeNameDisplay.textContent = grade.name;
+      els.gradeNameDisplay.title = grade.name;
+      els.gradeProgressBar.style.width = `${progress}%`;
+      els.sceneGradeName.textContent = grade.name;
+      els.sceneGradeCopy.textContent = grade.copy;
+
+      els.bulkBuyButton.disabled = affordableNow === 0;
+      els.bulkBuyButton.textContent = affordableNow > 0 ? `일괄구매 ${affordableNow}종` : "구매대기";
+      els.bulkHint.textContent = affordableNow > 0
+        ? `현재 ${affordableNow}종 구매 가능, 싼 스킬부터 자동 구매`
+        : `다음 구매까지 ${formatWon(getCheapestMissingMoney())} 필요`;
+      els.bulkHint.title = els.bulkHint.textContent;
+
+      els.saveStatus.textContent = `자동 저장: ${state.lastSaveText}`;
+
+      upgrades.forEach((upgrade) => {
+        const cost = getUpgradeCost(upgrade);
+        const canBuy = state.money >= cost;
+        const card = document.getElementById(`upgrade-${upgrade.id}`);
+        const button = document.querySelector(`[data-buy="${upgrade.id}"]`);
+        const levelLabel = document.querySelector(`[data-level="${upgrade.id}"]`);
+        const factoryLevel = document.querySelector(`[data-factory-level="${upgrade.id}"]`);
+        const unit = document.getElementById(`factory-${upgrade.id}`);
+
+        card.classList.toggle("affordable", canBuy);
+        levelLabel.textContent = `Lv. ${formatNumber(upgrade.level)}`;
+        levelLabel.title = `Lv. ${upgrade.level.toLocaleString("ko-KR")}`;
+        factoryLevel.textContent = `Lv. ${formatNumber(upgrade.level)}`;
+        factoryLevel.title = `Lv. ${upgrade.level.toLocaleString("ko-KR")}`;
+        button.disabled = !canBuy;
+        button.textContent = canBuy ? `구매 ${formatWon(cost)}` : formatWon(cost);
+        button.title = `다음 비용 ${formatFullWon(cost)}`;
+        unit.classList.toggle("active", upgrade.level > 0);
+      });
+
+      renderEvents();
+    }
+
+    function getCheapestMissingMoney() {
+      const cheapest = Math.min(...upgrades.map((upgrade) => getUpgradeCost(upgrade)));
+      return Math.max(0, cheapest - state.money);
+    }
+
+    function renderEvents() {
+      els.eventList.innerHTML = "";
+      state.recentEvents.slice(0, 3).forEach((eventText) => {
+        const li = document.createElement("li");
+        li.textContent = eventText;
+        li.title = eventText;
+        els.eventList.appendChild(li);
+      });
+    }
+
+    function getLaunchCycle() {
+      if (state.launchPower <= 0) return 0;
+      return Math.max(5, 13 - Math.min(state.launchPower, 8));
+    }
+
+    function addEventLog(text) {
+      state.recentEvents.unshift(text);
+      state.recentEvents = state.recentEvents.slice(0, 6);
+    }
+
+    // 병을 누르면 기본 판매 수익과 클릭 기반 보너스를 함께 계산합니다.
+    function clickMainBottle(event) {
+      state.totalClicks += 1;
+
+      const baseIncome = getClickIncome();
+      let gained = baseIncome;
+      const messages = [`${formatNumber(state.bottlesPerClick)}병 판매 ${formatWon(baseIncome)}`];
+
+      const launchCycle = getLaunchCycle();
+      if (state.launchPower > 0 && state.totalClicks % launchCycle === 0) {
+        const launchBonus = Math.floor(baseIncome * (0.55 + state.launchPower * 0.22));
+        gained += launchBonus;
+        messages.push(`신제품 런칭 +${formatWon(launchBonus)}`);
+      }
+
+      if (state.exportChance > 0 && Math.random() < state.exportChance) {
+        const exportLevel = getLevel("globalExport");
+        const exportBonus = Math.floor(baseIncome * (1.4 + exportLevel * 0.35));
+        gained += exportBonus;
+        messages.push(`해외 대량 주문 +${formatWon(exportBonus)}`);
+      }
+
+      state.money += gained;
+      state.lifetimeEarned += gained;
+      showFloatingMoney(els.clickStage, event, `+${formatWon(gained)}`, messages.length > 1);
+      addEventLog(messages.join(" · "));
+      render();
+    }
+
+    function showFloatingMoney(container, event, text, special = false) {
+      const rect = container.getBoundingClientRect();
+      const x = event.clientX || rect.left + rect.width / 2;
+      const y = event.clientY || rect.top + rect.height / 2;
+      const bubble = document.createElement("div");
+      bubble.className = `floating-money${special ? " special" : ""}`;
+      bubble.textContent = text;
+      bubble.style.left = `${x - rect.left}px`;
+      bubble.style.top = `${y - rect.top}px`;
+      container.appendChild(bubble);
+      bubble.addEventListener("animationend", () => bubble.remove());
+    }
+
+    function showFactoryEarn(text) {
+      const pop = document.createElement("div");
+      pop.className = "factory-pop";
+      pop.textContent = text;
+      els.factoryFloor.appendChild(pop);
+      pop.addEventListener("animationend", () => pop.remove());
+    }
+
+    function buyUpgrade(id) {
+      const upgrade = upgrades.find((item) => item.id === id);
+      if (!upgrade) return;
+
+      const cost = getUpgradeCost(upgrade);
+      if (state.money < cost) {
+        showToast("자금이 조금 더 필요합니다.");
+        return;
+      }
+
+      state.money -= cost;
+      upgrade.level += 1;
+      recalculateProduction();
+      addEventLog(`${upgrade.name} Lv.${formatNumber(upgrade.level)} 적용`);
+      render();
+      saveGame("구매 저장됨");
+    }
+
+    // 구매 가능한 스킬을 싼 것부터 반복 구매합니다.
+    function buyAllAffordable() {
+      let purchased = 0;
+      const boughtNames = new Map();
+      let guard = 500;
+
+      while (guard > 0) {
+        guard -= 1;
+        const affordable = upgrades
+          .filter((upgrade) => state.money >= getUpgradeCost(upgrade))
+          .sort((a, b) => getUpgradeCost(a) - getUpgradeCost(b))[0];
+
+        if (!affordable) break;
+
+        state.money -= getUpgradeCost(affordable);
+        affordable.level += 1;
+        purchased += 1;
+        boughtNames.set(affordable.name, (boughtNames.get(affordable.name) || 0) + 1);
+      }
+
+      if (purchased === 0) {
+        showToast("구매 가능한 스킬이 없습니다.");
+        render();
+        return;
+      }
+
+      recalculateProduction();
+      const summary = Array.from(boughtNames.entries())
+        .slice(0, 3)
+        .map(([name, count]) => `${name} +${count}`)
+        .join(", ");
+      addEventLog(`스킬 ${purchased}회 일괄구매 완료: ${summary}`);
+      showToast(`스킬 ${purchased}회 일괄구매 완료`);
+      render();
+      saveGame("일괄구매 저장됨");
+    }
+
+    // 자동 설비는 초당 병 수를 만들고, 현재 판매 단가와 배율을 적용해 매출로 전환합니다.
+    function gameLoop() {
+      const income = getAutoIncome();
+      if (income <= 0) return;
+
+      state.money += income;
+      state.lifetimeEarned += income;
+      showFactoryEarn(`+${formatWon(income)}`);
+      render();
+    }
+
+    function getSerializableState() {
+      return {
+        money: state.money,
+        totalClicks: state.totalClicks,
+        lifetimeEarned: state.lifetimeEarned,
+        recentEvents: state.recentEvents,
+        upgradeLevels: { ...state.upgradeLevels },
+        savedAt: Date.now()
+      };
+    }
+
+    function saveGame(label = "저장됨") {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(getSerializableState()));
+      const timeText = new Date().toLocaleTimeString("ko-KR", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+      state.lastSaveText = `${label} ${timeText}`;
+      render();
+    }
+
+    function loadGame() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) {
+        recalculateProduction();
+        return;
+      }
+
+      try {
+        const parsed = JSON.parse(saved);
+        state.money = Number(parsed.money) || 0;
+        state.totalClicks = Number(parsed.totalClicks) || 0;
+        state.lifetimeEarned = Number(parsed.lifetimeEarned) || 0;
+        state.recentEvents = Array.isArray(parsed.recentEvents) && parsed.recentEvents.length
+          ? parsed.recentEvents.slice(0, 6)
+          : ["저장된 공장을 불러왔습니다"];
+
+        upgrades.forEach((upgrade) => {
+          const level = parsed.upgradeLevels?.[upgrade.id];
+          upgrade.level = Number.isFinite(Number(level)) ? Math.max(0, Number(level)) : 0;
+        });
+
+        state.lastSaveText = "불러옴";
+        recalculateProduction();
+      } catch (error) {
+        console.warn("저장 데이터를 불러오지 못했습니다.", error);
+        state.lastSaveText = "저장 오류";
+        state.recentEvents = ["저장 데이터 오류, 새 계산으로 복구"];
+        recalculateProduction();
+      }
+    }
+
+    function resetGame() {
+      const confirmed = confirm("정말 처음부터 다시 시작할까요?");
+      if (!confirmed) return;
+
+      state.money = 0;
+      state.totalClicks = 0;
+      state.lifetimeEarned = 0;
+      state.recentEvents = ["새 연구실로 다시 시작했습니다"];
+      upgrades.forEach((upgrade) => {
+        upgrade.level = 0;
+      });
+      localStorage.removeItem(STORAGE_KEY);
+      state.lastSaveText = "초기화됨";
+      recalculateProduction();
+      render();
+      showToast("초기화했습니다.");
+    }
+
+    function showToast(message) {
+      els.toast.textContent = message;
+      els.toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => {
+        els.toast.classList.remove("show");
+      }, 1600);
+    }
+
+    function bindEvents() {
+      els.mainBottle.addEventListener("click", clickMainBottle);
+      els.bulkBuyButton.addEventListener("click", buyAllAffordable);
+      els.resetButton.addEventListener("click", resetGame);
+
+      els.upgradeShop.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-buy]");
+        if (!button) return;
+        buyUpgrade(button.dataset.buy);
+      });
+
+      window.addEventListener("beforeunload", () => {
+        saveGame("종료 저장됨");
+      });
+    }
+
+    buildStaticUI();
+    loadGame();
+    bindEvents();
+    render();
+    setInterval(gameLoop, 1000);
+    setInterval(() => saveGame("자동 저장됨"), SAVE_INTERVAL_MS);
+  </script>
+</body>
+</html>

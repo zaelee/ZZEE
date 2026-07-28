@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
-const ignoredDirectories = new Set([".git", "node_modules", "coverage", "tmp"]);
+const ignoredDirectories = new Set([".git", "node_modules", "coverage", "tmp", "pgsharp"]);
 
 const collectScripts = (directory) =>
   fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
