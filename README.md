@@ -11,6 +11,7 @@
 - `zerune-studio/`: 콘셉트에서 음악·이미지 프롬프트를 만드는 원격 작업 스튜디오
 - `haidilao/`: 하이디라오 이용 가이드
 - `dtd/`: 데이브 더 다이버 운영 공략표
+- `design-effects/`: 13개 디자인·모션·WebGL 효과 실행 갤러리
 - `index.html`: 프로젝트 허브
 
 ## Local check
