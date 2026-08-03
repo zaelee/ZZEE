@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="13개 웹 디자인·모션 라이브러리의 효과와 사용법을 한 페이지에서 확인하는 로컬 갤러리" />
+    <title>Design Effects Library — Live Gallery</title>
+    <script type="module" crossorigin src="./assets/index-BoLMXdeh.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/Geometry-C1S5vSAR.js">
+    <link rel="modulepreload" crossorigin href="./assets/canvasUtils-BDNHffj8.js">
+    <link rel="modulepreload" crossorigin href="./assets/init-h5yeZEGr.js">
+    <link rel="modulepreload" crossorigin href="./assets/RenderTargetSystem-CFWqJnTM.js">
+    <link rel="modulepreload" crossorigin href="./assets/getTextureBatchBindGroup-DZWZNqwj.js">
+    <link rel="modulepreload" crossorigin href="./assets/CanvasRenderer-Bz4PEFgp.js">
+    <link rel="modulepreload" crossorigin href="./assets/CanvasPool-DTxWs9jV.js">
+    <link rel="modulepreload" crossorigin href="./assets/BufferResource-CTTqaHUi.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DJ0NqDll.css">
+  </head>
+  <body>
+    <div class="scroll-meter" aria-hidden="true"><span id="scroll-progress"></span></div>
+    <header class="hero" id="top">
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a class="brand" href="#top">FX/13</a>
+        <div>
+          <a href="../index.html">ZZEE</a>
+          <a href="#motion">Motion</a>
+          <a href="#webgl">WebGL</a>
+          <a href="#vector">Vector</a>
+          <a href="#liquid">Liquid</a>
+        </div>
+      </nav>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="kicker">INTERACTIVE DESIGN TOOLBOX · LOCAL BUILD</p>
+          <h1>효과를 보고,<br /><span>코드를 가져가세요.</span></h1>
+          <p class="hero-intro">13개 디자인·모션 도구의 실제 실행 결과, 추천 용도, 설치 명령과 최소 사용법을 한 HTML에 모았습니다.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#motion">효과 둘러보기</a>
+            <button class="ghost-button" id="jump-webgl" type="button">WebGL로 이동</button>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="./assets/hero-liquid-art.png" alt="보라색과 민트색의 유리 및 액체 크롬 추상 조형물" />
+            <span class="visual-index">IMG / 001</span>
+            <span class="visual-badge">AI GENERATED ARTWORK</span>
+          </div>
+          <figcaption><span>LIQUID CHROME × REFRACTIVE GLASS</span><span>1672 × 912</span></figcaption>
+        </figure>
+      </div>
+      <div class="install-summary" aria-label="설치 현황">
+        <span>10 npm packages</span><span>3 local tools</span><span>13 live guides</span>
+      </div>
+    </header>
+    <main>
+      <section class="chapter" id="motion">
+        <div class="chapter-heading"><span>01</span><div><p>MOTION &amp; SCROLL</p><h2>움직임의 리듬</h2></div></div>
+        <article class="effect-card" id="gsap">
+          <div class="demo-stage gsap-stage" aria-label="GSAP 반복 타임라인 데모">
+            <div class="gsap-track"><span class="gsap-orb"></span></div>
+            <div class="gsap-bars"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>01 · GSAP</span><span class="installed">설치됨 3.15.0</span></div>
+            <h3>정밀한 타임라인 모션</h3>
+            <p>여러 요소의 순서, 반복, 이징을 한 타임라인에서 통제합니다. 브랜드 사이트와 스크롤 연출에 가장 범용적입니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install gsap
+
+import { gsap } from "gsap";
+
+gsap.timeline({ repeat: -1 })
+  .to(".orb", { x: 180, duration: 1 })
+  .to(".orb", { scale: 1.4, duration: .35 });</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card reverse" id="motion-one">
+          <div class="demo-stage motion-stage" aria-label="Motion 스프링 데모">
+            <button class="motion-chip" type="button">SPRING</button>
+            <div class="motion-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>02 · MOTION</span><span class="installed">설치됨 12.43.0</span></div>
+            <h3>가벼운 스프링과 제스처</h3>
+            <p>작은 UI 인터랙션, SVG, 스프링 애니메이션을 짧은 코드로 만들 때 적합합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install motion
+
+import { animate } from "motion";
+
+animate(".chip", { y: [-24, 24] }, {
+  type: "spring",
+  stiffness: 180,
+  repeat: Infinity
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card" id="lenis">
+          <div class="demo-stage lenis-stage" aria-label="Lenis 스크롤 진행률 데모">
+            <div class="lenis-number" id="lenis-percent">000</div><p>PAGE SCROLL<br />PROGRESS</p>
+          </div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>03 · LENIS</span><span class="installed">설치됨 1.3.25</span></div>
+            <h3>부드러운 페이지 스크롤</h3>
+            <p>현재 페이지의 스크롤 감각과 좌측 진행률이 Lenis 데모입니다. 패럴랙스나 GSAP ScrollTrigger와 함께 사용합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install lenis
+
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
+
+const lenis = new Lenis({ autoRaf: true });
+lenis.scrollTo("#target");</code></pre></details>
+          </div>
+        </article>
+      </section>
+      <section class="chapter" id="webgl">
+        <div class="chapter-heading"><span>02</span><div><p>WEBGL &amp; CANVAS</p><h2>픽셀을 직접 움직이기</h2></div></div>
+        <article class="effect-card" id="threejs">
+          <div class="demo-stage canvas-stage"><canvas id="three-canvas" aria-label="Three.js 회전 오브젝트"></canvas></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>04 · THREE.JS</span><span class="installed">설치됨 0.185.1</span></div>
+            <h3>3D 장면과 재질</h3>
+            <p>카메라, 조명, 메시, 후처리를 갖춘 본격적인 3D 엔진입니다. 제품 3D와 복합 셰이더에 적합합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install three
+
+import * as THREE from "three";
+
+const renderer = new THREE.WebGLRenderer({ canvas });
+const mesh = new THREE.Mesh(
+  new THREE.IcosahedronGeometry(1, 2),
+  new THREE.MeshNormalMaterial()
+);
+scene.add(mesh);</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card reverse" id="ogl">
+          <div class="demo-stage canvas-stage"><canvas id="ogl-canvas" aria-label="OGL 컬러 셰이더"></canvas></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>05 · OGL</span><span class="installed">설치됨 1.0.11</span></div>
+            <h3>작고 직접적인 셰이더</h3>
+            <p>Three.js보다 낮은 추상화로 GLSL을 직접 다루기 좋습니다. 액체 배경이나 왜곡 효과에 알맞습니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install ogl
+
+import { Renderer, Triangle, Program, Mesh } from "ogl";
+
+const renderer = new Renderer({ canvas });
+const geometry = new Triangle(renderer.gl);
+const program = new Program(renderer.gl, { vertex, fragment });
+renderer.render({ scene: new Mesh(renderer.gl, { geometry, program }) });</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card" id="curtains">
+          <div class="demo-stage curtains-stage">
+            <div id="curtains-canvas" aria-hidden="true"></div>
+            <div class="curtains-plane"><img src="./assets/hero-liquid-art.png" crossorigin="anonymous" alt="WebGL로 물결치는 액체 크롬 이미지" /></div>
+          </div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>06 · CURTAINS.JS</span><span class="installed">설치됨 8.1.6</span></div>
+            <h3>DOM 이미지에 WebGL 왜곡</h3>
+            <p>HTML 이미지의 위치와 크기를 유지하면서 셰이더를 덧씌웁니다. 이미지 전환과 호버 왜곡에 편리합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install curtainsjs
+
+import { Curtains, Plane } from "curtainsjs";
+
+const curtains = new Curtains({ container: "canvas" });
+const plane = new Plane(curtains, element, {
+  vertexShader, fragmentShader, uniforms
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card reverse" id="pixi">
+          <div class="demo-stage canvas-stage"><canvas id="pixi-canvas" aria-label="PixiJS 파티클 데모"></canvas></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>07 · PIXIJS</span><span class="installed">설치됨 8.19.0</span></div>
+            <h3>고성능 2D 파티클</h3>
+            <p>많은 스프라이트와 2D 오브젝트를 GPU로 그립니다. 인터랙티브 배너, 게임형 UI, 입자 효과에 적합합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install pixi.js
+
+import { Application, Graphics } from "pixi.js";
+
+const app = new Application();
+await app.init({ canvas, resizeTo: container });
+const dot = new Graphics().circle(0, 0, 8).fill(0x8fffce);
+app.stage.addChild(dot);</code></pre></details>
+          </div>
+        </article>
+      </section>
+      <section class="chapter" id="vector">
+        <div class="chapter-heading"><span>03</span><div><p>VECTOR RUNTIMES</p><h2>디자인 파일을 그대로</h2></div></div>
+        <article class="effect-card" id="rive">
+          <div class="demo-stage canvas-stage rive-stage"><canvas id="rive-canvas" width="640" height="420" aria-label="Rive 차량 애니메이션"></canvas><span class="load-state" id="rive-state">RIVE LOADING</span></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>08 · RIVE</span><span class="installed">설치됨 2.39.1</span></div>
+            <h3>상태 기반 인터랙티브 모션</h3>
+            <p>디자이너가 만든 `.riv` 파일과 상태 머신을 앱에서 제어합니다. 버튼, 캐릭터, 온보딩 UI에 좋습니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install @rive-app/webgl2
+
+import { Rive } from "@rive-app/webgl2";
+
+const r = new Rive({
+  src: "./assets/vehicles.riv",
+  canvas,
+  stateMachines: "bumpy",
+  autoplay: true
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card reverse" id="lottie">
+          <div class="demo-stage lottie-stage"><div id="lottie-player" aria-label="Lottie SVG 궤도 애니메이션"></div></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>09 · LOTTIE WEB</span><span class="installed">설치됨 5.13.0</span></div>
+            <h3>After Effects 벡터 재생</h3>
+            <p>Bodymovin으로 내보낸 JSON을 SVG·Canvas로 재생합니다. 설명 모션과 아이콘 애니메이션에 널리 쓰입니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install lottie-web
+
+import lottie from "lottie-web";
+
+lottie.loadAnimation({
+  container, renderer: "svg",
+  path: "/animation.json",
+  loop: true, autoplay: true
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card" id="dotlottie">
+          <div class="demo-stage canvas-stage dotlottie-stage"><canvas id="dotlottie-canvas" width="640" height="420" aria-label="dotLottie 캔버스 애니메이션"></canvas><span class="load-state" id="dotlottie-state">DOTLOTTIE LOADING</span></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>10 · DOTLOTTIE WEB</span><span class="installed">설치됨 0.78.2</span></div>
+            <h3>압축된 Lottie 런타임</h3>
+            <p>JSON과 `.lottie`를 같은 플레이어로 재생하며 WASM, 상태 머신과 워커 렌더링까지 확장할 수 있습니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>npm install @lottiefiles/dotlottie-web
+
+import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+new DotLottie({
+  canvas, src: "/animation.lottie",
+  autoplay: true, loop: true
+});</code></pre></details>
+          </div>
+        </article>
+      </section>
+      <section class="chapter" id="liquid">
+        <div class="chapter-heading"><span>04</span><div><p>LIQUID TOOLS</p><h2>굴절, 유리, 액체 금속</h2></div></div>
+        <article class="effect-card tool-card" id="liquid-glass-js">
+          <div class="demo-stage iframe-stage"><img class="tool-poster poster-glass" src="./assets/hero-liquid-art.png" alt="액체 유리 효과 미리보기" /><span class="poster-tag">GLASS / 11</span><iframe title="Liquid Glass JS 로컬 데모" data-src="./vendor/liquid-glass-js/index.html"></iframe><button class="load-demo" type="button">Liquid Glass JS 실행</button></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>11 · LIQUID GLASS JS</span><span class="installed">로컬 도구</span></div>
+            <h3>WebGL 유리 컴포넌트</h3>
+            <p>버튼과 컨테이너의 굴절·블러·틴트를 실시간 조절합니다. 버튼을 누르면 원본 데모가 이 페이지 안에서 열립니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>&lt;link rel="stylesheet" href="./vendor/liquid-glass-js/glass.css" /&gt;
+&lt;script src="./vendor/liquid-glass-js/container.js"&gt;&lt;/script&gt;
+&lt;script src="./vendor/liquid-glass-js/button.js"&gt;&lt;/script&gt;
+
+const button = new Button({
+  text: "Glass", type: "pill", tintOpacity: 0.3
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card tool-card reverse" id="liquidgl">
+          <div class="demo-stage iframe-stage"><img class="tool-poster poster-liquidgl" src="./assets/hero-liquid-art.png" alt="굴절 렌즈 효과 미리보기" /><span class="poster-tag">REFRACTION / 12</span><iframe title="liquidGL 미니 로컬 데모" data-demo="liquidgl"></iframe><button class="load-demo" type="button">liquidGL 실행</button></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>12 · LIQUIDGL</span><span class="installed">로컬 도구</span></div>
+            <h3>DOM 위 실시간 굴절 렌즈</h3>
+            <p>배경을 굴절시키는 공유 WebGL 렌즈입니다. 여러 유리 패널, 틸트, 색수차와 GSAP·Lenis 연동에 적합합니다.</p>
+            <details><summary>설치와 사용법</summary><pre><code>&lt;script src="./vendor/liquidGL/scripts/liquidGL.js"&gt;&lt;/script&gt;
+
+liquidGL({
+  target: ".glass", refraction: 0.02,
+  aberration: 0.03, frost: 1, tilt: true
+});</code></pre></details>
+          </div>
+        </article>
+        <article class="effect-card tool-card" id="liquid-logo">
+          <div class="demo-stage iframe-stage"><img class="tool-poster poster-logo" src="./assets/hero-liquid-art.png" alt="액체 금속 로고 효과 미리보기" /><span class="poster-tag">METAL / 13</span><iframe title="Liquid Logo 로컬 도구" data-src="./vendor/liquid-logo/index.html"></iframe><button class="load-demo" type="button">Liquid Logo 실행</button></div>
+          <div class="effect-copy">
+            <div class="effect-meta"><span>13 · LIQUID LOGO</span><span class="installed">로컬 도구</span></div>
+            <h3>액체 금속 로고 생성기</h3>
+            <p>고대비 이미지를 업로드해 WebGL 액체 금속 모션을 만들고 PNG·MP4로 내보냅니다.</p>
+            <details><summary>실행과 사용법</summary><pre><code>cd vendor/liquid-logo
+python -m http.server 8000
+
+# 권장 입력
+- 배경이 단순한 고대비 PNG
+- 깨끗하고 굵은 로고 실루엣
+- Randomize 후 세부 파라미터 조절</code></pre></details>
+          </div>
+        </article>
+      </section>
+      <section class="decision-guide">
+        <p class="kicker">QUICK DECISION</p><h2>무엇을 골라야 할까?</h2>
+        <div class="decision-grid">
+          <div><span>브랜드 스크롤</span><strong>GSAP + Lenis</strong></div>
+          <div><span>3D 제품·공간</span><strong>Three.js</strong></div>
+          <div><span>액체 셰이더</span><strong>OGL</strong></div>
+          <div><span>이미지 왜곡</span><strong>Curtains.js</strong></div>
+          <div><span>앱 인터랙션</span><strong>Rive</strong></div>
+          <div><span>AE 모션 재사용</span><strong>Lottie</strong></div>
+        </div>
+        <p class="performance-note">실제 서비스에는 필요한 렌더링 엔진만 선택하세요. 이 페이지는 비교를 위해 전부 설치한 실험실입니다.</p>
+      </section>
+    </main>
+    <footer class="site-footer"><span>DESIGN EFFECTS KIT / 2026</span><a href="#top">맨 위로</a></footer>
+  </body>
+</html>
