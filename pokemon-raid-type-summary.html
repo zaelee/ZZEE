@@ -79,22 +79,38 @@
       line-height: 1.2;
     }
 
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 12px;
+      color: var(--legacyfree);
+      background: var(--paper);
+      box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .quick-link:hover {
+      border-color: var(--legacyfree);
+      text-decoration: underline;
+    }
+
     .subtitle {
       max-width: 860px;
       margin: 0;
       color: var(--muted);
       font-size: 14px;
       line-height: 1.65;
-    }
-
-    .source-link {
-      color: var(--legacyfree);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .source-link:hover {
-      text-decoration: underline;
     }
 
     .toolbar {
@@ -620,11 +636,14 @@
     <header>
       <div>
         <h1>타입별 레이드 상위 포켓몬 정리</h1>
+        <nav class="quick-links" aria-label="외부 바로가기">
+          <a class="quick-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-a0DcSGf2dITFS2ekiQkX2SJ6AHSY6FIuLJdzJUlkS4rdC6QabZnMcKJeKY7zwLK18XjYwfIl7DX4/pubhtml?gid=392792009&amp;single=true" target="_blank" rel="noopener noreferrer">타입별 레이드 순위표</a>
+          <a class="quick-link" href="https://play.limitlesstcg.com/decks?game=POCKET" target="_blank" rel="noopener noreferrer">포켓몬 TCG POCKET</a>
+        </nav>
         <p class="subtitle">
           공개 시트 기준일은 2026. 7. 12.입니다. 각 타입마다 최상단 메가/특수 후보 1마리,
           그림자·메가·특수·환상 포켓몬을 제외한 레이드 확보 후보 1마리와 일반 포획·진화 후보 1마리,
           레거시 기술(*)이 없는 후보 1마리를 골랐습니다.
-          <a class="source-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-a0DcSGf2dITFS2ekiQkX2SJ6AHSY6FIuLJdzJUlkS4rdC6QabZnMcKJeKY7zwLK18XjYwfIl7DX4/pubhtml?gid=392792009&amp;single=true" target="_blank" rel="noreferrer">원본 시트</a>
         </p>
       </div>
     </header>
