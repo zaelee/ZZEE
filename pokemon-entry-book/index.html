@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POKÉMON ENTRY BOOK</title>
+  <style>
+    :root{--bg:#0d1117;--panel:#151b23;--panel2:#1c2430;--line:#2c3745;--text:#f4f7fb;--muted:#9aa8b8;--accent:#ffcc32;--good:#54d18b;--warn:#ffad5c;--bad:#ff6b6b;--shadow:0 14px 40px rgba(0,0,0,.26)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif;line-height:1.55}
+    button,input{font:inherit}.shell{max-width:1500px;margin:auto;padding:24px}.topbar{position:sticky;top:0;z-index:20;background:rgba(13,17,23,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .topbar-inner{max-width:1500px;margin:auto;padding:10px 24px 7px;display:flex;align-items:center;gap:14px}.brand{font-weight:900;letter-spacing:-.03em;white-space:nowrap}.brand b{color:var(--accent)}
+    .search{width:min(460px,100%);margin-left:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:10px 14px;outline:none}.search:focus{border-color:var(--accent)}
+    .generation-nav{max-width:1500px;margin:auto;padding:0 24px 9px;display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin}.generation-nav a{flex:none;color:#cbd5df;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:.7rem;font-weight:850;background:var(--panel)}.generation-nav a:hover{border-color:var(--accent);color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin:20px 0}.hero-copy,.audit{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+    .eyebrow{color:var(--accent);font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.06em;line-height:1.04;margin:8px 0 12px}.hero p{color:var(--muted);max-width:760px;margin:0}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.stat{background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:14px}.stat strong{display:block;font-size:1.5rem}.stat span{color:var(--muted);font-size:.8rem}
+    .audit h2{font-size:1.05rem;margin:0 0 12px}.audit-row{padding:10px 0;border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}.audit-row:first-of-type{border-top:0}.dot{width:9px;height:9px;border-radius:50%;background:var(--good);margin-top:7px;flex:none}.dot.warn{background:var(--warn)}.audit-row small{display:block;color:var(--muted)}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filter{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 13px;border-radius:10px;cursor:pointer}.filter.active{background:var(--accent);border-color:var(--accent);color:#191400;font-weight:900}
+    .generation-block{scroll-margin-top:118px;margin:26px 0 44px}.generation-title{font-size:1.45rem;letter-spacing:-.04em;margin:0 0 12px;color:var(--accent)}.generation-count{color:var(--muted);font-size:.72rem;margin-left:7px}.series-shell{border:1px solid var(--line);border-radius:18px;background:rgba(21,27,35,.65);margin:10px 0;overflow:hidden}.series-summary{padding:15px 18px;font-size:.94rem;display:flex;align-items:center;gap:10px}.series-summary small{color:var(--muted);font-weight:700}.series-summary::after{margin-left:auto}.series-shell[open]>.series-summary{background:var(--panel);color:var(--accent);border-bottom:1px solid var(--line)}.series-body{padding:0 16px 18px}.game{margin:18px 0 0}.game-head{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:stretch;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}.title-art{width:100%;height:100%;min-height:180px;object-fit:cover;background:#111827;padding:0;display:block}.title-cover{min-height:180px;position:relative;overflow:hidden;background:#111827}.title-cover::before{content:'';position:absolute;inset:-18px;background-image:var(--cover);background-size:cover;background-position:center;filter:blur(13px) brightness(.52);transform:scale(1.12)}.title-cover img{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55))}.title-banner{min-height:180px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(135deg,#121a28 0%,#263c64 50%,#a62d3d 100%);position:relative;overflow:hidden}.title-banner::before{content:'POKÉMON';position:absolute;right:-12px;top:-12px;font-weight:1000;font-size:3.3rem;color:rgba(255,255,255,.08);transform:rotate(-7deg)}.title-banner span{font-size:.68rem;font-weight:950;letter-spacing:.18em;color:var(--accent)}.title-banner strong{font-size:1.4rem;line-height:1.1;margin-top:7px}.game-meta{padding:20px 22px 18px 0;display:flex;flex-direction:column;justify-content:center}.game-meta h2{font-size:1.7rem;letter-spacing:-.04em;margin:4px 0}.meta-line{display:flex;gap:7px;flex-wrap:wrap}.tag,.check{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-size:.72rem;font-weight:800;border:1px solid var(--line);color:var(--muted)}.check.good{border-color:rgba(84,209,139,.4);color:var(--good)}.check.warn{border-color:rgba(255,173,92,.45);color:var(--warn)}.check.draft{border-color:rgba(255,173,92,.45);color:var(--warn)}.game-note{color:var(--muted);font-size:.9rem;margin:10px 0 0}
+    .team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}.poke{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .16s,border-color .16s}.poke:hover{transform:translateY(-2px);border-color:#4a596c}.poke-main{display:grid;grid-template-columns:126px 1fr;min-height:145px}.poke-img{width:126px;height:145px;object-fit:contain;background:#eef2f6;padding:8px}.poke-info{padding:15px 14px}.poke-info h3{margin:0 0 7px;font-size:1.12rem}.role{color:var(--muted);font-size:.78rem;margin-top:9px}.type-row{display:flex;gap:5px;flex-wrap:wrap}.type{color:#fff;border-radius:7px;padding:3px 7px;font-size:.68rem;font-weight:900;text-shadow:0 1px 1px rgba(0,0,0,.3)}
+    details{border-top:1px solid var(--line)}summary{cursor:pointer;list-style:none;padding:11px 14px;font-weight:800;font-size:.82rem;color:#d9e1ea}summary::-webkit-details-marker{display:none}summary::after{content:"＋";float:right;color:var(--accent)}details[open] summary::after{content:"－"}.moves{padding:0 12px 12px}.move{display:grid;grid-template-columns:1fr auto;gap:4px 8px;padding:9px 0;border-top:1px solid rgba(44,55,69,.75)}.move:first-child{border-top:0}.move b{font-size:.84rem}.move-kind{font-size:.67rem;color:var(--muted)}.source,.why{grid-column:1/-1;color:var(--muted);font-size:.72rem}.why{color:#c9d3df}.move-type{font-size:.66rem;border:1px solid var(--line);border-radius:6px;padding:2px 6px;height:max-content}
+    .tm-box,.field-box{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px}.tm-box h3,.field-box h3{font-size:.9rem;margin:0 0 8px}.tm-list,.field-list{display:flex;gap:7px;flex-wrap:wrap}.tm-list span,.field-list span{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.72rem;color:#d3dce6}.field-list b{color:var(--accent)}.field-missing{margin:9px 0 0;color:var(--bad);font-size:.74rem;font-weight:850}
+    .scope-note{background:linear-gradient(135deg,rgba(255,204,50,.1),rgba(84,209,139,.05));border:1px solid rgba(255,204,50,.3);border-radius:16px;padding:16px 18px;margin:0 0 22px}.scope-note h2{font-size:.95rem;margin:0 0 6px}.scope-note p{color:var(--muted);font-size:.82rem;margin:4px 0}.scope-note b{color:var(--text)}
+    .version-switch{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 10px}.version-btn{cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--muted);padding:6px 10px;border-radius:9px;font-size:.74rem;font-weight:850}.version-btn.active{background:var(--accent);border-color:var(--accent);color:#211900}.tip{margin-top:12px;padding:10px 12px;border-left:3px solid var(--accent);background:rgba(255,204,50,.06);border-radius:0 9px 9px 0;color:#d9e2ec;font-size:.8rem}.tip b{color:var(--accent)}
+    .build{border-top:1px solid var(--line);padding:10px 12px;background:rgba(0,0,0,.08)}.build-line{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px}.build-line span{font-size:.67rem;background:var(--panel2);border:1px solid var(--line);padding:3px 7px;border-radius:7px}.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}.stats span{font-size:.58rem;text-align:center;color:var(--muted);background:#10151c;border-radius:6px;padding:4px 1px}.stats b{display:block;color:var(--text);font-size:.7rem}.bst{font-size:.63rem;color:var(--accent);margin-top:5px;text-align:right}.obtain{border-top:1px solid var(--line);padding:10px 13px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;background:rgba(255,255,255,.015)}.stage{border:1px solid rgba(84,209,139,.45);color:var(--good);border-radius:999px;padding:2px 7px;font-size:.66rem;font-weight:900;white-space:nowrap}.stage.legend,.stage.post{border-color:rgba(255,204,50,.5);color:var(--accent)}.obtain p{margin:0;color:#cbd5df;font-size:.72rem}.move-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.move-detail{border:0!important;min-width:0}.move-detail:nth-child(odd){border-right:1px solid var(--line)!important}.move-detail:nth-child(n+3){border-top:1px solid var(--line)!important}.move-detail summary{padding:10px 11px;display:grid;grid-template-columns:1fr auto;gap:4px;align-items:center;font-size:.76rem}.move-detail summary::after{content:none!important}.move-detail summary small{color:var(--muted);font-size:.61rem;font-weight:700}.move-detail summary em{grid-column:1/-1;color:var(--good);font-size:.58rem;font-style:normal;font-weight:800}.move-detail[open] summary{background:rgba(255,204,50,.07);color:var(--accent)}.move-method{padding:0 11px 10px;color:var(--muted);font-size:.68rem}.move-method b{display:block;color:#d9e1ea;margin-bottom:2px}.move-method .purpose{color:#b8c5d2;margin-top:4px}.series-label{color:var(--muted);font-size:.72rem;font-weight:800;margin-bottom:4px}.alt-examples{margin-top:8px;color:var(--muted);font-size:.73rem}.alt-examples b{color:var(--warn)}.game-index{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.game-chip{font-size:.68rem;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:5px 8px;color:#c8d2dd}
+    .empty{display:none;text-align:center;color:var(--muted);padding:60px}.footer{color:var(--muted);border-top:1px solid var(--line);padding:24px 0 40px;font-size:.8rem}.footer a{color:var(--accent)}
+    @media(max-width:1050px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-stats{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:680px){.shell{padding:14px}.topbar-inner{padding:8px 14px 5px;flex-wrap:wrap}.generation-nav{padding:0 14px 8px}.search{order:2;width:100%}.series-body{padding:0 9px 10px}.game-head{grid-template-columns:1fr}.title-art,.title-cover,.title-banner{height:150px;min-height:150px}.game-meta{padding:18px}.team-grid{grid-template-columns:1fr}.poke-main{grid-template-columns:112px 1fr}.poke-img{width:112px}.hero-copy,.audit{padding:20px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><div class="brand">POKÉMON <b>ENTRY BOOK</b></div><input id="search" class="search" type="search" placeholder="게임·포켓몬·기술 검색"></div><nav id="generation-nav" class="generation-nav" aria-label="세대별 바로 가기"></nav></header>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow">Generation I → Present</div><h1>POKÉMON<br>ENTRY BOOK</h1><p>1세대부터 최신작까지, 가능한 한 타입이 겹치지 않는 6마리와 입수 순서·운용법·추천 육성 정보를 한곳에 정리했다. 직접 지정한 엔트리에 타입 충돌이 있으면 경고와 대체안을 함께 표시한다.</p></div>
+      <aside class="audit"><h2>엔트리 선정 우선순위</h2><div class="audit-row"><i class="dot"></i><div><b>1. 보유 타입 무중복</b><small>한 팀 안에서 같은 타입을 두 번 사용하지 않는다.</small></div></div><div class="audit-row"><i class="dot"></i><div><b>2. 전설은 최대 1마리</b><small>스타팅과 메인 전설의 타입도 겹치지 않게 한다.</small></div></div><div class="audit-row"><i class="dot"></i><div><b>3. 팀 내 기술명 무중복</b><small>같은 게임의 서로 다른 포켓몬에게 같은 기술을 배치하지 않는다.</small></div></div><div class="audit-row"><i class="dot"></i><div><b>4. 자속기 우선</b><small>자속기 → 공격 타입 다양성 → 약점 카운터 순서로 기술을 고른다.</small></div></div><div class="audit-row"><i class="dot"></i><div><b>5. 역할과 세대 개성</b><small>물리·특수·스피드·탱커를 섞고, 해당 작품 신규 포켓몬과 복합 타입을 우선한다.</small></div></div></aside>
+    </section>
+    <nav class="controls"><button class="filter active" data-filter="all">전체</button><button class="filter" data-filter="switch">Switch 본편</button><button class="filter" data-filter="legacy">레거시</button><button class="filter" data-filter="fan">어나더레드</button></nav>
+    <aside class="scope-note"><h2>확정안과 임시 추천안</h2><p><b>사용자가 직접 지정한 엔트리는 확정안</b>으로 표시했다. 나머지 1~7세대 팀은 우선 조합을 보는 임시 추천안이며 각 시리즈에 교체 예시를 함께 표시했다.</p><p>1~3세대에서는 타입에 따라 물리·특수가 고정된다. 레벨업 기술은 <b>Lv.</b>, 기술머신·가르침은 <b>레벨 무관</b>, 교배기는 <b>부화 시</b>로 표시한다.</p></aside>
+    <div id="games"></div><div id="empty" class="empty">검색 결과가 없습니다.</div>
+    <footer class="footer">포켓몬 이미지는 PokéAPI 공식 일러스트 미러, 구작 커버는 <a href="https://archives.bulbagarden.net/wiki/Category:Game_covers" target="_blank" rel="noreferrer">Bulbagarden Archives</a>, 최신작 타이틀 대표 이미지는 공식 사이트·Wikimedia 자료를 로컬 저장해 사용했다. 기술 떠올리기는 해당 게임의 기술 복원 기능을 뜻한다. 입수처·기술 확인: <a href="https://www.serebii.net/pokearth/" target="_blank" rel="noreferrer">Serebii Pokéarth</a> · <a href="https://www.serebii.net/letsgopikachueevee/gift.shtml" target="_blank" rel="noreferrer">Let’s Go 선물 포켓몬</a> · <a href="https://www.serebii.net/legendsz-a/wildzones.shtml" target="_blank" rel="noreferrer">Z-A 와일드 존</a> · <a href="https://legends.pokemon.com/en-us/" target="_blank" rel="noreferrer">LEGENDS Z-A 공식</a> · <a href="https://pokemon.jhcloud.kr/" target="_blank" rel="noreferrer">어나더 레드 공식</a>. 어나더 레드는 공식 가이드와 사용자 제공 TM표를 우선 적용했다.</footer>
+  </main>
+  <script src="pokemon-species-meta.js"></script>
+  <script src="pokemon-move-plans.js"></script>
+  <script>
+    const A='pokemon-team-assets/pokemon/';
+    const T='pokemon-team-assets/titles/';
+    const m=(name,type,kind,source,why)=>({name,type,kind,source,why});
+    const p=(name,id,types,role,moves,extra={})=>({name,id,types,role,moves,...extra});
+    const games=[
+      {id:'lgp',cat:'switch',title:'레츠고! 피카츄',image:T+'letsgo.jpg',era:'관동 리메이크 · Switch',note:'원안 그대로. 6마리의 본래 타입 9종이 겹치지 않고, 고속 특수딜·물리딜·탱커가 모두 있다.',tm:['TM13 깨트리기 — 10번도로','TM19 아이언테일 — 무지개백화점','TM34 용의파동 — 실프주식회사','TM36 10만볼트 — 갈색시티','TM41 지진 — 상록체육관','TM43 섀도볼 — 무지개백화점','TM47 파도타기 — 15번도로','TM55 냉동빔 — 쌍둥이섬'],team:[
+        p('피카츄',25,['전기'],'고속 혼합형',[m('10만볼트','전기','특수·자속','TM36 · 갈색시티','안정적인 주력 자속기'),m('깨트리기','격투','물리','TM13 · 10번도로','바위·얼음·강철 견제'),m('아이언테일','강철','물리','TM19 · 무지개백화점','페어리·바위 견제'),m('구멍파기','땅','물리','TM10 · 블루시티','전기·독·강철 견제')]),
+        p('리자몽',6,['불꽃','비행'],'고속 특수형',[m('화염방사','불꽃','특수·자속','TM37 · 실프주식회사','안정적인 불꽃 자속기'),m('에어슬래시','비행','특수·자속','레벨업/기술 떠올리기','격투·벌레·풀 처리'),m('용의파동','드래곤','특수','TM34 · 실프주식회사','드래곤 견제'),m('깨트리기','격투','물리','TM13 · 10번도로','바위 카운터')]),
+        p('거북왕',9,['물'],'특수 탱커',[m('파도타기','물','특수·자속','TM47 · 15번도로','안정적인 물 자속기'),m('냉동빔','얼음','특수','TM55 · 쌍둥이섬','풀·드래곤 견제'),m('악의파동','악','특수','TM20 · 로켓단아지트','에스퍼·고스트 견제'),m('러스터캐논','강철','특수','TM54 · 실프주식회사','페어리·얼음 견제')]),
+        p('이상해꽃',3,['풀','독'],'상태이상 탱커',[m('메가드레인','풀','특수·자속','TM53 · 연분홍체육관','공격과 회복'),m('오물폭탄','독','특수·자속','TM52 · 포켓몬저택','페어리·풀 처리'),m('수면가루','풀','변화','Lv.13','행동 봉쇄'),m('씨뿌리기','풀','변화','Lv.7','장기전 회복')]),
+        p('잠만보',143,['노말'],'물리 탱커',[m('누르기','노말','물리·자속','레벨업/기술 떠올리기','주력 자속기'),m('지진','땅','물리','TM41 · 상록체육관','바위·강철 카운터'),m('깨물어부수기','악','물리','레벨업','고스트 견제'),m('깨트리기','격투','물리','TM13 · 10번도로','바위·강철 견제')]),
+        p('뮤츠',150,['에스퍼'],'고속 특수형·전설',[m('사이코키네시스','에스퍼','특수·자속','TM40 · 노랑시티','주력 자속기'),m('섀도볼','고스트','특수','TM43 · 무지개백화점','고스트·에스퍼 견제'),m('10만볼트','전기','특수','TM36 · 갈색시티','물·비행 견제'),m('냉동빔','얼음','특수','TM55 · 쌍둥이섬','땅·비행·드래곤 견제')],{legend:true})]},
+      {id:'lge',cat:'switch',title:'레츠고! 이브이',image:T+'letsgo.jpg',era:'관동 리메이크 · Switch',note:'피카츄판과 완전히 동일한 팀은 아니지만 잠만보·뮤츠가 겹친다. “버전 간 한 마리도 중복 금지”라면 두 자리를 이브이·윈디로 교체 추천.',tm:['TM22 스톤샤워 — 포켓몬저택','TM26 독찌르기 — 무지개시티','TM34 용의파동 — 실프주식회사','TM36 10만볼트 — 갈색시티','TM40 사이코키네시스 — 노랑시티','TM41 지진 — 상록체육관','TM47 파도타기 — 15번도로','TM55 냉동빔 — 쌍둥이섬'],team:[
+        p('쥬피썬더',135,['전기'],'고속 특수형',[m('10만볼트','전기','특수·자속','TM36 · 갈색시티','주력 자속기'),m('섀도볼','고스트','특수','TM43 · 무지개백화점','고스트·에스퍼 견제'),m('바늘미사일','벌레','물리','레벨업','풀·에스퍼·악 견제'),m('전기자석파','전기','변화','TM16 · 25번도로','속도 제어')]),
+        p('니드킹',34,['독','땅'],'혼합 물리형',[m('독찌르기','독','물리·자속','TM26 · 무지개시티','페어리·풀 처리'),m('지진','땅','물리·자속','TM41 · 상록체육관','강력한 땅 자속기'),m('스톤샤워','바위','물리','TM22 · 포켓몬저택','얼음·비행 견제'),m('파도타기','물','특수','TM47 · 15번도로','땅·바위 카운터')]),
+        p('라프라스',131,['물','얼음'],'특수 탱커',[m('파도타기','물','특수·자속','TM47 · 15번도로','주력 물 자속기'),m('냉동빔','얼음','특수·자속','TM55 · 쌍둥이섬','드래곤·풀 처리'),m('사이코키네시스','에스퍼','특수','TM40 · 노랑시티','격투·독 견제'),m('10만볼트','전기','특수','TM36 · 갈색시티','물 타입 견제')]),
+        p('망나뇽',149,['드래곤','비행'],'물리 에이스',[m('용의파동','드래곤','특수·자속','TM34 · 실프주식회사','안정적인 드래곤 자속기'),m('에어슬래시','비행','특수·자속','기술 떠올리기','격투·벌레 처리'),m('냉동빔','얼음','특수','TM55 · 쌍둥이섬','드래곤·땅 견제'),m('화염방사','불꽃','특수','TM37 · 실프주식회사','얼음·강철 카운터')]),
+        p('잠만보',143,['노말'],'물리 탱커',[m('누르기','노말','물리·자속','레벨업/기술 떠올리기','안정적인 자속기'),m('지진','땅','물리','TM41 · 상록체육관','강철·바위 견제'),m('깨물어부수기','악','물리','레벨업','고스트 견제'),m('잠자기','에스퍼','변화','TM05 · 무지개게임코너','완전 회복')]),
+        p('뮤츠',150,['에스퍼'],'고속 특수형·전설',[m('사이코키네시스','에스퍼','특수·자속','TM40 · 노랑시티','주력 자속기'),m('명상','에스퍼','변화','TM33 · 노랑시티','특공·특방 강화'),m('화염방사','불꽃','특수','TM37 · 실프주식회사','벌레·강철 카운터'),m('HP회복','노말','변화','레벨업','유지력')],{legend:true})]},
+      {id:'fr',cat:'legacy',title:'파이어레드',image:T+'frlg.jpg',era:'GBA · Switch 공식 미지원',note:'타입 중복 없이 물리·특수 비율이 좋다. Switch 목록이 아니라 레거시 팀 기록으로 수록.',tm:['TM13 냉동빔 — 무지개게임코너','TM19 기가드레인 — 무지개체육관','TM24 10만볼트 — 무지개게임코너','TM26 지진 — 상록체육관','TM29 사이코키네시스 — 노랑시티','TM31 깨트리기 — 상트안느호/무지개백화점','TM35 화염방사 — 무지개게임코너','TM36 오물폭탄 — 5섬 로켓단창고'],team:[
+        p('리자몽',6,['불꽃','비행'],'고속 특수형',[m('화염방사','불꽃','특수·자속','TM35 · 무지개게임코너','주력 자속기'),m('제비반환','비행','물리·자속','TM40 · 9번도로','명중 안정 비행기'),m('드래곤클로','드래곤','특수','TM02 · 챔피언로드','드래곤 견제'),m('깨트리기','격투','물리','TM31 · 상트안느호/백화점','바위 카운터')]),
+        p('니드킹',34,['독','땅'],'혼합 공격형',[m('오물폭탄','독','물리·자속','TM36 · 5섬 로켓단창고','세대3에서는 독이 물리'),m('지진','땅','물리·자속','TM26 · 상록체육관','주력 땅 자속기'),m('냉동빔','얼음','특수','TM13 · 무지개게임코너','땅·드래곤 견제'),m('깨트리기','격투','물리','TM31 · 상트안느호/백화점','바위·얼음 견제')]),
+        p('나시',103,['풀','에스퍼'],'특수 상태이상형',[m('기가드레인','풀','특수·자속','TM19 · 무지개체육관','회복형 풀 자속기'),m('사이코키네시스','에스퍼','특수·자속','TM29 · 노랑시티','주력 에스퍼기'),m('수면가루','풀','변화','아라리 Lv.37 전 진화 권장','행동 봉쇄'),m('빛의장막','에스퍼','변화','기술 떠올리기','특수 내구 지원')]),
+        p('라프라스',131,['물','얼음'],'특수 탱커',[m('파도타기','물','특수·자속','HM03 · 사파리존','주력 물 자속기'),m('냉동빔','얼음','특수·자속','TM13 · 무지개게임코너','드래곤 처리'),m('10만볼트','전기','특수','TM24 · 무지개게임코너','물 견제'),m('사이코키네시스','에스퍼','특수','TM29 · 노랑시티','격투·독 견제')]),
+        p('쥬피썬더',135,['전기'],'고속 특수형',[m('10만볼트','전기','특수·자속','TM24 · 무지개게임코너','주력 자속기'),m('전기자석파','전기','변화','기술 떠올리기','속도 제어'),m('물기','악','특수','이브이 Lv.30 전 진화 권장','고스트·에스퍼 견제'),m('두번차기','격투','물리','Lv.30','바위·얼음 견제')]),
+        p('잠만보',143,['노말'],'물리 탱커',[m('누르기','노말','물리·자속','포획 시 보유/레벨업','주력 자속기'),m('섀도볼','고스트','물리','TM30 · 무지개게임코너','세대3 물리기·고스트 견제'),m('깨트리기','격투','물리','TM31 · 상트안느호/백화점','바위·강철 견제'),m('잠자기','에스퍼','변화','Lv.28 또는 TM44','완전 회복')])]},
+      {id:'lg',cat:'legacy',title:'리프그린',image:T+'frlg.jpg',era:'GBA · Switch 공식 미지원',note:'파이어레드와 잠만보가 겹친다. 버전 간 완전 무중복을 원하면 잠만보 대신 레어코일을 추천.',tm:['TM04 명상 — 노랑체육관','TM13 냉동빔 — 무지개게임코너','TM19 기가드레인 — 무지개체육관','TM23 아이언테일 — 무지개게임코너','TM26 지진 — 상록체육관','TM29 사이코키네시스 — 노랑시티','TM35 화염방사 — 무지개게임코너','TM40 제비반환 — 9번도로'],team:[
+        p('이상해꽃',3,['풀','독'],'특수 탱커',[m('기가드레인','풀','특수·자속','TM19 · 무지개체육관','공격과 회복'),m('오물폭탄','독','물리·자속','TM36 · 5섬 로켓단창고','페어리 없는 세대의 풀 견제'),m('수면가루','풀','변화','Lv.15','행동 봉쇄'),m('지진','땅','물리','TM26 · 상록체육관','불꽃·독·강철 카운터')]),
+        p('망나뇽',149,['드래곤','비행'],'혼합 에이스',[m('드래곤클로','드래곤','특수·자속','TM02 · 챔피언로드','세대3 드래곤은 특수'),m('제비반환','비행','물리·자속','TM40 · 9번도로','비행 자속기'),m('냉동빔','얼음','특수','TM13 · 무지개게임코너','드래곤·땅 견제'),m('화염방사','불꽃','특수','TM35 · 무지개게임코너','얼음·강철 견제')]),
+        p('코뿌리',112,['땅','바위'],'물리 탱커',[m('지진','땅','물리·자속','TM26 · 상록체육관','주력 땅 자속기'),m('락블레스트','바위','물리·자속','Lv.29','비행·불꽃 견제'),m('메가혼','벌레','물리','Lv.66','풀·에스퍼 카운터'),m('깨트리기','격투','물리','TM31 · 상트안느호/백화점','얼음·강철 견제')]),
+        p('루주라',124,['얼음','에스퍼'],'고속 특수형',[m('냉동빔','얼음','특수·자속','TM13 · 무지개게임코너','주력 얼음기'),m('사이코키네시스','에스퍼','특수·자속','TM29 · 노랑시티','주력 에스퍼기'),m('명상','에스퍼','변화','TM04 · 노랑체육관','특수 강화'),m('악마의키스','노말','변화','기술 떠올리기','수면 운영')]),
+        p('샤미드',134,['물'],'특수 탱커',[m('파도타기','물','특수·자속','HM03 · 사파리존','주력 자속기'),m('냉동빔','얼음','특수','TM13 · 무지개게임코너','풀·드래곤 견제'),m('물기','악','특수','이브이 Lv.30 전 진화 권장','고스트·에스퍼 견제'),m('녹기','독','변화','Lv.47','물리 내구 강화')]),
+        p('잠만보',143,['노말'],'물리 탱커',[m('누르기','노말','물리·자속','포획 시 보유/레벨업','주력 자속기'),m('섀도볼','고스트','물리','TM30 · 무지개게임코너','고스트 견제'),m('지진','땅','물리','TM26 · 상록체육관','바위·강철 견제'),m('잠자기','에스퍼','변화','Lv.28 또는 TM44','완전 회복')])]},
+      {id:'bd',cat:'switch',title:'브릴리언트 다이아몬드',image:T+'bdsp.png',era:'신오 리메이크 · Switch',note:'사용자 원안 유지. 디아루가 1마리만 전설이며 불꽃·격투 스타팅과 강철·드래곤 전포의 타입이 겹치지 않는다.',tm:['TM19 기가드레인 — 209번도로','TM21 매지컬샤인 — 갤럭시단 창고/장막시티','TM24 10만볼트 — 골짜기발전소/장막시티','TM26 지진 — 미혹의동굴/배틀파크','TM30 섀도볼 — 210번도로/배틀파크','TM35 화염방사 — 골짜기발전소/장막시티','TM36 오물폭탄 — 갤럭시단 창고/배틀파크','TM59 용의파동 — 챔피언로드/배틀파크','TM71 스톤에지 — 챔피언로드/배틀파크','TM89 유턴 — 운하시티/장막시티'],team:[
+        p('초염몽',392,['불꽃','격투'],'고속 혼합 에이스',[m('화염방사','불꽃','특수·자속','TM35 · 골짜기발전소/장막시티','안정적인 불꽃 자속기'),m('인파이트','격투','물리·자속','Lv.36','강력한 격투 자속기'),m('유턴','벌레','물리','TM89 · 운하시티/장막시티','에스퍼 견제와 교대'),m('스톤에지','바위','물리','TM71 · 챔피언로드/배틀파크','비행 카운터')]),
+        p('맘모꾸리',473,['얼음','땅'],'물리 브레이커',[m('고드름떨구기','얼음','물리·자속','기술 떠올리기','드래곤·비행 처리'),m('지진','땅','물리·자속','TM26 · 미혹의동굴/배틀파크','주력 땅 자속기'),m('스톤샤워','바위','물리','TM80 · 천관산','불꽃·비행 견제'),m('아이언헤드','강철','물리','지하대동굴 기술머신','페어리·얼음 견제')]),
+        p('토게키스',468,['페어리','비행'],'특수 탱커',[m('매지컬샤인','페어리','특수·자속','TM21 · 갤럭시단 창고/장막시티','안정적인 페어리 자속기'),m('에어슬래시','비행','특수·자속','기술 떠올리기','하늘의은총과 궁합'),m('화염방사','불꽃','특수','TM35 · 골짜기발전소/장막시티','강철 카운터'),m('파동탄','격투','특수','기술 떠올리기','바위·얼음 견제')]),
+        p('로즈레이드',407,['풀','독'],'고속 특수형',[m('기가드레인','풀','특수·자속','TM19 · 209번도로','회복형 풀 자속기'),m('오물폭탄','독','특수·자속','TM36 · 갤럭시단 창고/배틀파크','페어리 처리'),m('매지컬샤인','페어리','특수','TM21 · 갤럭시단 창고/장막시티','드래곤·악 견제'),m('섀도볼','고스트','특수','TM30 · 210번도로/배틀파크','에스퍼·고스트 견제')]),
+        p('화강돌',442,['고스트','악'],'혼합 탱커',[m('섀도볼','고스트','특수·자속','TM30 · 210번도로/배틀파크','안정적인 고스트 자속기'),m('악의파동','악','특수·자속','TM79 · 챔피언로드','고스트·에스퍼 처리'),m('사이코키네시스','에스퍼','특수','TM29 · 211번도로/장막시티','격투·독 견제'),m('도깨비불','불꽃','변화','TM61 · 배틀파크/지하대동굴','물리 공격 억제')]),
+        p('디아루가',483,['강철','드래곤'],'특수 탱커·전설',[m('러스터캐논','강철','특수·자속','TM91 · 운하시티','페어리·얼음 처리'),m('용의파동','드래곤','특수·자속','TM59 · 챔피언로드/배틀파크','안정적인 드래곤기'),m('10만볼트','전기','특수','TM24 · 골짜기발전소/장막시티','물·비행 견제'),m('화염방사','불꽃','특수','TM35 · 골짜기발전소/장막시티','강철 카운터')],{legend:true})]},
+      {id:'sp',cat:'switch',title:'샤이닝 펄',image:T+'bdsp.png',era:'신오 리메이크 · Switch',note:'사용자 원안 유지. BD와 토게키스가 겹치므로 ‘버전 간 한 마리도 중복 금지’라면 토게키스를 메가자리로스(벌레·비행)로 교체하면 된다.',tm:['TM21 매지컬샤인 — 갤럭시단 창고/장막시티','TM24 10만볼트 — 골짜기발전소/장막시티','TM26 지진 — 미혹의동굴/배틀파크','TM31 깨트리기 — 무쇠게이트/배틀파크','TM59 용의파동 — 챔피언로드/배틀파크','TM71 스톤에지 — 챔피언로드/배틀파크','TM73 전기자석파 — 배틀파크/지하대동굴','TM84 독찌르기 — 212번도로','TM91 러스터캐논 — 운하시티','TM95 파도타기 — 봉신마을'],team:[
+        p('토대부기',389,['풀','땅'],'물리 탱커',[m('우드해머','풀','물리·자속','Lv.57','최대 화력 풀 자속기'),m('지진','땅','물리·자속','TM26 · 미혹의동굴/배틀파크','주력 땅 자속기'),m('깨물어부수기','악','물리','Lv.45','고스트·에스퍼 견제'),m('스톤에지','바위','물리','TM71 · 챔피언로드/배틀파크','얼음·비행 카운터')]),
+        p('포푸니라',461,['악','얼음'],'고속 물리형',[m('깜짝베기','악','물리·자속','기술 떠올리기','안정적인 악 자속기'),m('눈사태','얼음','물리·자속','TM72 · 장막백화점/지하대동굴','드래곤·땅 처리'),m('깨트리기','격투','물리','TM31 · 무쇠게이트/배틀파크','바위·강철 카운터'),m('독찌르기','독','물리','TM84 · 212번도로','페어리 견제')]),
+        p('토게키스',468,['페어리','비행'],'특수 탱커',[m('매지컬샤인','페어리','특수·자속','TM21 · 갤럭시단 창고/장막시티','드래곤·악 처리'),m('에어슬래시','비행','특수·자속','기술 떠올리기','격투·벌레 처리'),m('파동탄','격투','특수','기술 떠올리기','바위·얼음 견제'),m('화염방사','불꽃','특수','TM35 · 골짜기발전소/장막시티','강철 카운터')]),
+        p('엘레이드',475,['에스퍼','격투'],'물리 에이스',[m('사이코커터','에스퍼','물리·자속','기술 떠올리기','급소형 에스퍼 자속기'),m('드레인펀치','격투','물리·자속','TM60 · 장막체육관','회복형 격투 자속기'),m('리프블레이드','풀','물리','기술 떠올리기','물·땅 견제'),m('스톤에지','바위','물리','TM71 · 챔피언로드/배틀파크','비행 카운터')]),
+        p('자포코일',462,['전기','강철'],'특수 탱커',[m('10만볼트','전기','특수·자속','TM24 · 골짜기발전소/장막시티','주력 전기 자속기'),m('러스터캐논','강철','특수·자속','TM91 · 운하시티','페어리·얼음 처리'),m('트라이어택','노말','특수','기술 떠올리기','중립 견제와 상태이상'),m('전기자석파','전기','변화','TM73 · 배틀파크/지하대동굴','속도 제어')]),
+        p('펄기아',484,['물','드래곤'],'고속 특수형·전설',[m('파도타기','물','특수·자속','TM95 · 봉신마을','안정적인 물 자속기'),m('용의파동','드래곤','특수·자속','TM59 · 챔피언로드/배틀파크','주력 드래곤기'),m('10만볼트','전기','특수','TM24 · 골짜기발전소/장막시티','물·비행 견제'),m('화염방사','불꽃','특수','TM35 · 골짜기발전소/장막시티','얼음·강철 카운터')],{legend:true})]},
+      {id:'sword',cat:'switch',title:'포켓몬스터 소드',image:T+'swsh.jpg',era:'가라르 · Switch',note:'6마리의 10개 타입이 겹치지 않는다. 자시안은 녹슨검을 든 검왕 폼 기준이며 우라오스는 연격의 태세다.',tm:['TM22 스톤샤워 — 9번도로','TM43 깨트리기 — 8번도로','TM56 유턴 — 루미너스메이즈숲','TR05 냉동빔 — 맥스레이드/와트숍','TR10 지진 — 맥스레이드/와트숍','TR11 사이코키네시스 — 맥스레이드/와트숍','TR58 악의파동 — 맥스레이드/와트숍','TR64 기합구슬 — 맥스레이드/와트숍','TR86 와일드볼트 — 맥스레이드/와트숍','TR90 치근거리기 — 맥스레이드/와트숍'],team:[
+        p('에이스번',815,['불꽃'],'고속 물리 에이스',[m('화염볼','불꽃','물리·자속','Lv.35','전용 주력 자속기'),m('유턴','벌레','물리','TM56 · 루미너스메이즈숲','교대와 에스퍼 견제'),m('더스트슈트','독','물리','TR73 · 맥스레이드/와트숍','페어리 카운터'),m('사념의박치기','에스퍼','물리','TR69 · 맥스레이드/와트숍','격투·독 견제')]),
+        p('자시안',888,['페어리','강철'],'고속 물리형·전설',[m('거수참','강철','물리·자속','녹슨검 장착 시 아이언헤드 변화','최강 강철 자속기'),m('치근거리기','페어리','물리·자속','TR90 · 맥스레이드/와트숍','드래곤·격투 처리'),m('깨물어부수기','악','물리','Lv.42','고스트·에스퍼 견제'),m('와일드볼트','전기','물리','TR86 · 맥스레이드/와트숍','물·비행 견제')],{legend:true}),
+        p('우라오스 연격',892,['격투','물'],'물리 브레이커',[m('수류연타','물','물리·자속','진화 시 습득','확정 급소 전용기'),m('인파이트','격투','물리·자속','Lv.48','강력한 격투 자속기'),m('유턴','벌레','물리','TM56 · 루미너스메이즈숲','에스퍼 견제와 교대'),m('아이언헤드','강철','물리','TR74 · 맥스레이드/와트숍','페어리 견제')]),
+        p('파치래곤',880,['전기','드래곤'],'물리 공격형',[m('전격부리','전기','물리·자속','Lv.63','선공 시 위력 2배'),m('드래곤클로','드래곤','물리·자속','TR47 · 맥스레이드/와트숍','안정적인 드래곤기'),m('지진','땅','물리','TR10 · 맥스레이드/와트숍','강철·바위 견제'),m('스톤샤워','바위','물리','TM22 · 9번도로','얼음·비행 견제')]),
+        p('데스판',867,['고스트','땅'],'물리 탱커',[m('섀도클로','고스트','물리·자속','TR50 · 맥스레이드/와트숍','안정적인 고스트기'),m('지진','땅','물리·자속','TR10 · 맥스레이드/와트숍','주력 땅 자속기'),m('바디프레스','격투','물리','TR99 · 맥스레이드/와트숍','높은 방어 활용'),m('스톤에지','바위','물리','TR75 · 맥스레이드/와트숍','비행 카운터')]),
+        p('마임꽁꽁',866,['얼음','에스퍼'],'특수 서포터',[m('프리즈드라이','얼음','특수·자속','Lv.44','물 타입도 약점으로 타격'),m('사이코키네시스','에스퍼','특수·자속','TR11 · 맥스레이드/와트숍','주력 에스퍼기'),m('에너지볼','풀','특수','TR65 · 맥스레이드/와트숍','물·땅 견제'),m('기합구슬','격투','특수','TR64 · 맥스레이드/와트숍','악·강철 카운터')])]},
+      {id:'shield',cat:'switch',title:'포켓몬스터 실드',image:T+'swsh.jpg',era:'가라르 · Switch',note:'소드와 완전히 다른 6마리. 자마젠타는 녹슨방패를 든 방패왕 폼 기준이며 전설은 1마리다.',tm:['TM22 스톤샤워 — 9번도로','TM43 깨트리기 — 8번도로','TM56 유턴 — 루미너스메이즈숲','TR02 화염방사 — 맥스레이드/와트숍','TR05 냉동빔 — 맥스레이드/와트숍','TR48 벌크업 — 맥스레이드/와트숍','TR58 악의파동 — 맥스레이드/와트숍','TR67 분함의발구르기 — 맥스레이드/와트숍','TR72 파워휩 — 맥스레이드/와트숍','TR90 치근거리기 — 맥스레이드/와트숍'],team:[
+        p('인텔리레온',818,['물'],'고속 특수 에이스',[m('하이드로펌프','물','특수·자속','Lv.62','최대 화력 물 자속기'),m('냉동빔','얼음','특수','TR05 · 맥스레이드/와트숍','풀·드래곤 견제'),m('악의파동','악','특수','TR58 · 맥스레이드/와트숍','고스트·에스퍼 견제'),m('유턴','벌레','물리','TM56 · 루미너스메이즈숲','불리한 대면 탈출')]),
+        p('자마젠타',889,['격투','강철'],'물리 탱커·전설',[m('거수탄','강철','물리·자속','녹슨방패 장착 시 아이언헤드 변화','주력 강철 자속기'),m('인파이트','격투','물리·자속','Lv.77','강력한 격투 자속기'),m('깨물어부수기','악','물리','Lv.42','고스트·에스퍼 견제'),m('치근거리기','페어리','물리','TR90 · 맥스레이드/와트숍','드래곤·격투 견제')],{legend:true}),
+        p('드래펄트',887,['고스트','드래곤'],'초고속 혼합형',[m('드래곤애로','드래곤','물리·자속','Lv.78','전용 2회 공격'),m('고스트다이브','고스트','물리·자속','Lv.48','고위력 고스트기'),m('화염방사','불꽃','특수','TR02 · 맥스레이드/와트숍','얼음·강철 카운터'),m('유턴','벌레','물리','TM56 · 루미너스메이즈숲','악 견제와 교대')]),
+        p('다태우지네',851,['불꽃','벌레'],'물리 브레이커',[m('불꽃채찍','불꽃','물리·자속','Lv.53','방어를 낮추는 전용기'),m('흡혈','벌레','물리·자속','TR18 · 맥스레이드/와트숍','회복형 벌레기'),m('파워휩','풀','물리','TR72 · 맥스레이드/와트숍','물·바위 카운터'),m('깨물어부수기','악','물리','Lv.32','고스트·에스퍼 견제')]),
+        p('파치르돈',881,['전기','얼음'],'물리 공격형',[m('전격부리','전기','물리·자속','Lv.63','선공 시 위력 2배'),m('고드름떨구기','얼음','물리·자속','Lv.70','드래곤·땅 처리'),m('분함의발구르기','땅','물리','TR67 · 맥스레이드/와트숍','강철·바위 견제'),m('스톤샤워','바위','물리','TM22 · 9번도로','불꽃·비행 견제')]),
+        p('오롱털',861,['악','페어리'],'물리 서포터',[m('DD래리어트','악','물리·자속','TR93 · 맥스레이드/와트숍','능력 변화 무시'),m('소울크래시','페어리','물리·자속','Lv.44','특공을 낮추는 전용기'),m('드레인펀치','격투','물리','TM63 · 슛시티','회복과 강철 견제'),m('벌크업','격투','변화','TR48 · 맥스레이드/와트숍','공격·방어 강화')])]},
+      {id:'arceus',cat:'switch',title:'Pokémon LEGENDS 아르세우스',image:T+'arceus.jpg',era:'히스이 · Switch',note:'기술머신이 없는 작품이다. 레벨업 외 기술은 축복마을 훈련장에서 전수받으며, 민첩·강공 시스템 때문에 물리·특수 분류보다 행동 순서도 중요하다.',tm:['TM 없음 — 축복마을 훈련장 전수','기술 숙달 — 전수 또는 반복 사용','전용기 레벨은 포획 레벨에 따라 이미 습득했을 수 있음'],team:[
+        p('히스이 블레이범',10233,['불꽃','고스트'],'고속 특수형',[m('백귀야행','고스트','특수·자속','Lv.40','상태이상 상대에게 위력 증가'),m('화염방사','불꽃','특수·자속','훈련장 전수','안정적인 불꽃 자속기'),m('와일드볼트','전기','물리','훈련장 전수','물·비행 견제'),m('명상','에스퍼','변화','훈련장 전수','공수 동시 강화')]),
+        p('사마자르',900,['벌레','바위'],'물리 브레이커',[m('암석액스','바위','물리·자속','Lv.29','파편을 남기는 전용기'),m('시저크로스','벌레','물리·자속','훈련장 전수','풀·에스퍼 처리'),m('인파이트','격투','물리','훈련장 전수','강철·바위 카운터'),m('제비반환','비행','물리','훈련장 전수','격투·벌레 견제')]),
+        p('포푸니크',903,['격투','독'],'고속 물리형',[m('페이탈클로','독','물리·자속','Lv.34','상태이상 부여 전용기'),m('인파이트','격투','물리·자속','훈련장 전수','강력한 격투기'),m('시저크로스','벌레','물리','훈련장 전수','에스퍼 견제'),m('스톤샤워','바위','물리','훈련장 전수','비행 카운터')]),
+        p('히스이 미끄래곤',10242,['강철','드래곤'],'특수 탱커',[m('러스터캐논','강철','특수·자속','훈련장 전수','페어리·얼음 처리'),m('용의파동','드래곤','특수·자속','훈련장 전수','안정적인 드래곤기'),m('10만볼트','전기','특수','훈련장 전수','물·비행 견제'),m('냉동빔','얼음','특수','훈련장 전수','땅·드래곤 견제')]),
+        p('다투곰',901,['땅','노말'],'물리 탱커',[m('들이받기','노말','물리·자속','Lv.43','강력한 노말 자속기'),m('10만마력','땅','물리·자속','훈련장 전수','주력 땅 자속기'),m('얼음펀치','얼음','물리','훈련장 전수','풀·비행 카운터'),m('치근거리기','페어리','물리','훈련장 전수','격투·드래곤 견제')]),
+        p('히스이 워글',10240,['에스퍼','비행'],'특수 에이스',[m('오라윙','에스퍼','특수·자속','Lv.34','행동 순서를 당기는 전용기'),m('폭풍','비행','특수·자속','Lv.43','고위력 비행기'),m('매지컬샤인','페어리','특수','훈련장 전수','악·드래곤 견제'),m('매지컬플레임','불꽃','특수','훈련장 전수','얼음·강철 카운터')])]},
+      {id:'scarlet',cat:'switch',title:'포켓몬스터 스칼렛',image:T+'sv.png',era:'팔데아 · Switch',note:'12개 타입이 정확히 한 번씩 등장한다. 코라이돈의 격투·드래곤은 스타팅 마스카나의 풀·악과 겹치지 않는다.',tm:['TM60 유턴 — 3,000LP로 제작','TM79 매지컬샤인 — 8,000LP로 제작','TM83 독찌르기 — 5,000LP로 제작','TM119 에너지볼 — 10,000LP로 제작','TM120 사이코키네시스 — 10,000LP로 제작','TM126 10만볼트 — 10,000LP로 제작','TM127 치근거리기 — 10,000LP로 제작','TM149 지진 — 12,000LP로 제작','TM150 스톤에지 — 12,000LP로 제작'],team:[
+        p('마스카나',908,['풀','악'],'초고속 물리 에이스',[m('트릭플라워','풀','물리·자속','진화 시 습득','필중 확정 급소 전용기'),m('깜짝베기','악','물리·자속','Lv.38','고스트·에스퍼 처리'),m('치근거리기','페어리','물리','Lv.47 또는 TM127','격투·드래곤 카운터'),m('유턴','벌레','물리','Lv.24 또는 TM60','교대와 악 견제')]),
+        p('코라이돈',1007,['격투','드래곤'],'고속 물리형·전설',[m('액셀브레이크','격투','물리·자속','Lv.56','약점 공격 시 위력 증가'),m('드래곤클로','드래곤','물리·자속','TM78 · 제작','안정적인 드래곤기'),m('플레어드라이브','불꽃','물리','Lv.70','얼음·강철 카운터'),m('유턴','벌레','물리','TM60 · 3,000LP 제작','에스퍼 견제와 교대')],{legend:true}),
+        p('카디나르마',936,['불꽃','에스퍼'],'특수 브레이커',[m('아머캐논','불꽃','특수·자속','Lv.62','전용 고화력 불꽃기'),m('사이코키네시스','에스퍼','특수·자속','TM120 · 10,000LP 제작','주력 에스퍼기'),m('에너지볼','풀','특수','TM119 · 10,000LP 제작','물·땅 카운터'),m('파동탄','격투','특수','기술 떠올리기','악·바위 견제')]),
+        p('킬라플로르',970,['바위','독'],'특수 탱커',[m('파워젬','바위','특수·자속','Lv.50','명중 안정 바위기'),m('오물웨이브','독','특수·자속','Lv.58','페어리·풀 처리'),m('에너지볼','풀','특수','TM119 · 10,000LP 제작','물·땅 카운터'),m('매지컬샤인','페어리','특수','TM79 · 8,000LP 제작','격투·드래곤 견제')]),
+        p('두드리짱',959,['페어리','강철'],'물리 서포터',[m('거대해머','강철','물리·자속','진화 시 습득','연속 사용 불가 전용기'),m('치근거리기','페어리','물리·자속','Lv.35 또는 TM127','드래곤·격투 처리'),m('탁쳐서떨구기','악','물리','기술 떠올리기','고스트·에스퍼와 도구 견제'),m('스톤에지','바위','물리','TM150 · 12,000LP 제작','불꽃·비행 카운터')]),
+        p('찌리비크',941,['전기','비행'],'고속 특수형',[m('10만볼트','전기','특수·자속','TM126 · 10,000LP 제작','안정적인 전기 자속기'),m('폭풍','비행','특수·자속','Lv.55','강력한 비행 자속기'),m('유턴','벌레','물리','TM60 · 3,000LP 제작','교대와 악 견제'),m('웨더볼','노말','특수','Lv.43','날씨에 따라 견제 타입 변화')])]},
+      {id:'violet',cat:'switch',title:'포켓몬스터 바이올렛',image:T+'sv.png',era:'팔데아 · Switch',note:'스칼렛과 완전히 다른 6마리이며 타입도 팀 안에서 겹치지 않는다. 미라이돈은 전설 1마리만 사용한다.',tm:['TM60 유턴 — 3,000LP로 제작','TM79 매지컬샤인 — 8,000LP로 제작','TM83 독찌르기 — 5,000LP로 제작','TM94 악의파동 — 8,000LP로 제작','TM105 시저크로스 — 5,000LP로 제작','TM115 용의파동 — 8,000LP로 제작','TM119 에너지볼 — 10,000LP로 제작','TM120 사이코키네시스 — 10,000LP로 제작','TM148 오물폭탄 — 10,000LP로 제작','TM150 스톤에지 — 12,000LP로 제작'],team:[
+        p('웨이니발',914,['물','격투'],'고속 물리 에이스',[m('아쿠아스텝','물','물리·자속','진화 시 습득','공격 후 스피드 상승'),m('인파이트','격투','물리·자속','Lv.58','강력한 격투 자속기'),m('아이스스피너','얼음','물리','TM124 · 제작','풀·드래곤 카운터'),m('유턴','벌레','물리','TM60 · 3,000LP 제작','에스퍼 견제와 교대')]),
+        p('미라이돈',1008,['전기','드래곤'],'고속 특수형·전설',[m('라이트닝드라이브','전기','특수·자속','Lv.56','약점 공격 시 위력 증가'),m('용의파동','드래곤','특수·자속','TM115 · 8,000LP 제작','안정적인 드래곤기'),m('매지컬샤인','페어리','특수','TM79 · 8,000LP 제작','드래곤·격투 견제'),m('오버히트','불꽃','특수','TM157 · 제작','얼음·강철 카운터')],{legend:true}),
+        p('파라블레이즈',937,['불꽃','고스트'],'물리 브레이커',[m('원념의칼','불꽃','물리·자속','Lv.48','피해 절반 회복 전용기'),m('섀도클로','고스트','물리·자속','TM61 · 제작','안정적인 고스트기'),m('인파이트','격투','물리','기술 떠올리기','악·바위 카운터'),m('시저크로스','벌레','물리','TM105 · 5,000LP 제작','에스퍼 견제')]),
+        p('대도각참',983,['악','강철'],'물리 탱커',[m('도각참','악','물리·자속','진화 시 습득','전용 필중 악 자속기'),m('아이언헤드','강철','물리·자속','Lv.57','페어리·얼음 처리'),m('스톤에지','바위','물리','TM150 · 12,000LP 제작','불꽃·비행 카운터'),m('독찌르기','독','물리','TM83 · 5,000LP 제작','페어리 추가 견제')]),
+        p('육파리',949,['땅','풀'],'특수 탱커',[m('대지의힘','땅','특수·자속','Lv.54','주력 땅 자속기'),m('에너지볼','풀','특수·자속','TM119 · 10,000LP 제작','물·땅 처리'),m('오물폭탄','독','특수','TM148 · 10,000LP 제작','페어리·풀 견제'),m('매지컬샤인','페어리','특수','TM79 · 8,000LP 제작','악·드래곤 견제')]),
+        p('베라카스',954,['벌레','에스퍼'],'특수 서포터',[m('벌레의야단법석','벌레','특수·자속','Lv.45','악·에스퍼 처리'),m('사이코키네시스','에스퍼','특수·자속','TM120 · 10,000LP 제작','주력 에스퍼기'),m('에너지볼','풀','특수','TM119 · 10,000LP 제작','물·땅 견제'),m('매지컬샤인','페어리','특수','TM79 · 8,000LP 제작','악·드래곤 카운터')])]},
+      {id:'za',cat:'switch',title:'Pokémon LEGENDS Z-A',image:T+'za.png',era:'미르시티 · Switch / Switch 2',note:'신규 메가진화 중심 추천안. 표에는 메가진화 후 타입을 적었지만 한 배틀에서 메가진화는 1마리만 가능하므로 상대에 맞춰 에이스를 고른다.',tm:['TM010 깨트리기 — 콰사르티코 주식회사','TM012 스톤샤워 — 미르시티 도감 보상','TM013 냉동빔 — 와일드 존 12','TM022 제비반환 — 와일드 존 3','TM026 에너지볼 — 블뢰 지구 에믈리스 공원','TM062 화염방사 — 와일드 존 17','TM063 사이코키네시스 — 와일드 존 11','TM065 스톤에지 — 와일드 존 18','TM069 지진 — 미르시티 도감 보상','TM073 파도타기 — 미르시티 도감 보상','TM074 섀도볼 — 베르 지구 섹터 6','TM092 매지컬샤인 — 와일드 존 7'],team:[
+        p('메가 메가니움',154,['풀','페어리'],'특수 탱커·스타팅',[m('에너지볼','풀','특수·자속','TM026 · 블뢰 지구 에믈리스 공원','안정적인 풀 자속기'),m('매지컬샤인','페어리','특수·자속','TM092 · 와일드 존 7','드래곤·악 처리'),m('지진','땅','물리','TM069 · 미르시티 도감 보상','불꽃·독·강철 견제'),m('누르기','노말','물리','레벨업/기술 떠올리기','중립 견제와 마비')]),
+        p('지가르데',718,['드래곤','땅'],'물리 탱커·전설',[m('용의파동','드래곤','특수·자속','TM075 · 블뢰 지구 섹터 4','안정적인 드래곤기'),m('지진','땅','물리·자속','TM069 · 미르시티 도감 보상','주력 땅 자속기'),m('스톤에지','바위','물리','TM065 · 와일드 존 18','얼음·비행 카운터'),m('깨물어부수기','악','물리','레벨업/기술 떠올리기','고스트·에스퍼 견제')],{legend:true}),
+        p('메가 아쿠스타',121,['물','에스퍼'],'고속 특수형',[m('파도타기','물','특수·자속','TM073 · 미르시티 도감 보상','안정적인 물 자속기'),m('사이코키네시스','에스퍼','특수·자속','TM063 · 와일드 존 11','주력 에스퍼기'),m('10만볼트','전기','특수','TM067 · 미르시티 도감 보상','물·비행 견제'),m('냉동빔','얼음','특수','TM013 · 와일드 존 12','풀·드래곤 카운터')]),
+        p('메가 샹델라',609,['불꽃','고스트'],'특수 브레이커',[m('화염방사','불꽃','특수·자속','TM062 · 와일드 존 17','안정적인 불꽃 자속기'),m('섀도볼','고스트','특수·자속','TM074 · 베르 지구 섹터 6','주력 고스트기'),m('에너지볼','풀','특수','TM026 · 블뢰 지구 에믈리스 공원','물·땅 카운터'),m('사이코키네시스','에스퍼','특수','TM063 · 와일드 존 11','격투·독 견제')]),
+        p('메가 펜드라',545,['벌레','독'],'고속 물리형',[m('시저크로스','벌레','물리·자속','TM081 · 와일드 존 13','악·에스퍼 처리'),m('독찌르기','독','물리·자속','TM077 · 미르시티 도감 보상','페어리·풀 처리'),m('지진','땅','물리','TM069 · 미르시티 도감 보상','불꽃·바위·강철 견제'),m('스톤샤워','바위','물리','TM012 · 미르시티 도감 보상','비행 카운터')]),
+        p('메가 루차불',701,['격투','비행'],'고속 물리 에이스',[m('깨트리기','격투','물리·자속','TM010 · 콰사르티코 주식회사','장막 제거 격투기'),m('제비반환','비행','물리·자속','TM022 · 와일드 존 3','필중 비행 자속기'),m('시저크로스','벌레','물리','TM081 · 와일드 존 13','에스퍼 견제'),m('스톤에지','바위','물리','TM065 · 와일드 존 18','얼음·비행 카운터')])]},
+      {id:'another-red',cat:'fan',title:'어나더 레드',image:T+'another-red.png',era:'팬게임 · Ver.250821_2 + PWT_250829',note:'사용자 확정 6마리. 12개 보유 타입이 하나도 겹치지 않으며, 자속기를 각 카드의 첫 두 칸에 고정했다. 공격기 전체로 18개 타입을 모두 한 번 이상 다룬다.',tm:['TM13 냉동빔 — 쌍둥이섬','TM19 기가드레인 — 민화 승리','TM21 매지컬샤인 — 금빛백화점','TM23 아이언테일 — 금빛백화점','TM25 10만볼트 — 금빛백화점','TM26 지진 — 달맞이산','TM30 섀도볼 — 금빛백화점','TM36 오물폭탄 — 금빛백화점','TM40 제비반환 — 금빛백화점','TM42 객기 — 금빛백화점','TM71 스톤에지 — 금빛백화점','TM79 악의파동 — 금빛백화점','HM03 파도타기 — 포플러 승리'],team:[
+        p('개굴닌자',658,['물','악'],'초고속 특수 에이스',[m('파도타기','물','특수·자속','HM03 · 포플러 승리','안정적인 물 자속기'),m('악의파동','악','특수·자속','TM79 · 금빛백화점','고스트·에스퍼 처리'),m('냉동빔','얼음','특수','TM13 · 쌍둥이섬','풀·드래곤 카운터'),m('제비반환','비행','물리','Lv.33 또는 TM40 · 금빛백화점','격투·벌레 견제')]),
+        p('팬텀',94,['고스트','독'],'초고속 특수형',[m('섀도볼','고스트','특수·자속','Lv.48 또는 TM30 · 금빛백화점','주력 고스트 자속기'),m('오물폭탄','독','특수·자속','TM36 · 금빛백화점','페어리·풀 처리'),m('10만볼트','전기','특수','TM25 · 금빛백화점','물·비행 견제'),m('기가드레인','풀','특수','TM19 · 민화 승리','땅·바위 견제와 회복')]),
+        p('가디안',282,['에스퍼','페어리'],'특수 서포터',[m('매지컬샤인','페어리','특수·자속','진화 시 또는 TM21 · 금빛백화점','드래곤·악 처리'),m('꿈먹기','에스퍼','특수·자속','Lv.56','최면술과 연계해 공격·회복'),m('최면술','에스퍼','변화','Lv.9','꿈먹기용 수면 부여'),m('매지컬플레임','불꽃','특수','Lv.1 · 기술 떠올리기','벌레·강철 카운터')]),
+        p('헤라크로스',214,['벌레','격투'],'물리 브레이커',[m('메가혼','벌레','물리·자속','Lv.55','최대 화력 벌레 자속기'),m('인파이트','격투','물리·자속','Lv.60','강력한 격투 자속기'),m('칼춤','노말','변화','Lv.50 또는 TM75 · 금빛백화점','공격 2랭크 강화'),m('객기','노말','물리','TM42 · 금빛백화점','상태이상 시 고화력')]),
+        p('한카리아스',445,['드래곤','땅'],'고속 물리 에이스',[m('드래곤클로','드래곤','물리·자속','Lv.42 또는 TM02 · 돌산터널','안정적인 드래곤 자속기'),m('지진','땅','물리·자속','TM26 · 달맞이산','최강 땅 자속기'),m('아이언테일','강철','물리','TM23 · 금빛백화점','페어리·얼음 견제'),m('스톤에지','바위','물리','TM71 · 금빛백화점','얼음·비행 견제')]),
+        p('보스로라',306,['강철','바위'],'물리 탱커',[m('아이언테일','강철','물리·자속','Lv.56 또는 TM23 · 금빛백화점','주력 강철 자속기'),m('스톤에지','바위','물리·자속','TM71 · 금빛백화점','고화력 바위 자속기'),m('객기','노말','물리','TM42 · 금빛백화점','상태이상 대응 중립기'),m('제비반환','비행','물리','TM40 · 금빛백화점','격투·벌레 견제')])]},
+    ];
+
+    games.find(g=>g.id==='lge').team.splice(4,1,p('윈디',59,['불꽃'],'고속 혼합형',[m('화염방사','불꽃','특수·자속','TM37 · 실프주식회사','안정적인 불꽃 자속기'),m('치근거리기','페어리','물리','TM44 · 무지개시티','드래곤·격투 견제'),m('깨물어부수기','악','물리','기술 떠올리기','고스트·에스퍼 견제'),m('아이언테일','강철','물리','TM19 · 무지개백화점','바위·얼음 견제')]));
+    games.find(g=>g.id==='lg').team.splice(5,1,p('나인테일',38,['불꽃'],'고속 특수 서포터',[m('화염방사','불꽃','특수·자속','TM35 · 무지개게임코너','주력 불꽃 자속기'),m('도깨비불','불꽃','변화','식스테일 Lv.29 전 진화','물리 공격 억제'),m('구멍파기','땅','물리','TM28 · 블루시티','바위·불꽃 견제'),m('아이언테일','강철','물리','TM23 · 무지개게임코너','바위·얼음 견제')]));
+    games.find(g=>g.id==='sp').team.splice(2,1,p('메가자리',469,['벌레','비행'],'고속 특수형',[m('벌레의야단법석','벌레','특수·자속','Lv.1 · 기술 떠올리기','악·에스퍼 처리'),m('에어슬래시','비행','특수·자속','Lv.1 · 기술 떠올리기','격투·벌레 처리'),m('기가드레인','풀','특수','TM19 · 209번도로','물·바위 견제와 회복'),m('사이코키네시스','에스퍼','특수','TM29 · 211번도로/장막시티','독·격투 견제')]));
+    games.find(g=>g.id==='lge').tm.push('TM19 아이언테일 — 무지개백화점','TM37 화염방사 — 실프주식회사','TM43 섀도볼 — 무지개백화점','TM44 치근거리기 — 무지개시티');
+    games.find(g=>g.id==='lg').tm.push('TM28 구멍파기 — 블루시티','TM36 오물폭탄 — 5섬 로켓단창고');
+    games.find(g=>g.id==='sp').tm.push('TM19 기가드레인 — 209번도로','TM29 사이코키네시스 — 211번도로/장막시티');
+    games.push({id:'another-faves',cat:'fan',title:'어나더 레드 · 최애 엔트리',image:T+'another-red.png',era:'팬게임 · 최애 6마리',note:'',tm:['TM02 드래곤클로 — 돌산터널','TM13 냉동빔 — 쌍둥이섬','TM19 기가드레인 — 민화 승리','TM23 아이언테일 — 금빛백화점','TM25 10만볼트 — 금빛백화점','TM26 지진 — 달맞이산','TM29 사이코키네시스 — 금빛백화점','TM30 섀도볼 — 금빛백화점','TM35 화염방사 — 금빛백화점','TM36 오물폭탄 — 금빛백화점','TM40 제비반환 — 금빛백화점','TM71 스톤에지 — 금빛백화점','TM84 독찌르기 — 금빛백화점','HM03 파도타기 — 포플러 승리'],team:[
+      p('야도란',80,['물','에스퍼'],'물리 탱커·특수형',[m('파도타기','물','특수·자속','Lv.30 또는 HM03 · 포플러 승리','안정적인 물 자속기'),m('사이코키네시스','에스퍼','특수·자속','Lv.36 또는 TM29 · 금빛백화점','주력 에스퍼기'),m('냉동빔','얼음','특수','TM13 · 쌍둥이섬','풀·드래곤 견제'),m('화염방사','불꽃','특수','TM35 · 금빛백화점','벌레·강철 견제')]),
+      p('팬텀',94,['고스트','독'],'초고속 특수형',[m('섀도볼','고스트','특수·자속','Lv.48 또는 TM30 · 금빛백화점','주력 고스트기'),m('오물폭탄','독','특수·자속','TM36 · 금빛백화점','페어리·풀 처리'),m('10만볼트','전기','특수','TM25 · 금빛백화점','물·비행 견제'),m('기가드레인','풀','특수','TM19 · 민화 승리','땅·바위 견제와 회복')]),
+      p('잠만보',143,['노말'],'물리 탱커',[m('누르기','노말','물리·자속','Lv.28','안정적인 노말 자속기'),m('지진','땅','물리','TM26 · 달맞이산','바위·강철 견제'),m('헤비봄버','강철','물리','Lv.32','페어리·얼음 견제'),m('깨트리기','격투','물리','TM31 · 금빛백화점','바위·악 견제')]),
+      p('망나뇽',149,['드래곤','비행'],'혼합 에이스',[m('드래곤클로','드래곤','물리·자속','TM02 · 돌산터널','안정적인 드래곤 자속기'),m('제비반환','비행','물리·자속','TM40 · 금빛백화점','필중 비행 자속기'),m('냉동빔','얼음','특수','TM13 · 쌍둥이섬','드래곤·땅 견제'),m('용의춤','드래곤','변화','Lv.62','공격·스피드 강화')]),
+      p('마기라스',248,['바위','악'],'물리 브레이커',[m('스톤에지','바위','물리·자속','Lv.37 또는 TM71 · 금빛백화점','고화력 바위 자속기'),m('깨물어부수기','악','물리·자속','Lv.27','고스트·에스퍼 처리'),m('지진','땅','물리','TM26 · 달맞이산','강철·격투 견제'),m('불꽃엄니','불꽃','물리','Lv.1 · 기술 떠올리기','벌레·강철 견제')]),
+      p('창파나이트',865,['격투'],'물리 에이스',[m('인파이트','격투','물리·자속','기술 떠올리기','최대 화력 격투 자속기'),m('리프블레이드','풀','물리','Lv.55','물·땅 견제'),m('독찌르기','독','물리','TM84 · 금빛백화점','페어리 견제'),m('탁쳐서떨구기','악','물리','Lv.30','고스트·에스퍼와 도구 견제')])
+    ]});
+
+    const oldPhysical=new Set(['노말','격투','비행','독','땅','바위','벌레','고스트','강철']);
+    const legacyMove={
+      노말:['누르기','누르기'],불꽃:['화염방사','화염방사'],물:['파도타기','파도타기'],전기:['10만볼트','10만볼트'],풀:['메가드레인','기가드레인'],얼음:['냉동빔','냉동빔'],
+      격투:['지옥의바퀴','크로스촙'],독:['오물공격','오물폭탄'],땅:['지진','지진'],비행:['공중날기','공중날기'],에스퍼:['사이코키네시스','사이코키네시스'],벌레:['바늘미사일','메가혼'],
+      바위:['스톤샤워','스톤샤워'],고스트:['핥기','섀도볼'],드래곤:['용의분노','역린'],악:['깨물어부수기','깨물어부수기'],강철:['아이언테일','아이언테일'],페어리:['치근거리기','치근거리기']
+    };
+    const modernMove={
+      노말:{물리:'누르기',특수:'하이퍼보이스'},불꽃:{물리:'플레어드라이브',특수:'화염방사'},물:{물리:'폭포오르기',특수:'파도타기'},전기:{물리:'와일드볼트',특수:'10만볼트'},풀:{물리:'씨폭탄',특수:'에너지볼'},얼음:{물리:'고드름떨구기',특수:'냉동빔'},
+      격투:{물리:'인파이트',특수:'파동탄'},독:{물리:'독찌르기',특수:'오물폭탄'},땅:{물리:'지진',특수:'대지의힘'},비행:{물리:'제비반환',특수:'폭풍'},에스퍼:{물리:'사이코커터',특수:'사이코키네시스'},벌레:{물리:'시저크로스',특수:'벌레의야단법석'},
+      바위:{물리:'스톤에지',특수:'파워젬'},고스트:{물리:'섀도클로',특수:'섀도볼'},드래곤:{물리:'드래곤클로',특수:'용의파동'},악:{물리:'깨물어부수기',특수:'악의파동'},강철:{물리:'아이언헤드',특수:'러스터캐논'},페어리:{물리:'치근거리기',특수:'매지컬샤인'}
+    };
+    const attackClass=(type,role,gen)=>gen<=3?(oldPhysical.has(type)?'물리':'특수'):(role.includes('특수')&&!role.includes('물리')?'특수':'물리');
+    function draftMove(type,role,gen,stab){
+      if(gen===1&&['악','강철','페어리'].includes(type)) type='노말';
+      if(gen===2&&type==='페어리') type='노말';
+      const kind=attackClass(type,role,gen),name=gen<=2?(legacyMove[type]?.[gen-1]||'누르기'):(modernMove[type]?.[kind]||'누르기');
+      return m(name,type,kind+(stab?'·자속':''),'임시 추천 · 레벨업/TM/HM','엔트리 확정 후 해당 버전의 정확한 수급처로 고정')
+    }
+    function d(name,id,types,role,stage,obtain,coverage=[],legend=false){const moveTypes=[...types,...coverage].slice(0,4);return p(name,id,types,role,moveTypes.map((t,i)=>draftMove(t,role,currentDraftGen,i<types.length)),{stage,obtain,legend,draft:true})}
+    let currentDraftGen=1;
+    function draftGame(id,title,era,gen,team,tip,alternatives){currentDraftGen=gen;const built=team();games.push({id,cat:'legacy',title,image:T+id+'.png',era,gen,draft:true,note:tip,alternatives,tm:['카드의 Lv./TM 표기를 우선 적용 · 세부 필드 수급 위치는 최종 엔트리 확정 후 고정'],team:built})}
+
+    draftGame('red','포켓몬스터 레드','관동 · 1세대',1,()=>[
+      d('리자몽',6,['불꽃','비행'],'고속 특수형','스타팅','파이리 선택 → Lv.36',['드래곤','격투']),d('니드킹',34,['독','땅'],'물리 에이스','초반','3번도로 니드런♂ + 달의돌',['얼음','전기']),d('쥬피썬더',135,['전기'],'고속 특수형','중반','무지개맨션 이브이 + 천둥의돌',['얼음','격투','노말']),d('라프라스',131,['물','얼음'],'특수 탱커','중반','실프주식회사 선물',['전기','에스퍼']),d('잠만보',143,['노말'],'물리 탱커','중반','12번·16번도로 고정 심볼',['땅','격투','고스트']),d('나시',103,['풀','에스퍼'],'특수 서포터','후반','사파리존 아라리 + 리프의돌',['노말','독'])
+    ],'나시의 수면 운영으로 안전한 턴을 만들고 리자몽·니드킹이 화력을 넣는다. 1세대는 타입별 물리/특수 고정 판정을 사용한다.','켄타로스 ↔ 잠만보, 후딘 ↔ 나시');
+    draftGame('green','포켓몬스터 그린','관동 · 1세대',1,()=>[
+      d('이상해꽃',3,['풀','독'],'특수 탱커','스타팅','이상해씨 선택 → Lv.32',['땅','노말']),d('나인테일',38,['불꽃'],'고속 특수형','중반','7·8번도로 식스테일 + 불꽃의돌',['땅','강철','노말']),d('루주라',124,['얼음','에스퍼'],'고속 특수형','중반','블루시티 교환',['노말','물']),d('샤미드',134,['물'],'특수 탱커','중반','무지개맨션 이브이 + 물의돌',['얼음','악','노말']),d('코뿌리',112,['땅','바위'],'물리 탱커','후반','사파리존 뿔카노 → Lv.42',['벌레','격투']),d('망나뇽',149,['드래곤','비행'],'혼합 에이스','후반','사파리존/게임코너 미뇽 → Lv.55',['얼음','불꽃'])
+    ],'이상해꽃과 샤미드가 버티고 루주라·나인테일이 특수 공격을 담당한다. 코뿌리는 물·풀 기술을 피해서 물리 공격에만 교대한다. 1세대 망나뇽은 비행 타입이어도 HM02 공중날기 호환 대상이 아니다.','파르셀 ↔ 샤미드, 닥트리오 ↔ 코뿌리');
+    draftGame('blue','포켓몬스터 블루','관동 · 1세대',1,()=>[
+      d('거북왕',9,['물'],'특수 탱커','스타팅','꼬부기 선택 → Lv.36',['얼음','땅','격투']),d('후딘',65,['에스퍼'],'고속 특수형','초반','24·25번도로 캐이시 → 통신진화',['노말','전기','격투']),d('윈디',59,['불꽃'],'물리 에이스','중반','7·8번도로 가디 + 불꽃의돌',['땅','노말','강철']),d('우츠보트',71,['풀','독'],'혼합 서포터','중반','모다피 계열 + 리프의돌',['노말','벌레']),d('프테라',142,['바위','비행'],'고속 물리형','후반','회색시티 비밀호박 복원',['땅','노말']),d('에레브',125,['전기'],'고속 특수형','후반','무인발전소',['격투','얼음','노말'])
+    ],'후딘과 에레브가 선공권을 잡고 거북왕이 불리한 대면을 받아낸다. 프테라는 후반 물리 마무리 역할이다.','윤겔라 ↔ 후딘(통신 불필요), 켄타로스 ↔ 프테라');
+    draftGame('yellow','포켓몬스터 피카츄','관동 · 1세대',1,()=>[
+      d('피카츄',25,['전기'],'고속 혼합형','스타팅','게임 시작 파트너',['노말','격투','땅']),d('이상해꽃',3,['풀','독'],'특수 탱커','초반','블루시티 이상해씨 선물',['노말','땅']),d('리자몽',6,['불꽃','비행'],'고속 특수형','초반','24번도로 파이리 선물 → Lv.36',['드래곤','격투']),d('거북왕',9,['물'],'특수 탱커','중반','갈색시티 꼬부기 선물 → Lv.36',['얼음','땅']),d('닥트리오',51,['땅'],'고속 물리형','중반','디그다의굴',['바위','노말','독']),d('잠만보',143,['노말'],'물리 탱커','중반','12번·16번도로 고정 심볼',['땅','격투','고스트'])
+    ],'선물 스타팅 3마리를 활용해 상성 대응이 쉽다. 피카츄가 약한 후반에는 닥트리오와 잠만보가 실전 화력을 보완한다.','라프라스 ↔ 거북왕, 켄타로스 ↔ 잠만보');
+
+    draftGame('gold','포켓몬스터 금','성도 · 2세대',2,()=>[
+      d('블레이범',157,['불꽃'],'고속 특수형','스타팅','브케인 선택 → Lv.36',['땅','전기','노말']),d('전룡',181,['전기'],'특수 탱커','초반','32번도로 메리프 → Lv.30',['격투','불꽃','노말']),d('누오',195,['물','땅'],'물리 탱커','초반','32번도로 우파 → Lv.20',['얼음','노말']),d('헤라크로스',214,['벌레','격투'],'물리 에이스','중반','박치기 나무',['바위','노말']),d('블래키',197,['악'],'특수 탱커','중반','금빛시티 이브이 → 밤 친밀도',['노말','에스퍼','독']),d('무장조',227,['강철','비행'],'물리 탱커','후반','45번도로',['땅','노말'])
+    ],'전룡·누오·블래키가 안정적인 교대축이며 블레이범과 헤라크로스가 마무리한다. 2세대도 타입별 물리/특수 고정이다.','에브이 ↔ 블래키, 라프라스 ↔ 누오');
+    draftGame('silver','포켓몬스터 은','성도 · 2세대',2,()=>[
+      d('장크로다일',160,['물'],'물리 에이스','스타팅','리아코 선택 → Lv.30',['얼음','땅','노말']),d('코리갑',232,['땅'],'물리 탱커','초반','45번도로 코코리 → Lv.25',['바위','노말','격투']),d('링곰',217,['노말'],'물리 브레이커','초반','45번도로 깜지곰 → Lv.30',['땅','격투','고스트']),d('네이티오',178,['에스퍼','비행'],'고속 특수형','중반','알프의유적 네이티 → Lv.25',['전기','노말']),d('핫삼',212,['벌레','강철'],'물리 에이스','중반','스라크 + 금속코트 통신진화',['격투','노말']),d('헬가',229,['악','불꽃'],'고속 특수형','후반','관동 7번도로 델빌 → Lv.24',['땅','노말'])
+    ],'장크로다일·링곰·핫삼의 물리 비중이 높으므로 네이티오와 헬가가 특수 방어가 낮은 상대를 맡는다.','라프라스 ↔ 장크로다일, 쥬피썬더 ↔ 네이티오');
+    draftGame('crystal','포켓몬스터 크리스탈','성도 · 2세대',2,()=>[
+      d('메가니움',154,['풀'],'특수 탱커','스타팅','치코리타 선택 → Lv.32',['땅','노말','에스퍼']),d('마그카르고',219,['불꽃','바위'],'특수 탱커','중반','용암벌레 계열',['땅','노말']),d('카포에라',237,['격투'],'물리형','중반','배루키 Lv.20에서 공격=방어',['바위','노말','강철']),d('무우마',200,['고스트'],'고속 특수형','후반','은빛산 동굴 밤',['에스퍼','전기','노말']),d('메꾸리',221,['얼음','땅'],'물리 브레이커','후반','얼음샛길 꾸꾸리 → Lv.33',['바위','노말']),d('스이쿤',245,['물'],'고속 탱커·전설','전설','스토리 중 방울탑 이벤트',['얼음','전기','노말'],true)
+    ],'메가니움의 장막과 스이쿤의 내구로 장기전을 만들고 메꾸리·카포에라가 물리 화력을 담당한다.','전룡 ↔ 무우마, 블레이범 ↔ 마그카르고');
+
+    draftGame('ruby','포켓몬스터 루비','호연 · 3세대',3,()=>[
+      d('번치코',257,['불꽃','격투'],'혼합 에이스','스타팅','아차모 선택 → Lv.36',['비행','바위']),d('가디안',282,['에스퍼'],'고속 특수형','초반','102번도로 랄토스 → Lv.30',['전기','노말','불꽃']),d('다탱구',275,['풀','악'],'혼합형','초반','102번도로 도토링 계열 + 리프의돌',['비행','노말']),d('플라이곤',330,['땅','드래곤'],'고속 혼합형','중반','111번도로 톱치 → Lv.45',['불꽃','강철']),d('보스로라',306,['강철','바위'],'물리 탱커','중반','바위동굴 가보리 → Lv.42',['땅','노말']),d('씨카이저',365,['얼음','물'],'특수 탱커','후반','여울의동굴 대굴레오 → Lv.44',['전기','노말'])
+    ],'번치코·플라이곤이 빠르게 압박하고 보스로라·씨카이저가 공격을 받아낸다. 3세대까지는 타입별 물리/특수 판정이다.','버섯모 ↔ 다탱구, 밀로틱 ↔ 씨카이저');
+    draftGame('sapphire','포켓몬스터 사파이어','호연 · 3세대',3,()=>[
+      d('대짱이',260,['물','땅'],'물리 탱커','스타팅','물짱이 선택 → Lv.36',['얼음','바위']),d('버섯모',286,['풀','격투'],'물리 스위퍼','초반','등화숲 버섯꼬 → Lv.23',['바위','노말']),d('썬더볼트',310,['전기'],'고속 특수형','초반','110번도로 썬더라이 → Lv.26',['불꽃','노말','격투']),d('파비코리',334,['드래곤','비행'],'특수 탱커','중반','114·115번도로 파비코 → Lv.35',['불꽃','강철']),d('다크펫',354,['고스트'],'물리형','중반','송화산 어둠대신 → Lv.37',['악','노말','전기']),d('코터스',324,['불꽃'],'물리 탱커','중반','불꽃샛길',['땅','바위','노말'])
+    ],'대짱이와 코터스가 물리 교대축, 버섯모가 물리 압박을 맡고 썬더볼트가 특수 공격을 담당한다. 파비코리는 상태이상 지원에 적합하다.','앱솔 ↔ 다크펫, 보만다 ↔ 파비코리');
+    draftGame('emerald','포켓몬스터 에메랄드','호연 · 3세대',3,()=>[
+      d('나무킹',254,['풀'],'고속 특수형','스타팅','나무지기 선택 → Lv.36',['드래곤','격투','노말']),d('가디안',282,['에스퍼'],'고속 특수형','초반','102번도로 랄토스 → Lv.30',['전기','불꽃','노말']),d('코터스',324,['불꽃'],'물리 탱커','중반','불꽃샛길',['땅','바위','노말']),d('밀로틱',350,['물'],'특수 탱커','중반','119번도로 빈티나 + 아름다움 진화',['얼음','전기','노말']),d('앱솔',359,['악'],'물리 브레이커','후반','120번도로',['바위','강철','노말']),d('레쿠쟈',384,['드래곤','비행'],'혼합 에이스·전설','전설','스토리 후반 하늘기둥',['전기','불꽃'],true)
+    ],'밀로틱·코터스가 버티는 동안 나무킹과 가디안이 특수 공격을 넣는다. 레쿠쟈는 최종 마무리에만 투입해도 충분하다.','보만다 ↔ 레쿠쟈(비전설), 보스로라 ↔ 코터스');
+
+    draftGame('diamond','포켓몬스터 디아루가','신오 · 4세대',4,()=>[
+      d('초염몽',392,['불꽃','격투'],'고속 혼합형','스타팅','불꽃숭이 선택 → Lv.36',['바위','벌레']),d('찌르호크',398,['노말','비행'],'고속 물리형','초반','201번도로 찌르꼬 → Lv.34',['격투','벌레']),d('로즈레이드',407,['풀','독'],'고속 특수형','초반','꼬몽울 계열 + 빛의돌',['고스트','페어리']),d('트리토돈',423,['물','땅'],'특수 탱커','중반','205번도로 깝질무 → Lv.30',['얼음','바위']),d('동탁군',437,['강철','에스퍼'],'물리 탱커','중반','미혹의동굴 동미러 → Lv.33',['바위','노말']),d('포푸니라',461,['악','얼음'],'고속 물리형','후반','216번도로 포푸니 + 예리한손톱',['격투','독'])
+    ],'초염몽·찌르호크·포푸니라가 속도전을 맡고 트리토돈·동탁군이 교대축을 형성한다. 4세대부터 기술별 물리/특수 판정이다.','한카리아스 ↔ 트리토돈, 렌트라 ↔ 찌르호크');
+    draftGame('pearl','포켓몬스터 펄기아','신오 · 4세대',4,()=>[
+      d('토대부기',389,['풀','땅'],'물리 탱커','스타팅','모부기 선택 → Lv.32',['바위','악']),d('돈크로우',430,['악','비행'],'물리 브레이커','초반','밤의 니로우 + 어둠의돌',['강철','격투']),d('자포코일',462,['전기','강철'],'특수 탱커','중반','코일 계열을 천관산에서 진화',['격투','노말']),d('날쌩마',78,['불꽃'],'고속 물리형','중반','206번도로 포니타 → Lv.40',['땅','노말','강철']),d('눈여아',478,['얼음','고스트'],'고속 특수형','후반','암컷 눈꼬마 + 각성의돌',['에스퍼','전기']),d('펄기아',484,['물','드래곤'],'고속 특수형·전설','전설','스토리 후반 창기둥',['전기','불꽃'],true)
+    ],'토대부기와 자포코일이 버티고 돈크로우·눈여아가 마무리한다. 펄기아는 넓은 특수 견제폭으로 보스전을 정리한다.','엘레이드 ↔ 눈여아, 헬가 ↔ 날쌩마');
+    draftGame('platinum','포켓몬스터 플라티나','신오 · 4세대',4,()=>[
+      d('엠페르트',395,['물','강철'],'특수 탱커','스타팅','팽도리 선택 → Lv.36',['얼음','비행']),d('헬가',229,['악','불꽃'],'고속 특수형','초반','214번도로 델빌 → Lv.24',['땅','노말']),d('엘레이드',475,['에스퍼','격투'],'물리 에이스','중반','수컷 킬리아 + 각성의돌',['풀','바위']),d('맘모꾸리',473,['얼음','땅'],'물리 브레이커','후반','꾸꾸리 계열 + 원시의힘',['바위','강철']),d('메가자리',469,['벌레','비행'],'고속 특수형','후반','대습초원 야나프 + 원시의힘',['풀','에스퍼']),d('기라티나',487,['고스트','드래곤'],'혼합 탱커·전설','전설','깨어진세계 스토리 전투',['전기','불꽃'],true)
+    ],'엠페르트·기라티나가 내구를 맡고 엘레이드·맘모꾸리가 물리 화력을 담당한다. 메가자리는 스피드부스트 운용이 좋다.','로토무 ↔ 메가자리, 한카리아스 ↔ 맘모꾸리');
+
+    draftGame('heartgold','포켓몬스터 하트골드','성도 리메이크 · 4세대',4,()=>[
+      d('블레이범',157,['불꽃'],'고속 특수형','스타팅','브케인 선택 → Lv.36',['땅','전기','노말']),d('전룡',181,['전기'],'특수 탱커','초반','32번도로 메리프 → Lv.30',['격투','불꽃','노말']),d('헤라크로스',214,['벌레','격투'],'물리 에이스','중반','박치기 나무',['바위','노말']),d('블래키',197,['악'],'특수 탱커','중반','금빛시티 이브이 → 밤 친밀도',['에스퍼','독','노말']),d('맘모꾸리',473,['얼음','땅'],'물리 브레이커','후반','얼음샛길 꾸꾸리 계열 + 원시의힘',['바위','강철']),d('루기아',249,['에스퍼','비행'],'특수 탱커·전설','전설','관동 진행 후 소용돌이섬',['물','드래곤'],true)
+    ],'전룡·블래키·루기아가 공격을 받고 블레이범·헤라크로스·맘모꾸리가 마무리한다.','라프라스 ↔ 맘모꾸리, 크로뱃 ↔ 루기아(비전설)');
+    draftGame('soulsilver','포켓몬스터 소울실버','성도 리메이크 · 4세대',4,()=>[
+      d('장크로다일',160,['물'],'물리 에이스','스타팅','리아코 선택 → Lv.30',['얼음','악','노말']),d('전룡',181,['전기'],'특수 탱커','초반','32번도로 메리프 → Lv.30',['격투','불꽃','노말']),d('핫삼',212,['벌레','강철'],'물리 에이스','중반','스라크 + 금속코트 통신진화',['격투','노말']),d('코리갑',232,['땅'],'물리 탱커','후반','45번도로 코코리 → Lv.25',['바위','격투','노말']),d('무우마직',429,['고스트'],'고속 특수형','후반','무우마 + 어둠의돌',['에스퍼','전기','풀']),d('칠색조',250,['불꽃','비행'],'혼합 에이스·전설','전설','관동 진행 후 방울탑',['땅','에스퍼'],true)
+    ],'장크로다일·핫삼이 물리 압박을 만들고 무우마직·칠색조가 특수 공격을 보완한다. 코리갑은 바위 기술 대응축이다.','헤라크로스 ↔ 핫삼, 블래키 ↔ 무우마직');
+
+    draftGame('black','포켓몬스터 블랙','하나 · 5세대',5,()=>[
+      d('샤로다',497,['풀'],'고속 서포터','스타팅','주리비얀 선택 → Lv.36',['드래곤','노말','땅']),d('몰드류',530,['땅','강철'],'물리 에이스','초반','지하수맥굴 두더류 → Lv.31',['바위','격투']),d('곤율거니',560,['악','격투'],'물리 탱커','중반','4번도로 곤율랭 → Lv.39',['독','바위']),d('심보러',561,['에스퍼','비행'],'고속 특수형','중반','리조트데저트',['전기','얼음']),d('늑골라',565,['물','바위'],'물리 탱커','중반','고대의성 덮개화석 복원 → Lv.37',['얼음','노말']),d('레시라무',643,['드래곤','불꽃'],'특수 에이스·전설','전설','N의 성 스토리 전투',['에스퍼','노말'],true)
+    ],'몰드류·곤율거니가 물리, 심보러·레시라무가 특수 화력을 맡는다. 샤로다는 벽과 씨뿌리기로 흐름을 만든다.','불비달마 ↔ 레시라무(비전설), 탱탱겔 ↔ 늑골라');
+    draftGame('white','포켓몬스터 화이트','하나 · 5세대',5,()=>[
+      d('대검귀',503,['물'],'혼합 에이스','스타팅','수댕이 선택 → Lv.36',['얼음','벌레','노말']),d('드레디어',549,['풀'],'고속 특수형','초반','바람개비숲 치릴리 + 태양의돌',['에스퍼','노말','불꽃']),d('불비달마',555,['불꽃'],'물리 브레이커','초반','4번도로 달막화 → Lv.35',['격투','바위','노말']),d('악비아르',553,['땅','악'],'물리 에이스','중반','4번도로 깜눈크 → Lv.40',['바위','격투']),d('데스니칸',563,['고스트'],'특수 탱커','중반','고대의성 데스마스 → Lv.34',['악','에스퍼','노말']),d('제크로무',644,['드래곤','전기'],'물리 에이스·전설','전설','N의 성 스토리 전투',['강철','노말'],true)
+    ],'불비달마·악비아르·제크로무의 물리 압박이 강하다. 대검귀와 드레디어가 특수 화력을 보충하고 데스니칸이 물리 공격을 받아낸다.','샹델라 ↔ 불비달마, 워글 ↔ 데스니칸');
+    draftGame('black2','포켓몬스터 블랙 2','하나 속편 · 5세대',5,()=>[
+      d('염무왕',500,['불꽃','격투'],'물리 브레이커','스타팅','뚜꾸리 선택 → Lv.36',['바위','전기']),d('자포코일',462,['전기','강철'],'특수 탱커','초반','모란만콤비나트 코일 계열',['격투','노말']),d('모아머',542,['벌레','풀'],'물리형','초반','20번도로 두르보 → 친밀도 진화',['비행','강철']),d('악비아르',553,['땅','악'],'물리 에이스','중반','리조트데저트 깜눈크 → Lv.40',['바위','격투']),d('탱탱겔',593,['물','고스트'],'특수 탱커','중반','물결마을 탱그릴 → Lv.40',['얼음','에스퍼']),d('액스라이즈',612,['드래곤'],'고속 물리 에이스','후반','궐수의동굴 터검니 → Lv.48',['강철','노말','땅'])
+    ],'자포코일·탱탱겔이 교대축, 염무왕·악비아르·액스라이즈가 물리 마무리를 담당한다.','루카리오 ↔ 모아머, 불카모스 ↔ 염무왕');
+    draftGame('white2','포켓몬스터 화이트 2','하나 속편 · 5세대',5,()=>[
+      d('대검귀',503,['물'],'혼합 에이스','스타팅','수댕이 선택 → Lv.36',['얼음','벌레','노말']),d('루카리오',448,['격투','강철'],'고속 물리 에이스','초반','산가지목장 리오르 → 낮 친밀도',['악','땅']),d('샹델라',609,['고스트','불꽃'],'특수 브레이커','중반','타워오브해븐 불켜미 계열 + 어둠의돌',['풀','에스퍼']),d('뽀록나',591,['풀','독'],'특수 탱커','중반','6번도로 깜놀버슬 → Lv.39',['땅','에스퍼']),d('심보러',561,['에스퍼','비행'],'고속 특수형','중반','리조트데저트',['전기','얼음']),d('조로아크',571,['악'],'고속 특수형','중반','스토리 중 N의 조로아 선물 → Lv.30',['격투','독','노말'])
+    ],'루카리오가 초반 전투를 이끌고 뽀록나가 교대축을 맡는다. 샹델라·심보러·조로아크는 빠른 특수 공격으로 마무리한다.','전툴라 ↔ 심보러, 액스라이즈 ↔ 조로아크');
+
+    draftGame('x','포켓몬스터 X','칼로스 · 6세대',6,()=>[
+      d('개굴닌자',658,['물','악'],'초고속 혼합형','스타팅','개구마르 선택 → Lv.36',['얼음','벌레']),d('파이어로',663,['불꽃','비행'],'고속 물리형','초반','2번도로 화살꼬빈 → Lv.35',['강철','노말']),d('킬가르도',681,['강철','고스트'],'혼합 탱커','초반','6번도로 단칼빙 계열 + 어둠의돌',['격투','바위']),d('일레도리자드',695,['전기','노말'],'고속 특수형','중반','9번도로 목도리키텔 + 태양의돌',['풀','악']),d('견고라스',697,['바위','드래곤'],'물리 브레이커','중반','턱화석 복원 → 낮 Lv.39',['땅','격투']),d('제르네아스',716,['페어리'],'특수 에이스·전설','전설','플레어단 비밀기지 스토리 전투',['에스퍼','전기','노말'],true)
+    ],'개굴닌자·파이어로가 선공권을 잡고 킬가르도가 위험한 공격을 받아낸다. 제르네아스는 지오컨트롤 전개가 핵심이다.','님피아 ↔ 제르네아스(비전설), 루차불 ↔ 견고라스');
+    draftGame('y','포켓몬스터 Y','칼로스 · 6세대',6,()=>[
+      d('마폭시',655,['불꽃','에스퍼'],'고속 특수형','스타팅','푸호꼬 선택 → Lv.36',['풀','고스트']),d('블로스터',693,['물'],'특수 브레이커','중반','8번도로 완철포 → Lv.37',['얼음','격투','악']),d('대로트',709,['고스트','풀'],'물리 탱커','중반','20번도로 나목령 통신진화',['땅','바위']),d('견고라스',697,['바위','드래곤'],'물리 브레이커','중반','턱화석 복원 → 낮 Lv.39',['땅','격투']),d('일레도리자드',695,['전기','노말'],'고속 특수형','중반','9번도로 목도리키텔 + 태양의돌',['풀','악']),d('이벨타르',717,['악','비행'],'혼합 에이스·전설','전설','플레어단 비밀기지 스토리 전투',['격투','강철'],true)
+    ],'마폭시·일레도리자드가 특수 공격, 견고라스·대로트가 물리 공격을 맡는다. 이벨타르는 데스윙으로 체력을 회복하며 마무리한다.','님피아 ↔ 블로스터, 루차불 ↔ 견고라스');
+
+    draftGame('omegaruby','포켓몬스터 오메가루비','호연 리메이크 · 6세대',6,()=>[
+      d('나무킹',254,['풀'],'고속 특수형','스타팅','나무지기 선택 → Lv.36',['드래곤','격투','노말']),d('가디안',282,['에스퍼','페어리'],'고속 특수형','초반','102번도로 랄토스 → Lv.30',['불꽃','전기']),d('코터스',324,['불꽃'],'물리 탱커','중반','불꽃샛길',['땅','바위','노말']),d('씨카이저',365,['얼음','물'],'특수 탱커','후반','여울의동굴 대굴레오 → Lv.44',['전기','노말']),d('보스로라',306,['강철','바위'],'물리 탱커','중반','바위동굴 가보리 → Lv.42',['땅','격투']),d('그란돈',383,['땅'],'물리 에이스·전설','전설','각성의사당 스토리 전투',['불꽃','바위','노말'],true)
+    ],'가디안·나무킹이 빠른 특수 공격을 맡고 보스로라·코터스가 물리 공격을 받는다. 그란돈은 쾌청으로 불꽃 화력을 보조한다.','플라이곤 ↔ 그란돈(비전설), 밀로틱 ↔ 씨카이저');
+    draftGame('alphasapphire','포켓몬스터 알파사파이어','호연 리메이크 · 6세대',6,()=>[
+      d('번치코',257,['불꽃','격투'],'혼합 에이스','스타팅','아차모 선택 → Lv.36',['비행','바위']),d('다탱구',275,['풀','악'],'혼합형','초반','102번도로 도토링 계열 + 리프의돌',['비행','노말']),d('썬더볼트',310,['전기'],'고속 특수형','초반','110번도로 썬더라이 → Lv.26',['불꽃','노말','격투']),d('플라이곤',330,['땅','드래곤'],'고속 혼합형','중반','111번도로 톱치 → Lv.45',['강철','바위']),d('메타그로스',376,['강철','에스퍼'],'물리 탱커','후반','엔딩 후 성호의 메탕 선물',['땅','격투']),d('가이오가',382,['물'],'특수 에이스·전설','전설','각성의사당 스토리 전투',['얼음','전기','노말'],true)
+    ],'번치코·플라이곤이 물리 압박, 썬더볼트·가이오가가 특수 압박을 담당한다. 메타그로스는 엔딩 후 합류한다.','보만다 ↔ 메타그로스, 로파파 ↔ 다탱구');
+
+    draftGame('sun','포켓몬스터 썬','알로라 · 7세대',7,()=>[
+      d('모크나이퍼',724,['풀','고스트'],'혼합형','스타팅','나몰빼미 선택 → Lv.34',['비행','격투']),d('투구뿌논',738,['벌레','전기'],'특수 브레이커','초반','1번도로 턱지충이 계열 → 포니대협곡 진화',['풀','강철']),d('염뉴트',758,['독','불꽃'],'고속 특수형','중반','화산공원 암컷 야도뇽 → Lv.33',['드래곤','노말']),d('만마드',750,['땅'],'물리 탱커','중반','4번도로 머드나기 → Lv.30',['바위','격투','강철']),d('짜랑고우거',784,['드래곤','격투'],'혼합 탱커','후반','포니대협곡 짜랑꼬 → Lv.45',['바위','독']),d('솔가레오',791,['에스퍼','강철'],'물리 에이스·전설','전설','스토리 중 코스모움 진화',['불꽃','노말'],true)
+    ],'투구뿌논·염뉴트가 특수 화력, 만마드·솔가레오가 물리 화력을 맡는다. 모크나이퍼는 교대 차단용으로 활용한다.','루가루암 ↔ 만마드, 갑주무사 ↔ 투구뿌논');
+    draftGame('moon','포켓몬스터 문','알로라 · 7세대',7,()=>[
+      d('누리레느',730,['물','페어리'],'특수 탱커','스타팅','누리공 선택 → Lv.34',['얼음','에스퍼']),d('루가루암',745,['바위'],'고속 물리형','초반','텐캐럿힐 암멍이 → 밤 Lv.25',['땅','악','노말']),d('질뻐기 알로라',10112,['독','악'],'특수 탱커','초반','트레이너스쿨 질퍽이(A) → Lv.38',['불꽃','바위']),d('달코퀸',763,['풀'],'물리 에이스','초반','라란티스 정글 달콤아 계열',['격투','노말','에스퍼']),d('토게데마루',777,['전기','강철'],'고속 서포터','중반','화끈산',['벌레','노말']),d('루나아라',792,['에스퍼','고스트'],'특수 에이스·전설','전설','스토리 중 코스모움 진화',['얼음','불꽃'],true)
+    ],'누리레느·루나아라가 특수 화력, 루가루암·달코퀸이 물리 화력을 담당한다. 토게데마루는 마비와 교대 지원에 집중한다.','에리본 ↔ 토게데마루, 만마드 ↔ 루가루암');
+    draftGame('ultrasun','포켓몬스터 울트라썬','울트라 알로라 · 7세대',7,()=>[
+      d('어흥염',727,['불꽃','악'],'물리 탱커','스타팅','냐오불 선택 → Lv.34',['격투','땅']),d('나인테일 알로라',10104,['얼음','페어리'],'고속 특수형','초반','울라울라섬 식스테일(A) + 얼음의돌',['에스퍼','노말']),d('더시마사리',748,['물','독'],'물리 탱커','초반','낚시 시마사리 → Lv.38',['얼음','노말']),d('만마드',750,['땅'],'물리 탱커','초반','4번도로 머드나기 → Lv.30',['바위','격투','강철']),d('투구뿌논',738,['벌레','전기'],'특수 브레이커','초반','턱지충이 계열 → 화끈산 진화',['풀','강철']),d('솔가레오',791,['에스퍼','강철'],'물리 에이스·전설','전설','스토리 중 코스모움 진화',['불꽃','노말'],true)
+    ],'나인테일의 오로라베일과 더시마사리의 내구로 안전한 전개를 만들고 어흥염·솔가레오가 마무리한다.','짜랑고우거 ↔ 만마드, 루가루암 ↔ 투구뿌논');
+    draftGame('ultramoon','포켓몬스터 울트라문','울트라 알로라 · 7세대',7,()=>[
+      d('누리레느',730,['물','페어리'],'특수 탱커','스타팅','누리공 선택 → Lv.34',['얼음','에스퍼']),d('달코퀸',763,['풀'],'물리 에이스','초반','달콤아 계열',['격투','노말','악']),d('염뉴트',758,['독','불꽃'],'고속 특수형','중반','암컷 야도뇽 → Lv.33',['드래곤','노말']),d('짜랑고우거',784,['드래곤','격투'],'혼합 탱커','후반','포니대협곡 짜랑꼬 → Lv.45',['바위','독']),d('고지 알로라',10102,['얼음','강철'],'물리형','후반','울라울라섬 모래두지(A) + 얼음의돌',['땅','바위']),d('루나아라',792,['에스퍼','고스트'],'특수 에이스·전설','전설','스토리 중 코스모움 진화',['불꽃','전기'],true)
+    ],'누리레느·루나아라·염뉴트가 특수 공격, 달코퀸·고지·짜랑고우거가 물리 공격을 담당해 비율이 안정적이다.','갑주무사 ↔ 달코퀸, 만마드 ↔ 고지');
+
+    for(const id of ['red','green'])games.find(g=>g.id===id).confirmed=true;
+    function replaceTeam(id,gen,team,note,alternatives){const g=games.find(x=>x.id===id);currentDraftGen=gen;g.team=team();g.confirmed=true;g.customNote=note;g.alternatives=alternatives||g.alternatives}
+    const goldTeam=gen=>[
+      d('장크로다일',160,['물'],gen===2?'혼합 에이스':'물리 에이스','스타팅','리아코 선택 → Lv.30',['얼음','악','격투']),
+      d('니드킹',34,['독','땅'],'물리 에이스','초반','니도런♂ 계열 + 달의돌',['바위','격투']),
+      d('헤라크로스',214,['벌레','격투'],'물리 브레이커','초반','박치기 가능한 나무',['바위','노말']),
+      d('에브이',196,['에스퍼'],'고속 특수형','중반','이브이의 친밀도를 올려 낮에 진화',['풀','노말','전기']),
+      d('마기라스',248,['바위','악'],gen===2?'혼합 탱커':'물리 탱커','후반','은빛산/사파리존 애버라스 → Lv.55',['땅','강철']),
+      d('칠색조',250,['불꽃','비행'],'혼합 에이스·전설','전설','방울탑 정상 스토리 전투',['전기','에스퍼'],true)
+    ];
+    const silverTeam=()=>[
+      d('블레이범',157,['불꽃'],'고속 특수형','스타팅','브케인 선택 → Lv.36',['땅','전기','노말']),
+      d('니드킹',34,['독','땅'],'물리 에이스','초반','니도런♂ 계열 + 달의돌',['바위','격투']),
+      d('헤라크로스',214,['벌레','격투'],'물리 브레이커','초반','박치기 가능한 나무',['바위','노말']),
+      d('블래키',197,['악'],'탱커','중반','이브이의 친밀도를 올려 밤에 진화',['에스퍼','노말']),
+      d('라프라스',131,['물','얼음'],'특수 탱커','중반','연결동굴 금요일 고정 출현',['전기','에스퍼']),
+      d('루기아',249,['에스퍼','비행'],'혼합 탱커·전설','전설','소용돌이섬 최심부',['물','드래곤'],true)
+    ];
+    replaceTeam('gold',2,()=>goldTeam(2),'신뇽 이전 원안으로 복원했다. 2세대 장크로다일과 나머지 다섯 마리 모두 폭포오르기를 배울 수 없으므로 해당 비전기만 주의문으로 표시한다.','교체 없이 원안 유지 · 폭포오르기 담당 없음');
+    replaceTeam('heartgold',4,()=>goldTeam(4),'장크로다일·헤라크로스·니드킹이 물리 화력, 에브이가 특수 화력, 마기라스가 교대축을 맡는다. 칠색조는 최종 에이스다.','전룡 → 마기라스 입수 전 임시 멤버');
+    replaceTeam('silver',2,silverTeam,'블레이범이 특수 화력, 헤라크로스·니드킹이 물리 화력, 라프라스·블래키·루기아가 내구축을 담당한다.','전룡 → 루기아 입수 전 임시 멤버');
+    replaceTeam('soulsilver',4,silverTeam,'블레이범이 특수 화력, 헤라크로스·니드킹이 물리 화력, 라프라스·블래키·루기아가 내구축을 담당한다.','전룡 → 루기아 입수 전 임시 멤버');
+    replaceTeam('ruby',3,()=>[
+      d('대짱이',260,['물','땅'],'혼합 탱커','스타팅','물짱이 선택 → Lv.36',['얼음','바위']),d('썬더볼트',310,['전기'],'고속 특수형','초반','110번도로 썬더라이 → Lv.26',['불꽃','노말']),d('밤선인',332,['풀','악'],'특수 브레이커','중반','111번도로 선인왕 → Lv.32',['격투','독']),d('아말도',348,['바위','벌레'],'물리 탱커','중반','발톱화석 복원 → 아노딥스 Lv.40',['강철','격투']),d('보만다',373,['드래곤','비행'],'혼합 에이스','후반','유성의폭포 아공이 → Lv.50',['불꽃','강철']),d('그란돈',383,['땅'],'물리 에이스·전설','전설','각성의 사당 스토리 전투',['불꽃','바위'],true)
+    ],'대짱이와 그란돈의 땅 타입이 겹치지만 요청 엔트리를 우선했다. 보만다·밤선인이 특수 견제를 보충하고 아말도가 물리 공격을 받아낸다.','플라이곤 ↔ 대짱이: 땅 타입 중복 해소안');
+    replaceTeam('sapphire',3,()=>[
+      d('번치코',257,['불꽃','격투'],'혼합 에이스','스타팅','아차모 선택 → Lv.36',['비행','바위']),d('로파파',272,['물','풀'],'특수 탱커','초반','연꽃몬 계열 + 물의돌',['얼음','노말']),d('썬더볼트',310,['전기'],'고속 특수형','초반','110번도로 썬더라이 → Lv.26',['불꽃','노말']),d('플라이곤',330,['땅','드래곤'],'혼합 에이스','중반','111번도로 톱치 → Lv.45',['불꽃','강철']),d('메타그로스',376,['강철','에스퍼'],'물리 탱커','엔딩 후','성호의 집 메탕 선물 → Lv.45',['바위','격투']),d('가이오가',382,['물'],'특수 에이스·전설','전설','각성의 사당 스토리 전투',['얼음','전기'],true)
+    ],'가이오가와 로파파의 물 타입이 겹치지만 요청 엔트리를 우선했다. 번치코·플라이곤·메타그로스가 물리, 가이오가·로파파·썬더볼트가 특수를 담당한다.','다탱구 ↔ 로파파: 물 타입 중복 해소안');
+    replaceTeam('emerald',3,()=>[
+      d('나무지기',252,['풀'],'고속 특수형','스타팅','나무지기 선택',['드래곤','격투','노말']),d('폭타',323,['불꽃','땅'],'혼합 탱커','중반','불꽃샛길 둔타 → Lv.33',['바위','노말']),d('보스로라',306,['강철','바위'],'물리 탱커','중반','바위동굴 가보리 → Lv.42',['땅','노말']),d('루나톤',337,['바위','에스퍼'],'특수 탱커','교환 필요','에메랄드 야생 미등장 · 사파이어에서 교환',['얼음','노말']),d('씨카이저',365,['얼음','물'],'특수 탱커','후반','여울의동굴 대굴레오 → Lv.44',['전기','노말']),d('레쿠쟈',384,['드래곤','비행'],'혼합 에이스·전설','전설','하늘기둥 스토리 후반',['전기','불꽃'],true)
+    ],'요청 목록 7마리 중 루나톤까지 6마리를 본대로 편성했다. 루나톤은 에메랄드에 나오지 않아 교환이 필요하며, 교환 없이 진행하면 버섯모로 교체한다.','버섯모 ↔ 루나톤: 교환 없는 에메랄드 권장안');
+    replaceTeam('yellow',1,()=>[
+      d('피카츄',25,['전기'],'고속 특수형','스타팅','게임 시작 파트너',['노말']),d('이상해꽃',3,['풀','독'],'특수 탱커','초반','블루시티 이상해씨 선물 → Lv.32',['노말']),d('리자몽',6,['불꽃','비행'],'고속 특수형','초반','24번도로 파이리 선물 → Lv.36',['드래곤']),d('거북왕',9,['물'],'특수 탱커','중반','갈색시티 꼬부기 선물 → Lv.36',['얼음']),d('잠만보',143,['노말'],'물리 탱커','중반','12번·16번도로 고정 심볼',['격투']),d('뮤츠',150,['에스퍼'],'고속 특수 에이스·전설','엔딩 후','블루시티동굴 최심부',['노말'],true)
+    ],'뮤츠 합류 전에는 닥트리오를 임시 사용하고, 엔딩 후 뮤츠로 교체한다. 피카츄·리자몽·뮤츠가 선공권을 잡고 잠만보가 물리 화력을 담당한다.','스토리 엔트리만 원하면 닥트리오 ↔ 뮤츠');
+    replaceTeam('ruby',3,()=>[
+      d('나무킹',254,['풀'],'고속 특수형','스타팅','나무지기 선택 → Lv.36',['드래곤']),d('썬더볼트',310,['전기'],'고속 특수형','초반','110번도로 썬더라이 → Lv.26',['불꽃']),d('보스로라',306,['강철','바위'],'물리 탱커','중반','바위동굴 가보리 → Lv.42',['땅']),d('씨카이저',365,['얼음','물'],'특수 탱커','후반','여울의동굴 대굴레오 → Lv.44',['전기']),d('보만다',373,['드래곤','비행'],'물리·특수 혼합 에이스','후반','유성의폭포 아공이 → Lv.50',['불꽃']),d('그란돈',383,['땅'],'물리 에이스·전설','전설','각성의사당 스토리 전투',['바위'],true)
+    ],'모든 보유 타입이 겹치지 않는다. 나무킹·썬더볼트·씨카이저가 특수, 그란돈·보스로라가 물리, 보만다가 혼합 화력을 담당한다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('sapphire',3,()=>[
+      d('번치코',257,['불꽃','격투'],'고속 물리·특수 혼합형','스타팅','아차모 선택 → Lv.36',['비행']),d('밤선인',332,['풀','악'],'특수 브레이커','중반','111번도로 선인왕 → Lv.32',['독']),d('아말도',348,['바위','벌레'],'물리 탱커','중반','발톱화석 복원 → 아노딥스 Lv.40',['격투']),d('플라이곤',330,['땅','드래곤'],'고속 물리·특수 혼합형','중반','111번도로 톱치 → Lv.45',['강철']),d('메타그로스',376,['강철','에스퍼'],'물리 탱커','엔딩 후','성호의 집 메탕 선물 → Lv.45',['바위']),d('가이오가',382,['물'],'특수 에이스·전설','전설','각성의사당 스토리 전투',['얼음'],true)
+    ],'모든 보유 타입이 겹치지 않는다. 다만 메타그로스는 엔딩 후 합류하므로 스토리 중에는 임시 강철 요원이 필요하다.','코터스 → 메타그로스 합류 전 임시 멤버');
+    replaceTeam('emerald',3,()=>[
+      d('대짱이',260,['물','땅'],'물리·특수 혼합 탱커','스타팅','물짱이 선택 → Lv.36',['얼음']),d('게을킹',289,['노말'],'물리 탱커','초반','등화숲 게을로 → Lv.36',['격투']),d('가디안',282,['에스퍼'],'고속 특수형','초반','102번도로 랄토스 → Lv.30',['전기']),d('깜까미',302,['악','고스트'],'특수 탱커','초반','바위동굴',['불꽃']),d('헤라크로스',214,['벌레','격투'],'물리 에이스','중반','사파리존',['바위']),d('레쿠쟈',384,['드래곤','비행'],'고속 물리·특수 혼합 에이스·전설','전설','하늘기둥 스토리 후반',['전기'],true)
+    ],'깜까미가 루나톤의 교환 문제를 해결하면서 악·고스트를 채운다. 여섯 마리의 보유 타입이 전부 겹치지 않는다.','루나톤 대체는 깜까미를 가장 추천 · 바위동굴에서 직접 입수');
+    replaceTeam('diamond',4,()=>[
+      d('초염몽',392,['불꽃','격투'],'고속 물리·특수 혼합형','스타팅','불꽃숭이 선택 → Lv.36',['바위']),d('찌르호크',398,['노말','비행'],'고속 물리형','초반','201번도로 찌르꼬 → Lv.34',['벌레']),d('트리토돈',423,['물','땅'],'특수 탱커','중반','205번도로 깝질무 → Lv.30',['얼음']),d('드래피온',452,['독','악'],'물리 탱커','중반','대습초원 스콜피 → Lv.40',['벌레']),d('눈설왕',460,['풀','얼음'],'물리·특수 혼합 탱커','후반','216번도로 눈쓰개 → Lv.40',['바위']),d('디아루가',483,['강철','드래곤'],'특수 탱커·전설','전설','창기둥 스토리 전투',['전기'],true)
+    ],'복합 타입 6마리로 12개 타입을 중복 없이 확보한다. 찌르호크·드래피온이 물리, 트리토돈·디아루가가 특수를 맡는다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('pearl',4,()=>[
+      d('토대부기',389,['풀','땅'],'물리 탱커','스타팅','모부기 선택 → Lv.32',['바위']),d('자포코일',462,['전기','강철'],'특수 탱커','중반','코일 계열을 천관산에서 진화',['격투']),d('둥실라이드',426,['고스트','비행'],'특수 탱커','중반','금요일 골짜기발전소 흔들풍손 → Lv.28',['에스퍼']),d('독개굴',454,['독','격투'],'고속 물리형','중반','대습초원 삐딱구리 → Lv.37',['악']),d('포푸니라',461,['악','얼음'],'고속 물리형','후반','216번도로 포푸니 + 예리한손톱',['격투']),d('펄기아',484,['물','드래곤'],'고속 특수 에이스·전설','전설','창기둥 스토리 전투',['불꽃'],true)
+    ],'복합 타입 6마리로 12개 타입을 중복 없이 확보한다. 펄기아는 물 타입이지만 4세대 다이아몬드·펄에서 HM07 폭포오르기를 배울 수 없어 주의문만 표시한다.','교체 없이 원안 유지 · 폭포오르기 담당 없음');
+    replaceTeam('platinum',4,()=>[
+      d('엠페르트',395,['물','강철'],'특수 탱커','스타팅','팽도리 선택 → Lv.36',['얼음']),d('로즈레이드',407,['풀','독'],'고속 특수형','초반','꼬몽울 계열 + 빛의돌',['고스트']),d('헬가',229,['악','불꽃'],'고속 특수형','중반','214번도로·입지호수 근처 델빌 → Lv.24',['풀']),d('엘레이드',475,['에스퍼','격투'],'물리 에이스','중반','수컷 킬리아 + 각성의돌',['바위']),d('맘모꾸리',473,['얼음','땅'],'물리 탱커','후반','꾸꾸리 계열 + 원시의힘',['바위']),d('기라티나',487,['고스트','드래곤'],'물리·특수 혼합 탱커·전설','전설','깨어진세계 스토리 전투',['전기'],true)
+    ],'헬가가 악·불꽃 특수 화력을 맡아 기라티나와의 고스트 중복 및 히트로토무의 배포 아이템 문제를 함께 없앤다.','교체 불필요 · 12개 타입 중복 없음');
+    replaceTeam('black',5,()=>[
+      d('대검귀',503,['물'],'물리·특수 혼합 탱커','스타팅','수댕이 선택 → Lv.36',['얼음']),d('몰드류',530,['땅','강철'],'고속 물리 에이스','초반','지하수맥굴 두더류 → Lv.31',['바위']),d('곤율거니',560,['악','격투'],'물리 탱커','중반','4번도로 곤율랭 → Lv.39',['독']),d('아케오스',567,['바위','비행'],'고속 물리형','중반','날개화석 복원 → 아켄 Lv.37',['땅']),d('펜드라',545,['벌레','독'],'고속 물리형','중반','바람개비숲 마디네 → Lv.30',['바위']),d('레시라무',643,['드래곤','불꽃'],'고속 특수 에이스·전설','전설','N의 성 스토리 전투',['에스퍼'],true)
+    ],'모든 타입이 겹치지 않는다. 몰드류·곤율거니·아케오스·펜드라가 물리, 레시라무가 특수 마무리를 맡는다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('white',5,()=>[
+      d('염무왕',500,['불꽃','격투'],'물리·특수 혼합형','스타팅','뚜꾸리 선택 → Lv.36',['바위']),d('악비아르',553,['땅','악'],'고속 물리 에이스','초반','4번도로 깜눈크 → Lv.40',['바위']),d('심보러',561,['에스퍼','비행'],'고속 특수형','중반','리조트데저트',['얼음']),d('너트령',598,['풀','강철'],'물리 탱커','중반','전기돌동굴 철시드 → Lv.40',['바위']),d('늑골라',565,['물','바위'],'물리 탱커','중반','덮개화석 복원 → 프로토가 Lv.37',['얼음']),d('제크로무',644,['드래곤','전기'],'물리 에이스·전설','전설','N의 성 스토리 전투',['강철'],true)
+    ],'복합 타입 6마리의 12개 타입이 전부 다르다. 심보러가 주 특수 화력이고 염무왕이 혼합 화력을 보충한다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('black2',5,()=>[
+      d('대검귀',503,['물'],'물리·특수 혼합 탱커','스타팅','수댕이 선택 → Lv.36',['얼음']),d('몰드류',530,['땅','강철'],'고속 물리 에이스','초반','고대샛길 두더류 → Lv.31',['바위']),d('곤율거니',560,['악','격투'],'물리 탱커','중반','4번도로 곤율랭 → Lv.39',['독']),d('샹델라',609,['고스트','불꽃'],'특수 브레이커','중반','타워오브해븐 불켜미 계열 + 어둠의돌',['풀']),d('아케오스',567,['바위','비행'],'고속 물리형','엔딩 후','칠보시티 박물관에서 날개화석 선택 후 복원',['땅']),d('블랙큐레무',10022,['드래곤','얼음'],'고속 물리 에이스·전설','엔딩 후','큐레무와 제크로무를 유전자쐐기로 합체',['전기'],true)
+    ],'타입은 겹치지 않지만 아케오스와 블랙큐레무가 엔딩 후에 합류해 스토리 엔트리로는 늦다.','스토리용: 워글 ↔ 아케오스, 액스라이즈 ↔ 블랙큐레무');
+    replaceTeam('white2',5,()=>[
+      d('염무왕',500,['불꽃','격투'],'물리·특수 혼합형','스타팅','뚜꾸리 선택 → Lv.36',['바위']),d('악비아르',553,['땅','악'],'고속 물리 에이스','초반','리조트데저트 깜눈크 → Lv.40',['바위']),d('심보러',561,['에스퍼','비행'],'고속 특수형','중반','리조트데저트',['얼음']),d('너트령',598,['풀','강철'],'물리 탱커','중반','전기돌동굴 철시드 → Lv.40',['바위']),d('늑골라',565,['물','바위'],'물리 탱커','엔딩 후','칠보시티 박물관에서 덮개화석 선택 후 복원',['얼음']),d('화이트큐레무',10023,['드래곤','얼음'],'고속 특수 에이스·전설','엔딩 후','큐레무와 레시라무를 유전자쐐기로 합체',['전기'],true)
+    ],'타입은 겹치지 않지만 늑골라와 화이트큐레무가 엔딩 후에 합류한다.','스토리용: 탱탱겔 ↔ 늑골라, 액스라이즈 ↔ 화이트큐레무');
+    replaceTeam('x',6,()=>[
+      d('개굴닌자',658,['물','악'],'고속 물리·특수 혼합형','스타팅','개구마르 선택 → Lv.36',['얼음']),d('파이어로',663,['불꽃','비행'],'고속 물리형','초반','2번도로 화살꼬빈 → Lv.35',['강철']),d('루카리오',448,['격투','강철'],'고속 물리 에이스','중반','마스터타워 코르니에게 선물',['땅']),d('대로트',709,['고스트','풀'],'물리 탱커','중반','20번도로 나목령 통신진화',['땅']),d('견고라스',697,['바위','드래곤'],'물리 브레이커','중반','턱화석 복원 → 낮 Lv.39',['격투']),d('제르네아스',716,['페어리'],'고속 특수 에이스·전설','전설','플레어단 비밀기지 스토리 전투',['에스퍼'],true)
+    ],'루카리오가 격투·강철 물리 에이스를 맡아 개굴닌자와 부란다의 악 타입 중복을 없앤다.','교체 불필요 · 12개 타입 중복 없음');
+    replaceTeam('y',6,()=>[
+      d('마폭시',655,['불꽃','에스퍼'],'고속 특수형','스타팅','푸호꼬 선택 → Lv.36',['풀']),d('파르토크',660,['노말','땅'],'물리 에이스','초반','2·3·5번도로 파르빗 → Lv.20',['격투','바위']),d('킬가르도',681,['강철','고스트'],'물리·특수 혼합 탱커','중반','6번도로 단칼빙 계열 + 어둠의돌',['격투']),d('드래캄',691,['독','드래곤'],'특수 탱커','중반','8번도로 수레기 → Lv.48',['물']),d('아마루르가',699,['바위','얼음'],'특수 탱커','중반','지느러미화석 복원 → 밤 Lv.39',['전기']),d('이벨타르',717,['악','비행'],'고속 물리·특수 혼합 에이스·전설','전설','플레어단 비밀기지 스토리 전투',['격투'],true)
+    ],'파르토크가 HM04 괴력을 담당한다. 드래캄이 파도타기와 폭포오르기를 맡아 비전기술 5종을 팀 안에서 모두 해결하며 12개 보유 타입도 겹치지 않는다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('omegaruby',6,()=>[
+      d('나무킹',254,['풀'],'고속 특수형','스타팅','나무지기 선택 → Lv.36',['드래곤']),d('가디안',282,['에스퍼','페어리'],'고속 특수형','초반','102번도로 랄토스 → Lv.30',['불꽃']),d('보스로라',306,['강철','바위'],'물리 탱커','중반','바위동굴 가보리 → Lv.42',['땅']),d('씨카이저',365,['얼음','물'],'특수 탱커','후반','여울의동굴 대굴레오 → Lv.44',['전기']),d('보만다',373,['드래곤','비행'],'고속 물리·특수 혼합 에이스','후반','유성의폭포 아공이 → Lv.50',['불꽃']),d('그란돈',383,['땅'],'물리 에이스·전설','전설','각성의사당 스토리 전투',['바위'],true)
+    ],'모든 타입이 겹치지 않는다. 보만다와 그란돈이 물리 비중을, 나무킹·가디안·씨카이저가 특수 비중을 채운다.','교체 불필요 · 조건 완전 충족');
+    replaceTeam('alphasapphire',6,()=>[
+      d('번치코',257,['불꽃','격투'],'고속 물리·특수 혼합형','스타팅','아차모 선택 → Lv.36',['비행']),d('밤선인',332,['풀','악'],'특수 브레이커','중반','111번도로 선인왕 → Lv.32',['독']),d('아말도',348,['바위','벌레'],'물리 탱커','중반','발톱화석 복원 → 아노딥스 Lv.40',['격투']),d('플라이곤',330,['땅','드래곤'],'고속 물리·특수 혼합형','중반','111번도로 톱치 → Lv.45',['강철']),d('메타그로스',376,['강철','에스퍼'],'물리 탱커','엔딩 후','성호의 집 메탕 선물 → Lv.45',['바위']),d('가이오가',382,['물'],'특수 에이스·전설','전설','각성의사당 스토리 전투',['얼음'],true)
+    ],'모든 타입이 겹치지 않지만 메타그로스는 엔딩 후 합류한다.','코터스 → 메타그로스 합류 전 임시 멤버');
+    const sunTeam=ultra=>[
+      d('누리레느',730,['물','페어리'],'특수 탱커','스타팅','누리공 선택 → Lv.34',['얼음']),d('투구뿌논',738,['벌레','전기'],'특수 브레이커','초반','턱지충이 계열 → 포니대협곡/화끈산에서 진화',['풀']),ultra?d('메테노',774,['바위','비행'],'고속 물리형','중반','호쿠라니큰산 야생 출현',['땅']):d('모단단게',740,['격투','얼음'],'물리 브레이커','중반','야자나무섬 오기지게 → 라나키라마운틴에서 레벨업',['바위']),d('타타륜',781,['고스트','풀'],'물리 탱커','후반','바다민족의마을 낚시',['강철']),d('악식킹',799,['악','드래곤'],'물리·특수 혼합 탱커','엔딩 후',ultra?'울트라스페이스 제로대륙':'울트라비스트 포획 임무',['불꽃']),ultra?d('황혼의갈기 네크로즈마',10155,['에스퍼','강철'],'물리 탱커·전설','전설','네크로즈마와 솔가레오를 네크로플러스솔로 합체',['바위'],true):d('솔가레오',791,['에스퍼','강철'],'고속 물리 탱커·전설','전설','스토리 중 코스모움 진화',['불꽃'],true)
+    ];
+    replaceTeam('sun',7,()=>sunTeam(false),'썬에서는 황혼의갈기 네크로즈마가 존재하지 않아 같은 에스퍼·강철 타입인 솔가레오를 사용한다. 악식킹은 엔딩 후 합류한다.','고속 요원이 필요하면 메테노 ↔ 모단단게');
+    replaceTeam('ultrasun',7,()=>sunTeam(true),'메테노가 껍질깨기 이후 고속 물리 마무리를 맡는다. 황혼의갈기 네크로즈마는 솔가레오와 네크로즈마의 합체 폼이다.','교체 불필요 · 속도 역할 보완 완료');
+    const moonTeam=ultra=>[
+      d('어흥염',727,['불꽃','악'],'물리 탱커','스타팅','냐오불 선택 → Lv.34',['격투']),d('고지 알로라',10102,['얼음','강철'],'고속 물리형','후반',`${ultra?'타푸마을·라나키라마운틴':'라나키라마운틴'} 모래두지 알로라 + 얼음의돌`,['땅']),d('갑주무사',768,['벌레','물'],'물리 탱커','중반','8번도로 꼬시레 → Lv.30',['강철']),d('짜랑고우거',784,['드래곤','격투'],'물리·특수 혼합 탱커','후반','포니대협곡 짜랑꼬 → Lv.45',['바위']),d('텅비드',793,['바위','독'],'고속 특수형','엔딩 후',ultra?'울트라스페이스 울트라딥시':'울트라비스트 포획 임무',['전기']),ultra?d('새벽의날개 네크로즈마',10156,['에스퍼','고스트'],'특수 탱커·전설','전설','네크로즈마와 루나아라를 네크로플러스루나로 합체',['얼음'],true):d('루나아라',792,['에스퍼','고스트'],'고속 특수 탱커·전설','전설','스토리 중 코스모움 진화',['얼음'],true)
+    ];
+    replaceTeam('moon',7,()=>moonTeam(false),'문 버전 전용 알로라 고지가 얼음·강철 물리형을 맡아 격투 타입 중복을 없앤다.','교체 불필요 · 12개 타입 중복 없음');
+    replaceTeam('ultramoon',7,()=>moonTeam(true),'울트라문 전용 알로라 고지가 얼음·강철 물리형을 맡아 격투 타입 중복을 없앤다.','교체 불필요 · 12개 타입 중복 없음');
+    games.splice(games.findIndex(g=>g.id==='crystal'),1);
+    const roleFix={blue:{윈디:'혼합 에이스'},yellow:{피카츄:'고속 특수형'},crystal:{무우마:'혼합형'}};
+    games.forEach(g=>g.team.forEach(x=>{if(roleFix[g.id]?.[x.name])x.role=roleFix[g.id][x.name]}));
+
+    const gameTips={
+      lgp:'피카츄와 리자몽으로 먼저 압박하고, 어려운 상대는 이상해꽃의 수면가루·씨뿌리기로 묶는다. 잠만보는 특수 공격을 받아내는 교대 축이다.',
+      lge:'니드킹의 넓은 견제폭으로 초중반을 밀고, 윈디와 쥬피썬더가 빠르게 마무리한다. 라프라스는 드래곤전과 장기전을 담당한다.',
+      fr:'리자몽·쥬피썬더가 스피드전을 맡고 잠만보가 특수 공격을 받아낸다. 나시가 수면을 건 다음 고화력 에이스를 안전하게 투입한다.',
+      lg:'이상해꽃의 수면가루로 템포를 잡고 나인테일·루주라가 특수 화력을 넣는다. 코뿌리는 물·풀 기술 앞에서 무리하지 말고 물리 공격에만 교대한다.',
+      bd:'초염몽과 맘모꾸리가 물리 압박, 로즈레이드와 디아루가가 특수 압박을 맡는다. 화강돌의 도깨비불로 물리 보스를 약화시키면 안정적이다.',
+      sp:'토대부기·엘레이드가 물리전, 자포코일·펄기아·메가자리가 특수전을 맡는다. 메가자리는 엔딩 후 합류하므로 스토리 중에는 임시 비행 요원을 사용한다.',
+      sword:'자시안·에이스번·우라오스로 빠르게 수를 줄이고 데스판으로 물리 공격을 받는다. 마임꽁꽁은 프리즈드라이로 물 타입까지 압박한다.',
+      shield:'오롱털로 상대 화력을 낮추거나 강화한 뒤 드래펄트가 마무리한다. 자마젠타는 내구가 높아 위험한 물리 공격에 교대하기 좋다.',
+      arceus:'민첩 스타일로 먼저 행동한 뒤 강공 스타일로 마무리하는 흐름이 기본이다. 미끄래곤과 다투곰을 안전한 교대축으로 사용한다.',
+      scarlet:'마스카나·찌리비크로 선공권을 잡고 카디나르마·킬라플로르가 특수 화력을 보탠다. 두드리짱의 거대해머는 연속 사용이 안 되므로 교대 타이밍을 계산한다.',
+      violet:'웨이니발은 아쿠아스텝으로 스피드를 올린 뒤 전개한다. 대도각참은 후반 마무리, 육파리는 특수 공격을 받아내는 역할이 안정적이다.',
+      za:'초반에는 아쿠스타·루차불로 빠르게 압박하고 메가니움이 내구를 받친다. 메가진화는 한 전투에 한 마리만 가능하므로 보스 약점에 맞춰 선택한다.',
+      'another-red':'팬텀·개굴닌자로 선공권을 잡고, 가디안은 최면술 성공 뒤 꿈먹기로 회복한다. 헤라크로스는 안전한 턴에 칼춤을 쌓고 보스로라가 물리 공격을 받는다.',
+      'another-faves':'야도란·잠만보가 공격을 받아 안전한 교대를 만들고 팬텀이 마무리한다. 마기라스는 격투 기술을 특히 조심하며 창파나이트로 악·강철을 정리한다.'
+    };
+    games.forEach(g=>g.note=g.customNote||gameTips[g.id]||g.note);
+
+    const acquisition={
+      lgp:{'피카츄':['스타팅','게임 시작 시 파트너'],'이상해꽃':['초반','상록숲 희귀 출현 또는 블루시티에서 30마리 포획 후 이상해씨 선물'],'리자몽':['초반','24번도로에서 50마리 포획 후 파이리 선물; Lv.36 진화'],'거북왕':['중반','갈색시티에서 60마리 포획 후 꼬부기 선물; Lv.36 진화'],'잠만보':['중반','포켓몬피리 획득 후 12번·16번도로 고정 심볼'],'뮤츠':['전설','엔딩 후 블루시티동굴 최심부']},
+      lge:{'니드킹':['초반','22번도로의 니드런 계열 + 달맞이산 달의돌'],'윈디':['초반','갈색시티에서 나옹 5마리를 보여주고 Lv.16 선물'],'쥬피썬더':['중반','17번도로 희귀 이브이 + 무지개백화점 천둥의돌'],'라프라스':['중반','실프주식회사 7층에서 선물'],'망나뇽':['후반','10번수로의 미뇽을 잡아 Lv.55 진화'],'뮤츠':['전설','엔딩 후 블루시티동굴 최심부']},
+      fr:{'리자몽':['스타팅','파이리 선택 후 Lv.36 진화'],'니드킹':['초반','3번도로 니드런 계열 + 달맞이산 달의돌'],'쥬피썬더':['중반','무지개맨션 이브이 + 무지개백화점 천둥의돌'],'라프라스':['중반','실프주식회사 7층에서 선물'],'잠만보':['중반','포켓몬피리 획득 후 12번·16번도로 고정 심볼'],'나시':['후반','사파리존 아라리 + 무지개백화점 리프의돌']},
+      lg:{'이상해꽃':['스타팅','이상해씨 선택 후 Lv.32 진화'],'나인테일':['중반','7번·8번도로 식스테일 + 무지개백화점 불꽃의돌'],'루주라':['중반','블루시티에서 슈륙챙과 교환'],'샤미드':['중반','무지개맨션 이브이 + 무지개백화점 물의돌'],'코뿌리':['후반','사파리존 코뿌리 또는 뿔카노 Lv.42 진화'],'망나뇽':['후반','사파리존/게임코너 미뇽을 Lv.55까지 진화']},
+      bd:{'초염몽':['스타팅','불꽃숭이 선택 후 Lv.36 진화'],'로즈레이드':['초반','204번도로·영원의숲 꼬몽울 → 낮 친밀도 진화 → 빛의돌'],'화강돌':['중반','쐐기돌을 신령탑에 사용하고 지하대동굴 NPC 32명과 대화'],'토게키스':['중반','지하대동굴 토게피 → 친밀도 진화 → 강철섬 빛의돌'],'맘모꾸리':['후반','217번도로/지하대동굴 꾸꾸리 계열, 원시의힘을 배운 메꾸리 레벨업'],'디아루가':['전설','스토리 후반 창기둥 고정 전투']},
+      sp:{'토대부기':['스타팅','모부기 선택 후 Lv.32 진화'],'엘레이드':['중반','지하대동굴 랄토스 → 수컷 킬리아 + 각성의돌'],'자포코일':['중반','지하대동굴 코일을 레어코일로 만든 뒤 천관산에서 레벨업'],'포푸니라':['후반','216·217번도로 포푸니 + 예리한손톱을 지닌 채 밤에 레벨업'],'메가자리':['엔딩 후','전국도감 후 대습초원 일일 출현 야나프; 원시의힘을 배워 레벨업'],'펄기아':['전설','스토리 후반 창기둥 고정 전투']},
+      sword:{'에이스번':['스타팅','염버니 선택 후 Lv.35 진화'],'파치래곤':['중반','6번도로 화석 복원소에서 새화석+용화석 복원'],'데스판':['중반','6번도로 데스마스(G); 49 이상 피해를 입은 채 모래먼지구덩이 돌다리 통과'],'우라오스 연격':['중반','갑옷섬 도장에서 치고마 선물 후 물의 탑 완료'],'마임꽁꽁':['후반','10번도로 마임맨(G)을 Lv.42에 진화'],'자시안':['전설','엔딩 후 꾸벅졸음숲 왕가 형제 이벤트']},
+      shield:{'인텔리레온':['스타팅','울머기 선택 후 Lv.35 진화'],'다태우지네':['초반','3번도로 희귀 태우지네 또는 불꽃 체육관 심볼; Lv.28 진화'],'오롱털':['중반','루미너스메이즈숲 메롱꿍 계열; Lv.42 진화'],'파치르돈':['중반','6번도로 화석 복원소에서 새화석+긴목화석 복원'],'드래펄트':['후반','물자전거 획득 후 역린호수 희귀 드라꼰; Lv.60 진화'],'자마젠타':['전설','엔딩 후 꾸벅졸음숲 왕가 형제 이벤트']},
+      arceus:{'히스이 블레이범':['스타팅','브케인 선택 후 Lv.36 진화'],'사마자르':['초반','흑요들판의 스라크에게 검은휘석 사용'],'포푸니크':['중반','천관산기슭/순백동토 포푸니(H)에게 낮에 예리한손톱 사용'],'히스이 미끄래곤':['중반','홍련습지 시련의 모래톱 미끄메라/미끄네일; 비 오는 날 Lv.50 진화'],'다투곰':['중반','홍련습지 링곰에게 보름달 밤 피트블록 사용'],'히스이 워글':['후반','순백동토의 수리둥보를 Lv.54에 진화']},
+      scarlet:{'마스카나':['스타팅','나오하 선택 후 Lv.36 진화'],'찌리비크':['초반','남부·동부 해안 찌리비; Lv.25 진화'],'두드리짱':['초반','남부 에리어 2·3 유적의 어리짱; Lv.38 진화'],'카디나르마':['중반','남부 여러 지역 카르본 + 피케마을 동미러조각 교환 축복받은갑옷'],'킬라플로르':['후반','동굴의 초롱순/오야호수·나페산·에리어 제로; Lv.35 진화'],'코라이돈':['전설','스토리 파트너; 전투용 두 번째 개체는 엔딩 후 에리어 제로 최심부']},
+      violet:{'웨이니발':['스타팅','꾸왁스 선택 후 Lv.36 진화'],'베라카스':['초반','로스트사막 구르데; 레츠고 모드 1,000걸음 후 레벨업'],'파라블레이즈':['중반','남부 여러 지역 카르본 + 피케마을 데인차조각 교환 저주받은갑옷'],'육파리':['중반','오야호수 북쪽·표식의나무숲의 들눈해; Lv.30 진화'],'대도각참':['후반','대나무숲 우두머리 절각참의 대장의징표를 들고 우두머리 3마리 격파'],'미라이돈':['전설','스토리 파트너; 전투용 두 번째 개체는 엔딩 후 에리어 제로 최심부']},
+      za:{'메가 메가니움':['스타팅','치코리타 선택 후 Lv.32 진화; 메가스톤은 메인 미션 9'],'메가 아쿠스타':['초반','와일드 존 2 밤 별가사리 + 물의돌; 메가스톤은 폭주 메가아쿠스타 미션'],'메가 루차불':['초반','와일드 존 3 동쪽 옥상/베르 섹터 9 밤'],'메가 펜드라':['중반','와일드 존 5 마디네 계열; 펜드라나이트는 랭크 C 이후 메가조각 교환'],'메가 샹델라':['중반','하수도 메인 액세스 불켜미 → Lv.41 램프라 → 어둠의돌'],'지가르데':['전설','스토리 후반 지가르데 관련 메인 미션']},
+      'another-red':{'헤라크로스':['초반','5번도로·자연공원; 박치기는 11번·18번도로'],'가디안':['중반','11번·14번도로 랄토스 → Lv.20 킬리아 → Lv.30'],'개굴닌자':['중반','43번도로·너도밤나무숲 낚시 개구마르 → Lv.16/36'],'팬텀':['중반','포켓몬의쉼터 2·3층 고오스 → Lv.25 고우스트 + 연결의끈'],'보스로라':['중반','디그다의굴 가보리 → Lv.32 갱도라 → Lv.42'],'한카리아스':['후반','사파리존 사막 에리어 딥상어동 → Lv.24/48']},
+      'another-faves':{'창파나이트':['초반','갈색시티 애호가클럽에서 파오리(G) 교환; 한 전투 급소 3회 후 레벨업'],'야도란':['중반','소용돌이섬·야돈의우물 야돈 → Lv.37; 야돈의우물 지하에서 직접 출현'],'팬텀':['중반','포켓몬의쉼터 2·3층 고오스 → Lv.25 고우스트 + 연결의끈'],'마기라스':['후반','돌산터널·디그다의굴 애버라스 → Lv.30/55'],'잠만보':['후반','28번도로·은빛산 초입'],'망나뇽':['후반','21번도로·태초마을 낚시 미뇽 → Lv.30/55; 은빛산에서 직접 출현']}
+    };
+    games.forEach(g=>g.team.forEach(x=>{const found=acquisition[g.id]?.[x.name];if(found)[x.stage,x.obtain]=found;else if(!x.stage)[x.stage,x.obtain]=['확인','진화 전 포켓몬의 도감 서식지 확인']}));
+
+    const genById={lgp:7,lge:7,fr:3,lg:3,bd:8,sp:8,sword:8,shield:8,arceus:8,scarlet:9,violet:9,za:9,'another-red':9,'another-faves':9};
+    games.forEach(g=>g.gen??=genById[g.id]||9);
+    games.forEach(g=>g.team.forEach(x=>{const plan=window.MOVE_PLANS?.[g.id]?.[x.name];if(plan)x.moves=plan}));
+
+    const groups=[
+      {id:'gen1',label:'관동 오리지널',ids:['red','green','blue','yellow']},
+      {id:'gen2',label:'성도 오리지널',ids:['gold','silver']},
+      {id:'gen3-hoenn',label:'호연 오리지널',ids:['ruby','sapphire','emerald']},
+      {id:'frlg',label:'파이어레드 · 리프그린',ids:['fr','lg']},
+      {id:'gen4-sinnoh',label:'신오 오리지널',ids:['diamond','pearl','platinum']},
+      {id:'hgss',label:'하트골드 · 소울실버',ids:['heartgold','soulsilver']},
+      {id:'bw',label:'포켓몬스터 블랙 · 화이트',ids:['black','white']},
+      {id:'bw2',label:'포켓몬스터 블랙 2 · 화이트 2',ids:['black2','white2']},
+      {id:'xy',label:'포켓몬스터 X · Y',ids:['x','y']},
+      {id:'oras',label:'오메가루비 · 알파사파이어',ids:['omegaruby','alphasapphire']},
+      {id:'alola',label:'포켓몬스터 썬 · 문',ids:['sun','moon']},
+      {id:'ultra',label:'포켓몬스터 울트라썬 · 울트라문',ids:['ultrasun','ultramoon']},
+      {id:'letsgo',label:'Pokémon Let’s Go',ids:['lgp','lge']},
+      {id:'swsh',label:'포켓몬스터 소드 · 실드',ids:['sword','shield']},
+      {id:'bdsp',label:'브릴리언트 다이아몬드 · 샤이닝 펄',ids:['bd','sp']},
+      {id:'pla',label:'Pokémon LEGENDS 아르세우스',ids:['arceus']},
+      {id:'sv',label:'포켓몬스터 스칼렛 · 바이올렛',ids:['scarlet','violet']},
+      {id:'za-series',label:'Pokémon LEGENDS Z-A',ids:['za']},
+      {id:'another',label:'어나더 레드',ids:['another-red','another-faves']}
+    ];
+    const generationSections=[
+      {id:'generation-1',label:'1세대 · 관동',groups:['gen1']},
+      {id:'generation-2',label:'2세대 · 성도',groups:['gen2']},
+      {id:'generation-3',label:'3세대 · 호연·관동 리메이크',groups:['gen3-hoenn','frlg']},
+      {id:'generation-4',label:'4세대 · 신오·성도 리메이크',groups:['gen4-sinnoh','hgss']},
+      {id:'generation-5',label:'5세대 · 하나',groups:['bw','bw2']},
+      {id:'generation-6',label:'6세대 · 칼로스·호연 리메이크',groups:['xy','oras']},
+      {id:'generation-7',label:'7세대 · 알로라·Let’s Go',groups:['alola','ultra','letsgo']},
+      {id:'generation-8',label:'8세대 · 가라르·신오',groups:['swsh','bdsp','pla']},
+      {id:'generation-9',label:'9세대 · 팔데아·미르시티',groups:['sv','za-series']},
+      {id:'fan-generation',label:'팬게임',groups:['another']}
+    ];
+    const groupById=Object.fromEntries(groups.map(g=>[g.id,g]));
+    const stageRank={'스타팅':0,'초반':1,'중반':2,'교환 필요':3,'후반':4,'엔딩 후':5,'전설':6,'확인':7};
+    games.forEach(g=>g.team.sort((a,b)=>(stageRank[a.stage]??9)-(stageRank[b.stage]??9)));
+
+    const typeColors={노말:'#9298a4',불꽃:'#ef7d42',물:'#4b91df',전기:'#e7b928',풀:'#5eaf55',얼음:'#67c9c4',격투:'#cf4059',독:'#a960c2',땅:'#d88945',비행:'#8ba6df',에스퍼:'#ed6e8f',벌레:'#91aa35',바위:'#b7a257',고스트:'#5269a5',드래곤:'#176dc2',악:'#595365',강철:'#5a9aaa',페어리:'#e585ad'};
+    const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const typeBadge=t=>`<span class="type" style="background:${typeColors[t]||'#677'}">${esc(t)}</span>`;
+    function audit(g){
+      const all=g.team.flatMap(x=>x.types), repeated=[...new Set(all.filter((x,i)=>all.indexOf(x)!==i))];
+      const legends=g.team.filter(x=>x.legend).length;
+      const roles={physical:g.team.some(x=>x.role.includes('물리')),special:g.team.some(x=>x.role.includes('특수')),speed:g.team.some(x=>x.role.includes('고속')),tank:g.team.some(x=>x.role.includes('탱커'))};
+      return {repeated,legends,roles};
+    }
+    function natureFor(x,g,meta){
+      if(g.gen<=2)return '성격 없음 (당시 세대)';
+      const r=x.role,physical=r.includes('물리'),special=r.includes('특수'),fast=r.includes('고속'),tank=r.includes('탱커');
+      if(tank&&physical)return '장난꾸러기 (방어↑ 특공↓)';
+      if(tank)return '차분 (특방↑ 공격↓)';
+      if(fast&&special&&!physical)return '겁쟁이 (스피드↑ 공격↓)';
+      if(fast&&physical&&!special)return '명랑 (스피드↑ 특공↓)';
+      if(special&&!physical)return '조심 (특공↑ 공격↓)';
+      if(physical&&!special)return '고집 (공격↑ 특공↓)';
+      return meta?.stats?.[1]>=meta?.stats?.[3]?'성급 (스피드↑ 방어↓)':'천진난만 (스피드↑ 특방↓)';
+    }
+    function abilityFor(g,meta){
+      if(g.gen<=2)return '특성 없음 (당시 세대)';
+      if(['lgp','lge'].includes(g.id))return '특성 미적용 (Let’s Go)';
+      if(['arceus','za'].includes(g.id))return '특성 미적용 (LEGENDS)';
+      return meta?.ability||'확인 중';
+    }
+    function moveKind(v,g){
+      if(g.gen<=3&&!v.kind.includes('변화'))return `${oldPhysical.has(v.type)?'물리':'특수'}${v.kind.includes('자속')?'·자속':''}`;
+      return v.kind;
+    }
+    function learnLabel(source){
+      if(source.includes('Lv.1 취급'))return '기술 떠올리기 · Lv.1 취급';
+      const level=source.match(/Lv\.\d+(?:\s[^·]*)?/);if(level)return level[0].trim();
+      if(source.includes('부화 시'))return '교배기 · 부화 시';
+      if(source.includes('레벨 무관'))return `${source.split(' · ')[0]} · 레벨 무관`;
+      return source;
+    }
+    function card(x,g){
+      const stageClass=x.stage==='전설'?'legend':x.stage==='엔딩 후'?'post':'';
+      const meta=(window.SPECIES_FORM_META||{})[x.name]||(window.SPECIES_META||{})[x.id];
+      const statLabels=['HP','공격','방어','특공','특방','스핏'];
+      const stats=meta?`<div class="stats">${meta.stats.map((v,i)=>`<span>${statLabels[i]}<b>${v}</b></span>`).join('')}</div><div class="bst">종족값 총합 ${meta.total}</div>`:'<div class="bst">종족값 확인 중</div>';
+      return `<article class="poke" data-text="${esc([x.name,...x.types,x.role,x.stage,x.obtain,...x.moves.flatMap(v=>[v.name,v.type,v.source])].join(' ').toLowerCase())}">
+      <div class="poke-main"><img class="poke-img" src="${A+x.id}.png" alt="${esc(x.name)} 공식 일러스트" loading="lazy"><div class="poke-info"><h3>${esc(x.name)}</h3><div class="type-row">${x.types.map(typeBadge).join('')}</div><div class="role">${esc(x.role)}</div></div></div>
+      <div class="build"><div class="build-line"><span><b>추천 성격</b> ${esc(natureFor(x,g,meta))}</span><span><b>추천 특성</b> ${esc(abilityFor(g,meta))}</span></div>${stats}</div>
+      <div class="obtain"><span class="stage ${stageClass}">${esc(x.stage)}</span><p><b>입수:</b> ${esc(x.obtain)}</p></div>
+      <div class="move-grid">${x.moves.map(v=>`<details class="move-detail"><summary><span>${esc(v.name)}</span><small>${esc(v.type)} · ${esc(moveKind(v,g))}</small><em>${esc(learnLabel(v.source))}</em></summary><div class="move-method"><b>습득 방법</b>${esc(v.source)}<div class="purpose">${esc(v.why)}</div></div></details>`).join('')}</div></article>`}
+    const selected=Object.fromEntries(groups.map(g=>[g.id,g.ids[0]]));
+    const opened=new Set(['gen1']);
+    function fieldBox(g){
+      const field=window.FIELD_PLANS?.[g.id];if(!field)return '';
+      const assignments=field.assignments.map(x=>`<span title="${esc(x.source)}"><b>${esc(x.move)}</b> → ${esc(x.pokemon)}</span>`).join('');
+      const missing=field.missing.length?`<p class="field-missing"><b>주의:</b> 이 비전기술을 담당할 엔트리 포켓몬 없음 — ${field.missing.map(esc).join(' · ')}</p>`:'';
+      return `<aside class="field-box"><h3>비전기술 담당</h3><div class="field-list">${assignments}</div>${missing}</aside>`;
+    }
+    function section(gr){
+      const g=games.find(x=>x.id===selected[gr.id]),a=audit(g),roleOK=Object.values(a.roles).every(Boolean);
+      const fixed=g.confirmed||!g.draft;
+      const titleMedia=g.image?(g.draft?`<div class="title-cover" style="--cover:url('${g.image}')"><img src="${g.image}" alt="${esc(g.title)} 타이틀 이미지" loading="lazy"></div>`:`<img class="title-art" src="${g.image}" alt="${esc(g.title)} 타이틀 이미지" loading="lazy">`):`<div class="title-banner" role="img" aria-label="${esc(g.title)} 타이틀 배너"><span>POKÉMON ENTRY</span><strong>${esc(g.title.replace('포켓몬스터 ',''))}</strong></div>`;
+      const alternatives=g.alternatives?`<div class="alt-examples"><b>다른 추천 예시</b> ${esc(g.alternatives)}</div>`:'';
+      return `<details class="series-shell" id="${gr.id}" data-group="${gr.id}" data-cat="${g.cat}" ${opened.has(gr.id)?'open':''}><summary class="series-summary"><span>${esc(gr.label)}</span><small>${esc(g.title)}</small></summary><div class="series-body"><section class="game" data-text="${esc((gr.label+' '+g.title+' '+g.era+' '+g.note).toLowerCase())}">
+      <div class="game-head">${titleMedia}<div class="game-meta"><div class="series-label">${esc(gr.label)}</div>${gr.ids.length>1?`<div class="version-switch">${gr.ids.map(id=>{const v=games.find(x=>x.id===id);return `<button class="version-btn ${id===g.id?'active':''}" data-group="${gr.id}" data-game="${id}">${esc(v.title.replace('어나더 레드 · ',''))}</button>`}).join('')}</div>`:''}<div class="eyebrow">${esc(g.era)}</div><h2>${esc(g.title)}</h2><div class="meta-line"><span class="check ${fixed?'good':'draft'}">${fixed?'확정 엔트리':'임시 추천 · 조정 가능'}</span><span class="check ${a.repeated.length?'warn':'good'}">${a.repeated.length?'타입 중복: '+a.repeated.join('·'):'보유 타입 중복 없음'}</span><span class="check ${a.legends<=1?'good':'warn'}">전설 ${a.legends}마리</span><span class="check ${roleOK?'good':'warn'}">물리·특수·속도·탱커 ${roleOK?'확보':'재점검'}</span>${g.gen<=3?`<span class="check good">${g.gen}세대 타입별 물리·특수</span>`:''}</div><div class="tip"><b>운용 팁</b> ${esc(g.note)}</div>${alternatives}</div></div>
+      <div class="team-grid">${g.team.map(x=>card(x,g)).join('')}</div>${fieldBox(g)}<aside class="tm-box"><h3>${fixed?'이 엔트리에 쓰는 기술머신·수급처 요약':'추천 기술·수급 메모'}</h3><div class="tm-list">${g.tm.map(x=>`<span>${esc(x)}</span>`).join('')}</div></aside></section></div></details>`}
+    const gameRoot=document.querySelector('#games'),empty=document.querySelector('#empty');
+    document.querySelector('#generation-nav').innerHTML=generationSections.map(g=>`<a href="#${g.id}">${esc(g.label)}</a>`).join('');
+    let active='all';
+    function render(){
+      gameRoot.innerHTML=generationSections.map(gen=>`<section class="generation-block" id="${gen.id}"><h2 class="generation-title">${esc(gen.label)}<span class="generation-count">${gen.groups.length}개 시리즈</span></h2>${gen.groups.map(id=>section(groupById[id])).join('')}</section>`).join('');
+      document.querySelectorAll('.version-btn').forEach(b=>b.addEventListener('click',()=>{opened.add(b.dataset.group);selected[b.dataset.group]=b.dataset.game;render()}));
+      document.querySelectorAll('.series-shell').forEach(d=>d.addEventListener('toggle',()=>{d.open?opened.add(d.dataset.group):opened.delete(d.dataset.group)}));
+      filter();
+    }
+    function filter(){
+      const q=document.querySelector('#search').value.trim().toLowerCase();let count=0;
+      document.querySelectorAll('.series-shell').forEach(shell=>{
+        const g=shell.querySelector('.game'),catOK=active==='all'||shell.dataset.cat===active,gameHit=g.dataset.text.includes(q);let cardHit=false;
+        g.querySelectorAll('.poke').forEach(c=>{const hit=!q||gameHit||c.dataset.text.includes(q);c.style.display=hit?'':'none';if(hit)cardHit=true});
+        const show=catOK&&(!q||gameHit||cardHit);shell.style.display=show?'':'none';if(show){count++;if(q)shell.open=true}
+      });
+      document.querySelectorAll('.generation-block').forEach(gen=>{gen.style.display=[...gen.querySelectorAll('.series-shell')].some(x=>x.style.display!=='none')?'':'none'});
+      empty.style.display=count?'none':'block';
+    }
+    function selectSearchMatches(q){
+      if(!q)return;
+      for(const gr of groups){
+        const hit=gr.ids.map(id=>games.find(g=>g.id===id)).find(g=>[g.title,g.era,g.note,...g.team.flatMap(x=>[x.name,x.role,x.obtain,...x.types,...x.moves.flatMap(v=>[v.name,v.type,v.source])])].join(' ').toLowerCase().includes(q));
+        if(hit){selected[gr.id]=hit.id;opened.add(gr.id)}
+      }
+    }
+    document.querySelector('#search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();selectSearchMatches(q);q?render():filter()});
+    document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;filter()}));
+    render();
+  </script>
+</body>
+</html>
