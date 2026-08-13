@@ -445,14 +445,10 @@
     }
     function natureFor(x,g,meta){
       if(g.gen<=2)return '성격 없음 (당시 세대)';
-      const r=x.role,physical=r.includes('물리'),special=r.includes('특수'),fast=r.includes('고속'),tank=r.includes('탱커');
-      if(tank&&physical)return '장난꾸러기 (방어↑ 특공↓)';
-      if(tank)return '차분 (특방↑ 공격↓)';
-      if(fast&&special&&!physical)return '겁쟁이 (스피드↑ 공격↓)';
-      if(fast&&physical&&!special)return '명랑 (스피드↑ 특공↓)';
+      const r=x.role,physical=r.includes('물리'),special=r.includes('특수');
       if(special&&!physical)return '조심 (특공↑ 공격↓)';
       if(physical&&!special)return '고집 (공격↑ 특공↓)';
-      return meta?.stats?.[1]>=meta?.stats?.[3]?'성급 (스피드↑ 방어↓)':'천진난만 (스피드↑ 특방↓)';
+      return meta?.stats?.[1]>=meta?.stats?.[3]?'고집 (공격↑ 특공↓)':'조심 (특공↑ 공격↓)';
     }
     function abilityFor(g,meta){
       if(g.gen<=2)return '특성 없음 (당시 세대)';
