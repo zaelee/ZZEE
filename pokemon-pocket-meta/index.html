@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Limitless B4 Standard 기준 포켓몬 카드 게임 Pocket 타입별 추천 덱과 한영 카드·팩 우선순위 가이드">
+  <link rel="icon" href="assets/magnezone-ex.webp">
+  <title>Pokémon TCG Pocket B4 타입별 BEST 8</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f3e8;
+      --muted: #aeb8c7;
+      --line: #28354a;
+      --panel: #111a2a;
+      --panel-2: #172238;
+      --yellow: #ffd34e;
+      --blue: #53b8ff;
+      --new: #ff6b57;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 85% 0%, #243b6e 0, transparent 28rem),
+        radial-gradient(circle at 0% 24%, #173d35 0, transparent 25rem),
+        #09101d;
+      color: var(--ink);
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+    button, summary { font: inherit; }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid #ffffff12;
+      background: #09101de8;
+      backdrop-filter: blur(18px);
+    }
+    .topbar .wrap {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 900; letter-spacing: -.03em; }
+    .brand span { color: var(--yellow); }
+    .topnav { display: flex; gap: 18px; color: var(--muted); font-size: .84rem; font-weight: 800; }
+    .topnav a { text-decoration: none; }
+    .topnav a:hover { color: white; }
+
+    .hero { padding: 72px 0 38px; text-align: center; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--yellow);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 940px;
+      margin: 0 auto;
+      font-size: clamp(2.5rem, 7vw, 5.4rem);
+      line-height: .97;
+      letter-spacing: -.075em;
+    }
+    h1 em { color: var(--yellow); font-style: normal; }
+    .lede { max-width: 730px; margin: 22px auto 0; color: #c8d0dd; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .stat {
+      padding: 8px 13px;
+      border: 1px solid #ffffff1b;
+      border-radius: 999px;
+      background: #ffffff0a;
+      color: #d8dfeb;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    .stat strong { color: white; }
+
+    .method {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+      max-width: 920px;
+      margin: 30px auto 0;
+      padding: 16px 18px;
+      border: 1px solid #ffe78d30;
+      border-radius: 16px;
+      background: #ffd34e0c;
+      color: #d8deea;
+      text-align: left;
+      font-size: .9rem;
+    }
+    .method b { color: var(--yellow); }
+    .method-icon { font-size: 1.25rem; }
+
+    section { padding: 44px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.5rem); letter-spacing: -.045em; }
+    .section-head p { max-width: 560px; margin: 0; color: var(--muted); font-size: .9rem; text-align: right; }
+
+    .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .meta-card {
+      --type: #7ac97f;
+      position: relative;
+      min-height: 338px;
+      overflow: hidden;
+      padding: 18px;
+      border: 1px solid #ffffff18;
+      border-radius: 22px;
+      background: linear-gradient(155deg, color-mix(in srgb, var(--type) 15%, var(--panel)), var(--panel) 50%);
+      box-shadow: 0 18px 45px #0004;
+      isolation: isolate;
+    }
+    .meta-card::after {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      right: -64px;
+      top: -52px;
+      border-radius: 50%;
+      background: var(--type);
+      opacity: .14;
+      filter: blur(3px);
+      z-index: -1;
+    }
+    .type-line { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--type);
+      font-size: .75rem;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .type-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--type); box-shadow: 0 0 16px var(--type); }
+    .sample { color: #9ba7b9; font-size: .68rem; font-weight: 800; }
+    .card-art {
+      position: absolute;
+      width: 108px;
+      right: 2px;
+      top: 48px;
+      transform: rotate(7deg);
+      filter: drop-shadow(0 14px 16px #0008);
+    }
+    .meta-card:nth-child(even) .card-art { transform: rotate(-5deg); }
+    .winrate { margin-top: 34px; font-size: 2.25rem; font-weight: 950; letter-spacing: -.06em; }
+    .winrate small { margin-left: 3px; color: var(--type); font-size: .76rem; letter-spacing: .03em; }
+    .deck-name { max-width: 66%; margin: 8px 0 0; font-size: .98rem; font-weight: 950; line-height: 1.25; }
+    .deck-en { max-width: 66%; min-height: 32px; margin: 4px 0 0; color: #96a3b7; font-size: .71rem; line-height: 1.3; }
+    .record { position: absolute; left: 18px; bottom: 52px; color: #bdc6d4; font-size: .76rem; font-variant-numeric: tabular-nums; }
+    .record strong { color: white; }
+    .meta-card > a {
+      position: absolute;
+      left: 18px;
+      bottom: 17px;
+      color: var(--yellow);
+      font-size: .75rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .legend span { padding: 6px 10px; border-radius: 999px; background: #ffffff0a; color: #b9c3d2; font-size: .73rem; }
+    .legend .new { border: 1px solid #ff6b5745; color: #ff9a8e; }
+    .deck-list { display: grid; gap: 12px; }
+    details.deck {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #0e1726e8;
+    }
+    details.deck[open] { border-color: color-mix(in srgb, var(--type) 45%, var(--line)); }
+    details.deck > summary {
+      display: grid;
+      grid-template-columns: 48px 115px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      min-height: 82px;
+      padding: 12px 16px;
+      cursor: pointer;
+      list-style: none;
+    }
+    details.deck > summary::-webkit-details-marker { display: none; }
+    .mini-art { width: 44px; height: 61px; border-radius: 5px; object-fit: cover; box-shadow: 0 7px 12px #0007; }
+    .summary-type { color: var(--type); font-size: .78rem; font-weight: 950; }
+    .summary-rate { font-size: 1.5rem; font-weight: 950; letter-spacing: -.04em; }
+    .summary-title b { display: block; font-size: 1rem; }
+    .summary-title small { display: block; margin-top: 2px; color: var(--muted); }
+    .chevron { color: var(--type); font-size: 1.2rem; transition: transform .2s ease; }
+    details[open] .chevron { transform: rotate(45deg); }
+    .deck-body { padding: 0 16px 18px; border-top: 1px solid var(--line); }
+    .deck-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; padding: 16px 0; }
+    .deck-intro p { margin: 0; color: #c5cedb; font-size: .9rem; }
+    .source-links { display: flex; justify-content: flex-end; align-items: start; flex-wrap: wrap; gap: 8px; }
+    .source-links a { padding: 7px 10px; border: 1px solid #ffffff19; border-radius: 9px; color: #dce5f2; font-size: .72rem; font-weight: 800; text-decoration: none; }
+    .source-links a:hover { border-color: var(--blue); color: white; }
+
+    .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 9px 11px; border-bottom: 1px solid #ffffff0d; text-align: left; vertical-align: top; }
+    th { background: #172237; color: #94a2b8; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; }
+    td { font-size: .79rem; }
+    tr:last-child td { border-bottom: 0; }
+    td.qty { width: 46px; color: white; font-weight: 950; text-align: center; }
+    td.ko { color: #ffffff; font-weight: 800; }
+    td.en { color: #c6cfdd; }
+    .set-tag { display: inline-block; min-width: 42px; margin-right: 6px; padding: 2px 6px; border-radius: 6px; background: #ffffff0d; color: #c6d0df; font-size: .68rem; font-weight: 900; text-align: center; }
+    tr.is-new { background: #ff6b5707; }
+    tr.is-new .set-tag { background: #ff6b5722; color: #ff9b90; }
+    .pack { color: #aeb8c7; }
+    tr.is-new .pack { color: #ffd3cc; }
+
+    .priority-wrap { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    .priority { min-width: 860px; }
+    .priority th { padding: 13px; }
+    .priority td { padding: 14px 13px; }
+    .rank { width: 52px; color: var(--yellow); font-size: 1.15rem; font-weight: 950; text-align: center; }
+    .pack-title strong { display: block; }
+    .pack-title small { color: #99a6b8; }
+    .coverage { white-space: nowrap; color: var(--blue); font-weight: 900; }
+    .needed { color: #d3dae5; line-height: 1.65; }
+    .reason { color: #adb8c8; }
+
+    .callout {
+      margin-top: 18px;
+      padding: 18px;
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px 14px 14px 4px;
+      background: #ffd34e0b;
+      color: #cbd3df;
+      font-size: .88rem;
+    }
+    .callout strong { color: white; }
+
+    .sources { border-top: 1px solid var(--line); }
+    .source-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .source-card { padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: #101929; }
+    .source-card b { display: block; margin-bottom: 6px; }
+    .source-card p { margin: 0 0 10px; color: var(--muted); font-size: .79rem; }
+    .source-card a { color: var(--blue); font-size: .78rem; font-weight: 900; }
+    footer { padding: 24px 0 44px; color: #7f8da2; font-size: .73rem; text-align: center; }
+
+    @media (max-width: 940px) {
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+      .section-head p { text-align: left; }
+      .source-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 22px, 1180px); }
+      .topnav { display: none; }
+      .hero { padding: 44px 0 22px; }
+      section { padding: 34px 0; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .meta-card { min-height: 284px; }
+      .meta-card .card-art { width: 98px; top: 46px; }
+      details.deck > summary { grid-template-columns: 38px 68px minmax(0, 1fr) 16px; gap: 8px; padding: 10px; }
+      .mini-art { width: 38px; height: 53px; }
+      .summary-rate { font-size: 1.15rem; }
+      .summary-title b { font-size: .86rem; }
+      .summary-title small { font-size: .66rem; }
+      .deck-intro { grid-template-columns: 1fr; }
+      .source-links { justify-content: flex-start; }
+      .deck-body { padding: 0 10px 12px; }
+      .deck-body .table-scroll { overflow: visible; border: 0; }
+      .deck-body table, .deck-body tbody { display: block; }
+      .deck-body thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      .deck-body tbody { display: grid; gap: 7px; }
+      .deck-body tr { display: grid; grid-template-columns: 34px minmax(0, 1fr); padding: 8px; border: 1px solid #ffffff12; border-radius: 10px; }
+      .deck-body td { padding: 1px 4px; border: 0; font-size: .72rem; }
+      .deck-body td.qty { grid-row: 1 / span 3; width: auto; align-self: center; }
+      .deck-body td.en, .deck-body td:last-child { grid-column: 2; }
+      .deck-body td.ko { font-size: .82rem; }
+      .method { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: white; color: #111; }
+      .topbar, .source-links { display: none; }
+      .meta-card, details.deck, .priority-wrap, .source-card { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">POCKET <span>META 8</span></div>
+      <nav class="topnav" aria-label="페이지 목차">
+        <a href="#best">타입별 BEST</a>
+        <a href="#lists">20장 덱 리스트</a>
+        <a href="#packs">팩 우선순위</a>
+        <a href="#sources">출처</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">B4 STANDARD · 2026.08.15</p>
+      <h1>타입마다 하나만.<br><em>승률로 고른 BEST 8</em></h1>
+      <p class="lede">A시리즈까지만 플레이한 복귀 유저를 위한 Pokémon TCG Pocket 메타 가이드. 8개 에너지 타입의 추천 덱, 20장 한·영 카드명, B시리즈 팩 우선순위를 한 페이지에 모았습니다.</p>
+      <div class="stats" aria-label="집계 범위">
+        <span class="stat"><strong>B4</strong> 천공의 지배자</span>
+        <span class="stat"><strong>69</strong> 대회</span>
+        <span class="stat"><strong>7,400</strong> 플레이어</span>
+        <span class="stat"><strong>19,529</strong> 매치</span>
+      </div>
+      <div class="method">
+        <span class="method-icon" aria-hidden="true">◉</span>
+        <div><b>추천 기준</b> · 공개 덱 리스트의 에너지 아이콘을 확인한 뒤, Limitless B4 Standard에서 타입별 최소 300매치 이상인 덱 중 승률 1위를 골랐습니다. 강철은 300매치 표본이 없어, 확인 가능한 최고 표본 덱(119매치)을 예외로 표시했습니다. 이 기준은 3~10개 덱만 출전한 초소형 표본의 과장된 승률을 거릅니다.</div>
+      </div>
+    </section>
+
+    <section id="best" class="wrap">
+      <div class="section-head">
+        <h2>타입별 한눈 요약</h2>
+        <p>승률은 무승부를 포함한 Limitless 표기값입니다. 카드를 누르면 아래 20장 리스트로 이동합니다.</p>
+      </div>
+      <div id="summary" class="summary-grid"></div>
+    </section>
+
+    <section id="lists" class="wrap">
+      <div class="section-head">
+        <h2>필요 카드 · 한국어 + English</h2>
+        <p>대표 20장 리스트는 공개 토너먼트 덱들의 평균 채용량을 20장으로 재구성한 베이스라인입니다. B시리즈 카드는 붉게 표시했습니다.</p>
+      </div>
+      <div class="legend">
+        <span class="new">B시리즈 · 새로 획득</span>
+        <span>A시리즈 · 보유 가정</span>
+        <span>P-A · 숍/초기 지급</span>
+      </div>
+      <noscript>상세 카드표를 보려면 JavaScript를 켜 주세요.</noscript>
+      <div id="deckList" class="deck-list"></div>
+    </section>
+
+    <section id="packs" class="wrap">
+      <div class="section-head">
+        <h2>B시리즈 팩 우선순위</h2>
+        <p>추천 8덱의 핵심 파츠와 공용성을 함께 본 실전 우선순위입니다. 같은 카드는 덱을 바꿔도 재사용하므로 최대 필요 매수만 적었습니다.</p>
+      </div>
+      <div class="priority-wrap">
+        <table class="priority">
+          <thead><tr><th>순위</th><th>확장팩</th><th>커버</th><th>여기서 얻을 카드</th><th>왜 먼저?</th></tr></thead>
+          <tbody>
+            <tr><td class="rank">1</td><td class="pack-title"><strong>B3 · 파동 비트</strong><small>Pulsing Aura</small></td><td class="coverage">5 / 8덱</td><td class="needed">나무지기×2, 나무돌이×1, 메가나무킹 ex×1, 자포코일 ex×1, 메가루카리오 ex×1, 조로아×2, 조로아크 ex×2, 떨구새×1, 필드블로어×1, 행복의알×1</td><td class="reason">풀·번개·격투·악 덱의 핵심 공격수가 한 팩에 몰려 있습니다.</td></tr>
+            <tr><td class="rank">2</td><td class="pack-title"><strong>B1 · 메가라이징</strong><small>Mega Rising</small></td><td class="coverage">8 / 8덱</td><td class="needed"><b>메가갸라도스:</b> 메가앱솔 ex×1, 이브이×2, 헤비멧×2, 흉내내기 아가씨×2<br><b>메가번치코:</b> 플레임패치×2<br><b>메가파비코리:</b> 미끄메라×2, 파비코×2, 메가파비코리 ex×1, 루티아×2<br><b>아무 B1 팩:</b> 랑딸랑×1</td><td class="reason">흉내내기 아가씨가 전 덱 공용. B1에서는 메가갸라도스 팩을 먼저 여는 편이 효율적입니다.</td></tr>
+            <tr><td class="rank">3</td><td class="pack-title"><strong>B4 · 천공의 지배자</strong><small>Ruler of the Skies</small></td><td class="coverage">4 / 8덱</td><td class="needed">민진×1, 무지갯빛 동굴×1, 마자×1, 사기바늘×1</td><td class="reason">불 덱의 보조 카드와 다색 에너지용 스타디움, 최신 테크 카드를 함께 확보합니다.</td></tr>
+            <tr><td class="rank">4</td><td class="pack-title"><strong>B3a · 진격 패러독스</strong><small>Paradox Drive</small></td><td class="coverage">2 / 8덱</td><td class="needed">에브이×2, 푸름×1</td><td class="reason">초 덱의 핵심 공격수와 풀 덱의 보조 서포트를 채웁니다.</td></tr>
+            <tr><td class="rank">5</td><td class="pack-title"><strong>B1a · 홍련 블레이즈</strong><small>Crimson Blaze</small></td><td class="coverage">2 / 8덱</td><td class="needed">메가리자몽Y ex×1, 코일×2, 자포코일×1, 시트론×1</td><td class="reason">최고 승률 자포코일 엔진과 불꽃 덱의 핵심 피니셔를 한 팩에서 얻습니다.</td></tr>
+            <tr><td class="rank">6</td><td class="pack-title"><strong>B2a · 팔데아 원더</strong><small>Paldean Wonders</small></td><td class="coverage">1 / 8덱</td><td class="needed">드니차×2, 드닐레이브×2, 파오젠 ex×1</td><td class="reason">스이쿤을 이미 가진 A시리즈 유저라면 이 팩만으로 물 덱의 남은 코어를 채웁니다.</td></tr>
+            <tr><td class="rank">7</td><td class="pack-title"><strong>B3b · 미라클 데이즈</strong><small>Everyday Wonders</small></td><td class="coverage">2 / 8덱</td><td class="needed">히스이 미끄네일×1, 히스이 미끄래곤×2, 트리미앙×1</td><td class="reason">강철 덱 완성과 풀 덱의 보조 파츠를 함께 챙깁니다.</td></tr>
+            <tr><td class="rank">8</td><td class="pack-title"><strong>B2b · 샤이닝 메가</strong><small>Mega Shine</small></td><td class="coverage">3 / 8덱</td><td class="needed">파이리×2, 리자드×2, 다크라이×2, 하이킹 코스×1</td><td class="reason">불꽃 덱의 진화 라인과 초·풀 덱의 안정적인 베이스라인을 채웁니다.</td></tr>
+            <tr><td class="rank">9</td><td class="pack-title"><strong>B2 · 몽환 퍼레이드</strong><small>Fantastical Parade</small></td><td class="coverage">5 / 8덱</td><td class="needed">뽑기 아이스×2, 트레이닝 에리어×1</td><td class="reason">여러 덱에 쓰이지만 대부분 교체 가능한 유연 슬롯이라 가장 나중에 채워도 됩니다.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>가장 짧은 복귀 루트:</strong> A시리즈 카드가 충분하다면 <b>B3 파동 비트 → B1 메가라이징(메가갸라도스) → B1a 홍련 블레이즈</b> 순서로 열어 자포코일 덱부터 완성하세요. 자포코일 덱은 이번 표에서 54.98%로 가장 높고, B시리즈 핵심 필요 카드가 4장뿐입니다.</div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>데이터와 출처</h2>
+          <p>조회일 2026-08-15. 메타는 바뀔 수 있으므로 링크에서 최신 수치를 다시 확인할 수 있습니다.</p>
+        </div>
+        <div class="source-grid">
+          <article class="source-card"><b>승률·표본</b><p>Limitless Tournament Platform의 Pokémon TCG Pocket B4 Standard 집계.</p><a href="https://play.limitlesstcg.com/decks?game=POCKET" target="_blank" rel="noreferrer">Limitless 원본 보기 ↗</a></article>
+          <article class="source-card"><b>대표 20장 리스트</b><p>공개 대회 덱의 평균 채용량을 20장으로 재구성한 토너먼트 베이스라인.</p><a href="https://pokemontcgpocket.app/en/deck" target="_blank" rel="noreferrer">Tournament deck lists ↗</a></article>
+          <article class="source-card"><b>공식 한국어명·팩 수록처</b><p>포켓몬코리아 공식 확장팩 추첨 확률표의 카드 번호와 팩별 수록 정보.</p><a href="https://pokemonkorea.co.kr/pokemon_tcg_pocket_pby/docs/list.html" target="_blank" rel="noreferrer">공식 확률표 보기 ↗</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">Pokémon 및 Pokémon TCG Pocket의 카드 이미지와 명칭에 대한 권리는 The Pokémon Company, Nintendo, Creatures 및 DeNA에 있습니다. 이 페이지는 비공식 팬 가이드입니다.</footer>
+
+  <script>
+    const decks = [
+      {
+        slug: "grass", type: "풀", typeEn: "Grass", color: "#79d36f", win: "51.26", matches: "1,311", score: "672–600–39", sample: "안정 표본",
+        nameKo: "메가나무킹 ex · 개굴닌자", nameEn: "Mega Sceptile ex Greninja", image: "assets/mega-sceptile-ex.webp",
+        note: "개굴닌자의 벤치 대미지로 체력을 정리하고 메가나무킹 ex로 마무리하는 덱. 트리미앙·페로코체가 초반을 받쳐 줍니다.",
+        stats: "https://play.limitlesstcg.com/decks/mega-sceptile-ex-b3-greninja-a1?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/mega-sceptile-ex-b3-greninja-a1",
+        cards: [
+          [2,"Treecko","나무지기","B3-005","파동 비트"],[1,"Mega Sceptile ex","메가나무킹 ex","B3-008","파동 비트"],[1,"Greninja","개굴닌자","A1-089","최강의 유전자 리자몽"],[1,"Grovyle","나무돌이","B3-006","파동 비트"],[1,"Pheromosa","페로코체","A3a-007","이차원 크라이시스"],[1,"Froakie","개구마르","A1-087","최강의 유전자 리자몽"],[1,"Furfrou","트리미앙","B3b-061","미라클 데이즈"],[2,"Rare Candy","이상한사탕","A3-144","쌍천의 수호자"],[2,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"],[1,"Small Balloon","작은 풍선","B3b-064","미라클 데이즈"],[1,"Hiking Trail","하이킹 코스","B2b-069","샤이닝 메가"],[1,"Juliana","푸름","B3a-071","진격 패러독스"]
+        ]
+      },
+      {
+        slug: "fire", type: "불", typeEn: "Fire", color: "#ff765e", win: "49.23", matches: "841", score: "414–393–34", sample: "안정 표본",
+        nameKo: "메가리자몽Y ex · 앤테이 ex", nameEn: "Mega Charizard Y ex Entei ex", image: "assets/mega-charizard-y-ex.webp",
+        note: "앤테이 ex로 초반을 버티며 진화 시간을 벌고, 플레임패치로 에너지를 가속해 메가리자몽Y ex로 마무리하는 순수 불꽃 에너지 덱입니다.",
+        stats: "https://play.limitlesstcg.com/decks/mega-charizard-y-ex-b1a-entei-ex-a4a?game=POCKET&format=standard&set=B4",
+        list: "https://play.limitlesstcg.com/tournament/6a7e152fcdc0391d7fa6598b/player/7earless/decklist",
+        cards: [
+          [2,"Charmander","파이리","B2b-007","샤이닝 메가"],[2,"Charmeleon","리자드","B2b-008","샤이닝 메가"],[1,"Mega Charizard Y ex","메가리자몽Y ex","B1a-014","홍련 블레이즈"],[2,"Entei ex","앤테이 ex","A4a-010","미지의 수역"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[1,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Wally","민진","B4-153","천공의 지배자"],[1,"Pokémon Center Lady","포켓몬센터 직원","A2b-070","샤이닝 하이"],[2,"Flame Patch","플레임패치","B1-217","메가라이징 메가번치코"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[2,"Lucky Ice Pop","뽑기 아이스","B2-145","몽환 퍼레이드"],[1,"Giant Cape","커다란망토","A2-147","시공의 격투 디아루가"],[1,"Rainbow Cave","무지갯빛 동굴","B4-155","천공의 지배자"]
+        ]
+      },
+      {
+        slug: "water", type: "물", typeEn: "Water", color: "#56bfff", win: "51.03", matches: "1,117", score: "570–516–31", sample: "안정 표본",
+        nameKo: "스이쿤 ex · 드닐레이브", nameEn: "Suicune ex Baxcalibur", image: "assets/suicune-ex.webp",
+        note: "스이쿤 ex로 초반 드로우와 압박을 만들고 드닐레이브가 에너지를 가속합니다. 파오젠 ex가 벤치까지 저격합니다.",
+        stats: "https://play.limitlesstcg.com/decks/suicune-ex-a4a-baxcalibur-b2a?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/suicune-ex-a4a-baxcalibur-b2a",
+        cards: [
+          [2,"Suicune ex","스이쿤 ex","A4a-020","미지의 수역"],[2,"Baxcalibur","드닐레이브","B2a-036","팔데아 원더"],[2,"Frigibax","드니차","B2a-034","팔데아 원더"],[1,"Chien-Pao ex","파오젠 ex","B2a-037","팔데아 원더"],[2,"Rare Candy","이상한사탕","A3-144","쌍천의 수호자"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[2,"Giant Cape","커다란망토","A2-147","시공의 격투 디아루가"],[1,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Inflatable Boat","워터 보트","A4a-067","미지의 수역"],[1,"Pokémon Center Lady","포켓몬센터 직원","A2b-070","샤이닝 하이"],[1,"Field Blower","필드블로어","B3-147","파동 비트"],[1,"Mars","마스","A2-155","시공의 격투 펄기아"]
+        ]
+      },
+      {
+        slug: "lightning", type: "번개", typeEn: "Lightning", color: "#ffd84f", win: "54.98", matches: "582", score: "320–242–20", sample: "타입 최고 승률",
+        nameKo: "자포코일 ex · 자포코일", nameEn: "Magnezone ex Magnezone", image: "assets/magnezone-ex.webp",
+        note: "레어코일로 에너지를 저장한 뒤 자포코일·자포코일 ex를 이어 쓰는 운영형 덱. 춤추새가 ex 중심 덱을 견제합니다.",
+        stats: "https://play.limitlesstcg.com/decks/magnezone-ex-b3-magnezone-b1a?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/magnezone-ex-b3-magnezone-b1a",
+        cards: [
+          [2,"Magneton","레어코일","A1-098","최강의 유전자 피카츄"],[2,"Magnemite","코일","B1a-024","홍련 블레이즈"],[2,"Oricorio","춤추새","A3-066","쌍천의 수호자 솔가레오"],[1,"Magnezone","자포코일","B1a-026","홍련 블레이즈"],[1,"Magnezone ex","자포코일 ex","B3-054","파동 비트"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"],[1,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Clemont","시트론","B1a-068","홍련 블레이즈"],[1,"Lisia","루티아","B1-226","메가라이징 메가파비코리"],[1,"Giant Cape","커다란망토","A2-147","시공의 격투 디아루가"],[1,"Pokémon Center Lady","포켓몬센터 직원","A2b-070","샤이닝 하이"],[1,"Lucky Ice Pop","뽑기 아이스","B2-145","몽환 퍼레이드"],[1,"Field Blower","필드블로어","B3-147","파동 비트"]
+        ]
+      },
+      {
+        slug: "psychic", type: "초", typeEn: "Psychic", color: "#df8cff", win: "52.05", matches: "1,168", score: "608–521–39", sample: "안정 표본",
+        nameKo: "메가파비코리 ex · 에브이", nameEn: "Mega Altaria ex Espeon", image: "assets/mega-altaria-ex.webp",
+        note: "에브이와 다크라이로 상대 체력을 조절하고 메가파비코리 ex로 마무리합니다. 푸푸린이 초반 템포를 벌어 줍니다.",
+        stats: "https://play.limitlesstcg.com/decks/mega-altaria-ex-b1-espeon-b3a?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/mega-altaria-ex-b1-espeon-b3a",
+        cards: [
+          [2,"Espeon","에브이","B3a-020","진격 패러독스"],[2,"Darkrai","다크라이","B2b-040","샤이닝 메가"],[2,"Eevee","이브이","B1-184","메가라이징 메가갸라도스"],[2,"Swablu","파비코","B1-196","메가라이징 메가파비코리"],[2,"Igglybuff","푸푸린","A4a-059","미지의 수역"],[1,"Mega Altaria ex","메가파비코리 ex","B1-102","메가라이징 메가파비코리"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[1,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Training Area","트레이닝 에리어","B2-153","몽환 퍼레이드"],[1,"Sabrina","초련","A1-225","최강의 유전자 리자몽"],[1,"Lisia","루티아","B1-226","메가라이징 메가파비코리"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"]
+        ]
+      },
+      {
+        slug: "fighting", type: "격투", typeEn: "Fighting", color: "#e9a56d", win: "51.84", matches: "353", score: "183–160–10", sample: "최소 기준 통과",
+        nameKo: "메가루카리오 ex · 개굴닌자", nameEn: "Mega Lucario ex Greninja", image: "assets/mega-lucario-ex.webp",
+        note: "개굴닌자의 벤치 대미지와 메가루카리오 ex의 공격을 결합합니다. 이상한사탕으로 진화 단계를 압축하는 콤보형 덱입니다.",
+        stats: "https://play.limitlesstcg.com/decks/mega-lucario-ex-b3-greninja-a1?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/mega-lucario-ex-b3-greninja-a1",
+        cards: [
+          [2,"Froakie","개구마르","A1-087","최강의 유전자 리자몽"],[2,"Greninja","개굴닌자","A1-089","최강의 유전자 리자몽"],[2,"Riolu","리오르","A2-091","시공의 격투 디아루가"],[1,"Mega Lucario ex","메가루카리오 ex","B3-081","파동 비트"],[1,"Wynaut","마자","B4-074","천공의 지배자"],[1,"Chingling","랑딸랑","B1-109","메가라이징 3종 공통"],[2,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[2,"Rare Candy","이상한사탕","A3-144","쌍천의 수호자"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"],[1,"Lucky Egg","행복의알","B3-148","파동 비트"],[1,"Field Blower","필드블로어","B3-147","파동 비트"]
+        ]
+      },
+      {
+        slug: "darkness", type: "악", typeEn: "Darkness", color: "#9d8aff", win: "53.60", matches: "431", score: "231–185–15", sample: "높은 승률",
+        nameKo: "조로아크 ex · 메가앱솔 ex", nameEn: "Zoroark ex Mega Absol ex", image: "assets/zoroark-ex.webp",
+        note: "조로아크 ex의 화력 조건을 채우며 메가앱솔 ex와 다크라이 ex로 공격 경로를 늘린 덱. 사기바늘이 최신 테크 슬롯입니다.",
+        stats: "https://play.limitlesstcg.com/decks/zoroark-ex-b3-mega-absol-ex-b1?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/zoroark-ex-b3-mega-absol-ex-b1",
+        cards: [
+          [2,"Zorua","조로아","B3-105","파동 비트"],[2,"Zoroark ex","조로아크 ex","B3-106","파동 비트"],[1,"Bombirdier","떨구새","B3-115","파동 비트"],[1,"Mega Absol ex","메가앱솔 ex","B1-151","메가라이징 메가갸라도스"],[1,"Darkrai ex","다크라이 ex","A2-110","시공의 격투 디아루가"],[2,"Poké Ball","몬스터볼","P-A-005","숍/초기 지급"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"],[1,"Pokémon Center Lady","포켓몬센터 직원","A2b-070","샤이닝 하이"],[1,"Sabrina","초련","A1-225","최강의 유전자 리자몽"],[1,"Field Blower","필드블로어","B3-147","파동 비트"],[1,"Deceptive Needle","사기바늘","B4-148","천공의 지배자"],[1,"Lucky Ice Pop","뽑기 아이스","B2-145","몽환 퍼레이드"],[1,"Rocky Helmet","울퉁불퉁멧","A2-148","시공의 격투 펄기아"]
+        ]
+      },
+      {
+        slug: "metal", type: "강철", typeEn: "Metal", color: "#a9bec9", win: "49.58", matches: "119", score: "59–57–3", sample: "⚠ 작은 표본",
+        nameKo: "히스이 미끄래곤", nameEn: "Hisuian Goodra", image: "assets/hisuian-goodra.webp",
+        note: "헤비멧과 릴리에로 버티며 히스이 미끄래곤을 세우는 탱커 덱. 강철은 큰 표본 덱이 없어 이 수치는 참고용입니다.",
+        stats: "https://play.limitlesstcg.com/decks/hisuian-goodra-b3b?game=POCKET&format=standard&set=B4",
+        list: "https://pokemontcgpocket.app/en/deck/hisuian-goodra-b3b",
+        cards: [
+          [2,"Goomy","미끄메라","B1-177","메가라이징 메가파비코리"],[2,"Hisuian Goodra","히스이 미끄래곤","B3b-050","미라클 데이즈"],[1,"Hisuian Sliggoo","히스이 미끄네일","B3b-049","미라클 데이즈"],[1,"Mantyke","타만타","A4a-023","미지의 수역"],[2,"Rare Candy","이상한사탕","A3-144","쌍천의 수호자"],[2,"Heavy Helmet","헤비멧","B1-219","메가라이징 메가갸라도스"],[2,"Professor's Research","박사의 연구","P-A-007","숍/초기 지급"],[2,"Lillie","릴리에","A3-155","쌍천의 수호자 솔가레오"],[2,"Lisia","루티아","B1-226","메가라이징 메가파비코리"],[1,"Copycat","흉내내기 아가씨","B1-225","메가라이징 메가갸라도스"],[1,"Cyrus","태홍","A2-150","시공의 격투 펄기아"],[1,"Lucky Ice Pop","뽑기 아이스","B2-145","몽환 퍼레이드"],[1,"Rainbow Cave","무지갯빛 동굴","B4-155","천공의 지배자"]
+        ]
+      }
+    ];
+
+    const esc = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[char]);
+    const cardRows = cards => cards.map(([qty, en, ko, set, pack]) => `
+      <tr class="${set.startsWith("B") ? "is-new" : ""}">
+        <td class="qty">${qty}</td><td class="ko">${esc(ko)}</td><td class="en">${esc(en)}</td>
+        <td><span class="set-tag">${esc(set)}</span><span class="pack">${esc(pack)}</span></td>
+      </tr>`).join("");
+
+    document.getElementById("summary").innerHTML = decks.map(deck => `
+      <article class="meta-card" style="--type:${deck.color}">
+        <div class="type-line"><span class="type-badge"><i class="type-dot"></i>${deck.type} · ${deck.typeEn}</span><span class="sample">${deck.sample}</span></div>
+        <img class="card-art" src="${deck.image}" alt="${esc(deck.nameKo)} 대표 카드">
+        <div class="winrate">${deck.win}% <small>WIN</small></div>
+        <h3 class="deck-name">${esc(deck.nameKo)}</h3><p class="deck-en">${esc(deck.nameEn)}</p>
+        <div class="record"><strong>${deck.matches}매치</strong> · ${deck.score}</div><a href="#${deck.slug}">20장 리스트 ↓</a>
+      </article>`).join("");
+
+    document.getElementById("deckList").innerHTML = decks.map(deck => `
+      <details class="deck" id="${deck.slug}" style="--type:${deck.color}">
+        <summary>
+          <img class="mini-art" src="${deck.image}" alt=""><div><div class="summary-type">${deck.type} · ${deck.typeEn}</div><div class="summary-rate">${deck.win}%</div></div>
+          <div class="summary-title"><b>${esc(deck.nameKo)}</b><small>${esc(deck.nameEn)} · ${deck.matches}매치</small></div><span class="chevron" aria-hidden="true">＋</span>
+        </summary>
+        <div class="deck-body">
+          <div class="deck-intro"><p>${esc(deck.note)}</p><div class="source-links"><a href="${deck.stats}" target="_blank" rel="noreferrer">Limitless 승률 ↗</a><a href="${deck.list}" target="_blank" rel="noreferrer">대표 리스트 근거 ↗</a></div></div>
+          <div class="table-scroll"><table><thead><tr><th>매수</th><th>한국어 카드명</th><th>English card name</th><th>카드 번호 · 획득 팩</th></tr></thead><tbody>${cardRows(deck.cards)}</tbody></table></div>
+        </div>
+      </details>`).join("");
+
+    console.assert(decks.length === 8 && decks.every(deck => deck.cards.reduce((sum, card) => sum + card[0], 0) === 20), "모든 추천 덱은 8종·20장이어야 합니다.");
+  </script>
+</body>
+</html>
