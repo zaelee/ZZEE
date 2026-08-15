@@ -259,6 +259,19 @@
       .section-head { align-items: start; flex-direction: column; }
       .section-head p { text-align: left; }
       .source-grid { grid-template-columns: 1fr; }
+      .priority-wrap { overflow: visible; border: 0; background: transparent; }
+      .priority, .priority tbody { display: block; min-width: 0; }
+      .priority thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      .priority tbody { display: grid; gap: 10px; }
+      .priority tr { display: grid; grid-template-columns: 42px minmax(0, 1fr); padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+      .priority td { grid-column: 2; padding: 2px 6px; border: 0; }
+      .priority .rank { grid-column: 1; grid-row: 1 / span 4; width: auto; align-self: start; }
+      .priority .coverage { white-space: normal; }
+      .priority .needed, .priority .reason { margin-top: 7px; }
+      .priority .coverage::before { content: "커버 · "; color: var(--muted); }
+      .priority .needed::before, .priority .reason::before { display: block; margin-bottom: 2px; color: var(--muted); font-size: .66rem; font-weight: 900; letter-spacing: .06em; }
+      .priority .needed::before { content: "여기서 얻을 카드"; }
+      .priority .reason::before { content: "추천 이유"; }
     }
     @media (max-width: 650px) {
       .wrap { width: min(100% - 22px, 1180px); }
