@@ -477,6 +477,8 @@
     let rebuildTimer;
     let openAmount = 0;
     let openTarget = 0;
+    let autoOpenTime = 0;
+    let userEngaged = false;
 
     function values() {
       return {
@@ -586,6 +588,8 @@
       if (!previewMesh || reducedMotion) return;
       introTime = 0;
       introRunning = true;
+      autoOpenTime = 0;
+      userEngaged = false;
       openAmount = openTarget = 0;
       previewMesh.morphTargetInfluences[0] = 0;
       previewMesh.scale.setScalar(.001);
@@ -639,6 +643,10 @@
 
     function updateObjectHover() {
       const hovered = pointerInside && (dragging ? pressStartedOnObject : hitsObject());
+      if (hovered && !userEngaged) {
+        userEngaged = true;
+        openTarget = openAmount;
+      }
       if (hovered === objectHovered) return;
       objectHovered = hovered;
       const showCursor = hovered && pointerType === 'mouse';
@@ -654,6 +662,10 @@
     canvas.addEventListener('pointerdown', event => {
       updatePointer(event);
       pressStartedOnObject = hitsObject();
+      if (pressStartedOnObject && !userEngaged) {
+        userEngaged = true;
+        openTarget = openAmount;
+      }
       dragging = true;
       lastX = event.clientX;
       lastY = event.clientY;
@@ -708,6 +720,10 @@
 
     canvas.addEventListener('keydown', event => {
       const step = .14;
+      if (['Enter', ' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+        userEngaged = true;
+        openTarget = openAmount;
+      }
       if ((event.key === 'Enter' || event.key === ' ') && !introRunning) toggleOpen();
       else if (event.key === 'ArrowLeft') manualYaw -= step;
       else if (event.key === 'ArrowRight') manualYaw += step;
@@ -723,6 +739,10 @@
     renderer.setAnimationLoop(() => {
       const delta = Math.min(clock.getDelta(), .05);
       time += delta;
+      if (!introRunning && !userEngaged) {
+        autoOpenTime += delta;
+        openTarget = .08 + .72 * (.5 - .5 * Math.cos(autoOpenTime * 1.15));
+      }
       if (dragging && pressStartedOnObject && pressTravel < 7 && !introRunning && performance.now() - pressStartedAt >= longPressDelay) {
         longPress = true;
         openTarget = Math.min(longPressMax, Math.max(1, openTarget) + delta * .85);
