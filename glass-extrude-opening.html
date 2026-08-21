@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#020202">
-  <title>Explore New Ideas — Opening Glass Object</title>
+  <title>2026 OSSE FESTIVAL — Glass Object</title>
   <style>
     * { box-sizing: border-box; }
 
@@ -196,6 +196,9 @@
       .index { font-size: 18vw; }
       .bevel-panel { top: 60px; left: 14px; width: 230px; padding: 12px; }
     }
+
+    .ui,
+    .bevel-panel { display: none; }
   </style>
 </head>
 <body>
@@ -272,7 +275,7 @@
     fill.position.set(360, -160, 260);
     scene.add(fill);
 
-    const warm = new THREE.PointLight(0xffd8ad, 42000, 760, 2);
+    const warm = new THREE.PointLight(0xffffff, 42000, 760, 2);
     warm.position.set(-300, -260, 40);
     scene.add(warm);
 
@@ -288,7 +291,7 @@
       const ctx = backdrop.getContext('2d');
       const w = backdrop.width;
       const h = backdrop.height;
-      const size = Math.min(w * .19, h * .245);
+      const size = Math.min(w * .155, h * .245);
 
       ctx.fillStyle = '#020202';
       ctx.fillRect(0, 0, w, h);
@@ -300,23 +303,27 @@
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, w, h);
 
-      ctx.textAlign = 'center';
+      ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
       ctx.fillStyle = '#f4f4ef';
       ctx.font = `900 ${size}px Arial, sans-serif`;
-      ctx.letterSpacing = `${-size * .075}px`;
-      ctx.fillText('EXPLORE', w * .5, h * .31);
-      ctx.fillText('NEW', w * .5, h * .54);
-      ctx.fillText('IDEAS', w * .5, h * .77);
 
-      ctx.strokeStyle = 'rgba(255,255,255,.12)';
-      ctx.lineWidth = Math.max(1, scale * .6);
-      ctx.beginPath();
-      ctx.moveTo(w * .07, h * .5);
-      ctx.lineTo(w * .29, h * .5);
-      ctx.moveTo(w * .71, h * .5);
-      ctx.lineTo(w * .93, h * .5);
-      ctx.stroke();
+      const textWidth = Math.min(w * .82, h * 1.65);
+      const textLeft = (w - textWidth) / 2;
+      function fillJustified(text, y) {
+        const letters = [...text];
+        const widths = letters.map(letter => ctx.measureText(letter).width);
+        const spacing = (textWidth - widths.reduce((sum, width) => sum + width, 0)) / (letters.length - 1);
+        let x = textLeft;
+        letters.forEach((letter, index) => {
+          ctx.fillText(letter, x, y);
+          x += widths[index] + spacing;
+        });
+      }
+
+      fillJustified('2026', h * .28);
+      fillJustified('OSSE', h * .5);
+      fillJustified('FESTIVAL', h * .72);
 
       backdropTexture.needsUpdate = true;
     }
@@ -334,13 +341,29 @@
       transmission: 1,
         thickness: 185,
         ior: 1.72,
-        dispersion: 5.5,
+        dispersion: 0,
       specularIntensity: 1,
       envMapIntensity: .55,
       clearcoat: 1,
       clearcoatRoughness: 0,
       iridescence: 0
     });
+
+    function applyDuoPrism(material) {
+      material.onBeforeCompile = shader => {
+        shader.fragmentShader = shader.fragmentShader.replace('#include <opaque_fragment>', `
+          float prismEdge = pow(1.0 - abs(dot(normalize(normal), normalize(vViewPosition))), 2.2);
+          float prismBand = step(0.0, sin(vViewPosition.x * 0.035 - vViewPosition.y * 0.055));
+          vec3 prismOrange = vec3(1.0, 0.12, 0.0);
+          vec3 prismGreen = vec3(0.08, 1.0, 0.02);
+          outgoingLight += mix(prismOrange, prismGreen, prismBand) * smoothstep(0.08, 0.72, prismEdge) * 1.25;
+          #include <opaque_fragment>
+        `);
+      };
+      material.needsUpdate = true;
+    }
+
+    applyDuoPrism(glass);
 
     const dropletGeometry = new THREE.SphereGeometry(118, 72, 48);
     const dropletPosition = dropletGeometry.attributes.position;
@@ -354,6 +377,7 @@
     dropletGeometry.computeVertexNormals();
     const dropletMaterial = glass.clone();
     dropletMaterial.thickness = 120;
+    applyDuoPrism(dropletMaterial);
     const droplet = new THREE.Mesh(dropletGeometry, dropletMaterial);
     droplet.visible = !reducedMotion;
     droplet.scale.setScalar(reducedMotion ? 0 : .001);
