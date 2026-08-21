@@ -34,7 +34,43 @@
     }
 
     canvas.dragging { cursor: grabbing; }
+    canvas.object-hover { cursor: none; }
     canvas:focus-visible { outline: 1px solid rgba(255, 255, 255, .5); outline-offset: -5px; }
+
+    .glass-cursor {
+      --cursor-x: -120px;
+      --cursor-y: -120px;
+      --cursor-scale: 1;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: grid;
+      width: 96px;
+      height: 96px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .92);
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 22%, rgba(255, 255, 255, .92), rgba(255, 255, 255, .58) 42%, rgba(255, 255, 255, .28));
+      box-shadow: inset 0 0 22px rgba(255, 255, 255, .7), 0 10px 28px rgba(0, 0, 0, .18);
+      color: #111;
+      font: 700 9px/1.35 Arial, sans-serif;
+      letter-spacing: .14em;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      backdrop-filter: blur(12px) saturate(150%);
+      transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%);
+      scale: var(--cursor-scale);
+      transition: opacity .18s ease, scale .2s ease, background .2s ease;
+      will-change: transform;
+    }
+
+    .glass-cursor.active { opacity: 1; }
+    .glass-cursor.holding {
+      --cursor-scale: .86;
+      background: rgba(255, 255, 255, .82);
+    }
 
     .ui {
       position: fixed;
@@ -199,6 +235,10 @@
 
     .ui,
     .bevel-panel { display: none; }
+
+    @media (pointer: coarse) {
+      .glass-cursor { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -212,6 +252,7 @@
     <span class="index">01</span>
   </div>
   <div class="loading" id="loading" role="status">Loading glass object</div>
+  <div class="glass-cursor" id="glassCursor" aria-hidden="true"><span>PRESS<br>AND HOLD</span></div>
 
   <section class="bevel-panel" aria-labelledby="bevel-title">
     <h2 id="bevel-title">LIVE BEVEL LAB</h2>
@@ -568,9 +609,42 @@
     let pressTravel = 0;
     let pressStartedAt = 0;
     let longPress = false;
+    let pointerInside = false;
+    let pointerType = '';
+    let objectHovered = false;
+    let pressStartedOnObject = false;
     const canvas = renderer.domElement;
+    const glassCursor = document.querySelector('#glassCursor');
+    const raycaster = new THREE.Raycaster();
+    const rayPointer = new THREE.Vector2();
     const longPressDelay = 300;
     const longPressMax = 1.8;
+
+    function updatePointer(event) {
+      pointerInside = true;
+      pointerType = event.pointerType;
+      pointerX = event.clientX / innerWidth - .5;
+      pointerY = event.clientY / innerHeight - .5;
+      rayPointer.set(event.clientX / innerWidth * 2 - 1, -(event.clientY / innerHeight) * 2 + 1);
+      glassCursor.style.setProperty('--cursor-x', `${event.clientX}px`);
+      glassCursor.style.setProperty('--cursor-y', `${event.clientY}px`);
+    }
+
+    function hitsObject() {
+      if (!previewMesh || introRunning) return false;
+      scene.updateMatrixWorld(true);
+      raycaster.setFromCamera(rayPointer, camera);
+      return raycaster.intersectObject(previewMesh, false).length > 0;
+    }
+
+    function updateObjectHover() {
+      const hovered = pointerInside && (dragging ? pressStartedOnObject : hitsObject());
+      if (hovered === objectHovered) return;
+      objectHovered = hovered;
+      const showCursor = hovered && pointerType === 'mouse';
+      canvas.classList.toggle('object-hover', showCursor);
+      glassCursor.classList.toggle('active', showCursor);
+    }
 
     function toggleOpen() {
       openTarget = openTarget > .01 ? 0 : 1;
@@ -578,6 +652,8 @@
     }
 
     canvas.addEventListener('pointerdown', event => {
+      updatePointer(event);
+      pressStartedOnObject = hitsObject();
       dragging = true;
       lastX = event.clientX;
       lastY = event.clientY;
@@ -587,11 +663,11 @@
       velocityYaw = velocityPitch = 0;
       canvas.setPointerCapture(event.pointerId);
       canvas.classList.add('dragging');
+      glassCursor.classList.toggle('holding', pressStartedOnObject && pointerType === 'mouse');
     });
 
     canvas.addEventListener('pointermove', event => {
-      pointerX = event.clientX / innerWidth - .5;
-      pointerY = event.clientY / innerHeight - .5;
+      updatePointer(event);
       if (!dragging) return;
 
       const dx = event.clientX - lastX;
@@ -607,21 +683,26 @@
 
     function release(event) {
       if (!dragging) return;
-      const clicked = event.type === 'pointerup' && pressTravel < 7 && !longPress;
+      const clicked = event.type === 'pointerup' && pressTravel < 7 && !longPress && pressStartedOnObject;
       dragging = false;
       if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
       canvas.classList.remove('dragging');
+      glassCursor.classList.remove('holding');
       if (clicked && !introRunning) toggleOpen();
+      pressStartedOnObject = false;
     }
 
     canvas.addEventListener('pointerup', release);
     canvas.addEventListener('pointercancel', release);
     canvas.addEventListener('lostpointercapture', () => {
       dragging = false;
+      pressStartedOnObject = false;
       canvas.classList.remove('dragging');
+      glassCursor.classList.remove('holding');
     });
 
     canvas.addEventListener('pointerleave', () => {
+      pointerInside = false;
       if (!dragging) pointerX = pointerY = 0;
     });
 
@@ -642,7 +723,7 @@
     renderer.setAnimationLoop(() => {
       const delta = Math.min(clock.getDelta(), .05);
       time += delta;
-      if (dragging && pressTravel < 7 && !introRunning && performance.now() - pressStartedAt >= longPressDelay) {
+      if (dragging && pressStartedOnObject && pressTravel < 7 && !introRunning && performance.now() - pressStartedAt >= longPressDelay) {
         longPress = true;
         openTarget = Math.min(longPressMax, Math.max(1, openTarget) + delta * .85);
         canvas.setAttribute('aria-pressed', 'true');
@@ -698,6 +779,7 @@
       camera.position.y = -smoothY * 18;
       camera.lookAt(0, 0, 0);
       renderer.render(scene, camera);
+      updateObjectHover();
     });
 
     addEventListener('resize', () => {
