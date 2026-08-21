@@ -322,6 +322,7 @@
 
     const backdrop = document.createElement('canvas');
     const backdropTexture = new THREE.CanvasTexture(backdrop);
+    const prismTexel = new THREE.Vector2();
     backdropTexture.colorSpace = THREE.SRGBColorSpace;
     scene.background = backdropTexture;
 
@@ -366,6 +367,7 @@
       fillJustified('OSSE', h * .5);
       fillJustified('FESTIVAL', h * .72);
 
+      prismTexel.set(1 / w, 1 / h);
       backdropTexture.needsUpdate = true;
     }
 
@@ -392,13 +394,28 @@
 
     function applyDuoPrism(material) {
       material.onBeforeCompile = shader => {
+        shader.uniforms.uBackdrop = { value: backdropTexture };
+        shader.uniforms.uPrismTexel = { value: prismTexel };
+        shader.fragmentShader = shader.fragmentShader.replace('#include <common>', `
+          #include <common>
+          uniform sampler2D uBackdrop;
+          uniform vec2 uPrismTexel;
+        `);
         shader.fragmentShader = shader.fragmentShader.replace('#include <opaque_fragment>', `
-          float prismEdge = 1.0 - abs(dot(normalize(normal), normalize(vViewPosition)));
-          float prismStrength = smoothstep(0.72, 0.94, prismEdge);
-          float prismSplit = step(0.0, vViewPosition.x);
+          vec2 prismUv = gl_FragCoord.xy * uPrismTexel;
+          prismUv.y = 1.0 - prismUv.y;
+          vec2 refractedUv = prismUv + normal.xy * uPrismTexel * 18.0;
+          vec2 splitDirection = normalize(normal.xy + vec2(0.0001)) * uPrismTexel * 7.0;
+          vec3 backdropCenter = texture2D(uBackdrop, refractedUv).rgb;
+          vec3 backdropMinus = texture2D(uBackdrop, refractedUv - splitDirection).rgb;
+          vec3 backdropPlus = texture2D(uBackdrop, refractedUv + splitDirection).rgb;
+          float centerLuma = dot(backdropCenter, vec3(0.299, 0.587, 0.114));
+          float orangeEdge = smoothstep(0.055, 0.36, abs(dot(backdropMinus, vec3(0.299, 0.587, 0.114)) - centerLuma));
+          float greenEdge = smoothstep(0.055, 0.36, abs(dot(backdropPlus, vec3(0.299, 0.587, 0.114)) - centerLuma));
           vec3 prismOrange = vec3(1.0, 0.055, 0.0);
           vec3 prismGreen = vec3(0.02, 1.0, 0.0);
-          outgoingLight += mix(prismOrange, prismGreen, prismSplit) * prismStrength * 1.9;
+          outgoingLight += prismOrange * orangeEdge * 1.55;
+          outgoingLight += prismGreen * greenEdge * 1.55;
           #include <opaque_fragment>
         `);
       };
