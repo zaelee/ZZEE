@@ -393,14 +393,13 @@
     function applyDuoPrism(material) {
       material.onBeforeCompile = shader => {
         shader.fragmentShader = shader.fragmentShader.replace('#include <opaque_fragment>', `
-          float prismEdge = pow(1.0 - abs(dot(normalize(normal), normalize(vViewPosition))), 2.2);
-          float prismBand = step(0.0, sin(vViewPosition.x * 0.035 - vViewPosition.y * 0.055));
+          float prismEdge = 1.0 - abs(dot(normalize(normal), normalize(vViewPosition)));
+          float orangeEdge = smoothstep(0.78, 0.94, prismEdge) * (1.0 - smoothstep(0.95, 0.995, prismEdge));
+          float greenEdge = smoothstep(0.91, 0.995, prismEdge);
           vec3 prismOrange = vec3(1.0, 0.055, 0.0);
           vec3 prismGreen = vec3(0.02, 1.0, 0.0);
-          vec3 prismColor = mix(prismOrange, prismGreen, prismBand);
-          float prismStrength = smoothstep(0.1, 0.72, prismEdge);
-          outgoingLight = mix(outgoingLight, prismColor * 1.15, prismStrength * 0.82);
-          outgoingLight += prismColor * prismStrength * 0.22;
+          outgoingLight += prismOrange * orangeEdge * 1.45;
+          outgoingLight += prismGreen * greenEdge * 1.25;
           #include <opaque_fragment>
         `);
       };
