@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="4월 22일부터 25일까지 삿포로·비에이·후라노·오타루를 여행하는 3박 4일 일정. 항공, JR, 음식점 후보와 이동 동선을 한눈에 정리했다.">
+  <title>삿포로 · 비에이 · 오타루 3박 4일</title>
+  <style>
+    :root {
+      --night:#081a32;
+      --navy:#102b4e;
+      --blue:#2878a8;
+      --ice:#e9f4f7;
+      --lavender:#8b7bb8;
+      --coral:#ec7966;
+      --gold:#e6b657;
+      --paper:#fffdf9;
+      --ink:#182331;
+      --muted:#647180;
+      --line:#dce4e8;
+      --shadow:0 18px 45px rgba(8,26,50,.11);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f4f7f8;color:var(--ink);font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.65}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .hero{min-height:650px;position:relative;display:flex;align-items:flex-end;overflow:hidden;color:white;background:var(--night)}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,18,37,.94) 8%,rgba(5,18,37,.6) 55%,rgba(5,18,37,.2)),url("./images/sapporo-night.jpg") center/cover}
+    .hero::after{content:"";position:absolute;inset:auto 0 -1px;height:78px;background:linear-gradient(176deg,transparent 49%,#f4f7f8 50%)}
+    .hero-inner{position:relative;z-index:1;max-width:850px;padding:90px 0 125px}
+    .eyebrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .pill{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);backdrop-filter:blur(8px);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:850}
+    h1{margin:0 0 24px;font-size:clamp(43px,7.6vw,88px);line-height:.98;letter-spacing:-.065em}
+    .hero p{max-width:720px;margin:0;color:#edf5f8;font-size:clamp(18px,2.4vw,25px)}
+    .credit{position:absolute;right:20px;bottom:62px;z-index:2;color:rgba(255,255,255,.78);font-size:11px}
+    .credit a{text-underline-offset:3px}
+    .jump{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(255,253,249,.93);backdrop-filter:blur(12px)}
+    .jump .wrap{display:flex;gap:7px;overflow:auto;padding:10px 0;scrollbar-width:none}
+    .jump a{flex:none;padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:850}
+    .jump a:hover{background:var(--ice)}
+    main{padding:18px 0 72px}
+    section{margin:68px 0;scroll-margin-top:72px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}
+    .kicker{margin-bottom:5px;color:var(--blue);font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}
+    h2{margin:0;color:var(--navy);font-size:clamp(30px,4.5vw,50px);line-height:1.08;letter-spacing:-.045em}
+    h3{margin:0 0 8px;color:var(--navy);font-size:21px;line-height:1.28;letter-spacing:-.02em}
+    .section-note{max-width:430px;color:var(--muted);font-size:14px;text-align:right}
+    .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .quick article{padding:21px;border:1px solid var(--line);border-radius:21px;background:var(--paper);box-shadow:0 8px 24px rgba(8,26,50,.05)}
+    .quick span{display:block;color:var(--muted);font-size:12px;font-weight:800}
+    .quick strong{display:block;margin:3px 0;color:var(--navy);font-size:21px;line-height:1.25}
+    .alert{display:grid;grid-template-columns:auto 1fr;gap:17px;align-items:start;margin-top:15px;padding:23px 25px;border-radius:22px;background:var(--night);color:white;box-shadow:var(--shadow)}
+    .alert-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--coral);font-size:22px;font-weight:950}
+    .alert strong{display:block;margin-bottom:4px;font-size:18px}
+    .alert p{margin:0;color:#d9e8ef;font-size:14px}
+    .day{overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow)}
+    .day-head{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;padding:26px 29px;background:linear-gradient(135deg,var(--navy),#235b83);color:white}
+    .day-no{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .day-date{font-size:35px;font-weight:950;letter-spacing:-.04em;line-height:1.1}
+    .day-head h3{margin:0 0 3px;color:white;font-size:27px}
+    .day-head p{margin:0;color:#dcebf2}
+    .day-body{padding:24px 28px 28px}
+    .timeline{display:grid;gap:12px}
+    .row{display:grid;grid-template-columns:120px 1fr auto;gap:18px;align-items:start;padding:17px 18px;border:1px solid var(--line);border-radius:18px;background:white}
+    .time{color:var(--blue);font-size:17px;font-weight:950;font-variant-numeric:tabular-nums}
+    .row strong{display:block;color:var(--navy);font-size:17px}
+    .row p{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .tag{white-space:nowrap;padding:5px 9px;border-radius:999px;background:var(--ice);color:var(--blue);font-size:11px;font-weight:950}
+    .tag.food{background:#fff0e7;color:#a55128}.tag.move{background:#edf0ff;color:#5c55a1}.tag.must{background:#ffebe6;color:#aa4331}
+    .route{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border:1px solid var(--navy);border-radius:12px;background:var(--navy);color:white;text-decoration:none;font-size:13px;font-weight:900}
+    .btn.alt{border-color:#bdcbd2;background:white;color:var(--navy)}
+    .photo-block{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:20px}
+    .photo{overflow:hidden;border-radius:22px;background:#cadde5;min-height:300px}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    .photo-copy{display:flex;flex-direction:column;justify-content:center;padding:24px;border-radius:22px;background:var(--ice)}
+    .photo-copy p{margin:0;color:var(--muted);font-size:14px}
+    .photo-copy .mini{margin-top:12px;color:#51626f;font-size:12px}
+    .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .choice{padding:21px;border:1px solid var(--line);border-radius:20px;background:white}
+    .choice.primary{border-color:#b9d6e2;background:#f1f8fa}
+    .choice p{margin:0 0 13px;color:var(--muted);font-size:13px}
+    .choice ul{margin:0;padding-left:18px;color:#43515d;font-size:13px}
+    .critical{margin-top:18px;padding:18px 20px;border-left:5px solid var(--coral);border-radius:0 16px 16px 0;background:#fff0eb;color:#673429}
+    .critical strong{color:#9e3e2d}
+    .critical p{margin:3px 0 0;font-size:14px}
+    .otaru-route{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:20px 0}
+    .stop{position:relative;padding:16px 13px;border-radius:16px;background:#f0f4f6;color:var(--navy);font-size:13px;font-weight:850;text-align:center}
+    .stop:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:50%;z-index:1;transform:translateY(-50%);color:var(--coral);font-size:18px}
+    .check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .check{padding:19px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+    .check strong{display:block;margin-bottom:5px;color:var(--navy)}
+    .check p{margin:0;color:var(--muted);font-size:13px}
+    .sources{padding:27px;border-radius:24px;background:#e7edef}
+    .sources ol{columns:2;column-gap:38px;margin:14px 0 0;padding-left:20px}
+    .sources li{break-inside:avoid;margin:0 0 9px;color:#52606b;font-size:12px}
+    .sources a{text-underline-offset:3px}
+    .image-credit{margin-top:22px;padding-top:18px;border-top:1px solid #c9d3d7}
+    footer{padding:34px 0;background:var(--night);color:#d8e5eb;font-size:13px}
+    footer a{text-underline-offset:3px}
+    @media(max-width:850px){.quick{grid-template-columns:repeat(2,1fr)}.photo-block{grid-template-columns:1fr}.otaru-route{grid-template-columns:1fr}.stop:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-16px;transform:translateX(-50%)}.check-grid{grid-template-columns:1fr}.hero{min-height:590px}.credit{display:none}}
+    @media(max-width:620px){.wrap{width:min(100% - 22px,1120px)}.hero-inner{padding:70px 0 110px}.quick,.choice-grid{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:9px;text-align:left}.day-head{grid-template-columns:1fr;gap:8px}.day-body{padding:18px}.row{grid-template-columns:86px 1fr}.row .tag{grid-column:2}.alert{grid-template-columns:1fr}.sources ol{columns:1}.photo{min-height:230px}}
+    @media print{.jump,.btn{display:none!important}.hero{min-height:370px}.hero-inner{padding:60px 0 80px}.hero::after{display:none}section{margin:36px 0}.day,.row,.choice,.check{break-inside:avoid}.wrap{width:94%}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">
+        <span class="pill">4.22 — 4.25 · 3박 4일</span>
+        <span class="pill">삿포로 2일 · 비에이 1일 · 오타루 1일</span>
+        <span class="pill">청주 IN · 인천 OUT</span>
+        <span class="pill">JR + 비에이 투어 차량</span>
+      </div>
+      <h1>삿포로,<br>하루는 더 멀리.</h1>
+      <p>카이센동과 징기스칸으로 시작해 비에이의 푸른 풍경을 지나고, 오타루 골목과 운하를 천천히 걷는 4월의 홋카이도.</p>
+    </div>
+    <div class="credit">사진 · <a href="https://commons.wikimedia.org/wiki/File:City_nightscape_of_Sapporo_from_Mt._Moiwa_20260703b.jpg" target="_blank" rel="noopener">掬茶 / Wikimedia Commons · CC BY-SA 4.0</a></div>
+  </header>
+
+  <nav class="jump" aria-label="페이지 바로가기">
+    <div class="wrap">
+      <a href="#summary">여행 요약</a>
+      <a href="#day1">4.22 삿포로</a>
+      <a href="#day2">4.23 비에이</a>
+      <a href="#day3">4.24 오타루</a>
+      <a href="#day4">4.25 귀국</a>
+      <a href="#check">출발 전 확인</a>
+      <a href="#sources">출처</a>
+      <a href="../../index.html">ZZEE 홈 ↗</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="summary">
+      <div class="section-head">
+        <div><div class="kicker">At a glance</div><h2>이 일정의 핵심</h2></div>
+        <div class="section-note">연도는 원본 표에 없어 4월 22–25일로만 표기했습니다. 항공권·투어 바우처의 연도와 요일을 최종 확인하세요.</div>
+      </div>
+      <div class="quick">
+        <article><span>항공</span><strong>청주 출발<br>인천 도착</strong><span>출발·도착 공항이 다름</span></article>
+        <article><span>숙소</span><strong>karaksa hotel<br>Sapporo</strong><span>다누키코지·스스키노 도보권</span></article>
+        <article><span>원거리 일정</span><strong>비에이·후라노<br>하루 투어</strong><span>07:30 오도리역 미팅</span></article>
+        <article><span>도시 이동</span><strong>JR Airport</strong><span>삿포로↔공항·오타루</span></article>
+      </div>
+      <div class="alert">
+        <div class="alert-icon">!</div>
+        <div><strong>4월의 비에이는 겨울과 봄 사이입니다.</strong><p>청의 연못은 결빙·잔설이나 흐린 물빛일 수 있고, 팜 토미타는 라벤더 시즌 전입니다. 사진과 같은 여름 풍경을 전제로 잡지 말고 방수 신발·바람막이·얇은 장갑을 준비하세요. 투어 차량의 도로 상황에 따라 정차 순서가 바뀔 수 있습니다.</p></div>
+      </div>
+    </section>
+
+    <section id="day1">
+      <div class="section-head"><div><div class="kicker">Day 1 · Sapporo</div><h2>도착, 카이센동, 징기스칸</h2></div><div class="section-note">입국·수하물이 늦어지면 나카지마공원부터 생략하고 저녁 예약을 지킵니다.</div></div>
+      <article class="day">
+        <header class="day-head"><div><div class="day-no">Day 1</div><div class="day-date">04.22</div></div><div><h3>청주 → 신치토세 → 삿포로</h3><p>첫날은 스스키노 남쪽을 중심으로 가볍게 걷는 날.</p></div></header>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="row"><div class="time">08:25–10:55</div><div><strong>청주공항 → 신치토세공항</strong><p>출국 공항은 청주, 귀국 도착지는 인천입니다.</p></div><span class="tag move">항공</span></div>
+            <div class="row"><div class="time">12:00</div><div><strong>JR Airport 열차로 삿포로 이동</strong><p>수하물 수령 후 JR역으로. 공식 안내상 삿포로까지 가장 빠른 열차는 33분입니다.</p></div><span class="tag move">JR</span></div>
+            <div class="row"><div class="time">13:00</div><div><strong>점심 · 카이센동</strong><p>1안 우니 무라카미 삿포로점 / 2안 사카나야노다이도코로. 입국 지연 시 대기 짧은 곳으로 결정.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">15:00</div><div><strong>karaksa hotel Sapporo 체크인</strong><p>짐을 풀고 30분 휴식. 다누키코지와 저녁 동선의 기준점.</p></div><span class="tag">숙소</span></div>
+            <div class="row"><div class="time">15:30</div><div><strong>나카지마공원 산책</strong><p>호숫가를 짧게 걷고 스스키노 방향으로 복귀. 비·피로 시 호텔 휴식으로 교체.</p></div><span class="tag">산책</span></div>
+            <div class="row"><div class="time">18:00–20:00</div><div><strong>저녁 · 징기스칸 다루마 본점</strong><p>웨이팅을 고려해 17:30부터 움직입니다. 본점이 붐비면 같은 계열 지점 확인.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">20:00–</div><div><strong>다누키코지 상점가</strong><p>편의점·드러그스토어·야식 쇼핑 후 호텔 복귀.</p></div><span class="tag">자유</span></div>
+          </div>
+          <div class="photo-block">
+            <figure class="photo"><img src="./images/nakajima-park.jpg" alt="연못과 나무가 어우러진 삿포로 나카지마공원 풍경" loading="lazy"></figure>
+            <div class="photo-copy"><h3>첫날은 욕심내지 않기</h3><p>예정대로 13시 점심을 시작하려면 비행기 도착 뒤 약 2시간 안에 입국·수하물·JR 이동을 마쳐야 합니다. 조금만 밀려도 공원 산책을 줄이고 체크인과 저녁에 집중하는 편이 안정적입니다.</p><div class="route"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=karaksa+hotel+Sapporo" target="_blank" rel="noopener">호텔 지도</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Nakajima+Park+Sapporo" target="_blank" rel="noopener">공원 지도</a></div><div class="mini">사진 · 663highland / Wikimedia Commons · CC BY 2.5</div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="day2">
+      <div class="section-head"><div><div class="kicker">Day 2 · Biei & Furano</div><h2>패치워크 로드에서 청의 연못까지</h2></div><div class="section-note">원본의 18:30 ‘귀환’과 ‘저녁’이 겹쳐 저녁을 19:00 이후로 조정했습니다.</div></div>
+      <article class="day">
+        <header class="day-head"><div><div class="day-no">Day 2</div><div class="day-date">04.23</div></div><div><h3>비에이·후라노 하루 투어</h3><p>정차 시간이 짧으므로 사진보다 집합 시간을 먼저 지킵니다.</p></div></header>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="row"><div class="time">07:30</div><div><strong>오도리역 미팅</strong><p>바우처의 정확한 출구·버스 번호를 전날 저장하고 15분 먼저 도착.</p></div><span class="tag must">필수</span></div>
+            <div class="row"><div class="time">10:40</div><div><strong>패치워크 로드</strong><p>구릉과 나무가 이어지는 비에이 북서쪽 드라이브 구간.</p></div><span class="tag">풍경</span></div>
+            <div class="row"><div class="time">11:30</div><div><strong>비에이역 · 점심 준페이</strong><p>에비동 후보. 투어 자유시간이 짧거나 대기가 길면 역 주변 대안으로 즉시 전환.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">12:50</div><div><strong>크리스마스 트리</strong><p>주변은 사유 농지입니다. 밭·설원에 들어가지 말고 지정 관람 위치와 투어 안내를 따릅니다.</p></div><span class="tag must">출입 주의</span></div>
+            <div class="row"><div class="time">13:10</div><div><strong>탁신관</strong><p>마에다 신조 사진 갤러리와 자작나무 숲 산책.</p></div><span class="tag">사진</span></div>
+            <div class="row"><div class="time">14:00</div><div><strong>시로가네 청의 연못</strong><p>4월에는 잔설·결빙·날씨에 따라 물빛이 다를 수 있습니다.</p></div><span class="tag">풍경</span></div>
+            <div class="row"><div class="time">14:40</div><div><strong>흰수염폭포</strong><p>블루리버 브리지에서 관람. 청의 연못에서 차량으로 이어지는 구간.</p></div><span class="tag">풍경</span></div>
+            <div class="row"><div class="time">16:00</div><div><strong>팜 토미타</strong><p>4월은 라벤더 시즌 전. 갤러리·숍 위주로 보고 폐장 시간을 우선 확인.</p></div><span class="tag must">시간 주의</span></div>
+            <div class="row"><div class="time">18:30</div><div><strong>삿포로 귀환</strong><p>호텔에 짐을 두고 19시 이후 저녁으로 이동.</p></div><span class="tag move">차량</span></div>
+            <div class="row"><div class="time">19:00–</div><div><strong>저녁 · 미소라멘 또는 새우라멘</strong><p>라멘 신겐 / 에비소바 이치겐 중 대기 짧은 곳. 투어 지연 시 20시 이후 입장 가능 여부 확인.</p></div><span class="tag food">식사</span></div>
+          </div>
+          <div class="critical"><strong>팜 토미타 16:00 도착 주의</strong><p>공식 안내상 4월 중순–하순 일부 시설은 16:30 종료입니다. 30분 관람으로 확정하거나, 투어 조정이 가능하면 15:40 이전 도착을 요청하세요. 라벤더 절정 사진은 7월 풍경입니다.</p></div>
+          <div class="photo-block">
+            <figure class="photo"><img src="./images/blue-pond.jpg" alt="푸른 물과 마른 나무가 반사되는 비에이 시로가네 청의 연못" loading="lazy"></figure>
+            <div class="photo-copy"><h3>사진과 실제 4월은 다를 수 있음</h3><p>청의 연못의 색은 날씨와 수면 상태에 따라 달라집니다. 사진 한 장을 목표로 무리하기보다 연못 산책로와 흰수염폭포까지 묶어 보는 일정으로 생각하면 좋습니다.</p><div class="route"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Shirogane+Blue+Pond+Biei" target="_blank" rel="noopener">청의 연못 지도</a><a class="btn alt" href="https://www.biei-hokkaido.jp/en/tourist-spot" target="_blank" rel="noopener">비에이 공식 명소</a></div><div class="mini">사진 · AndyLeungHK / Wikimedia Commons · CC0</div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="day3">
+      <div class="section-head"><div><div class="kicker">Day 3 · Otaru</div><h2>미나미오타루에서 운하까지</h2></div><div class="section-note">같은 길을 되돌아가지 않도록 미나미오타루역에서 시작해 오타루역에서 끝냅니다.</div></div>
+      <article class="day">
+        <header class="day-head"><div><div class="day-no">Day 3</div><div class="day-date">04.24</div></div><div><h3>오타루 일직선 산책</h3><p>오르골당 → 르타오 → 사카이마치 → 카마에이 → 운하.</p></div></header>
+        <div class="day-body">
+          <div class="otaru-route" aria-label="오타루 도보 동선"><div class="stop">미나미오타루역</div><div class="stop">오르골당·르타오</div><div class="stop">사카이마치</div><div class="stop">카마에이·운하</div><div class="stop">오타루역</div></div>
+          <div class="timeline">
+            <div class="row"><div class="time">11:00</div><div><strong>삿포로 → 미나미오타루</strong><p>JR 시간표에서 미나미오타루 정차 여부를 확인합니다.</p></div><span class="tag move">JR</span></div>
+            <div class="row"><div class="time">12:30</div><div><strong>점심 · 스시</strong><p>하타스시 / 마사즈시 중 예약·대기 가능한 곳으로 결정.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">14:00</div><div><strong>오타루 오르골당</strong><p>사카이마치 남쪽 시작점. 기념품은 이때 비교만 하고 마지막에 구매해도 좋습니다.</p></div><span class="tag">관람</span></div>
+            <div class="row"><div class="time">14:30</div><div><strong>르타오 · 디저트</strong><p>본점 또는 대기 짧은 인근 매장. 디저트 30분 기준.</p></div><span class="tag food">카페</span></div>
+            <div class="row"><div class="time">15:00</div><div><strong>사카이마치 거리 산책</strong><p>유리 공예·기념품점 사이를 북쪽으로 이동.</p></div><span class="tag">산책</span></div>
+            <div class="row"><div class="time">16:00</div><div><strong>카마에이 · 어묵</strong><p>간식 또는 포장. 이후 운하까지 걸어 사진을 남깁니다.</p></div><span class="tag food">간식</span></div>
+            <div class="row"><div class="time">16:20</div><div><strong>오타루 운하</strong><p>원본 일정에 없던 자연스러운 연결 구간. 시간이 부족하면 사진만 찍고 역으로 이동.</p></div><span class="tag">선택</span></div>
+            <div class="row"><div class="time">17:00</div><div><strong>오타루역 → 삿포로</strong><p>미나미오타루로 되돌아가지 않고 오타루역에서 출발하도록 수정.</p></div><span class="tag move">JR</span></div>
+            <div class="row"><div class="time">18:00</div><div><strong>저녁 · 스프카레 킹</strong><p>브레이크타임·마감 주문을 당일 확인. 오타루에서 늦어지면 시내 대안으로 전환.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">20:00</div><div><strong>오도리공원·삿포로 시계탑</strong><p>야경 산책 후 다누키코지 또는 호텔 복귀.</p></div><span class="tag">야경</span></div>
+          </div>
+          <div class="photo-block">
+            <figure class="photo"><img src="./images/otaru-canal.jpg" alt="석조 창고와 산책로가 이어지는 오타루 운하" loading="lazy"></figure>
+            <div class="photo-copy"><h3>오타루는 남쪽에서 북쪽으로</h3><p>공식 오타루 지도도 미나미오타루–사카이마치–운하–오타루역 축을 한 번에 보여줍니다. 이 순서면 쇼핑백을 들고 같은 길을 되돌아갈 필요가 없습니다.</p><div class="route"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Minami-Otaru+Station&amp;destination=Otaru+Station&amp;waypoints=Otaru+Music+Box+Museum%7CLeTAO+Main+Store%7COtaru+Canal&amp;travelmode=walking" target="_blank" rel="noopener">도보 동선</a><a class="btn alt" href="https://otaru.gr.jp/wp-content/uploads/2026/04/EN_26_OtaruMapBook.pdf" target="_blank" rel="noopener">공식 지도 PDF</a></div><div class="mini">사진 · 爵士迷 / Wikimedia Commons · Public domain</div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="day4">
+      <div class="section-head"><div><div class="kicker">Day 4 · Departure</div><h2>우동 한 그릇, 공항으로</h2></div><div class="section-note">16:00 국제선 출발 기준, 삿포로역 13:00 출발은 2시간 이상 공항 버퍼를 남깁니다.</div></div>
+      <article class="day">
+        <header class="day-head"><div><div class="day-no">Day 4</div><div class="day-date">04.25</div></div><div><h3>삿포로 → 신치토세 → 인천</h3><p>체크아웃 뒤 짐을 들고 움직이는 짧은 마지막 날.</p></div></header>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="row"><div class="time">12:00</div><div><strong>점심 · 우동</strong><p>우동노소우마야(うどんのそうまや) / 원본 표의 ‘토라’ 후보. 두 번째 상호는 저장한 지도명과 대조해 확정하세요.</p></div><span class="tag food">식사</span></div>
+            <div class="row"><div class="time">13:00</div><div><strong>삿포로역 → 신치토세공항</strong><p>JR Airport 열차. 지연·운휴 시 공항버스로 전환하되 70–90분 정도를 봅니다.</p></div><span class="tag move">JR</span></div>
+            <div class="row"><div class="time">16:00–19:10</div><div><strong>신치토세공항 → 인천공항</strong><p>면세·수하물 위탁 시간을 위해 공항 도착 목표는 14:00 이전.</p></div><span class="tag move">항공</span></div>
+          </div>
+          <div class="photo-block">
+            <figure class="photo"><img src="./images/clock-tower.jpg" alt="삿포로 시계탑의 흰색 목조 외관과 입구" loading="lazy"></figure>
+            <div class="photo-copy"><h3>마지막 확인</h3><p>첫날은 청주공항, 마지막 날 도착은 인천공항입니다. 청주공항에 차량을 두고 가는 일정이라면 귀국 후 차량 회수 방법을 별도로 잡아야 합니다.</p><div class="route"><a class="btn" href="https://www.jrhokkaido.co.jp/global/english/travel/airport.html" target="_blank" rel="noopener">JR 공항 열차</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=うどんのそうまや+札幌" target="_blank" rel="noopener">우동노소우마야</a></div><div class="mini">사진 · Ninosan / Wikimedia Commons · CC0</div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="check">
+      <div class="section-head"><div><div class="kicker">Before departure</div><h2>예약·확인 체크</h2></div><div class="section-note">영업시간과 열차 시간은 변동될 수 있으므로 여행 전날 다시 확인합니다.</div></div>
+      <div class="check-grid">
+        <article class="check"><strong>항공·공항</strong><p>청주 출발 / 인천 도착, 수하물 규정, 신치토세 터미널을 한 화면에 저장.</p></article>
+        <article class="check"><strong>비에이 투어</strong><p>오도리역 출구, 07:30 집합, 팜 토미타 16:30 종료 반영 여부 확인.</p></article>
+        <article class="check"><strong>식당</strong><p>다루마·준페이·스시·스프카레의 휴무와 예약 가능 여부 확인.</p></article>
+        <article class="check"><strong>JR</strong><p>Airport 열차와 미나미오타루 정차편을 공식 시간표에서 조회.</p></article>
+        <article class="check"><strong>복장</strong><p>방수 운동화, 바람막이, 얇은 장갑, 접이식 우산. 비에이는 삿포로보다 춥게 준비.</p></article>
+        <article class="check"><strong>현금·통신</strong><p>교통 IC카드, 소액 엔화, eSIM/로밍, 보조배터리 준비.</p></article>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <h2>확인 출처</h2>
+      <ol>
+        <li><a href="https://www.jrhokkaido.co.jp/global/english/travel/airport.html" target="_blank" rel="noopener">JR Hokkaido · 신치토세–삿포로–오타루 Airport Train</a></li>
+        <li><a href="https://www.biei-hokkaido.jp/en/facility/christmas-tree" target="_blank" rel="noopener">비에이 관광협회 · 크리스마스 트리 관람·사유지 주의</a></li>
+        <li><a href="https://www.biei-hokkaido.jp/en/shirogane-blue-pond" target="_blank" rel="noopener">비에이 관광협회 · 시로가네 청의 연못</a></li>
+        <li><a href="https://www.biei-hokkaido.jp/en/facility/shirahige-waterfalls" target="_blank" rel="noopener">비에이 관광협회 · 흰수염폭포</a></li>
+        <li><a href="https://www.farm-tomita.co.jp/en/farm/facility_guide.asp?id=3" target="_blank" rel="noopener">팜 토미타 공식 · 4월 시설 운영시간</a></li>
+        <li><a href="https://otaru.gr.jp/wp-content/uploads/2026/04/EN_26_OtaruMapBook.pdf" target="_blank" rel="noopener">오타루 관광협회 · 2026 공식 지도</a></li>
+        <li><a href="https://visit.sapporo.travel/discover/art-culture/sapporo-clock-tower/" target="_blank" rel="noopener">Visit Sapporo · 삿포로 시계탑</a></li>
+        <li><a href="https://map.yahoo.co.jp/v3/place/b6bJt_gUc12" target="_blank" rel="noopener">Yahoo! Map · 우동노소우마야 위치</a></li>
+      </ol>
+      <div class="image-credit"><strong>이미지 라이선스</strong><ol><li><a href="https://commons.wikimedia.org/wiki/File:City_nightscape_of_Sapporo_from_Mt._Moiwa_20260703b.jpg" target="_blank" rel="noopener">Sapporo nightscape · 掬茶 · CC BY-SA 4.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Nakajima_Park_Sapporo03bs5s4272.jpg" target="_blank" rel="noopener">Nakajima Park · 663highland · CC BY 2.5</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Shirogane_Blue_Pond,_Biei,_Hokkaido_Japan.jpg" target="_blank" rel="noopener">Blue Pond · AndyLeungHK · CC0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Hokkaido_Otaru-unga.jpg" target="_blank" rel="noopener">Otaru Canal · 爵士迷 · Public domain</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Sapporo_Clock_Tower_130.JPG" target="_blank" rel="noopener">Sapporo Clock Tower · Ninosan · CC0</a></li></ol></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><b>ZZEE Travel</b> · 원본 일정표를 기준으로 이동 충돌과 4월 운영 조건을 정리했습니다. <a href="../../index.html">프로젝트 허브로 돌아가기</a></div></footer>
+</body>
+</html>
