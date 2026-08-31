@@ -4,25 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <title>ZZEE 영양제 루틴 · 2개월 섭취 / 1개월 휴식</title>
+    <title>ZZEE 영양제 루틴 표 · 복용 및 구매 체크</title>
     <meta
       name="description"
-      content="아침부터 운동 전까지의 영양제 복용 순서와 1월 휴식, 2·3월 섭취를 기준으로 만든 연간 2개월 섭취·1개월 휴식 루틴."
+      content="영양제 복용 시간·용량·휴식 여부와 제품 구매 기준을 표로 정리한 개인 체크 가이드."
     />
     <style>
       :root {
-        --bg: #f3f5ef;
+        --bg: #f4f6f1;
         --paper: #fffef9;
         --ink: #182019;
-        --muted: #667068;
-        --line: #d9dfd7;
-        --green: #16834a;
-        --green-soft: #e6f5eb;
-        --pink: #d82763;
-        --pink-soft: #fde8ef;
-        --amber: #a96008;
-        --amber-soft: #fff0d8;
-        --shadow: 0 22px 55px rgba(30, 53, 35, 0.1);
+        --muted: #647069;
+        --line: #d8ded7;
+        --green: #0f8748;
+        --green-soft: #e5f6eb;
+        --pink: #d92260;
+        --pink-soft: #fde9f0;
+        --amber: #9a5a08;
+        --amber-soft: #fff1d9;
+        --blue: #276989;
+        --blue-soft: #e7f4fa;
+        --shadow: 0 18px 48px rgba(28, 51, 33, 0.09);
         font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--ink);
         background: var(--bg);
@@ -40,8 +42,8 @@
         min-height: 100vh;
         margin: 0;
         background:
-          radial-gradient(circle at 10% 0%, rgba(22, 131, 74, 0.12), transparent 28rem),
-          linear-gradient(180deg, #f8faf5 0%, var(--bg) 100%);
+          radial-gradient(circle at 0 0, rgba(15, 135, 72, 0.12), transparent 28rem),
+          var(--bg);
       }
 
       a {
@@ -53,14 +55,13 @@
       }
 
       .shell {
-        width: min(1120px, calc(100% - 40px));
+        width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 24px 0 80px;
+        padding: 24px 0 72px;
       }
 
       .topbar {
         display: flex;
-        flex-wrap: wrap;
         gap: 12px;
         align-items: center;
         justify-content: space-between;
@@ -76,7 +77,7 @@
         padding: 0 14px;
         border: 1px solid var(--line);
         border-radius: 999px;
-        background: rgba(255, 254, 249, 0.82);
+        background: rgba(255, 254, 249, 0.9);
         color: var(--ink);
         font-weight: 850;
         text-decoration: none;
@@ -88,36 +89,23 @@
       .print:hover,
       .print:focus-visible {
         border-color: var(--green);
-        outline: 3px solid rgba(22, 131, 74, 0.14);
+        outline: 3px solid rgba(15, 135, 72, 0.14);
         outline-offset: 2px;
       }
 
-      .hero {
-        position: relative;
-        overflow: hidden;
-        padding: clamp(30px, 6vw, 64px);
-        border: 1px solid rgba(22, 131, 74, 0.28);
-        border-radius: 28px;
+      header {
+        padding: clamp(28px, 5vw, 52px);
+        border: 1px solid rgba(15, 135, 72, 0.25);
+        border-radius: 26px;
         background: var(--paper);
         box-shadow: var(--shadow);
       }
 
-      .hero::after {
-        position: absolute;
-        right: -80px;
-        bottom: -125px;
-        width: 330px;
-        height: 330px;
-        border: 56px solid var(--green-soft);
-        border-radius: 50%;
-        content: "";
-      }
-
       .eyebrow {
-        display: inline-flex;
-        align-items: center;
+        display: flex;
         gap: 8px;
-        margin: 0 0 18px;
+        align-items: center;
+        margin: 0 0 14px;
         color: var(--green);
         font-size: 13px;
         font-weight: 950;
@@ -129,73 +117,47 @@
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background: #1ed879;
-        box-shadow: 0 0 0 5px rgba(30, 216, 121, 0.12);
+        background: #1dd878;
         content: "";
       }
 
       h1 {
-        position: relative;
-        z-index: 1;
-        max-width: 820px;
         margin: 0;
-        font-size: clamp(40px, 8vw, 82px);
-        line-height: 0.98;
+        font-size: clamp(38px, 7vw, 72px);
+        line-height: 1;
         letter-spacing: -0.055em;
       }
 
-      .hero-copy {
-        position: relative;
-        z-index: 1;
-        max-width: 720px;
-        margin: 24px 0 0;
+      .lead {
+        max-width: 760px;
+        margin: 20px 0 0;
         color: var(--muted);
-        font-size: clamp(16px, 2.3vw, 20px);
-        line-height: 1.75;
+        font-size: clamp(16px, 2vw, 19px);
+        line-height: 1.7;
       }
 
-      .hero-pills {
-        position: relative;
-        z-index: 1;
+      .chips {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 28px;
+        margin-top: 22px;
       }
 
-      .pill {
+      .chip {
         display: inline-flex;
-        min-height: 34px;
+        min-height: 32px;
         align-items: center;
-        padding: 0 12px;
+        padding: 0 11px;
         border-radius: 999px;
         background: var(--green-soft);
-        color: #0d6738;
-        font-size: 13px;
+        color: var(--green);
+        font-size: 12px;
         font-weight: 900;
       }
 
-      .pill.cycle {
+      .chip.pause {
         background: var(--pink-soft);
-        color: #ae1b4e;
-      }
-
-      .quick-note {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 14px;
-        align-items: start;
-        margin: 22px 0 0;
-        padding: 20px;
-        border: 1px solid #f2c276;
-        border-radius: 18px;
-        background: var(--amber-soft);
-        color: #684008;
-        line-height: 1.65;
-      }
-
-      .quick-note strong {
-        font-size: 20px;
+        color: var(--pink);
       }
 
       nav {
@@ -203,15 +165,15 @@
         z-index: 10;
         top: 10px;
         display: flex;
-        gap: 8px;
+        gap: 6px;
         overflow-x: auto;
-        margin: 20px 0 0;
+        margin-top: 18px;
         padding: 8px;
-        border: 1px solid rgba(217, 223, 215, 0.9);
-        border-radius: 18px;
-        background: rgba(255, 254, 249, 0.9);
-        box-shadow: 0 12px 30px rgba(30, 53, 35, 0.08);
-        backdrop-filter: blur(12px);
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        background: rgba(255, 254, 249, 0.92);
+        box-shadow: 0 10px 26px rgba(28, 51, 33, 0.07);
+        backdrop-filter: blur(10px);
         scrollbar-width: none;
       }
 
@@ -222,7 +184,7 @@
       nav a {
         flex: 0 0 auto;
         padding: 9px 12px;
-        border-radius: 12px;
+        border-radius: 10px;
         font-size: 13px;
         font-weight: 900;
         text-decoration: none;
@@ -236,32 +198,15 @@
       }
 
       section {
-        scroll-margin-top: 92px;
-        margin-top: 58px;
+        scroll-margin-top: 88px;
+        margin-top: 48px;
       }
 
       .section-head {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 20px;
-        align-items: end;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
 
-      .section-head h2 {
-        margin: 0;
-        font-size: clamp(29px, 5vw, 48px);
-        letter-spacing: -0.04em;
-      }
-
-      .section-head p {
-        max-width: 470px;
-        margin: 8px 0 0;
-        color: var(--muted);
-        line-height: 1.65;
-      }
-
-      .kicker {
+      .section-head span {
         color: var(--green);
         font-size: 12px;
         font-weight: 950;
@@ -269,86 +214,102 @@
         text-transform: uppercase;
       }
 
-      .routine {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
+      h2 {
+        margin: 6px 0 0;
+        font-size: clamp(28px, 4vw, 44px);
+        letter-spacing: -0.04em;
       }
 
-      .time-card {
-        display: grid;
-        min-height: 100%;
-        padding: 22px;
+      .section-head p {
+        max-width: 800px;
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
         border: 1px solid var(--line);
-        border-radius: 22px;
+        border-radius: 20px;
         background: var(--paper);
-        box-shadow: 0 10px 28px rgba(30, 53, 35, 0.05);
+        box-shadow: 0 12px 32px rgba(28, 51, 33, 0.06);
       }
 
-      .time-card.accent {
-        border-color: rgba(22, 131, 74, 0.35);
-        background: linear-gradient(145deg, #fffef9, #eff9f2);
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .routine-table {
+        min-width: 900px;
+      }
+
+      .buy-table {
+        min-width: 940px;
+      }
+
+      th,
+      td {
+        padding: 18px 16px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #eef2ed;
+        color: #465149;
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      tbody tr:hover {
+        background: #fbfcf8;
       }
 
       .time {
-        color: var(--green);
-        font-size: 13px;
-        font-weight: 950;
-      }
-
-      .time-card h3 {
-        margin: 8px 0 16px;
-        font-size: 25px;
-      }
-
-      .items {
-        display: grid;
-        gap: 12px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .items li {
-        padding-top: 12px;
-        border-top: 1px solid var(--line);
-      }
-
-      .item-title {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 900;
-      }
-
-      .dose {
         color: var(--muted);
         font-size: 13px;
         font-weight: 850;
+        line-height: 1.5;
+        white-space: nowrap;
       }
 
-      .item-note {
-        margin: 5px 0 0;
+      .name {
+        font-size: 16px;
+        font-weight: 950;
+        white-space: nowrap;
+      }
+
+      .dose {
+        font-weight: 850;
+        white-space: nowrap;
+      }
+
+      .note {
         color: var(--muted);
-        font-size: 13px;
-        line-height: 1.55;
+        font-size: 14px;
+        line-height: 1.6;
       }
 
       .status {
         display: inline-flex;
-        width: max-content;
-        min-height: 25px;
+        min-height: 27px;
         align-items: center;
         gap: 6px;
-        margin-top: 10px;
-        padding: 0 8px;
+        padding: 0 9px;
         border-radius: 999px;
         background: var(--green-soft);
         color: var(--green);
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 950;
+        white-space: nowrap;
       }
 
       .status.pause {
@@ -356,259 +317,169 @@
         color: var(--pink);
       }
 
-      .year-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .month {
-        min-height: 150px;
-        padding: 18px;
-        border: 1px solid rgba(22, 131, 74, 0.28);
-        border-radius: 20px;
-        background: var(--paper);
-      }
-
-      .month.rest {
-        border-color: rgba(216, 39, 99, 0.34);
-        background: linear-gradient(145deg, #fffef9, #fff1f5);
-      }
-
-      .month-num {
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 950;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .month strong {
-        display: block;
-        margin: 8px 0 12px;
-        color: var(--green);
-        font-size: 25px;
-      }
-
-      .month.rest strong {
-        color: var(--pink);
-      }
-
-      .month p {
-        margin: 0;
+      .footnote {
+        margin: 12px 3px 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.55;
-      }
-
-      .legend {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 16px;
-        margin-top: 16px;
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 800;
-      }
-
-      .legend span {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--green);
-      }
-
-      .dot.rest {
-        background: var(--pink);
-      }
-
-      .split {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .group {
-        padding: 24px;
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        background: var(--paper);
-      }
-
-      .group h3 {
-        margin: 0 0 6px;
-        font-size: 24px;
-      }
-
-      .group > p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-
-      .group ul {
-        display: grid;
-        gap: 10px;
-        margin: 20px 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .group li {
-        display: flex;
-        gap: 10px;
-        align-items: start;
-        padding-top: 10px;
-        border-top: 1px solid var(--line);
-        line-height: 1.5;
-      }
-
-      .group li::before {
-        flex: 0 0 auto;
-        width: 22px;
-        height: 22px;
-        border-radius: 7px;
-        background: var(--green-soft);
-        color: var(--green);
-        content: "✓";
-        font-size: 13px;
-        font-weight: 950;
-        line-height: 22px;
-        text-align: center;
-      }
-
-      .group.cycle li::before {
-        background: var(--pink-soft);
-        color: var(--pink);
-        content: "○";
-      }
-
-      .safety-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .safety {
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        background: var(--paper);
-      }
-
-      .safety strong {
-        display: block;
-        margin-bottom: 7px;
-        font-size: 17px;
-      }
-
-      .safety p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 14px;
         line-height: 1.65;
       }
 
-      .source-list {
+      .checklist {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 12px;
         margin: 0;
         padding: 0;
         list-style: none;
       }
 
-      .source-list a {
-        display: block;
+      .checklist li {
+        position: relative;
         min-height: 100%;
-        padding: 15px 16px;
+        padding: 18px 18px 18px 52px;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 17px;
         background: var(--paper);
-        font-weight: 850;
-        line-height: 1.5;
-        text-decoration: none;
+        color: var(--muted);
+        line-height: 1.65;
       }
 
-      .source-list a:hover,
-      .source-list a:focus-visible {
-        border-color: var(--green);
+      .checklist li::before {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+        background: var(--green-soft);
         color: var(--green);
-        outline: none;
+        content: "✓";
+        font-size: 14px;
+        font-weight: 950;
+        line-height: 24px;
+        text-align: center;
       }
 
-      .disclaimer {
-        margin-top: 26px;
-        padding: 18px 20px;
-        border-left: 4px solid var(--amber);
+      .checklist strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--ink);
+      }
+
+      .alert {
+        margin-top: 14px;
+        padding: 17px 18px;
+        border: 1px solid #efbf75;
+        border-radius: 16px;
         background: var(--amber-soft);
         color: #684008;
         font-size: 14px;
         line-height: 1.7;
       }
 
+      .priority {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        padding: 0 8px;
+        border-radius: 999px;
+        background: var(--green-soft);
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 950;
+        white-space: nowrap;
+      }
+
+      .priority.conditional {
+        background: var(--blue-soft);
+        color: var(--blue);
+      }
+
+      .priority.low {
+        background: var(--pink-soft);
+        color: var(--pink);
+      }
+
+      .buy-this {
+        font-weight: 850;
+        line-height: 1.6;
+      }
+
+      .avoid {
+        color: #875069;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .quality-box {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .quality-box div {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: var(--paper);
+      }
+
+      .quality-box strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .quality-box p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .sources {
+        margin-top: 42px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .sources a {
+        color: var(--green);
+        font-weight: 800;
+      }
+
       footer {
-        margin-top: 48px;
+        margin-top: 30px;
         color: var(--muted);
         font-size: 13px;
         text-align: center;
       }
 
-      @media (max-width: 860px) {
-        .routine,
-        .year-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .routine .time-card:last-child {
-          grid-column: 1 / -1;
-        }
-      }
-
-      @media (max-width: 620px) {
+      @media (max-width: 720px) {
         .shell {
-          width: min(100% - 24px, 1120px);
+          width: min(100% - 24px, 1180px);
           padding-top: 12px;
         }
 
-        .hero {
+        header {
           padding: 28px 22px;
-          border-radius: 22px;
+          border-radius: 21px;
         }
 
-        .hero::after {
-          opacity: 0.55;
-        }
-
-        .section-head,
-        .routine,
-        .year-grid,
-        .split,
-        .safety-grid,
-        .source-list {
+        .checklist,
+        .quality-box {
           grid-template-columns: 1fr;
         }
 
-        .routine .time-card:last-child {
-          grid-column: auto;
-        }
-
-        .month {
-          min-height: auto;
+        .table-wrap {
+          border-radius: 16px;
         }
       }
 
       @media print {
-        :root {
-          --bg: #fff;
-        }
-
         body {
           background: #fff;
         }
@@ -619,22 +490,35 @@
         }
 
         .topbar,
-        nav,
-        .source-list {
+        nav {
           display: none;
         }
 
-        .hero,
-        .time-card,
-        .month,
-        .group,
-        .safety {
-          break-inside: avoid;
+        header,
+        .table-wrap,
+        .checklist li,
+        .quality-box div {
           box-shadow: none;
         }
 
+        .table-wrap {
+          overflow: visible;
+        }
+
+        .routine-table,
+        .buy-table {
+          min-width: 0;
+          font-size: 10px;
+        }
+
+        th,
+        td {
+          padding: 8px;
+        }
+
         section {
-          margin-top: 34px;
+          break-inside: avoid;
+          margin-top: 28px;
         }
       }
     </style>
@@ -646,271 +530,214 @@
         <button class="print" type="button" onclick="window.print()">인쇄 / PDF</button>
       </div>
 
-      <header class="hero">
-        <p class="eyebrow">Personal wellness routine</p>
-        <h1>2개월 섭취,<br />1개월 가볍게.</h1>
-        <p class="hero-copy">
-          아침 공복부터 운동 전까지의 영양제 루틴을 한눈에 보고, 1월을 휴식월로 시작해
-          12월까지 같은 리듬으로 반복하는 개인 체크 가이드.
-        </p>
-        <div class="hero-pills" aria-label="루틴 요약">
-          <span class="pill">유지군 · 연중 계속</span>
-          <span class="pill cycle">주기군 · 2개월 섭취 / 1개월 휴식</span>
-        </div>
-        <div class="quick-note">
-          <strong aria-hidden="true">!</strong>
-          <div>
-            이 주기는 복용을 잊지 않기 위한 <strong>개인 관리 규칙</strong>이다. 모든 영양제에 휴식월이
-            의학적으로 필요한 것은 아니며, 제품 라벨과 의사·약사의 안내가 이 페이지보다 우선한다.
-          </div>
+      <header>
+        <p class="eyebrow">Supplement routine</p>
+        <h1>영양제 루틴 표</h1>
+        <p class="lead">복용 시간과 용량은 원본 표대로 모으고, 실제 제품을 살 때 확인할 성분 형태와 함량 기준만 덧붙였다.</p>
+        <div class="chips" aria-label="표시 기준">
+          <span class="chip">✓ 계속: 휴식기에도 유지</span>
+          <span class="chip pause">○ 쉬어도 됨: 필요에 따라 중단</span>
         </div>
       </header>
 
       <nav aria-label="페이지 바로가기">
-        <a href="#daily">하루 루틴</a>
-        <a href="#calendar">연간 달력</a>
-        <a href="#groups">유지군 / 주기군</a>
-        <a href="#safety">복용 전 체크</a>
-        <a href="#sources">근거 자료</a>
+        <a href="#routine">루틴 표</a>
+        <a href="#before">복용 전 체크</a>
+        <a href="#buy">구매 시 체크</a>
+        <a href="#choice">종류별 구매 기준</a>
       </nav>
 
-      <section id="daily" aria-labelledby="daily-title">
+      <section id="routine" aria-labelledby="routine-title">
         <div class="section-head">
-          <div>
-            <span class="kicker">Daily flow</span>
-            <h2 id="daily-title">하루 섭취 순서</h2>
-            <p>원본 메모의 시간대를 유지하되, 위장 불편과 제품별 차이를 고려해 라벨 우선 원칙을 표시했다.</p>
-          </div>
+          <span>Daily table</span>
+          <h2 id="routine-title">복용 루틴</h2>
         </div>
 
-        <div class="routine">
-          <article class="time-card">
-            <span class="time">01 · 아침 공복</span>
-            <h3>장을 먼저 깨우기</h3>
-            <ul class="items">
-              <li>
-                <div class="item-title"><span>유산균</span><span class="dose">10억–100억 CFU</span></div>
-                <p class="item-note">1회. 균주·유통기한·냉장 여부와 복용 시간은 제품 라벨을 우선한다.</p>
-                <span class="status">✓ 휴식월에도 계속</span>
-              </li>
-            </ul>
-          </article>
-
-          <article class="time-card">
-            <span class="time">02 · 아침 식후</span>
-            <h3>기본 영양 채우기</h3>
-            <ul class="items">
-              <li>
-                <div class="item-title"><span>종합비타민</span><span class="dose">1정</span></div>
-                <p class="item-note">식사 직후. 별도 아연·마그네슘과 성분이 겹치는지 라벨에서 확인한다.</p>
-                <span class="status">✓ 휴식월에도 계속</span>
-              </li>
-              <li>
-                <div class="item-title"><span>오메가3</span><span class="dose">EPA+DHA 합 1 g 이상</span></div>
-                <p class="item-note">식사와 함께. 항응고제를 복용 중이면 의료진과 먼저 상의한다.</p>
-                <span class="status">✓ 휴식월에도 계속</span>
-              </li>
-            </ul>
-          </article>
-
-          <article class="time-card accent">
-            <span class="time">03 · 저녁 식후 / 운동 1–2시간 전</span>
-            <h3>운동·회복 루틴</h3>
-            <ul class="items">
-              <li>
-                <div class="item-title"><span>실리마린</span><span class="dose">200–400 mg</span></div>
-                <p class="item-note">저녁 식후. 간 질환 치료 대체가 아니며 근거는 제한적이다.</p>
-                <span class="status pause">○ 휴식월에는 쉬기</span>
-              </li>
-              <li>
-                <div class="item-title"><span>아연</span><span class="dose">15 mg</span></div>
-                <p class="item-note">속이 불편하면 식사와 함께. 종합비타민 속 아연까지 총량을 합산한다.</p>
-                <span class="status pause">○ 휴식월에는 쉬기</span>
-              </li>
-              <li>
-                <div class="item-title"><span>아르기닌 파우더</span><span class="dose">3 g</span></div>
-                <p class="item-note">운동 1–2시간 전 선택 섭취. 운동 효과 근거는 제한적이며 혈압을 낮출 수 있다.</p>
-                <span class="status pause">○ 휴식월에는 쉬기</span>
-              </li>
-              <li>
-                <div class="item-title"><span>크레아틴 파우더</span><span class="dose">3 g</span></div>
-                <p class="item-note">매일 일정하게. 복용 시간보다 꾸준함이 중요하고, 운동하지 않는 날도 유지한다.</p>
-                <span class="status">✓ 휴식월에도 계속</span>
-              </li>
-              <li>
-                <div class="item-title"><span>마그네슘</span><span class="dose">300–400 mg</span></div>
-                <p class="item-note">라벨의 ‘원소 마그네슘’ 양을 확인한다. 400 mg이면 전문가 확인을 권장한다.</p>
-                <span class="status pause">○ 휴식월에는 쉬기</span>
-              </li>
-            </ul>
-          </article>
+        <div class="table-wrap" role="region" aria-label="영양제 복용 루틴 표" tabindex="0">
+          <table class="routine-table">
+            <thead>
+              <tr>
+                <th scope="col">시간</th>
+                <th scope="col">영양제</th>
+                <th scope="col">용량 / 1회 기준</th>
+                <th scope="col">쉬는 달 여부</th>
+                <th scope="col">비고 / 팁</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="time">아침 공복</span></td>
+                <td><span class="name">유산균</span></td>
+                <td><span class="dose">10억–100억 CFU</span></td>
+                <td><span class="status">✓ 계속</span></td>
+                <td class="note">균주명·유통기한까지 보장되는 CFU·보관법을 확인하고 제품 라벨의 복용법을 우선한다.</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><span class="time">아침 식후</span></td>
+                <td><span class="name">종합비타민</span></td>
+                <td><span class="dose">1정</span></td>
+                <td><span class="status">✓ 계속</span></td>
+                <td class="note">기본 영양 보충용. 별도 아연·마그네슘과 성분이 겹치는지 확인한다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">오메가3</span></td>
+                <td><span class="dose">1정<br />EPA+DHA 합 1 g 이상</span></td>
+                <td><span class="status">✓ 계속</span></td>
+                <td class="note">‘어유 1,000 mg’이 아니라 실제 EPA와 DHA의 합계를 본다. 식사와 함께 복용한다.</td>
+              </tr>
+              <tr>
+                <td rowspan="5"><span class="time">저녁 식후<br />운동 1–2시간 전</span></td>
+                <td><span class="name">실리마린</span></td>
+                <td><span class="dose">200–400 mg</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">간 질환 치료 대체가 아니며 효과 근거가 제한적이다. 복용 약이 있으면 먼저 확인한다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">아연</span></td>
+                <td><span class="dose">15 mg</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">종합비타민 속 아연까지 합산한다. 속이 불편하면 식사와 함께 먹는다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">아르기닌 파우더</span></td>
+                <td><span class="dose">3 g</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">운동 전 선택 섭취. 운동 성능 개선 근거는 제한적이고 혈압을 조금 낮출 수 있다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">크레아틴 파우더</span></td>
+                <td><span class="dose">3 g</span></td>
+                <td><span class="status">✓ 계속</span></td>
+                <td class="note">운동하지 않는 날도 매일 유지. 복용 시간보다 꾸준히 먹는 것이 중요하다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">마그네슘</span></td>
+                <td><span class="dose">300–400 mg*</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">라벨의 ‘원소 마그네슘’ 양을 확인한다. 보충제로 350 mg을 넘기면 전문가와 상의한다.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <p class="footnote">* 원본 표의 300–400 mg을 유지했다. 성인의 보충제·의약품 마그네슘 상한은 하루 350 mg이므로, 400 mg이 원소량이라면 그대로 구매·복용하지 말고 확인한다.</p>
       </section>
 
-      <section id="calendar" aria-labelledby="calendar-title">
+      <section id="before" aria-labelledby="before-title">
         <div class="section-head">
-          <div>
-            <span class="kicker">January → December</span>
-            <h2 id="calendar-title">12개월 섭취 달력</h2>
-            <p>1월 휴식 → 2·3월 섭취를 시작점으로, 같은 3개월 주기를 네 번 반복한다.</p>
-          </div>
+          <span>Before taking</span>
+          <h2 id="before-title">복용 전 체크</h2>
         </div>
-
-        <div class="year-grid">
-          <article class="month rest">
-            <span class="month-num">January · 01</span>
-            <strong>주기군 휴식</strong>
-            <p>유지군 4종은 계속.<br />실리마린·아연·아르기닌·마그네슘은 쉰다.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">February · 02</span>
-            <strong>섭취 1개월차</strong>
-            <p>유지군 + 주기군.<br />제품 라벨과 몸 상태를 함께 확인한다.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">March · 03</span>
-            <strong>섭취 2개월차</strong>
-            <p>유지군 + 주기군.<br />다음 달 휴식을 앞두고 남은 양을 확인한다.</p>
-          </article>
-          <article class="month rest">
-            <span class="month-num">April · 04</span>
-            <strong>주기군 휴식</strong>
-            <p>유지군 4종은 계속.<br />실리마린·아연·아르기닌·마그네슘은 쉰다.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">May · 05</span>
-            <strong>섭취 1개월차</strong>
-            <p>유지군 + 주기군.<br />새 주기의 첫 달.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">June · 06</span>
-            <strong>섭취 2개월차</strong>
-            <p>유지군 + 주기군.<br />총 섭취량과 중복 성분을 다시 확인한다.</p>
-          </article>
-          <article class="month rest">
-            <span class="month-num">July · 07</span>
-            <strong>주기군 휴식</strong>
-            <p>유지군 4종은 계속.<br />실리마린·아연·아르기닌·마그네슘은 쉰다.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">August · 08</span>
-            <strong>섭취 1개월차</strong>
-            <p>유지군 + 주기군.<br />새 주기의 첫 달.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">September · 09</span>
-            <strong>섭취 2개월차</strong>
-            <p>유지군 + 주기군.<br />다음 달 휴식을 앞두고 남은 양을 확인한다.</p>
-          </article>
-          <article class="month rest">
-            <span class="month-num">October · 10</span>
-            <strong>주기군 휴식</strong>
-            <p>유지군 4종은 계속.<br />실리마린·아연·아르기닌·마그네슘은 쉰다.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">November · 11</span>
-            <strong>섭취 1개월차</strong>
-            <p>유지군 + 주기군.<br />올해 마지막 주기의 시작.</p>
-          </article>
-          <article class="month">
-            <span class="month-num">December · 12</span>
-            <strong>섭취 2개월차</strong>
-            <p>유지군 + 주기군.<br />다음 1월은 다시 주기군 휴식.</p>
-          </article>
-        </div>
-        <div class="legend" aria-label="달력 범례">
-          <span><i class="dot" aria-hidden="true"></i>섭취월: 2·3·5·6·8·9·11·12월</span>
-          <span><i class="dot rest" aria-hidden="true"></i>휴식월: 1·4·7·10월</span>
-        </div>
-      </section>
-
-      <section id="groups" aria-labelledby="groups-title">
-        <div class="section-head">
-          <div>
-            <span class="kicker">Two groups</span>
-            <h2 id="groups-title">휴식월의 기준</h2>
-            <p>‘휴식’은 전부 중단한다는 뜻이 아니다. 원본 표의 표시대로 두 그룹을 분리한다.</p>
-          </div>
-        </div>
-
-        <div class="split">
-          <article class="group">
-            <h3>유지군 · 연중 계속</h3>
-            <p>1·4·7·10월에도 동일하게 유지한다.</p>
-            <ul>
-              <li><span><strong>유산균</strong> · 제품 라벨 기준 1회</span></li>
-              <li><span><strong>종합비타민</strong> · 아침 식후 1정</span></li>
-              <li><span><strong>오메가3</strong> · 아침 식후 EPA+DHA 합 1 g 이상</span></li>
-              <li><span><strong>크레아틴</strong> · 매일 3 g</span></li>
-            </ul>
-          </article>
-
-          <article class="group cycle">
-            <h3>주기군 · 2개월 / 1개월</h3>
-            <p>섭취월에만 먹고, 휴식월에는 쉰다.</p>
-            <ul>
-              <li><span><strong>실리마린</strong> · 200–400 mg</span></li>
-              <li><span><strong>아연</strong> · 15 mg</span></li>
-              <li><span><strong>아르기닌</strong> · 운동 전 3 g</span></li>
-              <li><span><strong>마그네슘</strong> · 300–400 mg</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="safety" aria-labelledby="safety-title">
-        <div class="section-head">
-          <div>
-            <span class="kicker">Check before taking</span>
-            <h2 id="safety-title">복용 전 네 가지 체크</h2>
-            <p>용량표는 출발점일 뿐이다. 실제 제품의 성분표와 현재 복용 중인 약을 함께 봐야 한다.</p>
-          </div>
-        </div>
-
-        <div class="safety-grid">
-          <article class="safety">
-            <strong>1. 아연은 합산</strong>
-            <p>성인 상한은 음식·보충제·약을 모두 합해 하루 40 mg이다. 장기 과량 섭취는 구리 부족과 위장 증상을 일으킬 수 있으므로 종합비타민 속 아연까지 더한다.</p>
-          </article>
-          <article class="safety">
-            <strong>2. 마그네슘은 ‘원소량’ 확인</strong>
-            <p>성인의 보충제·의약품 마그네슘 상한은 하루 350 mg이다. 표의 300–400 mg이 원소 마그네슘이라면 400 mg 복용 전 전문가에게 확인한다.</p>
-          </article>
-          <article class="safety">
-            <strong>3. 운동 보조제는 기대치 조정</strong>
-            <p>크레아틴은 3–5 g/day 유지 연구가 많지만, 아르기닌은 근력·운동 성능 개선 근거가 제한적이다. 어지럼이나 저혈압 증상이 있으면 중단하고 확인한다.</p>
-          </article>
-          <article class="safety">
-            <strong>4. 약과 질환이 있으면 먼저 상담</strong>
-            <p>항응고제, 혈압약, 항생제, 골다공증약을 복용하거나 신장·간 질환, 수술 예정, 임신·수유 상황이면 의사 또는 약사에게 전체 목록을 보여준다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="sources" aria-labelledby="sources-title">
-        <div class="section-head">
-          <div>
-            <span class="kicker">Official references</span>
-            <h2 id="sources-title">확인한 근거 자료</h2>
-            <p>용량 상한, 중복 섭취, 운동 보조 효과와 상호작용 안내는 공공 보건기관 자료를 기준으로 정리했다.</p>
-          </div>
-        </div>
-
-        <ul class="source-list">
-          <li><a href="https://ods.od.nih.gov/factsheets/Probiotics-Consumer/" target="_blank" rel="noopener noreferrer">NIH ODS · Probiotics</a></li>
-          <li><a href="https://ods.od.nih.gov/factsheets/MVMS-Consumer/" target="_blank" rel="noopener noreferrer">NIH ODS · Multivitamin/mineral Supplements</a></li>
-          <li><a href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" target="_blank" rel="noopener noreferrer">NIH ODS · Omega-3 Fatty Acids</a></li>
-          <li><a href="https://www.nccih.nih.gov/health/milk-thistle" target="_blank" rel="noopener noreferrer">NIH NCCIH · Milk Thistle</a></li>
-          <li><a href="https://ods.od.nih.gov/factsheets/Zinc-Consumer/" target="_blank" rel="noopener noreferrer">NIH ODS · Zinc</a></li>
-          <li><a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">NIH ODS · Magnesium</a></li>
-          <li><a href="https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-Consumer/" target="_blank" rel="noopener noreferrer">NIH ODS · Exercise & Athletic Performance</a></li>
+        <ul class="checklist">
+          <li><strong>전체 성분을 한 번에 합산</strong>종합비타민에 들어 있는 아연·마그네슘·비타민 A까지 별도 제품과 더한다.</li>
+          <li><strong>약과 질환 확인</strong>항응고제·혈압약·항생제·골다공증약 복용, 신장·간 질환, 수술 예정이면 의사나 약사에게 목록을 보여준다.</li>
+          <li><strong>처음에는 한 종류씩</strong>여러 제품을 동시에 시작하지 말고 위장 불편·발진·어지럼 같은 반응을 확인한다.</li>
+          <li><strong>상한을 넘기지 않기</strong>성인 아연은 하루 총 40 mg, 보충제·의약품 마그네슘은 하루 350 mg을 기준으로 확인한다.</li>
         </ul>
-
-        <p class="disclaimer">
-          이 페이지는 개인 메모를 보기 좋게 정리한 체크용 자료이며 진단이나 치료 지시가 아니다.
-          몸 상태, 검사 결과, 제품의 실제 성분, 복용 중인 약에 따라 적절한 용량과 주기는 달라질 수 있다.
-        </p>
+        <p class="alert"><strong>중요:</strong> 2개월 섭취 / 1개월 휴식은 개인 관리 방식이지 모든 영양제에 필요한 의학적 주기는 아니다. 제품 라벨과 의료진의 지시가 우선한다.</p>
       </section>
+
+      <section id="buy" aria-labelledby="buy-title">
+        <div class="section-head">
+          <span>Shopping checklist</span>
+          <h2 id="buy-title">구매할 때 공통 체크</h2>
+        </div>
+        <ul class="checklist">
+          <li><strong>Supplement Facts의 1회분</strong>앞면의 큰 숫자 대신 1회 섭취량과 실제 유효성분 mg·CFU를 본다.</li>
+          <li><strong>단일 성분 우선</strong>함량을 숨긴 proprietary blend, ‘디톡스·치료·완치’ 표현, 불필요한 자극제 혼합은 피한다.</li>
+          <li><strong>제3자 품질검사</strong>가능하면 USP·NSF·ConsumerLab 등의 품질검사를 확인한다. 품질 표시는 효과를 보장한다는 뜻은 아니다.</li>
+          <li><strong>유통기한·로트·보관법</strong>제조사 연락처, 로트 번호, 개봉 후 보관법이 명확하고 복용 기간 안에 다 먹을 용량을 산다.</li>
+        </ul>
+      </section>
+
+      <section id="choice" aria-labelledby="choice-title">
+        <div class="section-head">
+          <span>What to buy</span>
+          <h2 id="choice-title">종류별로 이렇게 구매</h2>
+          <p>특정 브랜드보다 아래 표기가 있는 제품을 우선한다. ‘우선’은 해당 목적이 있을 때의 상대적인 구매 순서다.</p>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="영양제 종류별 구매 기준 표" tabindex="0">
+          <table class="buy-table">
+            <thead>
+              <tr>
+                <th scope="col">영양제</th>
+                <th scope="col">구매 우선순위</th>
+                <th scope="col">라벨에서 찾을 표기</th>
+                <th scope="col">피할 것</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="name">유산균</span></td>
+                <td><span class="priority conditional">증상·목적별</span></td>
+                <td class="buy-this">속·종·균주번호까지 표시, 유통기한까지 CFU 보장, 냉장 여부 명시</td>
+                <td class="avoid">균주 없이 ‘1000억’ 숫자만 강조한 제품</td>
+              </tr>
+              <tr>
+                <td><span class="name">종합비타민</span></td>
+                <td><span class="priority conditional">식사 부족 시</span></td>
+                <td class="buy-this">1일 1정 기본형, 대부분의 성분이 100% DV 안팎, 연령·성별에 맞는 구성</td>
+                <td class="avoid">메가도스, 허브 혼합, 별도 아연과 중복되는 고함량 제품</td>
+              </tr>
+              <tr>
+                <td><span class="name">오메가3</span></td>
+                <td><span class="priority conditional">생선 섭취 적을 때</span></td>
+                <td class="buy-this">1회분당 EPA mg + DHA mg가 각각 명시된 어유 또는 조류유, 품질검사 표시</td>
+                <td class="avoid">EPA·DHA 없이 ‘Fish oil 1,000 mg’만 크게 표시한 제품</td>
+              </tr>
+              <tr>
+                <td><span class="name">실리마린</span></td>
+                <td><span class="priority low">낮음 · 선택</span></td>
+                <td class="buy-this">단일 성분, 1회분의 실리마린 실제 mg와 표준화 비율, 제3자 품질검사</td>
+                <td class="avoid">‘간 해독·간 치료’를 보장하는 복합 제품</td>
+              </tr>
+              <tr>
+                <td><span class="name">아연</span></td>
+                <td><span class="priority conditional">필요 확인 후</span></td>
+                <td class="buy-this">원소 아연 15 mg. 황산염·아세트산염·글루콘산염 중 어느 형태가 우월한지는 불명확</td>
+                <td class="avoid">종합비타민과 합산하지 않은 50 mg 고함량 매일 복용</td>
+              </tr>
+              <tr>
+                <td><span class="name">아르기닌</span></td>
+                <td><span class="priority low">낮음 · 선택</span></td>
+                <td class="buy-this">100% L-아르기닌 단일 파우더, 1회 3 g을 계량할 수 있는 구성</td>
+                <td class="avoid">함량 비공개 프리워크아웃 블렌드와 자극제 혼합</td>
+              </tr>
+              <tr>
+                <td><span class="name">크레아틴</span></td>
+                <td><span class="priority">근력운동 시 우선</span></td>
+                <td class="buy-this">100% 크레아틴 모노하이드레이트, 무향·무첨가, 1회 3–5 g</td>
+                <td class="avoid">모노하이드레이트보다 우수하다고 광고하는 고가의 에틸에스터·버퍼드 형태</td>
+              </tr>
+              <tr>
+                <td><span class="name">마그네슘</span></td>
+                <td><span class="priority conditional">식사·필요 확인 후</span></td>
+                <td class="buy-this">원소 마그네슘 mg가 명확한 구연산염·염화물·젖산염·아스파르트산염</td>
+                <td class="avoid">화합물 총중량만 크게 쓰고 원소량을 찾기 어려운 제품</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="quality-box" aria-label="구매 결론">
+          <div><strong>근력운동 목적</strong><p>가장 단순한 100% 크레아틴 모노하이드레이트부터 본다.</p></div>
+          <div><strong>기본 영양 목적</strong><p>식사에서 부족한 것이 있는지 먼저 보고 종합비타민·오메가3·마그네슘을 조건부로 고른다.</p></div>
+          <div><strong>후순위</strong><p>실리마린·아르기닌은 효과 근거가 제한적이므로 예산이 부족하면 먼저 제외한다.</p></div>
+        </div>
+      </section>
+
+      <p class="sources">
+        근거:
+        <a href="https://ods.od.nih.gov/HealthInformation/ODS_Frequently_Asked_Questions/" target="_blank" rel="noopener noreferrer">NIH ODS 품질검사 안내</a>,
+        <a href="https://ods.od.nih.gov/factsheets/Probiotics-Consumer/" target="_blank" rel="noopener noreferrer">유산균</a>,
+        <a href="https://ods.od.nih.gov/factsheets/MVMS-Consumer/" target="_blank" rel="noopener noreferrer">종합비타민</a>,
+        <a href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" target="_blank" rel="noopener noreferrer">오메가3</a>,
+        <a href="https://www.nccih.nih.gov/health/milk-thistle" target="_blank" rel="noopener noreferrer">실리마린</a>,
+        <a href="https://ods.od.nih.gov/factsheets/Zinc-Consumer/" target="_blank" rel="noopener noreferrer">아연</a>,
+        <a href="https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-Consumer/" target="_blank" rel="noopener noreferrer">아르기닌·크레아틴</a>,
+        <a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">마그네슘</a>.
+        이 페이지는 개인 체크용 정리이며 진단·치료 지시가 아니다.
+      </p>
 
       <footer>ZZEE Wellness Archive · Updated 2026-08-31</footer>
     </main>
