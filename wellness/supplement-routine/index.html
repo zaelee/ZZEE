@@ -7,7 +7,7 @@
     <title>ZZEE 영양제 루틴 표 · 복용 및 구매 체크</title>
     <meta
       name="description"
-      content="영양제 복용 시간·용량·휴식 여부와 제품 구매 기준을 표로 정리한 개인 체크 가이드."
+      content="영양제 복용 시간·용량·휴식 여부와 아이허브 가성비 제품을 표로 정리한 개인 체크 가이드."
     />
     <style>
       :root {
@@ -248,6 +248,10 @@
         min-width: 940px;
       }
 
+      .product-table {
+        min-width: 980px;
+      }
+
       th,
       td {
         padding: 18px 16px;
@@ -405,6 +409,13 @@
         line-height: 1.6;
       }
 
+      .product-link {
+        color: var(--green);
+        font-weight: 950;
+        line-height: 1.55;
+        text-underline-offset: 3px;
+      }
+
       .avoid {
         color: #875069;
         font-size: 14px;
@@ -506,7 +517,8 @@
         }
 
         .routine-table,
-        .buy-table {
+        .buy-table,
+        .product-table {
           min-width: 0;
           font-size: 10px;
         }
@@ -545,6 +557,7 @@
         <a href="#before">복용 전 체크</a>
         <a href="#buy">구매 시 체크</a>
         <a href="#choice">종류별 구매 기준</a>
+        <a href="#products">아이허브 추천</a>
       </nav>
 
       <section id="routine" aria-labelledby="routine-title">
@@ -581,7 +594,7 @@
               </tr>
               <tr>
                 <td><span class="name">오메가3</span></td>
-                <td><span class="dose">1정<br />EPA+DHA 합 1 g 이상</span></td>
+                <td><span class="dose">제품에 따라 1–2정<br />EPA+DHA 합 1 g 이상</span></td>
                 <td><span class="status">✓ 계속</span></td>
                 <td class="note">‘어유 1,000 mg’이 아니라 실제 EPA와 DHA의 합계를 본다. 식사와 함께 복용한다.</td>
               </tr>
@@ -724,6 +737,79 @@
           <div><strong>기본 영양 목적</strong><p>식사에서 부족한 것이 있는지 먼저 보고 종합비타민·오메가3·마그네슘을 조건부로 고른다.</p></div>
           <div><strong>후순위</strong><p>실리마린·아르기닌은 효과 근거가 제한적이므로 예산이 부족하면 먼저 제외한다.</p></div>
         </div>
+      </section>
+
+      <section id="products" aria-labelledby="products-title">
+        <div class="section-head">
+          <span>iHerb value picks</span>
+          <h2 id="products-title">아이허브 가성비 추천</h2>
+          <p>2026-08-31 아이허브 한국 페이지 확인가 기준. 할인 코드·환율·재고에 따라 실제 결제가는 달라질 수 있다.</p>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="아이허브 영양제 가성비 추천 표" tabindex="0">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th scope="col">영양제</th>
+                <th scope="col">가성비 추천 제품</th>
+                <th scope="col">확인가 / 예상 비용</th>
+                <th scope="col">선택 메모</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="name">유산균</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-lactobif-30-probiotics-30-billion-cfu-120-veggie-capsules/143853" target="_blank" rel="noopener noreferrer">California Gold Nutrition LactoBif 30<br />300억 CFU · 120정 ↗</a></td>
+                <td class="buy-this">약 41,498원<br />하루 약 346원</td>
+                <td class="note">장 관련 목적이 있을 때 추가. 단순히 CFU 숫자가 높다는 이유로 고르지 않는다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">종합비타민</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/now-foods-daily-vits-multi-vitamin-mineral-120-veg-capsules/86755" target="_blank" rel="noopener noreferrer">NOW Foods Daily Vits<br />철분 무함유 · 120정 ↗</a></td>
+                <td class="buy-this">약 18,410원<br />하루 약 153원</td>
+                <td class="note">아연 10 mg 포함. 이 제품을 먹는 날은 별도 아연을 대부분 생략한다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">오메가3</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-omega-800-90-fish-gelatin-softgels-1-000-mg-per-softgel/85180" target="_blank" rel="noopener noreferrer">California Gold Nutrition Omega 800<br />90정 ↗</a></td>
+                <td class="buy-this">약 37,560원<br />1정 약 417원</td>
+                <td class="note">1정에 EPA 480 mg + DHA 320 mg. 합계 1 g 이상 목표라면 하루 2정이 필요하다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">실리마린</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/now-foods-milk-thistle-extract-300-mg-200-veg-capsules/13870" target="_blank" rel="noopener noreferrer">NOW Foods 밀크시슬 추출물<br />300 mg · 200정 ↗</a></td>
+                <td class="buy-this">할인 약 27,368원<br />하루 약 137원</td>
+                <td class="note">실리마린 240 mg 표준화. 민들레·아티초크도 들어 있는 후순위 선택 제품이다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">아연</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/thorne-zinc-picolinate-15-mg-60-capsules/18476" target="_blank" rel="noopener noreferrer">Thorne 아연 피콜리네이트<br />15 mg · 60정 ↗</a></td>
+                <td class="buy-this">할인 약 16,902원<br />하루 약 282원</td>
+                <td class="note">단일 성분 제품. 종합비타민에 아연이 들어 있으면 중복 구매하지 않는다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">아르기닌</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/nutricost-l-arginine-unflavored-17-9-oz-500-g/148199" target="_blank" rel="noopener noreferrer">Nutricost L-아르기닌<br />무맛 · 500 g ↗</a></td>
+                <td class="buy-this">약 29,613원<br />3 g 약 178원</td>
+                <td class="note">100% 단일 분말. 운동할 때만 선택하고 예산이 부족하면 먼저 제외한다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">크레아틴</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-sport-pure-creatine-monohydrate-unflavored-2-2-lbs-1-kg/143718" target="_blank" rel="noopener noreferrer">California Gold Nutrition<br />크레아틴 모노하이드레이트 · 1 kg ↗</a></td>
+                <td class="buy-this">할인 약 43,938원<br />3 g 약 132원</td>
+                <td class="note">100% 모노하이드레이트 단일 분말. 근력운동 목적이면 가장 먼저 담는다.</td>
+              </tr>
+              <tr>
+                <td><span class="name">마그네슘</span></td>
+                <td><a class="product-link" href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567" target="_blank" rel="noopener noreferrer">Doctor's Best 고흡수 마그네슘<br />1정당 100 mg · 240정 ↗</a></td>
+                <td class="buy-this">할인 약 26,774원<br />300 mg 약 335원</td>
+                <td class="note">원소량을 100 mg 단위로 조절하기 쉽다. 보충제로 하루 350 mg을 넘기기 전 확인한다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="alert"><strong>추천 장바구니:</strong> 처음에는 크레아틴 + 오메가3 + 마그네슘 + 종합비타민만 사고, 유산균은 장 관련 목적이 있을 때 추가한다. 종합비타민을 먹는 동안 별도 아연은 대부분 제외하고 실리마린·아르기닌은 후순위로 둔다.</p>
       </section>
 
       <p class="sources">
