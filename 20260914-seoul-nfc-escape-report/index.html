@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="웹디자이너를 위한 서울 NFC 야외 방탈출 키트 사업 검토. 판매 사례, 검색량, 원가, 수익 계산기, 테마와 서울 20개 지역을 정리한 보고서.">
+<title>서울 NFC 야외 방탈출 — 웹디자이너를 위한 사업 검토 보고서</title>
+<style>
+:root{--paper:#f5f4ef;--white:#fff;--ink:#1e302e;--muted:#5d6b66;--line:#d8dfd8;--green:#245e48;--pale:#e9f0e8;--orange:#a54e20;--peach:#fbecdf;--nav:224px;--radius:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--green);text-underline-offset:4px}a:hover{color:var(--orange)}button,input,select{font:inherit}button,select{cursor:pointer}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--orange);outline-offset:4px}button{min-height:44px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);padding:8px 15px}button:hover{border-color:var(--green);background:var(--pale)}[hidden]{display:none!important}h1,h2,h3,h4,p,ul,ol,figure{margin-top:0}p{margin-bottom:16px}h1{font-size:clamp(38px,4.5vw,64px);line-height:1.19;letter-spacing:-.055em;font-weight:750}h2{font-size:clamp(26px,2.7vw,36px);line-height:1.35;letter-spacing:-.04em;margin-bottom:14px}h3{font-size:21px;line-height:1.5;letter-spacing:-.025em;margin-bottom:12px}h4{font-size:17px;margin-bottom:8px}small,.small{font-size:13px;line-height:1.7}.muted{color:var(--muted)}strong{font-weight:720}.skip{position:fixed;top:-80px;left:16px;background:var(--ink);color:white;padding:10px;z-index:20}.skip:focus{top:10px}
+.sidebar{width:var(--nav);position:fixed;inset:0 auto 0 0;background:#eaece5;border-right:1px solid var(--line);padding:32px 20px 20px;display:flex;flex-direction:column;z-index:10}.brand{font-weight:750;letter-spacing:-.04em;font-size:21px;line-height:1.45;margin-bottom:24px}.brand span{display:block;font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--muted);margin-top:8px}.nav{overflow-y:auto;display:grid;gap:3px}.nav a{color:var(--muted);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:7px;min-height:39px}.nav a span{font-size:11px;opacity:.7;font-variant-numeric:tabular-nums}.nav a:hover,.nav a[aria-current="location"]{background:white;color:var(--green);font-weight:700}.sidebar-foot{margin-top:auto;padding-top:22px;font-size:11px;color:var(--muted)}.sidebar-foot button{width:100%;font-size:13px;margin-bottom:10px}main{margin-left:var(--nav);padding:44px 52px 80px;max-width:1540px}.topline{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:16px;font-size:12px;letter-spacing:.03em;color:var(--muted)}.topline strong{color:var(--green)}.hero{padding:54px 0 42px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center}.eyebrow{font-size:12px;letter-spacing:.08em;font-weight:750;color:var(--green);margin-bottom:18px}.lead{font-size:18px;color:var(--muted);line-height:1.8;max-width:650px}.hero-art{position:relative;min-height:290px;display:grid;place-items:center;overflow:hidden}.hero-art:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #bccbbd;border-radius:50%}.hero-art:after{content:"";position:absolute;width:310px;height:180px;border:1px solid #c9d3c6;border-radius:50%;transform:rotate(-35deg)}.kit-cover{position:relative;z-index:1;width:200px;min-height:245px;padding:25px;background:#dce6d8;border:1px solid #aebbab;box-shadow:11px 13px 0 #e5e7df;transform:rotate(-7deg)}.kit-cover .stamp{font-size:11px;letter-spacing:.16em}.kit-cover b{font-size:26px;line-height:1.4;display:block;margin:25px 0}.kit-tag{position:absolute;z-index:2;bottom:22px;right:7px;background:var(--white);border:1px solid var(--line);padding:14px 18px;box-shadow:0 8px 20px #26392d0d;transform:rotate(7deg);font-size:12px}.kit-tag strong{font-size:19px;display:block}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.tag,.badge{display:inline-flex;align-items:center;border-radius:5px;padding:3px 8px;font-size:11px;font-weight:650;line-height:1.55}.tag{border:1px solid var(--line);background:var(--white);color:var(--muted)}.badge.fact{background:var(--pale);color:#26513d}.badge.plan{background:var(--peach);color:#88401b}.badge.unknown{background:#ebecef;color:#515e68}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);padding:14px 0 22px}.legend span{display:flex;align-items:center;gap:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:22px 0}.stat{border:1px solid var(--line);background:var(--white);border-radius:var(--radius);padding:21px}.stat .value{font-size:32px;line-height:1.35;letter-spacing:-.045em;font-variant-numeric:tabular-nums;margin:9px 0}.stat .value span{font-size:16px;font-weight:500;margin-left:3px}.stat p{font-size:12px;color:var(--muted);margin-bottom:0}.section{padding:56px 0;border-top:1px solid var(--line)}.section-kicker{font-size:12px;letter-spacing:.08em;color:var(--green);font-weight:750;margin-bottom:10px}.section-intro{color:var(--muted);max-width:790px;margin-bottom:25px}.grid2,.grid3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.panel{padding:24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}.panel p:last-child{margin-bottom:0}.panel.soft{background:var(--pale)}.panel.dark{background:var(--ink);color:#fff;border-color:var(--ink)}.panel.dark .muted{color:#c8d5cc}.panel.dark a{color:#d5e9c5}.callout{padding:20px 23px;border-left:4px solid var(--green);background:var(--pale);margin:22px 0}.callout p:last-child{margin:0}.callout.warn{background:var(--peach);border-color:var(--orange)}.callout strong{display:block;margin-bottom:7px}.source{font-size:12px;color:var(--muted);line-height:1.8;margin-top:13px}.source a{margin-right:6px}.table-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:10px;background:var(--white)}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65;min-width:620px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}thead th{font-size:12px;color:var(--muted);background:#edf0e9;font-weight:650}tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}tbody th{font-weight:650}tbody tr:hover{background:#f7f9f3}.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.table-note{font-size:12px;color:var(--muted);margin-top:-6px}.compact td,.compact th{padding:10px 14px}.total td,.total th{background:var(--pale);font-weight:750}.steps{list-style:none;padding:0;counter-reset:step}.steps li{position:relative;padding:0 0 23px 40px;counter-increment:step}.steps li:before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:12px;font-weight:750;color:var(--green);border:1px solid var(--line);border-radius:50%;width:28px;height:28px;display:grid;place-items:center}.steps li:last-child{padding-bottom:0}.steps strong{display:block}.steps p{font-size:14px;margin:5px 0 0;color:var(--muted)}.bullet{padding-left:21px}.bullet li{margin-bottom:9px}.keyline{font-size:23px;line-height:1.6;letter-spacing:-.03em}.divider{height:1px;background:var(--line);margin:26px 0}.label{color:var(--muted);font-size:12px;display:block;margin-bottom:7px}.number{font-variant-numeric:tabular-nums}.inline-formula{font-size:13px;padding:16px;background:#f0f2ed;border:1px solid var(--line);border-radius:9px;line-height:1.9}.device{max-width:280px;margin:auto;background:#fbfaf5;border:7px solid var(--ink);border-radius:32px;overflow:hidden;box-shadow:0 12px 26px #1e302e12}.device-top{padding:16px 20px 12px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px}.device-screen{padding:22px 20px}.device-screen h4{font-family:"AppleMyungjo","Nanum Myeongjo",serif;font-size:24px;margin:14px 0}.seal-row{display:flex;gap:12px;margin:24px 0}.seal{border:2px solid #99502f;color:#99502f;display:grid;place-items:center;width:56px;height:56px;font-family:serif;font-size:25px}.device-button{padding:10px;border-radius:7px;background:var(--green);color:white;font-size:13px;text-align:center}.device p{font-size:12px}.device-caption{font-size:11px;text-align:center;color:var(--muted);margin:14px 0 0}.calc-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field label{display:block;font-size:12px;font-weight:600;margin-bottom:5px}.field input,.filter-control{width:100%;background:white;color:var(--ink);border:1px solid #9caaa2;border-radius:8px;min-height:45px;padding:8px 11px;font-variant-numeric:tabular-nums}.field input:user-invalid{border-color:var(--orange)}.calc-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}.result{background:var(--pale);padding:20px;border:1px solid #ccdac9;border-radius:10px}.result strong{display:block;font-size:27px;line-height:1.35;letter-spacing:-.03em;margin-top:9px;font-variant-numeric:tabular-nums}.result .small{display:block;margin-top:7px}.loss{color:#9b3c23}.error{color:#922f18;background:var(--peach);padding:12px;border-radius:8px;margin:14px 0}.calc-form details{grid-column:1/-1}.calc-form details .calc-form{margin:16px 0}.row-between{display:flex;align-items:center;justify-content:space-between;gap:16px}.bars{display:grid;gap:18px;margin-top:20px}.bar-row{display:grid;grid-template-columns:95px 1fr 84px;gap:12px;align-items:center;font-size:13px}.track{height:11px;background:#e3e9de;border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:var(--green)}.bar-row .num{font-size:12px}.metric-note{margin-top:18px;color:var(--muted);font-size:12px}.filters{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:24px 0 16px}.filters .search{flex:1;min-width:180px}.filters label{display:block;font-size:12px;margin-bottom:5px}.filters select{width:auto;min-width:160px}.location-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.location{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:white}.location h3{font-size:22px;margin-bottom:13px}.location p{font-size:14px;margin:0 0 12px}.location .origin{background:#f2f4ee;padding:13px;border-radius:8px}.location .origin strong{display:block;font-size:11px;color:var(--green);margin-bottom:4px}.location .source{margin:14px 0 0;font-size:11px}.location .badge{margin-bottom:10px}details{border-top:1px solid var(--line);padding-top:13px;margin-top:15px}summary{cursor:pointer;min-height:36px;font-size:14px;font-weight:650;line-height:1.8}details p{margin:12px 0 0!important}details[open] summary{margin-bottom:12px}.concept{position:relative;padding:27px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}.concept .code{font-size:11px;letter-spacing:.09em;color:var(--orange);font-weight:750}.concept h3{font-size:25px;margin:8px 0 13px}.concept p{font-size:14px}.concept .mini{font-size:12px;color:var(--muted);margin-bottom:0}.phase{border-top:2px solid var(--green);padding:17px 0 0}.phase .week{color:var(--green);font-size:12px;font-weight:750}.phase h3{margin-top:9px}.phase p{font-size:14px;color:var(--muted)}.glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin:22px 0}.glossary div{padding:14px 0;border-bottom:1px solid var(--line)}.glossary dt{font-weight:700;font-size:14px}.glossary dd{font-size:13px;color:var(--muted);margin:4px 0 0}.source-list{padding-left:21px;font-size:13px;line-height:1.9}.source-list li{margin-bottom:10px}.footer{border-top:1px solid var(--line);padding-top:25px;margin-top:22px;font-size:12px;color:var(--muted)}.back-top{display:inline-block;margin-top:18px;font-size:12px}
+@media(min-width:1600px){main{padding-right:80px;padding-left:80px}}
+@media(max-width:1100px){:root{--nav:200px}main{padding:30px}.sidebar{padding:24px 14px}.hero{grid-template-columns:1.45fr 1fr}.hero-art{transform:scale(.85)}.grid3{grid-template-columns:1fr}.stats .value{font-size:26px}}
+@media(max-width:850px){html{scroll-padding-top:115px}.sidebar{position:sticky;top:0;width:100%;height:auto;padding:11px 18px;background:#eceee7f5;backdrop-filter:blur(10px);border-right:0;border-bottom:1px solid var(--line)}.brand{font-size:15px;line-height:1.3;margin-bottom:8px}.brand br,.brand span,.sidebar-foot{display:none}.nav{display:flex;overflow-x:auto;gap:3px;scrollbar-width:thin}.nav a{flex:none;padding:8px 10px;font-size:12px;min-height:38px}.nav a span{display:none}main{margin:0;padding:25px}.hero{padding:38px 0 25px;grid-template-columns:1.7fr 1fr;gap:5px}.hero-art{transform:scale(.8);transform-origin:center;min-height:270px}.section{padding:40px 0}.topline{font-size:10px}.stats{gap:10px}.stat{padding:17px}.grid2{gap:14px}.bar-row{grid-template-columns:85px 1fr 75px;gap:7px}.row-between{align-items:flex-start}.section-intro{font-size:15px}}
+@media(max-width:600px){body{font-size:15px}main{padding:20px}.hero{display:block}.hero-art{display:none}.hero h1{font-size:43px}.lead{font-size:16px}.stats{grid-template-columns:1fr}.stat{display:grid;grid-template-columns:1fr auto;column-gap:12px}.stat .value{grid-column:2;grid-row:1/3;margin:0;font-size:27px;align-self:center}.stat p{grid-column:1/-1;margin-top:10px}.stat .badge{width:fit-content}.legend{gap:9px;font-size:11px}.grid2,.location-grid,.glossary{grid-template-columns:1fr}.panel,.location,.concept{padding:21px}.grid3{gap:25px}.calc-form{gap:13px}.calc-results{grid-template-columns:1fr}.result strong{font-size:29px}.row-between{flex-wrap:wrap}.topline span:last-child{max-width:135px;text-align:right}h3{font-size:20px}.section{padding:34px 0}.filters{gap:10px}.filters select{width:100%}.filters>div{width:100%}.filters button{width:100%}.table-wrap{margin-left:0;margin-right:0}.keyline{font-size:21px}.calc-form .field label{font-size:11px}.calc-form input{min-width:0;font-size:15px}.bar-row{grid-template-columns:83px 1fr 81px}.device{margin-top:8px}.source{overflow-wrap:anywhere}.section-kicker{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{@page{size:A4;margin:15mm 13mm}html{scroll-behavior:auto}body{background:white;color:#172723;font-size:10pt;line-height:1.6}.sidebar,.skip,.no-print,.hero-art{display:none!important}main{margin:0;padding:0;max-width:none}.hero{display:block;padding:20px 0}.hero h1{font-size:33pt}.hero .lead{font-size:12pt;max-width:none}.topline{font-size:8pt}.section{padding:22px 0;break-before:auto}h2{font-size:20pt}h3{font-size:13pt}h1,h2,h3,h4,summary{break-after:avoid}p,li{orphans:3;widows:3}.panel,.location,.concept,.stat,.result,.phase,.callout{break-inside:avoid;padding:13px}.stats{grid-template-columns:repeat(3,1fr)}.stat .value{font-size:22pt}.grid2,.location-grid,.glossary{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.table-wrap{overflow:visible;border-radius:0;break-inside:auto}table{min-width:0!important;font-size:9pt}thead{display:table-header-group}tr{break-inside:avoid}td,th{padding:8px}.source,.small,.table-note,.metric-note{font-size:8pt}.location[hidden]{display:block!important}details> :not(summary){display:block!important}details::details-content{display:block;content-visibility:visible;height:auto}.filters{display:none}.calc-form{grid-template-columns:repeat(3,minmax(0,1fr))}.calc-form details{display:block}.calc-results{grid-template-columns:repeat(2,minmax(0,1fr))}.result strong{font-size:19pt}.field input{border:1px solid #b5bfb7;min-height:30px;padding:3px 7px;font-size:10pt}.field label{font-size:8pt}.badge,.tag{font-size:7pt}.footer{font-size:8pt}.source-list{font-size:9pt}.device{max-width:210px;border-width:5px}.device-screen{padding:14px}.device-screen h4{font-size:18pt}a{color:inherit}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media print{#location-count,#location-empty{display:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#report">본문으로 바로 가기</a>
+<aside class="sidebar" aria-label="보고서 목차">
+  <div class="brand">서울 야외 방탈출<br>사업 검토 노트<span>웹디자이너 × NFC 키트</span></div>
+  <nav class="nav">
+    <a href="#overview" aria-current="location"><span>00</span>빠른 결론</a>
+    <a href="#designer"><span>01</span>디자이너의 기회</a>
+    <a href="#market"><span>02</span>판매와 시장규모</a>
+    <a href="#search"><span>03</span>네이버 검색 수요</a>
+    <a href="#economics"><span>04</span>원가와 수익 구조</a>
+    <a href="#calculator"><span>05</span>내 조건으로 계산</a>
+    <a href="#themes"><span>06</span>자주 쓰는 주제</a>
+    <a href="#traffic"><span>07</span>관광과 유동인구</a>
+    <a href="#locations"><span>08</span>서울 20개 지역</a>
+    <a href="#concepts"><span>09</span>첫 상품 제안</a>
+    <a href="#production"><span>10</span>NFC와 제작 방법</a>
+    <a href="#roadmap"><span>11</span>실행 계획</a>
+    <a href="#references"><span>12</span>쉬운 용어와 출처</a>
+  </nav>
+  <div class="sidebar-foot"><button type="button" class="print-button">인쇄 / PDF로 저장</button>자료 조사 2026.09.13~14<br>금액은 원화 기준<br>예상 수익은 입력 가정에 따라 달라집니다.</div>
+</aside>
+<main id="report">
+<div class="topline"><strong>사업 검토 보고서 · 서울</strong><span>공개 자료 조사 + 맞춤 상품 기획<br>2026년 9월 14일 작성</span></div>
+<section id="overview" aria-labelledby="report-title">
+  <div class="hero">
+    <div><div class="eyebrow">웹디자이너의 역량을 상품으로 연결하기</div><h1 id="report-title">도시를 읽고,<br>이야기를 여는 키트.</h1><p class="lead">NFC 야외 방탈출의 시장·제작비·수익부터 서울의 장소와 이야기까지. <strong>직접 디자인할 수 있다는 강점</strong>을 어디에 써야 하는지 함께 정리했습니다.</p><div class="tags"><span class="tag">서울 한 지역</span><span class="tag">2인용</span><span class="tag">60~90분 목표</span><span class="tag">종이 키트 + NFC 5장 + 웹게임</span></div></div>
+    <div class="hero-art" aria-hidden="true"><div class="kit-cover"><span class="stamp">도시 탐색 기록 · 001</span><b>오늘의 서울에<br>숨겨진 이야기</b><svg width="140" height="60" viewBox="0 0 140 60" fill="none"><path d="M8 41H43V15H88V43H128" stroke="#487055" stroke-width="1.4" stroke-dasharray="4 4"/><circle cx="8" cy="41" r="4" fill="#245e48"/><circle cx="43" cy="15" r="4" fill="#245e48"/><circle cx="88" cy="43" r="4" fill="#245e48"/><circle cx="128" cy="43" r="7" stroke="#a54e20" stroke-width="2"/></svg><span class="small">걷기 · 관찰하기 · 연결하기</span></div><div class="kit-tag">휴대전화를 가까이<strong>다음 단서를 열다</strong>NFC 증거 카드</div></div>
+  </div>
+  <div class="legend"><span><b class="badge fact">확인 자료</b>공개된 수치·안내</span><span><b class="badge plan">가정·제안</b>계산 예시·신규 기획</span><span><b class="badge unknown">미확인</b>현재 자료로 확정 불가</span></div>
+  <div class="callout"><strong>추천 방향: “관광 기념품처럼 갖고 싶은 추리게임”으로 시작합니다.</strong><p>첫 후보는 <b>인사동의 미술·인장 추리</b>입니다. 키트, 스마트폰 속 증거물, 상세페이지, 완주 기념물을 같은 디자인으로 연결하기 좋습니다. 성수의 제작·공예 이야기와 서촌의 그림·편지 이야기도 유력합니다. 이는 판매 순위가 아니라, 사용자의 직업과 제작 여건을 고려한 기획 판단입니다.</p></div>
+  <div class="stats">
+    <div class="stat"><span class="badge plan">시험 판매가</span><div class="value">34,900<span>원</span></div><p>2인용 1세트 가격 제안. 최적 가격이 검증된 것은 아닙니다.</p></div>
+    <div class="stat"><span class="badge plan">500세트 제작 가정</span><div class="value">5,500~10,300<span>원</span></div><p>NFC 5장 포함 세트당 제조 예산. 부가세·택배 운임·개발비 별도.</p></div>
+    <div class="stat"><span class="badge plan">기준 조건의 계산</span><div class="value">약 11,824<span>원</span></div><p>1세트 판매 후 월 고정비에 쓸 수 있는 돈. 순이익과 다릅니다.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>사업을 시작할 근거</h3><p>야외 추리 키트의 유료 출시 사례가 있습니다. 조사한 펀딩 중 큰 사례는 약 한 달 동안 <strong>후원자 521~678명, 모금액 약 1,800만~2,100만원</strong>입니다. 브랜드·관광지의 맞춤 게임 제작 수요도 확인됩니다.</p><p class="source"><a href="https://tumblbug.com/ablez_case_file">유능한 사건파일</a> · <a href="https://tumblbug.com/the_quest">마법도술학교</a> · <a href="https://questour.kr/outdoor_escape_b">퀘스투어 기업 안내</a></p></div>
+    <div class="panel"><h3>아직 검증해야 하는 것</h3><p><strong>스마트스토어 상위 상품의 현재 월 판매량과 전체 시장 거래액은 확인하지 못했습니다.</strong> 펀딩을 월 매출로 바꾸거나 관광객 수를 구매자 수로 바꾸면 안 됩니다. 첫 50~100세트와 실제 유료 주문으로 판단을 보완해야 합니다.</p><p class="source">검색 수요·원가·판매 시나리오의 한계는 각 장에 따로 표시했습니다.</p></div>
+  </div>
+  <p class="small muted" style="margin-top:20px">이 보고서의 60~90분은 기획 목표입니다. 이전 원가 검토의 1~2시간 상품 가정을 구체화한 것이며, 실제 거리와 소요시간은 답사 후 정해야 합니다. HTML 파일은 인터넷 없이 읽을 수 있고, 출처 링크는 인터넷 연결이 필요합니다.</p>
+  <button type="button" class="print-button no-print">인쇄 / PDF로 저장</button>
+</section>
+
+<section id="designer" class="section" aria-labelledby="designer-title">
+  <div class="section-kicker">01 · 직업을 사업의 강점으로</div><h2 id="designer-title">웹디자인을 “판매 전·체험 중·완주 후”에 모두 씁니다.</h2><p class="section-intro">웹디자인을 할 수 있다는 사실을 개발 능력과 같다고 가정하지 않았습니다. 직접 만들기 좋은 디자인 작업을 중심으로 정리하고, 구매 확인·진행 저장 같은 기능은 별도로 구분했습니다. 아래 효과는 실행 가설이며, 매출 증가가 이미 입증된 수치는 아닙니다.</p>
+  <div class="grid2">
+    <div class="panel dark"><span class="badge plan">맞춤 제안</span><h3 style="margin-top:14px">종이와 화면을 하나의 세계로</h3><p class="keyline">키트는 이야기의 증거물.<br>웹은 살아 움직이는 사건 기록.<br>디자인은 둘을 연결하는 규칙.</p><p class="muted small">낙관의 모양, 문서 번호, 색, 여백, 종이 질감을 단서로 쓰면 시각 디자인 자체가 게임의 일부가 됩니다. 색만으로 정답을 구별하지 말고 모양·문자도 함께 제공합니다.</p></div>
+    <div class="panel"><div class="device" aria-label="인사동 미술 추리게임 화면의 기획 예시"><div class="device-top"><span>사라진 화원의 인장</span><span>증거 01 / 05</span></div><div class="device-screen"><span class="badge plan">화면 기획 예시</span><h4>어느 인장이<br>진짜일까요?</h4><p>기록 속 문양과 현장에서 찾은 모양을 비교해 보세요.</p><div class="seal-row" aria-hidden="true"><span class="seal">山</span><span class="seal">月</span><span class="seal">水</span></div><div class="device-button">증언을 확인하는 버튼</div><p class="muted" style="margin:12px 0 0">음성 없이 글로도 읽기 · 단계별 힌트</p></div></div><p class="device-caption">실제 게임이 아닌 설명용 화면입니다.<br>시각적 단서와 사용하기 쉬운 화면을 함께 설계합니다.</p></div>
+  </div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="웹디자인 활용 방안 비교"><table><thead><tr><th>활용할 역량</th><th>구체적으로 만들 것</th><th>사업에 연결되는 방식</th><th>확인할 숫자</th></tr></thead><tbody>
+    <tr><th>상품 설명 디자인</th><td>첫 화면에 지역·인원·시간·가격·구성품. 손으로 카드와 휴대전화를 함께 쓰는 장면.</td><td>“무엇을 사는지” 쉽게 이해해 구매 망설임을 줄이는지 확인합니다.</td><td>상품 방문 대비 주문 비율, 구매 전 문의 수</td></tr>
+    <tr><th>3분짜리 체험판</th><td>실제 본편의 답을 노출하지 않는 독립 문제 1개와 짧은 결말.</td><td>낯선 상품을 직접 체험한 뒤 구매하도록 연결합니다.</td><td>시작·완료·상품 페이지 이동 비율</td></tr>
+    <tr><th>모바일 화면</th><td>큰 버튼, 읽기 쉬운 글, 단계별 힌트, 이전 진행으로 돌아오기.</td><td>현장에서 헤매거나 문의하는 시간을 줄일 수 있습니다.</td><td>시작 성공률, 막힌 단계, 팀당 문의 시간</td></tr>
+    <tr><th>증거물·인쇄물</th><td>서류·지도·사진·인장·봉투를 같은 규칙으로 디자인. 문양·겹침·배치로 퍼즐 구성.</td><td>실물의 소장 가치와 체험 완성도를 함께 높이는지 확인합니다.</td><td>정가 구매 이유, 구성품 평가, 인쇄·조립 불량</td></tr>
+    <tr><th>완주 기념물</th><td>사건 해결 카드, 선택에 따른 결말 이미지, 다음 사건 예고.</td><td>사진 공유와 후속 상품 관심으로 연결합니다. 고객이 직접 저장·공유하게 설계합니다.</td><td>기념 카드 저장, 후기, 다음 상품 방문</td></tr>
+    <tr><th>외국어 화면</th><td>짧은 한국어·영어, 언어가 길어져도 깨지지 않는 배치, 언어에 덜 의존하는 문제.</td><td>관광객용으로 확장할 기반을 만듭니다. 번역만으로 난이도가 같아지지는 않습니다.</td><td>언어별 완주율, 오답·힌트 사용</td></tr>
+    <tr><th>반복 제작 규칙</th><td>미션·증거·힌트·결말 화면의 공통 틀. 지역마다 그림·문서·스토리를 교체.</td><td>두 번째 작품의 화면 제작 시간을 줄일 여지가 있습니다. 문제·답사 비용은 새로 듭니다.</td><td>에피소드당 디자인 시간, 수정 횟수</td></tr>
+    <tr><th>기업 제안서</th><td>브랜드 색과 이야기를 적용한 게임 화면 3장, 키트 견본, 실제 플레이 결과.</td><td>행사·전시·지역 홍보 게임의 맞춤 제작을 제안할 수 있습니다.</td><td>문의→견적→계약 비율, 수정에 쓴 시간</td></tr>
+  </tbody></table></div>
+  <div class="grid2">
+    <div class="panel"><h3>당장 직접 맡기 좋은 영역</h3><p>상품 이름과 시각 스타일, 상세페이지, 모바일 화면, 시각 퍼즐의 단서, 인쇄 도안, 완주 카드, 제안서입니다. 먼저 익숙한 디자인 도구로 화면을 연결해 <strong>“실제로 어떻게 진행되는지” 보여 주는 시제품</strong>을 만드세요.</p><p class="small muted">문제 설계는 별도 검증이 필요합니다. 예쁜 도형이 곧 좋은 퍼즐은 아니므로, 처음 보는 사람이 설명 없이 풀 수 있는지 관찰합니다.</p></div>
+    <div class="panel"><h3>개발 협업이 필요한 영역</h3><p>키트 시작 코드 확인, 결제한 사람의 이용 권한, 새로고침·휴대전화 변경 후 진행 복구, 정답 확인, 오류 기록입니다. HTML·CSS를 다룬다면 화면 구현까지 맡고, 서버 기능은 작은 범위로 의뢰하는 편이 현실적입니다.</p><p class="small muted">답과 이용 코드를 HTML 안에만 숨기면 유료 콘텐츠 보호가 약합니다. 이 보고서 파일은 사업 검토용이며, 판매용 게임 서버가 아닙니다.</p></div>
+  </div>
+  <h3 style="margin-top:28px">디자인이 수익에 연결되는 계산 예시</h3>
+  <div class="grid2"><div class="panel soft"><span class="badge plan">효과 예측이 아닌 가정</span><h3 style="margin-top:13px">같은 광고 클릭 1,000회라면</h3><p>클릭당 광고비 300원 → 총 30만원.<br>구매 비율 <b>2%</b>면 20건 → 주문당 광고비 <b>15,000원</b>.<br>구매 비율 <b>3%</b>면 30건 → 주문당 광고비 <b>10,000원</b>.</p><p class="small muted">구매 비율이 실제로 개선될 때의 산수입니다. 페이지 디자인만으로 2%가 3%가 된다는 보장은 없습니다. 가격·고객층·유입 경로를 함께 기록해야 합니다.</p></div><div class="panel soft"><span class="badge plan">자기 시간도 비용</span><h3 style="margin-top:13px">직접 만들어도 0원은 아닙니다</h3><p>예를 들어 디자인에 80시간을 쓰고 시간의 가치를 25,000원으로 잡으면 <b>200만원의 작업 시간 비용</b>입니다. 이는 본인의 실제 단가가 아닌 계산 예시입니다.</p><p class="small muted">견적 비교는 “디자인 포함 견적”과 “디자인 제공·개발만 견적”의 동일 범위로 진행합니다. 본인 인건비를 초기비 또는 월 보수 중 어디에 넣었는지 표시해 중복 계산을 피합니다.</p></div></div>
+  <div class="callout"><strong>코딩 부담을 낮추는 시제품 도구: Twine</strong><p>선택지에 따라 이야기가 갈라지는 간단한 체험판은 Twine으로 만들 수 있습니다. 공식 안내에 따르면 기본 이야기는 코딩 없이 제작할 수 있고 HTML로 내보낼 수 있으며, 상업적 이용도 가능합니다. 브랜드에 맞는 화면과 복잡한 기능에는 추가 작업이 필요합니다. <strong style="display:inline">구매 인증·운영 서버를 대신해 주는 도구로 보지는 않습니다.</strong></p><p class="source"><a href="https://www.twinery.org/">Twine 공식 소개</a> · <a href="https://twinery.org/reference/en/publishing/publishing.html">HTML로 내보내기</a></p></div>
+  <p class="source">기업 맞춤 체험의 판매 형태는 <a href="https://questour.kr/outdoor_escape_b">퀘스투어 공식 안내</a>에서 확인했습니다. 업체의 홍보 효과 설명을 매출 증가의 독립된 검증 자료로 사용하지 않았습니다. 버튼 크기는 <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">W3C의 44×44 CSS 픽셀 권고 기준</a>을 참고할 수 있습니다. 이 보고서는 야외 조작 편의를 위해 큰 버튼을 제안합니다.</p>
+</section>
+
+<section id="market" class="section" aria-labelledby="market-title">
+  <div class="section-kicker">02 · 얼마나 팔리고 있는가</div><h2 id="market-title">유료 수요는 확인됩니다. 네이버 전체 규모는 아직 모릅니다.</h2><p class="section-intro">처음 질문한 “잘나가는 상품의 월 판매량”에 직접 답할 수 있는 스마트스토어 자료는 확보하지 못했습니다. 확인할 수 있는 펀딩 실적과 가격을 별도로 정리합니다.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="유료 펀딩 사례"><table><thead><tr><th>상품 · 텀블벅</th><th>모집 기간</th><th class="num">후원자</th><th class="num">모인 금액</th><th class="num">1인당 평균 후원액</th></tr></thead><tbody>
+  <tr><th><a href="https://tumblbug.com/ablez_case_file">유능한 사건파일:<br>죽음을 비추는 렌즈</a></th><td>2023.05.30~06.30</td><td class="num">521명</td><td class="num">18,068,200원</td><td class="num">약 34,680원</td></tr>
+  <tr><th><a href="https://tumblbug.com/the_quest">마법도술학교: 귀문관</a></th><td>2022.04.13~05.13</td><td class="num">678명</td><td class="num">20,863,000원</td><td class="num">약 30,771원</td></tr>
+  <tr><th><a href="https://tumblbug.com/meow_rangers/story">냥냥방범대</a></th><td>2022.09.01~10.11</td><td class="num">142명</td><td class="num">4,381,000원</td><td class="num">약 30,852원</td></tr>
+  </tbody></table></div>
+  <p class="table-note">후원자 수는 키트 수·플레이 인원과 다릅니다. 평균 후원액은 모금액÷후원자의 계산값입니다. 모금액은 원가·수수료·세금을 빼기 전이며 취소·환불 차이가 있을 수 있습니다. 이 세 사례가 업계 판매 순위나 평균을 뜻하지는 않습니다.</p>
+  <h3 style="margin-top:28px">가격 비교: 1인권인지 1팀 키트인지 먼저 봐야 합니다</h3>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="경쟁 상품 가격"><table><thead><tr><th>상품</th><th class="num">표시 가격</th><th>비교 조건·확인 한계</th></tr></thead><tbody>
+  <tr><th>에이블즈 유능한 사건파일 EP.01</th><td class="num">35,000원</td><td><a href="https://www.wishbucket.io/items/2947548">위시버킷 2026.09.13 표시가</a>. 스마트스토어 연결 상품이며 실제 결제 옵션·구매 수 미확인. <a href="https://joomaltory.com/experience/cmf4qe73u0001i12ozjdg9s1a">주말토리</a>의 2인 구성은 코드 2개·키트 1개.</td></tr>
+  <tr><th>별의 기억1</th><td class="num">35,000원</td><td><a href="https://www.wadiz.io/web/store/detail/1710">와디즈 스토어</a> 키트 가격. 판매량 미확인.</td></tr>
+  <tr><th>경주월드 비밀자들</th><td class="num">12,000원</td><td><a href="https://leisure-web.yanolja.com/leisure/10314060">NOL 할인 표시가</a>. 1키트 최대 4명 안내, 놀이공원 입장권 별도.</td></tr>
+  <tr><th>전주 나에게 온 꽃</th><td class="num">무료 사례</td><td><a href="https://www.culture.go.kr/portal/cltLife/cltVideo/viewPortal.do?category=digital&amp;idx=8271&amp;menuNo=200045">문화포털의 2024년 공공 프로그램 소개</a>. 현재 무료 배포 여부 미확인.</td></tr>
+  </tbody></table></div>
+  <div class="callout warn"><strong>현재 스마트스토어 베스트셀러 실적은 미확인입니다.</strong><p>네이버쇼핑은 보안 확인 화면, 에이블즈 상품은 로그인 화면, 리얼월드 스토어는 접속 오류로 현재 월 구매·리뷰·총 거래액을 검증하지 못했습니다. 실내 방탈출 시장, 무료 앱 이용자, 관광객 통계를 유료 야외 키트 매출로 바꾸지 않았습니다.</p></div>
+  <h3>시장 전체 대신, 한 판매자의 규모를 계산해 봅니다</h3>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="가정 판매량별 결제액"><table><thead><tr><th>월 판매 목표 · 가정</th><th class="num">월 결제액</th><th class="num">12개월 유지 시 연 결제액</th></tr></thead><tbody><tr><th>100세트</th><td class="num">349만원</td><td class="num">4,188만원</td></tr><tr><th>300세트</th><td class="num">1,047만원</td><td class="num">1억 2,564만원</td></tr><tr><th>500세트</th><td class="num">1,745만원</td><td class="num">2억 940만원</td></tr></tbody></table></div>
+  <p class="table-note">판매가 34,900원·배송비 별도 매출 없음. 모두 부가세 포함 고객 결제액이며 실제 매출 관측값이나 순이익이 아닙니다.</p>
+  <p>시장 전체가 연 10억원이려면 같은 가격으로 월 약 <b>2,388세트</b>, 연 50억원이면 월 약 <b>11,939세트</b>가 꾸준히 팔려야 합니다. <strong>목표 금액을 판매량으로 바꾼 산수이며 시장규모 추정치가 아닙니다.</strong></p>
+  <details><summary>스마트스토어 판매량을 더 정확히 확인하는 방법</summary><p>같은 상품 주소를 기준으로 가격·옵션·최근 구매 표시·새 리뷰를 기록합니다. 누적 리뷰는 월 판매량이 아닙니다. 최근 구매 표시가 없을 때 새 리뷰를 주문으로 바꾸려면 리뷰 작성 비율을 알아야 합니다.</p><p>예를 들어 30일 동안 새 리뷰가 30개라면 작성 비율을 10%·20%·30%로 가정했을 때 각각 300·150·100주문입니다. 이것은 계산 설명이며 조사 상품에서 실제로 확인한 리뷰 수가 아닙니다.</p></details>
+</section>
+
+<section id="search" class="section" aria-labelledby="search-title">
+  <div class="section-kicker">03 · 네이버에서 찾는 사람</div><h2 id="search-title">상품명에는 “야외 방탈출 + 지역”을 먼저 씁니다.</h2><p class="section-intro">2026.09.13 공개 키워드 도구 조회 결과입니다. 네이버 일반 검색 횟수이며 <strong>쇼핑 검색 횟수·서로 다른 사람 수·주문 수와는 다릅니다.</strong> 네이버 광고 계정에서 원본을 직접 내려받은 수치는 아닙니다.</p>
+  <div class="grid2"><div class="panel"><span class="label">야외방탈출 · PC 310 + 모바일 670</span><h3 style="font-size:35px">월 980회</h3><p class="small muted">“실외방탈출”의 공개 구간 10~19회보다 크므로 일반 상품명은 “야외”를 우선 검토합니다.</p></div><div class="panel"><span class="label">서울야외방탈출 · PC 150 + 모바일 350</span><h3 style="font-size:35px">월 500회</h3><p class="small muted">검색량이 작다는 점을 감안하면 검색 유입 외에 지역 데이트 콘텐츠·제휴·단체 판매를 검증해야 합니다.</p></div></div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="20개 키워드 월 검색량"><table class="compact"><thead><tr><th>키워드</th><th class="num">PC</th><th class="num">모바일</th><th class="num">합계 또는 공개 구간</th><th>해석</th></tr></thead><tbody>
+  <tr><th>야외방탈출</th><td class="num">310</td><td class="num">670</td><td class="num"><b>980</b></td><td>핵심 검색어</td></tr><tr><th>서울야외방탈출</th><td class="num">150</td><td class="num">350</td><td class="num"><b>500</b></td><td>지역+핵심</td></tr><tr><th>실외방탈출</th><td class="num">10 미만</td><td class="num">10</td><td class="num">10~19</td><td>작은 직접 수요</td></tr><tr><th>야외방탈출키트</th><td class="num">10 미만</td><td class="num">10</td><td class="num">10~19</td><td>작은 직접 수요</td></tr><tr><th>방탈출키트</th><td class="num">20</td><td class="num">30</td><td class="num">50</td><td>실내용도 포함</td></tr><tr><th>서울숲방탈출</th><td class="num">10 미만</td><td class="num">40</td><td class="num">40~49</td><td>지역형</td></tr><tr><th>북촌방탈출</th><td class="num">10 미만</td><td class="num">40</td><td class="num">40~49</td><td>지역형</td></tr><tr><th>혜화야외방탈출</th><td class="num">10 미만</td><td class="num">20</td><td class="num">20~29</td><td>지역형</td></tr><tr><th>홍대야외방탈출</th><td class="num">10</td><td class="num">40</td><td class="num">50</td><td>지역형</td></tr><tr><th>아웃도어방탈출</th><td class="num">10 미만</td><td class="num">10 미만</td><td class="num">0~18</td><td>0회 확정 아님</td></tr><tr><th>도시방탈출</th><td class="num">10 미만</td><td class="num">10 미만</td><td class="num">0~18</td><td>0회 확정 아님</td></tr><tr><th>미션투어</th><td class="num">50</td><td class="num">40</td><td class="num">90</td><td>관련 체험 포함</td></tr><tr><th>유능한사건파일</th><td class="num">100</td><td class="num">280</td><td class="num">380</td><td>상품 이름</td></tr><tr><th>에이블즈</th><td class="num">40</td><td class="num">60</td><td class="num">100</td><td>브랜드 이름</td></tr><tr><th>퀘스투어</th><td class="num">10</td><td class="num">10</td><td class="num">20</td><td>브랜드 이름</td></tr><tr><th>리얼월드</th><td class="num">1,300</td><td class="num">5,680</td><td class="num">6,980</td><td>동명 기업 등 의도 혼재</td></tr><tr><th>추리게임</th><td class="num">650</td><td class="num">1,370</td><td class="num">2,020</td><td>디지털 게임도 포함</td></tr><tr><th>이색데이트</th><td class="num">950</td><td class="num">5,510</td><td class="num">6,460</td><td>다양한 데이트 상품</td></tr><tr><th>서울이색데이트</th><td class="num">710</td><td class="num">2,240</td><td class="num">2,950</td><td>지역 콘텐츠 소재</td></tr><tr><th>방탈출</th><td class="num">4,930</td><td class="num">52,200</td><td class="num">57,130</td><td>실내 방탈출 포함</td></tr>
+  </tbody></table></div>
+  <p class="source">조회: <a href="https://www.n-keyword.kr/multi-keyword">엔키워드</a>. 핵심 두 키워드의 PC·모바일 값은 <a href="https://keywordlens.co.kr/keyword?q=%EC%95%BC%EC%99%B8%EB%B0%A9%ED%83%88%EC%B6%9C">키워드렌즈</a>에서도 일치했습니다. 같은 네이버 원천을 쓸 수 있어 독립된 통계 두 개는 아닙니다. <a href="https://ads.naver.com/help/faq/1406">네이버 공식 키워드 도구 안내</a>.</p>
+  <p class="small muted">도구가 “10 미만”을 10으로 더한 경우를 그대로 쓰지 않고 공개 구간을 보존했습니다. 키워드끼리 같은 사람이 반복 검색할 수 있으므로 합계가 구매자 수가 되지 않습니다. <a href="https://datalab.naver.com/">네이버 데이터랩</a>의 상대지수 100도 검색 100건이라는 뜻이 아닙니다.</p>
+  <div class="callout"><strong>월 300주문을 목표로 하면 유입 경로도 설계해야 합니다.</strong><p>방문자 100명 중 3명이 구매한다고 가정하면 300주문에 약 1만 회의 상품 페이지 방문이 필요합니다. 핵심 검색어 두 개의 1,480회 합계는 이 목표를 그대로 뒷받침하지 못합니다. 웹디자이너라면 <b>지역 산책 콘텐츠 → 짧은 체험판 → 명확한 상품 설명 → 구매</b>의 연결을 직접 만들고 각 단계의 이탈을 살펴볼 수 있습니다.</p></div>
+  <p class="small"><strong>상품명 예시 · 제안</strong><br>서울 인사동 야외 방탈출 2인 키트 | 사라진 화원의 인장<br>첫 화면에는 지역·인원·플레이 시간·난이도·구성·스마트폰 조건을 먼저 설명하고, NFC는 “카드에 휴대전화를 대면 다음 단서가 열리는 기능”으로 풀이합니다.</p>
+</section>
+
+<section id="economics" class="section" aria-labelledby="economics-title">
+  <div class="section-kicker">04 · 만드는 돈과 남는 돈</div><h2 id="economics-title">NFC 칩보다 콘텐츠 제작과 고객 확보가 수익을 좌우합니다.</h2><p class="section-intro">키트는 종이 소품과 배터리 없는 NFC 스티커로 구성합니다. 전자 자물쇠·리더기·배터리·맞춤 금형을 넣지 않는 사양입니다. 아래 원가는 업체에 맞춤 견적을 받은 결과가 아닌 <strong>발주 전 예산 범위</strong>입니다.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="NFC 키트 원가 구성"><table><thead><tr><th>항목</th><th>1세트 구성</th><th class="num">세트당 예산 · 부가세 제외</th></tr></thead><tbody>
+  <tr><th>NFC 스티커</th><td>5장 · 500세트면 총 2,500장</td><td class="num">1,250~2,500원</td></tr><tr><th>미션 책자·지도</th><td>A5 소책자와 접는 지도</td><td class="num">1,300~2,200원</td></tr><tr><th>단서 카드·봉투</th><td>카드 10~15장, 봉투 3~5개</td><td class="num">900~1,600원</td></tr><tr><th>상자·배송 포장</th><td>기성 상자, 인쇄 라벨, 외포장</td><td class="num">500~1,000원</td></tr><tr><th>소모품</th><td>봉인 스티커, 보호 봉투, 필기구 등</td><td class="num">300~700원</td></tr><tr><th>NFC 주소 기록·조립·검사</th><td>주소 입력, 휴대전화 인식 확인, 수량 확인</td><td class="num">1,000~1,800원</td></tr><tr><th>불량·손실 여유</th><td>인쇄·태그·포장 재작업</td><td class="num">250~500원</td></tr><tr class="total"><th>제조원가 합계</th><td>택배 운임·개발비·광고비 별도</td><td class="num">5,500~10,300원</td></tr>
+  </tbody></table></div>
+  <div class="grid3"><div class="panel"><span class="label">100세트 소량 제작 · 가정</span><h3>8,000~14,000원 / 세트</h3><p class="small muted">제조 예산 총 80만~140만원.<br>초기 검증용으로 권하는 규모입니다.</p></div><div class="panel soft"><span class="label">500세트 제작 · 가정</span><h3>5,500~10,300원 / 세트</h3><p class="small muted">제조 예산 총 275만~515만원.<br>계산기의 기준 원가 8,000원은 이 단계입니다.</p></div><div class="panel"><span class="label">1,000세트 제작 · 가정</span><h3>4,500~8,000원 / 세트</h3><p class="small muted">제조 예산 총 450만~800만원.<br>할인 단가를 실제로 받은 것은 아닙니다.</p></div></div>
+  <details><summary>단가를 잡을 때 참고한 공개 판매 페이지</summary><ul class="bullet small" style="margin-top:12px"><li><a href="https://item.gmarket.co.kr/Item?goodsCode=850742053">현승 NFC 스티커</a>: 기본 옵션 표시 250원. 옵션 추가금 확인 필요.</li><li><a href="https://item.gmarket.co.kr/Item?goodsCode=627216154">NFC 태그 100장 상품</a>: 60,000원, 장당 600원 계산.</li><li><a href="https://www.11st.co.kr/products/8536706705">현승 브랜드 11번가 상품</a>: 미니 350원, 초미니 390원 옵션 표시.</li><li><a href="https://designws.kr/product/%EC%B9%B4%EB%8B%A4%EB%A1%9C%EA%B7%B8-a5-100%EB%B6%80%EC%A4%91%EC%B2%A0/187/">디자인원석 A5 중철 100부</a>: 기본 176,500원 표시. 8·12·16쪽 옵션이 있어 기본가를 16쪽 가격으로 볼 수 없음.</li><li><a href="https://boxoutlet.co.kr/category/%EC%B9%BC%EB%9D%BC%ED%83%9D%EB%B0%B0%EB%B0%95%EC%8A%A4/60">박스아울렛 기성 박스</a>: 270×200×130mm, 100개 묶음 장당 510원 예시. 실제 키트 크기에 맞춰 선택.</li></ul><p class="small muted">조회일 2026.09.13. 외부 상품 표시가는 배송·옵션·부가세 조건이 다를 수 있습니다. 이 표의 제조 예산은 해당 표시가들을 참고해 별도로 잡은 부가세 제외 가정입니다. 직접 조립해도 작업 시간을 0원으로 보지 않았습니다.</p></details>
+  <h3 style="margin-top:30px">돈을 버는 경로는 네 가지입니다</h3>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="수익 구조"><table><thead><tr><th>판매 방식</th><th>누가 무엇에 돈을 내는가</th><th>주요 비용과 조건</th></tr></thead><tbody>
+  <tr><th>개인 고객 키트</th><td>커플·친구·가족이 실물 키트와 게임 이용권 구매</td><td>제조, 배송, 수수료, 광고, 문의·환불, 콘텐츠 제작비</td></tr><tr><th>다음 이야기 판매</th><td>기존 고객이 새 사건·다른 지역의 에피소드 구매</td><td>새 이야기·퍼즐·답사 비용. 동일 게임을 계속 다시 사는 것으로 계산하지 않음</td></tr><tr><th>학교·기업 단체 납품</th><td>학교·회사가 세트 수나 참여 인원에 맞춰 구매</td><td>납품, 운영 설명, 담당자 대응, 현장 진행 여부</td></tr><tr><th>브랜드·관광지 맞춤 제작</th><td>발주처가 기획·개발비와 운영비·추가 키트비 지급</td><td>영업, 시안·수정, 현장 검사, 이용 권리, 유지 관리 범위</td></tr>
+  </tbody></table></div>
+  <p><a href="https://questour.kr/outdoor_escape_b">퀘스투어의 공개 안내</a>는 간단한 버전 <b>1,500만원부터·1~2개월</b>, 스토리 중심 버전 <b>3,000만원부터·2~3개월</b>입니다. 실제 계약액·순이익이나 사용자가 받을 수 있는 확정 단가는 아닙니다. 세금·구성·현장 지원 범위는 견적 확인이 필요합니다.</p>
+  <p class="small muted"><a href="https://www.modle.run/blog/?bmode=view&amp;idx=173187292">모들의 행사 사례</a>에는 하루 720팀 참여가 소개됩니다. 참가자가 무료로 참여해도 발주처가 비용을 내는 구조가 가능하며, 참가팀 수를 키트 판매량으로 바꾸지 않았습니다.</p>
+  <h3 style="margin-top:30px">34,900원에 한 세트를 팔았을 때</h3>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="기준 판매가의 수익 계산"><table><thead><tr><th>항목</th><th class="num">금액</th><th>쉬운 설명</th></tr></thead><tbody>
+  <tr><th>소비자 결제액</th><td class="num">34,900원</td><td>고객이 내는 돈 · 부가세 포함</td></tr><tr><th>부가세를 뺀 매출</th><td class="num">31,727원</td><td>34,900÷1.1</td></tr><tr><th>제조원가</th><td class="num">−8,000원</td><td>500세트 제작 단계의 예시</td></tr><tr><th>배송 운임</th><td class="num">−2,800원</td><td>판매자가 부담하는 무료배송 가정</td></tr><tr><th>네이버 수수료 비용</th><td class="num">−2,104원</td><td>34,900×6.63%÷1.1</td></tr><tr><th>주문 1건을 얻는 광고비</th><td class="num">−6,000원</td><td>광고비÷광고로 확보한 주문 수</td></tr><tr><th>문의·환불·재발송 여유</th><td class="num">−700원</td><td>평균 예상 비용 배분</td></tr><tr><th>웹 운영비 배분</th><td class="num">−300원</td><td>주문에 따라 나눈 운영비 가정</td></tr><tr class="total"><th>한 세트에서 남는 돈</th><td class="num">약 11,824원</td><td>월 고정비·초기 제작비·소득세를 빼기 전</td></tr>
+  </tbody></table></div>
+  <p class="table-note">소비자 결제액을 제외한 위 매출·비용·남는 돈은 부가세 제외 계산입니다. 비용에 포함된 부가세를 공제할 수 있는 경우로 단순화했습니다. 간이과세·공제 불가 비용·다른 상품 분류는 별도 계산이 필요합니다.</p>
+  <div class="callout warn"><strong>“한 세트에서 남는 돈”은 최종 순이익이 아닙니다.</strong><p>여기서 운영자 보수 등 매달 드는 비용과 처음 만드는 데 쓴 돈을 회수해야 합니다. 기준 예시에서 월 300세트면 고정비 300만원을 뺀 뒤 <b>약 54.7만원</b>이 남습니다. 초기 개발비와 소득세는 아직 빼지 않은 금액입니다.</p></div>
+  <details><summary>네이버 수수료는 어떤 기준으로 계산했나요?</summary><p>네이버 공식 안내의 Npay 수수료는 부가세 포함 <b>1.947~3.630%</b>입니다. 일반 스마트스토어 판매 수수료 <b>3%</b>를 더하면 <b>4.947~6.630%</b>입니다. 판매자 홍보 링크 등 조건을 충족한 거래는 판매 수수료가 <b>1%</b>여서 합계가 <b>2.947~4.630%</b>일 수 있습니다.</p><p>계산기는 일반 실물상품·일반 유입·상한 수수료 <b>6.63%</b>를 기준으로 잡았습니다. 광고비는 별도입니다. 추가 서비스·일부 판매 경로에는 추가 수수료가 있을 수 있습니다. 모든 외부 유입에 낮은 요율이 자동 적용되는 것으로 가정하지 않습니다.</p><p class="source"><a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=3713">Npay 공식 수수료표</a> · <a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=15759">판매 수수료 공식 표</a> · 2026.09.13 재확인</p></details>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="가격별 손익 비교"><table><thead><tr><th>고객 결제액</th><th class="num">한 세트에서 남는 돈</th><th class="num">월 고정비 300만원 회수량</th></tr></thead><tbody><tr><th>29,900원</th><td class="num">약 7,580원</td><td class="num">396세트</td></tr><tr><th>34,900원</th><td class="num">약 11,824원</td><td class="num">254세트</td></tr><tr><th>39,900원</th><td class="num">약 16,068원</td><td class="num">187세트</td></tr></tbody></table></div>
+  <p class="small muted">원가·광고비 등 다른 조건이 같다는 계산입니다. 가격을 올려도 같은 수량이 팔린다는 예측은 아닙니다. 기준 조건에서 초기 제작·개발비만 1,000만원을 회수하려면 약 846세트가 필요하고, 월 고정비와 초기비를 6개월 동안 함께 회수하려면 월 약 395세트가 필요합니다. 1,000만원은 산식 설명용 가정입니다.</p>
+</section>
+
+<section id="calculator" class="section" aria-labelledby="calculator-title">
+  <div class="section-kicker">05 · 숫자를 바꿔 보는 도구</div><h2 id="calculator-title">내 원가와 광고비라면 얼마나 남을까요?</h2><p class="section-intro">판매가·비용·판매량을 입력하면 바로 다시 계산합니다. 광고로 한 주문을 얻는 데 10,000원이 든다면 기준의 6,000원을 바꿔 보세요. 처음 100세트만 만든다면 원가도 소량 제작 조건으로 높여 보는 편이 좋습니다.</p>
+  <noscript><p class="callout warn">자동 계산에는 브라우저의 자바스크립트가 필요합니다. 위 “원가와 수익 구조” 장에서 기준 조건의 계산 결과를 읽을 수 있습니다.</p></noscript>
+  <div class="panel">
+    <form id="profit-form" class="calc-form" aria-label="키트 수익 계산 입력">
+      <div class="field"><label for="price">판매가 · 부가세 포함 (원)</label><input id="price" name="price" type="number" min="0" max="1000000" step="1" value="34900" required></div>
+      <div class="field"><label for="kit">세트당 제조원가 · 부가세 제외 (원)</label><input id="kit" name="kit" type="number" min="0" max="1000000" step="1" value="8000" required></div>
+      <div class="field"><label for="ad">주문 1건 확보 광고비 · 부가세 제외 (원)</label><input id="ad" name="ad" type="number" min="0" max="1000000" step="1" value="6000" required></div>
+      <div class="field"><label for="qty">월 판매량 (세트)</label><input id="qty" name="qty" type="number" min="0" max="1000000" step="1" value="300" required></div>
+      <details open><summary>배송·수수료·고정비·초기비용도 조정하기</summary><div class="calc-form">
+        <div class="field"><label for="shipping">세트당 배송비 · 부가세 제외 (원)</label><input id="shipping" name="shipping" type="number" min="0" max="1000000" step="1" value="2800" required></div>
+        <div class="field"><label for="fee">네이버 수수료 합계 · 부가세 포함 (%)</label><input id="fee" name="fee" type="number" min="0" max="100" step="0.001" value="6.63" required></div>
+        <div class="field"><label for="other">주문당 문의·웹 운영비 · 부가세 제외 (원)</label><input id="other" name="other" type="number" min="0" max="1000000" step="1" value="1000" required></div>
+        <div class="field"><label for="fixed">월 고정비 · 운영자 보수 등 (원)</label><input id="fixed" name="fixed" type="number" min="0" max="1000000000" step="1" value="3000000" required></div>
+        <div class="field"><label for="initial">초기 제작·개발비 · 계산용 가정 (원)</label><input id="initial" name="initial" type="number" min="0" max="1000000000" step="1" value="10000000" required></div>
+        <div class="field"><label for="months">초기비용을 회수할 목표 기간 (개월)</label><input id="months" name="months" type="number" min="1" max="120" step="1" value="6" required></div>
+      </div></details>
+    </form>
+    <div class="row-between" style="margin-top:15px"><p class="small muted" style="margin:0">입력값은 이 파일 밖으로 전송하거나 저장하지 않습니다.</p><button type="button" id="reset-calc" class="no-print">기준값으로 되돌리기</button></div>
+    <p id="calc-error" class="error" role="alert" hidden>모든 칸에 표시된 범위의 숫자를 입력해 주세요. 금액·판매량은 0 이상, 기간은 1~120개월의 정수입니다.</p>
+    <div id="calc-output" aria-live="polite" aria-atomic="true">
+      <div class="calc-results">
+        <div class="result"><span class="small">한 세트 판매 후 남는 돈</span><strong id="unit-result">약 11,824원</strong><span class="small muted">월 고정비·초기비·소득세 차감 전</span></div>
+        <div class="result"><span class="small">월 고정비를 회수하는 판매량</span><strong id="break-result">254세트 / 월</strong><span class="small muted">초기 제작·개발비 회수는 제외</span></div>
+        <div class="result"><span class="small">입력한 판매량의 월 손익</span><strong id="month-result">약 547,126원</strong><span class="small muted">월 고정비 차감 후 · 초기비·소득세 전</span></div>
+        <div class="result"><span class="small">초기비용까지 목표 기간에 회수하려면</span><strong id="full-break-result">395세트 / 월</strong><span class="small muted" id="full-break-caption">6개월 동안 매월 판매 · 고정비 포함</span></div>
+      </div>
+      <p id="calc-detail" class="small">월 고객 결제액 10,470,000원 · 초기비용을 6개월로 나눠 차감한 월 손익 −1,119,540원</p>
+      <p id="calc-loss" class="error" hidden>한 세트를 팔 때마다 손실이 발생하는 조건입니다. 판매량을 늘리기 전에 가격·원가·광고비를 조정해야 합니다.</p>
+    </div>
+    <div class="inline-formula"><b>계산 방식</b><br>한 세트에서 남는 돈 = 판매가÷1.1 − 판매가×수수료율÷1.1 − 제조원가 − 배송비 − 광고비 − 주문당 기타 비용<br>월 손익 = 한 세트에서 남는 돈×월 판매량 − 월 고정비<br>초기비용까지 회수할 월 판매량 = (월 고정비 + 초기비용÷목표 개월 수) ÷ 한 세트에서 남는 돈, 소수점은 올림</div>
+    <p class="small muted" style="margin-top:15px">무료배송·일반 실물상품 가정입니다. 매출과 수수료를 포함한 비용은 부가세 공제가 가능한 조건으로 계산합니다. 초기비용을 기간으로 나눈 값은 투자 회수 계획용이며 세무상 감가상각 계산이 아닙니다. 월 고정비에 본인 보수를 넣고 조립·서버 비용은 주문당 비용과 중복해서 넣지 마세요.</p>
+  </div>
+</section>
+
+<section id="themes" class="section" aria-labelledby="themes-title">
+  <div class="section-kicker">06 · 방탈출의 이야기 유형</div><h2 id="themes-title">첫 작품은 가벼운 추리와 장소 탐색을 결합합니다.</h2><p class="section-intro">공식 테마 목록에서 반복되는 유형 9개를 묶었습니다. 전국 장르별 매출·예약 순위를 조사한 결과는 아닙니다. 장르는 서로 겹칠 수 있고, “가족용·커플용”은 장르보다 고객 구분에 가깝습니다.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="방탈출 주제 9가지"><table><thead><tr><th>주제</th><th>공식 목록의 실제 테마 예</th><th>야외 키트로 바꾸는 아이디어</th><th>제작 판단</th></tr></thead><tbody>
+  <tr><th>사건 수사·추리</th><td>비트포비아 「전래동 자살사건」</td><td>그림·문서 실종, 증언과 시간표의 모순 찾기</td><td>종이 증거물·음성과 잘 맞음</td></tr><tr><th>비밀요원·임무</th><td>서울이스케이프룸 「CIA 본부에서의 탈출」</td><td>비밀 우편, 지령 해독, 연락책의 메시지</td><td>출입 제한 장소에 들어가지 않는 임무로 구성</td></tr><tr><th>공포·초자연 미스터리</th><td>비트포비아 「AMEN」</td><td>낮에도 풀 수 있는 수수께끼와 이어폰 음성</td><td>공개 거리의 암전·추격 연출은 통제가 어려움</td></tr><tr><th>모험·보물 찾기</th><td>서울이스케이프룸 「아마존의 잃어버린 도시」</td><td>옛 지도와 현재 풍경을 겹쳐 유물 위치 추리</td><td>걷고 관찰하는 행동 자체가 이야기가 됨</td></tr><tr><th>판타지·동화</th><td>비트포비아 「마음을 그려드립니다」</td><td>도시 수호자, 동물·계절·문양 수집</td><td>시각 표현과 가족 협동에 적합</td></tr><tr><th>시간여행·역사</th><td>서울이스케이프룸 「시간여행자의 실험실」</td><td>조선·대한제국·산업화 때의 기록을 현재와 연결</td><td>지역 고유의 이야기로 만들기 좋음</td></tr><tr><th>감성·드라마</th><td>비트포비아 「오늘 나는」</td><td>편지·사진·대본을 복원하는 기억 산책</td><td>감정을 퍼즐 해결과 연결해야 힘이 생김</td></tr><tr><th>미래과학·도시 복구</th><td>비트포비아 「MAYDAY」</td><td>통신망·공장 설계도·도시 기록 복원</td><td>NFC로 여는 화면을 이야기 안에 넣기 쉬움</td></tr><tr><th>코미디·일상 소동</th><td>비트포비아 「강남목욕탕」</td><td>잘못 배달된 주문, 뒤섞인 장부, 공연 준비</td><td>말장난은 외국어판에서 다시 설계할 수 있음</td></tr>
+  </tbody></table></div>
+  <p class="source"><a href="https://xdungeon.net/layout/res/home.php?go=theme.list">비트포비아 공식 테마 목록</a> · <a href="https://www.seoul-escape.com/room">서울이스케이프룸 공식 테마 목록</a>. 공개 제목·장르만 참고했으며 문제·해답은 복제하지 않았습니다. 목록에 있다고 특정 날짜 예약 가능까지 확인된 것은 아닙니다.</p>
+  <div class="callout"><strong>웹디자이너에게 특히 잘 맞는 조합: 미술 추리 + 오래된 기록 + 도시 관찰</strong><p>문양 비교, 지도의 겹침, 잘린 그림 복원, 서체·문서 배치의 차이를 단서로 사용할 수 있습니다. 한국사 상식이나 전문 디자인 지식이 없어도 게임 안의 정보로 풀리게 설계합니다. 공포의 인기도를 추정하기보다 첫 작품의 제작·운영 가능성에 우선순위를 두는 제안입니다.</p></div>
+</section>
+
+<section id="traffic" class="section" aria-labelledby="traffic-title">
+  <div class="section-kicker">07 · 사람들이 모이는 장소</div><h2 id="traffic-title">명동은 관광 유입, 홍대·잠실·성수는 교통 유입을 참고합니다.</h2><p class="section-intro">가장 최근 확인한 연간 자료는 2025년 기준입니다. 아래 두 그래프는 서로 다른 측정 방식이므로 합산하거나 하나의 순위로 섞지 않습니다.</p>
+  <div class="grid2">
+    <figure class="panel"><figcaption><h3>외국인 관광 유입</h3><span class="badge fact">2025년 · 일평균 유동인구 추계</span></figcaption><div class="bars" aria-label="16개 선정 명소 내 외국인 유동인구 상위 지역">
+      <div class="bar-row"><span>명동</span><div class="track" aria-hidden="true"><div class="fill" style="width:100%"></div></div><span class="num">100,910명</span></div>
+      <div class="bar-row"><span>N서울타워</span><div class="track" aria-hidden="true"><div class="fill" style="width:56.85%"></div></div><span class="num">57,370명</span></div>
+      <div class="bar-row"><span>삼성·코엑스</span><div class="track" aria-hidden="true"><div class="fill" style="width:46.39%"></div></div><span class="num">46,813명</span></div>
+      <div class="bar-row"><span>강남역</span><div class="track" aria-hidden="true"><div class="fill" style="width:40.84%"></div></div><span class="num">41,210명</span></div>
+      <div class="bar-row"><span>홍대 일대</span><div class="track" aria-hidden="true"><div class="fill" style="width:39.85%"></div></div><span class="num">40,213명</span></div>
+    </div><p class="metric-note">서울AI재단이 선정한 명소 16곳 안의 상위 지역입니다. 90일 미만 단기체류 외국인의 로밍·출입국 자료로 일정 시간 머문 규모를 추계했습니다. 실제 입장객·중복 없는 관광객 수는 아닙니다.</p><p class="source"><a href="https://global.seoul.go.kr/hmpg/sinf/snew/pres/bordContDetail.do?bbs_no=10&amp;pst_no=5728C570C6B50142E063C0A8A023AA4E">서울시 2026.07.22 보도자료</a></p></figure>
+    <figure class="panel"><figcaption><h3>내외국인 교통 유입</h3><span class="badge fact">2025년 · 일평균 승차+하차</span></figcaption><div class="bars" aria-label="선정한 지하철역의 승하차 수">
+      <div class="bar-row"><span>잠실 · 2호선</span><div class="track" aria-hidden="true"><div class="fill" style="width:100%;background:#837154"></div></div><span class="num">157,600명</span></div>
+      <div class="bar-row"><span>홍대 · 2호선</span><div class="track" aria-hidden="true"><div class="fill" style="width:97.27%;background:#837154"></div></div><span class="num">153,298명</span></div>
+      <div class="bar-row"><span>강남 · 2호선</span><div class="track" aria-hidden="true"><div class="fill" style="width:96.59%;background:#837154"></div></div><span class="num">152,232명</span></div>
+      <div class="bar-row"><span>서울역 · 1호선</span><div class="track" aria-hidden="true"><div class="fill" style="width:88.55%;background:#837154"></div></div><span class="num">139,553명</span></div>
+      <div class="bar-row"><span>성수 · 2호선</span><div class="track" aria-hidden="true"><div class="fill" style="width:65.03%;background:#837154"></div></div><span class="num">102,489명</span></div>
+    </div><p class="metric-note">검토에 유용한 역을 골랐으며 이 다섯 곳이 전체 상위 5개 역이라는 뜻은 아닙니다. 승차와 하차를 더한 수치로 거리의 보행량·서로 다른 사람 수가 아닙니다. 호선도 표기된 범위만 사용했습니다.</p><p class="source"><a href="https://www.kric.go.kr/jsp/board/portal/sub01/railNewsDetail.jsp?p_id1=M01060101&amp;p_id2=694282&amp;p_id3=2026.03.11">서울교통공사 발표 · 철도산업정보센터 게재</a></p></figure>
+  </div>
+  <div class="callout warn"><strong>사람이 많다는 것과 게임을 살 가능성은 다릅니다.</strong><p>출퇴근 중인 사람, 잠깐 사진만 찍는 여행객, 이미 일정이 꽉 찬 관광객이 섞여 있습니다. 첫 코스는 유입뿐 아니라 <b>2~4명이 멈출 자리·길 찾기 쉬움·읽고 관찰할 여유·키트 수령 방법</b>까지 함께 확인해야 합니다.</p></div>
+  <p>서울시 <a href="https://data.seoul.go.kr/dataVisual/seoul/guide.do">실시간 도시데이터</a>는 관광지·교통요지 등 121장소를 제공합니다. 평일·주말·시간대별 코스 검토에 쓰고, 한 시각의 혼잡도를 연중 인기 순위로 해석하지 않습니다.</p>
+  <p class="small muted"><a href="https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071544.pdf?time=20260616143608">2025년 기준 서울관광 연차보고서</a>의 외국인 조사에서는 개별여행 비중이 85.1%였습니다. 스스로 시작하는 관광 게임을 검토할 배경은 되지만, 방탈출 구매 의향을 뜻하지는 않습니다.</p>
+</section>
+
+<section id="locations" class="section" aria-labelledby="locations-title">
+  <div class="section-kicker">08 · 서울의 이름을 이야기로</div><h2 id="locations-title">후보 지역 20곳을 특색과 유래로 살펴봅니다.</h2><p class="section-intro">행정동과 관광 상권이 섞인 목록입니다. 인접하거나 겹치는 지역을 독립적인 시장으로 더하지 않습니다. 지역의 역사와 이름은 출처를, 게임 아이디어는 새 창작임을 표시했습니다. 아래 고객별 분류는 공식 관광 순위가 아닌 기획 판단입니다.</p>
+  <div class="filters no-print"><div class="search"><label for="location-search">지역·특색 찾기</label><input class="filter-control" type="search" id="location-search" placeholder="예: 성수, 그림, 한옥, 가족"></div><div><label for="audience-filter">주요 검토 목적</label><select class="filter-control" id="audience-filter"><option value="all">모든 지역</option><option value="tourist">관광객</option><option value="date">데이트</option><option value="history">역사·이야기</option><option value="family">가족</option><option value="business">기업·단체</option></select></div><button type="button" id="location-reset">전체 보기</button></div>
+  <div class="row-between"><p id="location-count" class="small muted" role="status">20개 지역 표시</p><button type="button" id="location-details" class="no-print" aria-expanded="false">게임 아이디어 모두 펼치기</button></div>
+  <div class="location-grid" id="location-grid">
+  <article class="location" data-audiences="tourist date">
+      <span class="label">후보 01</span><h3>명동</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>조선시대 행정구역 명례방에서 이어진 이름으로 설명된다.</p>
+      <p><b>특색</b> · 쇼핑·뷰티·음식·명동성당·명동예술극장. 외국인 유입 수치가 뚜렷함.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘사라진 공연의 초대장’. 관광 일정 사이 짧게 즐기는 구조가 맞고, 주요 보행 흐름을 막는 잠시 멈추는 지점은 피함.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0018239">유래</a></p>
+    </article>
+<article class="location" data-audiences="tourist date">
+      <span class="label">후보 02</span><h3>남산·N서울타워</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>도성 남쪽 산이라는 위치를 드러내는 이름. 옛 이름 목멱산, 불·연기 신호와 성곽의 역사.</p>
+      <p><b>특색</b> · 전망·야경·산책·한양도성. 서울을 한눈에 보는 경험.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘끊어진 봉수의 신호’. 높낮이와 조망을 활용하되, 정상 접근 이동과 게임 구간을 따로 설계.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0011947">남산</a> · <a href="https://seoulcitywall.seoul.go.kr/content/135.do">도성 안내</a></p>
+    </article>
+<article class="location" data-audiences="tourist date">
+      <span class="label">후보 03</span><h3>홍대</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>홍익대학교를 중심으로 형성된 대학가·상권의 통칭.</p>
+      <p><b>특색</b> · 독립 음악·거리 공연·패션·캐릭터·클럽·젊은 자유여행객.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘마지막 공연의 데모테이프’. 음악·오디션·팬레터 소재. 거리 소음이 있어 음성에는 자막 제공.</p></details>
+      <p class="source">지역 자료: <a href="https://english.seoul.go.kr/wp-content/uploads/2026/03/2026_guidebook_EN.pdf">2026 서울 관광 가이드</a></p>
+    </article>
+<article class="location" data-audiences="date">
+      <span class="label">후보 04</span><h3>연남동</h3><div class="tags"><span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>연희동의 남쪽이라는 뜻.</p>
+      <p><b>특색</b> · 옛 철길이 공원이 된 경의선숲길, 작은 카페·식당·골목.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘존재하지 않는 종착역’. 기차표·노선·기억을 연결하기 좋음. 주거 골목보다는 공원·상업 동선 중심.</p></details>
+      <p class="source">지역 자료: <a href="https://love.seoul.go.kr/articles/10581">서울사랑</a></p>
+    </article>
+<article class="location" data-audiences="date family">
+      <span class="label">후보 05</span><h3>성수동·서울숲</h3><div class="tags"><span class="tag">데이트</span> <span class="tag">가족</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>성덕정의 ‘성’과 뚝섬수원지의 ‘수’를 취했다는 설명.</p>
+      <p><b>특색</b> · 수제화·제조업의 흔적, 공장·창고를 바꾼 공간, 카페·브랜드 체험, 공원.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘마지막 구두 장인의 설계도’. 재료·도면·조립 퍼즐에 적합. 연무장길과 서울숲 전체를 한 번에 묶기보다 한 구역부터.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0067004">유래</a> · <a href="https://www.sd.go.kr/tour/contents.do?key=1895">성동구 수제화 코스</a></p>
+    </article>
+<article class="location" data-audiences="tourist history">
+      <span class="label">후보 06</span><h3>인사동</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">역사·이야기</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>관인방의 ‘인’과 대사동의 ‘사’를 결합.</p>
+      <p><b>특색</b> · 글씨와 그림·골동품·공예·전통 찻집·갤러리. 전통문화 관광 동기가 명확함.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘사라진 화원의 인장’. 그림·그림에 찍는 도장·문양·장부 퍼즐. 외국어판은 한국사 사전지식 없이 현장에서 풀리게 설계.</p></details>
+      <p class="source">지역 자료: <a href="https://hanok.seoul.go.kr/m/kor/town/town03.do">서울한옥포털</a></p>
+    </article>
+<article class="location" data-audiences="tourist date">
+      <span class="label">후보 07</span><h3>익선동</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>1914년 익동의 ‘익’과 정선방의 ‘선’을 합성.</p>
+      <p><b>특색</b> · 작은 도시 한옥, 좁은 골목, 카페·식당·사진. 정세권의 한옥 개발 역사.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘두 이름을 가진 집’. 편지와 옛 지도 대조. 골목 정체가 생기기 쉬워 핵심 퍼즐은 넓은 거점이나 제휴 실내에서.</p></details>
+      <p class="source">지역 자료: <a href="https://hanok.seoul.go.kr/front/kor/town/town09.do">서울한옥포털</a></p>
+    </article>
+<article class="location" data-audiences="tourist history">
+      <span class="label">후보 08</span><h3>북촌·삼청동</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">역사·이야기</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>북촌은 청계천·종로 북쪽 마을. 삼청은 산·물·사람의 맑음이라는 설과 도교 삼청전 관련 설이 함께 전함.</p>
+      <p><b>특색</b> · 한옥·공방·미술관·궁궐 주변 풍경. 주거지와 관광 동선이 공존.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘세 가지 맑음을 찾는 수호자’. 삼청 유래는 전해 오는 이야기로 표시. 방문 시간 제한 구역 시간 제한 때문에 첫 상시 상품은 신중히 선정.</p></details>
+      <p class="source">지역 자료: <a href="https://hanok.seoul.go.kr/front/kor/town/town01.do">북촌</a> · <a href="https://encykorea.aks.ac.kr/Article/E0026893">삼청의 유래설</a></p>
+    </article>
+<article class="location" data-audiences="history date">
+      <span class="label">후보 09</span><h3>서촌</h3><div class="tags"><span class="tag">역사·이야기</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>현재 관광상권에서 말하는 서촌은 경복궁 서쪽 일대의 통칭. 과거 모든 시대의 행정지명·범위와 같다고 보지 않음.</p>
+      <p><b>특색</b> · 조선시대 중간 계층의 문화·문학·화가의 집·통인시장·인왕산 아래 골목.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘그림 밖으로 사라진 화가’. 옛 그림과 오늘 풍경의 차이, 사진 프레임 퍼즐. 긴 등산 구간을 빼고 골목 중심으로 설계.</p></details>
+      <p class="source">지역 자료: <a href="https://hanok.seoul.go.kr/front/kor/town/town02.do">서울한옥포털</a></p>
+    </article>
+<article class="location" data-audiences="history business">
+      <span class="label">후보 10</span><h3>정동·덕수궁 주변</h3><div class="tags"><span class="tag">역사·이야기</span> <span class="tag">기업·단체</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>신덕왕후의 정릉이 있던 데서 정동이라는 이름이 유래. 능은 뒤에 현재 정릉으로 옮겨짐.</p>
+      <p><b>특색</b> · 대한제국·외교 공관·근대 학교·교회·돌담길.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘대한제국의 비밀 우편’. 시간표·우표·외교 문서·인장을 활용. 건물 외부 관찰로 완주 가능하게 하고 내부는 선택 체험.</p></details>
+      <p class="source">지역 자료: <a href="https://inmun360.culture.go.kr/content/545.do?cid=2371955&amp;mode=view&amp;page=">유래</a> · <a href="https://www.seoul.go.kr/story/jeongdong/">서울시 정동 안내</a></p>
+    </article>
+<article class="location" data-audiences="history date">
+      <span class="label">후보 11</span><h3>을지로·청계천 주변</h3><div class="tags"><span class="tag">역사·이야기</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>을지로 이름은 고구려 을지문덕에서 유래. 그가 이 골목에 살거나 전투했다는 의미는 아님.</p>
+      <p><b>특색</b> · 인쇄·공구·조명·금속 등 제조 상권, 오래된 건물과 음식·문화 공간.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘새벽의 인쇄 주문서’. 인쇄 겹침·색 분해·제작 순서 퍼즐. 실제 작업·운반을 방해하지 않는 거점과 시간대를 답사.</p></details>
+      <p class="source">지역 자료: <a href="https://www.junggu.seoul.kr/dong/euljiro/content.do?cmsid=13545">중구 을지로동 소개</a></p>
+    </article>
+<article class="location" data-audiences="tourist history">
+      <span class="label">후보 12</span><h3>광장시장</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">역사·이야기</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>광교와 장교를 연결한 초기 시장 구상에서 ‘광장’이 생겼고, 현재는 廣藏으로 표기. 지금 시장이 두 다리 사이에 있다는 뜻으로 쓰면 부정확함.</p>
+      <p><b>특색</b> · 음식·직물·한복·상인의 역사.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘두 다리가 남긴 장부’. 지도·직물 패턴·가격표 소재. 필수 음식 구매 없이 풀리게 하고 상인 응대는 사전 제휴.</p></details>
+      <p class="source">지역 자료: <a href="https://futureheritage.seoul.go.kr/futureHeritageMeet/promotion/list.do?tabNum=03">서울미래유산</a></p>
+    </article>
+<article class="location" data-audiences="tourist business">
+      <span class="label">후보 13</span><h3>동대문·DDP</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">기업·단체</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>동대문은 한양도성 동쪽 큰 문인 흥인지문을 가리킴.</p>
+      <p><b>특색</b> · 성문·도성·옛 운동장과 DDP의 현대 디자인·패션 상권이 겹침.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘사라진 동쪽 문 도면’. 성벽·수문·건축 형태를 비교. 넓은 도로 횡단과 행사 설치물을 고려.</p></details>
+      <p class="source">지역 자료: <a href="https://seoulcitywall.seoul.go.kr/content/134.do">서울 한양도성</a></p>
+    </article>
+<article class="location" data-audiences="date history">
+      <span class="label">후보 14</span><h3>혜화·대학로</h3><div class="tags"><span class="tag">데이트</span> <span class="tag">역사·이야기</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>혜화는 혜화문에서 이어지는 이름. 대학로는 옛 서울대학교 캠퍼스와 연관.</p>
+      <p><b>특색</b> · 연극·소극장·마로니에공원·예술가·낙산 인근.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘개막 직전 사라진 마지막 장면’. 대본·배역·음성 증언으로 추리. 공연 전후 60~90분 상품으로 검토.</p></details>
+      <p class="source">지역 자료: <a href="https://theme.archives.go.kr/next/koreaOfRecord/Daehak-ro.do">대학로, 국가기록원</a> · <a href="https://encykorea.aks.ac.kr/Article/E0063653">혜화문</a></p>
+    </article>
+<article class="location" data-audiences="family date">
+      <span class="label">후보 15</span><h3>잠실·석촌</h3><div class="tags"><span class="tag">가족</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>잠실은 누에를 기르는 시설에서 유래. 석촌은 돌이 많은 마을 ‘돌마리’를 한자로 옮긴 이름이며 구청은 백제 돌을 쌓아 만든 무덤과의 관련을 유력하게 설명.</p>
+      <p><b>특색</b> · 호수 산책·대형 쇼핑·놀이시설·한성백제의 옛 무덤.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘누에가 남긴 황금실’. 가족·커플용 판타지, 실·문양·성장 순서 퍼즐. 놀이공원 입장과 게임 이용권은 구분.</p></details>
+      <p class="source">지역 자료: <a href="https://www.songpa.go.kr/www/contents.do?key=2654">잠실</a> · <a href="https://www.songpa.go.kr/www/contents.do?key=2537">석촌</a></p>
+    </article>
+<article class="location" data-audiences="tourist business">
+      <span class="label">후보 16</span><h3>삼성동·코엑스</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">기업·단체</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>三成은 세 마을을 합친 데서 유래한 지명. 기업 삼성의 三星과 다름. 옛 마을 이름의 열거 방식은 자료별 차이가 있어 합성 취지만 사용.</p>
+      <p><b>특색</b> · 전시·국제회의·쇼핑·봉은사·현대 도시 경관.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘세 마을의 기억을 복원하는 도시’. 전시 방문객 대상 제휴형에 적합. 코엑스 내부를 쓰면 실내외 혼합 상품으로 구분하고 시설 협의.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0066956">한국민족문화대백과사전</a></p>
+    </article>
+<article class="location" data-audiences="date business">
+      <span class="label">후보 17</span><h3>강남역 일대</h3><div class="tags"><span class="tag">데이트</span> <span class="tag">기업·단체</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>강남은 한강 남쪽을 가리키는 지리적 명칭. 이 표에서는 넓은 강남권 전체가 아니라 강남역 상권을 뜻함.</p>
+      <p><b>특색</b> · 업무·만남·식음·쇼핑·오락·문화. 관광과 일상 목적의 유입이 섞임.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘퇴근 전 마지막 비밀 업무’. 직장인·친구용 현대 미스터리. 긴 횡단·복잡한 교차로보다 한쪽 블록 중심.</p></details>
+      <p class="source">지역 자료: <a href="https://www.gangnam.go.kr/contents/history/1/view.do?mid=ID06_040405">강남구 역사</a></p>
+    </article>
+<article class="location" data-audiences="tourist date">
+      <span class="label">후보 18</span><h3>이태원</h3><div class="tags"><span class="tag">관광객</span> <span class="tag">데이트</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>조선시대 여행자 숙소인 梨泰院에서 동네 이름이 유래했다는 설명. 배나무 관련 설명도 전함.</p>
+      <p><b>특색</b> · 여러 나라의 음식·상점·문화가 모인 지역.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘여행자의 잃어버린 수하물’. 옛 여행자 숙소와 오늘의 국제적 분위기를 연결. 낮 시간의 넓은 동선부터 검토.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0068370">한국민족문화대백과사전</a></p>
+    </article>
+<article class="location" data-audiences="family business">
+      <span class="label">후보 19</span><h3>여의도</h3><div class="tags"><span class="tag">가족</span> <span class="tag">기업·단체</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>‘너섬’ 등의 이름이 한자화되었다는 유래가 전함. 양말산과 홍수에 관한 이야기는 전해 오는 이야기로 취급.</p>
+      <p><b>특색</b> · 한강·공원·금융·국회·쇼핑. 업무와 주말 나들이의 시간대 차이가 큼.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘물 위로 떠오른 섬의 기록’. 옛 물길·방향·지도를 활용. 넓은 권역 전체를 묶지 말고 공원 한 구간부터.</p></details>
+      <p class="source">지역 자료: <a href="https://encykorea.aks.ac.kr/Article/E0036448">유래설</a></p>
+    </article>
+<article class="location" data-audiences="date family">
+      <span class="label">후보 20</span><h3>망원동</h3><div class="tags"><span class="tag">데이트</span> <span class="tag">가족</span></div>
+      <p class="origin"><strong>이름의 유래·역사</strong>한강변 정자인 망원정에서 이름이 유래.</p>
+      <p><b>특색</b> · 망원시장·작은 가게·카페·한강 산책. 생활형 동네 경험.</p>
+      <details><summary>게임 아이디어 · 새 창작</summary><p>‘망원정에서 온 오래된 주문’. 시장 장부·거리 관찰·생활사 소재. 시장과 한강의 왕복 부담을 현장에서 확인.</p></details>
+      <p class="source">지역 자료: <a href="https://love.seoul.go.kr/articles/10051?f=widget">서울사랑</a></p>
+    </article>
+  </div>
+  <p id="location-empty" class="callout" hidden>조건에 맞는 지역이 없습니다. 검색어를 줄이거나 “전체 보기”를 눌러 보세요.</p>
+  <div class="callout"><strong>추가 후보: 남대문시장·숭례문</strong><p>도성 남쪽 큰 문에서 이름이 이어지며 상인·직물·물류 이야기를 만들 수 있습니다. 명동·남대문·남산을 처음부터 모두 묶기보다 한 권역의 짧은 코스를 먼저 검증합니다.</p><p class="source"><a href="https://english.seoul.go.kr/wp-content/uploads/2024/09/2024_SEOUL_LIFESTYLE_TOUR.pdf">서울 라이프스타일 관광 안내</a> · <a href="https://seoulcitywall.seoul.go.kr/content/135.do">한양도성 남산 구간</a></p></div>
+  <div class="callout warn"><strong>북촌은 지정 구역의 방문 시간을 반영해야 합니다.</strong><p>북촌 전체가 아닌 <b>지정 레드존</b>의 관광객 방문 가능 시간은 <b>10~17시</b>입니다. 2025.03.01부터 위반 과태료 부과 정책이 시행됐습니다. 경계와 예외를 확인하고 야간 코스에 해당 구역을 넣지 않습니다.</p><p class="source"><a href="https://www.jongno.go.kr/dosi/view/spcl/spcl.html">종로구 특별관리지역 지도</a> · <a href="https://www.jongno.go.kr/mayor/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000001618&amp;menuId=388338&amp;menuNo=388338&amp;nttId=250133">시간·시행 관련 종로구 안내</a></p></div>
+</section>
+
+<section id="concepts" class="section" aria-labelledby="concepts-title">
+  <div class="section-kicker">09 · 첫 상품을 고른다면</div><h2 id="concepts-title">인사동을 1순위로 답사하고, 성수·서촌과 비교합니다.</h2><p class="section-intro">다음은 이번 조사에서 만든 <strong>새로운 허구의 설정</strong>입니다. 실제 역사 사건이나 지역 전설처럼 소개하면 안 됩니다. 현장 답사·시설 협의·실제 게임 개발은 아직 진행하지 않았습니다.</p>
+  <div class="grid2">
+    <article class="concept"><span class="code">우선 검토 01 · 인사동</span><h3>사라진 화원의 인장</h3><p>도난당한 그림의 진위를 밝히고 마지막 인장을 찾습니다. 화원은 여기서 <b>그림을 그리는 사람</b>, 인장은 <b>도장</b>을 뜻합니다.</p><p><b>디자인 활용</b> · 그림 조각, 낙관, 감정 기록, 접는 지도와 증언 화면을 하나의 시각 스타일로 만듭니다.</p><p class="mini">NFC 5개: 수집가·화가·표구사·전달인의 기록과 마지막 확인.<br>관광객·데이트 고객을 함께 검토. 한자나 한국사 상식 없이 풀리는 시각 단서가 필요합니다.</p></article>
+    <article class="concept"><span class="code">우선 검토 02 · 성수</span><h3>마지막 구두 장인의 설계도</h3><p>사라진 장인이 남긴 다섯 기록으로 한 켤레의 비밀을 복원합니다.</p><p><b>디자인 활용</b> · 작업 지시서, 재료 표본 이미지, 도면과 제작 순서를 브랜드처럼 일관되게 구성합니다.</p><p class="mini">NFC 5개: 재료·제작 음성·작업 기록·선택·완성 증서.<br>수제화·산업 공간의 흔적 활용. 연무장길과 서울숲 전체를 무리하게 잇지 않습니다.</p></article>
+    <article class="concept"><span class="code">우선 검토 03 · 서촌</span><h3>그림 밖으로 사라진 화가</h3><p>풍경화 속 사라진 장소를 따라가며 한 화가의 마지막 하루를 복원합니다.</p><p><b>디자인 활용</b> · 풍경의 잘린 장면, 편지, 사진 테두리와 기록 화면의 겹침을 퍼즐로 만듭니다.</p><p class="mini">NFC 5개: 사진·기억 조각·편지·선택·결말.<br>골목·공개된 외관·풍경의 방향을 관찰. 긴 등산 구간은 첫 코스에서 제외합니다.</p></article>
+    <article class="concept"><span class="code">확장 후보 · 정동</span><h3>대한제국의 비밀 우편</h3><p>수취인이 지워진 우편물을 해독해 마지막 목적지에 전달합니다.</p><p><b>디자인 활용</b> · 우표, 시간표, 가상의 외교 문서와 배달 기록. 역사적 배경 위에 허구의 인물을 둡니다.</p><p class="mini">NFC 5개: 지령·번역 단서·시간 기록·증언·배달 확인.<br>근대 건축·돌담길. 학교·기업 단체 상품도 검토할 수 있습니다.</p></article>
+    <article class="concept"><span class="code">확장 후보 · 연남</span><h3>존재하지 않는 종착역</h3><p>사라진 열차의 승차권이 과거와 현재의 길을 연결합니다.</p><p><b>디자인 활용</b> · 기차표·시간표·노선도와 가상의 역무원 화면. 감성적인 기념 티켓을 남깁니다.</p><p class="mini">NFC 5개: 안내 방송·표 확인·승객 기억·선택·도착 기록.<br>옛 철길과 공원 배치. 모든 음성은 글로도 읽을 수 있게 만듭니다.</p></article>
+    <article class="concept"><span class="code">확장 후보 · 잠실</span><h3>누에가 남긴 황금실</h3><p>도시의 기억을 잇는 실이 끊어져 다섯 조각을 되찾습니다.</p><p><b>디자인 활용</b> · 도감, 성장 카드, 실의 패턴과 가족이 함께 완성하는 그림 지도.</p><p class="mini">NFC 5개: 도감·성장 기록·실의 패턴·힌트·완주 기념.<br>호수·식물·공공 조형물. 가족이 읽기와 관찰 역할을 나누게 설계합니다.</p></article>
+  </div>
+  <h3 style="margin-top:30px">인사동 첫 키트의 제작 범위 · 제안</h3>
+  <div class="grid2"><div class="panel"><ol class="steps"><li><strong>3분 체험판으로 시작</strong><p>본편 정답과 무관한 도장 비교 문제 1개. 구매 전에 어떤 방식인지 이해하게 만듭니다.</p></li><li><strong>현장 거점 5곳을 목표로 답사</strong><p>각 거점에서 주변을 관찰하고 종이 단서와 비교. 주소만 찍고 지나가는 구성이 되지 않게 합니다.</p></li><li><strong>NFC로 기록을 열기</strong><p>카드 속 태그가 증언·그림·힌트를 엽니다. 다음 문제는 관찰한 정보와 함께 풀어야 합니다.</p></li><li><strong>다섯 기록을 합쳐 결말 완성</strong><p>마지막에는 모든 증거를 조합해 그림의 진위를 판단하고 완주 카드를 받습니다.</p></li></ol></div><div class="panel soft"><h3>디자인 작업물 목록</h3><ul class="bullet"><li>상품 이름·색·글자·문양 규칙 1세트</li><li>모바일 화면: 시작, 증거, 답 입력, 힌트, 진행 복구, 결말</li><li>미션 북·지도, 단서 카드 10~15장, 봉투 3~5개, NFC 카드 5장</li><li>기성 상자에 붙일 라벨과 봉인 스티커</li><li>구성·플레이 방법·스마트폰 조건을 설명하는 상세페이지</li><li>스포일러 없는 완주 카드와 후기 안내</li></ul><p class="small muted">거점 수·시간·구성은 제작 목표이며 현장 검증 후 줄이거나 바꿀 수 있습니다. 실제 장소에 고정하는 태그가 아닌, 휴대하는 카드의 NFC를 기본으로 잡았습니다.</p></div></div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="고객 유형별 지역 우선순위"><table><thead><tr><th>주요 고객</th><th>먼저 검토할 지역</th><th>잘 맞는 상품 방향 · 제안</th></tr></thead><tbody><tr><th>외국인 관광객</th><td>인사동·명동</td><td>한국다운 기념품 + 짧고 명확한 탐색. 여행 중 키트를 받는 방법이 중요</td></tr><tr><th>국내 데이트 고객</th><td>성수·연남</td><td>카페·산책 전후의 감성 추리, 사진·티켓 기념품</td></tr><tr><th>역사·예술에 관심 있는 고객</th><td>서촌·정동</td><td>다른 동네로 옮기면 성립하지 않는 장소의 이야기</td></tr><tr><th>어린이 동반 가족</th><td>잠실·석촌·서울숲</td><td>읽기 난도와 이동량을 낮춘 협동 탐색</td></tr><tr><th>기관·기업 단체</th><td>정동·여의도·코엑스 제휴형</td><td>집결·분산 운영이 쉬운 협동 임무, 행사 주제와 연결</td></tr></tbody></table></div>
+  <p class="small muted">인사동을 우선 제안한 이유는 사용자의 디자인 역량과 상품 소재의 궁합입니다. 외국인 유동인구가 가장 많은 곳으로 확인했다는 뜻은 아닙니다. 코스 확정은 답사와 실제 유료 반응을 보고 합니다.</p>
+</section>
+
+<section id="production" class="section" aria-labelledby="production-title">
+  <div class="section-kicker">10 · NFC와 제작 방식</div><h2 id="production-title">태그에는 주소를, 이야기는 웹에 담습니다.</h2><p class="section-intro">NFC는 휴대전화를 가까이 대면 정보를 읽는 기능입니다. 이번 사양에서는 작은 스티커가 웹 주소를 알려 주고, 사진·음성·문제는 휴대전화의 인터넷 화면에서 보여 줍니다.</p>
+  <div class="grid3"><div class="panel"><span class="label">1. 휴대하는 증거 카드</span><h3>NFC 스티커에 주소 기록</h3><p>짧은 보안 웹 주소를 넣습니다. 카드는 이야기 속 도장·우편·기록물처럼 디자인합니다.</p></div><div class="panel"><span class="label">2. 휴대전화로 열기</span><h3>태그를 대고 알림 선택</h3><p>기기의 기본 읽기 기능으로 링크를 엽니다. 읽히지 않으면 QR이나 수동 코드를 사용합니다.</p></div><div class="panel"><span class="label">3. 구매 확인 후 진행</span><h3>웹에서 증거·힌트 보기</h3><p>키트의 시작 코드와 진행 기록을 확인합니다. 태그와 현장 관찰 정보를 함께 사용합니다.</p></div></div>
+  <p class="source"><a href="https://www.nxp.com/products/NTAG213_215_216">NXP NTAG213 안내</a>: 사용자 메모리 144바이트의 태그입니다. 전체 게임을 저장하기보다 짧은 주소를 넣는 사양에 맞습니다. <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Apple 공식 문서</a>: iPhone XS 이후 기기의 기본 태그 읽기와 동작 조건을 설명합니다.</p>
+  <div class="grid2" style="margin-top:25px">
+    <div class="panel"><h3>직접 디자인할 때 챙길 점</h3><ul class="bullet"><li><b>밝은 야외에서도 읽히는 화면.</b> 글자 대비를 높이고 중요한 조작 버튼은 충분히 크게 만듭니다.</li><li><b>소리 없이도 진행.</b> 음성에는 글을 함께 제공하고, 영상 자동 재생을 기본으로 두지 않습니다.</li><li><b>한 화면에 한 가지 행동.</b> “무엇을 찾고, 어떤 카드를 보고, 무엇을 입력하는가”를 짧게 안내합니다.</li><li><b>힌트는 조금씩.</b> 관찰 방향→조합 방법→거의 정답 순서로 도움을 늘립니다.</li><li><b>공유 이미지는 스포일러 없이.</b> 정답 대신 사건명·선택 결과·기념 문양을 보여 줍니다.</li></ul></div>
+    <div class="panel"><h3>실물과 실제 휴대전화에서 검사</h3><ul class="bullet"><li><b>아이폰·갤럭시 모두 확인.</b> 화면 잠금·카메라 사용 등 기기 상태에 따라 읽기가 달라집니다.</li><li><b>QR·수동 코드 준비.</b> NFC가 안 돼도 구매한 게임을 진행할 수 있게 합니다.</li><li><b>완성된 카드로 확인.</b> 태그 겹침, 금속 상자, 코팅과 재질이 읽기에 영향을 줄 수 있습니다.</li><li><b>새로고침 후 이어 하기.</b> 게임을 닫았다가 다시 열었을 때 진행을 복구할 방법을 검증합니다.</li><li><b>가볍고 짧은 자료.</b> 큰 동영상에 의존하지 않고 사진·글·짧은 음성으로 데이터 부담을 줄입니다.</li></ul></div>
+  </div>
+  <details><summary>개발자에게 전달할 짧은 요구사항</summary><p>첫 버전은 “NFC에 기록한 HTTPS 주소를 휴대전화가 열고 웹게임으로 연결하는 방식”으로 요청합니다. 웹페이지가 직접 NFC를 읽는 <b>Web NFC</b>와 구분합니다. Google 공식 문서는 Web NFC를 Android용 Chrome의 기능으로 설명하므로, 이를 모든 휴대전화에서 같은 방식으로 쓰는 구조를 전제로 잡지 않습니다.</p><p>최소 기능은 키트 시작 코드, 이용 권한, 정답 확인, 단계별 힌트, 진행 복구, 언어 선택, 기본 오류 기록입니다. 태그 주소를 읽기 전용으로 잠가도 주소 공유까지 막히는 것은 아닙니다. 키트별 사용권 관리가 필요하고, 강한 정품 태그 확인은 별도 보안 태그·서버 범위로 견적합니다.</p><p class="source"><a href="https://developer.chrome.com/docs/capabilities/nfc">Google 공식 Web NFC 안내</a> · <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Apple의 기본 태그 읽기 안내</a></p></details>
+  <div class="callout"><strong>실제 장소에 가야 풀리는 이유를 만듭니다.</strong><p>키트의 NFC를 찍은 사실만으로 현장에 갔다고 증명되지는 않습니다. 건물 외관·공공 문양·방향처럼 주변을 봐야 알 수 있는 단서와 연결합니다. 바뀌기 쉬운 팝업·가격표·메뉴를 필수 정답으로 쓰면 수정과 고객 대응 비용이 늘어날 수 있습니다.</p></div>
+  <h3>발주 전에 같은 사양으로 비교할 항목</h3><p>태그 종류·크기·접착 재질·인쇄 여부·주소 기록·읽기 전용 설정·불량 교체 조건, 책자의 크기·쪽수·종이·인쇄 색·코팅, 봉투와 카드 수량, 박스 규격, 조립·검사 시간, 배송·부가세를 적어 견적을 비교합니다. 태그 5장 기준으로 100세트는 500장, 500세트는 2,500장이 필요합니다.</p>
+  <p class="small muted">공공 시설물에 태그를 붙이거나 상점 안을 필수 코스로 쓰는 경우 관리 주체와 협의가 필요합니다. 주거 출입구·좁은 통로·상점 대기줄을 퍼즐 거점으로 잡지 않습니다. 이 보고서의 비용에는 그런 장소 설치·임대·현장 인력이 포함되어 있지 않습니다.</p>
+</section>
+
+<section id="roadmap" class="section" aria-labelledby="roadmap-title">
+  <div class="section-kicker">11 · 작게 만들고, 돈을 받고, 개선하기</div><h2 id="roadmap-title">첫 6주는 “한 작품이 팔리고 완주되는지” 확인하는 데 씁니다.</h2><p class="section-intro">아래는 실행 순서의 제안입니다. 주당 작업 시간과 개발 협업 여부를 아직 모르므로 6주 안의 출시를 보장하는 일정은 아닙니다. 각 단계의 확인이 끝나야 다음 제작 수량을 늘립니다.</p>
+  <div class="grid3"><div class="phase"><span class="week">1주차 · 지역과 고객</span><h3>세 곳을 걷고 하나를 고릅니다</h3><p>인사동·성수·서촌을 평일과 주말에 답사합니다. 역에서 찾기 쉬운 시작점, 멈출 자리, 화장실, 비·더위·휴관의 영향을 기록합니다.</p><p><b>남길 결과물</b><br>후보 동선 1개, 고객 1종류, 이야기 한 문장, 필수 장소의 운영 조건.</p></div><div class="phase"><span class="week">2주차 · 디자인 시제품</span><h3>화면과 종이로 3문제를 만듭니다</h3><p>익숙한 디자인 도구나 Twine으로 짧은 진행을 만들고, 키트는 일반 출력물로 확인합니다. 플레이어가 다음 행동을 알아듣는지 관찰합니다.</p><p><b>남길 결과물</b><br>체험판 1개, 핵심 화면, 태그가 들어갈 증거물 견본.</p></div><div class="phase"><span class="week">3~4주차 · 현장 검증</span><h3>처음 보는 약 20팀과 확인합니다</h3><p>지인에게 설명해 주며 통과시키지 말고, 처음 보는 사람이 막히는 지점을 기록합니다. 아이폰·갤럭시, 새로고침, QR 대체 경로를 확인합니다.</p><p><b>남길 결과물</b><br>실제 소요시간, 완주율, 힌트 사용, NFC 실패·문의 원인.</p></div></div>
+  <div class="grid2" style="margin-top:30px"><div class="phase"><span class="week">5주차 · 유료 시험 판매</span><h3>50~100세트 규모로 시작합니다</h3><p>정가·구성·배송·비 오는 날 안내가 있는 상세페이지로 실제 주문을 받는 단계입니다. 무료 체험 만족도를 유료 구매 수요와 같게 보지 않습니다. 첫 유료 주문 30~50건의 반응을 확인합니다.</p></div><div class="phase"><span class="week">6주차 이후 · 다음 판단</span><h3>원인에 따라 고칩니다</h3><p>방문은 있는데 구매가 적으면 상품 설명·가격을, 시작이 안 되면 안내·기기 문제를, 중도 포기가 많으면 동선·난도를 고칩니다. 반복 판매와 실제 남는 돈을 확인한 뒤 500세트·두 번째 지역을 검토합니다.</p></div></div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="시험 판매 기록표"><table><thead><tr><th>기록할 것</th><th>쉬운 계산</th><th>어떤 판단에 쓰는가</th></tr></thead><tbody><tr><th>구매 비율</th><td>주문÷상품 페이지 방문</td><td>상품 설명·가격·고객층의 궁합</td></tr><tr><th>주문당 광고비</th><td>광고비÷해당 광고로 확보한 주문</td><td>판매를 늘려도 수익이 남는지</td></tr><tr><th>시작·완주 비율</th><td>시작 성공팀·완주팀÷해당 단계 대상팀</td><td>기기·안내·동선·난도 문제</td></tr><tr><th>주문당 대응 시간</th><td>문의·재발송 등에 쓴 시간÷주문</td><td>혼자 운영 가능한 판매량</td></tr><tr><th>할인 없는 구매 이유</th><td>구매 후 짧은 질문으로 정리</td><td>디자인·스토리·지역 중 무엇이 구매 이유인지</td></tr><tr><th>다음 상품 관심·재구매</th><td>다음 작품의 방문과 실제 주문을 분리</td><td>한 번 팔고 끝나는 상품인지</td></tr></tbody></table></div>
+  <p class="small muted">구매 비율 3%·주문당 광고비 6,000원은 관리 목표의 예시이며 업계 평균이 아닙니다. 앞의 수익 예시는 이 가정에 민감합니다. 광고비가 주문당 10,000원이면 한 세트에서 남는 돈은 약 7,824원, 15,000원이면 약 2,824원으로 줄어듭니다.</p>
+  <div class="grid2"><div class="panel"><h3>처음 준비할 돈을 나눠 적습니다</h3><ul class="bullet"><li><b>실물 재고:</b> 100세트 제조 예산 80만~140만원, 부가세 제외 가정.</li><li><b>초기 콘텐츠:</b> 이야기·퍼즐·디자인·웹 개발·음성·번역·답사. 직접 할 것과 의뢰할 것을 분리해 견적.</li><li><b>판매 운영:</b> 광고·배송·수수료·고객 대응·웹 운영. 주문이 생길 때 드는 비용과 매달 드는 비용을 구분.</li><li><b>본인의 시간:</b> 디자인·운영 시간을 기록. 재고 예산만 보고 “총 창업비용”이라 부르지 않기.</li></ul></div><div class="panel soft"><h3>디자인 경력을 살리는 두 가지 수입</h3><p><b>자체 상품</b>은 인사동 키트처럼 본인 이야기를 반복 판매합니다. <b>디자인·맞춤 제작 서비스</b>는 브랜드·기관에 시안, 키트 디자인, 짧은 웹 체험을 공급하는 방식입니다.</p><p>첫 자체 작품의 실제 플레이 결과를 제안서에 담으면 작업물의 쓰임을 설명하기 쉬워집니다. 기업 납품 때는 디자인만인지, 개발·현장 운영·추후 수정까지 포함하는지 범위를 나눠 견적합니다.</p><p class="small muted">공개된 업체의 1,500만·3,000만원 시작가를 그대로 본인의 단가로 사용하지 않습니다. 공통으로 다시 쓸 수 있는 디자인과 고객 전용 제작물의 범위도 협의합니다.</p></div></div>
+  <div class="callout"><strong>첫 번째 완료 기준</strong><p>처음 보는 팀이 설명 없이 시작하고 끝낼 수 있으며, 실제 주문의 제조·광고·배송·대응 비용을 빼도 계획한 돈이 남는 것. 디자인에 대한 호평과 함께 이 두 가지를 확인해야 사업 판단이 가능합니다.</p></div>
+</section>
+
+<section id="references" class="section" aria-labelledby="references-title">
+  <div class="section-kicker">12 · 어려운 말을 쉽게, 근거는 가까이</div><h2 id="references-title">용어를 풀어 읽고, 원문을 확인하세요.</h2>
+  <dl class="glossary">
+    <div><dt>NFC</dt><dd>휴대전화를 가까이 대면 카드의 정보를 읽는 기능. 이 기획에서는 웹 주소를 엽니다.</dd></div>
+    <div><dt>공헌이익</dt><dd>한 개를 팔고 그 주문 때문에 드는 비용을 뺀 돈. 월 고정비와 처음 만든 비용은 아직 빼기 전입니다.</dd></div>
+    <div><dt>고정비 / 변동비</dt><dd>고정비는 판매가 없어도 매달 드는 돈. 변동비는 키트 제조·배송처럼 판매량에 따라 달라지는 돈입니다.</dd></div>
+    <div><dt>손익분기점</dt><dd>이익도 손해도 없도록 비용을 회수하는 지점. 여기서는 필요한 월 판매량으로 표시했습니다.</dd></div>
+    <div><dt>구매전환율</dt><dd>상품 페이지에 온 사람 또는 방문 중 실제 주문으로 이어진 비율. 집계 기준을 동일하게 맞춰 비교합니다.</dd></div>
+    <div><dt>고객획득비용 / CAC</dt><dd>새 고객이나 주문을 얻는 데 드는 비용. 이 보고서의 계산기는 쉽게 “주문 1건 확보 광고비”로 좁혀 사용했습니다.</dd></div>
+    <div><dt>유입</dt><dd>검색·광고·게시물·홍보 링크 등을 보고 상품 페이지로 들어오는 것.</dd></div>
+    <div><dt>유동인구 / 승하차</dt><dd>특정 지역에 머물거나 오가는 규모 / 지하철에 타고 내린 횟수. 두 수치를 구매자 수로 볼 수 없습니다.</dd></div>
+    <div><dt>추계 / 상대지수</dt><dd>추계는 자료로 계산한 추정값. 상대지수는 가장 높은 시점을 100 등으로 두고 크기를 비교하는 수치입니다.</dd></div>
+    <div><dt>시제품 / 체험판</dt><dd>전체 제작 전 흐름을 확인하는 간단한 버전 / 고객이 구매 전 일부를 경험하는 버전입니다.</dd></div>
+    <div><dt>서버 / HTTPS</dt><dd>이용 권한과 진행 정보를 처리하는 인터넷 쪽 컴퓨터 / 암호화된 연결을 사용하는 웹 주소 방식입니다.</dd></div>
+    <div><dt>부가세 제외 / 매입세액 공제</dt><dd>물건값에 붙는 부가세를 빼고 계산하는 것 / 일정 조건에서 비용에 낸 부가세를 납부할 세금에서 빼는 것입니다.</dd></div>
+    <div><dt>B2C / B2B / B2G</dt><dd>개인에게 판매 / 기업·기관에 판매 / 정부·지자체에 공급한다는 구분입니다.</dd></div>
+    <div><dt>브랜드 경험</dt><dd>이름·그림·화면·포장·안내를 통해 고객이 한 상품에 대해 느끼는 전체 인상입니다.</dd></div>
+    <div><dt>화원 / 인장 / 표구사</dt><dd>이 보고서의 이야기에서는 그림을 그리는 사람 / 도장 / 그림을 꾸미고 보존하도록 액자·족자 등을 만드는 사람을 뜻합니다.</dd></div>
+    <div><dt>전승·유래설</dt><dd>사람들 사이에 전해 오는 설명입니다. 기록으로 확정된 사실과 구분해야 합니다.</dd></div>
+  </dl>
+  <h3 style="margin-top:28px">주요 근거의 성격</h3>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="자료 신뢰 범위"><table><thead><tr><th>자료</th><th>어디까지 말할 수 있는가</th><th>말할 수 없는 것</th></tr></thead><tbody><tr><th>텀블벅 공개 실적</th><td>표시된 기간의 후원자·모금액</td><td>현재 네이버 월 판매량, 확정 순이익</td></tr><tr><th>공개 키워드 도구</th><td>네이버 일반 검색의 조회값·공개 구간</td><td>쇼핑 검색량, 서로 다른 구매자 수</td></tr><tr><th>서울시·서울교통공사 통계</th><td>표기된 연도·권역·측정 방식의 규모</td><td>방탈출 구매율, 모든 명소의 단일 순위</td></tr><tr><th>운영사·공급사 가격</th><td>공개된 조건의 표시가·시작가</td><td>맞춤 견적, 계약 체결액, 실제 원가·이익</td></tr><tr><th>지역사 자료</th><td>지명·역사·전해 오는 유래의 소재</td><td>오래된 상점 수·영업 시간을 현재 사실로 적용</td></tr><tr><th>보고서의 자체 계산</th><td>입력 가정이 맞을 때의 결과</td><td>실제 판매 예측이나 수익 보장</td></tr></tbody></table></div>
+  <p class="section-intro">본문의 수치와 지역 설명 바로 아래에 원문 링크를 넣었습니다. 핵심 출처는 아래에서도 다시 열 수 있습니다. 공개된 업체 홍보 문구는 독립적인 성과 검증으로 취급하지 않았습니다.</p>
+  <div class="grid2"><div><h3>시장·가격·기술</h3><ul class="source-list"><li><a href="https://tumblbug.com/ablez_case_file">유능한 사건파일 펀딩</a>, <a href="https://tumblbug.com/the_quest">마법도술학교 펀딩</a>, <a href="https://tumblbug.com/meow_rangers/story">냥냥방범대 펀딩</a></li><li><a href="https://www.n-keyword.kr/multi-keyword">엔키워드</a>, <a href="https://ads.naver.com/help/faq/1406">네이버 키워드 도구 설명</a> — 일반 검색 횟수</li><li><a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=3713">Npay 수수료</a>, <a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=15759">판매 수수료</a> — 네이버 공식</li><li><a href="https://questour.kr/outdoor_escape_b">퀘스투어 기업·기관 제작 안내</a> — 공개 시작가</li><li><a href="https://www.nxp.com/products/NTAG213_215_216">NXP 태그 사양</a>, <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Apple 읽기 방식</a>, <a href="https://developer.chrome.com/docs/capabilities/nfc">Google Web NFC</a></li><li><a href="https://www.twinery.org/">Twine</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">W3C 버튼 크기 기준</a> — 시제품·화면 설계 참고</li></ul></div><div><h3>주제·서울·지역</h3><ul class="source-list"><li><a href="https://xdungeon.net/layout/res/home.php?go=theme.list">비트포비아</a>, <a href="https://www.seoul-escape.com/room">서울이스케이프룸</a> — 공식 테마 목록</li><li><a href="https://global.seoul.go.kr/hmpg/sinf/snew/pres/bordContDetail.do?bbs_no=10&amp;pst_no=5728C570C6B50142E063C0A8A023AA4E">서울시 외국인 관광 분석</a> — 2025년 자료, 2026년 발표</li><li><a href="https://www.kric.go.kr/jsp/board/portal/sub01/railNewsDetail.jsp?p_id1=M01060101&amp;p_id2=694282&amp;p_id3=2026.03.11">서울교통공사 2025년 수송통계</a> — 철도산업정보센터 게재</li><li><a href="https://data.seoul.go.kr/dataVisual/seoul/guide.do">실시간 도시데이터</a>, <a href="https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071544.pdf?time=20260616143608">서울관광 연차보고서</a></li><li>지명별 원문은 <a href="#locations">20개 지역 카드</a>에 연결했습니다. 서울한옥포털·서울시·자치구·한국민족문화대백과사전·국가기록원 자료를 우선했습니다.</li><li><a href="https://www.jongno.go.kr/dosi/view/spcl/spcl.html">북촌 특별관리지역 공식 지도</a> — 실제 경계 확인</li></ul></div></div>
+  <div class="footer"><p><b>작성 범위</b> · 2026.09.13~14 공개 자료 조사. 검색량·상품 표시가의 관측일은 2026.09.13입니다. 기존 시장 조사와 서울 주제·입지 조사를 합치고, 웹디자이너의 활용 방안과 실행 계획을 추가했습니다.</p><p><b>남아 있는 확인</b> · 스마트스토어 현재 판매·리뷰 수, 동일 사양 공급 견적, 실제 코스 거리·시간, 장소 사용 협의, 유료 고객의 구매·완주 결과. 이 항목들은 완료했다고 표시하지 않았습니다.</p><a class="back-top no-print" href="#overview">↑ 보고서 처음으로</a></div>
+</section>
+</main>
+<script id="report-script">
+'use strict';
+function computeProfit(p) {
+  const unit=p.price*(1-p.fee/100)/1.1-p.kit-p.shipping-p.ad-p.other;
+  const needed=cost=>cost===0?0:(unit>0?Math.ceil(cost/unit):null);
+  return {unit,monthly:unit*p.qty-p.fixed,breakEven:needed(p.fixed),fullBreakEven:needed(p.fixed+p.initial/p.months),recoveryMonthly:unit*p.qty-p.fixed-p.initial/p.months,gross:p.price*p.qty};
+}
+// Runnable calculation check: opening this HTML runs it; no test dependency is needed.
+function checkReportCalculations() {
+  const p={price:34900,kit:8000,shipping:2800,ad:6000,other:1000,fee:6.63,qty:300,fixed:3000000,initial:10000000,months:6};
+  const r=computeProfit(p);
+  if(Math.abs(r.unit-11823.754545454543)>.0001||r.breakEven!==254||r.fullBreakEven!==395||Math.round(r.monthly)!==547126||Math.round(r.recoveryMonthly)!==-1119540)throw Error('기준 손익 계산 오류');
+  if(Math.round(computeProfit({...p,ad:10000}).unit)!==7824||computeProfit({...p,price:0}).breakEven!==null||computeProfit({...p,qty:0}).monthly!==-3000000||computeProfit({...p,price:0,fixed:0,initial:0}).fullBreakEven!==0)throw Error('손익 경계 조건 오류');
+  return true;
+}
+checkReportCalculations();
+const byId=id=>document.getElementById(id);
+const form=byId('profit-form');
+const fields=Array.from(form.querySelectorAll('input'));
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const quantity=n=>n===null?'회수 불가':n.toLocaleString('ko-KR')+'세트 / 월';
+function updateProfit() {
+  const valid=fields.every(f=>f.checkValidity()&&Number.isFinite(f.valueAsNumber));
+  byId('calc-error').hidden=valid;
+  byId('calc-output').hidden=!valid;
+  if(!valid)return;
+  const p=Object.fromEntries(fields.map(f=>[f.name,f.valueAsNumber]));
+  const r=computeProfit(p);
+  byId('unit-result').textContent=won(r.unit);
+  byId('break-result').textContent=quantity(r.breakEven);
+  byId('month-result').textContent=won(r.monthly);
+  byId('full-break-result').textContent=quantity(r.fullBreakEven);
+  byId('full-break-caption').textContent=p.months+'개월 동안 매월 판매 · 고정비 포함';
+  byId('calc-detail').textContent='월 고객 결제액 '+won(r.gross)+' · 초기비용을 '+p.months+'개월로 나눠 차감한 월 손익 '+won(r.recoveryMonthly);
+  byId('unit-result').classList.toggle('loss',r.unit<0);
+  byId('month-result').classList.toggle('loss',r.monthly<0);
+  byId('calc-loss').hidden=r.unit>0;
+  byId('calc-loss').textContent=r.unit<0?'한 세트를 팔 때마다 손실이 발생하는 조건입니다. 판매량을 늘리기 전에 가격·원가·광고비를 조정해야 합니다.':'한 세트 판매에서 남는 돈이 0원입니다. 고정비나 초기비용이 있다면 판매만으로 회수할 수 없습니다.';
+}
+form.addEventListener('input',updateProfit);
+form.addEventListener('submit',e=>e.preventDefault());
+byId('reset-calc').addEventListener('click',()=>{form.reset();updateProfit()});
+updateProfit();
+const locations=Array.from(document.querySelectorAll('.location'));
+function filterLocations() {
+  const query=byId('location-search').value.trim().toLocaleLowerCase('ko-KR').replace(/\s+/g,'');
+  const audience=byId('audience-filter').value;
+  let count=0;
+  for(const card of locations){
+    const match=card.textContent.toLocaleLowerCase('ko-KR').replace(/\s+/g,'').includes(query)&&(audience==='all'||card.dataset.audiences.split(' ').includes(audience));
+    card.hidden=!match;
+    if(match)count++;
+  }
+  byId('location-count').textContent=count+'개 지역 표시 · 전체 '+locations.length+'개';
+  byId('location-empty').hidden=count!==0;
+}
+byId('location-search').addEventListener('input',filterLocations);
+byId('audience-filter').addEventListener('change',filterLocations);
+byId('location-reset').addEventListener('click',()=>{byId('location-search').value='';byId('audience-filter').value='all';filterLocations()});
+byId('location-details').addEventListener('click',()=>{
+  const details=locations.map(card=>card.querySelector('details'));
+  const expand=!details.every(d=>d.open);
+  details.forEach(d=>{d.open=expand});
+  byId('location-details').textContent=expand?'게임 아이디어 모두 접기':'게임 아이디어 모두 펼치기';
+  byId('location-details').setAttribute('aria-expanded',String(expand));
+});
+document.querySelectorAll('.print-button').forEach(button=>button.addEventListener('click',()=>window.print()));
+let printDetails=null;
+window.addEventListener('beforeprint',()=>{
+  if(!printDetails)printDetails=Array.from(document.querySelectorAll('details')).map(d=>[d,d.open]);
+  printDetails.forEach(([d])=>{d.open=true});
+});
+window.addEventListener('afterprint',()=>{if(printDetails){printDetails.forEach(([d,open])=>{d.open=open});printDetails=null}});
+if('IntersectionObserver' in window){
+  const navLinks=Array.from(document.querySelectorAll('.nav a'));
+  const observer=new IntersectionObserver(entries=>{
+    const entry=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
+    if(!entry)return;
+    navLinks.forEach(link=>{if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')});
+  },{rootMargin:'-15% 0px -70% 0px'});
+  document.querySelectorAll('main>section').forEach(section=>observer.observe(section));
+}
+document.querySelectorAll('a[href^="https://"]').forEach(link=>{link.target='_blank';link.rel='noopener noreferrer'});
+</script>
+</body>
+</html>
