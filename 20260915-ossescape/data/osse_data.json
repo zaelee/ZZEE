@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "description": "OSSE company, RB-13, puzzle, quiz, and photo-hint data. Replace company-facing values later without changing puzzle code.",
+    "toneGuide": {
+      "genre": "회사 생활 + 리미널 스페이스 + B급 코즈믹 호러",
+      "emotionalCurve": [
+        "초반: 뭐야 이 회사ㅋㅋ",
+        "중반: 잠깐, 진짜 이상한데?",
+        "후반: 이거 웃을 상황이 아니네."
+      ],
+      "rules": [
+        "점프스케어보다 이상한 회사 문화와 조용한 불안을 우선한다.",
+        "공포 문서는 처음에는 웃기고, 뒤로 갈수록 보고서처럼 건조해진다.",
+        "RB-13은 베지밀 판매 때문이 아니라 해외 원료 수입 과정에서 들어온 연구용 샘플이다."
+      ]
+    },
+    "photoHintRequirements": [
+      {
+        "id": "warehouse_since_1994_hint",
+        "sceneId": "warehouse_office_zoom",
+        "recommendedFile": "assets/photos/09_warehouse_office_whiteboard.jpg",
+        "purpose": "창고 퍼즐 핵심 힌트 사진입니다. 멀리서 보면 SINCE 1994 또는 1994가 자연스럽게 보여야 합니다.",
+        "mustContainText": [
+          "SINCE 1994",
+          "1994"
+        ],
+        "notes": "정답처럼 정면에 박아두기보다 오래된 회사 포스터, 화이트보드 낙서, 게시물 배경처럼 보여야 덜 억지스럽습니다."
+      },
+      {
+        "id": "warehouse_personal_password_hint",
+        "sceneId": "warehouse_office_zoom",
+        "recommendedFile": "assets/photos/14_warehouse_password_hint_note.jpg",
+        "purpose": "플레이어가 1994를 비밀번호 후보로 떠올리게 하는 보조 힌트 사진입니다.",
+        "mustContainText": [
+          "보통 집 비밀번호",
+          "생일"
+        ],
+        "notes": "정답을 직접 말하지 않고, 중요한 날짜가 비밀번호가 될 수 있다는 사고방식만 유도합니다."
+      }
+    ]
+  },
+  "company": {
+    "name": "OSSE Inc.",
+    "codeName": "OSSE",
+    "foundedYear": 1994,
+    "foundedYearHintLabel": "SINCE 1994",
+    "slogan": "생활을 건강하게, 회사를 조용하게",
+    "businessAreas": [
+      "브랜드 운영",
+      "생활용품 유통",
+      "원료 수입",
+      "Ingredient Trade"
+    ],
+    "representativeKeywords": [
+      {
+        "word": "입고",
+        "order": 1
+      },
+      {
+        "word": "검수",
+        "order": 2
+      },
+      {
+        "word": "증식",
+        "order": 3
+      },
+      {
+        "word": "배양",
+        "order": 4
+      }
+    ],
+    "internalValues": [
+      "정리",
+      "안전",
+      "보고",
+      "퇴근"
+    ]
+  },
+  "rb13": {
+    "codeName": "RB-13",
+    "fullName": "Red Bean Sample 13",
+    "importCategory": "Ingredient Trade / 연구용 원료 샘플",
+    "employeeMisunderstanding": "직원들은 붉은콩 신품종 정도로 생각했다.",
+    "warningKeywords": [
+      "증식",
+      "배양",
+      "혈액 반응",
+      "세포 활성",
+      "야간 개체수 변화"
+    ],
+    "documentProgression": [
+      "붉은콩을 발견해도 놀라지 마세요.",
+      "붉은콩을 만지지 마십시오.",
+      "만졌다면 보고하십시오.",
+      "보고할 직원이 없습니다."
+    ]
+  },
+  "brands": [
+    {
+      "name": "OSSE",
+      "category": "corporate",
+      "labelCode": "01",
+      "keyword": "order"
+    },
+    {
+      "name": "수야무",
+      "category": "food",
+      "labelCode": "12",
+      "keyword": "storage"
+    },
+    {
+      "name": "런드리서핑",
+      "category": "laundry",
+      "labelCode": "03",
+      "keyword": "care"
+    }
+  ],
+  "bGradeDocuments": [
+    {
+      "id": "rb13_receiving_memo",
+      "title": "원료 검수 메모",
+      "phase": "early_funny",
+      "lines": [
+        "RB-13",
+        "특이사항",
+        "- 일반 콩보다 잘 굴러다님",
+        "- 밤마다 개수가 늘어난 것 같음",
+        "- 직원들이 자꾸 먹으려고 함",
+        "- 먹지 말 것",
+        "- 진짜 먹지 말 것",
+        "- 아직 먹은 직원은 없음... 아마도"
+      ]
+    },
+    {
+      "id": "rb13_safety_notice",
+      "title": "RB-13 취급 안전수칙",
+      "phase": "middle_strange",
+      "lines": [
+        "□ 장갑 착용",
+        "□ 마스크 착용",
+        "□ 눈 마주치지 않기",
+        "□ 이름 붙이지 않기",
+        "□ 먹이 주지 않기"
+      ]
+    },
+    {
+      "id": "rb13_cctv_log",
+      "title": "CCTV 야간 기록",
+      "phase": "middle_strange",
+      "lines": [
+        "01:14 붉은콩 발견",
+        "01:16 2개 발견",
+        "01:19 3개 발견",
+        "01:20 CCTV 오류로 판단",
+        "01:21 퇴근합니다."
+      ]
+    },
+    {
+      "id": "rb13_final_notice",
+      "title": "보고 지침",
+      "phase": "late_serious",
+      "lines": [
+        "붉은콩을 만졌다면 즉시 보고하십시오.",
+        "붉은콩이 움직였다면 즉시 보고하십시오.",
+        "붉은콩이 직원 이름을 알고 있다면 즉시 보고하십시오.",
+        "보고할 직원이 없다면 이 문서를 접어 책상 위에 두십시오."
+      ]
+    }
+  ],
+  "puzzleRules": {
+    "warehouseLock": {
+      "label": "창고 사무실 4자리 자물쇠",
+      "hintSources": [
+        "화이트보드 SINCE 문구",
+        "오래된 회사 연혁",
+        "생일 비밀번호 메모"
+      ],
+      "digits": [
+        {
+          "type": "yearDigit",
+          "path": "company.foundedYear",
+          "index": 0
+        },
+        {
+          "type": "yearDigit",
+          "path": "company.foundedYear",
+          "index": 1
+        },
+        {
+          "type": "yearDigit",
+          "path": "company.foundedYear",
+          "index": 2
+        },
+        {
+          "type": "yearDigit",
+          "path": "company.foundedYear",
+          "index": 3
+        }
+      ]
+    },
+    "officeDoor": {
+      "label": "1층 사무실 직원 인증",
+      "requiresItem": "security_access_card",
+      "hintSources": [
+        "사내 포스터",
+        "사업 영역",
+        "택배 라벨"
+      ],
+      "digits": [
+        {
+          "type": "sloganWordCount",
+          "path": "company.slogan"
+        },
+        {
+          "type": "count",
+          "path": "company.businessAreas"
+        },
+        {
+          "type": "labelDigitSum",
+          "brandName": "OSSE"
+        },
+        {
+          "type": "keywordOrder",
+          "keyword": "증식"
+        }
+      ]
+    }
+  }
+}

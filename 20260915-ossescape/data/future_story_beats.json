@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "purpose": "1층 사무실 이후 확장을 위한 스토리/연출/퀴즈 아이디어 데이터입니다. 현재 구현된 To Be Continued까지의 흐름은 유지합니다.",
+    "coreGoal": "플레이어가 '무섭다'보다 '이 회사 진짜 뭐지...'를 계속 느끼게 만든다."
+  },
+  "objectiveFlow": [
+    {
+      "id": "find_usb",
+      "phase": "current",
+      "objective": "USB를 찾는다.",
+      "delivery": "초기 프롤로그와 회사 진입 동기."
+    },
+    {
+      "id": "read_recovery_log",
+      "phase": "after_office",
+      "objective": "USB 안의 RECOVERY.LOG를 확인한다.",
+      "logText": [
+        "RECOVERY.LOG",
+        "DESIGN SERVER ERROR",
+        "2F ACCESS REQUIRED"
+      ],
+      "nextObjective": "2층 디자인실에 가야 한다."
+    },
+    {
+      "id": "investigate_design_room",
+      "phase": "second_floor",
+      "objective": "2층 디자인실 서버 오류를 조사한다.",
+      "delivery": "사내 시스템 로그와 디자인 서버 복구 화면."
+    },
+    {
+      "id": "trace_rb13",
+      "phase": "late",
+      "objective": "RB-13 수입 기록과 심 대리의 기록을 찾는다.",
+      "delivery": "회의록, 메신저, 사원증, 사내 방송이 서로 같은 방향을 가리킨다."
+    }
+  ],
+  "livingCompanyEvents": [
+    {
+      "id": "elevator_floor_mutation",
+      "location": "elevator",
+      "earlyState": ["2F", "3F", "4F"],
+      "laterState": ["2F", "RB", "4F"],
+      "tone": "플레이어가 처음에는 오타나 표시 오류처럼 느끼게 한다."
+    },
+    {
+      "id": "whiteboard_rewrites",
+      "location": "office_whiteboard",
+      "states": [
+        "회의 일정",
+        "회의 일정 / RB-13",
+        "회의 일정 / RB-13 / 보고",
+        "보고할 직원이 없습니다"
+      ],
+      "tone": "아무도 없는데 글씨가 조금씩 바뀐다."
+    },
+    {
+      "id": "office_layout_shift",
+      "location": "office",
+      "objects": ["의자", "상자", "프린터"],
+      "tone": "확신할 수 없을 만큼만 위치가 변한다."
+    },
+    {
+      "id": "employee_badges_corrupt",
+      "location": "hallway",
+      "states": [
+        "정상 사원증",
+        "눈이 붉어진 사진",
+        "붉은콩 흔적",
+        "심콩처럼 보이는 얼굴"
+      ],
+      "tone": "반복해서 지나가는 벽에서 변화가 체감되게 한다."
+    }
+  ],
+  "brandDistortions": [
+    {
+      "from": "Laundry Surfing",
+      "to": "Laundry Suffering",
+      "rule": "한 글자 또는 한 단어만 바뀐 것처럼 보인다."
+    },
+    {
+      "from": "Balance Route",
+      "to": "Balance Root",
+      "rule": "Root를 붉은콩/뿌리/증식 이미지와 연결한다."
+    }
+  ],
+  "broadcasts": [
+    {
+      "id": "morning_announcement_at_night",
+      "phase": "early",
+      "lines": [
+        "좋은 아침입니다.",
+        "오늘도 좋은 하루 되세요."
+      ],
+      "note": "현재 시간은 새벽이므로 정상 방송 자체가 이상하게 느껴진다."
+    },
+    {
+      "id": "leave_do_not_leave",
+      "phase": "middle",
+      "lines": [
+        "퇴근하십시오.",
+        "...",
+        "퇴근하지 마십시오.",
+        "...",
+        "죄송합니다."
+      ],
+      "note": "공간이 플레이어를 놓아주려는지 붙잡으려는지 애매하게 만든다."
+    }
+  ],
+  "copierPrints": [
+    {
+      "phase": "early",
+      "text": "고생하셨습니다."
+    },
+    {
+      "phase": "middle",
+      "text": "붉은콩을 만지지 마십시오."
+    },
+    {
+      "phase": "late",
+      "text": "왜 다시 왔나요?"
+    },
+    {
+      "phase": "final",
+      "text": "보고할 직원이 없습니다."
+    }
+  ],
+  "timeClockMessages": [
+    {
+      "phase": "early",
+      "cardReaderText": "출근 완료",
+      "context": "새벽인데도 출근으로 처리된다."
+    },
+    {
+      "phase": "late",
+      "cardReaderText": "퇴근 실패",
+      "context": "회사가 플레이어를 직원으로 묶어두는 느낌."
+    }
+  ],
+  "messengerLogs": [
+    {
+      "id": "bean_joke_log",
+      "phase": "early",
+      "messages": [
+        "김대리: 붉은콩 누가 치웠어요?",
+        "박주임: ㅋㅋㅋㅋ",
+        "이과장: 다시 생김.",
+        "관리자: 먹지 마세요."
+      ]
+    },
+    {
+      "id": "admin_only_log",
+      "phase": "late",
+      "messages": [
+        "김대리: ",
+        "박주임: ",
+        "이과장: ",
+        "관리자: 먹지 마세요.",
+        "관리자: 보고하십시오.",
+        "관리자: 보고할 직원이 없습니다."
+      ]
+    }
+  ],
+  "meetingRoomMinutes": [
+    {
+      "id": "rb13_postpone",
+      "phase": "middle",
+      "title": "회의 안건: RB-13 처리 방안",
+      "result": "다음 주 재논의",
+      "note": "아무도 없는데 회의만 계속 진행된 것처럼 보인다."
+    },
+    {
+      "id": "rb13_no_attendees",
+      "phase": "late",
+      "title": "회의 안건: RB-13 처리 방안",
+      "result": "참석자 없음. 회의 진행.",
+      "note": "회사 시스템만 회의를 계속한다."
+    }
+  ],
+  "simkong": {
+    "formerName": "심 대리",
+    "currentName": "심콩",
+    "role": "RB-13에 가장 오래 노출되어 퇴근하지 못한 직원",
+    "coreEmotion": "공포와 안쓰러움이 동시에 느껴져야 한다.",
+    "mutterWords": ["회의", "발주", "입고", "커피", "퇴근", "증식", "배양", "입고 완료"],
+    "correctReaction": "그래... 아직 기억하는구나.",
+    "wrongReaction": "교육을 다시 받아."
+  },
+  "rb13Interpretation": {
+    "notEvilMonster": true,
+    "description": "RB-13은 악의적인 괴물이 아니라, 효율/생산성/자동화/증식이라는 회사의 목표를 지나치게 잘 수행하는 원료다.",
+    "horrorPoint": "회사의 시스템과 원료가 너무 잘 맞아떨어져서 기괴해진다."
+  }
+}

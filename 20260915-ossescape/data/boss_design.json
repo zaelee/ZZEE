@@ -1,0 +1,192 @@
+{
+  "version": "boss-character-36",
+  "assetPolicy": {
+    "description": "캐릭터와 보스 PNG는 OSSEscape_files/png 폴더의 투명 PNG를 사용합니다. 파일명은 교체가 쉬워야 하므로 코드와 JSON 양쪽에서 같은 경로 문자열을 사용합니다.",
+    "basePath": "assets/runtime/characters/",
+    "sprites": {
+      "boxkeeper": "assets/runtime/characters/boxman.png",
+      "simDaeriPhase1": "assets/runtime/characters/boss_before.png",
+      "simDaeriPhase2": "assets/runtime/characters/boss_after.png",
+      "simkongPhase3": "assets/runtime/characters/boss_after.png"
+    }
+  },
+  "progression": [
+    "경비실",
+    "창고",
+    "창고 퍼즐",
+    "박스키퍼",
+    "1층 사무실 진입",
+    "심대리 관련 스토리",
+    "심콩",
+    "2층 디자인실",
+    "OSSE SYSTEM / RED ROOT"
+  ],
+  "characters": {
+    "simDaeri": {
+      "name": "심대리",
+      "concept": "퇴근하지 못한 직원. RB-13에 오래 노출되었지만 완전히 악의적인 괴물은 아닙니다.",
+      "phases": [
+        {
+          "id": "phase1_normal",
+          "label": "Phase 1 - 정상 심대리",
+          "sprite": "assets/runtime/characters/boss_before.png",
+          "notes": [
+            "구겨진 셔츠",
+            "느슨한 넥타이",
+            "사원증",
+            "피곤한 표정",
+            "클립보드"
+          ]
+        },
+        {
+          "id": "phase2_infected",
+          "label": "Phase 2 - RB-13 감염 심대리",
+          "sprite": "assets/runtime/characters/boss_after.png",
+          "notes": [
+            "머리카락 사이의 붉은콩",
+            "한쪽 눈 붉은콩화",
+            "팔 일부의 콩 성장",
+            "회사원 느낌 유지",
+            "징그러움보다 이상함 중심"
+          ]
+        },
+        {
+          "id": "phase3_simkong",
+          "label": "Phase 3 - 완전 심콩",
+          "sprite": "assets/runtime/characters/boss_after.png",
+          "notes": [
+            "몸 전체가 붉은콩 생명체화",
+            "넥타이와 사원증 유지",
+            "클립보드 유지",
+            "퇴근하지 못한 직원의 피곤함 유지",
+            "등 뒤의 거대한 콩 덩어리"
+          ]
+        }
+      ]
+    }
+  },
+  "bosses": {
+    "boxkeeper": {
+      "id": "boxkeeper_logistics",
+      "name": "BOXKEEPER / 박스키퍼",
+      "sprite": "assets/runtime/characters/boxman.png",
+      "location": "1층 창고",
+      "role": "물류",
+      "description": "창고 관리 직원이 RB-13 물류 사고와 함께 변한 존재. 입고, 검수, 출고, 배송 업무만 반복합니다.",
+      "phases": [
+        {
+          "id": "inventory_check",
+          "title": "재고 검수",
+          "minigameId": "boxkeeper_inventory_check",
+          "goal": "입고 목록과 실제 박스의 품목 번호, 색상, 무게, 날짜를 비교해 올바른 박스를 찾습니다."
+        },
+        {
+          "id": "packing_work",
+          "title": "포장 작업",
+          "minigameId": "boxkeeper_packing_work",
+          "goal": "박스 방향, 테이프 위치, 라벨 위치를 맞춥니다."
+        },
+        {
+          "id": "delivery_error",
+          "title": "배송 오류",
+          "minigameId": "boxkeeper_delivery_error",
+          "goal": "컨베이어에서 RB-13 박스만 골라 제거합니다."
+        }
+      ],
+      "defeat": {
+        "tone": "죽음보다 배송 완료 같은 느낌",
+        "lines": [
+          "처리 완료",
+          "재고 정리 완료"
+        ]
+      }
+    },
+    "simkong": {
+      "id": "simkong_employee_auth",
+      "name": "SIM DAERI / 심대리",
+      "sprite": "assets/runtime/characters/boss_before.png",
+      "humanSprite": "assets/runtime/characters/boss_before.png",
+      "location": "상무실 또는 2층 진입 전",
+      "role": "직원",
+      "description": "1층 보스. RB-13에 감염됐지만 아직 회사원 심대리의 기억과 업무 루틴을 붙잡고 있습니다.",
+      "speechKeywords": [
+        "커피",
+        "발주",
+        "회의",
+        "퇴근",
+        "입고",
+        "증식",
+        "배양",
+        "입고 완료"
+      ],
+      "phases": [
+        {
+          "id": "training_test",
+          "title": "사내 교육 테스트",
+          "quizSet": "boss",
+          "goal": "회사 역사, 브랜드, 슬로건, 사업 영역 질문에 답합니다."
+        },
+        {
+          "id": "office_work",
+          "title": "업무 처리",
+          "minigameId": "simkong_office_work",
+          "goal": "메일 확인, 회의 일정 정리, 파일 이름 변경, 브랜드 자료 찾기 업무를 처리합니다."
+        },
+        {
+          "id": "memory_recovery",
+          "title": "기억 복구",
+          "minigameId": "simkong_memory_recovery",
+          "goal": "사원증, 메모, 회의록, USB를 올바른 순서로 배치합니다."
+        }
+      ],
+      "defeat": {
+        "tone": "폭발하지 않고 붉은콩이 천천히 떨어지며 잠깐 심대리 모습으로 돌아옵니다.",
+        "lines": [
+          "아...",
+          "퇴근...",
+          "할 수 있었네..."
+        ]
+      }
+    },
+    "redRoot": {
+      "id": "red_root_system",
+      "name": "OSSE SYSTEM / RED ROOT",
+      "location": "최종 구간",
+      "role": "회사 자체",
+      "description": "RB-13과 회사 시스템이 결합한 최종 보스입니다.",
+      "phases": [
+        {
+          "id": "company_auth",
+          "title": "회사 인증",
+          "goal": "지금까지 관찰한 단서 기반 질문에 답합니다."
+        },
+        {
+          "id": "liminal_route",
+          "title": "리미널 공간 퍼즐",
+          "goal": "반복되는 사무실 구조에서 올바른 공간을 찾습니다."
+        },
+        {
+          "id": "clock_out_approval",
+          "title": "퇴근 처리",
+          "goal": "출근 기록, 퇴근 기록, USB, 사원증, 인증카드를 조합해 퇴근 승인을 받습니다."
+        }
+      ],
+      "endings": {
+        "normal": "퇴근 승인 완료. 회사 문이 열립니다.",
+        "bad": "퇴근 실패. 플레이어의 사원증이 생성되고 다음날 새로운 직원으로 등록됩니다."
+      }
+    },
+    "finalSimkong": {
+      "id": "final_simkong_red_root",
+      "name": "SHIMKONG / 최종 심콩",
+      "sprite": "assets/runtime/characters/boss_after.png",
+      "location": "2층 최종 구간",
+      "description": "심대리가 완전히 RB-13과 회사 시스템에 먹힌 최종 형태입니다."
+    }
+  },
+  "storyOrder": [
+    "창고 / 박스키퍼",
+    "1층 / 심대리",
+    "2층 최종 / 심콩"
+  ]
+}

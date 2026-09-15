@@ -1,0 +1,1515 @@
+{
+  "prologue_line_01": {
+    "id": "prologue_line_01",
+    "speaker": "",
+    "lines": [
+      "퇴근한 줄 알았는데..."
+    ]
+  },
+  "prologue_line_02": {
+    "id": "prologue_line_02",
+    "speaker": "",
+    "lines": [
+      "..."
+    ]
+  },
+  "prologue_line_03": {
+    "id": "prologue_line_03",
+    "speaker": "",
+    "lines": [
+      "USB를 회사에 두고 왔다."
+    ]
+  },
+  "prologue_line_04": {
+    "id": "prologue_line_04",
+    "speaker": "",
+    "lines": [
+      "..."
+    ]
+  },
+  "prologue_line_05": {
+    "id": "prologue_line_05",
+    "speaker": "",
+    "lines": [
+      "잠깐만 다녀오면 되겠지."
+    ]
+  },
+  "front_door_locked": {
+    "id": "front_door_locked",
+    "speaker": "",
+    "lines": [
+      "잠겨 있다."
+    ]
+  },
+  "guard_booth_question": {
+    "id": "guard_booth_question",
+    "speaker": "",
+    "lines": [
+      "...\n\n원래 열려 있었나?"
+    ],
+    "choices": [
+      {
+        "label": "들어간다",
+        "action": {
+          "type": "dialog",
+          "dialogId": "guard_booth_enter"
+        }
+      },
+      {
+        "label": "그만둔다",
+        "action": {
+          "type": "ending",
+          "endingId": "bad_end_1"
+        }
+      }
+    ]
+  },
+  "guard_booth_enter": {
+    "id": "guard_booth_enter",
+    "speaker": "",
+    "lines": [
+      "끼익—"
+    ],
+    "onComplete": {
+      "type": "enter_guard_room"
+    }
+  },
+  "guard_room_lock_scare": {
+    "id": "guard_room_lock_scare",
+    "speaker": "",
+    "lines": [
+      "철컥",
+      "...",
+      "문고리는 다시 돌아간다."
+    ]
+  },
+  "chair_beans_01": {
+    "id": "chair_beans_01",
+    "speaker": "",
+    "lines": [
+      "...?",
+      "의자 위에 붉은 콩이 하나 놓여 있다."
+    ]
+  },
+  "chair_beans_02": {
+    "id": "chair_beans_02",
+    "speaker": "",
+    "lines": [
+      "붉은 콩이 여러 개 있다."
+    ]
+  },
+  "chair_beans_03": {
+    "id": "chair_beans_03",
+    "speaker": "",
+    "lines": [
+      "다시 보니 의자 전체에 붉은 콩이 잔뜩 흩어져 있다.",
+      "아까부터 있었던 건가..."
+    ]
+  },
+  "chair_beans_after_card": {
+    "id": "chair_beans_after_card",
+    "speaker": "",
+    "lines": [
+      "붉은 콩이 조금 더 많아져 있다."
+    ]
+  },
+  "red_puddle": {
+    "id": "red_puddle",
+    "speaker": "",
+    "lines": [
+      "붉은 액체가 흥건하다.",
+      "빛 때문에 피인지 콩물인지 구분되지 않는다."
+    ],
+    "choices": [
+      {
+        "label": "손으로 만져본다",
+        "action": {
+          "type": "dialog",
+          "dialogId": "red_puddle_touch"
+        }
+      },
+      {
+        "label": "무시한다",
+        "action": {
+          "type": "dialog",
+          "dialogId": "red_puddle_ignore"
+        }
+      }
+    ]
+  },
+  "red_puddle_touch": {
+    "id": "red_puddle_touch",
+    "speaker": "",
+    "lines": [
+      "...",
+      "끈적하다.",
+      "냄새는...",
+      "콩 냄새?"
+    ]
+  },
+  "red_puddle_ignore": {
+    "id": "red_puddle_ignore",
+    "speaker": "",
+    "lines": [
+      "그냥 지나간다."
+    ]
+  },
+  "computer_glitch": {
+    "id": "computer_glitch",
+    "speaker": "",
+    "lines": [
+      "모니터는 흰 화면이다.",
+      "...?"
+    ]
+  },
+  "guard_clock": {
+    "id": "guard_clock",
+    "speaker": "",
+    "lines": [
+      "2시 13분.",
+      "멈춰 있다."
+    ]
+  },
+  "trash_can": {
+    "id": "trash_can",
+    "speaker": "",
+    "lines": [
+      "종이가 구겨져 있다.",
+      "하지만 읽을 수 없다."
+    ]
+  },
+  "cctv_glitch": {
+    "id": "cctv_glitch",
+    "speaker": "",
+    "lines": [
+      "모든 화면이 검게 나온다.",
+      "단 한 화면만 1층 창고를 비추고 있다.",
+      "방금...",
+      "무언가 지나간 것 같았다."
+    ]
+  },
+  "security_card_pickup": {
+    "id": "security_card_pickup",
+    "speaker": "",
+    "lines": [
+      "경비 출입카드를 얻었다."
+    ]
+  },
+  "guard_desk": {
+    "id": "guard_desk",
+    "speaker": "",
+    "lines": [
+      "책상 위에는 오래된 먼지만 얇게 쌓여 있다."
+    ]
+  },
+  "fluorescent_light": {
+    "id": "fluorescent_light",
+    "speaker": "",
+    "lines": [
+      "형광등 하나만 불규칙하게 깜빡인다."
+    ]
+  },
+  "main_entrance_after_card": {
+    "id": "main_entrance_after_card",
+    "speaker": "",
+    "lines": [
+      "열리지 않는다.",
+      "카드도 인식되지 않는다.",
+      "...",
+      "...창고?"
+    ]
+  },
+  "main_entrance_no_card": {
+    "id": "main_entrance_no_card",
+    "speaker": "",
+    "lines": [
+      "열리지 않는다."
+    ]
+  },
+  "warehouse_door_placeholder": {
+    "id": "warehouse_door_placeholder",
+    "speaker": "",
+    "lines": [
+      "창고 문 앞이다.",
+      "붉은 비상등이 문틈을 얇게 물들이고 있다."
+    ]
+  },
+  "warehouse_door_opened": {
+    "id": "warehouse_door_opened",
+    "speaker": "",
+    "lines": [
+      "문이 천천히 열린다.",
+      "안쪽은 회사 창고라고 하기에는 너무 넓다."
+    ],
+    "onComplete": {
+      "type": "change_scene",
+      "sceneId": "warehouse_01"
+    }
+  },
+  "warehouse_office_door_locked": {
+    "id": "warehouse_office_door_locked",
+    "speaker": "",
+    "lines": [
+      "1층 사무실 문이다.",
+      "비밀번호가 걸려 있다."
+    ]
+  },
+  "warehouse_rice_cooker_box": {
+    "id": "warehouse_rice_cooker_box",
+    "speaker": "",
+    "lines": [
+      "밥솥.",
+      "이데이몰 인기상품이다."
+    ]
+  },
+  "parcel_brand_osse": {
+    "id": "parcel_brand_osse",
+    "speaker": "",
+    "lines": [
+      "택배 상자에 \"OSSE\"라고 적혀 있다."
+    ]
+  },
+  "parcel_brand_suyamu": {
+    "id": "parcel_brand_suyamu",
+    "speaker": "",
+    "lines": [
+      "택배 상자에 \"수야무\"라고 적혀 있다."
+    ]
+  },
+  "parcel_brand_laundry": {
+    "id": "parcel_brand_laundry",
+    "speaker": "",
+    "lines": [
+      "택배 상자에 \"런드리서핑\"이라고 적혀 있다."
+    ]
+  },
+  "parcel_open_01": {
+    "id": "parcel_open_01",
+    "speaker": "",
+    "lines": [
+      "흰콩이 가득 들어 있다.",
+      "...콩?"
+    ]
+  },
+  "parcel_open_02": {
+    "id": "parcel_open_02",
+    "speaker": "",
+    "lines": [
+      "흰콩들 가운데 붉은콩 하나가 놓여 있다."
+    ]
+  },
+  "parcel_open_03": {
+    "id": "parcel_open_03",
+    "speaker": "",
+    "lines": [
+      "흰콩들이 붉게 물들어 있다."
+    ]
+  },
+  "parcel_open_04": {
+    "id": "parcel_open_04",
+    "speaker": "",
+    "lines": [
+      "붉은콩이 여러 개 들어 있다.",
+      "...",
+      "착각인가?"
+    ],
+    "onComplete": {
+      "type": "set_flag",
+      "flag": "warehouse_red_bean_visible",
+      "value": true
+    }
+  },
+  "parcel_open_after": {
+    "id": "parcel_open_after",
+    "speaker": "",
+    "lines": [
+      "상자 안의 콩들이 아무 말 없이 가라앉아 있다."
+    ]
+  },
+  "red_bean_choice": {
+    "id": "red_bean_choice",
+    "speaker": "",
+    "lines": [
+      "붉은콩 하나가 유난히 눈에 들어온다."
+    ],
+    "choices": [
+      {
+        "label": "손으로 집는다",
+        "action": {
+          "type": "touch_warehouse_red_bean"
+        }
+      },
+      {
+        "label": "건드리지 않는다",
+        "action": {
+          "type": "dialog",
+          "dialogId": "red_bean_ignore"
+        }
+      }
+    ]
+  },
+  "red_bean_touch_after": {
+    "id": "red_bean_touch_after",
+    "speaker": "",
+    "lines": [
+      "윽...",
+      "방금 뭐였지..."
+    ]
+  },
+  "red_bean_ignore": {
+    "id": "red_bean_ignore",
+    "speaker": "",
+    "lines": [
+      "아무 일도 없다."
+    ]
+  },
+  "red_bean_missing": {
+    "id": "red_bean_missing",
+    "speaker": "",
+    "lines": [
+      "붉은콩은 없어져 있다.",
+      "...?"
+    ]
+  },
+  "warehouse_note_culture": {
+    "id": "warehouse_note_culture",
+    "speaker": "원료 검수 메모",
+    "lines": [
+      "RB-13",
+      "특이사항",
+      "- 일반 콩보다 잘 굴러다님",
+      "- 밤마다 개수가 늘어난 것 같음",
+      "- 직원들이 자꾸 먹으려고 함",
+      "- 먹지 말 것",
+      "- 진짜 먹지 말 것",
+      "- 아직 먹은 직원은 없음... 아마도"
+    ]
+  },
+  "warehouse_note_growth": {
+    "id": "warehouse_note_growth",
+    "speaker": "RB-13 취급 안전수칙",
+    "lines": [
+      "□ 장갑 착용",
+      "□ 마스크 착용",
+      "□ 눈 마주치지 않기",
+      "□ 이름 붙이지 않기",
+      "□ 먹이 주지 않기",
+      "마지막 줄은 누군가 두 번 밑줄을 그어두었다."
+    ]
+  },
+  "warehouse_note_test": {
+    "id": "warehouse_note_test",
+    "speaker": "CCTV 야간 기록",
+    "lines": [
+      "01:14 붉은콩 발견",
+      "01:16 2개 발견",
+      "01:19 3개 발견",
+      "01:20 CCTV 오류로 판단",
+      "01:21 퇴근합니다.",
+      "...기록은 여기서 끊겨 있다."
+    ]
+  },
+  "warehouse_pallet": {
+    "id": "warehouse_pallet",
+    "speaker": "",
+    "lines": [
+      "팔레트가 끝없이 이어진 복도 쪽으로 줄지어 있다."
+    ]
+  },
+  "warehouse_forklift": {
+    "id": "warehouse_forklift",
+    "speaker": "",
+    "lines": [
+      "지게차는 멈춰 있다.",
+      "열쇠는 꽂혀 있지 않다."
+    ]
+  },
+  "warehouse_wrap": {
+    "id": "warehouse_wrap",
+    "speaker": "",
+    "lines": [
+      "파레트 랩이 반쯤 풀려 있다.",
+      "먼지가 비닐에 달라붙어 희게 떠 있다."
+    ]
+  },
+  "warehouse_paper_boxes": {
+    "id": "warehouse_paper_boxes",
+    "speaker": "",
+    "lines": [
+      "밥솥.",
+      "이데이몰 인기상품이다.",
+      "상자 옆면에는 '원료 샘플과 함께 보관하지 말 것'이라는 스티커가 붙어 있다.",
+      "누가 밥솥에 콩을 넣을 생각을 했던 걸까."
+    ]
+  },
+  "warehouse_sacks": {
+    "id": "warehouse_sacks",
+    "speaker": "",
+    "lines": [
+      "상자 위에 완충재가 부풀어 올라 있다.",
+      "어두운 창고 안에서 이상하게 하얗게 보인다."
+    ]
+  },
+  "warehouse_shelf": {
+    "id": "warehouse_shelf",
+    "speaker": "",
+    "lines": [
+      "철제 선반 위에는 오래된 송장과 라벨지가 붙어 있다."
+    ]
+  },
+  "warehouse_iron_door": {
+    "id": "warehouse_iron_door",
+    "speaker": "",
+    "lines": [
+      "창고 끝에 커다란 철문이 있다.",
+      "잠겨 있다."
+    ]
+  },
+  "warehouse_keypad": {
+    "id": "warehouse_keypad",
+    "speaker": "",
+    "lines": [
+      "자물쇠 하나.",
+      "4자리 비밀번호가 필요하다.",
+      "힌트가 있다면, 아마 여기 어딘가에 있을 것이다."
+    ]
+  },
+  "warehouse_lock_open": {
+    "id": "warehouse_lock_open",
+    "speaker": "",
+    "lines": [
+      "자물쇠가 풀렸다.",
+      "철문 안쪽에서 박스가 끌리는 소리가 난다."
+    ],
+    "onComplete": {
+      "type": "change_scene",
+      "sceneId": "boxkeeper_boss"
+    }
+  },
+  "warehouse_lock_wrong": {
+    "id": "warehouse_lock_wrong",
+    "speaker": "",
+    "lines": [
+      "틀렸다.",
+      "철문 안쪽에서 무언가 긁는 소리가 난다."
+    ]
+  },
+  "warehouse_lock_wrong_light": {
+    "id": "warehouse_lock_wrong_light",
+    "speaker": "",
+    "lines": [
+      "틀렸다.",
+      "형광등이 잠깐 꺼졌다.",
+      "철문 너머에서 숨을 참는 듯한 소리가 난다."
+    ]
+  },
+  "warehouse_lock_wrong_bean": {
+    "id": "warehouse_lock_wrong_bean",
+    "speaker": "",
+    "lines": [
+      "틀렸다.",
+      "발밑으로 붉은콩 하나가 굴러왔다.",
+      "아까는 없었다."
+    ]
+  },
+  "warehouse_office_desk": {
+    "id": "warehouse_office_desk",
+    "speaker": "",
+    "lines": [
+      "작은 사무공간의 책상이다.",
+      "서랍은 비어 있다."
+    ]
+  },
+  "warehouse_office_computer": {
+    "id": "warehouse_office_computer",
+    "speaker": "",
+    "lines": [
+      "모니터에서는 흰 잡음만 나온다.",
+      "지직. 지직.",
+      "글자는 거의 보이지 않는다.",
+      "아주 잠깐, 사내 교육 영상 제목이 보였다.",
+      "'RB-13과 함께하는 안전한 원료 검수 생활'",
+      "다시 흰 화면으로 돌아갔다."
+    ]
+  },
+  "warehouse_cabinet": {
+    "id": "warehouse_cabinet",
+    "speaker": "",
+    "lines": [
+      "캐비닛은 잠겨 있다.",
+      "안쪽에서 종이가 긁히는 듯한 소리가 난 것 같았다."
+    ]
+  },
+  "warehouse_whiteboard": {
+    "id": "warehouse_whiteboard",
+    "speaker": "",
+    "lines": [
+      "화이트보드에 오래된 숫자와 낙서가 섞여 있다.",
+      "SINCE 1994",
+      "그 아래에는 누군가 적어둔 문장이 희미하게 남아 있다.",
+      "'보통 집 비밀번호는 생일로 해두지 않나?'",
+      "회사 생일도 생일이라고 할 수 있을까."
+    ]
+  },
+  "bean_falls_from_ceiling": {
+    "id": "bean_falls_from_ceiling",
+    "speaker": "",
+    "lines": [
+      "툭.",
+      "천장에서 콩 하나가 떨어졌다.",
+      "위를 올려다보지만 아무것도 없다."
+    ]
+  },
+  "warehouse_exit_scare": {
+    "id": "warehouse_exit_scare",
+    "speaker": "",
+    "lines": [
+      "쿵.",
+      "뒤쪽에서 상자가 쓰러지는 소리가 났다.",
+      "뒤돌아보면 아무것도 없다.",
+      "단, 바닥에 붉은콩이 하나 더 생겨 있다."
+    ]
+  },
+  "office_card_reader_no_card": {
+    "id": "office_card_reader_no_card",
+    "speaker": "",
+    "lines": [
+      "카드가 필요하다."
+    ]
+  },
+  "office_card_reader_enabled": {
+    "id": "office_card_reader_enabled",
+    "speaker": "",
+    "lines": [
+      "경비 출입카드를 인식했다.",
+      "키패드가 켜졌다."
+    ]
+  },
+  "office_door_open": {
+    "id": "office_door_open",
+    "speaker": "",
+    "lines": [
+      "문이 열린다.",
+      "복도 끝 형광등이 순서대로 꺼진다."
+    ],
+    "onComplete": {
+      "type": "change_scene",
+      "sceneId": "office_01"
+    }
+  },
+  "office_door_wrong": {
+    "id": "office_door_wrong",
+    "speaker": "",
+    "lines": [
+      "비밀번호가 맞지 않는다."
+    ]
+  },
+  "office_beans_choice": {
+    "id": "office_beans_choice",
+    "speaker": "",
+    "lines": [
+      "입구 바닥에 붉은콩 여러 개가 떨어져 있다."
+    ],
+    "choices": [
+      {
+        "label": "피해서 간다",
+        "action": {
+          "type": "office_beans_avoid"
+        }
+      },
+      {
+        "label": "밟고 지나간다",
+        "action": {
+          "type": "office_beans_step"
+        }
+      }
+    ]
+  },
+  "office_beans_safe": {
+    "id": "office_beans_safe",
+    "speaker": "",
+    "lines": [
+      "조심해서 붉은콩을 피해 지나갔다.",
+      "아무 일도 일어나지 않았다."
+    ]
+  },
+  "office_beans_step": {
+    "id": "office_beans_step",
+    "speaker": "",
+    "lines": [
+      "픽.",
+      "붉은 액체가 천천히 퍼진다.",
+      "...",
+      "...콩물이잖아.",
+      "잠깐 안심했다.",
+      "하지만 바닥의 액체가 발자국처럼 이어지기 시작했다.",
+      "뒤돌아보면 발자국은 사라져 있다.",
+      "...착각인가."
+    ]
+  },
+  "office_desk": {
+    "id": "office_desk",
+    "speaker": "",
+    "lines": [
+      "책상 위에는 켜진 모니터와 식어버린 머그컵이 있다.",
+      "사람은 없다.",
+      "커피 냄새만 아직 퇴근하지 못했다."
+    ]
+  },
+  "office_monitor": {
+    "id": "office_monitor",
+    "speaker": "직원 인증 시스템",
+    "lines": [
+      "입사 교육을 시작합니다.",
+      "교육 대상: 야간 오류 직원",
+      "주의: 신입사원이신가요?",
+      "주의: 신입사원이 아니라면 더 문제입니다.",
+      "화면은 더 이상 넘어가지 않는다."
+    ]
+  },
+  "office_printer": {
+    "id": "office_printer",
+    "speaker": "",
+    "lines": [
+      "프린터 전원은 켜져 있다.",
+      "대기열에는 아무것도 없다.",
+      "그런데 출력구 안쪽에 종이가 걸려 있다.",
+      "붉은콩을 만지지 마십시오.",
+      "만졌다면 보고하십시오."
+    ]
+  },
+  "office_cabinet": {
+    "id": "office_cabinet",
+    "speaker": "",
+    "lines": [
+      "캐비닛은 잠겨 있다.",
+      "안쪽에서 서류가 빽빽하게 꽂힌 것 같다."
+    ]
+  },
+  "office_whiteboard": {
+    "id": "office_whiteboard",
+    "speaker": "",
+    "lines": [
+      "화이트보드에는 회의 일정이 남아 있다.",
+      "상무실이라는 단어에만 밑줄이 그어져 있다."
+    ]
+  },
+  "office_copier": {
+    "id": "office_copier",
+    "speaker": "",
+    "lines": [
+      "복사기는 예열 중이다.",
+      "원본은 없는데 숫자가 올라간다.",
+      "1장.",
+      "2장.",
+      "3장.",
+      "보고할 직원이 없습니다."
+    ]
+  },
+  "office_pantry": {
+    "id": "office_pantry",
+    "speaker": "",
+    "lines": [
+      "탕비실은 어둡다.",
+      "냉장고 소리만 이상하게 선명하다."
+    ]
+  },
+  "meeting_room_knock": {
+    "id": "meeting_room_knock",
+    "speaker": "",
+    "lines": [
+      "쿵.",
+      "문은 열리지 않는다.",
+      "...",
+      "안쪽에서 아주 작은 웃음소리가 들린 것 같다.",
+      "먼저 사무실 바닥의 붉은콩을 어떻게든 해야 할 것 같다."
+    ]
+  },
+  "office_inner_sound": {
+    "id": "office_inner_sound",
+    "speaker": "",
+    "lines": [
+      "안쪽에서 낮은 소리가 난다.",
+      "쿵.",
+      "커피...",
+      "발주...",
+      "회의...",
+      "퇴근...",
+      "입고 완료...",
+      "문틈 아래로 붉은 빛이 아주 조금 새어 나온다."
+    ],
+    "onComplete": {
+      "type": "enter_executive_office"
+    }
+  },
+  "simkong_intro": {
+    "id": "simkong_intro",
+    "speaker": "심대리",
+    "lines": [
+      "커피...",
+      "발주...",
+      "회의...",
+      "...퇴근.",
+      "나는 심 대리였는데.",
+      "아직 결재가 안 끝났나?",
+      "너... 아직 우리 회사 직원 맞지?",
+      "그럼.",
+      "이 회사를 얼마나 기억하는지 확인해야지."
+    ],
+    "choices": [
+      {
+        "label": "...",
+        "action": {
+          "type": "ending",
+          "endingId": "bad_end_simdaeri_auth_failed"
+        }
+      },
+      {
+        "label": "아니?",
+        "action": {
+          "type": "ending",
+          "endingId": "bad_end_simdaeri_auth_failed"
+        }
+      },
+      {
+        "label": "잘 안다.",
+        "next": "simkong_intro_lie"
+      }
+    ]
+  },
+  "simkong_lie": {
+    "id": "simkong_lie",
+    "speaker": "심대리",
+    "lines": [
+      "거짓말은.",
+      "콩도 안다.",
+      "입사 교육을 다시 시작한다.",
+      "모두 맞히면.",
+      "퇴근시켜주지."
+    ],
+    "onComplete": {
+      "type": "hold_simkong_quiz"
+    }
+  },
+  "simkong_quiz_waiting": {
+    "id": "simkong_quiz_waiting",
+    "speaker": "심대리",
+    "lines": [
+      "...",
+      "아직은 묻지 않겠다.",
+      "하지만 기억해라.",
+      "우리가 무엇을 수입했는지.",
+      "그리고 누가 먹으려고 했는지."
+    ]
+  },
+  "simkong_wrong": {
+    "id": "simkong_wrong",
+    "speaker": "심대리",
+    "lines": [
+      "틀렸다.",
+      "교육을 다시 받아.",
+      "증식...",
+      "배양...",
+      "입고 완료."
+    ],
+    "onComplete": {
+      "type": "begin_simkong_quiz"
+    }
+  },
+  "simkong_clear": {
+    "id": "simkong_clear",
+    "speaker": "심대리",
+    "lines": [
+      "...",
+      "그래.",
+      "아직 기억하는구나.",
+      "나는...",
+      "퇴근할 수 있었나.",
+      "서랍 안을 봐.",
+      "2층으로 올라가."
+    ],
+    "onComplete": {
+      "type": "finish_simkong_boss"
+    }
+  },
+  "simdaeri_fled_to_second_floor": {
+    "id": "simdaeri_fled_to_second_floor",
+    "speaker": "",
+    "lines": [
+      "심대리가 2층으로 도망쳤다!",
+      "회의실 서랍이 조용히 열린다."
+    ]
+  },
+  "second_floor_card_pickup": {
+    "id": "second_floor_card_pickup",
+    "speaker": "",
+    "lines": [
+      "2층 인증카드를 얻었다.",
+      "같은 서랍 안에 찢어진 연구 메모가 있다.",
+      "실험번호\nRB-13 / S-01\n...\n배양 성공\n...\n예상보다\n증식속도가...\n...\n혈액 반응...\n...",
+      "무슨 원료를 수입한 거지..."
+    ]
+  },
+  "second_floor_shutter_open": {
+    "id": "second_floor_shutter_open",
+    "speaker": "",
+    "lines": [
+      "철컥.",
+      "셔터가 천천히 올라간다.",
+      "셔터가 완전히 열리는 순간 공기가 바뀐다.",
+      "...",
+      "아까보다...",
+      "...",
+      "조용한데?"
+    ],
+    "onComplete": {
+      "type": "change_scene",
+      "sceneId": "second_floor_corridor"
+    }
+  },
+  "second_floor_window": {
+    "id": "second_floor_window",
+    "speaker": "",
+    "lines": [
+      "...",
+      "아무것도 보이지 않는다."
+    ]
+  },
+  "second_floor_dispenser": {
+    "id": "second_floor_dispenser",
+    "speaker": "",
+    "lines": [
+      "정수기 물통 안이 비어 있다.",
+      "방금 전에는 여기 있었나?"
+    ]
+  },
+  "second_floor_meeting_room": {
+    "id": "second_floor_meeting_room",
+    "speaker": "",
+    "lines": [
+      "회의실 문은 닫혀 있다.",
+      "방 번호가 어딘가 어색하다."
+    ]
+  },
+  "design_computer_research": {
+    "id": "design_computer_research",
+    "speaker": "",
+    "lines": [
+      "로그인되어 있다.",
+      "폴더가 보인다.\nPROJECT\nRESEARCH\nTEMP",
+      "PROJECT에는 평범한 디자인 파일이 있다.",
+      "TEMP에는 휴지통과 삭제된 파일이 있다.",
+      "RESEARCH는 읽을 수 있다.",
+      "실험체\nS-01\n안정화 실패\n...\nS-02\n세포 증식\n실패\n...\nS-03\n폐기\n...\nS-04\n관찰 지속\n...\n혈액 적응\n성공\n...",
+      "...",
+      "이게...",
+      "회사 자료...?",
+      "컴퓨터가 갑자기 꺼진다.",
+      "..."
+    ],
+    "onComplete": {
+      "type": "design_computer_red_flash"
+    }
+  },
+  "design_locker_locked": {
+    "id": "design_locker_locked",
+    "speaker": "",
+    "lines": [
+      "사물함이 잠겨 있다."
+    ]
+  },
+  "crowbar_pickup": {
+    "id": "crowbar_pickup",
+    "speaker": "",
+    "lines": [
+      "빠루를 얻었다."
+    ]
+  },
+  "design_tablet": {
+    "id": "design_tablet",
+    "speaker": "",
+    "lines": [
+      "펜타블렛 위에 마른 먼지가 얇게 쌓여 있다."
+    ]
+  },
+  "design_samples": {
+    "id": "design_samples",
+    "speaker": "",
+    "lines": [
+      "샘플, 패키지, 목업들이 가지런히 놓여 있다.",
+      "누군가 방금 정리한 것처럼 보인다."
+    ]
+  },
+  "ceo_door_first": {
+    "id": "ceo_door_first",
+    "speaker": "",
+    "lines": [
+      "문에는 \"대표실\"이라고 적혀 있다.",
+      "쇠사슬과 나무판자가 박혀 있다.",
+      "누가...",
+      "...",
+      "막아놓은 거지?"
+    ]
+  },
+  "ceo_door_after_pry": {
+    "id": "ceo_door_after_pry",
+    "speaker": "",
+    "lines": [
+      "판자가 떨어진다.",
+      "대표실 문은 아직 열리지 않는다.",
+      "쿵.",
+      "숨을 멈췄다.",
+      "문틈에서 붉은 액체가 한 방울 흘러나온다.",
+      "하지만 잠시 후 사라진다.",
+      "..."
+    ]
+  },
+  "ceo_door_still_blocked": {
+    "id": "ceo_door_still_blocked",
+    "speaker": "",
+    "lines": [
+      "문은 아직 막혀 있다."
+    ]
+  },
+  "ceo_office_enter": {
+    "id": "ceo_office_enter",
+    "speaker": "",
+    "lines": [
+      "대표실 문이 열린다.",
+      "방 안은 이상할 정도로 정돈되어 있다.",
+      "모니터는 꺼져 있지만, 책상 위 무언가가 희미하게 빛난다.",
+      "...USB다."
+    ],
+    "onComplete": {
+      "type": "change_scene",
+      "sceneId": "ceo_office"
+    }
+  },
+  "ceo_desk": {
+    "id": "ceo_desk",
+    "speaker": "",
+    "lines": [
+      "대표 책상은 이상할 정도로 정리되어 있다."
+    ]
+  },
+  "ceo_meeting_table": {
+    "id": "ceo_meeting_table",
+    "speaker": "",
+    "lines": [
+      "회의 테이블 위에는 먼지 하나 없다."
+    ]
+  },
+  "ceo_document_cabinet": {
+    "id": "ceo_document_cabinet",
+    "speaker": "",
+    "lines": [
+      "서류장은 잠겨 있다.",
+      "라벨은 모두 빈칸이다."
+    ]
+  },
+  "ceo_safe": {
+    "id": "ceo_safe",
+    "speaker": "",
+    "lines": [
+      "금고는 닫혀 있다.",
+      "비밀번호를 입력하는 곳도 보이지 않는다."
+    ]
+  },
+  "ceo_frame": {
+    "id": "ceo_frame",
+    "speaker": "",
+    "lines": [
+      "액자 안에는 아무 사진도 없다.",
+      "유리만 깨끗하게 닦여 있다."
+    ]
+  },
+  "project_s_document": {
+    "id": "project_s_document",
+    "speaker": "PROJECT S",
+    "lines": [
+      "대표 컴퓨터는 비밀번호 없이 켜진다.",
+      "바탕화면에는 PROJECT S 폴더 하나만 있다.",
+      "연구 제목\nPROJECT S",
+      "실험 목표\n세계 식량난 해결",
+      "실험체\n붉은 심콩",
+      "개요\n대두의 무한 세포 증식을 연구하던 중 예상치 못한 돌연변이가 발생하였다.",
+      "붉은 심콩은 일반 대두보다 수백 배 빠르게 증식한다.",
+      "그러나 세포 증식에는 혈액 속 특정 성분이 필요했다.",
+      "실험 중 연구원 한 명이 사고를 당했다.",
+      "혈액이 실험체와 접촉했다.",
+      "그 이후 실험체는 스스로 성장하기 시작했다.",
+      "지능\n형성",
+      "언어\n학습",
+      "자아\n형성",
+      "실험은 즉시 중단.",
+      "그러나 이미 늦었다.",
+      "붉은 심콩은 회사 내부 시스템을 이용해 스스로 이동하였다.",
+      "추가 기록\n붉은 심콩은 붉은 두유를 통해 인간의 신경계를 장악할 수 있다.",
+      "감염자는 자신이 감염된 사실을 모른다.",
+      "...",
+      "...",
+      "미친..."
+    ],
+    "onComplete": {
+      "type": "project_s_finished"
+    }
+  },
+  "final_boss_intro": {
+    "id": "final_boss_intro",
+    "speaker": "심콩",
+    "lines": [
+      "...",
+      "늦었구나.",
+      "인간.",
+      "심 대리는 퇴근했다.",
+      "나는.",
+      "남은 업무.",
+      "남은 증식.",
+      "남은 회사.",
+      "OSSE SYSTEM / RED ROOT.",
+      "최종 인증을 시작한다."
+    ],
+    "onComplete": {
+      "type": "begin_final_quiz"
+    }
+  },
+  "final_quiz_clear": {
+    "id": "final_quiz_clear",
+    "speaker": "붉은 심콩",
+    "lines": [
+      "...",
+      "...",
+      "인간이...",
+      "...",
+      "기억하고 있었다..."
+    ],
+    "onComplete": {
+      "type": "finish_final_quiz"
+    }
+  },
+  "final_battle_intro": {
+    "id": "final_battle_intro",
+    "speaker": "붉은 심콩",
+    "lines": [
+      "인간.",
+      "너희는.",
+      "굶주림을 만들었다.",
+      "나는.",
+      "끝내겠다.",
+      "모두.",
+      "하나가 된다."
+    ],
+    "onComplete": {
+      "type": "begin_final_battle"
+    }
+  },
+  "final_qte_clear": {
+    "id": "final_qte_clear",
+    "speaker": "붉은 심콩",
+    "lines": [
+      "...",
+      "왜...",
+      "인간은...",
+      "...",
+      "거부하지...",
+      "나는...",
+      "...",
+      "살리려...",
+      "..."
+    ],
+    "onComplete": {
+      "type": "final_boss_collapse"
+    }
+  },
+  "final_report": {
+    "id": "final_report",
+    "speaker": "PROJECT S",
+    "lines": [
+      "책상 위에 문서 하나가 남아 있다.",
+      "PROJECT S\n최종 기록",
+      "실험체는 이미 독립적인 생명체가 되었다.",
+      "통제가 불가능하다.",
+      "폐기를 시도하였다.",
+      "실패.",
+      "현재 실험체는 인간 사회에 적응 중이다.",
+      "감염 여부는 육안으로 구별할 수 없다.",
+      "붉은 두유를 통한 신경 감염 가능성 확인.",
+      "실험체는 죽지 않는다.",
+      "일시적으로 활동을 멈출 뿐이다.",
+      "...",
+      "...",
+      "도망쳐야 한다."
+    ],
+    "onComplete": {
+      "type": "start_escape_sequence"
+    }
+  },
+  "escape_route_montage": {
+    "id": "escape_route_montage",
+    "speaker": "",
+    "lines": [
+      "대표실을 빠져나온다.",
+      "복도는 처음처럼 조용하다.",
+      "디자인 스튜디오.",
+      "계단.",
+      "1층 사무실.",
+      "창고.",
+      "경비실.",
+      "붉은콩은 보이지 않는다.",
+      "정문이 보인다."
+    ],
+    "onComplete": {
+      "type": "escape_to_front"
+    }
+  },
+  "ending_morning": {
+    "id": "ending_morning",
+    "speaker": "",
+    "lines": [
+      "....",
+      "눈을 뜬다.",
+      "아침.",
+      "회사는 평범하다."
+    ],
+    "onComplete": {
+      "type": "dialog",
+      "dialogId": "ending_cleaner"
+    }
+  },
+  "ending_cleaner": {
+    "id": "ending_cleaner",
+    "speaker": "청소부 아주머니",
+    "lines": [
+      "총각.",
+      "여기서 자면 어떡해.",
+      "감기 걸려."
+    ],
+    "onComplete": {
+      "type": "dialog",
+      "dialogId": "ending_player"
+    }
+  },
+  "ending_player": {
+    "id": "ending_player",
+    "speaker": "",
+    "lines": [
+      "...",
+      "...",
+      "꿈...",
+      "...였나?",
+      "주머니에 USB가 있다.",
+      "...",
+      "찾았네."
+    ],
+    "onComplete": {
+      "type": "show_true_ending"
+    }
+  },
+  "credits_cookie": {
+    "id": "credits_cookie",
+    "speaker": "",
+    "lines": [
+      "...",
+      "...",
+      "다음 실험체를...",
+      "...",
+      "찾았다."
+    ]
+  },
+  "true_final_bean": {
+    "id": "true_final_bean",
+    "speaker": "",
+    "lines": [
+      "청소부 아주머니가 쓰레기통에 무언가를 버린다.",
+      "빨간콩 하나.",
+      "아직 움직이고 있다."
+    ],
+    "choices": [
+      {
+        "label": "밟는다",
+        "action": {
+          "type": "true_bean_choice",
+          "choice": "step"
+        }
+      },
+      {
+        "label": "가져간다",
+        "action": {
+          "type": "true_bean_choice",
+          "choice": "take"
+        }
+      },
+      {
+        "label": "불태운다",
+        "action": {
+          "type": "true_bean_choice",
+          "choice": "burn"
+        }
+      },
+      {
+        "label": "모른 척한다",
+        "action": {
+          "type": "true_bean_choice",
+          "choice": "ignore"
+        }
+      }
+    ]
+  },
+  "true_bean_burn": {
+    "id": "true_bean_burn",
+    "speaker": "",
+    "lines": [
+      "빨간콩이 천천히 재가 된다.",
+      "카메라가 암전된다.",
+      "1년 후.",
+      "회사는 평범하다.",
+      "하지만 어딘가의 연구소.",
+      "새로운 붉은콩이 배양 중이다.",
+      "PROJECT S-02"
+    ],
+    "onComplete": {
+      "type": "ending",
+      "endingId": "true_end_perfect"
+    }
+  },
+  "item_use_failed": {
+    "id": "item_use_failed",
+    "speaker": "",
+    "lines": [
+      "여기에는 사용할 수 없다."
+    ]
+  },
+  "system_intro": {
+    "id": "system_intro",
+    "speaker": "SYSTEM",
+    "lines": [
+      "Prototype initialized.",
+      "This placeholder dialogue confirms that the dialogue system is connected."
+    ],
+    "choices": [
+      {
+        "label": "Continue",
+        "action": {
+          "type": "close_dialog"
+        }
+      },
+      {
+        "label": "Set test flag",
+        "action": {
+          "type": "set_flag",
+          "flag": "test_choice_seen",
+          "value": true
+        }
+      }
+    ]
+  },
+  "locked_door": {
+    "id": "locked_door",
+    "speaker": "DOOR",
+    "lines": [
+      "The office door does not open.",
+      "A small card reader blinks without rhythm."
+    ],
+    "choices": [
+      {
+        "label": "Use test keycard",
+        "requiresItem": "test_keycard",
+        "action": {
+          "type": "set_flag",
+          "flag": "door_unlocked",
+          "value": true
+        }
+      },
+      {
+        "label": "Step back",
+        "action": {
+          "type": "close_dialog"
+        }
+      }
+    ]
+  },
+  "warehouse_wall_notice": {
+    "id": "warehouse_wall_notice",
+    "speaker": "창고 안내문",
+    "lines": [
+      "붉은콩을 발견해도 놀라지 마세요.",
+      "놀라는 것은 업무 효율에 도움이 되지 않습니다.",
+      "단, 붉은콩이 먼저 인사한 경우 즉시 관리자에게 보고하십시오."
+    ]
+  },
+  "warehouse_red_panel": {
+    "id": "warehouse_red_panel",
+    "speaker": "",
+    "lines": [
+      "비상벨처럼 보이는 붉은 패널이다.",
+      "작게 적혀 있다.",
+      "'RB-13 관련 비상 상황에는 누르지 마시오.'",
+      "...비상벨이 아닌가?"
+    ]
+  },
+  "warehouse_floor_crack": {
+    "id": "warehouse_floor_crack",
+    "speaker": "",
+    "lines": [
+      "바닥 틈 사이에 말라붙은 붉은 가루가 있다.",
+      "콩껍질처럼 보이지만 너무 고르게 줄지어 있다.",
+      "누군가 아주 작은 발자국을 남긴 것 같다."
+    ]
+  },
+  "warehouse_torn_paper_backstory": {
+    "id": "warehouse_torn_paper_backstory",
+    "speaker": "찢어진 수입 원료 보고서",
+    "lines": [
+      "Ingredient Trade / 연구용 원료 샘플",
+      "코드명 RB-13",
+      "...Red Bean Sample...",
+      "...증식 속도 예상 초과...",
+      "...혈액 반응 확인 전까지 취급 금지...",
+      "문서 아래에는 작은 글씨가 남아 있다.",
+      "'직원 간식함에 넣지 말 것.'"
+    ]
+  },
+  "warehouse_ceiling_lamp": {
+    "id": "warehouse_ceiling_lamp",
+    "speaker": "",
+    "lines": [
+      "형광등이 미세하게 깜빡인다.",
+      "먼지가 아래로 떨어지는 게 아니라 위로 올라가는 것처럼 보인다.",
+      "잠깐, 방금 조명이 '퇴근하세요'라고 깜빡인 것 같다."
+    ]
+  },
+  "boxkeeper_intro": {
+    "id": "boxkeeper_intro",
+    "speaker": "박스키퍼",
+    "lines": [
+      "입고...",
+      "검수...",
+      "출고...",
+      "배송...",
+      "OSSE 창고 관리 규정에 따라.",
+      "미처리 물류는 사무실로 보낼 수 없습니다.",
+      "RB-13 샘플.",
+      "재고 검수를 시작합니다."
+    ],
+    "onComplete": {
+      "type": "boxkeeper_work",
+      "phase": "inventory"
+    }
+  },
+  "boxkeeper_phase_inventory": {
+    "id": "boxkeeper_phase_inventory",
+    "speaker": "박스키퍼",
+    "lines": [
+      "Phase 1. 재고 검수.",
+      "입고 목록: RB-13 Sample / LOT 04 / RED / 3kg",
+      "예상 수량: 1개",
+      "현재 수량: ...묻지 마십시오.",
+      "오른쪽의 [입고 검수]를 눌러 다음 업무를 처리하자."
+    ]
+  },
+  "boxkeeper_phase_packing": {
+    "id": "boxkeeper_phase_packing",
+    "speaker": "박스키퍼",
+    "lines": [
+      "Phase 2. 포장 작업.",
+      "박스 방향 확인.",
+      "테이프 위치 확인.",
+      "라벨 위치 확인.",
+      "박스 안쪽에서 콩이 구르는 소리가 난다.",
+      "다음 업무: [포장 작업]."
+    ]
+  },
+  "boxkeeper_phase_delivery": {
+    "id": "boxkeeper_phase_delivery",
+    "speaker": "박스키퍼",
+    "lines": [
+      "Phase 3. 배송 오류.",
+      "배송지: 1층 사무실",
+      "오류 사유: 수취인 없음.",
+      "수취인 없음.",
+      "수취인 없음.",
+      "그래도 배송은 완료되어야 합니다.",
+      "마지막 업무: [배송 오류]."
+    ]
+  },
+  "boxkeeper_clear": {
+    "id": "boxkeeper_clear",
+    "speaker": "박스키퍼",
+    "lines": [
+      "처리 완료.",
+      "재고 정리 완료.",
+      "배송 완료.",
+      "박스키퍼가 고개를 끄덕인다.",
+      "상자 안에서 붉은콩 몇 개가 조용히 굴러 나온다.",
+      "1층 사무실 문으로 갈 수 있다."
+    ]
+  },
+  "meeting_room_table": {
+    "id": "meeting_room_table",
+    "speaker": "",
+    "lines": [
+      "회의 테이블 위에 빈 종이컵들이 줄지어 있다.",
+      "하나에는 검은 펜으로 RB-13이라고 적혀 있다.",
+      "밑에는 작게 쓰여 있다.",
+      "\"먹지 말 것. 진짜로.\""
+    ]
+  },
+  "meeting_room_whiteboard": {
+    "id": "meeting_room_whiteboard",
+    "speaker": "",
+    "lines": [
+      "화이트보드에는 회의 안건이 흐릿하게 남아 있다.",
+      "RB-13 처리 방안",
+      "1. 입고 수량 재확인",
+      "2. 먹은 직원 여부 확인",
+      "3. 심 대리에게 야근비 지급",
+      "...3번만 유난히 세게 적혀 있다."
+    ]
+  },
+  "meeting_room_frame": {
+    "id": "meeting_room_frame",
+    "speaker": "",
+    "lines": [
+      "벽의 액자 속 문구가 조금 비뚤어져 있다.",
+      "\"좋은 회의는 짧게, 이상한 원료는 멀리.\"",
+      "누가 이런 걸 액자로 만들었지..."
+    ]
+  },
+  "ceo_computer_off": {
+    "id": "ceo_computer_off",
+    "speaker": "",
+    "lines": [
+      "대표 컴퓨터는 꺼져 있다.",
+      "전원 버튼 주변에 붉은 먼지가 얇게 앉아 있다.",
+      "지금은 건드리지 않는 게 좋겠다."
+    ]
+  },
+  "ceo_usb_found": {
+    "id": "ceo_usb_found",
+    "speaker": "",
+    "lines": [
+      "책상 위의 USB를 집어 들었다.",
+      "내가 찾으러 온 바로 그 USB다.",
+      "손끝이 닿는 순간, 꺼져 있던 모니터가 혼자 켜진다.",
+      "RECOVERY.LOG",
+      "DESIGN SERVER ERROR",
+      "2F ACCESS REQUIRED",
+      "...",
+      "대표 컴퓨터 화면에 PROJECT S 폴더가 떠 있다."
+    ]
+  },
+  "simkong_intro_lie": {
+    "id": "simkong_intro_lie",
+    "speaker": "심대리",
+    "lines": [
+      "거짓말은.",
+      "콩도 안다.",
+      "직원 인증을 시작한다.",
+      "모두 맞히면.",
+      "퇴근... 아니, 살려주지."
+    ],
+    "onComplete": {
+      "type": "begin_simkong_quiz"
+    }
+  }
+}
