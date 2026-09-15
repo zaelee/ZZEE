@@ -987,7 +987,6 @@ button:focus-visible {
 
 /* Public release: usable controls and panels at small viewport sizes. */
 .game-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; width: min(1280px, 100%); font-size: 13px; }
-.game-toolbar a { color: var(--accent); text-underline-offset: 4px; }
 .game-toolbar span { flex: 1; color: var(--muted); }
 .game-toolbar button { padding: 6px 12px; }
 .rotate-hint { display: none; margin: 0; font-size: 12px; color: var(--muted); }
