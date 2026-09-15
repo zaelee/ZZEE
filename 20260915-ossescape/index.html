@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="야근 후 돌아온 회사에서 벌어지는 포인트 앤 클릭 호러 어드벤처. 단서를 조사하고 퍼즐을 풀어 OSSE에서 탈출하세요.">
+  <title>OSSE Inc. - Escape from OSSE</title>
+  <link rel="stylesheet" href="style.css?v=20260915-1">
+</head>
+<body>
+
+  <nav class="game-toolbar" aria-label="게임 도구">
+    <a href="../index.html">← ZZEE 프로젝트</a>
+    <span>클릭 / 터치: 조사 · 드래그: 회피 · ESC: 메뉴</span>
+    <button id="game-menu-button" type="button">메뉴 / 저장</button>
+    <button id="game-action-button" class="hidden" type="button">연타 / 진행</button>
+  </nav>
+  <p class="rotate-hint">휴대폰을 가로로 돌리면 장면과 단서를 더 크게 볼 수 있어요.</p>
+  <main id="game-shell" aria-label="OSSE Inc. Escape from OSSE game">
+    <section id="game-screen">
+      <canvas id="game-canvas" width="1280" height="720" aria-label="Game canvas"></canvas>
+
+      <section id="intro-video-panel" class="intro-video hidden" aria-label="Intro Video">
+        <video id="intro-video" class="intro-video__media" preload="none" playsinline>
+          <source src="최종.mp4" type="video/mp4">
+        </video>
+        <p id="intro-status" class="intro-video__status">인트로 영상 불러오는 중... 꺼진 거 아니에요.</p>
+        <button id="intro-play-button" class="intro-video__play hidden" type="button">클릭해서 인트로 시작</button>
+        <button id="intro-skip-button" class="intro-video__skip" type="button">SKIP</button>
+      </section>
+
+      <section id="main-menu" class="panel title-menu" aria-label="Main Menu">
+        <h1>OSSE Inc.</h1>
+        <p>Escape from OSSE</p>
+        <p class="build-check">야근 끝, 아직 퇴근할 수 없는 회사.</p>
+        <nav class="title-menu__actions">
+          <button id="new-game-button" type="button" disabled>새 게임</button>
+          <button id="continue-button" type="button" disabled>이어하기</button>
+          <button id="settings-button" type="button">설정</button>
+          <button id="exit-button" type="button">나가기</button>
+        </nav>
+      </section>
+
+      <div id="hud" class="hud">
+        <div class="hud__row">
+          <span id="scene-name">OSSE Inc.</span>
+          <span id="quest-summary">기록</span>
+        </div>
+        <div class="hud__row hud__row--small">
+          <span>클릭: 조사</span>
+          <span>ESC: 메뉴</span>
+        </div>
+      </div>
+
+      <button id="point-back" class="point-back hidden" type="button">돌아가기</button>
+      <nav id="quick-inventory" class="quick-inventory hidden" aria-label="Quick inventory"></nav>
+
+      <section id="dialog-box" class="panel dialog hidden" aria-live="polite">
+        <p id="dialog-speaker" class="dialog__speaker"></p>
+        <p id="dialog-text" class="dialog__text"></p>
+        <div id="choice-list" class="choice-list"></div>
+      </section>
+
+      <section id="menu-panel" class="panel menu hidden" aria-label="Menu">
+        <header class="panel__header">
+          <h1>메뉴</h1>
+          <button id="menu-close" type="button" aria-label="메뉴 닫기">X</button>
+        </header>
+        <nav class="menu__actions">
+          <button id="save-button" type="button">저장</button>
+          <button id="load-button" type="button">불러오기</button>
+          <button id="autosave-button" type="button">자동 저장</button>
+          <button id="restart-button" type="button">처음부터</button>
+        </nav>
+        <div class="menu__grid">
+          <article>
+            <h2>인벤토리</h2>
+            <ul id="inventory-list"></ul>
+          </article>
+          <article id="flag-debug-section" class="debug-only hidden">
+            <h2>플래그</h2>
+            <ul id="flag-list"></ul>
+          </article>
+          <article>
+            <h2>기록</h2>
+            <ul id="quest-list"></ul>
+          </article>
+          <article>
+            <h2>진행</h2>
+            <ul id="stats-list"></ul>
+          </article>
+          <article>
+            <h2>엔딩</h2>
+            <ul id="collection-list"></ul>
+          </article>
+          <article>
+            <h2>설정</h2>
+            <div id="menu-settings"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="settings-panel" class="panel settings hidden" aria-label="Settings">
+        <header class="panel__header">
+          <h1>설정</h1>
+          <button id="settings-close" type="button" aria-label="설정 닫기">X</button>
+        </header>
+        <div id="settings-content"></div>
+      </section>
+
+      <section id="modal-panel" class="panel modal hidden" aria-live="assertive">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+        <div id="modal-actions"></div>
+      </section>
+    </section>
+  </main>
+
+  <nav id="dev-toolkit" class="dev-toolkit hidden" aria-label="Development jump toolkit">
+    <div class="dev-toolkit__header">
+      <strong>개발용 분기 이동</strong>
+      <span id="dev-toolkit-status">현재: 시작 전 · 저장 안 함</span>
+      <button id="dev-toolkit-toggle" type="button">접기</button>
+    </div>
+    <div id="dev-toolkit-actions" class="dev-toolkit__actions"></div>
+  </nav>
+
+  <script src="dialog.js?v=20260915-1"></script>
+  <script src="inventory.js?v=20260915-1"></script>
+  <script src="quiz.js?v=20260915-1"></script>
+  <script src="battle.js?v=20260915-1"></script>
+  <script src="minigame.js?v=20260915-1"></script>
+  <script src="ending.js?v=20260915-1"></script>
+  <script src="puzzle.js?v=20260915-1"></script>
+  <script src="liminal.js?v=20260915-1"></script>
+  <script src="settings.js?v=20260915-1"></script>
+  <script src="scene.js?v=20260915-1"></script>
+  <script src="pointclick.js?v=20260915-1"></script>
+  <script src="game.js?v=20260915-1"></script>
+</body>
+</html>

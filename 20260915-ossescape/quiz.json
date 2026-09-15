@@ -1,0 +1,372 @@
+{
+  "system_quiz": {
+    "id": "system_quiz",
+    "title": "직원 인증",
+    "question": "입사 교육 확인: OSSE에서 가장 먼저 해야 하는 것은?",
+    "choices": [
+      "보고한다",
+      "먹어본다",
+      "퇴근한다"
+    ],
+    "answerIndex": 0,
+    "onCorrect": {
+      "type": "set_flag",
+      "flag": "quiz_test_passed",
+      "value": true
+    },
+    "onWrong": {
+      "type": "set_flag",
+      "flag": "quiz_test_failed",
+      "value": true
+    }
+  },
+  "boss": [
+    {
+      "id": "boss_slogan",
+      "question": "직원 인증 Q1. OSSE의 현재 슬로건은?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "path",
+        "path": "company.slogan"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "야근은 복지입니다"
+        },
+        {
+          "type": "literal",
+          "value": "콩은 모든 것을 압니다"
+        },
+        {
+          "type": "literal",
+          "value": "퇴근 후에도 회사는 열려 있습니다"
+        }
+      ]
+    },
+    {
+      "id": "boss_brand",
+      "question": "직원 인증 Q2. 택배 라벨에서 확인되지 않은 항목은?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "literal",
+        "value": "RB-13 연구동"
+      },
+      "distractorSources": [
+        {
+          "type": "brandName",
+          "index": 0
+        },
+        {
+          "type": "brandName",
+          "index": 1
+        },
+        {
+          "type": "brandName",
+          "index": 2
+        }
+      ]
+    },
+    {
+      "id": "boss_business",
+      "question": "직원 인증 Q3. OSSE의 사업 영역 중 하나는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "businessArea",
+        "index": 2
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "우주 채굴"
+        },
+        {
+          "type": "literal",
+          "value": "꿈 보험"
+        },
+        {
+          "type": "literal",
+          "value": "야간 안내방송 제작"
+        }
+      ]
+    },
+    {
+      "id": "boss_value",
+      "question": "직원 인증 Q4. 찢어진 메모에 반복되던 단어는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "keyword",
+        "index": 2
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "휴가"
+        },
+        {
+          "type": "literal",
+          "value": "점심"
+        },
+        {
+          "type": "literal",
+          "value": "월급"
+        }
+      ]
+    },
+    {
+      "id": "boss_philosophy",
+      "question": "직원 인증 Q5. RB-13 문서에서 점점 위험해지는 단어는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "keyword",
+        "index": 3
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "복사"
+        },
+        {
+          "type": "literal",
+          "value": "회의"
+        },
+        {
+          "type": "literal",
+          "value": "청소"
+        }
+      ]
+    }
+  ],
+  "finalBoss": [
+    {
+      "id": "final_company",
+      "question": "최종 보고 Q1. RB-13 자료에 적힌 회사명은?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "path",
+        "path": "company.name"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "SIMKONG Corp."
+        },
+        {
+          "type": "literal",
+          "value": "Laundry Lab"
+        },
+        {
+          "type": "literal",
+          "value": "Soy Dream"
+        }
+      ]
+    },
+    {
+      "id": "final_goal",
+      "question": "최종 보고 Q2. RB-13은 어떤 경로로 들어왔나?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "path",
+        "path": "rb13.importCategory"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "디자인 자동화"
+        },
+        {
+          "type": "literal",
+          "value": "셔터 보안 강화"
+        },
+        {
+          "type": "literal",
+          "value": "야간 근무 캠페인"
+        }
+      ]
+    },
+    {
+      "id": "final_mutation",
+      "question": "최종 보고 Q3. 직원들이 처음 RB-13을 무엇으로 오해했나?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "path",
+        "path": "rb13.employeeMisunderstanding"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "프린터 토너"
+        },
+        {
+          "type": "literal",
+          "value": "회의실 방향제"
+        },
+        {
+          "type": "literal",
+          "value": "정수기 필터"
+        }
+      ]
+    },
+    {
+      "id": "final_brand",
+      "question": "최종 보고 Q4. OSSE 데이터에 포함된 브랜드는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "brandName",
+        "index": 2
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "붉은두유"
+        },
+        {
+          "type": "literal",
+          "value": "상무실"
+        },
+        {
+          "type": "literal",
+          "value": "회의실"
+        }
+      ]
+    },
+    {
+      "id": "final_keyword_01",
+      "question": "최종 보고 Q5. 대표 키워드 첫 번째는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "keyword",
+        "index": 0
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "퇴근"
+        },
+        {
+          "type": "literal",
+          "value": "엘리베이터"
+        },
+        {
+          "type": "literal",
+          "value": "발소리"
+        }
+      ]
+    },
+    {
+      "id": "final_keyword_02",
+      "question": "최종 보고 Q6. 혈액 반응 옆에 반복되던 단어는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "keyword",
+        "index": 1
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "회의"
+        },
+        {
+          "type": "literal",
+          "value": "디자인"
+        },
+        {
+          "type": "literal",
+          "value": "복도"
+        }
+      ]
+    },
+    {
+      "id": "final_business",
+      "question": "최종 보고 Q7. OSSE의 사업 영역 중 하나는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "businessArea",
+        "index": 3
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "bean theater"
+        },
+        {
+          "type": "literal",
+          "value": "red milk delivery"
+        },
+        {
+          "type": "literal",
+          "value": "window repair"
+        }
+      ]
+    },
+    {
+      "id": "final_slogan",
+      "question": "최종 보고 Q8. OSSE 슬로건에 포함된 단어는?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "literal",
+        "value": "건강하게"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "프린터"
+        },
+        {
+          "type": "literal",
+          "value": "의자"
+        },
+        {
+          "type": "literal",
+          "value": "혈액"
+        }
+      ]
+    },
+    {
+      "id": "final_system",
+      "question": "최종 보고 Q9. 심콩은 원래 무엇이었나?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "literal",
+        "value": "RB-13에 오래 노출된 직원"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "탕비실 냉장고"
+        },
+        {
+          "type": "literal",
+          "value": "회의실 의자"
+        },
+        {
+          "type": "literal",
+          "value": "프린터 토너"
+        }
+      ]
+    },
+    {
+      "id": "final_infection",
+      "question": "최종 보고 Q10. RB-13 문서에서 언급되는 반응은?",
+      "timeLimitSeconds": 30,
+      "answerSource": {
+        "type": "literal",
+        "value": "혈액 반응"
+      },
+      "distractorSources": [
+        {
+          "type": "literal",
+          "value": "검은 창문"
+        },
+        {
+          "type": "literal",
+          "value": "빠루"
+        },
+        {
+          "type": "literal",
+          "value": "형광등"
+        }
+      ]
+    }
+  ]
+}
