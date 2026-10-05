@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="자취방 주방 준비 목록. 락앤락 핸디 24cm·28cm 웍, 하로로, 도자기 밥용기 350mL와 품목별 규격·조사 기록·다음 작업 인수인계.">
+  <title>자취방 주방 준비 목록 · ZZEE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <a class="back" href="../index.html">← ZZEE 목차</a>
+  <header class="hero">
+    <div class="eyebrow">ZZEE / KITCHEN SETUP</div>
+    <h1>자취방 주방 준비 목록</h1>
+    <p class="lead">지금까지 정한 것, 아직 골라야 할 것, 다음 컴퓨터에서 이어 볼 조사 기록. 제품을 다시 고르기 전에 이 목록부터 확인한다.</p>
+    <div class="meta"><span>기록일 2026.10.06</span><span>구매 실행 없음</span><span>인덕션 + 하이라이트</span></div>
+    <nav class="nav" aria-label="페이지 목차"><a href="#list">품목·규격</a><a href="#daiso">다이소몰</a><a href="#decisions">선택 기준</a><a href="#research">조사 기록</a><a href="#handoff">내일 이어하기</a></nav>
+  </header>
+  <aside class="callout"><p><strong>반드시 유지할 결정</strong><br>코팅팬은 <strong>락앤락 핸디 IH 24cm + 핸디 IH 웍 28cm</strong>. 라면 냄비는 <strong>하로로 브랜드</strong>. 밥 200g 소분용 도자기 용기는 <strong>350mL</strong>. 나머지 브랜드는 대부분 미정이며, 이전에 제안한 제품을 구매 확정으로 취급하지 않는다.</p></aside>
+
+  <section id="list">
+    <h2>품목과 크기</h2>
+    <p class="note">‘선택’은 제품·브랜드·용량 중 명시된 조건이 정해졌다는 뜻. ‘미정’ 품목의 치수는 구매 기준으로 제안한 규격이며 실측값이 아니다. 믹싱볼은 깊이에 따라 실제 용량이 달라진다.</p>
+    <div class="tools">
+      <label class="search">품목 검색<input id="search" type="search" placeholder="믹싱볼, 뚜껑, 350mL…"></label>
+      <label>카테고리<select id="category"><option value="">전체 카테고리</option><option>냄비·팬</option><option>믹싱·세척</option><option>실리콘 도구</option><option>칼·가위</option><option>도마</option><option>보관용기</option></select></label>
+      <label>상태<select id="status"><option value="">전체 상태</option><option value="selected">선택</option><option value="open">미정</option><option value="owned">보유</option></select></label>
+      <button id="reset" class="button" type="button">초기화</button><span id="count" class="count" aria-live="polite">27개 품목</span>
+    </div>
+    <noscript><p>검색 필터는 JavaScript가 필요하지만 아래 전체 목록과 인수인계는 그대로 읽을 수 있습니다.</p></noscript>
+    <div class="table-wrap"><table id="inventory">
+      <caption class="sr-only">주방 준비 품목별 규격과 선택 상태</caption>
+      <thead><tr><th>카테고리</th><th>품목</th><th>크기·용량</th><th>상태</th><th>선택·조건</th></tr></thead>
+      <tbody>
+        <tr data-category="냄비·팬" data-status="owned"><td>냄비·팬</td><td>작은 스텐 냄비</td><td>기존 보유품, 크기 미확인</td><td><span class="status owned">보유</span></td><td>중복 구매 불필요.</td></tr>
+        <tr data-category="냄비·팬" data-status="owned"><td>냄비·팬</td><td>큰 스텐 냄비</td><td>기존 보유품, 크기 미확인</td><td><span class="status owned">보유</span></td><td>중복 구매 불필요.</td></tr>
+        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>코팅 프라이팬</td><td><strong>24cm</strong></td><td><span class="status selected">선택</span></td><td><strong>락앤락 핸디 IH</strong>. 소비자원 시험 대상 모델 기준. 정확한 SKU·구매가 재확인.</td></tr>
+        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>코팅 웍·궁중팬</td><td><strong>28cm</strong></td><td><span class="status selected">선택</span></td><td><a href="https://store.ohou.se/goods/891481">락앤락 핸디 IH 웍</a>. 사용자가 추가 지정. 링크는 제품 확인용이며 조사 당시 일시품절.</td></tr>
+        <tr data-category="냄비·팬" data-status="open"><td>냄비·팬</td><td>손님용 전골냄비</td><td>28cm / 3~4L급</td><td><span class="status open">미정</span></td><td>2~4인 샤브샤브·스키야키·전골. 논스틱 코팅 없이, 식탁에서 보기 좋은 디자인. 이 품목은 예산을 조금 더 쓸 수 있음.</td></tr>
+        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>라면용 편수냄비</td><td>20cm / 1.5~2L급 목표</td><td><span class="status selected">브랜드 선택</span></td><td><strong>하로로</strong>. 모델 미정. ‘호로/법랑’의 오타가 아님. 빨리 가열되고 부담 없이 쓰는 제품.</td></tr>
+        <tr data-category="냄비·팬" data-status="open"><td>냄비·팬</td><td>뚝배기</td><td>18~20cm / <strong>2L급</strong></td><td><span class="status open">미정</span></td><td>가운데 놓고 된장찌개 등을 함께 먹는 용도. 16cm는 작다는 의견. 지름보다 용량 확인.</td></tr>
+        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 소</td><td><strong>14cm / 0.7~1L급</strong></td><td><span class="status open">미정</span></td><td>양념·소량 혼합. 뚜껑을 잡고 흔들어도 새지 않는 밀폐형. 단순 덮개와 구분.</td></tr>
+        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 중</td><td><strong>24cm / 3L급</strong></td><td><span class="status open">미정</span></td><td>평소 채소 씻기·무침·반죽용.</td></tr>
+        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 대</td><td><strong>36cm / 8~10L급</strong></td><td><span class="status open">미정</span></td><td>세 개 중 확실히 크게. 많은 채소·고기 버무리기. 실제 깊이·용량·수납 공간 검토.</td></tr>
+        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 채망</td><td>지름 30cm</td><td><span class="status open">미정</span></td><td>대볼에 걸치는 손잡이형. 36cm 볼과 호환되는 전체 걸침 폭을 실제 제품에서 확인.</td></tr>
+        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>뒤집개</td><td>확인 후보: 약 32.5cm</td><td><span class="status selected">다이소 선택</span></td><td>네오플램 실리콘 뒤집개를 조사함. 정확한 모델 최종 선택은 아님.</td></tr>
+        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>국자</td><td>확인 후보: 약 29cm</td><td><span class="status selected">다이소 선택</span></td><td>네오플램 실리콘 국자를 조사함.</td></tr>
+        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>알뜰주걱</td><td>확인 후보: 약 27.5cm</td><td><span class="status selected">다이소 선택</span></td><td>섞기·긁어 담기용. 네오플램 실리콘 알뜰주걱을 조사함.</td></tr>
+        <tr data-category="실리콘 도구" data-status="open"><td>실리콘 도구</td><td>조리 젓가락</td><td>확인 후보: 31cm</td><td><span class="status open">미정</span></td><td>다이소 실리콘 튀김 젓가락. 휘어짐·그립·미끄러짐 등 사용 후기 확인 필요.</td></tr>
+        <tr data-category="실리콘 도구" data-status="open"><td>실리콘 도구</td><td>식사용 젓가락</td><td>확인 후보: 24cm</td><td><span class="status open">미정</span></td><td>다이소 실리콘 젓가락 그레이. 조리용과 별도, 둘 다 필수 구매는 아님.</td></tr>
+        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>일반 식칼</td><td>날 길이 18~20cm</td><td><span class="status open">미정</span></td><td>올스텐 우선. 비싼 수집용보다 교체 부담이 적은 제품. 실제 절삭력 테스트 영상 근거 필요.</td></tr>
+        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>과도</td><td>날 길이 9~12cm</td><td><span class="status open">미정</span></td><td>올스텐 우선, 가성비.</td></tr>
+        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>빵칼</td><td>날 길이 20~23cm</td><td><span class="status open">미정</span></td><td>올스텐 우선, 톱니날. 추가 칼은 용도 중복을 검토한 뒤 결정.</td></tr>
+        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>생고기용 가위</td><td>전체 길이 23~25cm</td><td><span class="status open">미정</span></td><td>손잡이까지 올스텐. 뼈 없는 생고기 절삭력 중요, 분리 세척 가능하면 우선.</td></tr>
+        <tr data-category="도마" data-status="open"><td>도마</td><td>세라믹 도마</td><td>약 30×20cm</td><td><span class="status open">미정</span></td><td>실제 세라믹/도자기. 세라믹 무늬 플라스틱과 구분. 가성비·변색 관리·칼날 영향 확인.</td></tr>
+        <tr data-category="도마" data-status="open"><td>도마</td><td>나무 도마</td><td>약 40×28cm / 두께 2cm 전후</td><td><span class="status open">미정</span></td><td>평소 쓰는 주력용. 적당한 크기, 세척·건조 관리가 쉬운 형태.</td></tr>
+        <tr data-category="도마" data-status="open"><td>도마</td><td>김치용 스텐 도마</td><td>약 35×25cm / 판 두께 1~2mm</td><td><span class="status open">미정</span></td><td>얇은 평판형, 걸이 구멍. 보관 편의 최우선. 기존 42cm 후보는 확정하지 않음.</td></tr>
+        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 소</td><td>500mL</td><td><span class="status open">미정</span></td><td>밀폐형, 가성비.</td></tr>
+        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 중</td><td>1L</td><td><span class="status open">미정</span></td><td>같은 라인으로 적층 가능.</td></tr>
+        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 대</td><td>2L</td><td><span class="status open">미정</span></td><td>원래 요청은 ‘최대 2kg급’. 2L와 식품 2kg은 동일하지 않으므로 담을 음식 기준으로 확인.</td></tr>
+        <tr data-category="보관용기" data-status="selected"><td>보관용기</td><td>도자기 냉동밥 용기</td><td><strong>350mL</strong></td><td><span class="status selected">용량 선택</span></td><td>밥 200g 소분용. 250mL로 되돌리지 않기. 제품별 내부 모양·뚜껑 여유와 냉동·전자레인지 사용 표시 확인.</td></tr>
+      </tbody>
+    </table></div>
+    <p id="empty" class="empty" hidden>조건에 맞는 품목이 없습니다. 검색어 또는 필터를 초기화해 주세요.</p>
+  </section>
+
+  <section id="daiso">
+    <h2>다이소몰에서 확인한 후보</h2>
+    <p class="note">공식 다이소몰에서 2026.10.06 확인. 상품가이며 배송비는 별도. 다이소 구매 방향은 정해졌지만 아래 개별 모델을 모두 구매 확정한 것은 아니다.</p>
+    <div class="cards">
+      <article class="card"><h3>네오플램 실리콘 조리도구</h3><ul>
+        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059777">뒤집개 · 1059777</a> — 약 32.5cm · 2,000원</li>
+        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059786">국자 · 1059786</a> — 약 29cm · 2,000원</li>
+        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059787">알뜰주걱 · 1059787</a> — 약 27.5cm · 2,000원</li>
+      </ul><p class="note">정확한 내열온도·열탕·식기세척기 허용 조건은 각 제품 표시를 확인하는 작업이 남아 있다.</p></article>
+      <article class="card"><h3>실리콘 젓가락</h3><ul>
+        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1043928">튀김 젓가락 · 1043928</a> — 31cm · 2,000원</li>
+        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1056237">식사용 젓가락 그레이 · 1056237</a> — 24cm · 1,000원</li>
+      </ul><p class="note">상품 존재·표시 규격·가격을 확인한 단계. 실제 후기 검토와 사용성 판단은 미완료.</p></article>
+    </div>
+  </section>
+
+  <section id="decisions">
+    <h2>선택 기준과 정정 사항</h2>
+    <div class="cards">
+      <article class="card"><h3>유지할 취향</h3><ul><li>가성비를 기본으로 보되 디자인도 중요. 도루코 팬은 외관 때문에 제외.</li><li>칼·가위는 올스텐 우선. 칼은 자주 직접 갈기보다 교체 부담이 적은 가격대.</li><li>플라스틱 도마는 제외하고 세라믹 + 나무 + 김치용 스텐을 검토.</li><li>손님용 전골냄비는 보기 좋은 디자인에 예산을 더 쓸 수 있음. ‘쿡플레이트’는 전기기기 확정이 아니라 넓은 전골·스키야키 냄비 의도.</li><li>주로 가열하는 냄비·팬·뚝배기는 인덕션과 하이라이트 모두 대응해야 함.</li></ul></article>
+      <article class="card"><h3>다시 틀리지 말아야 할 것</h3><ul><li>사용자는 기존 추천 대부분에 만족하지 않았음. 데꼬르·벨라쿠진·글로벌·이케아·바겐 등을 확정 목록으로 되살리지 않기.</li><li>하로로는 특정 브랜드. 법랑의 오타로 해석하지 않기.</li><li>핸디 28cm 웍은 실제 제품이 존재하며 사용자가 지정했음.</li><li>소비자원 시험은 핸디 24cm 프라이팬 기준. 같은 라인 28cm 웍까지 시험받았다고 말하지 않기.</li><li>‘소·중·대’만 적지 말고 지름·용량·두께·용도를 적기.</li><li>브라우저에서 보고 있는 상품은 선택 확정이 아님. 가격의 전국 최저가 표현 금지, 확인한 판매 조건을 표시.</li></ul></article>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>조사 기록</h2>
+    <p class="note">아래는 결정의 근거와 이전 후보를 보존한 기록이다. 2026.10.06의 가격이며 이후 구매 시 다시 확인해야 한다. 네이버쇼핑 직접 대조는 보안 확인 화면 때문에 완료하지 못했다.</p>
+    <details open><summary>칼: 실제 YouTube 시험에서 확인한 범위</summary><p><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js">Project Farm — This Budget Chef’s Knife Set Just Embarrassed $250 Japanese Knives!</a>의 설명과 실제 자막을 확인했다. 직접 구매 비교이며 설명란에 제휴 링크가 있다.</p><ul><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=646s">10:46 이후 초기 식도 날카로움</a>: 글로벌 식도는 좋은 결과. 시험 세트는 Global Osaka이며 국내 단품과 모델 대조가 중요.</li><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=335s">5:35 이후 마모 시험</a>: 글로벌이 좋은 날 유지력을 보였지만 이 구간은 <strong>세트의 과도</strong>. G-2 식도의 마모 결과로 옮겨 쓰지 않기.</li><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=948s">15:48 손잡이 평가</a>: 글로벌 손잡이 편안함은 평가자에게 아쉬운 점. 성능과 그립은 별개.</li><li>IKEA 365+는 이 영상의 시험 대상이 아니며 독립 성능 검증 제품처럼 말하지 않기.</li></ul></details>
+    <details><summary>이전 후보와 가격 기록 — 미선택</summary><div class="archive-list">
+      <p><strong>팬:</strong> <a href="https://www.coupang.com/vp/products/8026731235">벨라쿠진 우드패턴 IH 24cm</a> 17,900원 / 표시 쿠폰 17,000원(배송 조건 별도). <a href="https://www.coupang.com/vp/products/6203524184">락앤락 데꼬르 IH 24cm</a> 29,760원 / 와우 27,990원 무료배송. <a href="https://www.coupang.com/vp/products/9562897340">PN 카놀리 IH 리저브 웍 28cm</a> 21,990원 + 배송 3,000원. 현재 선택은 핸디로 변경됨.</p>
+      <p><strong>칼:</strong> <a href="https://www.popl.co.kr/m/product.html?branduid=5618">Global G-2 20cm</a> 87,000원 무료배송. IKEA 365+ <a href="https://www.ikea.com/kr/ko/p/ikea-365-cooks-knife-stainless-steel-20283526/">식도 20cm</a> 24,900원, <a href="https://www.ikea.com/kr/ko/p/ikea-365-paring-knife-stainless-steel-50283520/">과도 9cm</a> 12,900원, <a href="https://www.ikea.com/kr/ko/p/ikea-365-bread-knife-stainless-steel-90283518/">빵칼 23cm</a> 24,900원. 모두 미선택.</p>
+      <p><strong>도마:</strong> <a href="https://www.coupang.com/vp/products/9603130910?itemId=28667692296&amp;vendorItemId=95600288931">세라영 클래식 스몰 화이트</a> 가로 32cm / 32,000원 무료배송. <a href="https://www.ikea.com/kr/ko/p/aptitlig-chopping-board-bamboo-20233428/">IKEA 압티틀리그 대나무 45×28cm</a> 일반 9,900원 / 패밀리 8,000원(10/7까지 표시, 배송 별도). <a href="https://www.coupang.com/vp/products/7110158461?itemId=17772503642&amp;vendorItemId=84936688334">바겐슈타이거 SUS304 도마</a> 가로 42cm / 일반 28,900원, 와우 27,450원 무료배송. 현재 추천 규격과 다르며 모두 미선택.</p>
+      <p><strong>하로로:</strong> <a href="https://homestyle.lge.co.kr/item?productId=G26010032514">IH 스텐 타케루 해머톤 편수 20cm</a> 18,400원 + 배송 3,500원. 브랜드는 선택했지만 이 모델은 미확정. 이 제품은 양은이 아니라 스테인리스이며 하이라이트 표기와 실제 용량 확인이 남음.</p>
+      <p><strong>뚝배기:</strong> <a href="https://www.coupang.com/vp/products/8323158306">쿡에버 통5중 16+18cm 세트</a> 67,900원 무료배송. 18cm는 2L이나 작은 냄비가 중복되어 세트 추천은 보류. <a href="https://store.ohou.se/goods/1112577">다소니 IH 대 아이보리</a> 96,500원 + 배송 2,500원. 실제 용량·하이라이트 대응 미확인. 두 후보 모두 미선택.</p>
+      <p><strong>가위:</strong> <a href="https://www.coupang.com/vp/products/6563692473?itemId=14705837097&amp;vendorItemId=81946613193">바겐슈타이거 슈나이더 25cm</a> 일반 13,300원 / 와우 12,630원(배송 조건 확인), 독립 생고기 절삭 시험은 미확인. <a href="https://www.coupang.com/vp/products/8426731087">시모무라 PG-411</a> 재고 있는 판매처 48,400원 + 배송 3,000원. 43,000원 무료배송 판매처는 품절. 모두 미선택.</p>
+    </div></details>
+    <details><summary>안전·사용법 조사에서 이어서 할 일</summary><ul><li>코팅팬: 첫 세척, 예열·화력, 양념 조리, 조리도구, 세척·급랭, 교체 기준을 식약처·제조사 자료로 정리. ‘양념이 들어가면 바로 코팅이 벗겨진다’고 단정하지 않기.</li><li>다이소 실리콘: 식품 접촉용 표시·정확한 내열온도·열탕·식기세척기 허용 여부를 해당 품번에서 확인. 판매 사실만으로 모든 안전성 검증이 끝났다고 말하지 않기.</li><li>도마: 세라믹·스텐의 칼날 영향, 목재 관리, 변색·세척·건조를 출처와 함께 정리. 원래 요청의 플라스틱 제외는 유지.</li><li>도자기 밥용기 350mL: 밥 200g용 구매 기준. 모든 형상에 정확히 들어간다는 실측 보증은 아님.</li></ul><p>참고: <a href="https://www.kca.go.kr/home/sub.do?menukey=4004&amp;mode=view&amp;no=1003438730">한국소비자원 프라이팬 시험 자료</a> · <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cutting-boards">USDA 도마 세척·분리 사용 안내</a></p></details>
+  </section>
+
+  <section id="handoff" class="handoff">
+    <h2>내일 다른 컴퓨터에서 이어하기</h2>
+    <p>이 페이지와 저장소의 인수인계 파일에 기록을 남겼다. 현재 선택은 웹브라우저의 로컬 저장소에 의존하지 않는다.</p>
+    <p><a href="HANDOFF.md">인수인계 원문 보기</a> · <a href="HANDOFF.md" download="ZZEE-kitchen-HANDOFF.md">파일 내려받기</a> · <a href="https://github.com/zaelee/ZZEE/tree/main/kitchen-setup">GitHub 원본</a></p>
+    <ol><li>확정 조건을 유지한 채 미정 품목을 고른다. 다음 품목은 밀폐 뚜껑 소형 스텐볼과 24·36cm 볼, 호환 채망부터 진행하기를 제안한다.</li><li>새로운 추천을 요청받으면 품목당 1~2개만, 실제 사진·정확한 규격·직접 확인한 배송 포함 가격으로 제시한다.</li><li>가격은 동일 모델·크기·수량으로 비교하고, 쿠폰·와우·카드·배송·품절을 구분한다.</li><li>이 페이지의 확정·미정과 HANDOFF.md를 함께 갱신한다. 게시 브랜치는 gh-pages이다.</li></ol>
+    <button id="copy" class="button" type="button">이어하기 문구 복사</button><p id="copy-result" role="status" class="note"></p>
+    <pre id="resume-prompt">ZZEE의 자취방 주방 준비 작업을 이어줘. 먼저 https://zaelee.github.io/ZZEE/kitchen-setup/ 와 https://github.com/zaelee/ZZEE/blob/main/kitchen-setup/HANDOFF.md 를 읽어줘. 락앤락 핸디 IH 24cm + 핸디 IH 웍 28cm, 하로로 브랜드, 도자기 밥용기 350mL는 유지해. 이전 추천 대부분은 미선택이며 확정으로 되살리지 마. 품목별 카테고리·구체적인 크기·용량을 유지하고, 다이소는 공식 다이소몰의 품번과 표시 정보를 확인해. 새 제품 추천은 지금 남은 미정 품목부터 진행하고, 같은 옵션의 실제 판매가·배송비·쿠폰 조건과 사진을 함께 보여줘. 구매는 실행하지 않았어.</pre>
+  </section>
+  <footer>ZZEE · 2026-10-06 대화 인수인계 · 가격과 재고는 확인 당시 기록 · 다른 품목의 변경 이력은 HANDOFF.md 참고</footer>
+</main>
+</body>
+</html>

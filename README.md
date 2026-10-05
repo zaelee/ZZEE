@@ -4,6 +4,8 @@
 
 ## Projects
 
+- `kitchen-setup/`: 자취방 주방 준비 목록·품목별 규격·공식 상품 링크·인수인계 ([HANDOFF.md](kitchen-setup/HANDOFF.md))
+
 - `zzee's food map/`: 건대·성수 중심 개인 맛집 지도와 플랫폼별 장소 정보
 - `camping-inventory/`: 오토캠핑·백패킹 장비 인벤토리
 - `blog-automation/`: 네이버 블로그 입력 문서 생성 도우미
