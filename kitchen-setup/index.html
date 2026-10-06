@@ -1,119 +1,284 @@
 <!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="자취방 주방 준비 목록. 락앤락 핸디 24cm·28cm 웍, 하로로, 도자기 밥용기 350mL와 품목별 규격·조사 기록·다음 작업 인수인계.">
-  <title>자취방 주방 준비 목록 · ZZEE</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-<main>
-  <a class="back" href="../index.html">← ZZEE 목차</a>
-  <header class="hero">
-    <div class="eyebrow">ZZEE / KITCHEN SETUP</div>
-    <h1>자취방 주방 준비 목록</h1>
-    <p class="lead">지금까지 정한 것, 아직 골라야 할 것, 다음 컴퓨터에서 이어 볼 조사 기록. 제품을 다시 고르기 전에 이 목록부터 확인한다.</p>
-    <div class="meta"><span>기록일 2026.10.06</span><span>구매 실행 없음</span><span>인덕션 + 하이라이트</span></div>
-    <nav class="nav" aria-label="페이지 목차"><a href="#list">품목·규격</a><a href="#daiso">다이소몰</a><a href="#decisions">선택 기준</a><a href="#research">조사 기록</a><a href="#handoff">내일 이어하기</a></nav>
-  </header>
-  <aside class="callout"><p><strong>반드시 유지할 결정</strong><br>코팅팬은 <strong>락앤락 핸디 IH 24cm + 핸디 IH 웍 28cm</strong>. 라면 냄비는 <strong>하로로 브랜드</strong>. 밥 200g 소분용 도자기 용기는 <strong>350mL</strong>. 나머지 브랜드는 대부분 미정이며, 이전에 제안한 제품을 구매 확정으로 취급하지 않는다.</p></aside>
-
-  <section id="list">
-    <h2>품목과 크기</h2>
-    <p class="note">‘선택’은 제품·브랜드·용량 중 명시된 조건이 정해졌다는 뜻. ‘미정’ 품목의 치수는 구매 기준으로 제안한 규격이며 실측값이 아니다. 믹싱볼은 깊이에 따라 실제 용량이 달라진다.</p>
-    <div class="tools">
-      <label class="search">품목 검색<input id="search" type="search" placeholder="믹싱볼, 뚜껑, 350mL…"></label>
-      <label>카테고리<select id="category"><option value="">전체 카테고리</option><option>냄비·팬</option><option>믹싱·세척</option><option>실리콘 도구</option><option>칼·가위</option><option>도마</option><option>보관용기</option></select></label>
-      <label>상태<select id="status"><option value="">전체 상태</option><option value="selected">선택</option><option value="open">미정</option><option value="owned">보유</option></select></label>
-      <button id="reset" class="button" type="button">초기화</button><span id="count" class="count" aria-live="polite">27개 품목</span>
-    </div>
-    <noscript><p>검색 필터는 JavaScript가 필요하지만 아래 전체 목록과 인수인계는 그대로 읽을 수 있습니다.</p></noscript>
-    <div class="table-wrap"><table id="inventory">
-      <caption class="sr-only">주방 준비 품목별 규격과 선택 상태</caption>
-      <thead><tr><th>카테고리</th><th>품목</th><th>크기·용량</th><th>상태</th><th>선택·조건</th></tr></thead>
-      <tbody>
-        <tr data-category="냄비·팬" data-status="owned"><td>냄비·팬</td><td>작은 스텐 냄비</td><td>기존 보유품, 크기 미확인</td><td><span class="status owned">보유</span></td><td>중복 구매 불필요.</td></tr>
-        <tr data-category="냄비·팬" data-status="owned"><td>냄비·팬</td><td>큰 스텐 냄비</td><td>기존 보유품, 크기 미확인</td><td><span class="status owned">보유</span></td><td>중복 구매 불필요.</td></tr>
-        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>코팅 프라이팬</td><td><strong>24cm</strong></td><td><span class="status selected">선택</span></td><td><strong>락앤락 핸디 IH</strong>. 소비자원 시험 대상 모델 기준. 정확한 SKU·구매가 재확인.</td></tr>
-        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>코팅 웍·궁중팬</td><td><strong>28cm</strong></td><td><span class="status selected">선택</span></td><td><a href="https://store.ohou.se/goods/891481">락앤락 핸디 IH 웍</a>. 사용자가 추가 지정. 링크는 제품 확인용이며 조사 당시 일시품절.</td></tr>
-        <tr data-category="냄비·팬" data-status="open"><td>냄비·팬</td><td>손님용 전골냄비</td><td>28cm / 3~4L급</td><td><span class="status open">미정</span></td><td>2~4인 샤브샤브·스키야키·전골. 논스틱 코팅 없이, 식탁에서 보기 좋은 디자인. 이 품목은 예산을 조금 더 쓸 수 있음.</td></tr>
-        <tr data-category="냄비·팬" data-status="selected"><td>냄비·팬</td><td>라면용 편수냄비</td><td>20cm / 1.5~2L급 목표</td><td><span class="status selected">브랜드 선택</span></td><td><strong>하로로</strong>. 모델 미정. ‘호로/법랑’의 오타가 아님. 빨리 가열되고 부담 없이 쓰는 제품.</td></tr>
-        <tr data-category="냄비·팬" data-status="open"><td>냄비·팬</td><td>뚝배기</td><td>18~20cm / <strong>2L급</strong></td><td><span class="status open">미정</span></td><td>가운데 놓고 된장찌개 등을 함께 먹는 용도. 16cm는 작다는 의견. 지름보다 용량 확인.</td></tr>
-        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 소</td><td><strong>14cm / 0.7~1L급</strong></td><td><span class="status open">미정</span></td><td>양념·소량 혼합. 뚜껑을 잡고 흔들어도 새지 않는 밀폐형. 단순 덮개와 구분.</td></tr>
-        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 중</td><td><strong>24cm / 3L급</strong></td><td><span class="status open">미정</span></td><td>평소 채소 씻기·무침·반죽용.</td></tr>
-        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 믹싱볼 · 대</td><td><strong>36cm / 8~10L급</strong></td><td><span class="status open">미정</span></td><td>세 개 중 확실히 크게. 많은 채소·고기 버무리기. 실제 깊이·용량·수납 공간 검토.</td></tr>
-        <tr data-category="믹싱·세척" data-status="open"><td>믹싱·세척</td><td>스텐 채망</td><td>지름 30cm</td><td><span class="status open">미정</span></td><td>대볼에 걸치는 손잡이형. 36cm 볼과 호환되는 전체 걸침 폭을 실제 제품에서 확인.</td></tr>
-        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>뒤집개</td><td>확인 후보: 약 32.5cm</td><td><span class="status selected">다이소 선택</span></td><td>네오플램 실리콘 뒤집개를 조사함. 정확한 모델 최종 선택은 아님.</td></tr>
-        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>국자</td><td>확인 후보: 약 29cm</td><td><span class="status selected">다이소 선택</span></td><td>네오플램 실리콘 국자를 조사함.</td></tr>
-        <tr data-category="실리콘 도구" data-status="selected"><td>실리콘 도구</td><td>알뜰주걱</td><td>확인 후보: 약 27.5cm</td><td><span class="status selected">다이소 선택</span></td><td>섞기·긁어 담기용. 네오플램 실리콘 알뜰주걱을 조사함.</td></tr>
-        <tr data-category="실리콘 도구" data-status="open"><td>실리콘 도구</td><td>조리 젓가락</td><td>확인 후보: 31cm</td><td><span class="status open">미정</span></td><td>다이소 실리콘 튀김 젓가락. 휘어짐·그립·미끄러짐 등 사용 후기 확인 필요.</td></tr>
-        <tr data-category="실리콘 도구" data-status="open"><td>실리콘 도구</td><td>식사용 젓가락</td><td>확인 후보: 24cm</td><td><span class="status open">미정</span></td><td>다이소 실리콘 젓가락 그레이. 조리용과 별도, 둘 다 필수 구매는 아님.</td></tr>
-        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>일반 식칼</td><td>날 길이 18~20cm</td><td><span class="status open">미정</span></td><td>올스텐 우선. 비싼 수집용보다 교체 부담이 적은 제품. 실제 절삭력 테스트 영상 근거 필요.</td></tr>
-        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>과도</td><td>날 길이 9~12cm</td><td><span class="status open">미정</span></td><td>올스텐 우선, 가성비.</td></tr>
-        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>빵칼</td><td>날 길이 20~23cm</td><td><span class="status open">미정</span></td><td>올스텐 우선, 톱니날. 추가 칼은 용도 중복을 검토한 뒤 결정.</td></tr>
-        <tr data-category="칼·가위" data-status="open"><td>칼·가위</td><td>생고기용 가위</td><td>전체 길이 23~25cm</td><td><span class="status open">미정</span></td><td>손잡이까지 올스텐. 뼈 없는 생고기 절삭력 중요, 분리 세척 가능하면 우선.</td></tr>
-        <tr data-category="도마" data-status="open"><td>도마</td><td>세라믹 도마</td><td>약 30×20cm</td><td><span class="status open">미정</span></td><td>실제 세라믹/도자기. 세라믹 무늬 플라스틱과 구분. 가성비·변색 관리·칼날 영향 확인.</td></tr>
-        <tr data-category="도마" data-status="open"><td>도마</td><td>나무 도마</td><td>약 40×28cm / 두께 2cm 전후</td><td><span class="status open">미정</span></td><td>평소 쓰는 주력용. 적당한 크기, 세척·건조 관리가 쉬운 형태.</td></tr>
-        <tr data-category="도마" data-status="open"><td>도마</td><td>김치용 스텐 도마</td><td>약 35×25cm / 판 두께 1~2mm</td><td><span class="status open">미정</span></td><td>얇은 평판형, 걸이 구멍. 보관 편의 최우선. 기존 42cm 후보는 확정하지 않음.</td></tr>
-        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 소</td><td>500mL</td><td><span class="status open">미정</span></td><td>밀폐형, 가성비.</td></tr>
-        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 중</td><td>1L</td><td><span class="status open">미정</span></td><td>같은 라인으로 적층 가능.</td></tr>
-        <tr data-category="보관용기" data-status="open"><td>보관용기</td><td>스텐 반찬통 · 대</td><td>2L</td><td><span class="status open">미정</span></td><td>원래 요청은 ‘최대 2kg급’. 2L와 식품 2kg은 동일하지 않으므로 담을 음식 기준으로 확인.</td></tr>
-        <tr data-category="보관용기" data-status="selected"><td>보관용기</td><td>도자기 냉동밥 용기</td><td><strong>350mL</strong></td><td><span class="status selected">용량 선택</span></td><td>밥 200g 소분용. 250mL로 되돌리지 않기. 제품별 내부 모양·뚜껑 여유와 냉동·전자레인지 사용 표시 확인.</td></tr>
-      </tbody>
-    </table></div>
-    <p id="empty" class="empty" hidden>조건에 맞는 품목이 없습니다. 검색어 또는 필터를 초기화해 주세요.</p>
-  </section>
-
-  <section id="daiso">
-    <h2>다이소몰에서 확인한 후보</h2>
-    <p class="note">공식 다이소몰에서 2026.10.06 확인. 상품가이며 배송비는 별도. 다이소 구매 방향은 정해졌지만 아래 개별 모델을 모두 구매 확정한 것은 아니다.</p>
-    <div class="cards">
-      <article class="card"><h3>네오플램 실리콘 조리도구</h3><ul>
-        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059777">뒤집개 · 1059777</a> — 약 32.5cm · 2,000원</li>
-        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059786">국자 · 1059786</a> — 약 29cm · 2,000원</li>
-        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059787">알뜰주걱 · 1059787</a> — 약 27.5cm · 2,000원</li>
-      </ul><p class="note">정확한 내열온도·열탕·식기세척기 허용 조건은 각 제품 표시를 확인하는 작업이 남아 있다.</p></article>
-      <article class="card"><h3>실리콘 젓가락</h3><ul>
-        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1043928">튀김 젓가락 · 1043928</a> — 31cm · 2,000원</li>
-        <li><a href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1056237">식사용 젓가락 그레이 · 1056237</a> — 24cm · 1,000원</li>
-      </ul><p class="note">상품 존재·표시 규격·가격을 확인한 단계. 실제 후기 검토와 사용성 판단은 미완료.</p></article>
-    </div>
-  </section>
-
-  <section id="decisions">
-    <h2>선택 기준과 정정 사항</h2>
-    <div class="cards">
-      <article class="card"><h3>유지할 취향</h3><ul><li>가성비를 기본으로 보되 디자인도 중요. 도루코 팬은 외관 때문에 제외.</li><li>칼·가위는 올스텐 우선. 칼은 자주 직접 갈기보다 교체 부담이 적은 가격대.</li><li>플라스틱 도마는 제외하고 세라믹 + 나무 + 김치용 스텐을 검토.</li><li>손님용 전골냄비는 보기 좋은 디자인에 예산을 더 쓸 수 있음. ‘쿡플레이트’는 전기기기 확정이 아니라 넓은 전골·스키야키 냄비 의도.</li><li>주로 가열하는 냄비·팬·뚝배기는 인덕션과 하이라이트 모두 대응해야 함.</li></ul></article>
-      <article class="card"><h3>다시 틀리지 말아야 할 것</h3><ul><li>사용자는 기존 추천 대부분에 만족하지 않았음. 데꼬르·벨라쿠진·글로벌·이케아·바겐 등을 확정 목록으로 되살리지 않기.</li><li>하로로는 특정 브랜드. 법랑의 오타로 해석하지 않기.</li><li>핸디 28cm 웍은 실제 제품이 존재하며 사용자가 지정했음.</li><li>소비자원 시험은 핸디 24cm 프라이팬 기준. 같은 라인 28cm 웍까지 시험받았다고 말하지 않기.</li><li>‘소·중·대’만 적지 말고 지름·용량·두께·용도를 적기.</li><li>브라우저에서 보고 있는 상품은 선택 확정이 아님. 가격의 전국 최저가 표현 금지, 확인한 판매 조건을 표시.</li></ul></article>
-    </div>
-  </section>
-
-  <section id="research">
-    <h2>조사 기록</h2>
-    <p class="note">아래는 결정의 근거와 이전 후보를 보존한 기록이다. 2026.10.06의 가격이며 이후 구매 시 다시 확인해야 한다. 네이버쇼핑 직접 대조는 보안 확인 화면 때문에 완료하지 못했다.</p>
-    <details open><summary>칼: 실제 YouTube 시험에서 확인한 범위</summary><p><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js">Project Farm — This Budget Chef’s Knife Set Just Embarrassed $250 Japanese Knives!</a>의 설명과 실제 자막을 확인했다. 직접 구매 비교이며 설명란에 제휴 링크가 있다.</p><ul><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=646s">10:46 이후 초기 식도 날카로움</a>: 글로벌 식도는 좋은 결과. 시험 세트는 Global Osaka이며 국내 단품과 모델 대조가 중요.</li><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=335s">5:35 이후 마모 시험</a>: 글로벌이 좋은 날 유지력을 보였지만 이 구간은 <strong>세트의 과도</strong>. G-2 식도의 마모 결과로 옮겨 쓰지 않기.</li><li><a href="https://www.youtube.com/watch?v=AcLD4SKY9Js&amp;t=948s">15:48 손잡이 평가</a>: 글로벌 손잡이 편안함은 평가자에게 아쉬운 점. 성능과 그립은 별개.</li><li>IKEA 365+는 이 영상의 시험 대상이 아니며 독립 성능 검증 제품처럼 말하지 않기.</li></ul></details>
-    <details><summary>이전 후보와 가격 기록 — 미선택</summary><div class="archive-list">
-      <p><strong>팬:</strong> <a href="https://www.coupang.com/vp/products/8026731235">벨라쿠진 우드패턴 IH 24cm</a> 17,900원 / 표시 쿠폰 17,000원(배송 조건 별도). <a href="https://www.coupang.com/vp/products/6203524184">락앤락 데꼬르 IH 24cm</a> 29,760원 / 와우 27,990원 무료배송. <a href="https://www.coupang.com/vp/products/9562897340">PN 카놀리 IH 리저브 웍 28cm</a> 21,990원 + 배송 3,000원. 현재 선택은 핸디로 변경됨.</p>
-      <p><strong>칼:</strong> <a href="https://www.popl.co.kr/m/product.html?branduid=5618">Global G-2 20cm</a> 87,000원 무료배송. IKEA 365+ <a href="https://www.ikea.com/kr/ko/p/ikea-365-cooks-knife-stainless-steel-20283526/">식도 20cm</a> 24,900원, <a href="https://www.ikea.com/kr/ko/p/ikea-365-paring-knife-stainless-steel-50283520/">과도 9cm</a> 12,900원, <a href="https://www.ikea.com/kr/ko/p/ikea-365-bread-knife-stainless-steel-90283518/">빵칼 23cm</a> 24,900원. 모두 미선택.</p>
-      <p><strong>도마:</strong> <a href="https://www.coupang.com/vp/products/9603130910?itemId=28667692296&amp;vendorItemId=95600288931">세라영 클래식 스몰 화이트</a> 가로 32cm / 32,000원 무료배송. <a href="https://www.ikea.com/kr/ko/p/aptitlig-chopping-board-bamboo-20233428/">IKEA 압티틀리그 대나무 45×28cm</a> 일반 9,900원 / 패밀리 8,000원(10/7까지 표시, 배송 별도). <a href="https://www.coupang.com/vp/products/7110158461?itemId=17772503642&amp;vendorItemId=84936688334">바겐슈타이거 SUS304 도마</a> 가로 42cm / 일반 28,900원, 와우 27,450원 무료배송. 현재 추천 규격과 다르며 모두 미선택.</p>
-      <p><strong>하로로:</strong> <a href="https://homestyle.lge.co.kr/item?productId=G26010032514">IH 스텐 타케루 해머톤 편수 20cm</a> 18,400원 + 배송 3,500원. 브랜드는 선택했지만 이 모델은 미확정. 이 제품은 양은이 아니라 스테인리스이며 하이라이트 표기와 실제 용량 확인이 남음.</p>
-      <p><strong>뚝배기:</strong> <a href="https://www.coupang.com/vp/products/8323158306">쿡에버 통5중 16+18cm 세트</a> 67,900원 무료배송. 18cm는 2L이나 작은 냄비가 중복되어 세트 추천은 보류. <a href="https://store.ohou.se/goods/1112577">다소니 IH 대 아이보리</a> 96,500원 + 배송 2,500원. 실제 용량·하이라이트 대응 미확인. 두 후보 모두 미선택.</p>
-      <p><strong>가위:</strong> <a href="https://www.coupang.com/vp/products/6563692473?itemId=14705837097&amp;vendorItemId=81946613193">바겐슈타이거 슈나이더 25cm</a> 일반 13,300원 / 와우 12,630원(배송 조건 확인), 독립 생고기 절삭 시험은 미확인. <a href="https://www.coupang.com/vp/products/8426731087">시모무라 PG-411</a> 재고 있는 판매처 48,400원 + 배송 3,000원. 43,000원 무료배송 판매처는 품절. 모두 미선택.</p>
-    </div></details>
-    <details><summary>안전·사용법 조사에서 이어서 할 일</summary><ul><li>코팅팬: 첫 세척, 예열·화력, 양념 조리, 조리도구, 세척·급랭, 교체 기준을 식약처·제조사 자료로 정리. ‘양념이 들어가면 바로 코팅이 벗겨진다’고 단정하지 않기.</li><li>다이소 실리콘: 식품 접촉용 표시·정확한 내열온도·열탕·식기세척기 허용 여부를 해당 품번에서 확인. 판매 사실만으로 모든 안전성 검증이 끝났다고 말하지 않기.</li><li>도마: 세라믹·스텐의 칼날 영향, 목재 관리, 변색·세척·건조를 출처와 함께 정리. 원래 요청의 플라스틱 제외는 유지.</li><li>도자기 밥용기 350mL: 밥 200g용 구매 기준. 모든 형상에 정확히 들어간다는 실측 보증은 아님.</li></ul><p>참고: <a href="https://www.kca.go.kr/home/sub.do?menukey=4004&amp;mode=view&amp;no=1003438730">한국소비자원 프라이팬 시험 자료</a> · <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cutting-boards">USDA 도마 세척·분리 사용 안내</a></p></details>
-  </section>
-
-  <section id="handoff" class="handoff">
-    <h2>내일 다른 컴퓨터에서 이어하기</h2>
-    <p>이 페이지와 저장소의 인수인계 파일에 기록을 남겼다. 현재 선택은 웹브라우저의 로컬 저장소에 의존하지 않는다.</p>
-    <p><a href="HANDOFF.md">인수인계 원문 보기</a> · <a href="HANDOFF.md" download="ZZEE-kitchen-HANDOFF.md">파일 내려받기</a> · <a href="https://github.com/zaelee/ZZEE/tree/main/kitchen-setup">GitHub 원본</a></p>
-    <ol><li>확정 조건을 유지한 채 미정 품목을 고른다. 다음 품목은 밀폐 뚜껑 소형 스텐볼과 24·36cm 볼, 호환 채망부터 진행하기를 제안한다.</li><li>새로운 추천을 요청받으면 품목당 1~2개만, 실제 사진·정확한 규격·직접 확인한 배송 포함 가격으로 제시한다.</li><li>가격은 동일 모델·크기·수량으로 비교하고, 쿠폰·와우·카드·배송·품절을 구분한다.</li><li>이 페이지의 확정·미정과 HANDOFF.md를 함께 갱신한다. 게시 브랜치는 gh-pages이다.</li></ol>
-    <button id="copy" class="button" type="button">이어하기 문구 복사</button><p id="copy-result" role="status" class="note"></p>
-    <pre id="resume-prompt">ZZEE의 자취방 주방 준비 작업을 이어줘. 먼저 https://zaelee.github.io/ZZEE/kitchen-setup/ 와 https://github.com/zaelee/ZZEE/blob/main/kitchen-setup/HANDOFF.md 를 읽어줘. 락앤락 핸디 IH 24cm + 핸디 IH 웍 28cm, 하로로 브랜드, 도자기 밥용기 350mL는 유지해. 이전 추천 대부분은 미선택이며 확정으로 되살리지 마. 품목별 카테고리·구체적인 크기·용량을 유지하고, 다이소는 공식 다이소몰의 품번과 표시 정보를 확인해. 새 제품 추천은 지금 남은 미정 품목부터 진행하고, 같은 옵션의 실제 판매가·배송비·쿠폰 조건과 사진을 함께 보여줘. 구매는 실행하지 않았어.</pre>
-  </section>
-  <footer>ZZEE · 2026-10-06 대화 인수인계 · 가격과 재고는 확인 당시 기록 · 다른 품목의 변경 이력은 HANDOFF.md 참고</footer>
-</main>
-</body>
-</html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2f0e8"><meta name="description" content="ZZEE 주방 위시리스트. 쿠팡 우선 구매 링크, 다이소 믹싱볼과 조리도구, 제품별 규격·수량·가격과 예산."><title>ZZEE’ KITCHEN — 주방 위시리스트</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body><a class="skip" href="#list">구매 목록으로 바로가기</a><header class="topbar"><a class="brand" href="../index.html"><b>Z</b> ZZEE PROJECTS</a><span class="top-meta">PRICE CHECK · 2026.10.06 KST</span></header><main>
+<section class="hero" aria-labelledby="page-title"><div><p class="eyebrow">EVERYDAY COOKING / 2–3 PEOPLE</p><h1 id="page-title">ZZEE’<span>KITCHEN</span></h1><p class="lead">매일 쓰는 2–3인 주방, 고기 1.2kg 프렙, 가끔 여럿이 먹는 한 끼.<br>고른 물건의 크기와 수량, 바로 살 곳과 가격을 한곳에.</p></div><aside class="hero-note"><strong>쿠팡 먼저, 공식몰 다음.</strong><p>1순위 쿠팡 · 2순위 네이버 브랜드 공식몰.<br>다이소 지정 품목은 다이소몰에서. 공식 스마트스토어의 정확한 상품을 확인하지 못한 경우 제조사 공식 페이지를 근거로 연결했습니다.</p><p><a href="#budget">수량별 가격표 보기</a></p></aside></section>
+<section class="dashboard" aria-label="구매 목록 요약"><div class="metric"><span class="metric-label">구매 검토 품목</span><strong>23개</strong><small>열원 확인·예비 2개 별도</small></div><div class="metric"><span class="metric-label">구매 계획 상품가</span><strong>391,570원</strong><small>WOW 쿠폰 적용 표시가 포함</small></div><div class="metric"><span class="metric-label">다이소 26 + 30cm</span><strong>5,000원</strong><small>같은 제조사 · 볼 2개</small></div><div class="metric"><span class="metric-label">도자기 밥 용기</span><strong>총 12개</strong><small>4개입 3세트 · 계획 58,890원</small></div></section>
+<p class="notice">2026.10.06 상품 화면 기준. <strong>WOW 가입 여부는 미확인</strong>이며 쿠폰·회원 배송 혜택은 조건부입니다. 카드할인과 적립금은 차감하지 않았습니다. 배송비는 <a href="#budget">예산표 아래</a>에 별도로 정리했습니다.</p>
+<div class="controls-wrap"><div class="controls" aria-label="품목 필터"><button class="filter-button" type="button" data-filter="" aria-pressed="true">전체</button><button class="filter-button" type="button" data-filter="냄비·팬" aria-pressed="false">냄비·팬</button><button class="filter-button" type="button" data-filter="믹싱·세척" aria-pressed="false">믹싱·세척</button><button class="filter-button" type="button" data-filter="조리도구" aria-pressed="false">조리도구</button><button class="filter-button" type="button" data-filter="칼·도마" aria-pressed="false">칼·도마</button><button class="filter-button" type="button" data-filter="보관·전자레인지" aria-pressed="false">보관·전자레인지</button><label class="search"><span class="sr-only">제품명·브랜드 검색</span><input id="search" type="search" placeholder="제품명·브랜드·크기 검색"></label><label><span class="sr-only">선택 상태</span><select id="status"><option value="">전체 상태</option><option value="selected">선택</option><option value="proposed">추천 후보</option><option value="pending">구매 보류</option><option value="reserve">예비 후보</option></select></label><button class="reset" id="reset" type="button">초기화</button></div></div>
+<div class="list-heading" id="list"><h2>주방 구매 목록</h2><span class="count" id="count" aria-live="polite">25개 품목</span></div><noscript><p>검색 기능은 JavaScript가 필요합니다. 아래 전체 목록과 가격은 그대로 확인할 수 있습니다.</p></noscript><section class="catalogue" aria-label="주방 제품"><article id="handy24" class="card" data-category="냄비·팬" data-status="selected">
+  <div class="media"><span class="rank">01 · 락앤락</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2025/09/30/17/8/93e1a6d0-3f34-40fa-82c2-2caa11f4a837.jpg" alt="핸디 IH 프라이팬 24cm · CAF2410" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>24cm · CAF2410</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 매일 쓰는 코팅팬</p><h3>핸디 IH 프라이팬</h3><p class="model">24cm · CAF2410 · 1개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">15,120원</span>
+  <p class="price-note">쿠폰 1,680원 · 쿠폰 전 역산 16,800원</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">기존에 고른 24cm 핸디 프라이팬을 유지. 계란·소량 볶음·구이용.</p><ul class="specs"><li>알루미늄</li><li>논스틱</li><li>IH 가능</li><li>리뷰 520개</li></ul><p class="watch">쿠폰 전 역산액은 비회원 결제 확인가가 아닙니다. 24cm 시험 결과를 웍에 확대하지 않습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/9439992274?itemId=28076546174&amp;vendorItemId=93720099838" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="handy28" class="card" data-category="냄비·팬" data-status="selected">
+  <div class="media"><span class="rank">02 · 락앤락</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2025/09/30/17/3/5ff867ae-1cd8-498b-b076-90a040cbada4.jpg" alt="핸디 IH 웍·궁중팬 28cm · CAW2810" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>28cm · CAW2810</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 넉넉한 볶음팬</p><h3>핸디 IH 웍·궁중팬</h3><p class="model">28cm · CAW2810 · 1개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">18,000원</span>
+  <p class="price-note">쿠폰 900원 · 쿠폰 전 역산 18,900원</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">쿠팡에서 정확한 핸디 IH 28cm 웍을 확인. 2–3인분 볶음과 양념 조리용으로 유지.</p><ul class="specs"><li>28cm</li><li>IH 가능</li><li>논스틱</li><li>리뷰 71개</li></ul><p class="watch">식기세척기 사용 불가로 표시됩니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/2116918474?itemId=2381986983&amp;vendorItemId=93720099753" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="sukiyaki26" class="card" data-category="냄비·팬" data-status="selected">
+  <div class="media"><span class="rank">03 · 바겐슈타이거</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/b75d/97b434c3a315dfd9d7945c9d508d69ac78c2fb5d34cebbf6fa1e64773732.jpg" alt="통3중 스키야키팬 양수 26cm" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>26cm</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 손님용 전골냄비</p><h3>통3중 스키야키팬 양수</h3><p class="model">26cm · 1개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">24,420원</span>
+  <p class="price-note">쿠폰 8,730원 · 쿠폰 전 역산 33,150원</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">전골·샤브샤브·스키야키용 26cm 양수형. 인덕션과 하이라이트 겸용 표기를 확인했습니다.</p><ul class="specs"><li>통3중 스텐</li><li>인덕션 가능</li><li>하이라이트 가능</li><li>리뷰 292개</li></ul><p class="watch">뚜껑 미포함. 편수형과 혼동하지 않도록 양수 26cm 옵션을 연결했습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8234315046?itemId=23702356767&amp;vendorItemId=90727398473" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p><p><a class="" href="https://www.kolonmall.com/Product/K1721630263131052NO01" target="_blank" rel="noopener noreferrer">26cm 양수형 열원 표기</a></p></details></div></article>
+<article id="haroro18" class="card" data-category="냄비·팬" data-status="selected">
+  <div class="media"><span class="rank">04 · 하로로</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/495215470984142-1eb38d91-5236-40a9-8f28-0ccfba1de95b.jpg" alt="타케루 IH 해머톤 편수냄비 18cm" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>18cm</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 라면·소량 국</p><h3>타케루 IH 해머톤 편수냄비</h3><p class="model">18cm · 1개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">18,870원</span>
+  <p class="price-note">쿠폰 980원 · 쿠폰 전 역산 19,850원</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">요청대로 하로로 18cm 편수로 변경. 물코·눈금이 있는 해머톤 나베 모델입니다.</p><ul class="specs"><li>스테인리스</li><li>편수</li><li>IH 가능</li><li>리뷰 99개</li></ul><p class="watch">정확한 L 용량과 하이라이트 표기는 확인 필요. IH만 검증했습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/9169520163?itemId=27021972886&amp;vendorItemId=93990580250" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="ibra18" class="card" data-category="냄비·팬" data-status="selected">
+  <div class="media"><span class="rank">05 · 담음공방</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2024/01/23/16/2/b6a744ed-7184-4c5f-ab43-25ba41184777.jpg" alt="이브라 도자기 내열 양수냄비 18cm · 1.6L · 블랙" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>18cm · 1.6L · 블랙</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 디자인 우선 선택 · 열원 확인</p><h3>이브라 도자기 내열 양수냄비</h3><p class="model">18cm · 1.6L · 블랙 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">51,800원</span>
+  <p class="price-note"></p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">사용자가 가장 선호한 디자인의 18cm·1.6L 이브라입니다. 인덕션 플레이트는 요청에 따라 구매 계획에서 제외했습니다.</p><ul class="specs"><li>도자기·세라믹</li><li>인덕션 불가</li><li>리뷰 44개</li></ul><p class="watch">인덕션에 직접 사용할 수 없습니다. 사용할 열원이 확인되지 않아 제품은 선호 목록에 남기고 구매 합계에서는 제외했습니다. 플레이트를 추가하면 호환된다고 보장하지 않습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/7851895200?itemId=21403614206" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="ih-dasoni" class="card" data-category="냄비·팬" data-status="reserve">
+  <div class="media"><span class="rank">06 · 다소니</span><span class="badge reserve">예비 후보</span>
+    <img src="https://image.ohousecdn.com/i/bucketplace-v2-development/uploads/productions/166562237311272439.jpg?w=640&amp;h=640&amp;c=c" alt="IH 도자기 뚝배기 · 대 대 · 아이보리 · 용량 확인 필요" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>대 · 아이보리 · 용량 확인 필요</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">냄비·팬 · 인덕션 뚝배기 예비 후보</p><h3>IH 도자기 뚝배기 · 대</h3><p class="model">대 · 아이보리 · 용량 확인 필요 · 예비 1개</p>
+  <div class="price-box"><span class="price-label">오늘의집 확인가</span><span class="price">96,500원</span>
+  <p class="price-note"></p><p class="price-note">배송 2,500원 · 도착가 99,000원</p></div>
+  <p class="reason">이브라를 우선으로 두고, 인덕션에 직접 사용할 뚝배기가 필요할 때를 위한 예비 후보로 남겼습니다.</p><ul class="specs"><li>도자기</li><li>IH 판매자 확인</li><li>리뷰 16개</li></ul><p class="watch">판매자 답변으로 IH 가능 확인. 정확한 용량·하이라이트·쿠팡 동일 옵션은 미확인입니다. 예비 품목이라 기본 합계에서 제외했습니다.</p>
+  <div class="actions"><a class="action primary" href="https://store.ohou.se/goods/1112577" target="_blank" rel="noopener noreferrer">예비 후보 · 오늘의집</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>오늘의집 아이보리 대 옵션96,500원, 배송2,500원 확인. 판매자 Q&amp;A의 인덕션 전기레인지 가능 답변 확인. 상세 규격은 미검증.</p></details></div></article>
+<article id="reborn18" class="card" data-category="믹싱·세척" data-status="selected">
+  <div class="media"><span class="rank">07 · 리본제이</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/rs_quotation_api/datcqiam/79d1b098e4134435993eb32001b11dce.jpg" alt="3 in 1 스텐 304 믹싱볼 세트 18cm · 1,100mL" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>18cm · 1,100mL</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">믹싱·세척 · 매일 쓰는 주력 볼</p><h3>3 in 1 스텐 304 믹싱볼 세트</h3><p class="model">18cm · 1,100mL · 1세트 (3종)</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">20,100원</span>
+  <p class="price-note">쿠폰 1,200원 표시 · 비회원 가격 미확인</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">2–3인 자취방의 소량 세척·소스·계란 준비에 적합한 구성. 큰 무침과 고기 프렙은 아래 큰 볼로 분담합니다.</p><ul class="specs"><li>SUS304</li><li>볼 + 채반 + 트레이</li><li>리뷰 91개</li></ul><p class="watch">세 가지 크기의 볼이 아닌 3종 구성입니다. 트레이는 밀폐 뚜껑으로 확인되지 않았습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8635914731?itemId=25057199170&amp;vendorItemId=92061485485" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a><a class="action" href="https://www.rebornj.co.kr/goods/goods_view.php?goodsNo=1000000677" target="_blank" rel="noopener noreferrer">브랜드 공식 제품</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p><p><a class="" href="https://www.rebornj.co.kr/goods/goods_view.php?goodsNo=1000000677" target="_blank" rel="noopener noreferrer">구성 확인 · 리본제이 공식</a></p></details></div></article>
+<article id="bowl26" class="card" data-category="믹싱·세척" data-status="proposed">
+  <div class="media"><span class="rank">08 · 다이소</span><span class="badge proposed">추천 후보</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20231130/thumb/300/EGZSvkioEIRldVWWQcTv16079_00_00EGZSvkioEIRldVWWQcTv.jpg" alt="고급 믹싱볼 · 중간 26cm · 품번 16079" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>26cm · 품번 16079</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">믹싱·세척 · 고기 1.2kg 프렙 후보</p><h3>고급 믹싱볼 · 중간</h3><p class="model">26cm · 품번 16079 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">2,000원</span>
+  <p class="price-note"></p><p class="price-note">다이소 배송 3,000원 · 합계 30,000원 이상 무료</p></div>
+  <p class="reason">30cm와 같은 제조사·고급 믹싱볼 라인. 1.2kg 고기 프렙의 중간 볼 후보로 넣었습니다.</p><ul class="specs"><li>한국산</li><li>세일스텐레스</li><li>스테인리스</li><li>4.8점 · 355개</li></ul><p class="watch">공식 상세에 깊이·L 용량 미표기. 채소와 양념을 많이 넣는 6인분은 30cm 볼을 사용하면 작업 여유를 확보하기 쉽습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=16079" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>다이소몰 직접 확인: 2,000원, 품번 16079, 지름 26cm, 제조판매원 세일스텐레스. 리뷰에는 가벼움과 초기 연마제 세척 부담이 함께 나타남. 실제 1.2kg 작업 테스트는 하지 않음.</p></details></div></article>
+<article id="bowl30" class="card" data-category="믹싱·세척" data-status="proposed">
+  <div class="media"><span class="rank">09 · 다이소</span><span class="badge proposed">추천 후보</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20231201/thumb/300/QXeOUZ7JZQX8vtWgQsxX58861_00_00QXeOUZ7JZQX8vtWgQsxX.jpg" alt="고급 믹싱볼 · 큰 볼 30cm · 품번 58861" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>30cm · 품번 58861</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">믹싱·세척 · 여럿이 비빔밥·큰 무침</p><h3>고급 믹싱볼 · 큰 볼</h3><p class="model">30cm · 품번 58861 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">3,000원</span>
+  <p class="price-note"></p><p class="price-note">다이소 배송 3,000원 · 묶음 1회, 30,000원 이상 무료</p></div>
+  <p class="reason">원한 30cm 크기를 다이소에서 찾았습니다. 친구들과 비빔밥, 많은 채소와 고기를 섞는 용도로 26cm와 맞출 수 있습니다.</p><ul class="specs"><li>한국산</li><li>세일스텐레스</li><li>26cm와 같은 라인</li><li>4.7점 · 324개</li></ul><p class="watch">용량·깊이 미표기. 지름만으로 6L 등 용량을 단정하지 않았습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=58861" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>다이소몰 직접 확인: 3,000원, 품번 58861, 30cm, 세일스텐레스 제조. 실제 비빔밥 사용 후기와 가벼움 평가 확인. 초기 세척 부담도 언급됨.</p></details></div></article>
+<article id="turner" class="card" data-category="조리도구" data-status="selected">
+  <div class="media"><span class="rank">10 · 네오플램</span><span class="badge selected">선택</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20241016/thumb/300/PQyLJ6GyXfKDgfavRgPI1059777_00_00PQyLJ6GyXfKDgfavRgPI.jpg" alt="실리콘 뒤집개 약 32.5cm · 1059777" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>약 32.5cm · 1059777</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">조리도구 · 코팅팬용</p><h3>실리콘 뒤집개</h3><p class="model">약 32.5cm · 1059777 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">2,000원</span>
+  <p class="price-note"></p><p class="price-note">다이소 묶음배송 조건 적용</p></div>
+  <p class="reason">요청한 다이소 네오플램 제품. 프라이팬·웍의 음식 뒤집기용.</p><ul class="specs"><li>실리콘</li><li>4.8점 · 1,592개</li></ul><p class="watch">후기에 헤드가 크다는 의견과 오래 쓰면 끝이 갈라진다는 의견이 있습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059777" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>다이소몰에서 품번·2,000원·32.5cm 및 실제 후기 직접 확인.</p></details></div></article>
+<article id="ladle" class="card" data-category="조리도구" data-status="selected">
+  <div class="media"><span class="rank">11 · 네오플램</span><span class="badge selected">선택</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20241016/thumbnail/850/FC3ViAHUqUYLMUYEQNAA1059786_00_00FC3ViAHUqUYLMUYEQNAA.jpg" alt="실리콘 국자 약 29cm · 1059786" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>약 29cm · 1059786</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">조리도구 · 국·찌개 덜기</p><h3>실리콘 국자</h3><p class="model">약 29cm · 1059786 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">2,000원</span>
+  <p class="price-note"></p><p class="price-note">다이소 묶음배송 조건 적용</p></div>
+  <p class="reason">뒤집개와 같은 네오플램 조리도구로 맞춥니다.</p><ul class="specs"><li>외부 실리콘·내부 나일론</li><li>내열 220°C</li><li>리뷰 1,140개</li></ul><p class="watch">택배 일시품절. 매장픽업·오늘배송 표시는 있으나 지역별 재고 확인 필요.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059786" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>다이소몰 직접 확인. 길이 약29cm±3mm, 내냉-20°C/내열220°C. 열탕소독·식기세척기 사용 가능 표기.</p></details></div></article>
+<article id="scraper" class="card" data-category="조리도구" data-status="selected">
+  <div class="media"><span class="rank">12 · 네오플램</span><span class="badge selected">선택</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20241016/thumbnail/850/37uJDB2pHzFSCiBsVRVY1059787_00_0037uJDB2pHzFSCiBsVRVY.jpg" alt="실리콘 알뜰주걱 약 27.5cm · 1059787" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>약 27.5cm · 1059787</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">조리도구 · 섞고 남김없이 긁기</p><h3>실리콘 알뜰주걱</h3><p class="model">약 27.5cm · 1059787 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">2,000원</span>
+  <p class="price-note"></p><p class="price-note">다이소 묶음배송 조건 적용</p></div>
+  <p class="reason">양념 섞기·볼의 내용물을 긁어 담는 용도.</p><ul class="specs"><li>외부 실리콘·내부 스틸</li><li>내열 220°C</li><li>리뷰 1,699개</li></ul><p class="watch">열탕소독은 짧은 시간만 가능하다고 표시됩니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1059787" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>다이소몰 직접 확인. 길이 약27.5cm±3mm, 내냉-20°C/내열220°C, 식기세척기 가능. 상세이미지에 짧은 시간 열탕소독 가능 표기.</p></details></div></article>
+<article id="measure" class="card" data-category="조리도구" data-status="selected">
+  <div class="media"><span class="rank">13 · 다이소</span><span class="badge selected">선택</span>
+    <img src="https://cdn.daisomall.co.kr/file/resize/PD/20240305/thumb/300/gQtAx0VqbQlX70w7cHJY1044020_00_00gQtAx0VqbQlX70w7cHJY.jpg" alt="실리콘 미니 요리 스푼 약 20.5 × 4.5cm · 품번 1044020" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>약 20.5 × 4.5cm · 품번 1044020</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">조리도구 · 양념 섞기·소량 조리</p><h3>실리콘 미니 요리 스푼</h3><p class="model">약 20.5 × 4.5cm · 품번 1044020 · 1개</p>
+  <div class="price-box"><span class="price-label">다이소몰 상품가</span><span class="price">1,000원</span>
+  <p class="price-note">일본제 플라스틱 계량스푼 2개 세트 대신 1개</p><p class="price-note">택배배송 가능 · 다이소 배송 3,000원, 합계 30,000원 이상 무료</p></div>
+  <p class="reason">작은 실리콘 스푼으로 교체했습니다. 양념을 섞거나 코팅 냄비에서 소량 조리할 때 쓰는 일반 요리 스푼입니다.</p><ul class="specs"><li>실리콘·폴리아미드</li><li>일체형 받침</li><li>4.8점 · 리뷰 1,219개</li></ul><p class="watch">5mL·15mL를 재는 계량스푼이 아닙니다. 용량 눈금은 확인되지 않았습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1044020" target="_blank" rel="noopener noreferrer">지정 구매처 · 다이소몰</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 다이소몰 실제 화면에서 품번 1044020, 1,000원, 택배배송, 평점·리뷰 수 확인. 크기·소재는 같은 품번의 상품 설명을 재게시한 한품 판매 페이지와 대조했습니다.</p><p><a class="" href="https://hanpoom.com/products/실리콘-미니-요리스푼-1p" target="_blank" rel="noopener noreferrer">같은 품번의 크기·소재 설명</a></p></details></div></article>
+<article id="chopsticks" class="card" data-category="조리도구" data-status="selected">
+  <div class="media"><span class="rank">14 · 모던하우스</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2025/07/22/12/0/c7ef4064-7c64-4ba9-a84d-855291087dda.jpg" alt="바닥에 닿지 않는 요리 젓가락 30cm · 블랙 · CK2025018" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>30cm · 블랙 · CK2025018</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">조리도구 · 실리콘 조리 젓가락</p><h3>바닥에 닿지 않는 요리 젓가락</h3><p class="model">30cm · 블랙 · CK2025018 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">3,930원</span>
+  <p class="price-note">33% 일반 할인 표시 · 별도 WOW 쿠폰 없음</p><p class="price-note">WOW 무료배송 · 비회원 배송 조건 별도</p></div>
+  <p class="reason">보내준 쿠팡 상품 그대로 반영. 조리 중 끝부분이 바닥에 닿지 않는 형태입니다.</p><ul class="specs"><li>실리콘</li><li>물세척</li><li>리뷰 128개</li></ul>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8921009753?vendorItemId=93106973310" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="jalla" class="card" data-category="칼·도마" data-status="selected">
+  <div class="media"><span class="rank">15 · JALLA</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/image_audit/prod/75ff9784-39cd-47c7-97a8-7bd9378bace2_fixing_v2_gemini_image_fixing.png" alt="잘라 위생가위 20cm · 국내 제작" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>20cm · 국내 제작</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">칼·도마 · 주방·고기 손질</p><h3>잘라 위생가위</h3><p class="model">20cm · 국내 제작 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">22,000원</span>
+  <p class="price-note"></p><p class="price-note">배송 2,500원 · 1개 도착가 24,500원</p></div>
+  <p class="reason">잘라(JALLA) 20cm. 확인한 같은 상품의 판매자 2곳은 모두 22,000원 + 배송 2,500원이었습니다.</p><ul class="specs"><li>올스텐</li><li>리뷰 368개</li></ul><p class="watch">확인한 판매자 내 최저 도착가이며 쿠팡 전체 최저가를 보증하지 않습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/6472215633?itemId=14132178080&amp;vendorItemId=94431582594" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>모아모아·더존오피스 판매자 옵션 직접 비교. 후기에는 그립·절삭력 평가와 분리 후 재조립의 번거로움이 함께 있습니다.</p></details></div></article>
+<article id="knife" class="card" data-category="칼·도마" data-status="proposed">
+  <div class="media"><span class="rank">16 · IKEA</span><span class="badge proposed">추천 후보</span>
+    <img src="https://www.ikea.com/kr/ko/images/products/ikea-365-cooks-knife-stainless-steel__0710374_pe727502_s5.jpg?f=m" alt="365+ 주방칼 칼날 20cm · 전체 34cm" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>칼날 20cm · 전체 34cm</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">칼·도마 · 주력 일반 식칼</p><h3>365+ 주방칼</h3><p class="model">칼날 20cm · 전체 34cm · 1개</p>
+  <div class="price-box"><span class="price-label">IKEA 공식가</span><span class="price">24,900원</span>
+  <p class="price-note"></p><p class="price-note">IKEA 배송비 별도 · 매장 구매 가능</p></div>
+  <p class="reason">요청한 이케아 일반 식칼은 올스텐 365+ 20cm를 주력 후보로 반영했습니다.</p><ul class="specs"><li>스테인리스</li><li>202.835.26</li><li>손세척</li><li>4.5점 · 352개</li></ul><p class="watch">쿠팡에서 동일 품번의 검증된 현재 판매가를 확보하지 못해 공식가로 계산했습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.ikea.com/kr/ko/p/ikea-365-cooks-knife-stainless-steel-20283526/" target="_blank" rel="noopener noreferrer">IKEA 공식 제품</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>IKEA 한국 공식 페이지 가격·날 길이·품번·재질 확인. 독립 절삭력 시험 제품으로 주장하지 않음.</p></details></div></article>
+<article id="acacia" class="card" data-category="칼·도마" data-status="selected">
+  <div class="media"><span class="rank">17 · IKEA</span><span class="badge selected">선택</span>
+    <img src="https://www.ikea.com/kr/ko/images/products/smaaeta-chopping-board-acacia__1196353_pe902939_s5.jpg?f=m" alt="SMÅÄTA 스모에타 도마 28×22×1.5cm" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>28×22×1.5cm</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">칼·도마 · 매일 꺼내 쓰는 아카시아</p><h3>SMÅÄTA 스모에타 도마</h3><p class="model">28×22×1.5cm · 1개</p>
+  <div class="price-box"><span class="price-label">IKEA 공식가</span><span class="price">9,900원</span>
+  <p class="price-note"></p><p class="price-note">IKEA 배송비 별도 · 매장 구매 가능</p></div>
+  <p class="reason">말씀한 아카시아 28×22cm 제품은 스모에타입니다. 소량 손질과 작은 자취방 조리대에 쓰는 메인 소형 도마.</p><ul class="specs"><li>아카시아 원목</li><li>005.571.69</li><li>0.53kg</li><li>4.1점 · 573개</li></ul><p class="watch">손세척 제품. 쿠팡 동일 품번의 현재가가 미확인이라 공식가로 계산했습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.ikea.com/kr/ko/p/smaaeta-chopping-board-acacia-00557169/" target="_blank" rel="noopener noreferrer">IKEA 공식 제품</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>IKEA 한국 공식 상품명·가격·치수·소재·품번 직접 확인.</p></details></div></article>
+<article id="endgrain" class="card" data-category="칼·도마" data-status="proposed">
+  <div class="media"><span class="rank">18 · LOVFIR</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/d37d/c2f158bcd6f9700f10c31b78cfe52b7c5f94b8ac4b59af3dd26d9986afc0.jpg" alt="엔드그레인 나무도마 40×32×2.5cm · 혼합색상" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>40×32×2.5cm · 혼합색상</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">칼·도마 · 넓게 쓰는 나무도마</p><h3>엔드그레인 나무도마</h3><p class="model">40×32×2.5cm · 혼합색상 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">32,380원</span>
+  <p class="price-note"></p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">리뷰가 471개인 40cm급 후보. 이케아 소형 도마와 역할을 나누고 넓은 손질 공간을 확보합니다.</p><ul class="specs"><li>엔드그레인</li><li>리뷰 471개</li></ul><p class="watch">리뷰 수를 기준으로 고른 후보이며 판매 순위 1위라는 의미는 아닙니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/7251118351?itemId=18445709031&amp;vendorItemId=95792796590" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>쿠팡 실제 선택 옵션 40×32×2.5cm·1개, 가격32,380원, 리뷰471개 확인. 판매자 답변은 중국 OEM으로 안내.</p></details></div></article>
+<article id="steelboard" class="card" data-category="칼·도마" data-status="proposed">
+  <div class="media"><span class="rank">19 · GUNU</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/718536340507148-91985d0a-68d2-48a2-a66f-3962f8985e05.jpg" alt="양면 스테인리스 도마 40×30cm · 실버" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>40×30cm · 실버</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">칼·도마 · 생고기·김치 전용</p><h3>양면 스테인리스 도마</h3><p class="model">40×30cm · 실버 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">8,510원</span>
+  <p class="price-note"></p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">40cm급 엔드그레인과 비슷한 크기로 맞춘 스텐 도마 후보. 생고기와 김치 손질에 구분해서 사용합니다.</p><ul class="specs"><li>스테인리스</li><li>양면</li><li>리뷰 3,376개</li></ul><p class="watch">리뉴얼 후 제품의 304 등급은 확인되지 않아 SUS304로 표기하지 않았습니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8487391463?itemId=24563850385&amp;vendorItemId=91575993831" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="container500" class="card" data-category="보관·전자레인지" data-status="proposed">
+  <div class="media"><span class="rank">20 · 락앤락</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2024/05/07/15/9/22eb205c-2f46-4a2a-a6b4-c963ad6fea16.png" alt="스텐 스테커블 · 소 500mL × 4개" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>500mL × 4개</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 스텐 보관용기</p><h3>스텐 스테커블 · 소</h3><p class="model">500mL × 4개 · 1세트 · 총 4개</p>
+  <div class="price-box"><span class="price-label">쿠팡 쿠폰 적용 표시가</span><span class="price">25,440원</span>
+  <p class="price-note">쿠폰·회원 조건은 결제 전 확인</p><p class="price-note">화면상 무료배송 · 비회원 조건 재확인</p></div>
+  <p class="reason">반찬 소분용 500mL 네 개. 1L와 같은 락앤락 스테커블 라인으로 맞추는 추천 구성입니다.</p><ul class="specs"><li>SUS304 본체</li><li>500mL</li><li>리뷰 2,288개</li></ul><p class="watch">SUS304 본체와 밀폐 패킹을 확인했습니다. 이 소형 라인의 뚜껑 전체를 올스텐으로 검증한 것은 아닙니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8062346305?itemId=22930195480&amp;vendorItemId=89964572874" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 쿠팡 실제 상품·옵션 직접 확인.</p></details></div></article>
+<article id="container1" class="card" data-category="보관·전자레인지" data-status="proposed">
+  <div class="media"><span class="rank">21 · 락앤락</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/retail/images/421607483141594-f89dc131-3ab3-4955-ac1b-58fbd6f1ee57.jpg" alt="스텐 스테커블 · 중 1L × 2개" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>1L × 2개</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 스텐 보관용기</p><h3>스텐 스테커블 · 중</h3><p class="model">1L × 2개 · 1세트 · 총 2개</p>
+  <div class="price-box"><span class="price-label">쿠팡 쿠폰 적용 표시가</span><span class="price">16,720원</span>
+  <p class="price-note">쿠폰·회원 조건은 결제 전 확인</p><p class="price-note">화면상 무료배송 · 비회원 조건 재확인</p></div>
+  <p class="reason">조금 큰 반찬·재료용 1L 두 개. 500mL 세트와 합계 42,160원입니다.</p><ul class="specs"><li>SUS304 본체</li><li>1L</li><li>500mL와 같은 라인</li></ul><p class="watch">2개 묶음의 가격입니다. 개당 단가는 8,360원.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8062346305?itemId=22930195551&amp;vendorItemId=89964572936" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 쿠팡 실제 상품·옵션 직접 확인.</p></details></div></article>
+<article id="container2" class="card" data-category="보관·전자레인지" data-status="proposed">
+  <div class="media"><span class="rank">22 · 아베라</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2024/08/21/18/2/4093354d-db1a-401c-8db5-d5cd41ecaa1e.jpg" alt="포스코304 올스텐 사각 · 7호 2.4L × 1개" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>2.4L × 1개</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 스텐 보관용기</p><h3>포스코304 올스텐 사각 · 7호</h3><p class="model">2.4L × 1개 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">31,580원</span>
+  <p class="price-note">가격에 WOW 전용 표기 없음 · 무료배송은 회원 조건</p><p class="price-note">화면상 무료배송 · 비회원 조건 재확인</p></div>
+  <p class="reason">3L와 같은 제조사·올스텐 라인으로 맞추려면 확인한 근사 규격은 2.4L입니다. 요청한 2L보다 400mL 큰 대안 후보입니다.</p><ul class="specs"><li>2L의 근사 대안</li><li>정광산업 제조</li><li>국산</li><li>리뷰 15개</li></ul><p class="watch">정확히 2L는 아닙니다. 올스텐 판매명과 재질 스테인리스 표기 확인, 부품별 304 등급 표기는 미확인.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8301460582?itemId=23948745953&amp;vendorItemId=90970482044" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>쿠팡 상품명·선택용량·제조자 (주)정광산업·재질 스테인리스 확인. 판매명이 포스코304 올스텐이며 패킹 포함. 2.4L+3L 합계66,130원.</p></details></div></article>
+<article id="container3" class="card" data-category="보관·전자레인지" data-status="proposed">
+  <div class="media"><span class="rank">23 · 아베라</span><span class="badge proposed">추천 후보</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2024/08/21/17/3/982e0fe4-a2c7-40d4-adc1-7fba9ae124da.jpg" alt="포스코304 올스텐 사각 · 8호 3L × 1개" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>3L × 1개</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 스텐 보관용기</p><h3>포스코304 올스텐 사각 · 8호</h3><p class="model">3L × 1개 · 1개</p>
+  <div class="price-box"><span class="price-label">쿠팡 표시가</span><span class="price">34,550원</span>
+  <p class="price-note">가격에 WOW 전용 표기 없음 · 무료배송은 회원 조건</p><p class="price-note">화면상 무료배송 · 비회원 조건 재확인</p></div>
+  <p class="reason">큰 식재료·김치 보관용 3L 한 개. 2.4L와 같은 아베라 사각 라인으로 구성했습니다.</p><ul class="specs"><li>3L</li><li>정광산업 제조</li><li>국산</li><li>리뷰 19개</li></ul><p class="watch">밀폐 패킹은 포함됩니다. 모든 부품의 금속 등급을 별도 검증한 것은 아닙니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/8431692624?itemId=23944030415&amp;vendorItemId=90965832895" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>쿠팡 실제 판매명·3L·제조사·스테인리스 속성 확인. 리뷰에 뚜껑 고무패킹 언급. 재고변동 가능.</p></details></div></article>
+<article id="steam" class="card" data-category="보관·전자레인지" data-status="selected">
+  <div class="media"><span class="rank">24 · 글라스락</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/2026/03/16/15/8/9e32a2af-5123-4c07-b3df-6dba5f21b161.jpg" alt="렌지쿡 찜잇 L 1.25L · 코코넛 밀크" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>1.25L · 코코넛 밀크</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 전자레인지 찜기</p><h3>렌지쿡 찜잇 L</h3><p class="model">1.25L · 코코넛 밀크 · 1개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용가</span><span class="price">14,260원</span>
+  <p class="price-note">쿠폰 3,690원 표시</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">사용자가 보낸 바로 그 제품·옵션. 전자레인지 채소·간단 찜 요리용으로 추가했습니다.</p><ul class="specs"><li>유리 본체</li><li>찜기용 구성</li><li>리뷰 99개</li></ul><p class="watch">전자레인지 사용 시 뚜껑·스팀 배출 방식은 제품 사용 설명을 따릅니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/9438174089?itemId=28069224953&amp;vendorItemId=95025848641" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 상품 화면 직접 확인. 회원·쿠폰·배송 혜택은 결제 조건에 따라 달라질 수 있습니다.</p></details></div></article>
+<article id="rice" class="card" data-category="보관·전자레인지" data-status="selected">
+  <div class="media"><span class="rank">25 · 락앤락</span><span class="badge selected">선택</span>
+    <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/retail/images/eb313e3e-7266-4fbd-b2df-cc2f7cc8ebdb12766662126760757082.png" alt="바로한끼 도자기 밥용기 355mL · 아이보리 · 4개 세트" loading="lazy" width="600" height="450" referrerpolicy="no-referrer">
+    <div class="fallback" hidden><strong>355mL · 아이보리 · 4개 세트</strong><small>상품 사진은 구매처에서 확인</small></div>
+  </div><div class="card-body"><p class="category">보관·전자레인지 · 밥 소분·냉동</p><h3>바로한끼 도자기 밥용기</h3><p class="model">355mL · 아이보리 · 4개 세트 · 4개입 × 3세트 · 총12개</p>
+  <div class="price-box"><span class="price-label">WOW 쿠폰 적용 세트가 · 계획 기준</span><span class="price">19,630원 <small>× 3</small></span>
+  <p class="price-note">4개입 1세트 19,630원 · 3세트 동일 단가 적용 가정 · 소계 58,890원</p><p class="price-note">화면상 무료배송 · 비회원·주소별 조건 재확인</p></div>
+  <p class="reason">요청한 총 12개로 확정했습니다. 기존에 확인한 355mL 아이보리 4개 세트를 3세트로 계산했습니다.</p><ul class="specs"><li>355mL × 4</li><li>도자기</li><li>전자레인지 가능</li><li>리뷰 562개</li></ul><p class="watch">계획액 58,890원은 세 세트 모두 같은 쿠폰가를 적용할 때입니다. 다중 수량 쿠폰 적용과 더 저렴한 12개 묶음 옵션은 미확인입니다. 기존 단가에서 쿠폰 1,500원을 모두 빼지 않으면 63,390원으로 계산됩니다.</p>
+  <div class="actions"><a class="action primary" href="https://www.coupang.com/vp/products/9368675663?itemId=28700002966&amp;vendorItemId=94772859063" target="_blank" rel="noopener noreferrer">1순위 · 쿠팡</a></div>
+  <details class="evidence"><summary>가격·규격 확인 근거</summary><p>2026.10.06 앞선 실제 상품 화면에서 4개입 19,630원과 쿠폰 1,500원 확인. 이번 수량 변경 시 정확한 URL 재열람이 차단되어 기존 확인 단가를 유지했습니다. 3세트 결제액은 미검증입니다.</p></details></div></article></section><p id="empty" class="empty" hidden>조건에 맞는 제품이 없습니다. 검색어나 필터를 초기화해 주세요.</p>
+<section class="guide" aria-label="용도별 선택 메모"><article><h2>18 / 26 / 30cm, 역할을 나눠서.</h2><p><strong>리본제이 18cm·1.1L</strong>는 소량 재료 세척·계란·소스용 주력으로 괜찮습니다. 2–3인분 음식 전체를 한 번에 버무리는 볼로는 작을 수 있습니다. 3종은 볼·채반·트레이이며 트레이의 밀폐 성능은 확인되지 않았습니다.</p><p><strong>다이소 26cm</strong>는 중간 프렙용, <strong>30cm</strong>는 비빔밥·큰 무침용 추천입니다. 두 제품의 실제 L 용량·깊이는 미표기입니다. 고기 1.2kg에 채소까지 넣어 비빌 때는 30cm를 함께 활용하는 편이 여유롭습니다.</p></article><article><h2>도마와 보관통도 용도를 나눠서.</h2><p>이케아 28×22cm는 매일 소량 손질, 엔드그레인은 넓은 조리 공간, 비슷한 크기의 스텐 도마는 생고기·김치용으로 구분합니다.</p><p>500mL급 4개 + 1L급 2개, 대형은 2L 대신 2.4L 대안과 3L를 각 1개. 정확한 용량이나 재질이 요청과 다르면 제품 카드에 표시하며, 미확인 조건을 충족한 것으로 계산하지 않습니다.</p></article></section>
+<section class="budget" id="budget"><h2>수량과 가격</h2><p class="budget-intro">필터와 관계없이 전체 구매 계획 기준입니다. 아래 소계는 표시된 조건부 상품가이며 최종 결제액이 아닙니다. 추천 후보와 밥 용기 12개를 포함하고 열원 확인 중인 이브라·예비 다소니는 제외했습니다.</p><div class="table-wrap"><table><caption class="sr-only">품목별 수량과 상품가 소계</caption><thead><tr><th>품목·규격</th><th>주문 수량</th><th class="money">기준 가격</th><th class="money">계획 소계</th></tr></thead><tbody><tr><td><a href="#handy24">핸디 IH 프라이팬</a><small>24cm · CAF2410</small></td><td>1개</td><td class="money">15,120원<small>WOW 쿠폰 적용가</small></td><td class="money">15,120원</td></tr>
+<tr><td><a href="#handy28">핸디 IH 웍·궁중팬</a><small>28cm · CAW2810</small></td><td>1개</td><td class="money">18,000원<small>WOW 쿠폰 적용가</small></td><td class="money">18,000원</td></tr>
+<tr><td><a href="#sukiyaki26">통3중 스키야키팬 양수</a><small>26cm</small></td><td>1개</td><td class="money">24,420원<small>WOW 쿠폰 적용가</small></td><td class="money">24,420원</td></tr>
+<tr><td><a href="#haroro18">타케루 IH 해머톤 편수냄비</a><small>18cm</small></td><td>1개</td><td class="money">18,870원<small>WOW 쿠폰 적용가</small></td><td class="money">18,870원</td></tr>
+<tr><td><a href="#ibra18">이브라 도자기 내열 양수냄비</a><small>18cm · 1.6L · 블랙 · 합계 제외</small></td><td>1개</td><td class="money">51,800원<small>쿠팡 표시가</small></td><td class="money">열원 확인</td></tr>
+<tr><td><a href="#ih-dasoni">IH 도자기 뚝배기 · 대</a><small>대 · 아이보리 · 용량 확인 필요 · 합계 제외</small></td><td>예비 1개</td><td class="money">96,500원<small>오늘의집 확인가</small></td><td class="money">예비</td></tr>
+<tr><td><a href="#reborn18">3 in 1 스텐 304 믹싱볼 세트</a><small>18cm · 1,100mL</small></td><td>1세트 (3종)</td><td class="money">20,100원<small>WOW 쿠폰 적용가</small></td><td class="money">20,100원</td></tr>
+<tr><td><a href="#bowl26">고급 믹싱볼 · 중간</a><small>26cm · 품번 16079</small></td><td>1개</td><td class="money">2,000원<small>다이소몰 상품가</small></td><td class="money">2,000원</td></tr>
+<tr><td><a href="#bowl30">고급 믹싱볼 · 큰 볼</a><small>30cm · 품번 58861</small></td><td>1개</td><td class="money">3,000원<small>다이소몰 상품가</small></td><td class="money">3,000원</td></tr>
+<tr><td><a href="#turner">실리콘 뒤집개</a><small>약 32.5cm · 1059777</small></td><td>1개</td><td class="money">2,000원<small>다이소몰 상품가</small></td><td class="money">2,000원</td></tr>
+<tr><td><a href="#ladle">실리콘 국자</a><small>약 29cm · 1059786</small></td><td>1개</td><td class="money">2,000원<small>다이소몰 상품가</small></td><td class="money">2,000원</td></tr>
+<tr><td><a href="#scraper">실리콘 알뜰주걱</a><small>약 27.5cm · 1059787</small></td><td>1개</td><td class="money">2,000원<small>다이소몰 상품가</small></td><td class="money">2,000원</td></tr>
+<tr><td><a href="#measure">실리콘 미니 요리 스푼</a><small>약 20.5 × 4.5cm · 품번 1044020</small></td><td>1개</td><td class="money">1,000원<small>다이소몰 상품가</small></td><td class="money">1,000원</td></tr>
+<tr><td><a href="#chopsticks">바닥에 닿지 않는 요리 젓가락</a><small>30cm · 블랙 · CK2025018</small></td><td>1개</td><td class="money">3,930원<small>쿠팡 표시가</small></td><td class="money">3,930원</td></tr>
+<tr><td><a href="#jalla">잘라 위생가위</a><small>20cm · 국내 제작</small></td><td>1개</td><td class="money">22,000원<small>쿠팡 표시가</small></td><td class="money">22,000원</td></tr>
+<tr><td><a href="#knife">365+ 주방칼</a><small>칼날 20cm · 전체 34cm</small></td><td>1개</td><td class="money">24,900원<small>IKEA 공식가</small></td><td class="money">24,900원</td></tr>
+<tr><td><a href="#acacia">SMÅÄTA 스모에타 도마</a><small>28×22×1.5cm</small></td><td>1개</td><td class="money">9,900원<small>IKEA 공식가</small></td><td class="money">9,900원</td></tr>
+<tr><td><a href="#endgrain">엔드그레인 나무도마</a><small>40×32×2.5cm · 혼합색상</small></td><td>1개</td><td class="money">32,380원<small>쿠팡 표시가</small></td><td class="money">32,380원</td></tr>
+<tr><td><a href="#steelboard">양면 스테인리스 도마</a><small>40×30cm · 실버</small></td><td>1개</td><td class="money">8,510원<small>쿠팡 표시가</small></td><td class="money">8,510원</td></tr>
+<tr><td><a href="#container500">스텐 스테커블 · 소</a><small>500mL × 4개</small></td><td>1세트 · 총 4개</td><td class="money">25,440원<small>쿠팡 쿠폰 적용 표시가</small></td><td class="money">25,440원</td></tr>
+<tr><td><a href="#container1">스텐 스테커블 · 중</a><small>1L × 2개</small></td><td>1세트 · 총 2개</td><td class="money">16,720원<small>쿠팡 쿠폰 적용 표시가</small></td><td class="money">16,720원</td></tr>
+<tr><td><a href="#container2">포스코304 올스텐 사각 · 7호</a><small>2.4L × 1개</small></td><td>1개</td><td class="money">31,580원<small>쿠팡 표시가</small></td><td class="money">31,580원</td></tr>
+<tr><td><a href="#container3">포스코304 올스텐 사각 · 8호</a><small>3L × 1개</small></td><td>1개</td><td class="money">34,550원<small>쿠팡 표시가</small></td><td class="money">34,550원</td></tr>
+<tr><td><a href="#steam">렌지쿡 찜잇 L</a><small>1.25L · 코코넛 밀크</small></td><td>1개</td><td class="money">14,260원<small>WOW 쿠폰 적용가</small></td><td class="money">14,260원</td></tr>
+<tr><td><a href="#rice">바로한끼 도자기 밥용기</a><small>355mL · 아이보리 · 4개 세트</small></td><td>4개입 × 3세트 · 총12개</td><td class="money">19,630원<small>WOW 쿠폰 적용 세트가 · 계획 기준</small></td><td class="money">58,890원</td></tr><tr class="total-row"><td colspan="3">구매 계획 상품가 (23개 품목)</td><td class="money">391,570원</td></tr></tbody></table></div><p class="budget-intro">다이소 6품목 상품가 12,000원. 실리콘 미니 요리 스푼은 택배배송 가능하며, 국자는 택배 일시품절입니다. 가능한 상품을 택배로 주문하면 30,000원 미만 배송비 3,000원이 추가됩니다.</p><p class="budget-intro">잘라가위는 배송 2,500원 별도. IKEA 배송비는 주소·주문 조건에 따라 미확인. 비WOW 쿠팡 배송비와 쿠폰 미적용 차액은 아직 확정할 수 없습니다.</p><p class="budget-intro">밥 용기 총 12개 확정: 4개입 세트 3개 × 기존 확인 쿠폰가 19,630원 = 계획액 58,890원. 세 세트에 동일 쿠폰가가 적용되는지는 미확인입니다. 기존 단가에서 쿠폰 1,500원을 전혀 차감하지 않는 계산은 63,390원으로, 아래 계획액보다 4,500원 많습니다.</p><p class="budget-intro">이브라 18cm는 디자인 우선 선택으로 남겼지만 인덕션 직접 사용은 불가합니다. 사용 열원 확인 전까지 소계에서 제외했습니다. 인덕션 플레이트와 손이야기 제품은 목록에서 제외했고, 다소니는 예비 후보로만 남겨 중복 합산하지 않았습니다.</p><p class="budget-intro">대형 용기는 요청 2L 대신 2.4L 근사 대안 + 3L를 추천 예산에 포함했습니다. 정확히 2L가 필요하면 2.4L 31,580원을 빼고 다시 선택해야 합니다.</p><p class="budget-intro">기본 상품가 391,570원 + 확인된 가위 배송 2,500원 = 394,070원. 다이소 택배 이용 시 추가 3,000원, IKEA·비WOW 배송비는 별도 미확정. 밥 용기 12개는 포함하고 뚝배기는 제외한 조건부 계획액입니다.</p></section>
+<details class="records"><summary>보유품·미정 품목과 조사 기록</summary><p>작은 스텐 냄비와 큰 스텐 냄비는 보유 중이며 중복 구매하지 않습니다. 이전 과도·빵칼·식사용 실리콘 젓가락·세라믹 도마·별도 30cm 채망은 이번 구매 합계에 넣지 않았습니다. 기존 기록은 아래에 보존했습니다.</p><div class="record-links"><a href="HANDOFF.md">최신 인수인계</a><a href="HISTORY-20261006.md">이전 조사 기록</a><a href="products.json" download>제품·가격 데이터</a></div><p>핸디 24cm 프라이팬의 소비자원 시험 결과를 28cm 웍의 시험 결과로 확대하지 않습니다. ‘선택’은 구매 완료가 아니라 사용자가 고른 조건입니다.</p><button class="button" id="copy" type="button">이어하기 문구 복사</button><p id="copy-result" role="status"></p><pre id="resume-prompt">ZZEE 주방 위시리스트를 이어줘. kitchen-setup/HANDOFF.md와 products.json을 먼저 읽고 최신 선택을 유지해. 구매처는 쿠팡 1순위, 네이버 브랜드 공식몰 2순위이며 다이소 지정품은 다이소몰을 사용해. 정확한 옵션·수량·WOW쿠폰·배송을 구분하고 확인되지 않은 가격은 합계에서 제외해. 이브라 18cm는 디자인 선호 제품이지만 인덕션 직접 사용 불가로 열원 확인 전 합계에서 제외해. 인덕션 플레이트와 손이야기는 제외했고 다소니는 예비 후보야. 다이소 스푼은 1044020 실리콘 미니 요리 스푼이며 계량스푼이 아니야. 도자기 밥 용기는 총12개,4개입3세트이며 쿠폰의 다중 수량 적용은 미확인이야. 구매는 실행하지 않았어.</pre></details></main><footer>ZZEE · 2026.10.06 · 상품 이미지는 각 판매처의 실제 제품 이미지입니다. 가격·재고·쿠폰은 변경될 수 있습니다. 구매 실행 없음.</footer></body></html>
