@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 const root = import.meta.dirname;
+const asset = file => `${file}?v=${createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex').slice(0, 12)}`;
 const data = JSON.parse(fs.readFileSync(path.join(root, 'products.json'), 'utf8'));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money = value => value == null ? '확인 필요' : `${value.toLocaleString('ko-KR')}원`;
@@ -24,7 +26,7 @@ const cards = data.items.map((x,i) => `<article id="${esc(x.id)}" class="card" d
 const rows = data.items.map(x=>`<tr><td><a href="#${esc(x.id)}">${esc(x.name)}</a><small>${esc(x.size)}${x.include===false?' · 합계 제외':''}</small></td><td>${esc(x.qtyLabel)}</td><td class="money">${money(x.price)}<small>${esc(x.priceLabel)}</small></td><td class="money">${x.include===false?esc(x.excludeReason || '보류'):money(x.price==null?null:x.price*x.qty)}</td></tr>`).join('\n');
 const categories = [...new Set(data.items.map(x=>x.category))];
 const html = `<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2f0e8"><meta name="description" content="ZZEE 주방 위시리스트. 쿠팡 우선 구매 링크, 다이소 믹싱볼과 조리도구, 제품별 규격·수량·가격과 예산."><title>ZZEE’ KITCHEN — 주방 위시리스트</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2f0e8"><meta name="description" content="ZZEE 주방 위시리스트. 쿠팡 우선 구매 링크, 다이소 믹싱볼과 조리도구, 제품별 규격·수량·가격과 예산."><title>ZZEE’ KITCHEN — 주방 위시리스트</title><link rel="stylesheet" href="${asset('styles.css')}"><script src="${asset('app.js')}" defer></script></head>
 <body><a class="skip" href="#list">구매 목록으로 바로가기</a><header class="topbar"><a class="brand" href="../index.html"><b>Z</b> ZZEE PROJECTS</a><span class="top-meta">PRICE CHECK · 2026.10.06 KST</span></header><main>
 <section class="hero" aria-labelledby="page-title"><div><p class="eyebrow">EVERYDAY COOKING / 2–3 PEOPLE</p><h1 id="page-title">ZZEE’<span>KITCHEN</span></h1><p class="lead">매일 쓰는 2–3인 주방, 고기 1.2kg 프렙, 가끔 여럿이 먹는 한 끼.<br>고른 물건의 크기와 수량, 바로 살 곳과 가격을 한곳에.</p></div><aside class="hero-note"><strong>쿠팡 먼저, 공식몰 다음.</strong><p>1순위 쿠팡 · 2순위 네이버 브랜드 공식몰.<br>다이소 지정 품목은 다이소몰에서. 공식 스마트스토어의 정확한 상품을 확인하지 못한 경우 제조사 공식 페이지를 근거로 연결했습니다.</p><p><a href="#budget">수량별 가격표 보기</a></p></aside></section>
 <section class="dashboard" aria-label="구매 목록 요약"><div class="metric"><span class="metric-label">구매 검토 품목</span><strong>${active.length}개</strong><small>열원 확인·예비 ${data.items.length-active.length}개 별도</small></div><div class="metric"><span class="metric-label">구매 계획 상품가</span><strong>${money(subtotal)}</strong><small>WOW 쿠폰 적용 표시가 포함</small></div><div class="metric"><span class="metric-label">다이소 26 + 30cm</span><strong>5,000원</strong><small>같은 제조사 · 볼 2개</small></div><div class="metric"><span class="metric-label">도자기 밥 용기</span><strong>총 ${rice.qty*4}개</strong><small>4개입 ${rice.qty}세트 · 계획 ${money(rice.price*rice.qty)}</small></div></section>
