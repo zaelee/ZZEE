@@ -1,0 +1,163 @@
+Frostelle
+Page: https://www.evomon.wiki/wiki/frostelle
+Image: https://www.evomon.wiki/evomon/catalog/evomon-055.webp
+
+Tarragon
+Page: https://www.evomon.wiki/wiki/tarragon
+Image: https://www.evomon.wiki/evomon/catalog/evomon-067.webp
+
+Magmaxor
+Page: https://www.evomon.wiki/wiki/magmaxor
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/magmaxor.webp?v=1787312179962
+
+Goliath
+Page: https://www.evomon.wiki/wiki/goliath
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-106.webp?v=1784317131842
+
+Celesthorn
+Page: https://www.evomon.wiki/wiki/celesthorn
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/d9570f1f-a30a-4a5a-9f79-f0b5a734fd80.webp?v=1787313890265
+
+Volcrest
+Page: https://www.evomon.wiki/wiki/volcrest
+Image: https://www.evomon.wiki/evomon/catalog/evomon-027.webp
+
+Astraknight
+Page: https://www.evomon.wiki/wiki/astraknight
+Image: https://www.evomon.wiki/evomon/catalog/evomon-088.webp
+
+Lavarock
+Page: https://www.evomon.wiki/wiki/lavarock
+Image: https://www.evomon.wiki/evomon/catalog/lavarock.webp
+
+Wisphex
+Page: https://www.evomon.wiki/wiki/wisphex
+Image: https://www.evomon.wiki/evomon/catalog/evomon-084.webp
+
+Arcapex
+Page: https://www.evomon.wiki/wiki/arcapex
+Image: https://www.evomon.wiki/evomon/catalog/evomon-071.webp
+
+Thordlord
+Page: https://www.evomon.wiki/wiki/thordlord
+Image: https://www.evomon.wiki/evomon/catalog/evomon-087.webp
+
+Sundercrene
+Page: https://www.evomon.wiki/wiki/sundercrene
+Image: https://www.evomon.wiki/evomon/catalog/evomon-057.webp
+
+Pummash
+Page: https://www.evomon.wiki/wiki/pummash
+Image: https://www.evomon.wiki/evomon/catalog/evomon-079.webp
+
+Boltonia
+Page: https://www.evomon.wiki/wiki/boltonia
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-089.webp?v=1784437990946
+
+Fluffastar
+Page: https://www.evomon.wiki/wiki/fluffastar
+Image: https://www.evomon.wiki/evomon/catalog/evomon-045.webp
+
+Frostseer
+Page: https://www.evomon.wiki/wiki/frostseer
+Image: https://www.evomon.wiki/evomon/catalog/evomon-061.webp
+
+Mirefish
+Page: https://www.evomon.wiki/wiki/mirefish
+Image: https://www.evomon.wiki/evomon/catalog/evomon-025.webp
+
+Cyanknight
+Page: https://www.evomon.wiki/wiki/cyanknight
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-108.webp?v=1785429462917
+
+Florajell
+Page: https://www.evomon.wiki/wiki/florajell
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/florajell.webp?v=1790264990087
+
+Datunymph
+Page: https://www.evomon.wiki/wiki/datunymph
+Image: https://www.evomon.wiki/evomon/catalog/evomon-081.webp
+
+Clipexor
+Page: https://www.evomon.wiki/wiki/clipexor
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-099.webp?v=1784397254162
+
+Wispreign
+Page: https://www.evomon.wiki/wiki/wispreign
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-096.webp?v=1784392349277
+
+Ignifist
+Page: https://www.evomon.wiki/wiki/ignifist
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/ignifist.webp?v=1787310807318
+
+Clanxor
+Page: https://www.evomon.wiki/wiki/clanxor
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-101.webp?v=1784252367838
+
+Frostclaw
+Page: https://www.evomon.wiki/wiki/frostclaw
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/db06f4f0-7524-4fff-bec9-af5319a72326.webp?v=1787306626738
+
+Empixy
+Page: https://www.evomon.wiki/wiki/empixy
+Image: https://www.evomon.wiki/evomon/catalog/empixy.webp
+
+Chitaladin
+Page: https://www.evomon.wiki/wiki/chitaladin
+Image: https://www.evomon.wiki/evomon/catalog/evomon-051.webp
+
+Gempress
+Page: https://www.evomon.wiki/wiki/gempress
+Image: https://www.evomon.wiki/evomon/catalog/evomon-065.webp
+
+Bubblade
+Page: https://www.evomon.wiki/wiki/bubblade
+Image: https://www.evomon.wiki/evomon/catalog/evomon-003.webp
+
+Coulomtis
+Page: https://www.evomon.wiki/wiki/coulomtis
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-030.webp?v=1786019489963
+
+Starmuse
+Page: https://www.evomon.wiki/wiki/starmuse
+Image: https://www.evomon.wiki/evomon/catalog/evomon-073.webp
+
+Viparch
+Page: https://www.evomon.wiki/wiki/viparch
+Image: https://www.evomon.wiki/evomon/catalog/evomon-039.webp
+
+Spikumane
+Page: https://www.evomon.wiki/wiki/spikumane
+Image: https://www.evomon.wiki/evomon/catalog/evomon-059.webp
+
+Snaerolf
+Page: https://www.evomon.wiki/wiki/snaerolf
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/10d0dff4-265e-41b2-926c-f399a506ecac.webp?v=1787313261206
+
+Blazmane
+Page: https://www.evomon.wiki/wiki/blazmane
+Image: https://www.evomon.wiki/evomon/catalog/evomon-006.webp
+
+Glacitadel
+Page: https://www.evomon.wiki/wiki/glacitadel
+Image: https://www.evomon.wiki/evomon/catalog/evomon-048.webp
+
+Pebgolem
+Page: https://www.evomon.wiki/wiki/pebgolem
+Image: https://www.evomon.wiki/evomon/catalog/pebgolem.webp
+
+Silvanarch
+Page: https://www.evomon.wiki/wiki/silvanarch
+Image: https://www.evomon.wiki/evomon/catalog/silvanarch.webp
+
+Leafblade
+Page: https://www.evomon.wiki/wiki/leafblade
+Image: https://noccvatccxpakfedhysz.supabase.co/storage/v1/object/public/pet-images/catalog/evomon-009.webp?v=1786070280777
+
+Tinkore
+Page: https://www.evomon.wiki/wiki/tinkore
+Image: https://www.evomon.wiki/evomon/catalog/evomon-075.webp
+
+Clamspire
+Page: https://www.evomon.wiki/wiki/clamspire
+Image: https://www.evomon.wiki/evomon/catalog/clamspire.webp
