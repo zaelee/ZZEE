@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="친구들과 함께할 무료 로블록스 게임 10개. 보물선 만들기부터 골프, 피자 가게, 레이싱까지 추천 순위와 공식 썸네일로 골라보세요." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>친구랑 뭐 할까? · Roblox 10 Picks | ZZEE</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f7f2;
+        --paper: #fffefa;
+        --ink: #191917;
+        --muted: #676b61;
+        --line: #deded2;
+        --accent: #ff6b35;
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; line-height: 1.65; word-break: keep-all; overflow-wrap: anywhere; }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #24678c; outline-offset: 6px; }
+      .shell { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+      .skip-link { position: absolute; top: -80px; left: 24px; padding: 12px; background: var(--paper); z-index: 5; }
+      .skip-link:focus { top: 12px; }
+      .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+      .brand { font-size: 18px; font-weight: 900; text-decoration: none; letter-spacing: -.5px; }
+      .edition { font-size: 11px; font-weight: 800; letter-spacing: 1.6px; color: var(--muted); }
+      .hero { padding: 66px 0 44px; }
+      .eyebrow { margin: 0 0 18px; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
+      .eyebrow::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 10px; background: var(--accent); border-radius: 50%; }
+      .hero-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+      h1 { margin: 0; font-size: clamp(40px, 6.8vw, 76px); line-height: 1.12; letter-spacing: -3px; }
+      h1 span { color: #d94c1b; }
+      .hero-number { font-size: 130px; font-weight: 900; line-height: .8; letter-spacing: -9px; color: var(--accent); }
+      .lead { max-width: 710px; margin: 24px 0 0; color: var(--muted); font-size: 18px; }
+      .quick-picks { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+      .quick-picks a { padding: 9px 15px; border: 1px solid var(--line); border-radius: 99px; background: var(--paper); font-size: 13px; font-weight: 700; text-decoration: none; }
+      .quick-picks a:hover { border-color: var(--accent); }
+      .guide { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 30px; }
+      .guide strong { display: block; font-size: 14px; }
+      .guide p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+      .guide time { white-space: nowrap; color: var(--muted); font-size: 12px; padding-top: 3px; }
+      .games { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 0; }
+      .game { min-width: 0; scroll-margin-top: 24px; }
+      .game-link { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--paper); text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
+      .game-link:hover { transform: translateY(-4px); box-shadow: 0 14px 32px #19191714; }
+      .game:first-child .game-link { border: 2px solid var(--accent); }
+      .cover { position: relative; aspect-ratio: 25 / 14; background: #e9e9e1; overflow: hidden; }
+      .cover img { display: block; width: 100%; height: 100%; object-fit: cover; color: var(--muted); font-size: 14px; }
+      .rank { position: absolute; top: 14px; left: 14px; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--paper); color: var(--ink); font-size: 23px; font-weight: 900; line-height: 1; box-shadow: 0 3px 12px #0002; }
+      .game:first-child .rank { background: var(--accent); color: var(--ink); }
+      .body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+      .genre { align-self: flex-start; padding: 3px 9px; border-radius: 5px; background: #eaf0e6; color: #3d633d; font-size: 11px; font-weight: 800; }
+      .genre.blue { background: #e7eef4; color: #325c78; }
+      .genre.orange { background: #fff0df; color: #8d501c; }
+      h2 { margin: 12px 0 0; font-size: clamp(22px, 2.5vw, 29px); line-height: 1.3; letter-spacing: -.8px; }
+      .english { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+      .pitch { margin: 17px 0 7px; font-size: 16px; font-weight: 800; }
+      .description { flex: 1; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+      .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 15px; border-top: 1px solid var(--line); font-size: 12px; }
+      .free { color: #426e45; font-weight: 700; }
+      .play { font-weight: 800; }
+      .play span { margin-left: 5px; }
+      .closing { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px; margin: 40px 0; background: #eaf0e6; border-radius: 16px; }
+      .closing p { margin: 0; font-size: 18px; font-weight: 800; }
+      .closing small { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; }
+      .closing a { flex-shrink: 0; padding: 11px 18px; border-radius: 7px; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 700; text-decoration: none; }
+      footer { padding: 0 0 36px; color: var(--muted); font-size: 12px; }
+      footer p { margin: 4px 0; }
+      @media (max-width: 640px) {
+        .shell { width: calc(100% - 32px); }
+        .topbar { padding: 19px 0; }
+        .edition { font-size: 10px; letter-spacing: 1px; }
+        .hero { padding: 40px 0 28px; }
+        h1 { letter-spacing: -1.8px; }
+        .hero-number { display: none; }
+        .lead { font-size: 16px; }
+        .guide { display: block; }
+        .guide time { display: block; margin-top: 10px; }
+        .games { grid-template-columns: 1fr; gap: 22px; }
+        .body { padding: 20px; }
+        .closing { display: block; padding: 24px; }
+        .closing a { display: inline-block; margin-top: 18px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .game-link { transition: none; }
+        .game-link:hover { transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#games">추천 게임으로 바로가기</a>
+    <div class="shell">
+      <nav class="topbar" aria-label="사이트 탐색">
+        <a class="brand" href="../index.html">← ZZEE</a>
+        <span class="edition">PLAY TOGETHER / 2026.10</span>
+      </nav>
+      <main>
+        <header class="hero">
+          <p class="eyebrow">ROBLOX · FRIENDS' PLAYLIST</p>
+          <div class="hero-row">
+            <h1>친구랑 뭐 할까?<br><span>오늘의 로블록스.</span></h1>
+            <span class="hero-number" aria-hidden="true">10</span>
+          </div>
+          <p class="lead">엉뚱한 배를 만들고, 골프 한 판 붙고, 피자 가게를 열고.<br>친구들과 함께 웃고 경쟁하고 만드는 무료 게임 10개를 골랐어요.</p>
+          <nav class="quick-picks" aria-label="취향별 빠른 추천">
+            <a href="#game-1">🛠 함께 만들기 · 1위</a>
+            <a href="#game-2">⛳ 가볍게 경쟁 · 2위</a>
+            <a href="#game-3">🍕 편하게 팀플 · 3위</a>
+          </nav>
+        </header>
+        <div class="guide">
+          <div>
+            <strong>함께하는 재미 · 시작하기 쉬운 정도 · 다양성을 기준으로 매긴 추천 순위</strong>
+            <p>기본 플레이는 무료. 아이템·추가 기능·개인 서버는 유료일 수 있어요. 카드를 누르면 공식 게임 페이지가 새 탭으로 열립니다.</p>
+          </div>
+          <time datetime="2026-10-19">선정일 2026.10.19</time>
+        </div>
+        <ol class="games" id="games" aria-label="친구와 즐기는 로블록스 추천 순위">
+          <li class="game" id="game-1">
+            <a class="game-link" href="https://www.roblox.com/games/537413528/Build-A-Boat-For-Treasure" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-33b8a8ed1538ad229928a4ddfd01c578/500/280/Image/Jpeg/noFilter" alt="보물선 만들기 공식 썸네일" width="500" height="280" fetchpriority="high"><span class="rank" aria-label="1위">01</span></div>
+              <div class="body"><span class="genre">건축 / 모험</span><h2>보물선 만들기</h2><p class="english">Build A Boat For Treasure</p><p class="pitch">같이 이상한 배를 만들고 출항하기.</p><p class="description">정성껏 만든 배가 장애물에 부서지는 과정까지 웃겨요. 만들기와 모험을 둘 다 좋아한다면 가장 먼저 해볼 게임!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-2">
+            <a class="game-link" href="https://www.roblox.com/games/4468711919/Super-Golf" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-e1345ba73ec0eb305f93c1be2d67d788/500/280/Image/Jpeg/noFilter" alt="슈퍼 골프 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="2위">02</span></div>
+              <div class="body"><span class="genre blue">스포츠 / 미니골프</span><h2>슈퍼 골프</h2><p class="english">Super Golf!</p><p class="pitch">수다 떨면서 가볍게 한 판.</p><p class="description">공을 적게 쳐서 홀에 넣으면 승리! 각도와 힘을 조절하며 친구들과 경쟁해요. 직접 코스를 만들어 함께 플레이할 수도 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-3">
+            <a class="game-link" href="https://www.roblox.com/games/192800/Work-at-a-Pizza-Place" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-f316dfb1af2d191f92e699ed9e9dc941/500/280/Image/Jpeg/noFilter" alt="피자 가게에서 일하기 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="3위">03</span></div>
+              <div class="body"><span class="genre">협동 / 생활</span><h2>피자 가게에서 일하기</h2><p class="english">Work at a Pizza Place</p><p class="pitch">우리끼리 피자 가게를 열면?</p><p class="description">주문받기·요리·포장·배달을 나눠서 해요. 친구들과 가게를 운영하고, 일해서 번 돈으로 각자의 집도 꾸밀 수 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-4">
+            <a class="game-link" href="https://www.roblox.com/games/17625359962/RIVALS" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-6d54f83d902d75b4ff3447125484263b/500/280/Image/Jpeg/noFilter" alt="라이벌 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="4위">04</span></div>
+              <div class="body"><span class="genre orange">FPS / 팀 대결</span><h2>라이벌</h2><p class="english">RIVALS</p><p class="pitch">승부욕 있는 친구들, 여기로.</p><p class="description">1대1부터 5대5까지 즐기는 총싸움이에요. 친구와 팀을 짜거나 서로 대결해 보세요. 조준 실력 차이가 크면 팀을 균형 있게 나누는 게 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-5">
+            <a class="game-link" href="https://www.roblox.com/games/164051105/Super-Bomb-Survival" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-1b1002f17ab627a3d0efa33ac250a8fb/500/280/Image/Jpeg/noFilter" alt="슈퍼 폭탄 서바이벌 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="5위">05</span></div>
+              <div class="body"><span class="genre orange">액션 / 생존</span><h2>슈퍼 폭탄 서바이벌</h2><p class="english">Super Bomb Survival</p><p class="pitch">폭탄 비 속에서 끝까지 버티기.</p><p class="description">하늘에서 떨어지는 폭탄과 폭발을 피하며 살아남아요. 규칙이 단순하고 상황이 정신없어서, 깊게 고민하지 않고 몇 판 즐기기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-6">
+            <a class="game-link" href="https://www.roblox.com/games/13772394625/Blade-Ball" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-43c63abc863eaf58623e5e25f4b55f6e/500/280/Image/Jpeg/noFilter" alt="블레이드 볼 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="6위">06</span></div>
+              <div class="body"><span class="genre orange">액션 / 반사신경</span><h2>블레이드 볼</h2><p class="english">Blade Ball</p><p class="pitch">공이 빨라질수록 말수가 줄어든다.</p><p class="description">나를 향해 날아오는 공을 타이밍에 맞춰 튕겨내요. 점점 빨라지는 공 때문에 긴장감이 올라가요. 짧고 강한 승부를 원할 때 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-7">
+            <a class="game-link" href="https://www.roblox.com/games/15101393044/Dress-To-Impress" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-ed73a294901f2dd572c592247928648b/500/280/Image/Jpeg/noFilter" alt="드레스 투 임프레스 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="7위">07</span></div>
+              <div class="body"><span class="genre">패션 / 꾸미기</span><h2>드레스 투 임프레스</h2><p class="english">Dress To Impress</p><p class="pitch">오늘의 런웨이 주인공은 누구?</p><p class="description">옷을 조합해서 런웨이에서 보여주는 게임이에요. 친구들의 코디와 설명을 구경하는 재미가 있어요. 꾸미기를 좋아하는 친구가 있다면 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-8">
+            <a class="game-link" href="https://www.roblox.com/games/3351674303/Driving-Empire" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-4bbf557ae1db150280d20b58a088655e/500/280/Image/Jpeg/noFilter" alt="드라이빙 엠파이어 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="8위">08</span></div>
+              <div class="body"><span class="genre blue">운전 / 레이싱</span><h2>드라이빙 엠파이어</h2><p class="english">Driving Empire</p><p class="pitch">같이 달리는 드라이브 한 바퀴.</p><p class="description">차를 꾸미고 함께 드라이브하거나 경주해요. 자동차 좋아하는 친구들끼리 같은 장소에 모여 서로의 차를 구경하고 달리기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-9">
+            <a class="game-link" href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-a88947457cea2fb3361ec8105fc7dc03/500/280/Image/Jpeg/noFilter" alt="테마파크 타이쿤 2 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="9위">09</span></div>
+              <div class="body"><span class="genre">건설 / 경영</span><h2>테마파크 타이쿤 2</h2><p class="english">Theme Park Tycoon 2</p><p class="pitch">우리만의 놀이공원을 만들어요.</p><p class="description">놀이공원과 롤러코스터를 직접 설계해요. 건축하고 꾸미면서 오래 놀고 싶을 때 추천해요. 친구와 함께 만드는 것도 가능해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+          <li class="game" id="game-10">
+            <a class="game-link" href="https://www.roblox.com/games/1962086868/Tower-of-Hell" target="_blank" rel="noopener noreferrer">
+              <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-5e72df8554ee030301ba6d590921db11/500/280/Image/Jpeg/noFilter" alt="타워 오브 헬 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="10위">10</span></div>
+              <div class="body"><span class="genre blue">점프맵 / 장애물</span><h2>타워 오브 헬</h2><p class="english">Tower of Hell</p><p class="pitch">누가 먼저 정상에 도착할까?</p><p class="description">무작위 장애물 탑을 올라가며 경쟁해요. 체크포인트가 없어서 떨어지면 꽤 억울할 수 있어요. 점프맵을 좋아하는 친구들끼리 도전해 보세요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+            </a>
+          </li>
+        </ol>
+        <aside class="closing">
+          <div><p>아직 못 골랐다면, 보물선부터.</p><small>같이 만들고 출항한 다음, 슈퍼 골프로 가볍게 한 판 이어가 보세요.</small></div>
+          <a href="#game-1">1위 다시 보기 ↑</a>
+        </aside>
+      </main>
+      <footer>
+        <p>추천 순위는 친구들과 즐기기 위한 편집자의 주관적인 선정입니다.</p>
+        <p>게임 설명과 썸네일 출처: 각 카드에 연결된 Roblox 공식 게임 페이지. 게임 및 이미지의 권리는 각 제작사에 있습니다.</p>
+        <p>ZZEE · FRIENDS' PLAYLIST · 2026</p>
+      </footer>
+    </div>
+  </body>
+</html>
