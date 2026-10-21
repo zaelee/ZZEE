@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="친구들과 함께할 로블록스 게임 22개. 일반 게임 10개와 공포·탈출·생존 게임 8개, Find Everything·Deepwoken 등 유료 게임 4개를 썸네일과 입장료, 추천 순위로 골라보세요." />
+    <meta name="description" content="친구들과 함께할 로블록스 게임 25개. 보물선 만들기와 비슷한 제작 게임 3개, 일반·공포·유료 게임을 추천 인원과 썸네일, 입장료로 골라보세요." />
     <meta name="theme-color" content="#f7f7f2" />
-    <title>친구랑 뭐 할까? · Roblox 22 Picks | ZZEE</title>
+    <title>친구랑 뭐 할까? · Roblox 25 Picks | ZZEE</title>
     <style>
       :root {
         color-scheme: light;
@@ -76,6 +76,9 @@
       .scare { color: var(--muted); font-size: 11px; font-weight: 700; }
       h2, h3 { margin: 12px 0 0; font-size: clamp(22px, 2.5vw, 29px); line-height: 1.3; letter-spacing: -.8px; }
       .english { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+      .players { margin: 14px 0 0; padding: 8px 10px; border-radius: 6px; background: #eaf0e6; color: #3d633d; font-size: 12px; }
+      .players strong { color: var(--ink); }
+      .players span { color: var(--muted); }
       .pitch { margin: 17px 0 7px; font-size: 16px; font-weight: 800; }
       .description { flex: 1; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
       .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 15px; border-top: 1px solid var(--line); font-size: 12px; }
@@ -122,11 +125,12 @@
           <p class="eyebrow">ROBLOX · FRIENDS' PLAYLIST</p>
           <div class="hero-row">
             <h1>친구랑 뭐 할까?<br><span>오늘의 로블록스.</span></h1>
-            <span class="hero-number" aria-hidden="true">22</span>
+            <span class="hero-number" aria-hidden="true">25</span>
           </div>
-          <p class="lead">엉뚱한 배를 만들고, 괴물을 피해 함께 탈출하고.<br>무료 게임 18개에 유료 게임 4개까지, 오늘 기분과 예산에 맞춰 골라보세요.</p>
+          <p class="lead">엉뚱한 배와 비행기를 만들고, 괴물을 피해 함께 탈출하고.<br>무료 게임 21개와 유료 게임 4개를 모았어요. 친구 몇 명이 모이는지, 오늘은 뭘 하고 싶은지에 맞춰 골라보세요.</p>
           <nav class="quick-picks" aria-label="취향별 빠른 추천">
             <a href="#game-1">🛠 보물선 만들기 · 일반 1위</a>
+            <a href="#building">✈️ 보물선 취향 · 제작 게임 3개</a>
             <a href="#horror">👻 공포·탈출·생존 8개</a>
             <a href="#casual">🎮 일반 게임 10개</a>
             <a href="#paid">💎 유료 게임 4개 · 입장료 확인</a>
@@ -135,9 +139,10 @@
         <div class="guide">
           <div>
             <strong>함께하는 재미 · 시작하기 쉬운 정도 · 다양성을 기준으로 매긴 장르별 추천 순위</strong>
-            <p>일반·공포 섹션 18개는 기본 플레이 무료. 유료 섹션 4개는 각자 입장권 구매가 필요해요. 아이템·추가 기능·개인 서버 비용은 별도이며, 카드를 누르면 공식 게임 페이지가 새 탭으로 열립니다.</p>
+            <p>일반·제작·공포 섹션 21개는 기본 플레이 무료. 유료 섹션 4개는 각자 입장권 구매가 필요해요. 아이템·추가 기능·개인 서버 비용은 별도이며, 카드를 누르면 공식 게임 페이지가 새 탭으로 열립니다.</p>
+            <p>추천 인원은 본인을 포함한 친구 모임 규모로, 역할 분담과 진행 편의를 고려한 편집자의 제안이에요. 서버 정원이나 공식 최대 인원과는 다르며, 모드별 입장 제한은 게임 안에서 확인하세요.</p>
           </div>
-          <time datetime="2026-10-21">유료 추천 추가 2026.10.21</time>
+          <time datetime="2026-10-21">추천 업데이트 2026.10.21</time>
         </div>
         <section class="game-section" id="casual" aria-labelledby="casual-title">
           <div class="section-heading">
@@ -149,68 +154,96 @@
           <li class="game" id="game-1">
             <a class="game-link" href="https://www.roblox.com/games/537413528/Build-A-Boat-For-Treasure" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-33b8a8ed1538ad229928a4ddfd01c578/500/280/Image/Jpeg/noFilter" alt="보물선 만들기 공식 썸네일" width="500" height="280" fetchpriority="high"><span class="rank" aria-label="1위">01</span></div>
-              <div class="body"><span class="genre">건축 / 모험</span><h3>보물선 만들기</h3><p class="english">Build A Boat For Treasure</p><p class="pitch">같이 이상한 배를 만들고 출항하기.</p><p class="description">정성껏 만든 배가 장애물에 부서지는 과정까지 웃겨요. 만들기와 모험을 둘 다 좋아한다면 가장 먼저 해볼 게임!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre">건축 / 모험</span><h3>보물선 만들기</h3><p class="english">Build A Boat For Treasure</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 같은 팀으로 건축·탑승</span></p><p class="pitch">같이 이상한 배를 만들고 출항하기.</p><p class="description">정성껏 만든 배가 장애물에 부서지는 과정까지 웃겨요. 만들기와 모험을 둘 다 좋아한다면 가장 먼저 해볼 게임!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-2">
             <a class="game-link" href="https://www.roblox.com/games/4468711919/Super-Golf" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-e1345ba73ec0eb305f93c1be2d67d788/500/280/Image/Jpeg/noFilter" alt="슈퍼 골프 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="2위">02</span></div>
-              <div class="body"><span class="genre blue">스포츠 / 미니골프</span><h3>슈퍼 골프</h3><p class="english">Super Golf!</p><p class="pitch">수다 떨면서 가볍게 한 판.</p><p class="description">공을 적게 쳐서 홀에 넣으면 승리! 각도와 힘을 조절하며 친구들과 경쟁해요. 직접 코스를 만들어 함께 플레이할 수도 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre blue">스포츠 / 미니골프</span><h3>슈퍼 골프</h3><p class="english">Super Golf!</p><p class="players">추천 인원 <strong>2–6명</strong><span> · 각자 타수를 겨루기</span></p><p class="pitch">수다 떨면서 가볍게 한 판.</p><p class="description">공을 적게 쳐서 홀에 넣으면 승리! 각도와 힘을 조절하며 친구들과 경쟁해요. 직접 코스를 만들어 함께 플레이할 수도 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-3">
             <a class="game-link" href="https://www.roblox.com/games/192800/Work-at-a-Pizza-Place" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-f316dfb1af2d191f92e699ed9e9dc941/500/280/Image/Jpeg/noFilter" alt="피자 가게에서 일하기 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="3위">03</span></div>
-              <div class="body"><span class="genre">협동 / 생활</span><h3>피자 가게에서 일하기</h3><p class="english">Work at a Pizza Place</p><p class="pitch">우리끼리 피자 가게를 열면?</p><p class="description">주문받기·요리·포장·배달을 나눠서 해요. 친구들과 가게를 운영하고, 일해서 번 돈으로 각자의 집도 꾸밀 수 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre">협동 / 생활</span><h3>피자 가게에서 일하기</h3><p class="english">Work at a Pizza Place</p><p class="players">추천 인원 <strong>3–6명</strong><span> · 주문·요리·배달 역할 분담</span></p><p class="pitch">우리끼리 피자 가게를 열면?</p><p class="description">주문받기·요리·포장·배달을 나눠서 해요. 친구들과 가게를 운영하고, 일해서 번 돈으로 각자의 집도 꾸밀 수 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-4">
             <a class="game-link" href="https://www.roblox.com/games/17625359962/RIVALS" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-6d54f83d902d75b4ff3447125484263b/500/280/Image/Jpeg/noFilter" alt="라이벌 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="4위">04</span></div>
-              <div class="body"><span class="genre orange">FPS / 팀 대결</span><h3>라이벌</h3><p class="english">RIVALS</p><p class="pitch">승부욕 있는 친구들, 여기로.</p><p class="description">1대1부터 5대5까지 즐기는 총싸움이에요. 친구와 팀을 짜거나 서로 대결해 보세요. 조준 실력 차이가 크면 팀을 균형 있게 나누는 게 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre orange">FPS / 팀 대결</span><h3>라이벌</h3><p class="english">RIVALS</p><p class="players">추천 인원 <strong>2명 또는 4명</strong><span> · 1대1·2대2 대결</span></p><p class="pitch">승부욕 있는 친구들, 여기로.</p><p class="description">1대1부터 5대5까지 즐기는 총싸움이에요. 친구와 팀을 짜거나 서로 대결해 보세요. 조준 실력 차이가 크면 팀을 균형 있게 나누는 게 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-5">
             <a class="game-link" href="https://www.roblox.com/games/164051105/Super-Bomb-Survival" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-1b1002f17ab627a3d0efa33ac250a8fb/500/280/Image/Jpeg/noFilter" alt="슈퍼 폭탄 서바이벌 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="5위">05</span></div>
-              <div class="body"><span class="genre orange">액션 / 생존</span><h3>슈퍼 폭탄 서바이벌</h3><p class="english">Super Bomb Survival</p><p class="pitch">폭탄 비 속에서 끝까지 버티기.</p><p class="description">하늘에서 떨어지는 폭탄과 폭발을 피하며 살아남아요. 규칙이 단순하고 상황이 정신없어서, 깊게 고민하지 않고 몇 판 즐기기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre orange">액션 / 생존</span><h3>슈퍼 폭탄 서바이벌</h3><p class="english">Super Bomb Survival</p><p class="players">추천 인원 <strong>3–6명</strong><span> · 짧은 라운드 생존 경쟁</span></p><p class="pitch">폭탄 비 속에서 끝까지 버티기.</p><p class="description">하늘에서 떨어지는 폭탄과 폭발을 피하며 살아남아요. 규칙이 단순하고 상황이 정신없어서, 깊게 고민하지 않고 몇 판 즐기기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-6">
             <a class="game-link" href="https://www.roblox.com/games/13772394625/Blade-Ball" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-43c63abc863eaf58623e5e25f4b55f6e/500/280/Image/Jpeg/noFilter" alt="블레이드 볼 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="6위">06</span></div>
-              <div class="body"><span class="genre orange">액션 / 반사신경</span><h3>블레이드 볼</h3><p class="english">Blade Ball</p><p class="pitch">공이 빨라질수록 말수가 줄어든다.</p><p class="description">나를 향해 날아오는 공을 타이밍에 맞춰 튕겨내요. 점점 빨라지는 공 때문에 긴장감이 올라가요. 짧고 강한 승부를 원할 때 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre orange">액션 / 반사신경</span><h3>블레이드 볼</h3><p class="english">Blade Ball</p><p class="players">추천 인원 <strong>3–6명</strong><span> · 반사 타이밍 대결</span></p><p class="pitch">공이 빨라질수록 말수가 줄어든다.</p><p class="description">나를 향해 날아오는 공을 타이밍에 맞춰 튕겨내요. 점점 빨라지는 공 때문에 긴장감이 올라가요. 짧고 강한 승부를 원할 때 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-7">
             <a class="game-link" href="https://www.roblox.com/games/15101393044/Dress-To-Impress" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-ed73a294901f2dd572c592247928648b/500/280/Image/Jpeg/noFilter" alt="드레스 투 임프레스 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="7위">07</span></div>
-              <div class="body"><span class="genre">패션 / 꾸미기</span><h3>드레스 투 임프레스</h3><p class="english">Dress To Impress</p><p class="pitch">오늘의 런웨이 주인공은 누구?</p><p class="description">옷을 조합해서 런웨이에서 보여주는 게임이에요. 친구들의 코디와 설명을 구경하는 재미가 있어요. 꾸미기를 좋아하는 친구가 있다면 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre">패션 / 꾸미기</span><h3>드레스 투 임프레스</h3><p class="english">Dress To Impress</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 서로의 코디 구경·테마 대결</span></p><p class="pitch">오늘의 런웨이 주인공은 누구?</p><p class="description">옷을 조합해서 런웨이에서 보여주는 게임이에요. 친구들의 코디와 설명을 구경하는 재미가 있어요. 꾸미기를 좋아하는 친구가 있다면 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-8">
             <a class="game-link" href="https://www.roblox.com/games/3351674303/Driving-Empire" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-4bbf557ae1db150280d20b58a088655e/500/280/Image/Jpeg/noFilter" alt="드라이빙 엠파이어 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="8위">08</span></div>
-              <div class="body"><span class="genre blue">운전 / 레이싱</span><h3>드라이빙 엠파이어</h3><p class="english">Driving Empire</p><p class="pitch">같이 달리는 드라이브 한 바퀴.</p><p class="description">차를 꾸미고 함께 드라이브하거나 경주해요. 자동차 좋아하는 친구들끼리 같은 장소에 모여 서로의 차를 구경하고 달리기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre blue">운전 / 레이싱</span><h3>드라이빙 엠파이어</h3><p class="english">Driving Empire</p><p class="players">추천 인원 <strong>2–6명</strong><span> · 함께 드라이브·경주</span></p><p class="pitch">같이 달리는 드라이브 한 바퀴.</p><p class="description">차를 꾸미고 함께 드라이브하거나 경주해요. 자동차 좋아하는 친구들끼리 같은 장소에 모여 서로의 차를 구경하고 달리기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-9">
             <a class="game-link" href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-a88947457cea2fb3361ec8105fc7dc03/500/280/Image/Jpeg/noFilter" alt="테마파크 타이쿤 2 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="9위">09</span></div>
-              <div class="body"><span class="genre">건설 / 경영</span><h3>테마파크 타이쿤 2</h3><p class="english">Theme Park Tycoon 2</p><p class="pitch">우리만의 놀이공원을 만들어요.</p><p class="description">놀이공원과 롤러코스터를 직접 설계해요. 건축하고 꾸미면서 오래 놀고 싶을 때 추천해요. 친구와 함께 만드는 것도 가능해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre">건설 / 경영</span><h3>테마파크 타이쿤 2</h3><p class="english">Theme Park Tycoon 2</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 놀이공원 건축·구경</span></p><p class="pitch">우리만의 놀이공원을 만들어요.</p><p class="description">놀이공원과 롤러코스터를 직접 설계해요. 건축하고 꾸미면서 오래 놀고 싶을 때 추천해요. 친구와 함께 만드는 것도 가능해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
           <li class="game" id="game-10">
             <a class="game-link" href="https://www.roblox.com/games/1962086868/Tower-of-Hell" target="_blank" rel="noopener noreferrer">
               <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-5e72df8554ee030301ba6d590921db11/500/280/Image/Jpeg/noFilter" alt="타워 오브 헬 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="10위">10</span></div>
-              <div class="body"><span class="genre blue">점프맵 / 장애물</span><h3>타워 오브 헬</h3><p class="english">Tower of Hell</p><p class="pitch">누가 먼저 정상에 도착할까?</p><p class="description">무작위 장애물 탑을 올라가며 경쟁해요. 체크포인트가 없어서 떨어지면 꽤 억울할 수 있어요. 점프맵을 좋아하는 친구들끼리 도전해 보세요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              <div class="body"><span class="genre blue">점프맵 / 장애물</span><h3>타워 오브 헬</h3><p class="english">Tower of Hell</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 정상까지 올라가는 경쟁</span></p><p class="pitch">누가 먼저 정상에 도착할까?</p><p class="description">무작위 장애물 탑을 올라가며 경쟁해요. 체크포인트가 없어서 떨어지면 꽤 억울할 수 있어요. 점프맵을 좋아하는 친구들끼리 도전해 보세요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
             </a>
           </li>
         </ol>
         </section>
+        <section class="game-section" id="building" aria-labelledby="building-title">
+          <div class="section-heading">
+            <p class="section-kicker">02 / BUILD, TEST &amp; TRY AGAIN</p>
+            <h2 id="building-title">보물선이 끌린다면 · 제작 게임 3개</h2>
+            <p>만들고 → 시험하고 → 고쳐서 다시 출발! 보물선 만들기의 제작 재미를 좋아할 친구들을 위한 추가 추천이에요.</p>
+            <p>아래 게임들은 같은 서버에 모여 각자 만든 작품을 비교하거나 시험·대결하기 좋아요. 하나의 배를 함께 만들고 타는 재미가 우선이면 <a href="#game-1">보물선 만들기</a>, 기지를 함께 꾸미려면 <a href="#horror-4">3008</a>도 추천해요.</p>
+          </div>
+          <ol class="games" aria-label="보물선과 비슷한 제작 게임 추천 순위 1위부터 3위">
+            <li class="game" id="build-1">
+              <a class="game-link" href="https://www.roblox.com/games/137925884276740/Build-A-Plane" target="_blank" rel="noopener noreferrer">
+                <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-cde78f3f835d1d6c1a78b7e132baab1d/768/432/Image/Png/noFilter" alt="비행기 만들기 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="제작 게임 1위">01</span></div>
+                <div class="body"><span class="genre blue">제작 / 비행 / 장애물</span><h3>비행기 만들기</h3><p class="english">Build A Plane</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 각자 기체 제작·비행 비교</span></p><p class="pitch">보물선 대신, 이번에는 하늘로!</p><p class="description">상점에서 구한 블록으로 비행기를 만들고 장애물을 피해 날아가요. 비행으로 번 돈으로 기체를 고쳐 다시 도전하는 흐름이 보물선과 닮았어요. 같은 서버에서 각자 만든 비행기가 얼마나 멀리 가는지 비교하며 놀기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              </a>
+            </li>
+            <li class="game" id="build-2">
+              <a class="game-link" href="https://www.roblox.com/games/166986752/Plane-Crazy" target="_blank" rel="noopener noreferrer">
+                <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-ac969e1e209ce87a66889f84e2cb3b92/768/432/Image/Png/noFilter" alt="플레인 크레이지 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="제작 게임 2위">02</span></div>
+                <div class="body"><span class="genre">물리 / 탈것 제작</span><h3>플레인 크레이지</h3><p class="english">Plane Crazy</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 각자 만든 탈것 시연·시험</span></p><p class="pitch">비행기부터 배·로봇까지, 상상한 걸 움직이기.</p><p class="description">비행기·자동차·배·로켓 등 움직이는 작품을 자유롭게 만드는 물리 샌드박스예요. 친구와 각자 설계한 탈것을 보여주고 시험하는 재미가 있어요. 평화 모드와 PvP 모드가 있어, 처음에는 평화 모드에서 조작과 제작부터 익히기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              </a>
+            </li>
+            <li class="game" id="build-3">
+              <a class="game-link" href="https://www.roblox.com/games/156220906/Whatever-Floats-your-Boat" target="_blank" rel="noopener noreferrer">
+                <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-e8bac44ce94eeac799ba910cd3711ab5/768/432/Image/Png/noFilter" alt="왓에버 플로츠 유어 보트 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="제작 게임 3위">03</span></div>
+                <div class="body"><span class="genre orange">배 제작 / 생존 / PvP</span><h3>왓에버 플로츠 유어 보트</h3><p class="english">Whatever Floats your Boat</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 각자 만든 배로 성능 대결</span></p><p class="pitch">누가 만든 배가 끝까지 버틸까?</p><p class="description">모터와 무기 같은 부품으로 배를 설계하고, 다른 플레이어의 배와 겨루며 성능을 시험해요. 친구들과 서로 다른 배를 만들어 비교·대결하는 쪽에 잘 맞아요. 보물선을 찾아 함께 항해하기보다 배 제작과 전투를 즐기고 싶을 때 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+              </a>
+            </li>
+          </ol>
+        </section>
         <section class="game-section horror" id="horror" aria-labelledby="horror-title">
           <div class="section-heading">
-            <p class="section-kicker">02 / SCREAM TOGETHER</p>
+            <p class="section-kicker">03 / SCREAM TOGETHER</p>
             <h2 id="horror-title">공포·탈출·생존 · 8개</h2>
             <p>처음 추천한 8개를 모두 모았어요. 순위는 이 장르 안에서의 추천 순서이며, 무서움은 비교를 위한 주관적인 기준이에요.</p>
           </div>
@@ -218,56 +251,56 @@
             <li class="game" id="horror-1">
               <a class="game-link" href="https://www.roblox.com/games/6516141723/DOORS" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-87b00023223336e00e64ba88493ebd5f/500/280/Image/Jpeg/noFilter" alt="도어즈 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 1위">01</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">공포 / 탈출</span><span class="scare">무서움 · 중간</span></div><h3>도어즈</h3><p class="english">DOORS</p><p class="pitch">다음 문은 누가 먼저 열래?</p><p class="description">방을 하나씩 통과하면서 괴물을 피해 탈출해요. 친구들과 괴물의 패턴을 알아가고 위험을 알려주는 재미가 있어요. 공포 게임을 처음 함께 해본다면 가장 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">공포 / 탈출</span><span class="scare">무서움 · 중간</span></div><h3>도어즈</h3><p class="english">DOORS</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 위험을 알려주며 함께 탈출</span></p><p class="pitch">다음 문은 누가 먼저 열래?</p><p class="description">방을 하나씩 통과하면서 괴물을 피해 탈출해요. 친구들과 괴물의 패턴을 알아가고 위험을 알려주는 재미가 있어요. 공포 게임을 처음 함께 해본다면 가장 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-2">
               <a class="game-link" href="https://www.roblox.com/games/9872472334/Evade" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-8b147ff3b645c6675457b2daa8039a5c/500/280/Image/Jpeg/noFilter" alt="이베이드 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 2위">02</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">추격 / 협동 생존</span><span class="scare">무서움 · 약함~중간</span></div><h3>이베이드</h3><p class="english">Evade</p><p class="pitch">친구 구하러 갔다가 같이 도망가기.</p><p class="description">쫓아오는 이미지 형태의 적을 피해 달리고, 쓰러진 친구를 구해요. 정신없이 도망치다 예상치 못한 상황이 벌어져서 비명 지르면서 웃기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">추격 / 협동 생존</span><span class="scare">무서움 · 약함~중간</span></div><h3>이베이드</h3><p class="english">Evade</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 도망치고 쓰러진 친구 구하기</span></p><p class="pitch">친구 구하러 갔다가 같이 도망가기.</p><p class="description">쫓아오는 이미지 형태의 적을 피해 달리고, 쓰러진 친구를 구해요. 정신없이 도망치다 예상치 못한 상황이 벌어져서 비명 지르면서 웃기 좋아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-3">
               <a class="game-link" href="https://www.roblox.com/games/79546208627805/99-Nights-in-the-Forest" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-d23b79bf4c2919fb243bf01476f15605/500/280/Image/Jpeg/noFilter" alt="숲속의 99일 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 3위">03</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">공포 / 캠프 생존</span><span class="scare">무서움 · 중간</span></div><h3>숲속의 99일</h3><p class="english">99 Nights in the Forest</p><p class="pitch">나는 자원 모을게, 너는 캠프 지켜!</p><p class="description">숲에서 캠프를 만들고 밤의 위협을 버티며 실종된 아이들을 찾아요. 자원 수집·탐험·캠프 관리를 나눠서 오래 협동하기 좋은 게임이에요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">공포 / 캠프 생존</span><span class="scare">무서움 · 중간</span></div><h3>숲속의 99일</h3><p class="english">99 Nights in the Forest</p><p class="players">추천 인원 <strong>3–5명</strong><span> · 자원·식량·탐험 역할 분담</span></p><p class="pitch">나는 자원 모을게, 너는 캠프 지켜!</p><p class="description">숲에서 캠프를 만들고 밤의 위협을 버티며 실종된 아이들을 찾아요. 자원 수집·탐험·캠프 관리를 나눠서 오래 협동하기 좋은 게임이에요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-4">
               <a class="game-link" href="https://www.roblox.com/games/2768379856/3008" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-b7bc720ea015e158b7afe6e5e325d5a5/500/280/Image/Jpeg/noFilter" alt="3008 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 4위">04</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">기지 건축 / 생존</span><span class="scare">무서움 · 약함~중간</span></div><h3>3008</h3><p class="english">3008</p><p class="pitch">낮에는 집 짓고, 밤에는 숨고.</p><p class="description">거대한 가구점에서 가구로 기지를 만들고 직원들을 피해 살아남아요. 함께 집 짓고 수다 떨다가 밤이 되면 긴장하는 재미가 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">기지 건축 / 생존</span><span class="scare">무서움 · 약함~중간</span></div><h3>3008</h3><p class="english">3008</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 같은 기지를 짓고 지키기</span></p><p class="pitch">낮에는 집 짓고, 밤에는 숨고.</p><p class="description">거대한 가구점에서 가구로 기지를 만들고 직원들을 피해 살아남아요. 함께 집 짓고 수다 떨다가 밤이 되면 긴장하는 재미가 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-5">
               <a class="game-link" href="https://www.roblox.com/games/893973440/Flee-the-Facility" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-e2c86d2224da7753fb673da02d961f16/500/280/Image/Jpeg/noFilter" alt="시설 탈출 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 5위">05</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">추격 / 탈출</span><span class="scare">무서움 · 중간</span></div><h3>시설 탈출</h3><p class="english">Flee the Facility</p><p class="pitch">오늘의 추격자는 우리 중 한 명.</p><p class="description">한 명은 추격자, 나머지는 컴퓨터를 해킹하고 탈출해요. 잡힌 친구를 구할지 먼저 도망칠지 눈치싸움이 재미있어요. 최대 5명이 함께할 수 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">추격 / 탈출</span><span class="scare">무서움 · 중간</span></div><h3>시설 탈출</h3><p class="english">Flee the Facility</p><p class="players">추천 인원 <strong>4–5명</strong><span> · 추격자 1명 + 생존자 3–4명</span></p><p class="pitch">오늘의 추격자는 우리 중 한 명.</p><p class="description">한 명은 추격자, 나머지는 컴퓨터를 해킹하고 탈출해요. 잡힌 친구를 구할지 먼저 도망칠지 눈치싸움이 재미있어요. 최대 5명이 함께할 수 있어요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-6">
               <a class="game-link" href="https://www.roblox.com/games/12411473842/Pressure" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-58ca4c1974f6b20d7e17ae964e65146f/500/280/Image/Jpeg/noFilter" alt="프레셔 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 6위">06</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">심해 공포 / 탈출</span><span class="scare">무서움 · 강함</span></div><h3>프레셔</h3><p class="english">Pressure</p><p class="pitch">심해 시설 안에서 함께 살아남기.</p><p class="description">어두운 심해 시설을 탐색하며 괴물을 피해 진행해요. 친구들과 위험 신호를 살피고 대응하는 긴장감이 있어요. 도어즈가 재미있었다면 다음으로 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">심해 공포 / 탈출</span><span class="scare">무서움 · 강함</span></div><h3>프레셔</h3><p class="english">Pressure</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 신호를 공유하며 함께 탐색</span></p><p class="pitch">심해 시설 안에서 함께 살아남기.</p><p class="description">어두운 심해 시설을 탐색하며 괴물을 피해 진행해요. 친구들과 위험 신호를 살피고 대응하는 긴장감이 있어요. 도어즈가 재미있었다면 다음으로 추천해요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-7">
               <a class="game-link" href="https://www.roblox.com/games/6243699076/The-Mimic" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-8c3e12ce586ffcea0d91235ecae7ba16/500/280/Image/Jpeg/noFilter" alt="더 미믹 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 7위">07</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">괴담 / 스토리 공포</span><span class="scare">무서움 · 매우 강함</span></div><h3>더 미믹</h3><p class="english">The Mimic</p><p class="pitch">분위기부터 제대로 무서운 밤.</p><p class="description">일본 역사와 도시전설에서 영감을 받은 스토리 공포 게임이에요. 친구들과 길을 찾고 추격을 피하며 진행해요. 강한 공포 분위기와 갑작스러운 놀람을 원할 때 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">괴담 / 스토리 공포</span><span class="scare">무서움 · 매우 강함</span></div><h3>더 미믹</h3><p class="english">The Mimic</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 길 찾기·추격 구간 함께 도전</span></p><p class="pitch">분위기부터 제대로 무서운 밤.</p><p class="description">일본 역사와 도시전설에서 영감을 받은 스토리 공포 게임이에요. 친구들과 길을 찾고 추격을 피하며 진행해요. 강한 공포 분위기와 갑작스러운 놀람을 원할 때 추천!</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="horror-8">
               <a class="game-link" href="https://www.roblox.com/games/10277607801/Apeirophobia" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-7579c773743c78eed669a0bfb5ddf55b/500/280/Image/Jpeg/noFilter" alt="아페이로포비아 공식 썸네일" width="500" height="280" loading="lazy"><span class="rank" aria-label="공포·탈출·생존 8위">08</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">백룸 / 퍼즐 탈출</span><span class="scare">무서움 · 강함</span></div><h3>아페이로포비아</h3><p class="english">Apeirophobia</p><p class="pitch">끝없는 방, 같이 출구를 찾자.</p><p class="description">백룸을 탐색하며 퍼즐을 풀고 괴물을 피해 탈출해요. 길과 단서를 함께 찾는 재미가 있어요. 방탈출과 협동 퍼즐을 좋아하는 친구들에게 잘 맞아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">백룸 / 퍼즐 탈출</span><span class="scare">무서움 · 강함</span></div><h3>아페이로포비아</h3><p class="english">Apeirophobia</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 단서·퍼즐을 나눠 찾기</span></p><p class="pitch">끝없는 방, 같이 출구를 찾자.</p><p class="description">백룸을 탐색하며 퍼즐을 풀고 괴물을 피해 탈출해요. 길과 단서를 함께 찾는 재미가 있어요. 방탈출과 협동 퍼즐을 좋아하는 친구들에게 잘 맞아요.</p><div class="card-bottom"><span class="free">기본 플레이 무료</span><span class="play">Roblox에서 플레이 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
           </ol>
         </section>
         <section class="game-section paid" id="paid" aria-labelledby="paid-title">
           <div class="section-heading">
-            <p class="section-kicker">03 / PAID ADVENTURES</p>
+            <p class="section-kicker">04 / PAID ADVENTURES</p>
             <h2 id="paid-title">함께 도전하는 유료 게임 · 4개</h2>
             <p>가볍게 탐색하려면 1위, 오래 모험하려면 2위. 3·4위는 다른 플레이어와의 전투도 즐기는 생존 게임 팬에게 추천해요.</p>
             <p>입장료는 1인 기준이며 친구들도 각자 구매해야 해요. <time datetime="2026-10-21">2026.10.21</time> <a href="https://games.roblox.com/v1/games?universeIds=3211189518,1359573625,5286749994,3747388906" target="_blank" rel="noopener noreferrer">Roblox 공식 API</a> 확인 가격으로, 할인·무료 전환에 따라 달라질 수 있어요. 구매 전 공식 페이지의 최종 가격과 이용 가능 여부를 확인하세요.</p>
@@ -276,25 +309,25 @@
             <li class="game" id="paid-1">
               <a class="game-link" href="https://www.roblox.com/games/8389627336/Find-Everything" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-0268636fd0196a783c25a42f152c7a49/768/432/Image/Png/noFilter" alt="파인드 에브리싱 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="유료 1위">01</span></div>
-                <div class="body"><div class="tags"><span class="genre blue">탐색 / 수집 / 점프맵</span><span class="scare">얼리 액세스</span></div><h3>파인드 에브리싱</h3><p class="english">Find Everything</p><p class="pitch">너는 저쪽, 나는 이쪽! 같이 숨은 것 찾기.</p><p class="description">별난 세계를 돌아다니며 숨겨진 물건을 찾는 온라인 3D 탐색 게임이에요. 친구와 발견한 위치를 알려주고, 새 이동 기술로 못 가본 곳을 함께 탐험하기 좋아요. 전투보다 탐색과 수집을 좋아하는 친구들에게 먼저 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 250 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre blue">탐색 / 수집 / 점프맵</span><span class="scare">얼리 액세스</span></div><h3>파인드 에브리싱</h3><p class="english">Find Everything</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 발견한 위치를 서로 알려주기</span></p><p class="pitch">너는 저쪽, 나는 이쪽! 같이 숨은 것 찾기.</p><p class="description">별난 세계를 돌아다니며 숨겨진 물건을 찾는 온라인 3D 탐색 게임이에요. 친구와 발견한 위치를 알려주고, 새 이동 기술로 못 가본 곳을 함께 탐험하기 좋아요. 전투보다 탐색과 수집을 좋아하는 친구들에게 먼저 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 250 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="paid-2">
               <a class="game-link" href="https://www.roblox.com/games/4111023553/Deepwoken" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-8ce3525ac656562ed315a089275df1b2/768/432/Image/Png/noFilter" alt="딥워큰 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="유료 2위">02</span></div>
-                <div class="body"><div class="tags"><span class="genre blue">액션 RPG / 모험</span><span class="scare">고난도 · 캐릭터 영구 소실</span></div><h3>딥워큰</h3><p class="english">Deepwoken</p><p class="pitch">오래 파고들 모험을 찾는 친구들.</p><p class="description">함께 세계와 던전을 탐험하고 각자 무기·능력을 익히며 성장해요. 전투를 배우고 다시 도전하는 과정 자체를 좋아하는 팀에 잘 맞아요. PvP가 있으며 캐릭터를 영구적으로 잃을 수 있어, 가벼운 한 판보다 고난도 RPG를 원할 때 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 400 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre blue">액션 RPG / 모험</span><span class="scare">고난도 · 캐릭터 영구 소실</span></div><h3>딥워큰</h3><p class="english">Deepwoken</p><p class="players">추천 인원 <strong>2–3명</strong><span> · 소규모로 탐험·전투 익히기</span></p><p class="pitch">오래 파고들 모험을 찾는 친구들.</p><p class="description">함께 세계와 던전을 탐험하고 각자 무기·능력을 익히며 성장해요. 전투를 배우고 다시 도전하는 과정 자체를 좋아하는 팀에 잘 맞아요. PvP가 있으며 캐릭터를 영구적으로 잃을 수 있어, 가벼운 한 판보다 고난도 RPG를 원할 때 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 400 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="paid-3">
               <a class="game-link" href="https://www.roblox.com/games/15327728308/Aftermath" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-f602df166a73ec82f0f659b357a1dedd/768/432/Image/Png/noFilter" alt="애프터매스 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="유료 3위">03</span></div>
-                <div class="body"><div class="tags"><span class="genre purple">좀비 / 생존 슈팅</span><span class="scare">PvP 있음 · 개발 진행 중</span></div><h3>애프터매스</h3><p class="english">Aftermath</p><p class="pitch">좀비를 피하고, 친구와 보급품 챙기기.</p><p class="description">오픈월드에서 총과 보급품을 찾으며 좀비로부터 살아남아요. 같은 서버에 모여 주변을 살피고 함께 이동하는 생존 플레이를 원하는 친구들에게 추천해요. 다른 플레이어와의 전투도 있어요. 공식 안내상 개발 진행 중이며 아래 가격은 확인 당시 할인 가격이에요.</p><div class="card-bottom"><span class="paid-price">할인 입장료 80 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre purple">좀비 / 생존 슈팅</span><span class="scare">PvP 있음 · 개발 진행 중</span></div><h3>애프터매스</h3><p class="english">Aftermath</p><p class="players">추천 인원 <strong>2–4명</strong><span> · 같은 서버에서 보급품 탐색</span></p><p class="pitch">좀비를 피하고, 친구와 보급품 챙기기.</p><p class="description">오픈월드에서 총과 보급품을 찾으며 좀비로부터 살아남아요. 같은 서버에 모여 주변을 살피고 함께 이동하는 생존 플레이를 원하는 친구들에게 추천해요. 다른 플레이어와의 전투도 있어요. 공식 안내상 개발 진행 중이며 아래 가격은 확인 당시 할인 가격이에요.</p><div class="card-bottom"><span class="paid-price">할인 입장료 80 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
             <li class="game" id="paid-4">
               <a class="game-link" href="https://www.roblox.com/games/10228136016/Fallen-Survival" target="_blank" rel="noopener noreferrer">
                 <div class="cover"><img src="https://tr.rbxcdn.com/180DAY-17f44b91739f06cc13a736fab583eccf/768/432/Image/Png/noFilter" alt="폴른 서바이벌 공식 썸네일" width="768" height="432" loading="lazy"><span class="rank" aria-label="유료 4위">04</span></div>
-                <div class="body"><div class="tags"><span class="genre orange">기지 건축 / 생존</span><span class="scare">하드코어 PvPvE</span></div><h3>폴른 서바이벌</h3><p class="english">Fallen Survival</p><p class="pitch">자원 모으고, 우리 기지는 우리가 지킨다.</p><p class="description">같은 서버에서 자원을 모으고 도구를 제작하며 기지를 짓는 생존 게임이에요. 친구들과 역할을 나눠 건축·탐험·방어를 즐기기 좋아요. 다른 유저의 기지 약탈이 가능하고, 공식 안내상 매주 금요일(EST) 기지·데이터가 초기화돼요. 오래 보존할 집보다 반복 생존을 원할 때 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 200 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
+                <div class="body"><div class="tags"><span class="genre orange">기지 건축 / 생존</span><span class="scare">하드코어 PvPvE</span></div><h3>폴른 서바이벌</h3><p class="english">Fallen Survival</p><p class="players">추천 인원 <strong>3–5명</strong><span> · 건축·탐험·방어 역할 분담</span></p><p class="pitch">자원 모으고, 우리 기지는 우리가 지킨다.</p><p class="description">같은 서버에서 자원을 모으고 도구를 제작하며 기지를 짓는 생존 게임이에요. 친구들과 역할을 나눠 건축·탐험·방어를 즐기기 좋아요. 다른 유저의 기지 약탈이 가능하고, 공식 안내상 매주 금요일(EST) 기지·데이터가 초기화돼요. 오래 보존할 집보다 반복 생존을 원할 때 추천해요.</p><div class="card-bottom"><span class="paid-price">입장료 200 Robux / 1인</span><span class="play">공식 페이지 <span aria-hidden="true">↗</span></span></div></div>
               </a>
             </li>
           </ol>
@@ -307,7 +340,7 @@
       <footer>
         <p>추천 순위는 친구들과 즐기기 위한 편집자의 주관적인 선정입니다.</p>
         <p>게임 설명과 썸네일 출처: 각 카드에 연결된 Roblox 공식 게임 페이지. 게임 및 이미지의 권리는 각 제작사에 있습니다.</p>
-        <p>무료 추천 선정: 2026.10.19 · 유료 추천 및 1인 입장료 확인: 2026.10.21. 추천 순위는 장르별이며, 유료 입장권과 게임 내 추가 구매 비용은 별개입니다.</p>
+        <p>기존 무료 추천 선정: 2026.10.19 · 제작 게임·추천 인원 업데이트 및 유료 입장료 확인: 2026.10.21. 추천 인원은 본인을 포함한 편집자의 제안이며, 유료 입장권과 게임 내 추가 구매 비용은 별개입니다.</p>
         <p>ZZEE · FRIENDS' PLAYLIST · 2026</p>
       </footer>
     </div>
