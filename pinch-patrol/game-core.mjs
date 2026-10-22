@@ -51,10 +51,10 @@ export function waveDifficulty(wave, players = 1) {
   return {
     label: wave < 3 ? '경계' : wave < 6 ? '위험' : wave < 9 ? '극한' : '지옥',
     rows: Math.min(5, 4 + Math.floor(step / 3)),
-    armor: 2 + Math.min(6, Math.floor(step / 4)),
+    armor: 2 + Math.floor(step / 3),
     formationRate: 1 + Math.min(.9, step * .06),
     shotSpeed: 190 + Math.min(120, step * 10),
-    shotInterval: Math.max(.36, .70 - step * .035) / (1 + (players - 1) * .1),
+    shotInterval: (.36 + .34 * Math.exp(-step / 8)) / (1 + (players - 1) * .1),
     shooters: Math.min(3, 1 + Math.floor(wave / 2) + (players > 1 ? 1 : 0)),
     spread: wave < 3 ? 0 : wave < 7 ? 1 : 2,
     divers: Math.min(3, 1 + Math.floor(step / 3)),
@@ -71,6 +71,7 @@ export function waveDifficulty(wave, players = 1) {
 export class Game {
   constructor(random = Math.random) { this.random = random; this.reset(); }
   get player() { return this.players[0]; }
+  get pressure() { return 1 + clamp((this.time - this.waveStarted - 8) / 40, 0, 1) * .5; }
   get lives() { return this.players.reduce((sum, p) => sum + p.lives, 0); }
   reset(count = this.playerCount || 1, startWave = 1) {
     this.playerCount = clamp(Math.floor(count), 1, 4);
@@ -113,7 +114,7 @@ export class Game {
     for (let row = 0; row < rows; row++) for (let col = 0; col < 8; col++) {
       this.enemies.push({ x: (200 + col * 80) * W / 960, y: 65 + row * 49,
         homeX: (200 + col * 80) * W / 960, homeY: 65 + row * 49,
-        row, col, type: row % 3, hp: 1 + d.armor + (row === 0 && this.wave > 3 ? 1 : 0), dive: null });
+        row, col, type: row % 3, hp: 1 + d.armor + (row < (this.wave - 1) % 3 ? 1 : 0), dive: null });
     }
   }
   burst(x, y, color, count = 16) {
@@ -200,6 +201,7 @@ export class Game {
     return alive[Math.floor(this.random() * alive.length)] || this.player;
   }
   enemyShot(x, y, angle, speed = 160, radius = 4) {
+    speed *= 1 + (this.pressure - 1) * .2;
     this.enemyBullets.push({ x, y, vx: Math.sin(angle) * speed, vy: Math.cos(angle) * speed, radius });
   }
   updateBoss(dt) {
@@ -209,7 +211,7 @@ export class Game {
     boss.y = 100 + Math.sin(boss.age * 1.1) * 24;
     const phase = boss.hp / boss.maxHp > .66 ? 1 : boss.hp / boss.maxHp > .33 ? 2 : 3;
     if (phase !== boss.phase) { boss.phase = phase; this.events.push('phase'); this.popup(boss.x, boss.y + 70, `PHASE ${phase}`, '#ff9e8a'); }
-    boss.fireTimer -= dt; boss.beamTimer -= dt;
+    boss.fireTimer -= dt * this.pressure; boss.beamTimer -= dt * this.pressure;
     if (boss.fireTimer <= 0) {
       if (phase === 1) {
         const p = this.target(), aim = Math.atan2(p.x - boss.x, Math.max(60, p.y - boss.y));
@@ -220,11 +222,11 @@ export class Game {
         const count = 14 + d.bossSpread * 4;
         for (let i = 0; i < count; i++) this.enemyShot(boss.x, boss.y, i * Math.PI * 2 / count + boss.age * .2, 165 * d.bossShotSpeed, 5);
       }
-      boss.fireTimer = (phase === 1 ? 1.15 : phase === 2 ? .9 : .8) / d.bossTempo;
+      boss.fireTimer += (phase === 1 ? 1.15 : phase === 2 ? .9 : .8) / d.bossTempo;
     }
     if (boss.beamTimer <= 0 && !this.beam) {
       this.beam = { x: this.target().x, age: 0, warning: d.beamWarning, duration: .8, width: 50 };
-      boss.beamTimer = (phase === 3 ? 5 : 7) / d.bossTempo; this.events.push('warning');
+      boss.beamTimer += (phase === 3 ? 5 : 7) / d.bossTempo; this.events.push('warning');
     }
     if (this.beam) {
       this.beam.age += dt;
@@ -316,7 +318,7 @@ export class Game {
     this.bullets = this.bullets.filter(b => !b.dead && b.y > -20 && b.x > -20 && b.x < W + 20);
     this.enemyBullets = this.enemyBullets.filter(b => !b.dead && b.y > -30 && b.y < H + 20 && b.x > -20 && b.x < W + 20);
     if (this.enemies.length) {
-      this.attackTimer -= dt; this.diveTimer -= dt;
+      this.attackTimer -= dt * this.pressure; this.diveTimer -= dt * this.pressure;
       if (this.attackTimer <= 0) {
         const shooters = [...this.enemies];
         for (let shot = 0; shot < d.shooters && shooters.length; shot++) {
@@ -324,7 +326,8 @@ export class Game {
           const aim = Math.atan2(p.x - e.x, Math.max(90, p.y - e.y));
           for (let i = -d.spread; i <= d.spread; i++) this.enemyShot(e.x, e.y + 13, aim + i * .17, d.shotSpeed);
         }
-        this.attackTimer = d.shotInterval;
+        // Preserve timer overshoot so pressure does not depend on frame rate.
+        this.attackTimer += d.shotInterval;
       }
       if (this.diveTimer <= 0) {
         const idle = this.enemies.filter(e => !e.dive);
@@ -332,7 +335,7 @@ export class Game {
           const [e] = idle.splice(Math.floor(this.random() * idle.length), 1);
           e.dive = { t: 0, x: e.x, y: e.y, vx: clamp((this.target().x - e.x) / 2, -100, 100) };
         }
-        this.diveTimer = d.diveInterval;
+        this.diveTimer += d.diveInterval;
       }
     } else if (!this.boss && !this.over) {
       this.waveWait += dt;

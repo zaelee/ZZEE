@@ -59,3 +59,43 @@ test('hard opening survives a novice nova and starts pressure before two seconds
   g.reset(1,3);assert.equal(g.boss.maxHp,560);assert.ok(g.boss.fireTimer<1.5);
   g.reset(4,3);assert.equal(g.boss.maxHp,2240);
 });
+
+test('pressure ramps smoothly after eight seconds and remains bounded',()=>{
+  const g=new Game();
+  for(const [elapsed,expected] of [[0,1],[8,1],[18,1.125],[28,1.25],[48,1.5],[300,1.5]]){
+    g.time=g.waveStarted+elapsed;assert.equal(g.pressure,expected);
+  }
+});
+test('long waves emit more attacks and only new projectiles gain speed',()=>{
+  function sample(time){
+    const g=new Game(()=>.5);g.time=time;g.attackTimer=0;g.diveTimer=Infinity;g.player.invincible=Infinity;
+    const shot=g.enemyShot;let count=0;
+    g.enemyShot=function(...args){count++;return shot.apply(this,args);};
+    for(let i=0;i<120;i++)g.update(.05,{});
+    return {count,g};
+  }
+  const early=sample(0),late=sample(48);assert.ok(late.count>early.count*1.35);
+  const g=new Game();g.enemyShot(100,200,0,200);const existing=g.enemyBullets[0];
+  g.time=48;g.enemyShot(100,200,0,200);
+  assert.equal(existing.vy,200);assert.ok(Math.abs(g.enemyBullets[1].vy-220)<.001);
+});
+test('pressure accelerates normal dives and boss attack clocks without shortening beam warning',()=>{
+  const normal=new Game();normal.time=48;normal.attackTimer=1;normal.diveTimer=1;normal.update(.05,{});
+  assert.ok(Math.abs(normal.attackTimer-.925)<.001);assert.ok(Math.abs(normal.diveTimer-.925)<.001);
+  const boss=new Game();boss.reset(1,3);boss.time=48;boss.boss.fireTimer=1;boss.boss.beamTimer=1;boss.update(.05,{});
+  assert.ok(Math.abs(boss.boss.fireTimer-.925)<.001);assert.ok(Math.abs(boss.boss.beamTimer-.925)<.001);
+  boss.boss.beamTimer=0;boss.update(0,{});assert.equal(boss.beam.warning,boss.difficulty.beamWarning);
+  assert.ok(boss.beam.warning>=.95);
+});
+test('late waves keep increasing armor and fire rate beyond the old plateau',()=>{
+  const g=new Game();g.reset(1,40);const hp=g.enemies[0].hp,interval=g.difficulty.shotInterval;
+  g.wave=41;g.spawnWave();assert.ok(g.enemies[0].hp>hp);assert.ok(g.difficulty.shotInterval<interval);
+  g.wave=43;g.spawnWave();assert.ok(g.enemies.every(e=>e.hp>hp));
+});
+test('new waves reset pressure while keeping upgrades; orientation does not reset pressure',()=>{
+  const g=new Game();g.time=48;g.player.level=5;
+  try{g.resize(600,800);assert.equal(g.pressure,1.5);}finally{g.resize(960,600);}
+  g.enemies=[];g.waveWait=1.79;g.update(.02,{});
+  assert.equal(g.wave,2);assert.equal(g.pressure,1);assert.equal(g.player.level,5);
+  g.time+=48;g.reset();assert.equal(g.pressure,1);assert.equal(g.player.level,1);
+});
