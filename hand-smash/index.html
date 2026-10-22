@@ -13,6 +13,7 @@
 <div class="canvas-hint" id="canvas-hint">손을 움직이면, 상상이 부서져요.</div>
 <div class="stage-bottom"><span><i id="status-dot"></i><span id="tracking">카메라 연결 대기</span></span><button id="reset" aria-label="새 떡을 한지로 다시 포장하기">↻ &nbsp; 다시 포장하기</button></div>
 <button id="unwrap" class="unwrap" disabled aria-label="한지 포장을 벗기고 시작하기"><span id="unwrap-label">포장을 준비하는 중…</span><small>HANJI WRAPPING · TAP TO OPEN</small></button><div id="hold-status" class="hold-status" role="status" hidden></div>
+<div id="rotation-controls" class="rotation-controls" hidden><label for="rotation-slider">좌우로 돌리고 · 떡을 눌러 깨기</label><div class="rotation-row"><button id="rotate-left" aria-label="왼쪽으로 15도 돌리기">‹</button><input id="rotation-slider" type="range" min="-180" max="180" step="1" value="-13" aria-label="떡 좌우 회전 각도"><button id="rotate-right" aria-label="오른쪽으로 15도 돌리기">›</button></div></div>
 <div class="burst-label" id="burst-label" aria-live="polite"></div>
 </section>
 <div class="mobile-tools" aria-label="터치 조작"><button id="touch-rotate" aria-pressed="false">↔ 돌리기</button><button id="touch-peel">코팅 벗기기</button><button id="touch-camera">카메라</button><button id="touch-settings" aria-expanded="false" aria-controls="controls">설정</button></div><p id="mobile-notice" class="mobile-notice notice" role="status" hidden></p>
