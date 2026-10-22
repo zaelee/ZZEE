@@ -62,16 +62,16 @@ function addKiwi(group){
     seed.position.set(Math.cos(a)*r,Math.sin(a)*r,.132);seed.scale.set(.014,.026,.009);seed.rotation.z=a-Math.PI/2;group.add(seed);
   }
 }
-export function createMochi(flavor='strawberry') {
+export function createMochi(flavor='strawberry',mobile=false) {
   const config=FLAVORS[flavor]||FLAVORS.strawberry;
   const root=new THREE.Group();root.name='Hanjungsun-inspired-wax-mochi';
   const core=new THREE.Group();core.name='mochi-and-fruit';root.add(core);
   const doughMaps=organicMaps('dough');
   const doughMaterial=new THREE.MeshPhysicalMaterial({...doughMaps,roughness:1,bumpScale:.011,sheen:.22,sheenColor:new THREE.Color(0xffecdc),sheenRoughness:.85});
   const skin=new THREE.Group();skin.name='whole-rounded-mochi';core.add(skin);
-  const whole=new THREE.Mesh(createMochiSurface(),doughMaterial);whole.name='rice-dough-whole';skin.add(whole);
+  const whole=new THREE.Mesh(createMochiSurface(0,false,mobile?48:96),doughMaterial);whole.name='rice-dough-whole';skin.add(whole);
   const cutaway=new THREE.Group();cutaway.name='fruit-cutaway';cutaway.visible=false;core.add(cutaway);
-  const dome=new THREE.Mesh(createMochiSurface(0,true),doughMaterial);dome.name='rice-dough-cut';cutaway.add(dome);
+  const dome=new THREE.Mesh(createMochiSurface(0,true,mobile?48:96),doughMaterial);dome.name='rice-dough-cut';cutaway.add(dome);
   const outline=[];for(let i=0;i<160;i++){const a=i*Math.PI*2/160;const p=mochiPoint(new THREE.Vector3(Math.cos(a),Math.sin(a),0));outline.push(new THREE.Vector2(p.x,p.y));}
   const shape=new THREE.Shape(outline),cap=new THREE.Mesh(new THREE.ShapeGeometry(shape),doughMaterial);cap.position.z=.01;cap.name='mochi-cut-surface';cutaway.add(cap);
   const lipPath=new THREE.CatmullRomCurve3(outline.map(p=>new THREE.Vector3(p.x*.95,p.y*.95,.025)),true);
@@ -82,12 +82,12 @@ export function createMochi(flavor='strawberry') {
   if(flavor==='strawberry')addStrawberry(filling);else if(flavor==='mandarin')addMandarin(filling);else addKiwi(filling);
   const shell=new THREE.Group();shell.name='wax-shell';root.add(shell);
   const shellMat=new THREE.MeshPhysicalMaterial({color:new THREE.Color(config.wax).lerp(new THREE.Color(0xfff8ec),.45),roughness:.32,metalness:0,transmission:.66,thickness:.028,ior:1.43,attenuationColor:new THREE.Color(config.wax),attenuationDistance:.3,clearcoat:.25,clearcoatRoughness:.3,bumpMap:doughMaps.bumpMap,bumpScale:.002,side:THREE.DoubleSide});
-  const coat=new THREE.Mesh(createMochiSurface(.031),shellMat);coat.name='unbroken-translucent-wax';root.add(coat);
+  const coat=new THREE.Mesh(createMochiSurface(.031,false,mobile?48:96),shellMat);coat.name='unbroken-translucent-wax';root.add(coat);
   const pieces=[];
   for(const cell of fractureCells()){
     const {geometry,center,crackPoints}=createShellGeometry(cell.vertices);
     const mesh=new THREE.Mesh(geometry,shellMat);mesh.position.copy(center);mesh.name=`wax-fragment-${pieces.length}`;mesh.visible=false;
-    const crack=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(crackPoints),new THREE.LineBasicMaterial({color:0xfff5eb,transparent:true,opacity:0,depthWrite:false}));crack.name='wax-crack';crack.renderOrder=4;mesh.add(crack);
+    const crack=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(crackPoints),new THREE.LineBasicMaterial({color:0xfff5eb,transparent:true,opacity:0,depthWrite:false}));crack.name='wax-crack';crack.visible=false;crack.renderOrder=4;mesh.add(crack);
     mesh.userData={intact:true,home:center.clone(),damage:0,detachAt:null,sides:cell.vertices.length};shell.add(mesh);pieces.push(mesh);
   }
 

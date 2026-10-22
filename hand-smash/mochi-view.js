@@ -4,26 +4,26 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { createMochi, disposeModel, createTornHalves } from './mochi-model.js';
 import {canTear} from './pull-gesture.js';
-import {visibleHit} from './wax-geometry.js';
+import {visibleHit,visibleMeshes} from './wax-geometry.js';
 import {springStep,squishScale,applySoftMaterial} from './soft-body.js';
 
 export class MochiView {
   constructor(canvas, reducedMotion) {
-    const mobile=matchMedia('(pointer:coarse)').matches;
+    const mobile=matchMedia('(pointer:coarse)').matches;this.mobile=mobile;
     this.renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
-    this.renderer.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));
-    this.renderer.transmissionResolutionScale=mobile ? .65 : 1;
+    this.renderer.setPixelRatio(Math.min(devicePixelRatio,mobile?1.25:2));
+    this.renderer.transmissionResolutionScale=mobile ? .4 : 1;
     this.renderer.outputColorSpace=THREE.SRGBColorSpace;
     this.renderer.toneMapping=THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure=.92;
-    this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.VSMShadowMap;
+    this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=mobile?THREE.PCFSoftShadowMap:THREE.VSMShadowMap;
     this.scene=new THREE.Scene();
     this.camera=new THREE.OrthographicCamera(-3,3,2.4,-2.4,.1,50);
     this.camera.position.set(0,2.9,6);this.camera.lookAt(0,-.32,0);
     const environment=new RoomEnvironment(),pmrem=new THREE.PMREMGenerator(this.renderer);
     this.environment=pmrem.fromScene(environment,.04);this.scene.environment=this.environment.texture;this.scene.environmentIntensity=.65;environment.dispose();pmrem.dispose();
     this.scene.add(new THREE.HemisphereLight(0xffffff,0x746357,.65));
-    const key=new THREE.DirectionalLight(0xfff0dc,2);key.position.set(-3,5,4);key.castShadow=true;key.shadow.mapSize.set(mobile?1024:2048,mobile?1024:2048);key.shadow.camera.left=-2.5;key.shadow.camera.right=2.5;key.shadow.camera.top=2.5;key.shadow.camera.bottom=-2.5;key.shadow.normalBias=.025;key.shadow.bias=-.0004;key.shadow.radius=5;key.shadow.blurSamples=mobile?4:8;this.scene.add(key);
+    const key=new THREE.DirectionalLight(0xfff0dc,2);key.position.set(-3,5,4);key.castShadow=true;key.shadow.mapSize.set(mobile?512:2048,mobile?512:2048);key.shadow.camera.left=-2.5;key.shadow.camera.right=2.5;key.shadow.camera.top=2.5;key.shadow.camera.bottom=-2.5;key.shadow.normalBias=.025;key.shadow.bias=-.0004;key.shadow.radius=5;key.shadow.blurSamples=mobile?4:8;this.scene.add(key);
     const fill=new THREE.DirectionalLight(0xffd4e5,.7);fill.position.set(4,2,1);this.scene.add(fill);
     const plate=new THREE.Mesh(new THREE.CylinderGeometry(1.43,1.32,.11,96),new THREE.MeshStandardMaterial({color:0xf0e6d5,roughness:.35,metalness:.04}));
     plate.receiveShadow=true;plate.position.y=-1.11;this.scene.add(plate);
@@ -49,7 +49,7 @@ export class MochiView {
   contains(point){
     this.model.root.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     this.raycaster.setFromCamera(new THREE.Vector2(point.x/this.width*2-1,1-point.y/this.height*2),this.camera);
-    return Boolean(visibleHit(this.raycaster.intersectObject(this.model.core,true)));
+    return Boolean(visibleHit(this.raycaster.intersectObjects(visibleMeshes(this.model.core),false)));
   }
   pull(amount){if(this.tearReady){this.release();this.pullTarget=amount;}}
   endPull(){this.pullTarget=0;}
@@ -63,7 +63,7 @@ export class MochiView {
   }
   reset(flavor=this.flavor){
     if(this.model){for(const p of this.fragments){this.scene.remove(p);disposeModel(p);}this.scene.remove(this.model.root);disposeModel(this.model.root);}
-    this.torn=false;this.halves=null;this.pullTarget=0;this.stretch=0;this.tearTime=0;this.fragments=[];this.pendingBroken=0;this.pressedPiece=null;this.fracturing=false;this.flavor=flavor;this.model=createMochi(flavor);this.scene.add(this.model.root);this.preview=false;this.rotation=-.22;this.tilt=.08;
+    this.torn=false;this.halves=null;this.pullTarget=0;this.stretch=0;this.tearTime=0;this.fragments=[];this.pendingBroken=0;this.pressedPiece=null;this.fracturing=false;this.flavor=flavor;this.model=createMochi(flavor,this.mobile);if(this.mobile)this.model.coat.material.side=THREE.FrontSide;this.scene.add(this.model.root);this.preview=false;this.rotation=-.22;this.tilt=.08;
     this.model.root.rotation.set(this.tilt,this.rotation,0);this.model.root.position.y=-.08;
     this.compression=0;this.compressionVelocity=0;this.dent=0;this.dentVelocity=0;this.holdUntil=0;this.pressure=0;this.softUniforms.softDent.value=0;
     const originals=new Set(),materials=new Set(),baked=[];
@@ -78,6 +78,7 @@ export class MochiView {
   }
   resize(width,height){
     width=Math.max(1,width);height=Math.max(1,height);this.width=width;this.height=height;
+    this.renderer.setPixelRatio(Math.min(devicePixelRatio,this.mobile?(this.cameraMode?1:1.25):2));
     const aspect=width/height,vertical=Math.max(4.05,3.35/aspect)*(this.cameraMode?1.35:1);
     this.camera.left=-vertical*aspect/2;this.camera.right=vertical*aspect/2;
     this.camera.top=vertical/2;this.camera.bottom=-vertical/2;this.camera.updateProjectionMatrix();this.renderer.setSize(width,height,false);
@@ -88,7 +89,7 @@ export class MochiView {
     if(this.torn||this.pullTarget>0)return false;
     this.model.root.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     this.raycaster.setFromCamera(new THREE.Vector2(point.x/this.width*2-1,1-point.y/this.height*2),this.camera);
-    const hit=visibleHit(this.raycaster.intersectObject(this.preview?this.model.core:this.model.root,true));
+    const hit=visibleHit(this.raycaster.intersectObjects(visibleMeshes(this.preview?this.model.core:this.model.root),false));
     if(!hit){this.release();return false;}
     this.softUniforms.softPoint.value.copy(this.model.root.worldToLocal(hit.point.clone()));
     const wax=!this.preview?this.raycaster.intersectObjects(this.model.pieces.filter(p=>p.userData.intact),false)[0]:null;
@@ -103,7 +104,7 @@ export class MochiView {
   damage(piece,amount,time){
     const state=piece.userData;if(!state.intact||state.detachAt!==null)return false;
     this.startFracture();state.damage=Math.min(1,state.damage+amount);
-    const crack=piece.children[0];crack.material.opacity=Math.min(.92,state.damage*.9);
+    const crack=piece.children[0];crack.visible=true;crack.material.opacity=Math.min(.92,state.damage*.9);
     if(state.damage>=1)state.detachAt=time+55+(Math.sin(state.home.x*19+state.home.z*31)+1)*45;
     return true;
   }
@@ -111,13 +112,15 @@ export class MochiView {
     if(this.preview||this.torn)return 0;
     const now=performance.now();this.scene.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     const intact=this.model.pieces.filter(p=>p.userData.intact),targets=new Set();
+    if(!intact.length)return 0;
+    const coreMeshes=visibleMeshes(this.model.core);
     if(all){this.startFracture();for(const piece of intact){this.damage(piece,1,now);piece.userData.detachAt=now+40+(1-piece.userData.home.z)*190;}return intact.length;}
-    const length=Math.hypot(b.x-a.x,b.y-a.y),steps=Math.min(30,Math.max(1,Math.ceil(length/14)));
+    const length=Math.hypot(b.x-a.x,b.y-a.y),steps=Math.min(this.mobile?15:30,Math.max(1,Math.ceil(length/(this.mobile?24:14))));
     for(let i=0;i<=steps;i++){
       const x=a.x+(b.x-a.x)*i/steps,y=a.y+(b.y-a.y)*i/steps;
       for(const [dx,dy] of [[0,0],[radius*.6,0],[-radius*.6,0],[0,radius*.6],[0,-radius*.6]]){
         this.raycaster.setFromCamera(new THREE.Vector2((x+dx)/this.width*2-1,1-(y+dy)/this.height*2),this.camera);
-        const wax=this.raycaster.intersectObjects(intact,false)[0],core=visibleHit(this.raycaster.intersectObject(this.model.core,true));
+        const wax=this.raycaster.intersectObjects(intact,false)[0],core=visibleHit(this.raycaster.intersectObjects(coreMeshes,false));
         if(wax&&(!core||wax.distance<core.distance))targets.add(wax.object);
       }
     }
@@ -171,8 +174,9 @@ export class MochiView {
       p.rotation.x+=state.spin.x*dt;p.rotation.y+=state.spin.y*dt;p.rotation.z+=state.spin.z*dt;
       p.updateMatrixWorld(true);const bounds=p.geometry.boundingBox.clone().applyMatrix4(p.matrixWorld);
       if(bounds.min.y < -1.04 && Math.hypot(p.position.x,p.position.z)<1.4){p.position.y+=-1.04-bounds.min.y;state.velocity.y=Math.abs(state.velocity.y)*.1;state.velocity.x*=.75;state.velocity.z*=.75;state.spin.multiplyScalar(.5);}
-      if(state.life>6)p.scale.setScalar(Math.max(0,7-state.life));
-      if(state.life>7)p.visible=false;
+      const fadeAt=this.mobile?1.8:6,hideAt=this.mobile?2.5:7;
+      if(state.life>fadeAt)p.scale.setScalar(Math.max(0,(hideAt-state.life)/(hideAt-fadeAt)));
+      if(state.life>hideAt)p.visible=false;
     }
     this.renderer.render(this.scene,this.camera);
   }

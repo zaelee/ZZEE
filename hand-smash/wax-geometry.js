@@ -14,8 +14,8 @@ export function mochiNormal(direction){
   const p=mochiPoint(d),a=mochiPoint(d.clone().addScaledVector(t,.0005)).sub(p),c=mochiPoint(d.clone().addScaledVector(b,.0005)).sub(p);
   return a.cross(c).normalize();
 }
-export function createMochiSurface(coat=0,half=false){
-  const g=new THREE.SphereGeometry(1,96,64,0,Math.PI*2,0,half?Math.PI/2:Math.PI);
+export function createMochiSurface(coat=0,half=false,detail=96){
+  const g=new THREE.SphereGeometry(1,detail,Math.round(detail*2/3),0,Math.PI*2,0,half?Math.PI/2:Math.PI);
   if(half)g.rotateX(-Math.PI/2);
   const p=g.getAttribute('position'),n=g.getAttribute('normal');
   for(let i=0;i<p.count;i++){const direction=new THREE.Vector3().fromBufferAttribute(p,i),point=mochiPoint(direction,coat),normal=mochiNormal(direction);p.setXYZ(i,...point.toArray());n.setXYZ(i,...normal.toArray());}
@@ -70,3 +70,6 @@ export function createShellGeometry(vertices){
 export function visibleHit(intersections){
   return intersections.find(hit=>{if(!hit.object.isMesh)return false;for(let o=hit.object;o;o=o.parent)if(!o.visible)return false;return true;});
 }
+
+// Raycaster descends into invisible objects; exclude those branches before testing triangles.
+export function visibleMeshes(root){const meshes=[];root.traverseVisible(object=>{if(object.isMesh)meshes.push(object);});return meshes;}

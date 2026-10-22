@@ -12,7 +12,7 @@ let width=0,height=0,trails=[],hands=[],view=null,inspect=false;
 let total=0,round=1,playing=false,cameraActive=false,stream=null;
 let requestId=0,detector=null,detectorPromise=null,lastVideo=-1,lastDetect=0;
 let previousHands=[],previousTime=0,lastFrame=performance.now();
-let flash=0,labelTimer=null,pointer=null;
+let flash=0,labelTimer=null,pointer=null,pendingSweep=null;
 const pullPointers=new Map(),pointerPull=new PullGesture(),handPull=new PullGesture();
 let tearState='';
 const handRotation=new PinchRotation(),frameBudget=new FrameBudget(mobileInput);
@@ -30,7 +30,7 @@ function updateScore(){
   $('mobile-progress').textContent=view?.torn?'반갈 완료':`코팅 ${Math.floor((count-remaining)/count*100)}% 제거`;
   $('round').textContent=`ROUND ${String(round).padStart(2,'0')}`;
 }
-function cancelPull(){holdReveal.cancel();handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
+function cancelPull(){pendingSweep=null;holdReveal.cancel();handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
 function updateTearUI(){
   if(!view)return;
   const state=view.torn?'torn':view.tearReady?'ready':'locked';
@@ -76,6 +76,7 @@ function draw(time){
   if(!frameBudget.due(time,!document.hidden&&stageVisible,active)){requestAnimationFrame(draw);return;}
   const dt=Math.min((time-lastFrame)/1000,.04);lastFrame=time;
   if(holdReveal.ready(time))showCutaway(true);
+  if(pendingSweep){smash(pendingSweep.a,pendingSweep.b,22);pendingSweep=null;}
   if(pullPointers.size)applyPull(pointerPull,[...pullPointers.values()],time);
   if(pointer&&!inspect&&!pullPointers.size)view?.press(pointer,.95,time);view?.render(time,dt);collectBroken();updateTearUI();ctx.clearRect(0,0,width,height);
   trails=trails.filter(p=>time-p.time<250);
@@ -89,7 +90,7 @@ function draw(time){
   }
   if(handRotation.active&&handRotation.point){const p=handRotation.point;ctx.strokeStyle='#ceff63';ctx.lineWidth=3;ctx.beginPath();ctx.arc(p.x,p.y,23,0,Math.PI*1.75);ctx.stroke();}
   if(flash>0){ctx.fillStyle=`rgba(255,220,228,${flash})`;ctx.fillRect(0,0,width,height);flash=Math.max(0,flash-dt);}
-  if (cameraActive && video.readyState >= 2 && time-lastDetect > 45 && video.currentTime !== lastVideo) {
+  if (cameraActive && video.readyState >= 2 && time-lastDetect > (mobileInput?80:60) && video.currentTime !== lastVideo) {
     lastDetect=time; lastVideo=video.currentTime;
     try {
       const result = detector.detectForVideo(video, time);
@@ -201,9 +202,10 @@ canvas.addEventListener('pointerdown',event=>{
 canvas.addEventListener('pointermove',event=>{
   const p=point(event);holdReveal.move(p);
   if(pullPointers.has(event.pointerId)){pullPointers.set(event.pointerId,p);applyPull(pointerPull,[...pullPointers.values()],performance.now());return;}
-  if(!pointer)return;if(inspect)view?.rotate(p.x-pointer.x,p.y-pointer.y);else{smash(pointer,p,22);trails.push({a:pointer,b:p,time:performance.now()});}pointer=p;
+  if(!pointer)return;if(inspect)view?.rotate(p.x-pointer.x,p.y-pointer.y);else{if(pendingSweep)pendingSweep.b=p;else pendingSweep={a:pointer,b:p};trails.push({a:pointer,b:p,time:performance.now()});}pointer=p;
 });
-for(const type of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>cancelPull());
+canvas.addEventListener('pointerup',()=>{if(pendingSweep)smash(pendingSweep.a,pendingSweep.b,22);cancelPull();});
+for(const type of ['pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>cancelPull());
 $('tear').addEventListener('click',tearMochi);
 $('reset').addEventListener('click',()=>reset(true));
 function smashAll(){if(!playing)$('demo').click();smash({x:0,y:0},{x:0,y:0},0,true);}
