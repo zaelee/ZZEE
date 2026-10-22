@@ -62,3 +62,5 @@ body.camera-mode{overflow:hidden}
 @media(orientation:landscape) and (max-height:550px){.camera-mode header{top:16px;right:14px}.camera-mode .stage-top{right:130px}.camera-mode .camera-controls{top:56px;right:auto;width:340px}.camera-mode .canvas-hint{bottom:116px}.camera-mode.mobile-settings-open #controls{top:110px}}
 
 #scene{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+
+@media(pointer:coarse){.camera-mode button,.camera-mode .mobile-tools #touch-peel:not(:disabled){backdrop-filter:none;-webkit-backdrop-filter:none}.camera-mode.mobile-settings-open #controls{backdrop-filter:none}}
