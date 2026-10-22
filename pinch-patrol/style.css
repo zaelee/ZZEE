@@ -59,3 +59,5 @@
 .skill-controls button:disabled{cursor:default;opacity:.45}
 .skill-controls button:not(:disabled):hover{background:#2b3c49}
 @media(max-width:520px){.skill-controls button{font-size:10px}.touch-device .arena{min-height:630px}}
+
+.pressure-readout{font-size:10px;color:var(--mint);white-space:nowrap;font-variant-numeric:tabular-nums}.pressure-readout.high{color:var(--orange)}

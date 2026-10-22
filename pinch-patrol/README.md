@@ -9,7 +9,7 @@ Buildless Canvas shooter with camera pinch-to-fire, open-palm Nova, 1–4 local 
 - HTTPS or localhost is required for camera access. Video stays in the browser. MediaPipe Tasks Vision 0.10.32 and its hand model load from CDN on camera start; initial loading requires internet. Front/rear selection mirrors only the front view.
 
 ## Hard-mode balance
-Wave 1 has 32 enemies with at least 3 HP, first fire after 0.9 s, and 190-speed bullets every 0.70 s. Additional shooters, spread shots, armor and group dives ramp with waves. Every third wave is a boss; the first has 560 HP per player. Speed and beam-warning caps preserve dodge opportunities.
+Wave 1 has 32 enemies with at least 3 HP, first fire after 0.9 s, and 190-speed bullets every 0.70 s. Additional shooters, spread shots, armor and group dives ramp with waves. Every third wave is a boss; the first has 560 HP per player. Armor keeps growing beyond the late waves and firing intervals approach a bounded minimum smoothly. After 8 seconds in a wave, attack and dive frequency gradually rises by up to 50% over 40 seconds, and newly emitted hostile bullets gain up to 10% speed. The HUD shows this pressure; it pauses with the simulation and resets on the next wave. Beam warnings are not shortened by pressure.
 
 Nova clears enemy bullets/beams, grants 0.8 s protection and deals 1–3 enemy damage / 15–27 boss damage based on weapon level. It cannot wipe a healthy opening wave. Weapons retain upgrades through damage and wave changes.
 

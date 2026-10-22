@@ -63,6 +63,10 @@ function updateHUD(){
   $('wave').textContent=String(game.wave).padStart(2,'0');
   $('difficulty').textContent=`WAVE · ${game.difficulty.label}`;
   $('difficulty').style.color=game.wave>=9?'#ff987a':game.wave>=6?'#ffd47d':'';
+  const pressure=Math.round((game.pressure-1)*100);
+  $('pressure').textContent=`공격 압박 +${pressure}%`;
+  $('pressure').hidden=state==='menu';
+  $('pressure').classList.toggle('high',pressure>=25);
   $('lives').textContent=`◆ ${game.lives}`;
   $('lives').setAttribute('aria-label',`팀 전체 목숨 ${game.lives}개`);
   for(const p of game.players){
