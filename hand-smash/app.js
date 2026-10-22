@@ -1,7 +1,7 @@
 import { coverPoint, isClosed } from './physics.js';
 import {PullGesture} from './pull-gesture.js';
 import {WaxFeedback} from './feedback.js';
-import {HoldReveal,FistReveal} from './reveal-gesture.js';
+import {HoldTear,FistTear} from './reveal-gesture.js';
 import {FrameBudget} from './frame-budget.js';
 import {PinchRotation} from './rotate-gesture.js';
 const $ = id => document.getElementById(id);
@@ -16,8 +16,8 @@ let flash=0,labelTimer=null,pointer=null,pendingSweep=null;
 const pullPointers=new Map(),pointerPull=new PullGesture(),handPull=new PullGesture();
 let tearState='';
 const handRotation=new PinchRotation(),frameBudget=new FrameBudget(mobileInput);
-let stageVisible=true,tearUIKey='',requestedFacing='user',cameraMirrored=true;
-const holdReveal=new HoldReveal(),fistReveal=new FistReveal();
+let stageVisible=true,tearUIKey='',holdUISeconds=-1,requestedFacing='user',cameraMirrored=true;
+const holdTear=new HoldTear(),fistTear=new FistTear();
 const feedback=new WaxFeedback(()=>{$('sound').textContent='소리 사용 불가';$('sound').setAttribute('aria-pressed','false');$('sound').setAttribute('aria-label','소리 다시 켜기');});
 for(const type of ['pointerdown','pointerup','keydown'])document.addEventListener(type,()=>feedback.unlock(),{capture:true});
 if(!feedback.hapticsOn){$('haptics').disabled=true;$('haptics').textContent='진동 지원 안 됨';$('haptics').setAttribute('aria-pressed','false');}
@@ -30,34 +30,35 @@ function updateScore(){
   $('mobile-progress').textContent=view?.torn?'반갈 완료':`코팅 ${Math.floor((count-remaining)/count*100)}% 제거`;
   $('round').textContent=`ROUND ${String(round).padStart(2,'0')}`;
 }
-function cancelPull(){pendingSweep=null;holdReveal.cancel();handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
+function cancelPull(){pendingSweep=null;holdTear.cancel();handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
 function updateTearUI(){
   if(!view)return;
   const state=view.torn?'torn':view.tearReady?'ready':'locked';
-  const uiKey=[state,inspect,view.preview,view.remaining,view.torn,cameraActive,$('start').disabled].join(':');
+  const uiKey=[state,view.wrapped,view.unwrapping,inspect,view.preview,view.remaining,view.torn,cameraActive,$('start').disabled].join(':');
   if(uiKey===tearUIKey)return;tearUIKey=uiKey;
   $('touch-camera').textContent=cameraActive?'카메라 끄기':'카메라';$('touch-camera').disabled=$('start').disabled;
-  $('tear').disabled=state!=='ready'||inspect;
-  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').textContent=view.torn?'다시 코팅':view.preview?'코팅 다시 보기':view.tearReady?'반갈하기':'코팅 벗기기';$('touch-peel').disabled=!view.torn&&inspect;
+  $('unwrap').hidden=!view.wrapped;$('unwrap').disabled=view.unwrapping;
+  $('unwrap-label').textContent=view.unwrapping?'포장을 펼치는 중…':'눌러서 한지 포장 벗기기';
+  for(const id of ['inspect','touch-rotate','keyboard-smash','export-model'])$(id).disabled=view.wrapped;
+  $('tear').disabled=view.wrapped||state!=='ready'||inspect;
+  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').textContent=view.wrapped?'포장 먼저 벗기기':view.torn?'다시 포장':view.tearReady?'반갈하기':'코팅 벗기기';$('touch-peel').disabled=view.wrapped||(!view.torn&&inspect);
   $('tear').textContent=state==='torn'?'반갈 완료 ✓':state==='ready'?'반으로 가르기 ↔  T':`반갈 잠금 · ${Math.floor((view.count-view.remaining)/view.count*100)}% / 80%`;
   if(state!==tearState){
     tearState=state;
     if(state==='ready'){$('canvas-hint').textContent='반갈 준비! 떡을 잡고 빠르게 당기거나, 두 손을 벌려보세요.';notice('왁스를 80% 이상 벗겼어요. 크게, 빠르게 당기면 반으로 갈라져요.');}
-    if(state==='torn'){$('canvas-hint').textContent='쭈욱, 반갈! 안쪽 과일이 드러났어요.';notice('다시 코팅하기를 누르면 새 떡으로 돌아가요.');}
+    if(state==='torn'){$('canvas-hint').textContent='쭈욱, 반갈! 안쪽 과일이 드러났어요.';notice('다시 포장하기를 누르면 새 떡으로 돌아가요.');}
   }
-  $('cutaway').disabled=view.torn;$('camera-preview').disabled=view.torn;$('camera-flip').disabled=$('start').disabled;
+  $('camera-flip').disabled=$('start').disabled;
 }
-function tearMochi(){
-  if(inspect||!view?.tear())return;
+function tearMochi(held=false){
+  if(inspect||!view?.tear(held))return;
   cancelPull();feedback.play(8,'tear');clearTimeout(labelTimer);$('burst-label').textContent='쭈욱!';$('burst-label').classList.add('show');labelTimer=setTimeout(()=>$('burst-label').classList.remove('show'),700);updateScore();updateTearUI();
 }
 function applyPull(gesture,points,time){const result=gesture.move(points,time,Math.min(width,height));view?.pull(result.amount);if(result.strong)tearMochi();}
 function reset(next=false){
-  cancelPull();feedback.stop();fistReveal.reset();tearState='';
-  $('camera-preview').setAttribute('aria-pressed','false');$('camera-preview').textContent='단면 보기';
+  cancelPull();feedback.stop();fistTear.reset();tearState='';
   if(next)round++;inspect=false;$('inspect').setAttribute('aria-pressed','false');$('inspect').textContent='돌려서 구경하기';view?.reset($('flavor').value);flash=0;clearTimeout(labelTimer);$('burst-label').classList.remove('show');
-  $('cutaway').setAttribute('aria-pressed','false');$('cutaway').textContent='단면 먼저 보기';
-  $('canvas-hint').textContent='쓸어서 와삭. 떡을 꾹 5초 누르면 단면이 보여요.';
+  $('canvas-hint').textContent='포장을 벗긴 뒤, 10초간 잡고 있으면 반으로 갈라져요.';
   updateScore();updateTearUI();
 }
 function smash(a,b,radius=24,all=false){
@@ -75,7 +76,9 @@ function draw(time){
   const active=Boolean(pointer||pullPointers.size||cameraActive||trails.length||view?.isAnimating);
   if(!frameBudget.due(time,!document.hidden&&stageVisible,active)){requestAnimationFrame(draw);return;}
   const dt=Math.min((time-lastFrame)/1000,.04);lastFrame=time;
-  if(holdReveal.ready(time))showCutaway(true);
+  if(holdTear.ready(time))tearMochi(true);
+  const held=Math.max(holdTear.progress(time),fistTear.progress(time)),seconds=held>0?Math.max(1,Math.ceil(10-held*10)):0;
+  if(seconds!==holdUISeconds){holdUISeconds=seconds;$('hold-status').hidden=!seconds;$('hold-status').textContent=seconds?`반갈까지 ${seconds}초 · 계속 잡아주세요`: '';}
   if(pendingSweep){smash(pendingSweep.a,pendingSweep.b,22);pendingSweep=null;}
   if(pullPointers.size)applyPull(pointerPull,[...pullPointers.values()],time);
   if(pointer&&!inspect&&!pullPointers.size)view?.press(pointer,.95,time);view?.render(time,dt);collectBroken();updateTearUI();ctx.clearRect(0,0,width,height);
@@ -103,7 +106,7 @@ function draw(time){
         if(!pointer&&!pullPointers.size)view?.rotate(rotation.dx,rotation.dy);
         if(rotation.active)$('tracking').textContent='집어서 회전 중 ↔';
       }
-      if(fistReveal.update(!rotation.blocked&&hands.length===1&&isClosed(result.landmarks[0])&&!inspect,time))showCutaway(true);
+      if(fistTear.update(!rotation.blocked&&hands.length===1&&isClosed(result.landmarks[0])&&!inspect&&!view?.wrapped&&!view?.torn&&view?.contains(hands[0][9]),time,result.handedness?.[0]?.[0]?.categoryName||'hand'))tearMochi(true);
       const gripping=!rotation.blocked&&hands.length===2&&result.landmarks.every(isClosed)&&!inspect&&view?.tearReady&&!pullPointers.size;
       const grips=hands.map(hand=>hand[9]).sort((a,b)=>a.x-b.x);
       if(gripping){
@@ -132,7 +135,7 @@ function resize(){
   width=box.width;height=box.height;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);view?.resize(width,height);previousHands=[];hands=[];cancelPull();
 }
 function stopCamera(keepPresentation=false) {
-  fistReveal.reset();handRotation.reset();handPull.cancel();if(!pullPointers.size)view?.endPull();
+  fistTear.reset();handRotation.reset();handPull.cancel();if(!pullPointers.size)view?.endPull();
   requestId++; stream?.getTracks().forEach(track=>track.stop()); stream=null; video.srcObject=null;
   cameraActive=false;if(!keepPresentation)setCameraPresentation(false); video.classList.remove('active'); hands=[]; previousHands=[]; lastVideo=-1;
   $('start').disabled=false; $('start').innerHTML='<span>◉ &nbsp; 카메라로 시작</span><span>↗</span>';
@@ -166,8 +169,8 @@ async function startCamera(){
     if(id!==requestId)return;
     playing=true;cameraActive=true;video.classList.add('active');$('mode').textContent='●  LIVE CAMERA';
     $('start').innerHTML='<span>◉ &nbsp; 카메라 끄기</span><span>×</span>';$('start').disabled=false;
-    $('canvas-hint').textContent='집어서 회전 · 한 주먹 또는 5초 누르기로 단면 보기';
-    notice('집어서 회전 · 한 주먹으로 단면 보기 · 두 주먹으로 반갈하기');
+    $('canvas-hint').textContent='집어서 회전 · 떡 위에서 주먹을 10초 유지하면 반갈';
+    notice('떡을 10초간 잡으면 반갈 · 코팅 80% 제거 후 빠르게 당기기도 가능');
     stream.getVideoTracks()[0].addEventListener('ended',()=>{if(cameraActive&&id===requestId){stopCamera();notice('카메라 연결이 종료됐어요.',true);}});
   } catch(error) {
     if(id!==requestId)return;stopCamera();
@@ -178,7 +181,7 @@ async function startCamera(){
 $('start').addEventListener('click',()=>{if(cameraActive||$('start').disabled){stopCamera();return;}startCamera();});
 $('camera-flip').addEventListener('click',()=>{if($('start').disabled)return;requestedFacing=cameraMirrored?'environment':'user';startCamera();});
 $('camera-exit').addEventListener('click',()=>stopCamera());
-$('camera-preview').addEventListener('click',()=>showCutaway(!view?.preview));
+$('unwrap').addEventListener('click',()=>{if(view?.unwrap()){cancelPull();fistTear.reset();feedback.play(3,'tear');$('canvas-hint').textContent='쓸어서 왁스를 벗겨보세요. 10초간 잡으면 반갈!';updateTearUI();}});
 function setCameraPresentation(active){
   document.body.classList.toggle('camera-mode',active);
   document.body.classList.remove('mobile-settings-open');$('touch-settings').setAttribute('aria-expanded','false');
@@ -192,25 +195,26 @@ function point(event){const r=canvas.getBoundingClientRect();return{x:event.clie
 canvas.addEventListener('contextmenu',event=>event.preventDefault());
 for(const type of ['touchstart','touchmove'])canvas.addEventListener(type,event=>event.preventDefault(),{passive:false});
 canvas.addEventListener('pointerdown',event=>{
+  if(!view||view.wrapped)return;
   if(!playing)$('demo').click();const p=point(event);canvas.setPointerCapture(event.pointerId);
-  if(!inspect&&!view?.preview&&!view?.torn&&view?.contains(p)&&!pullPointers.size)holdReveal.begin(p,performance.now());else holdReveal.cancel();
+  if(!inspect&&!view?.preview&&!view?.torn&&view?.contains(p)&&!pullPointers.size)holdTear.begin(p,performance.now());else holdTear.cancel();
   if(!inspect&&view?.tearReady&&view.contains(p)){
     if(pullPointers.size>=2)return;pullPointers.set(event.pointerId,p);pointerPull.begin([...pullPointers.values()],performance.now());pointer=null;handPull.cancel();view.release();return;
   }
   if(pullPointers.size)return;pointer=p;if(!inspect)smash(pointer,pointer,22);
 });
 canvas.addEventListener('pointermove',event=>{
-  const p=point(event);holdReveal.move(p);
+  const p=point(event);holdTear.move(p);
   if(pullPointers.has(event.pointerId)){pullPointers.set(event.pointerId,p);applyPull(pointerPull,[...pullPointers.values()],performance.now());return;}
   if(!pointer)return;if(inspect)view?.rotate(p.x-pointer.x,p.y-pointer.y);else{if(pendingSweep)pendingSweep.b=p;else pendingSweep={a:pointer,b:p};trails.push({a:pointer,b:p,time:performance.now()});}pointer=p;
 });
 canvas.addEventListener('pointerup',()=>{if(pendingSweep)smash(pendingSweep.a,pendingSweep.b,22);cancelPull();});
 for(const type of ['pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>cancelPull());
-$('tear').addEventListener('click',tearMochi);
+$('tear').addEventListener('click',()=>tearMochi());
 $('reset').addEventListener('click',()=>reset(true));
 function smashAll(){if(!playing)$('demo').click();smash({x:0,y:0},{x:0,y:0},0,true);}
 $('keyboard-smash').addEventListener('click',smashAll);
-$('touch-peel').addEventListener('click',()=>{if(view?.torn)reset(true);else if(view?.preview)showCutaway(false);else if(view?.tearReady)tearMochi();else smashAll();});
+$('touch-peel').addEventListener('click',()=>{if(view?.torn)reset(true);else if(view?.tearReady)tearMochi();else smashAll();});
 $('touch-camera').addEventListener('click',()=>{$('start').click();});
 $('touch-settings').addEventListener('click',()=>{const open=document.body.classList.toggle('mobile-settings-open');$('touch-settings').setAttribute('aria-expanded',String(open));});
 $('touch-rotate').addEventListener('click',()=>$('inspect').click());
@@ -223,12 +227,6 @@ window.addEventListener('pagehide',()=>{feedback.stop();stopCamera();detector?.c
 
 $('flavor').addEventListener('change',()=>{reset();$('target-display').textContent=$('flavor').selectedOptions[0].textContent;});
 $('inspect').addEventListener('click',()=>{cancelPull();inspect=!inspect;$('inspect').setAttribute('aria-pressed',String(inspect));$('inspect').textContent=inspect?'부수기로 돌아가기':'돌려서 구경하기';$('canvas-hint').textContent=inspect?'드래그·방향키 또는 카메라에서 엄지·검지를 집고 움직여 돌려보세요.':'코팅을 톡 누르거나 쓸어보세요.';});
-function showCutaway(value){
-  if(!view||view.torn)return;cancelPull();view.setPreview(value);
-  for(const id of ['cutaway','camera-preview']){$(id).setAttribute('aria-pressed',String(value));$(id).textContent=value?'코팅 다시 보기':'단면 보기';}
-  $('canvas-hint').textContent=value?'과일 단면! 코팅 다시 보기로 돌아갈 수 있어요.':'꾹 5초 누르거나 한 주먹을 쥐면 단면이 보여요.';updateTearUI();
-}
-$('cutaway').addEventListener('click',()=>showCutaway(!view?.preview));
 $('export-model').addEventListener('click',async()=>{
   if(!view)return;const button=$('export-model');button.disabled=true;
   try{const data=await view.exportGLB(),url=URL.createObjectURL(new Blob([data],{type:'model/gltf-binary'}));const a=document.createElement('a');a.href=url;a.download=`hanjungsun-${view.flavor}${view.torn?'-torn':view.preview?'-cutaway':''}.glb`;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);notice('3D 모델을 GLB 파일로 저장했어요.');}
@@ -237,4 +235,4 @@ $('export-model').addEventListener('click',async()=>{
 new IntersectionObserver(entries=>{stageVisible=entries[0].isIntersecting&&entries[0].intersectionRatio>=.1;if(!stageVisible)cancelPull();},{threshold:.1}).observe(canvas);
 new ResizeObserver(resize).observe(canvas);resize();requestAnimationFrame(draw);
 try{const {MochiView}=await import('./mochi-view.js');view=new MochiView($('model'),reducedMotion);resize();reset();$('render-state').textContent='3D MODEL / LIVE';}
-catch(error){$('render-state').textContent='3D 로딩 실패';notice('3D 화면을 열지 못했어요. WebGL을 지원하는 Chrome 또는 Safari에서 다시 열어주세요.',true);for(const id of ['start','demo','inspect','cutaway','export-model','keyboard-smash','touch-rotate','touch-peel','touch-camera'])$(id).disabled=true;}
+catch(error){$('render-state').textContent='3D 로딩 실패';notice('3D 화면을 열지 못했어요. WebGL을 지원하는 Chrome 또는 Safari에서 다시 열어주세요.',true);for(const id of ['start','demo','inspect','unwrap','export-model','keyboard-smash','touch-rotate','touch-peel','touch-camera'])$(id).disabled=true;}

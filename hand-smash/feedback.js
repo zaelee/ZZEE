@@ -36,7 +36,7 @@ export class WaxFeedback {
   fail(){this.soundOn=false;this.stopSound();this.onError?.();}
   setSound(enabled){this.soundOn=enabled;if(enabled)this.unlock();else this.stopSound();}
   stopSound(){for(const source of this.sources){source.stop();source.disconnect();}this.sources.clear();}
-  stop(){this.stopSound();if(this.hapticsOn)try{navigator.vibrate(0);}catch{}}
+  stop(){this.stopSound();if(this.hapticsOn&&this.lastHaptic!==-Infinity)try{navigator.vibrate(0);}catch{}}
   play(count,kind='break'){
     if(count<=0||document.hidden)return;
     const now=performance.now();
