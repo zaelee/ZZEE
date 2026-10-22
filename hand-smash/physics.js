@@ -1,6 +1,6 @@
-export function coverPoint(point, videoWidth, videoHeight, width, height) {
+export function coverPoint(point, videoWidth, videoHeight, width, height, mirrored=true) {
   const scale = Math.max(width / videoWidth, height / videoHeight);
-  return { x: (1 - point.x) * videoWidth * scale - (videoWidth * scale - width) / 2,
+  return { x: (mirrored ? 1 - point.x : point.x) * videoWidth * scale - (videoWidth * scale - width) / 2,
     y: point.y * videoHeight * scale - (videoHeight * scale - height) / 2 };
 }
 export function segmentDistance(point, a, b) {

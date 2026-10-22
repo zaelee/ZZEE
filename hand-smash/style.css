@@ -36,3 +36,29 @@ select:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
 @media(pointer:coarse) and (max-width:1100px) and (orientation:landscape) and (max-height:550px){
   header{height:48px}.intro{display:none}main{padding-top:8px}.playground{height:calc(100svh - 126px);min-height:230px}.mobile-tools{padding-top:2px;padding-bottom:2px}.mobile-tools button{min-height:44px}.target-caption{left:14px;right:auto;top:48px}.target-caption strong{font-size:12px}.canvas-hint{bottom:12px;left:25%;width:50%;font-size:9px}.stage-bottom>span{max-width:24%}.stage-top{top:10px}
 }
+
+/* Camera mode fills the viewport even where native fullscreen is unavailable. */
+.camera-controls{display:none}
+body.camera-mode{overflow:hidden}
+.camera-mode .playground{position:fixed;inset:0;width:100%;height:100dvh;min-height:0;border:0;border-radius:0;z-index:20;background:#101211}
+.camera-mode .playground:before,.camera-mode .playground:after,.camera-mode .target-caption{display:none}
+.camera-mode video.active{opacity:1}
+.camera-mode header{position:fixed;top:calc(114px + env(safe-area-inset-top));right:14px;height:auto;width:auto;padding:0;border:0;z-index:24}
+.camera-mode header>a,.camera-mode header>.edition{display:none}
+.camera-mode .stage-top{top:calc(16px + env(safe-area-inset-top));left:14px;right:14px}
+.camera-mode .camera-controls{position:absolute;display:flex;gap:8px;top:calc(58px + env(safe-area-inset-top));left:14px;right:14px}
+.camera-mode .camera-controls button{flex:1;min-height:44px;border-radius:12px;font-size:12px;padding:8px}
+.camera-mode .mobile-tools{position:fixed;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:env(safe-area-inset-bottom);z-index:24;background:transparent;gap:6px;padding:6px 0}
+.camera-mode .mobile-tools button{min-width:0;min-height:48px;font-size:11px;border-radius:12px;padding:6px}
+.camera-mode button,.camera-mode .mobile-tools #touch-peel:not(:disabled){background:#14201880;color:#fff;border:1px solid #ffffff55;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-shadow:0 1px 4px #000}
+.camera-mode button[aria-pressed=true],.camera-mode button[aria-expanded=true]{border-color:#ceff63;color:#ceff63}
+.camera-mode .stage-bottom{left:14px;right:14px;bottom:calc(76px + env(safe-area-inset-bottom))}
+.camera-mode .stage-bottom>span{max-width:55%;color:white;text-shadow:0 1px 5px black}
+.camera-mode .canvas-hint{left:0;width:100%;padding:0 16px;bottom:calc(133px + env(safe-area-inset-bottom));color:white;text-shadow:0 1px 5px black;font-size:11px}
+.camera-mode #controls{display:none}
+.camera-mode.mobile-settings-open #controls{display:flex;position:fixed;top:calc(160px + env(safe-area-inset-top));bottom:calc(68px + env(safe-area-inset-bottom));left:12px;right:12px;overflow:auto;z-index:23;max-width:420px;margin-left:auto;border-radius:14px;background:#142018aa;backdrop-filter:blur(12px)}
+.camera-mode #controls section{background:#14201888;flex-shrink:0}
+.camera-mode .mobile-notice:not([hidden]){display:block;position:fixed;bottom:145px;left:14px;right:14px;z-index:25;background:#222c}
+@media(orientation:landscape) and (max-height:550px){.camera-mode header{top:16px;right:14px}.camera-mode .stage-top{right:130px}.camera-mode .camera-controls{top:56px;right:auto;width:340px}.camera-mode .canvas-hint{bottom:116px}.camera-mode.mobile-settings-open #controls{top:110px}}
+
+#scene{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}

@@ -78,7 +78,7 @@ export class MochiView {
   }
   resize(width,height){
     width=Math.max(1,width);height=Math.max(1,height);this.width=width;this.height=height;
-    const aspect=width/height,vertical=Math.max(4.05,3.35/aspect);
+    const aspect=width/height,vertical=Math.max(4.05,3.35/aspect)*(this.cameraMode?1.35:1);
     this.camera.left=-vertical*aspect/2;this.camera.right=vertical*aspect/2;
     this.camera.top=vertical/2;this.camera.bottom=-vertical/2;this.camera.updateProjectionMatrix();this.renderer.setSize(width,height,false);
   }
