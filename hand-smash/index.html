@@ -9,18 +9,19 @@
 <section class="playground" aria-label="인터랙티브 부수기 화면">
 <video id="camera" playsinline muted aria-hidden="true"></video><canvas id="model" aria-hidden="true"></canvas><canvas id="scene" aria-label="3D 과일찹쌀떡. 클릭하거나 손을 움직이면 바깥 왁스 코팅이 부서집니다."></canvas>
 <div class="stage-top"><span class="mode-badge" id="mode">● &nbsp; PREVIEW MODE</span><span id="mobile-progress" class="mobile-progress">코팅 0% 제거</span><span class="stage-tag" id="render-state">3D 모델 준비 중…</span></div>
-<div class="camera-controls"><button id="camera-flip">후면으로 전환</button><button id="camera-preview" aria-pressed="false">단면 보기</button><button id="camera-exit">카메라 닫기</button></div><div class="target-caption"><span>FRUIT MOCHI / WAX SHELL</span><strong id="target-display">딸기 찹쌀떡</strong></div>
+<div class="camera-controls"><button id="camera-flip">후면으로 전환</button><button id="camera-exit">카메라 닫기</button></div><div class="target-caption"><span>FRUIT MOCHI / WAX SHELL</span><strong id="target-display">딸기 찹쌀떡</strong></div>
 <div class="canvas-hint" id="canvas-hint">손을 움직이면, 상상이 부서져요.</div>
-<div class="stage-bottom"><span><i id="status-dot"></i><span id="tracking">카메라 연결 대기</span></span><button id="reset" aria-label="왁스 코팅 다시 입히기">↻ &nbsp; 다시 코팅하기</button></div>
+<div class="stage-bottom"><span><i id="status-dot"></i><span id="tracking">카메라 연결 대기</span></span><button id="reset" aria-label="새 떡을 한지로 다시 포장하기">↻ &nbsp; 다시 포장하기</button></div>
+<button id="unwrap" class="unwrap" disabled aria-label="한지 포장을 벗기고 시작하기"><span id="unwrap-label">포장을 준비하는 중…</span><small>HANJI WRAPPING · TAP TO OPEN</small></button><div id="hold-status" class="hold-status" role="status" hidden></div>
 <div class="burst-label" id="burst-label" aria-live="polite"></div>
 </section>
 <div class="mobile-tools" aria-label="터치 조작"><button id="touch-rotate" aria-pressed="false">↔ 돌리기</button><button id="touch-peel">코팅 벗기기</button><button id="touch-camera">카메라</button><button id="touch-settings" aria-expanded="false" aria-controls="controls">설정</button></div><p id="mobile-notice" class="mobile-notice notice" role="status" hidden></p>
 <aside id="controls">
-<section class="control-card"><div class="card-heading"><span class="step-number">01</span><h2>손을 연결해요</h2><span class="tiny-label">READY?</span></div><p>화면을 손가락으로 누르고 쓸어보세요.<br>카메라를 켜면 손 제스처로도 즐길 수 있어요.</p><button class="primary" id="start"><span>◉ &nbsp; 카메라로 시작</span><span>↗</span></button><button class="secondary" id="demo">터치로 바로 해보기 <span>→</span></button><button class="secondary" id="haptics" aria-pressed="true">진동 켜짐</button><p class="micro">진동은 지원 기기에서만 작동해요. 단면은 한 주먹 또는 5초 누르기.</p><p id="notice" class="notice" role="status">영상은 기기 안에서만 처리돼요.</p></section>
+<section class="control-card"><div class="card-heading"><span class="step-number">01</span><h2>손을 연결해요</h2><span class="tiny-label">READY?</span></div><p>화면을 손가락으로 누르고 쓸어보세요.<br>카메라를 켜면 손 제스처로도 즐길 수 있어요.</p><button class="primary" id="start"><span>◉ &nbsp; 카메라로 시작</span><span>↗</span></button><button class="secondary" id="demo">터치로 바로 해보기 <span>→</span></button><button class="secondary" id="haptics" aria-pressed="true">진동 켜짐</button><p class="micro">진동은 지원 기기에서만 작동해요. 떡을 10초간 잡고 있으면 실제로 반으로 갈라져요.</p><p id="notice" class="notice" role="status">영상은 기기 안에서만 처리돼요.</p></section>
 <section class="target-card"><div class="card-heading"><span class="step-number">02</span><h2>과일찹쌀떡 고르기</h2><span class="mini-cube">◒</span></div>
 <label class="field-label" for="flavor">한정선에서 영감을 받은 3D 디저트</label>
 <select id="flavor"><option value="strawberry">딸기 찹쌀떡</option><option value="mandarin">통귤 찹쌀떡</option><option value="kiwi">골드키위 찹쌀떡</option></select>
-<div class="model-actions"><button id="cutaway" aria-pressed="false">단면 먼저 보기</button><button id="inspect" aria-pressed="false">돌려서 구경하기</button></div>
+<div class="model-actions"><button id="inspect" aria-pressed="false">돌려서 구경하기</button></div>
 <button id="tear" class="tear-action" disabled>반갈 잠금 · 왁스 80% 벗기기</button>
 <button id="export-model" class="upload">3D 모델 저장 <span>GLB ↓</span></button><p class="micro">카메라 회전: 엄지·검지를 집고 좌우·위아래로 이동</p></section>
 <section class="score-card"><div><span class="field-label">바삭하게 부순 왁스</span><div class="score"><span id="score">000</span><small>PIECES</small></div></div><div class="score-icon">✳</div><div class="progress"><span id="progress"></span></div><div class="score-bottom"><span id="remaining">왁스 64 / 64조각</span><span id="round">ROUND 01</span></div></section>

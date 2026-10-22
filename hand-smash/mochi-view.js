@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createPaperWrap,openPaperWrap} from './paper-wrap.js';
 import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
@@ -16,19 +17,15 @@ export class MochiView {
     this.renderer.outputColorSpace=THREE.SRGBColorSpace;
     this.renderer.toneMapping=THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure=.92;
-    this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=mobile?THREE.PCFSoftShadowMap:THREE.VSMShadowMap;
+    this.renderer.shadowMap.enabled=false;this.renderer.shadowMap.type=mobile?THREE.PCFSoftShadowMap:THREE.VSMShadowMap;
     this.scene=new THREE.Scene();
     this.camera=new THREE.OrthographicCamera(-3,3,2.4,-2.4,.1,50);
     this.camera.position.set(0,2.9,6);this.camera.lookAt(0,-.32,0);
     const environment=new RoomEnvironment(),pmrem=new THREE.PMREMGenerator(this.renderer);
     this.environment=pmrem.fromScene(environment,.04);this.scene.environment=this.environment.texture;this.scene.environmentIntensity=.65;environment.dispose();pmrem.dispose();
     this.scene.add(new THREE.HemisphereLight(0xffffff,0x746357,.65));
-    const key=new THREE.DirectionalLight(0xfff0dc,2);key.position.set(-3,5,4);key.castShadow=true;key.shadow.mapSize.set(mobile?512:2048,mobile?512:2048);key.shadow.camera.left=-2.5;key.shadow.camera.right=2.5;key.shadow.camera.top=2.5;key.shadow.camera.bottom=-2.5;key.shadow.normalBias=.025;key.shadow.bias=-.0004;key.shadow.radius=5;key.shadow.blurSamples=mobile?4:8;this.scene.add(key);
+    const key=new THREE.DirectionalLight(0xfff0dc,2);key.position.set(-3,5,4);key.castShadow=false;key.shadow.mapSize.set(mobile?512:2048,mobile?512:2048);key.shadow.camera.left=-2.5;key.shadow.camera.right=2.5;key.shadow.camera.top=2.5;key.shadow.camera.bottom=-2.5;key.shadow.normalBias=.025;key.shadow.bias=-.0004;key.shadow.radius=5;key.shadow.blurSamples=mobile?4:8;this.scene.add(key);
     const fill=new THREE.DirectionalLight(0xffd4e5,.7);fill.position.set(4,2,1);this.scene.add(fill);
-    const plate=new THREE.Mesh(new THREE.CylinderGeometry(1.43,1.32,.11,96),new THREE.MeshStandardMaterial({color:0xf0e6d5,roughness:.35,metalness:.04}));
-    plate.receiveShadow=true;plate.position.y=-1.11;this.scene.add(plate);
-    const rim=new THREE.Mesh(new THREE.TorusGeometry(1.38,.024,12,96),new THREE.MeshStandardMaterial({color:0xc4a77d,metalness:.45,roughness:.3}));
-    rim.rotation.x=Math.PI/2;rim.position.y=-1.045;this.scene.add(rim);
     const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=128;
     const context=shadowCanvas.getContext('2d'),gradient=context.createRadialGradient(64,64,5,64,64,64);
     gradient.addColorStop(0,'#3d283f85');gradient.addColorStop(1,'#3d283f00');context.fillStyle=gradient;context.fillRect(0,0,128,128);
@@ -42,28 +39,32 @@ export class MochiView {
   async loadStudio(){
     try{const hdr=await new HDRLoader().loadAsync('./assets/studio_small_05_1k.hdr');const pmrem=new THREE.PMREMGenerator(this.renderer);const next=pmrem.fromEquirectangular(hdr);this.scene.environment=next.texture;this.scene.environmentIntensity=.85;this.scene.environmentRotation.y=.7;this.environment.dispose();this.environment=next;hdr.dispose();pmrem.dispose();return true;}catch{return false;}
   }
-  get isAnimating(){return performance.now()<this.holdUntil||Math.abs(this.compression)>.001||Math.abs(this.compressionVelocity)>.01||Math.abs(this.dent)>.001||this.stretch>.001||this.pullTarget>0||(this.torn&&this.tearTime<.65)||this.model.pieces.some(p=>p.userData.intact&&p.userData.detachAt!==null)||this.fragments.some(p=>p.visible);}
+  get isAnimating(){return this.unwrapping||performance.now()<this.holdUntil||Math.abs(this.compression)>.001||Math.abs(this.compressionVelocity)>.01||Math.abs(this.dent)>.001||this.stretch>.001||this.pullTarget>0||(this.torn&&this.tearTime<.65)||this.model.pieces.some(p=>p.userData.intact&&p.userData.detachAt!==null)||this.fragments.some(p=>p.visible);}
   get remaining(){return this.model.pieces.filter(p=>p.userData.intact).length;}
   get count(){return this.model.pieces.length;}
   get tearReady(){return !this.torn&&!this.preview&&canTear(this.remaining,this.count);}
   contains(point){
+    if(this.wrapped)return false;
     this.model.root.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     this.raycaster.setFromCamera(new THREE.Vector2(point.x/this.width*2-1,1-point.y/this.height*2),this.camera);
     return Boolean(visibleHit(this.raycaster.intersectObjects(visibleMeshes(this.model.core),false)));
   }
   pull(amount){if(this.tearReady){this.release();this.pullTarget=amount;}}
   endPull(){this.pullTarget=0;}
-  tear(){
-    if(!this.tearReady)return false;
+  tear(held=false){
+    if(this.wrapped||this.torn||this.preview||(!held&&!this.tearReady))return false;
     this.torn=true;this.release();this.pullTarget=0;this.stretch=0;this.tearTime=0;
     this.model.skin.visible=false;this.model.cutaway.visible=false;this.model.coat.visible=false;
     for(const piece of this.model.pieces)if(piece.userData.intact){piece.visible=true;this.detach(piece);}
     this.halves=createTornHalves(this.model);this.rotation=-.12;this.tilt=.03;
     return true;
   }
+  unwrap(){if(!this.wrapped||this.unwrapping)return false;this.unwrapping=true;this.unwrapElapsed=0;return true;}
   reset(flavor=this.flavor){
+    if(this.paper){this.scene.remove(this.paper);disposeModel(this.paper);}
+    this.paper=createPaperWrap(flavor);this.scene.add(this.paper);this.wrapped=true;this.unwrapping=false;this.unwrapElapsed=0;
     if(this.model){for(const p of this.fragments){this.scene.remove(p);disposeModel(p);}this.scene.remove(this.model.root);disposeModel(this.model.root);}
-    this.torn=false;this.halves=null;this.pullTarget=0;this.stretch=0;this.tearTime=0;this.fragments=[];this.pendingBroken=0;this.pressedPiece=null;this.fracturing=false;this.flavor=flavor;this.model=createMochi(flavor,this.mobile);if(this.mobile)this.model.coat.material.side=THREE.FrontSide;this.scene.add(this.model.root);this.preview=false;this.rotation=-.22;this.tilt=.08;
+    this.torn=false;this.halves=null;this.pullTarget=0;this.stretch=0;this.tearTime=0;this.fragments=[];this.pendingBroken=0;this.pressedPiece=null;this.fracturing=false;this.flavor=flavor;this.model=createMochi(flavor,this.mobile);if(this.mobile)this.model.coat.material.side=THREE.FrontSide;this.scene.add(this.model.root);this.model.root.visible=false;this.preview=false;this.rotation=-.22;this.tilt=.08;
     this.model.root.rotation.set(this.tilt,this.rotation,0);this.model.root.position.y=-.08;
     this.compression=0;this.compressionVelocity=0;this.dent=0;this.dentVelocity=0;this.holdUntil=0;this.pressure=0;this.softUniforms.softDent.value=0;
     const originals=new Set(),materials=new Set(),baked=[];
@@ -86,7 +87,7 @@ export class MochiView {
   rotate(dx,dy){this.rotation+=dx*.008;this.tilt=THREE.MathUtils.clamp(this.tilt+dy*.005,-.7,.7);}
   setPreview(value){if(this.torn)return;this.endPull();this.preview=value;this.model.shell.visible=!value;this.model.coat.visible=!value&&!this.fracturing;this.model.skin.visible=!value;this.model.cutaway.visible=value;this.release();}
   press(point,strength=.85,now=performance.now()){
-    if(this.torn||this.pullTarget>0)return false;
+    if(this.wrapped||this.torn||this.pullTarget>0)return false;
     this.model.root.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     this.raycaster.setFromCamera(new THREE.Vector2(point.x/this.width*2-1,1-point.y/this.height*2),this.camera);
     const hit=visibleHit(this.raycaster.intersectObjects(visibleMeshes(this.preview?this.model.core:this.model.root),false));
@@ -109,7 +110,7 @@ export class MochiView {
     return true;
   }
   hit(a,b,radius=24,all=false){
-    if(this.preview||this.torn)return 0;
+    if(this.wrapped||this.preview||this.torn)return 0;
     const now=performance.now();this.scene.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
     const intact=this.model.pieces.filter(p=>p.userData.intact),targets=new Set();
     if(!intact.length)return 0;
@@ -144,6 +145,7 @@ export class MochiView {
     this.fragments.push(piece);this.pendingBroken++;
   }
   render(time,dt){
+    if(this.unwrapping){this.unwrapElapsed+=dt;const progress=this.reducedMotion?1:Math.min(1,this.unwrapElapsed/1.1);this.model.root.visible=true;openPaperWrap(this.paper,progress);if(progress===1){this.paper.visible=false;this.wrapped=false;this.unwrapping=false;}}
     const holding=time<this.holdUntil;
     if(holding&&this.pressedPiece&&!this.preview)this.damage(this.pressedPiece,dt*.95*this.pressure,time);
     for(const piece of this.model.pieces)if(piece.userData.intact&&piece.userData.detachAt!==null&&time>=piece.userData.detachAt)this.detach(piece);
@@ -163,7 +165,7 @@ export class MochiView {
       for(const half of this.halves.children){const side=half.userData.side;half.position.x=side*(.08+ease*.57);half.rotation.y=-side*(Math.PI/2-ease*.62);half.rotation.z=side*Math.sin(t*Math.PI)*.06;}
     }
     this.model.root.rotation.set(this.tilt,this.rotation,0);
-    // Anchor the lower edge to the plate instead of letting the compressed mochi float.
+    // Keep the lower edge stable while the dough compresses.
     const radius=this.preview||!this.remaining ? .643 : .674;
     this.model.root.position.y=-1.04+radius*scale.y/Math.sqrt(elongation);
     for(const p of this.fragments){
@@ -172,8 +174,6 @@ export class MochiView {
       if(!p.visible)continue;
       state.velocity.y-=4.6*dt;p.position.addScaledVector(state.velocity,dt);
       p.rotation.x+=state.spin.x*dt;p.rotation.y+=state.spin.y*dt;p.rotation.z+=state.spin.z*dt;
-      p.updateMatrixWorld(true);const bounds=p.geometry.boundingBox.clone().applyMatrix4(p.matrixWorld);
-      if(bounds.min.y < -1.04 && Math.hypot(p.position.x,p.position.z)<1.4){p.position.y+=-1.04-bounds.min.y;state.velocity.y=Math.abs(state.velocity.y)*.1;state.velocity.x*=.75;state.velocity.z*=.75;state.spin.multiplyScalar(.5);}
       const fadeAt=this.mobile?1.8:6,hideAt=this.mobile?2.5:7;
       if(state.life>fadeAt)p.scale.setScalar(Math.max(0,(hideAt-state.life)/(hideAt-fadeAt)));
       if(state.life>hideAt)p.visible=false;
