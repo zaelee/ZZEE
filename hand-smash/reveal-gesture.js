@@ -1,4 +1,4 @@
-export const TEAR_HOLD_MS=10_000;
+export const TEAR_HOLD_MS=5_000;
 export class HoldTear {
   constructor(){this.cancel();}
   cancel(){this.start=null;this.point=null;}
