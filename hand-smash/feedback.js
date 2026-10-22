@@ -1,6 +1,6 @@
 // Short dry snaps plus scattered, dull flakes; no downloaded audio assets.
 export function waxSamples(rate, count=1, kind='break', random=Math.random) {
-  const tear=kind==='tear', crack=kind==='crack';
+  const tear=kind==='tear'||kind==='pop', crack=kind==='crack';
   const duration=tear?.42:crack?.13:.3;
   const samples=new Float32Array(Math.ceil(rate*duration));
   const grains=crack?2:tear?14:5+Math.min(8,count);
@@ -26,7 +26,7 @@ export function waxSamples(rate, count=1, kind='break', random=Math.random) {
   const gain=Math.min(1,.8/peak);for(let i=0;i<samples.length;i++)samples[i]*=gain;
   return samples;
 }
-export function vibrationPattern(count){return count>3?[18,12,10]:[8+Math.min(3,count)*4];}
+export function vibrationPattern(count,kind='break'){if(kind==='pop')return[28,18,40];return count>3?[18,12,10]:[8+Math.min(3,count)*4];}
 export class WaxFeedback {
   constructor(onError){this.soundOn=true;this.hapticsOn=typeof navigator.vibrate==='function';this.onError=onError;this.sources=new Set();this.buffers=new Map();this.lastSound=-Infinity;this.lastHaptic=-Infinity;}
   unlock(){
@@ -40,7 +40,8 @@ export class WaxFeedback {
   play(count,kind='break'){
     if(count<=0||document.hidden)return;
     const now=performance.now();
-    if(kind==='break'&&this.hapticsOn&&now-this.lastHaptic>=80){this.lastHaptic=now;try{navigator.vibrate(vibrationPattern(count));}catch{}}
+    // Let the pop pulse finish before detached wax can replace it.
+    if((kind==='break'||kind==='pop')&&this.hapticsOn&&(kind==='pop'||now-this.lastHaptic>=80)){this.lastHaptic=now+(kind==='pop'?40:0);try{navigator.vibrate(vibrationPattern(count,kind));}catch{}}
     if(!this.soundOn||this.audio?.state!=='running'||now-this.lastSound<(kind==='crack'?65:40))return;
     this.lastSound=now;
     try{

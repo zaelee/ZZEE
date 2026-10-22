@@ -1,7 +1,7 @@
 import { coverPoint, isClosed } from './physics.js';
 import {PullGesture} from './pull-gesture.js';
 import {WaxFeedback} from './feedback.js';
-import {HoldTear,FistTear} from './reveal-gesture.js';
+import {HoldTear,FistTear,TEAR_HOLD_MS} from './reveal-gesture.js';
 import {FrameBudget} from './frame-budget.js';
 import {PinchRotation} from './rotate-gesture.js';
 const $ = id => document.getElementById(id);
@@ -20,14 +20,14 @@ let stageVisible=true,tearUIKey='',holdUISeconds=-1,requestedFacing='user',camer
 const holdTear=new HoldTear(),fistTear=new FistTear();
 const feedback=new WaxFeedback(()=>{$('sound').textContent='소리 사용 불가';$('sound').setAttribute('aria-pressed','false');$('sound').setAttribute('aria-label','소리 다시 켜기');});
 for(const type of ['pointerdown','pointerup','keydown'])document.addEventListener(type,()=>feedback.unlock(),{capture:true});
-if(!feedback.hapticsOn){$('haptics').disabled=true;$('haptics').textContent='진동 지원 안 됨';$('haptics').setAttribute('aria-pressed','false');}
+if(!feedback.hapticsOn){$('haptics').disabled=true;$('haptics').textContent='이 브라우저는 진동이 안 돼요';$('haptics').setAttribute('aria-pressed','false');}
 function notice(message,error=false){$('notice').textContent=message;$('mobile-notice').textContent=message;$('mobile-notice').classList.toggle('error',error);$('mobile-notice').hidden=!error;$('notice').classList.toggle('error',error);}
 function updateScore(){
   $('score').textContent=String(total).padStart(3,'0');
   const remaining=view?.remaining??64,count=view?.count??64;
-  $('remaining').textContent=view?.torn?'반갈 완료 · 과일 단면 공개':remaining?`왁스 ${remaining} / ${count}조각`:'속의 과일찹쌀떡은 그대로!';
+  $('remaining').textContent=view?.torn?'팡! 과일이 빼꼼 ✨':remaining?`왁스 ${remaining} / ${count}조각`:'속의 과일찹쌀떡은 그대로!';
   $('progress').style.width=`${(count-remaining)/count*100}%`;
-  $('mobile-progress').textContent=view?.torn?'반갈 완료':`코팅 ${Math.floor((count-remaining)/count*100)}% 제거`;
+  $('mobile-progress').textContent=view?.torn?'팡! 열렸어요':`코팅 ${Math.floor((count-remaining)/count*100)}% 제거`;
   $('round').textContent=`ROUND ${String(round).padStart(2,'0')}`;
 }
 function cancelPull(){pendingSweep=null;holdTear.cancel();handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
@@ -42,24 +42,24 @@ function updateTearUI(){
   $('unwrap-label').textContent=view.unwrapping?'포장을 펼치는 중…':'눌러서 한지 포장 벗기기';
   for(const id of ['inspect','touch-rotate','keyboard-smash','export-model'])$(id).disabled=view.wrapped;
   $('tear').disabled=view.wrapped||state!=='ready'||inspect;
-  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').textContent=view.wrapped?'포장 먼저 벗기기':view.torn?'다시 포장':view.tearReady?'반갈하기':'코팅 벗기기';$('touch-peel').disabled=view.wrapped||(!view.torn&&inspect);
-  $('tear').textContent=state==='torn'?'반갈 완료 ✓':state==='ready'?'반으로 가르기 ↔  T':`반갈 잠금 · ${Math.floor((view.count-view.remaining)/view.count*100)}% / 80%`;
+  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').textContent=view.wrapped?'포장 먼저 벗기기':view.torn?'다시 포장':view.tearReady?'팡! 터뜨리기':'코팅 벗기기';$('touch-peel').disabled=view.wrapped||(!view.torn&&inspect);
+  $('tear').textContent=state==='torn'?'팡! 열렸어요 ✓':state==='ready'?'팡! 터뜨리기 ✨  T':`왁스 벗기고 팡! · ${Math.floor((view.count-view.remaining)/view.count*100)}% / 80%`;
   if(state!==tearState){
     tearState=state;
-    if(state==='ready'){$('canvas-hint').textContent='반갈 준비! 떡을 잡고 빠르게 당기거나, 두 손을 벌려보세요.';notice('왁스를 80% 이상 벗겼어요. 크게, 빠르게 당기면 반으로 갈라져요.');}
-    if(state==='torn'){$('canvas-hint').textContent='쭈욱, 반갈! 안쪽 과일이 드러났어요.';notice('다시 포장하기를 누르면 새 떡으로 돌아가요.');}
+    if(state==='ready'){$('canvas-hint').textContent='팡! 준비 완료 ✨ 양옆으로 쭈욱 당겨봐요.';notice('왁스가 쏙 벗겨졌어요! 양옆으로 쭈욱 당기면 과일이 빼꼼!');}
+    if(state==='torn'){$('canvas-hint').textContent='팡! 쫀득한 떡 속에 과일이 빼꼼 ✨';notice('한 번 더? 다시 포장해서 또 놀아요!');}
   }
   $('camera-flip').disabled=$('start').disabled;
 }
 function tearMochi(held=false){
   if(inspect||!view?.tear(held))return;
-  cancelPull();feedback.play(8,'tear');clearTimeout(labelTimer);$('burst-label').textContent='쭈욱!';$('burst-label').classList.add('show');labelTimer=setTimeout(()=>$('burst-label').classList.remove('show'),700);updateScore();updateTearUI();
+  cancelPull();feedback.play(8,'pop');clearTimeout(labelTimer);$('burst-label').textContent='팡! ✨';$('burst-label').classList.add('show');labelTimer=setTimeout(()=>$('burst-label').classList.remove('show'),700);updateScore();updateTearUI();
 }
 function applyPull(gesture,points,time){const result=gesture.move(points,time,Math.min(width,height));view?.pull(result.amount);if(result.strong)tearMochi();}
 function reset(next=false){
   cancelPull();feedback.stop();fistTear.reset();tearState='';
   if(next)round++;inspect=false;$('inspect').setAttribute('aria-pressed','false');$('inspect').textContent='돌려서 구경하기';view?.reset($('flavor').value);flash=0;clearTimeout(labelTimer);$('burst-label').classList.remove('show');
-  $('canvas-hint').textContent='포장을 벗긴 뒤, 10초간 잡고 있으면 반으로 갈라져요.';
+  $('canvas-hint').textContent='포장을 쏙! 벗기고, 5초 잡으면 터져요!';
   updateScore();updateTearUI();
 }
 function smash(a,b,radius=24,all=false){
@@ -70,7 +70,7 @@ function smash(a,b,radius=24,all=false){
 function collectBroken(){
   const broken=view?.drainBroken()||0;if(!broken)return;
   total+=broken;updateScore();feedback.play(broken);
-  if(!view.remaining&&!view.torn){$('burst-label').textContent='와삭!';$('burst-label').classList.add('show');$('canvas-hint').textContent='반갈 준비! 떡을 잡고 빠르게 당겨보세요.';labelTimer=setTimeout(()=>$('burst-label').classList.remove('show'),900);}
+  if(!view.remaining&&!view.torn){$('burst-label').textContent='와삭!';$('burst-label').classList.add('show');$('canvas-hint').textContent='말랑말랑 준비 끝! 양옆으로 쭈욱, 팡!';labelTimer=setTimeout(()=>$('burst-label').classList.remove('show'),900);}
 
 }
 function draw(time){
@@ -79,8 +79,8 @@ function draw(time){
   const dt=Math.min((time-lastFrame)/1000,.04);lastFrame=time;
   if(view){const angle=Math.round(Math.atan2(Math.sin(view.rotation),Math.cos(view.rotation))*180/Math.PI);if(Number($('rotation-slider').value)!==angle)$('rotation-slider').value=angle;}
   if(holdTear.ready(time))tearMochi(true);
-  const held=Math.max(holdTear.progress(time),fistTear.progress(time)),seconds=held>0?Math.max(1,Math.ceil(10-held*10)):0;
-  if(seconds!==holdUISeconds){holdUISeconds=seconds;$('hold-status').hidden=!seconds;$('hold-status').textContent=seconds?`반갈까지 ${seconds}초 · 계속 잡아주세요`: '';}
+  const held=Math.max(holdTear.progress(time),fistTear.progress(time)),seconds=held>0?Math.max(1,Math.ceil((1-held)*TEAR_HOLD_MS/1000)):0;
+  if(seconds!==holdUISeconds){holdUISeconds=seconds;$('hold-status').hidden=!seconds;$('hold-status').textContent=seconds?`팡!까지 ${seconds}초 · 조금만 더 꼬옥 ♡`: '';}
   if(pendingSweep){smash(pendingSweep.a,pendingSweep.b,22);pendingSweep=null;}
   if(pullPointers.size)applyPull(pointerPull,[...pullPointers.values()],time);
   if(pointer&&!inspect&&!pullPointers.size)view?.press(pointer,.95,time);view?.render(time,dt);collectBroken();updateTearUI();ctx.clearRect(0,0,width,height);
@@ -171,8 +171,8 @@ async function startCamera(){
     if(id!==requestId)return;
     playing=true;cameraActive=true;video.classList.add('active');$('mode').textContent='●  LIVE CAMERA';
     $('start').innerHTML='<span>◉ &nbsp; 카메라 끄기</span><span>×</span>';$('start').disabled=false;
-    $('canvas-hint').textContent='집어서 회전 · 떡 위에서 주먹을 10초 유지하면 반갈';
-    notice('떡을 10초간 잡으면 반갈 · 코팅 80% 제거 후 빠르게 당기기도 가능');
+    $('canvas-hint').textContent='집어서 빙글빙글 · 떡 위에서 주먹을 5초 쥐면 팡!';
+    notice('5초 잡으면 터져요! 왁스를 벗기고 양옆으로 당겨도 팡!');
     stream.getVideoTracks()[0].addEventListener('ended',()=>{if(cameraActive&&id===requestId){stopCamera();notice('카메라 연결이 종료됐어요.',true);}});
   } catch(error) {
     if(id!==requestId)return;stopCamera();
@@ -183,7 +183,7 @@ async function startCamera(){
 $('start').addEventListener('click',()=>{if(cameraActive||$('start').disabled){stopCamera();return;}startCamera();});
 $('camera-flip').addEventListener('click',()=>{if($('start').disabled)return;requestedFacing=cameraMirrored?'environment':'user';startCamera();});
 $('camera-exit').addEventListener('click',()=>stopCamera());
-$('unwrap').addEventListener('click',()=>{if(view?.unwrap()){cancelPull();fistTear.reset();feedback.play(3,'tear');$('canvas-hint').textContent='쓸어서 왁스를 벗겨보세요. 10초간 잡으면 반갈!';updateTearUI();}});
+$('unwrap').addEventListener('click',()=>{if(view?.unwrap()){cancelPull();fistTear.reset();feedback.play(3,'tear');$('canvas-hint').textContent='왁스는 와삭와삭! 5초 잡으면 터져요!';updateTearUI();}});
 function setCameraPresentation(active){
   document.body.classList.toggle('camera-mode',active);
   document.body.classList.remove('mobile-settings-open');$('touch-settings').setAttribute('aria-expanded','false');

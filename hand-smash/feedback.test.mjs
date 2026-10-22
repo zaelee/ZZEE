@@ -11,19 +11,23 @@ test('wax audio is finite, bounded, fades out, and distinguishes cracks from fla
  assert.notDeepEqual(waxSamples(48000,1,'break',random()),variants[1]);
  assert.ok(vibrationPattern(1).reduce((a,b)=>a+b)<vibrationPattern(8).reduce((a,b)=>a+b));assert.ok(vibrationPattern(64).reduce((a,b)=>a+b)<60);
 });
-test('tearing needs a continuous ten-second hold and cancels on dragging or release',()=>{
+test('tearing needs a continuous five-second hold and cancels on dragging or release',()=>{
  const hold=new HoldTear();assert.equal(hold.ready(9000),false);
- hold.begin({x:20,y:20},0);assert.equal(hold.ready(5000),false);assert.equal(hold.ready(9999),false);assert.equal(hold.ready(10000),true);assert.equal(hold.ready(11000),false);
+ hold.begin({x:20,y:20},0);assert.equal(hold.ready(1000),false);assert.equal(hold.ready(4999),false);assert.equal(hold.ready(5000),true);assert.equal(hold.ready(11000),false);
  hold.begin({x:0,y:0},0);hold.move({x:19,y:0});assert.equal(hold.ready(11000),false);
  hold.begin({x:0,y:0},0);hold.cancel();assert.equal(hold.ready(11000),false);
 });
-test('fist needs ten seconds on the same hand; tracking loss or hand switch resets it',()=>{
+test('fist needs five seconds on the same hand; tracking loss or hand switch resets it',()=>{
  const fist=new FistTear();
- for(let time=0;time<10000;time+=100)assert.equal(fist.update(true,time,'Left'),false);
- assert.equal(fist.update(true,10000,'Left'),true);assert.equal(fist.update(true,10100,'Left'),false);
- fist.update(false,10200,'Left');assert.equal(fist.update(true,10300,'Left'),false);
- assert.equal(fist.update(true,10700,'Left'),false);assert.equal(fist.since,10700);
- fist.update(true,10800,'Right');assert.equal(fist.since,10800);
+ for(let time=0;time<5000;time+=100)assert.equal(fist.update(true,time,'Left'),false);
+ assert.equal(fist.update(true,5000,'Left'),true);assert.equal(fist.update(true,5100,'Left'),false);
+ fist.update(false,5200,'Left');assert.equal(fist.update(true,5300,'Left'),false);
+ assert.equal(fist.update(true,5700,'Left'),false);assert.equal(fist.since,5700);
+ fist.update(true,5800,'Right');assert.equal(fist.since,5800);
+});
+test('pop has a distinct short vibration and the same tearing sound',()=>{
+ assert.deepEqual(vibrationPattern(8,'pop'),[28,18,40]);assert.notDeepEqual(vibrationPattern(8,'pop'),vibrationPattern(8));
+ assert.deepEqual(waxSamples(48000,8,'pop',random()),waxSamples(48000,8,'tear',random()));
 });
 test('rear camera coordinates are unmirrored with the same cover crop',()=>{
  const front=coverPoint({x:.25,y:.5},1280,720,390,844,true),rear=coverPoint({x:.25,y:.5},1280,720,390,844,false);
