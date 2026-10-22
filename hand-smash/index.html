@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101211"><title>왁뿌 — 손끝으로 와르르</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23101211%27/%3E%3Ctext x=%2732%27 y=%2750%27 text-anchor=%27middle%27 font-size=%2754%27 fill=%27%23ceff63%27%3E✳%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="./" aria-label="왁뿌 홈"><span class="brand-mark">✳</span> 왁뿌<span class="brand-sub">WAKPPU LAB</span></a><span class="edition">INTERACTIVE EXPERIMENT <span>001</span></span><button id="sound" class="icon-button" aria-label="소리 켜기" aria-pressed="false">소리 꺼짐 <span>♪</span></button></header>
+<main>
+<section class="intro"><div><div class="eyebrow"><span></span> HANJUNGSUN-INSPIRED · 3D WAX PLAY</div><h1>겉은 바삭, <span>속은 쫀득.</span></h1><p>꾹 누르면 말랑, 손을 떼면 탱글. 왁스 코팅은 와삭.</p></div><div class="intro-side">동그란 떡 속에, 생과일 한 알.<br><span>이번엔 겉의 코팅만 부숴요. ↙</span></div></section>
+<div class="workspace">
+<section class="playground" aria-label="인터랙티브 부수기 화면">
+<video id="camera" playsinline muted aria-hidden="true"></video><canvas id="model" aria-hidden="true"></canvas><canvas id="scene" aria-label="3D 과일찹쌀떡. 클릭하거나 손을 움직이면 바깥 왁스 코팅이 부서집니다."></canvas>
+<div class="stage-top"><span class="mode-badge" id="mode">● &nbsp; PREVIEW MODE</span><span class="stage-tag" id="render-state">3D 모델 준비 중…</span></div>
+<div class="target-caption"><span>FRUIT MOCHI / WAX SHELL</span><strong id="target-display">딸기 찹쌀떡</strong></div>
+<div class="canvas-hint" id="canvas-hint">손을 움직이면, 상상이 부서져요.</div>
+<div class="stage-bottom"><span><i id="status-dot"></i><span id="tracking">카메라 연결 대기</span></span><button id="reset" aria-label="왁스 코팅 다시 입히기">↻ &nbsp; 다시 코팅하기</button></div>
+<div class="burst-label" id="burst-label" aria-live="polite"></div>
+</section>
+<div class="mobile-tools" aria-label="터치 조작"><button id="touch-rotate" aria-pressed="false">↔ 돌리기</button><button id="touch-peel">코팅 한 번에 벗기기</button></div>
+<aside>
+<section class="control-card"><div class="card-heading"><span class="step-number">01</span><h2>손을 연결해요</h2><span class="tiny-label">READY?</span></div><p>화면을 손가락으로 누르고 쓸어보세요.<br>카메라를 켜면 손 제스처로도 즐길 수 있어요.</p><button class="primary" id="start"><span>◉ &nbsp; 카메라로 시작</span><span>↗</span></button><button class="secondary" id="demo">터치로 바로 해보기 <span>→</span></button><p id="notice" class="notice" role="status">영상은 기기 안에서만 처리돼요.</p></section>
+<section class="target-card"><div class="card-heading"><span class="step-number">02</span><h2>과일찹쌀떡 고르기</h2><span class="mini-cube">◒</span></div>
+<label class="field-label" for="flavor">한정선에서 영감을 받은 3D 디저트</label>
+<select id="flavor"><option value="strawberry">딸기 찹쌀떡</option><option value="mandarin">통귤 찹쌀떡</option><option value="kiwi">골드키위 찹쌀떡</option></select>
+<div class="model-actions"><button id="cutaway" aria-pressed="false">단면 먼저 보기</button><button id="inspect" aria-pressed="false">돌려서 구경하기</button></div>
+<button id="tear" class="tear-action" disabled>반갈 잠금 · 왁스 80% 벗기기</button>
+<button id="export-model" class="upload">3D 모델 저장 <span>GLB ↓</span></button><p class="micro">카메라 회전: 엄지·검지를 집고 좌우·위아래로 이동</p></section>
+<section class="score-card"><div><span class="field-label">바삭하게 부순 왁스</span><div class="score"><span id="score">000</span><small>PIECES</small></div></div><div class="score-icon">✳</div><div class="progress"><span id="progress"></span></div><div class="score-bottom"><span id="remaining">왁스 64 / 64조각</span><span id="round">ROUND 01</span></div></section>
+</aside>
+</div>
+<section class="instructions"><div><span class="instruction-icon">✋</span><div><b>01. 손을 보여주세요</b><p>밝은 곳에서 손 전체가 보이게</p></div></div><div><span class="instruction-icon">〰</span><div><b>02. 꾹 눌렀다 놓아보세요</b><p>마우스를 누르거나 카메라 앞에서 주먹 쥐기</p></div></div><div><span class="instruction-icon">✴</span><div><b>03. 과일 단면을 발견해요</b><p>떡은 그대로, 코팅만 와삭</p></div></div><button id="keyboard-smash">코팅 한 번에 벗기기 <kbd>Space</kbd></button></section>
+</main><footer><span>한정선 과일찹쌀떡에서 영감을 받은 가상 체험.</span><span>MADE TO BREAK. BUILT TO PLAY. <span class="footer-star">✳</span></span></footer>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+<script type="module" src="app.js"></script>
+</body></html>
