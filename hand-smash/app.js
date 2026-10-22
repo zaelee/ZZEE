@@ -12,7 +12,7 @@ let width=0,height=0,trails=[],hands=[],view=null,inspect=false;
 let total=0,round=1,playing=false,cameraActive=false,stream=null;
 let requestId=0,detector=null,detectorPromise=null,lastVideo=-1,lastDetect=0;
 let previousHands=[],previousTime=0,lastFrame=performance.now();
-let flash=0,labelTimer=null,pointer=null,pendingSweep=null;
+let flash=0,labelTimer=null,pointer=null,pendingSweep=null,rotationUntil=0;
 const pullPointers=new Map(),pointerPull=new PullGesture(),handPull=new PullGesture();
 let tearState='';
 const handRotation=new PinchRotation(),frameBudget=new FrameBudget(mobileInput);
@@ -37,6 +37,7 @@ function updateTearUI(){
   const uiKey=[state,view.wrapped,view.unwrapping,inspect,view.preview,view.remaining,view.torn,cameraActive,$('start').disabled].join(':');
   if(uiKey===tearUIKey)return;tearUIKey=uiKey;
   $('touch-camera').textContent=cameraActive?'카메라 끄기':'카메라';$('touch-camera').disabled=$('start').disabled;
+  $('rotation-controls').hidden=view.wrapped;
   $('unwrap').hidden=!view.wrapped;$('unwrap').disabled=view.unwrapping;
   $('unwrap-label').textContent=view.unwrapping?'포장을 펼치는 중…':'눌러서 한지 포장 벗기기';
   for(const id of ['inspect','touch-rotate','keyboard-smash','export-model'])$(id).disabled=view.wrapped;
@@ -73,9 +74,10 @@ function collectBroken(){
 
 }
 function draw(time){
-  const active=Boolean(pointer||pullPointers.size||cameraActive||trails.length||view?.isAnimating);
+  const active=Boolean(time<rotationUntil||pointer||pullPointers.size||cameraActive||trails.length||view?.isAnimating);
   if(!frameBudget.due(time,!document.hidden&&stageVisible,active)){requestAnimationFrame(draw);return;}
   const dt=Math.min((time-lastFrame)/1000,.04);lastFrame=time;
+  if(view){const angle=Math.round(Math.atan2(Math.sin(view.rotation),Math.cos(view.rotation))*180/Math.PI);if(Number($('rotation-slider').value)!==angle)$('rotation-slider').value=angle;}
   if(holdTear.ready(time))tearMochi(true);
   const held=Math.max(holdTear.progress(time),fistTear.progress(time)),seconds=held>0?Math.max(1,Math.ceil(10-held*10)):0;
   if(seconds!==holdUISeconds){holdUISeconds=seconds;$('hold-status').hidden=!seconds;$('hold-status').textContent=seconds?`반갈까지 ${seconds}초 · 계속 잡아주세요`: '';}
@@ -210,6 +212,17 @@ canvas.addEventListener('pointermove',event=>{
 });
 canvas.addEventListener('pointerup',()=>{if(pendingSweep)smash(pendingSweep.a,pendingSweep.b,22);cancelPull();});
 for(const type of ['pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>cancelPull());
+function rotateFromControl(radians){
+  if(!view||view.wrapped)return;
+  cancelPull();fistTear.reset();
+  if(inspect)$('inspect').click();
+  view.rotate(radians/.008,0);rotationUntil=performance.now()+200;frameBudget.last=-Infinity;
+}
+$('rotation-slider').addEventListener('pointerdown',()=>{cancelPull();fistTear.reset();});
+$('rotation-slider').addEventListener('input',event=>rotateFromControl(Number(event.target.value)*Math.PI/180-(view?.rotation||0)));
+$('rotate-left').addEventListener('click',()=>rotateFromControl(-Math.PI/12));
+$('rotate-right').addEventListener('click',()=>rotateFromControl(Math.PI/12));
+$('rotation-controls').addEventListener('wheel',event=>{if(!view||view.wrapped)return;event.preventDefault();rotateFromControl(Math.sign(event.deltaX||event.deltaY)*Math.PI/15);},{passive:false});
 $('tear').addEventListener('click',()=>tearMochi());
 $('reset').addEventListener('click',()=>reset(true));
 function smashAll(){if(!playing)$('demo').click();smash({x:0,y:0},{x:0,y:0},0,true);}
