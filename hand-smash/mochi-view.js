@@ -12,7 +12,7 @@ export class MochiView {
     const mobile=matchMedia('(pointer:coarse)').matches;
     this.renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
     this.renderer.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));
-    this.renderer.transmissionResolutionScale=mobile?.65:1;
+    this.renderer.transmissionResolutionScale=mobile ? .65 : 1;
     this.renderer.outputColorSpace=THREE.SRGBColorSpace;
     this.renderer.toneMapping=THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure=.92;
@@ -42,6 +42,7 @@ export class MochiView {
   async loadStudio(){
     try{const hdr=await new HDRLoader().loadAsync('./assets/studio_small_05_1k.hdr');const pmrem=new THREE.PMREMGenerator(this.renderer);const next=pmrem.fromEquirectangular(hdr);this.scene.environment=next.texture;this.scene.environmentIntensity=.85;this.scene.environmentRotation.y=.7;this.environment.dispose();this.environment=next;hdr.dispose();pmrem.dispose();return true;}catch{return false;}
   }
+  get isAnimating(){return performance.now()<this.holdUntil||Math.abs(this.compression)>.001||Math.abs(this.compressionVelocity)>.01||Math.abs(this.dent)>.001||this.stretch>.001||this.pullTarget>0||(this.torn&&this.tearTime<.65)||this.model.pieces.some(p=>p.userData.intact&&p.userData.detachAt!==null)||this.fragments.some(p=>p.visible);}
   get remaining(){return this.model.pieces.filter(p=>p.userData.intact).length;}
   get count(){return this.model.pieces.length;}
   get tearReady(){return !this.torn&&!this.preview&&canTear(this.remaining,this.count);}
