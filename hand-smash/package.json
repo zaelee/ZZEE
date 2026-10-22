@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check app.js && node --check mochi-model.js && node --check mochi-view.js && node --check wax-geometry.js && node --check material-textures.js && node --check soft-body.js && node --check rotate-gesture.js && node --check pull-gesture.js && node --check physics.js && node --check server.mjs",
+    "check": "node --check frame-budget.js && node --check app.js && node --check mochi-model.js && node --check mochi-view.js && node --check wax-geometry.js && node --check material-textures.js && node --check soft-body.js && node --check rotate-gesture.js && node --check pull-gesture.js && node --check physics.js && node --check server.mjs",
     "test": "node --test *.test.mjs"
   },
   "engines": {

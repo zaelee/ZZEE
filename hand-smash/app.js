@@ -1,5 +1,6 @@
 import { coverPoint, isClosed } from './physics.js';
 import {PullGesture} from './pull-gesture.js';
+import {FrameBudget} from './frame-budget.js';
 import {PinchRotation} from './rotate-gesture.js';
 const $ = id => document.getElementById(id);
 const canvas = $('scene'), ctx = canvas.getContext('2d'), video = $('camera');
@@ -12,21 +13,26 @@ let previousHands=[],previousTime=0,lastFrame=performance.now();
 let soundOn=false,audio=null,flash=0,labelTimer=null,pointer=null;
 const pullPointers=new Map(),pointerPull=new PullGesture(),handPull=new PullGesture();
 let tearState='';
-const handRotation=new PinchRotation();
-function notice(message,error=false){$('notice').textContent=message;$('notice').classList.toggle('error',error);}
+const handRotation=new PinchRotation(),frameBudget=new FrameBudget(mobileInput);
+let stageVisible=true,tearUIKey='';
+function notice(message,error=false){$('notice').textContent=message;$('mobile-notice').textContent=message;$('mobile-notice').classList.toggle('error',error);$('mobile-notice').hidden=!error;$('notice').classList.toggle('error',error);}
 function updateScore(){
   $('score').textContent=String(total).padStart(3,'0');
   const remaining=view?.remaining??64,count=view?.count??64;
   $('remaining').textContent=view?.torn?'반갈 완료 · 과일 단면 공개':remaining?`왁스 ${remaining} / ${count}조각`:'속의 과일찹쌀떡은 그대로!';
   $('progress').style.width=`${(count-remaining)/count*100}%`;
+  $('mobile-progress').textContent=view?.torn?'반갈 완료':`코팅 ${Math.floor((count-remaining)/count*100)}% 제거`;
   $('round').textContent=`ROUND ${String(round).padStart(2,'0')}`;
 }
 function cancelPull(){handRotation.reset();pullPointers.clear();pointerPull.cancel();handPull.cancel();view?.endPull();pointer=null;view?.release();}
 function updateTearUI(){
   if(!view)return;
   const state=view.torn?'torn':view.tearReady?'ready':'locked';
+  const uiKey=[state,inspect,view.preview,view.remaining,view.torn,cameraActive,$('start').disabled].join(':');
+  if(uiKey===tearUIKey)return;tearUIKey=uiKey;
+  $('touch-camera').textContent=cameraActive?'카메라 끄기':'카메라';$('touch-camera').disabled=$('start').disabled;
   $('tear').disabled=state!=='ready'||inspect;
-  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').disabled=inspect||view.preview||view.torn;
+  $('touch-rotate').setAttribute('aria-pressed',String(inspect));$('touch-rotate').textContent=inspect?'✳ 부수기로 돌아가기':'↔ 돌리기';$('touch-peel').textContent=view.torn?'다시 코팅':view.tearReady?'반갈하기':'코팅 벗기기';$('touch-peel').disabled=!view.torn&&(inspect||view.preview);
   $('tear').textContent=state==='torn'?'반갈 완료 ✓':state==='ready'?'반으로 가르기 ↔  T':`반갈 잠금 · ${Math.floor((view.count-view.remaining)/view.count*100)}% / 80%`;
   if(state!==tearState){
     tearState=state;
@@ -71,6 +77,8 @@ function collectBroken(){
 
 }
 function draw(time){
+  const active=Boolean(pointer||pullPointers.size||cameraActive||trails.length||view?.isAnimating);
+  if(!frameBudget.due(time,!document.hidden&&stageVisible,active)){requestAnimationFrame(draw);return;}
   const dt=Math.min((time-lastFrame)/1000,.04);lastFrame=time;
   if(pullPointers.size)applyPull(pointerPull,[...pullPointers.values()],time);
   if(pointer&&!inspect&&!pullPointers.size)view?.press(pointer,.95,time);view?.render(time,dt);collectBroken();updateTearUI();ctx.clearRect(0,0,width,height);
@@ -190,7 +198,9 @@ $('tear').addEventListener('click',tearMochi);
 $('reset').addEventListener('click',()=>reset(true));
 function smashAll(){if(!playing)$('demo').click();smash({x:0,y:0},{x:0,y:0},0,true);}
 $('keyboard-smash').addEventListener('click',smashAll);
-$('touch-peel').addEventListener('click',smashAll);
+$('touch-peel').addEventListener('click',()=>{if(view?.torn)reset(true);else if(view?.tearReady)tearMochi();else smashAll();});
+$('touch-camera').addEventListener('click',()=>{$('start').click();});
+$('touch-settings').addEventListener('click',()=>{const open=document.body.classList.toggle('mobile-settings-open');$('touch-settings').setAttribute('aria-expanded',String(open));});
 $('touch-rotate').addEventListener('click',()=>$('inspect').click());
 window.addEventListener('keydown',event=>{if(event.code==='KeyT'&&!event.repeat&&!['INPUT','SELECT','TEXTAREA'].includes(event.target.tagName)&&!event.target.isContentEditable){tearMochi();return;}if(inspect&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.code)&&!['INPUT','SELECT','TEXTAREA'].includes(event.target.tagName)){event.preventDefault();view?.rotate(event.code==='ArrowLeft'?-12:event.code==='ArrowRight'?12:0,event.code==='ArrowUp'?-12:event.code==='ArrowDown'?12:0);return;}if(event.code==='Space'&&!event.repeat&&!['INPUT','BUTTON','TEXTAREA','SELECT'].includes(event.target.tagName)&&!event.target.isContentEditable){event.preventDefault();smashAll();}});
 $('sound').addEventListener('click',()=>{soundOn=!soundOn;$('sound').innerHTML=`소리 ${soundOn?'켜짐':'꺼짐'} <span>♪</span>`;$('sound').setAttribute('aria-label',soundOn?'소리 끄기':'소리 켜기');$('sound').setAttribute('aria-pressed',String(soundOn));if(soundOn)sound(3);});
@@ -206,6 +216,7 @@ $('export-model').addEventListener('click',async()=>{
   try{const data=await view.exportGLB(),url=URL.createObjectURL(new Blob([data],{type:'model/gltf-binary'}));const a=document.createElement('a');a.href=url;a.download=`hanjungsun-${view.flavor}${view.torn?'-torn':view.preview?'-cutaway':''}.glb`;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);notice('3D 모델을 GLB 파일로 저장했어요.');}
   catch{notice('모델 저장에 실패했어요. 다시 시도해주세요.',true);}finally{button.disabled=false;}
 });
+new IntersectionObserver(entries=>{stageVisible=entries[0].isIntersecting&&entries[0].intersectionRatio>=.1;if(!stageVisible)cancelPull();},{threshold:.1}).observe(canvas);
 new ResizeObserver(resize).observe(canvas);resize();requestAnimationFrame(draw);
 try{const {MochiView}=await import('./mochi-view.js');view=new MochiView($('model'),reducedMotion);resize();reset();$('render-state').textContent='3D MODEL / LIVE';}
-catch(error){$('render-state').textContent='3D 로딩 실패';notice('3D 화면을 열지 못했어요. WebGL을 지원하는 Chrome 또는 Safari에서 다시 열어주세요.',true);for(const id of ['start','demo','inspect','cutaway','export-model','keyboard-smash','touch-rotate','touch-peel'])$(id).disabled=true;}
+catch(error){$('render-state').textContent='3D 로딩 실패';notice('3D 화면을 열지 못했어요. WebGL을 지원하는 Chrome 또는 Safari에서 다시 열어주세요.',true);for(const id of ['start','demo','inspect','cutaway','export-model','keyboard-smash','touch-rotate','touch-peel','touch-camera'])$(id).disabled=true;}
