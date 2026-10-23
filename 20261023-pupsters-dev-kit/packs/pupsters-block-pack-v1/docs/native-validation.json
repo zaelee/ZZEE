@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "id": "D01",
+      "source": "scenes/D01-shiba.json",
+      "sourceSha256": "03efb349662bd1432b03a8223e02ce701c19639d49ba0f24d01adce1ac1e1fdc",
+      "checks": {
+        "xmlItemCount": 38,
+        "classCounts": {
+          "Model": 9,
+          "Part": 24,
+          "WedgePart": 4,
+          "Attachment": 1
+        },
+        "partCount": 28,
+        "groupCount": 8,
+        "materialCount": 6,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 0.0,
+        "maxCFrameDeterminantError": 0.0,
+        "maxSerializedNumericError": 4.90196078173355e-11,
+        "mouthParentPart": "MouthCenter",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 1.1102230246251565e-16,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    },
+    {
+      "id": "D02",
+      "source": "scenes/D02-bulldog.json",
+      "sourceSha256": "c012f5fe3ce65977f77388ae616b4b24e926011413bf9ef13df9834a8cae795f",
+      "checks": {
+        "xmlItemCount": 37,
+        "classCounts": {
+          "Model": 9,
+          "Part": 27,
+          "Attachment": 1
+        },
+        "partCount": 27,
+        "groupCount": 8,
+        "materialCount": 7,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 1.4126699809935417e-11,
+        "maxCFrameDeterminantError": 1.4126699809935417e-11,
+        "maxSerializedNumericError": 4.90196078173355e-11,
+        "mouthParentPart": "MouthCenter",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 0.0,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    },
+    {
+      "id": "D03",
+      "source": "scenes/D03-husky.json",
+      "sourceSha256": "1dafce9c71f1076c53f216b7a5149ddb9a1c64e4f07b233709f7ff65a7aa269e",
+      "checks": {
+        "xmlItemCount": 44,
+        "classCounts": {
+          "Model": 9,
+          "Part": 22,
+          "WedgePart": 12,
+          "Attachment": 1
+        },
+        "partCount": 34,
+        "groupCount": 8,
+        "materialCount": 6,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 1.049427211796683e-11,
+        "maxCFrameDeterminantError": 1.049427211796683e-11,
+        "maxSerializedNumericError": 4.042982615359847e-11,
+        "mouthParentPart": "MouthCenter",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 0.0,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    },
+    {
+      "id": "D04",
+      "source": "scenes/D04-beagle.json",
+      "sourceSha256": "cab7d44aba93dab1ce55695ba30b0c765e3275ef303fa4829147edb9ab7787dd",
+      "checks": {
+        "xmlItemCount": 36,
+        "classCounts": {
+          "Model": 9,
+          "Part": 26,
+          "Attachment": 1
+        },
+        "partCount": 26,
+        "groupCount": 8,
+        "materialCount": 6,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 7.021505599169586e-11,
+        "maxCFrameDeterminantError": 7.021505599169586e-11,
+        "maxSerializedNumericError": 3.520417291014155e-11,
+        "mouthParentPart": "SmallMouth",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 0.0,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    },
+    {
+      "id": "D05",
+      "source": "scenes/D05-poodle.json",
+      "sourceSha256": "8e5626d3918dad588af3eef5818e497dc8a6ea3e51e8cf53a938d8b96282a3a0",
+      "checks": {
+        "xmlItemCount": 48,
+        "classCounts": {
+          "Model": 9,
+          "Part": 28,
+          "Attachment": 1,
+          "WedgePart": 10
+        },
+        "partCount": 38,
+        "groupCount": 8,
+        "materialCount": 5,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 9.425704661225609e-11,
+        "maxCFrameDeterminantError": 9.425704661225609e-11,
+        "maxSerializedNumericError": 4.737887859818102e-11,
+        "mouthParentPart": "SmallMouth",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 0.0,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    },
+    {
+      "id": "D06",
+      "source": "scenes/D06-border-collie.json",
+      "sourceSha256": "698ace5e653958fd91a49f172d62e6e89f2d934684912f17aa4c596a033c81b3",
+      "checks": {
+        "xmlItemCount": 49,
+        "classCounts": {
+          "Model": 9,
+          "Part": 28,
+          "WedgePart": 11,
+          "Attachment": 1
+        },
+        "partCount": 39,
+        "groupCount": 8,
+        "materialCount": 9,
+        "positiveSizes": true,
+        "materialReferencesResolved": true,
+        "rbxmxPropertySchemaConsistent": true,
+        "uniqueReferents": true,
+        "maxCFrameOrthonormalError": 9.808076573136759e-11,
+        "maxCFrameDeterminantError": 9.808076573136759e-11,
+        "maxSerializedNumericError": 4.898759176086287e-11,
+        "mouthParentPart": "MouthCenter",
+        "mouthParentGroup": "Head",
+        "maxMouthWorldPositionError": 0.0,
+        "luauCreatesWithoutDeletion": true,
+        "luauTemplateStaticChecks": true,
+        "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+      }
+    }
+  ],
+  "studioTested": false
+}

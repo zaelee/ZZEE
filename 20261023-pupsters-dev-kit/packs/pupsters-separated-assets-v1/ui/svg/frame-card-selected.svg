@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="400" viewBox="0 0 320 400" fill="none">
+  <title>Empty portrait or card frame, selected state</title>
+  <path d="M37 14 C22 15 13 26 14 44 L16 355 C16 375 29 387 49 386 L274 384 C294 384 307 371 306 351 L304 43 C304 25 292 15 272 16 Z" fill="#C9E7B7" stroke="#171716" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M36 37 C96 29 229 31 283 38 L282 360 C220 367 94 367 39 360 Z" stroke="#A8C99A" stroke-width="9" stroke-linejoin="round"/>
+</svg>

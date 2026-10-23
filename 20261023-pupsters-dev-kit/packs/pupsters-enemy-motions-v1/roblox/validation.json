@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "id": "E01",
+      "parts": 8,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E02",
+      "parts": 8,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E03",
+      "parts": 9,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E04",
+      "parts": 14,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E05",
+      "parts": 11,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E06",
+      "parts": 15,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E07",
+      "parts": 19,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "E08",
+      "parts": 21,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    },
+    {
+      "id": "B01",
+      "parts": 19,
+      "clips": {
+        "move": 37,
+        "hit": 19,
+        "death": 49
+      },
+      "autoPreview": false,
+      "nativePropertiesExact": true,
+      "scriptDataConsistent": true,
+      "motionRootPrimaryPart": true,
+      "singleHeartbeat": true,
+      "destroyCleanup": true,
+      "noEffectPartsAdded": true
+    }
+  ],
+  "demo": {
+    "models": 9,
+    "layout": "3x3 at 7-stud spacing",
+    "autoPreview": true,
+    "uniqueReferents": true
+  },
+  "robloxStudioTested": false,
+  "luauRuntimeCheck": "not run (Luau CLI unavailable)",
+  "scope": "Visual playback via BindableEvent; no damage, targeting, RemoteEvents, or AnimationTrack."
+}

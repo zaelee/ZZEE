@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "file": "pupsters-block-pack-v2.zip",
+  "fileCount": 75,
+  "bytes": 1156376,
+  "sha256": "ac7c8c993bcc6dacdf190c362d569b9afa9722c5686e8433fb26dad913154202",
+  "names": {
+    "D01": "시바멈",
+    "D02": "불돔",
+    "D03": "머스키",
+    "D04": "미글",
+    "D05": "무들",
+    "D06": "모더콜리"
+  },
+  "geometryMaterialsMouthUnchanged": true,
+  "nativeAndGltfModelNamesUpdated": true,
+  "crcAndBytesMatch": true,
+  "robloxStudioTested": false,
+  "browserViewerTested": false
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "file": "pupsters-block-pack-v3.zip",
+  "fileCount": 78,
+  "bytes": 1392291,
+  "sha256": "f900a70113e8ae1d9360bc60e103347b21d06d26c99ed3cebd2f8cd12f1c4a1f",
+  "crcAndBytesMatch": true,
+  "javascriptSyntaxPassed": true,
+  "studioTested": false,
+  "browserViewerTested": false
+}

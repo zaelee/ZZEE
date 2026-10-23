@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-23",
+  "packs": [
+    {
+      "id": "pupsters-breed-portraits-v1",
+      "title": "견종별 대표컷",
+      "stage": "초기 2D",
+      "description": "흰 말티즈부터 견종별 외형 탐색",
+      "page": "packs/pupsters-breed-portraits-v1/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-chunky-trio-v2",
+      "title": "통통한 세 마리",
+      "stage": "초기 2D",
+      "description": "말티즈·시바·불도그 체형 실험",
+      "page": "packs/pupsters-chunky-trio-v2/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-balanced-trio-v3",
+      "title": "머리와 몸 비율 조정",
+      "stage": "초기 2D",
+      "description": "과한 체형을 줄인 비율 비교",
+      "page": "packs/pupsters-balanced-trio-v3/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-round-trio-v4",
+      "title": "조금 더 통통하게",
+      "stage": "초기 2D",
+      "description": "짧고 둥근 몸의 방향 정리",
+      "page": "packs/pupsters-round-trio-v4/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-topdown-ui-v1",
+      "title": "탑뷰와 화면 콘셉트",
+      "stage": "2D 게임 아트",
+      "description": "메인 타이틀·배경·UI 화면 시안",
+      "page": "packs/pupsters-topdown-ui-v1/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-topdown-shortbody-v2",
+      "title": "탑뷰 짧은 몸",
+      "stage": "2D 게임 아트",
+      "description": "위에서 봐도 몸이 짧게 보이는 세 마리",
+      "page": "packs/pupsters-topdown-shortbody-v2/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-separated-assets-v1",
+      "title": "분리된 게임 에셋",
+      "stage": "2D 게임 아트",
+      "description": "캐릭터·이펙트·몹·배경·UI 개별 PNG/SVG",
+      "page": "packs/pupsters-separated-assets-v1/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-attack-motion-v1",
+      "title": "2D 공격 자세",
+      "stage": "2D 모션",
+      "description": "대기·준비·발동·반동의 네 가지 자세",
+      "page": "packs/pupsters-attack-motion-v1/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-connected-attack-v2",
+      "title": "공격과 이펙트 연결",
+      "stage": "2D 모션",
+      "description": "동작에서 투사체·이펙트까지 이어지는 타임라인",
+      "page": "packs/pupsters-connected-attack-v2/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-personality-and-attacks-v4",
+      "title": "작은 뼈를 퉤!",
+      "stage": "2D 모션",
+      "description": "시바의 뼈 뱉기 변경을 보존한 v4 스냅샷",
+      "page": "packs/pupsters-personality-and-attacks-v4/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-personality-v3",
+      "title": "성격과 능력 · 실제 v5",
+      "stage": "2D 모션",
+      "description": "최신 2D 외형: 얼음 귀·침·전기·종이 왕관",
+      "page": "packs/pupsters-personality-v3/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-shiba-3d-v1",
+      "title": "시바 3D 두 가지",
+      "stage": "3D 형태 탐색",
+      "description": "둥근 형태와 블록 형태 비교",
+      "page": "packs/pupsters-shiba-3d-v1/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-shiba-block-v2",
+      "title": "단순한 블록 시바",
+      "stage": "3D 형태 탐색",
+      "description": "검은 점눈·네모 꼬리·네모 뼈",
+      "page": "packs/pupsters-shiba-block-v2/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-shiba-block-v3",
+      "title": "흰 눈썹 시그니처",
+      "stage": "3D 형태 탐색",
+      "description": "눈동자만 한 작은 흰 눈썹",
+      "page": "packs/pupsters-shiba-block-v3/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-block-pack-v1",
+      "title": "블록 강아지 6종",
+      "stage": "3D 강아지",
+      "description": "여섯 견종의 첫 블록 모델",
+      "page": "packs/pupsters-block-pack-v1/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-block-pack-v2",
+      "title": "뭉툭한 실루엣",
+      "stage": "3D 강아지",
+      "description": "뾰족한 부분을 줄이고 캐릭터 구별 강화",
+      "page": "packs/pupsters-block-pack-v2/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-block-pack-v3",
+      "title": "귀·왕관·전기 디테일",
+      "stage": "3D 강아지",
+      "description": "양쪽 귀와 종이 왕관, 전기 표현 개선",
+      "page": "packs/pupsters-block-pack-v3/index.html",
+      "recommended": false
+    },
+    {
+      "id": "pupsters-block-pack-v4",
+      "title": "앉은 강아지 6종",
+      "stage": "최신 3D",
+      "description": "큰 머리·짧은 몸, 무들 기본/업그레이드 분리",
+      "page": "packs/pupsters-block-pack-v4/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-sitting-attacks-v1",
+      "title": "앉아서 공격하기",
+      "stage": "최신 3D",
+      "description": "6종 × 2초 공격, 자세와 효과를 한 프레임 데이터로",
+      "page": "packs/pupsters-sitting-attacks-v1/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-block-enemies-v1",
+      "title": "블록 몹 9종",
+      "stage": "최신 3D",
+      "description": "일반 몹 8종과 블록사우루스 보스",
+      "page": "packs/pupsters-block-enemies-v1/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-enemy-motions-v1",
+      "title": "이동·피격·사망",
+      "stage": "최신 3D",
+      "description": "9종 × 3동작, 총 27개 모션",
+      "page": "packs/pupsters-enemy-motions-v1/index.html",
+      "recommended": true
+    },
+    {
+      "id": "pupsters-block-map-v1",
+      "title": "블록 놀이방 맵",
+      "stage": "최신 3D",
+      "description": "76 × 52 studs, S자 길과 강아지 자리 16개",
+      "page": "packs/pupsters-block-map-v1/index.html",
+      "recommended": true
+    }
+  ]
+}

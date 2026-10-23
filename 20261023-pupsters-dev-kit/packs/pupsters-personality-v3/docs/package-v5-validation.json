@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "version": 5,
+  "files": 39,
+  "assets": {
+    ".png": 18,
+    ".gif": 1,
+    ".webp": 1
+  },
+  "htmlReferencesChecked": 37,
+  "shibaFilesUnchanged": 12,
+  "zipMembersHashMatched": true,
+  "bytes": 9894582,
+  "sha256": "2fb25e7c6e789b1e8955d8ef2f23604a6f27c85b1b1802d828ad6e842a25109c",
+  "zip": "pupsters-personality-and-attacks-v5.zip"
+}

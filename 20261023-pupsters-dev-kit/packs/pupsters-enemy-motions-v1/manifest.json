@@ -1,0 +1,254 @@
+{
+  "title": "사고멍치 몹 이동·피격·사망 모션",
+  "fps": 30,
+  "clipCount": 27,
+  "modelCount": 9,
+  "inPlaceMovement": true,
+  "studioVerified": false,
+  "browserVerified": false,
+  "models": [
+    {
+      "id": "E01",
+      "name": "기본 블록봇",
+      "source": "animations/E01.json",
+      "glb": "animations/E01-motions.glb",
+      "roblox": "roblox/E01-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "짧은 두 발로 통통 걸으며 몸을 좌우로 기울여요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "뒤로 움찔하고 눈을 찡그린 뒤 돌아와요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "옆으로 데굴 넘어지고 작아지며 사라져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E02",
+      "name": "바퀴 블록봇",
+      "source": "animations/E02.json",
+      "glb": "animations/E02-motions.glb",
+      "roblox": "roblox/E02-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "네모 바퀴가 돌 때 차체도 작게 들썩여요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "차체가 뒤로 덜컥 밀렸다가 돌아와요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "차체가 옆으로 넘어지고 바퀴가 헛돌아요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E03",
+      "name": "벽돌 덩치",
+      "source": "animations/E03.json",
+      "glb": "animations/E03-motions.glb",
+      "roblox": "roblox/E03-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "큰 발로 느릿하게 쿵쿵 걷고 벽돌 층이 흔들려요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "무게감 있게 밀리며 윗벽돌이 덜컹해요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "벽돌 세 층이 양옆으로 무너져 바닥에 내려앉아요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E04",
+      "name": "장갑 블록봇",
+      "source": "animations/E04.json",
+      "glb": "animations/E04-motions.glb",
+      "roblox": "roblox/E04-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "장갑을 두른 몸으로 짧게 좌우로 걸어요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "장갑이 덜컥 떨리고 몸이 뒤로 젖혀져요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "단단한 몸이 옆으로 쓰러져 잠시 멈췄다 사라져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E05",
+      "name": "분열 블록봇",
+      "source": "animations/E05.json",
+      "glb": "animations/E05-motions.glb",
+      "roblox": "roblox/E05-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "세 블록이 서로 엇박자로 흔들리며 걸어요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "맞은 충격이 아래에서 위로 전달돼요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "세 얼굴 블록이 제각각 굴러 떨어져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E06",
+      "name": "수리 블록봇",
+      "source": "animations/E06.json",
+      "glb": "animations/E06-motions.glb",
+      "roblox": "roblox/E06-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "짧은 발로 걷고 렌치 팔이 까딱거려요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "렌치가 흔들리며 뒤로 움찔해요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "렌치 팔이 축 늘어지고 몸이 옆으로 쓰러져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E07",
+      "name": "투명 블록봇",
+      "source": "animations/E07.json",
+      "glb": "animations/E07-motions.glb",
+      "roblox": "roblox/E07-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "투명 몸통을 유지하며 네 발로 살금살금 걸어요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "몸통과 테두리가 함께 찌그러졌다 돌아와요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "속이 비치는 몸통이 납작해진 뒤 작아져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "E08",
+      "name": "블록 운반차",
+      "source": "animations/E08.json",
+      "glb": "animations/E08-motions.glb",
+      "roblox": "roblox/E08-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "네 바퀴가 굴러가고 짐칸의 꼬마들이 통통 튀어요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "수레가 덜컹하고 안의 꼬마들이 위로 튀어요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "수레가 기울고 꼬마 셋이 밖으로 떨어져요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    },
+    {
+      "id": "B01",
+      "name": "블록사우루스",
+      "source": "animations/B01.json",
+      "glb": "animations/B01-motions.glb",
+      "roblox": "roblox/B01-motions.rbxmx",
+      "clips": {
+        "move": {
+          "name": "이동",
+          "description": "네 다리를 번갈아 내딛고 머리와 꼬리가 묵직하게 흔들려요.",
+          "duration": 1.2,
+          "loop": true
+        },
+        "hit": {
+          "name": "피격",
+          "description": "큰 머리가 뒤로 젖혀지고 등판과 꼬리가 떨려요.",
+          "duration": 0.6,
+          "loop": false
+        },
+        "death": {
+          "name": "사망",
+          "description": "머리를 푹 숙이고 몸을 옆으로 쿵 내려놓아요.",
+          "duration": 1.6,
+          "loop": false
+        }
+      }
+    }
+  ]
+}

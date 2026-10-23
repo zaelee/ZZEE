@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Parts currency icon represented by a screw</title>
+  <defs><mask id="screw-cuts" maskUnits="userSpaceOnUse"><rect width="128" height="128" fill="white"/><path d="M45 29 L83 29" stroke="black" stroke-width="7" stroke-linecap="round"/><path d="M50 61 L78 61 M50 75 L77 75 M51 89 L76 89" stroke="black" stroke-width="5" stroke-linecap="round"/></mask></defs>
+  <g transform="rotate(-31 64 64)" mask="url(#screw-cuts)">
+    <path d="M46 19 L82 19 C88 19 92 23 92 29 L92 40 C92 46 88 50 82 50 L46 50 C40 50 36 46 36 40 L36 29 C36 23 40 19 46 19 Z" fill="#171716"/>
+    <path d="M48 48 L80 48 L76 97 C75 105 70 110 64 110 C57 110 52 105 51 97 Z" fill="#171716"/>
+  </g>
+</svg>

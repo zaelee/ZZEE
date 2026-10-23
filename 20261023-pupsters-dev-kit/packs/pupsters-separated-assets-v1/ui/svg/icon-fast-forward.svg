@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Fast-forward action icon</title>
+  <path d="M16 29 C13 27 10 29 10 34 L11 94 C11 99 15 101 19 98 L59 68 C63 65 63 61 59 58 Z" fill="#171716"/>
+  <path d="M62 29 C58 27 55 29 55 34 L56 94 C56 99 60 101 64 98 L104 68 C108 65 108 61 104 58 Z" fill="#171716"/>
+  <rect x="105" y="28" width="13" height="72" rx="6" fill="#171716"/>
+</svg>

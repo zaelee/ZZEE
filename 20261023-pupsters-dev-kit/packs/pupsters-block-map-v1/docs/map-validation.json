@@ -1,0 +1,612 @@
+{
+  "validator": "tools/validate_map.py",
+  "status": "pass",
+  "summary": {
+    "passed": 6575,
+    "failed": 0
+  },
+  "coverage": {
+    "source-models": {
+      "passed": 2,
+      "failed": 0
+    },
+    "file": {
+      "passed": 13,
+      "failed": 0
+    },
+    "source": {
+      "passed": 2261,
+      "failed": 0
+    },
+    "asset": {
+      "passed": 1600,
+      "failed": 0
+    },
+    "export": {
+      "passed": 795,
+      "failed": 0
+    },
+    "layout": {
+      "passed": 1310,
+      "failed": 0
+    },
+    "map": {
+      "passed": 22,
+      "failed": 0
+    },
+    "showcase": {
+      "passed": 524,
+      "failed": 0
+    },
+    "native": {
+      "passed": 46,
+      "failed": 0
+    },
+    "viewer": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "source-models:present",
+      "status": "pass",
+      "detail": "source JSON files found"
+    },
+    {
+      "name": "file:source-models/B01-blockosaur.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:B01:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D01-shiba.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D01:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D02-bulldog.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D02:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D03-husky.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D03:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D04-beagle.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D04:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D05-poodle.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D05:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/D06-border-collie.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:D06:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/E01-block-bot.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:E01:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/E02-wheelie.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:E02:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "file:source-models/E05-split-stack.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "source:E05:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "source-models:expected-ids",
+      "status": "pass",
+      "detail": "got ['B01', 'D01', 'D02', 'D03', 'D04', 'D05', 'D06', 'E01', 'E02', 'E05']"
+    },
+    {
+      "name": "file:layout.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "file:scenes/map.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "file:scenes/showcase.json",
+      "status": "pass",
+      "detail": "required file exists"
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Map:gltf-glb-buffer-identical",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Map:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Map:gltf:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Map:glb:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "export:Pupsters_Block_Playroom_Map:obj:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Showcase:gltf-glb-buffer-identical",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Showcase:materials",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Showcase:gltf:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "asset:Pupsters_Block_Playroom_Showcase:glb:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "export:Pupsters_Block_Playroom_Showcase:obj:part-names",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "layout:floor-top",
+      "status": "pass",
+      "detail": "0"
+    },
+    {
+      "name": "layout:road:6-waypoints",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "layout:road:width",
+      "status": "pass",
+      "detail": "6"
+    },
+    {
+      "name": "layout:road:y",
+      "status": "pass",
+      "detail": "0.1"
+    },
+    {
+      "name": "layout:road:s-route",
+      "status": "pass",
+      "detail": "axes=['x', 'z', 'x', 'z', 'x'], signs=[1, 1, -1, 1, 1]"
+    },
+    {
+      "name": "layout:road:centerline-contiguous",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "layout:pads:count",
+      "status": "pass",
+      "detail": "16"
+    },
+    {
+      "name": "map:dogs:all-six-copied",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "map:dog:D01:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.2800x2.2200"
+    },
+    {
+      "name": "map:dog:D01:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.2800x2.2200"
+    },
+    {
+      "name": "map:dog:D01:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=2.2200x2.2800"
+    },
+    {
+      "name": "map:dog:D02:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.6975x3.0500"
+    },
+    {
+      "name": "map:dog:D02:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.6975x3.0500"
+    },
+    {
+      "name": "map:dog:D02:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=3.0500x2.6975"
+    },
+    {
+      "name": "map:dog:D03:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.3400x2.2800"
+    },
+    {
+      "name": "map:dog:D03:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.3400x2.2800"
+    },
+    {
+      "name": "map:dog:D03:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=2.2800x2.3400"
+    },
+    {
+      "name": "map:dog:D04:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.5320x2.6600"
+    },
+    {
+      "name": "map:dog:D04:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.5320x2.6600"
+    },
+    {
+      "name": "map:dog:D04:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=2.6600x2.5320"
+    },
+    {
+      "name": "map:dog:D05:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.4530x3.1000"
+    },
+    {
+      "name": "map:dog:D05:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.4530x3.1000"
+    },
+    {
+      "name": "map:dog:D05:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=3.1000x2.4530"
+    },
+    {
+      "name": "map:dog:D06:fits-pad:yaw:-1.570796",
+      "status": "pass",
+      "detail": "extent=2.4200x2.6900"
+    },
+    {
+      "name": "map:dog:D06:fits-pad:yaw:1.570796",
+      "status": "pass",
+      "detail": "extent=2.4200x2.6900"
+    },
+    {
+      "name": "map:dog:D06:fits-pad:yaw:3.141593",
+      "status": "pass",
+      "detail": "extent=2.6900x2.4200"
+    },
+    {
+      "name": "map:boss:source-half-bounds",
+      "status": "pass",
+      "detail": "half=[1.1, 2.32]"
+    },
+    {
+      "name": "map:boss:turn-radius",
+      "status": "pass",
+      "detail": "radius=2.468623"
+    },
+    {
+      "name": "map:boss:full-sweep-inside-road",
+      "status": "pass",
+      "detail": "radius=2.468623"
+    },
+    {
+      "name": "native:helpers:metadata",
+      "status": "pass",
+      "detail": "count=22"
+    },
+    {
+      "name": "native:rbxmx:present",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W01:position",
+      "status": "pass",
+      "detail": "expected=[-31.0, 0.1, -15.0], actual=[-31.    0.1 -15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W02:position",
+      "status": "pass",
+      "detail": "expected=[25.0, 0.1, -15.0], actual=[ 25.    0.1 -15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W03:position",
+      "status": "pass",
+      "detail": "expected=[25.0, 0.1, 0.0], actual=[25.   0.1  0. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W04:position",
+      "status": "pass",
+      "detail": "expected=[-25.0, 0.1, 0.0], actual=[-25.    0.1   0. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W05:position",
+      "status": "pass",
+      "detail": "expected=[-25.0, 0.1, 15.0], actual=[-25.    0.1  15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:W06:position",
+      "status": "pass",
+      "detail": "expected=[31.0, 0.1, 15.0], actual=[31.   0.1 15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P01:position",
+      "status": "pass",
+      "detail": "expected=[-18.0, 0.26, -7.5], actual=[-18.     0.26  -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P02:position",
+      "status": "pass",
+      "detail": "expected=[-11.0, 0.26, -7.5], actual=[-11.     0.26  -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P03:position",
+      "status": "pass",
+      "detail": "expected=[-4.0, 0.26, -7.5], actual=[-4.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P04:position",
+      "status": "pass",
+      "detail": "expected=[4.0, 0.26, -7.5], actual=[ 4.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P05:position",
+      "status": "pass",
+      "detail": "expected=[11.0, 0.26, -7.5], actual=[11.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P06:position",
+      "status": "pass",
+      "detail": "expected=[18.0, 0.26, -7.5], actual=[18.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P07:position",
+      "status": "pass",
+      "detail": "expected=[-18.0, 0.26, 7.5], actual=[-18.     0.26   7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P08:position",
+      "status": "pass",
+      "detail": "expected=[-11.0, 0.26, 7.5], actual=[-11.     0.26   7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P09:position",
+      "status": "pass",
+      "detail": "expected=[-4.0, 0.26, 7.5], actual=[-4.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P10:position",
+      "status": "pass",
+      "detail": "expected=[4.0, 0.26, 7.5], actual=[4.   0.26 7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P11:position",
+      "status": "pass",
+      "detail": "expected=[11.0, 0.26, 7.5], actual=[11.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P12:position",
+      "status": "pass",
+      "detail": "expected=[18.0, 0.26, 7.5], actual=[18.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P13:position",
+      "status": "pass",
+      "detail": "expected=[-32.0, 0.26, -2.0], actual=[-32.     0.26  -2.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P14:position",
+      "status": "pass",
+      "detail": "expected=[-32.0, 0.26, 7.0], actual=[-32.     0.26   7.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P15:position",
+      "status": "pass",
+      "detail": "expected=[32.0, 0.26, -7.0], actual=[32.    0.26 -7.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Map:P16:position",
+      "status": "pass",
+      "detail": "expected=[32.0, 0.26, 2.5], actual=[32.    0.26  2.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W01:position",
+      "status": "pass",
+      "detail": "expected=[-31.0, 0.1, -15.0], actual=[-31.    0.1 -15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W02:position",
+      "status": "pass",
+      "detail": "expected=[25.0, 0.1, -15.0], actual=[ 25.    0.1 -15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W03:position",
+      "status": "pass",
+      "detail": "expected=[25.0, 0.1, 0.0], actual=[25.   0.1  0. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W04:position",
+      "status": "pass",
+      "detail": "expected=[-25.0, 0.1, 0.0], actual=[-25.    0.1   0. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W05:position",
+      "status": "pass",
+      "detail": "expected=[-25.0, 0.1, 15.0], actual=[-25.    0.1  15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:W06:position",
+      "status": "pass",
+      "detail": "expected=[31.0, 0.1, 15.0], actual=[31.   0.1 15. ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P01:position",
+      "status": "pass",
+      "detail": "expected=[-18.0, 0.26, -7.5], actual=[-18.     0.26  -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P02:position",
+      "status": "pass",
+      "detail": "expected=[-11.0, 0.26, -7.5], actual=[-11.     0.26  -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P03:position",
+      "status": "pass",
+      "detail": "expected=[-4.0, 0.26, -7.5], actual=[-4.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P04:position",
+      "status": "pass",
+      "detail": "expected=[4.0, 0.26, -7.5], actual=[ 4.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P05:position",
+      "status": "pass",
+      "detail": "expected=[11.0, 0.26, -7.5], actual=[11.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P06:position",
+      "status": "pass",
+      "detail": "expected=[18.0, 0.26, -7.5], actual=[18.    0.26 -7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P07:position",
+      "status": "pass",
+      "detail": "expected=[-18.0, 0.26, 7.5], actual=[-18.     0.26   7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P08:position",
+      "status": "pass",
+      "detail": "expected=[-11.0, 0.26, 7.5], actual=[-11.     0.26   7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P09:position",
+      "status": "pass",
+      "detail": "expected=[-4.0, 0.26, 7.5], actual=[-4.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P10:position",
+      "status": "pass",
+      "detail": "expected=[4.0, 0.26, 7.5], actual=[4.   0.26 7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P11:position",
+      "status": "pass",
+      "detail": "expected=[11.0, 0.26, 7.5], actual=[11.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P12:position",
+      "status": "pass",
+      "detail": "expected=[18.0, 0.26, 7.5], actual=[18.    0.26  7.5 ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P13:position",
+      "status": "pass",
+      "detail": "expected=[-32.0, 0.26, -2.0], actual=[-32.     0.26  -2.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P14:position",
+      "status": "pass",
+      "detail": "expected=[-32.0, 0.26, 7.0], actual=[-32.     0.26   7.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P15:position",
+      "status": "pass",
+      "detail": "expected=[32.0, 0.26, -7.0], actual=[32.    0.26 -7.  ]"
+    },
+    {
+      "name": "native:helper:Pupsters_Block_Playroom_Showcase:P16:position",
+      "status": "pass",
+      "detail": "expected=[32.0, 0.26, 2.5], actual=[32.    0.26  2.5 ]"
+    },
+    {
+      "name": "viewer:map-data:present",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "viewer:map-data:world-vertices",
+      "status": "pass",
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "onlyAddedParts": [
+    "WhiteBrowL",
+    "WhiteBrowR"
+  ],
+  "existingPartsUnchanged": 26,
+  "files": 25,
+  "bytes": 377484,
+  "sha256": "bfb3cb7e836e9185ced1e1b1008c17fbf594ecf83f05ed3f9d835bd6f20945e4",
+  "allMembersMatchSources": true
+}

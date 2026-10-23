@@ -1,0 +1,255 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "id": "D01",
+      "file": "Shiba_Block.gltf",
+      "meshCount": 30,
+      "triangles": 984,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.0,
+        -1.08
+      ],
+      "sha256": "40daed12f5b8a3de867ef744bbcd2865f1f31faed9dbdbede05b358adce722a6"
+    },
+    {
+      "id": "D02",
+      "file": "Bulldog_Block.gltf",
+      "meshCount": 27,
+      "triangles": 636,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.93,
+        -1.38
+      ],
+      "sha256": "ce5eac9187df773f6cc27bb5fa26885c415513fe7514966a3ba3bed2bce1fa68"
+    },
+    {
+      "id": "D03",
+      "file": "Husky_Block.gltf",
+      "meshCount": 37,
+      "triangles": 756,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.16,
+        -1.105
+      ],
+      "sha256": "4f37a04be08f2bc4dbda403c58dc88c4cb30da83055f6f2a469236484a250435"
+    },
+    {
+      "id": "D04",
+      "file": "Beagle_Block.gltf",
+      "meshCount": 26,
+      "triangles": 624,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.11,
+        -1.12
+      ],
+      "sha256": "b174dff606130679e37cfe8998d835f20b7462a0d3af59fa649f085692cbfd32"
+    },
+    {
+      "id": "D05",
+      "file": "Poodle_Block.gltf",
+      "meshCount": 32,
+      "triangles": 696,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.16,
+        -1.1
+      ],
+      "sha256": "98c18920726515dcc5467d0702a74420a4b0336e8d3d74997440df597b4db647"
+    },
+    {
+      "id": "D06",
+      "file": "BorderCollie_Block.gltf",
+      "meshCount": 45,
+      "triangles": 852,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.13,
+        -1.155
+      ],
+      "sha256": "7b31c4f5171d85e75badfb628573f5aad87ef97380ccfca588d6c83b9fba3328"
+    },
+    {
+      "id": "D05U",
+      "file": "Poodle_Upgrade.gltf",
+      "meshCount": 49,
+      "triangles": 900,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        1.16,
+        -1.1
+      ],
+      "sha256": "3cc65a75d63dd1e29c5ee589328f4a9a63b44522fad383640a398d152c0792de"
+    }
+  ],
+  "nativeModels": [
+    {
+      "id": "D01",
+      "file": "native/D01-shiba.rbxmx",
+      "parts": 30,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D02",
+      "file": "native/D02-bulldog.rbxmx",
+      "parts": 27,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D03",
+      "file": "native/D03-husky.rbxmx",
+      "parts": 37,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D04",
+      "file": "native/D04-beagle.rbxmx",
+      "parts": 26,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D05",
+      "file": "native/D05-poodle.rbxmx",
+      "parts": 32,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D06",
+      "file": "native/D06-border-collie.rbxmx",
+      "parts": 45,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D05U",
+      "file": "native/D05-poodle-upgrade.rbxmx",
+      "parts": 49,
+      "sceneSha256Current": true
+    }
+  ],
+  "nativePack": {
+    "file": "native/Pupsters-All-Dogs.rbxmx",
+    "models": 6,
+    "uniqueReferents": true,
+    "gridTranslations": true
+  },
+  "pointedWedgeParts": 0,
+  "headDimensions": [
+    {
+      "id": "D01",
+      "headSize": [
+        2.16,
+        1.57,
+        1.49
+      ]
+    },
+    {
+      "id": "D02",
+      "headSize": [
+        2.55,
+        1.25,
+        1.45
+      ]
+    },
+    {
+      "id": "D03",
+      "headSize": [
+        1.94,
+        1.65,
+        1.4
+      ]
+    },
+    {
+      "id": "D04",
+      "headSize": [
+        1.8,
+        1.54,
+        1.42
+      ]
+    },
+    {
+      "id": "D05",
+      "headSize": [
+        1.68,
+        1.4,
+        1.34
+      ]
+    },
+    {
+      "id": "D06",
+      "headSize": [
+        2.1,
+        1.45,
+        1.44
+      ]
+    }
+  ],
+  "htmlFilesChecked": [
+    "index.html",
+    "viewer.html"
+  ],
+  "cpuRendersInspected": true,
+  "cpuRenderModelCount": 7,
+  "robloxStudioTested": false,
+  "browserViewerTested": false,
+  "scope": "Six static sitting dogs and one poodle upgrade appearance; no skeletal rig, animation or upgrade gameplay."
+}

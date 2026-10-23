@@ -1,0 +1,21 @@
+{
+  "locale": "ko-KR",
+  "strings": {
+    "start": "시작",
+    "formation": "편성",
+    "select": "선택",
+    "locked": "잠금",
+    "defenders": "수비대",
+    "wave": "웨이브",
+    "inProgress": "진행 중",
+    "upgrade": "강화",
+    "sell": "판매",
+    "continue": "계속하기",
+    "hideout": "아지트",
+    "ready": "준비",
+    "pause": "일시정지",
+    "settings": "설정",
+    "back": "뒤로",
+    "close": "닫기"
+  }
+}

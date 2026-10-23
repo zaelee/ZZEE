@@ -1,0 +1,87 @@
+{
+  "version": 4,
+  "date": "2026-10-23",
+  "mode": "built-in image_gen",
+  "scope": "Six representative designs and attack descriptions; Shiba mouth-spit animation updated.",
+  "characters": [
+    {
+      "id": "D01",
+      "slug": "shiba",
+      "name": "시바견",
+      "personality": "뼈다귀 사고뭉치",
+      "description": "능청스러운 눈썹과 비대칭 미소. 작은 뼈다귀를 입에 물고 공격을 준비해요.",
+      "color": "#f1e9d7",
+      "file": "characters/D01-shiba-bone.png",
+      "before": "before/D01-shiba.png",
+      "attackName": "뼈다귀 뱉기",
+      "attackMethod": "작은 뼈를 입에 물고 힘을 모았다가, 입으로 퉤! 하고 뱉어요.",
+      "attackSource": "입 · 뼈 발사체",
+      "animation": "previews/D01-shiba-bone-spit.webp"
+    },
+    {
+      "id": "D02",
+      "slug": "bulldog",
+      "name": "불도그",
+      "personality": "볼빵빵 고집쟁이",
+      "description": "공기를 가득 머금은 양 볼, 삐죽한 작은 이빨, 바람처럼 말린 귀끝.",
+      "color": "#f8e4cc",
+      "file": "characters/D02-bulldog.png",
+      "before": "before/D02-bulldog.png",
+      "attackName": "압축 공기탄",
+      "attackMethod": "양 볼에 공기를 가득 모았다가 입으로 공기 충격탄을 뿜어요.",
+      "attackSource": "입 · 공기탄"
+    },
+    {
+      "id": "D03",
+      "slug": "husky",
+      "name": "허스키",
+      "personality": "시크한 냉기쟁이",
+      "description": "귀끝과 꼬리 끝에 붙은 얼음 결정. 차가운 눈빛과 볼의 서리 조각.",
+      "color": "#dff4fa",
+      "file": "characters/D03-husky.png",
+      "before": "before/D03-husky.png",
+      "attackName": "냉기 숨결",
+      "attackMethod": "숨을 들이마신 뒤 입에서 차가운 냉기를 길게 내뿜어요.",
+      "attackSource": "입 · 냉기"
+    },
+    {
+      "id": "D04",
+      "slug": "beagle",
+      "name": "비글",
+      "personality": "거품 말썽꾸러기",
+      "description": "호기심 가득한 눈과 입가에 붙은 거품. 귀끝에도 분홍 흔적이 남았어요.",
+      "color": "#f8e1eb",
+      "file": "characters/D04-beagle.png",
+      "before": "before/D04-beagle.png",
+      "attackName": "점착 거품",
+      "attackMethod": "입가에서 끈적한 분홍 거품을 부풀린 뒤 앞으로 뱉어요.",
+      "attackSource": "입 · 거품 발사체"
+    },
+    {
+      "id": "D05",
+      "slug": "poodle",
+      "name": "푸들",
+      "personality": "찌릿한 예민보스",
+      "description": "정수리와 귀끝 털이 지그재그로 곤두서고, 레몬·보라 포인트가 번쩍.",
+      "color": "#eee5fa",
+      "file": "characters/D05-poodle.png",
+      "before": "before/D05-poodle.png",
+      "attackName": "정전기 방출",
+      "attackMethod": "정수리와 귀끝 털을 곤두세워, 털에서 모은 정전기를 방출해요.",
+      "attackSource": "털 · 정전기"
+    },
+    {
+      "id": "D06",
+      "slug": "border-collie",
+      "name": "보더콜리",
+      "personality": "눈치 빠른 대장",
+      "description": "한쪽은 쫑긋, 한쪽은 접힌 귀. 또렷한 눈과 민트빛 목털로 리더의 인상.",
+      "color": "#e2f2e7",
+      "file": "characters/D06-border-collie.png",
+      "before": "before/D06-border-collie.png",
+      "attackName": "지원 짖음",
+      "attackMethod": "힘차게 짖어 파동을 보내고 주변 아군을 강화해요. 직접 공격보다 지원 역할이에요.",
+      "attackSource": "짖음 · 아군 지원"
+    }
+  ]
+}

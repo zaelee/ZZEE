@@ -1,0 +1,583 @@
+{
+  "name": "Beagle_Block",
+  "variant": "block",
+  "version": 2,
+  "id": "D04",
+  "slug": "beagle",
+  "displayName": "미글",
+  "feature": "긴 네모 귀 · 삼색 얼굴 · 파란 침",
+  "attackName": "침방울 튕기기",
+  "attackMethod": "입가의 작은 침방울을 앞으로 톡! 튕겨요.",
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "mouth": [
+    0,
+    0.91,
+    -1.42
+  ],
+  "materials": {
+    "orange": {
+      "color": [
+        0.8823529412,
+        0.4901960784,
+        0.2
+      ]
+    },
+    "brown": {
+      "color": [
+        0.3215686275,
+        0.1843137255,
+        0.1254901961
+      ]
+    },
+    "black": {
+      "color": [
+        0.1058823529,
+        0.0901960784,
+        0.0980392157
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9568627451,
+        0.8705882353
+      ]
+    },
+    "drool": {
+      "color": [
+        0.568627451,
+        0.8588235294,
+        0.9568627451
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "NarrowShortTorso",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.28,
+        1.02,
+        1.18
+      ],
+      "position": [
+        0,
+        0.86,
+        0.56
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "BlackBackSaddle",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.22,
+        0.38,
+        0.8
+      ],
+      "position": [
+        0,
+        1.35,
+        0.68
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "WhiteChest",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        0.74,
+        0.62,
+        0.2
+      ],
+      "position": [
+        0,
+        0.77,
+        -0.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFL_Leg",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.42,
+        0.54,
+        0.5
+      ],
+      "position": [
+        -0.55,
+        0.4,
+        -0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegFL_Paw",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.48,
+        0.3,
+        0.58
+      ],
+      "position": [
+        -0.55,
+        0.15,
+        -0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFR_Leg",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.42,
+        0.54,
+        0.5
+      ],
+      "position": [
+        0.55,
+        0.4,
+        -0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegFR_Paw",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.48,
+        0.3,
+        0.58
+      ],
+      "position": [
+        0.55,
+        0.15,
+        -0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBL_Leg",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.42,
+        0.54,
+        0.48
+      ],
+      "position": [
+        -0.55,
+        0.4,
+        0.88
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegBL_Paw",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.48,
+        0.3,
+        0.58
+      ],
+      "position": [
+        -0.55,
+        0.15,
+        0.84
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBR_Leg",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.42,
+        0.54,
+        0.48
+      ],
+      "position": [
+        0.55,
+        0.4,
+        0.88
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegBR_Paw",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.48,
+        0.3,
+        0.58
+      ],
+      "position": [
+        0.55,
+        0.15,
+        0.84
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "NarrowHead",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.8,
+        1.54,
+        1.42
+      ],
+      "position": [
+        0,
+        1.42,
+        -0.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LongHangingEarL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.48,
+        1.28,
+        0.58
+      ],
+      "position": [
+        -1.04,
+        1.31,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brown"
+    },
+    {
+      "name": "SquareEarEndL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.58,
+        0.46,
+        0.62
+      ],
+      "position": [
+        -1.04,
+        0.73,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brown"
+    },
+    {
+      "name": "LongHangingEarR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.48,
+        1.28,
+        0.58
+      ],
+      "position": [
+        1.04,
+        1.31,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brown"
+    },
+    {
+      "name": "SquareEarEndR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.58,
+        0.46,
+        0.62
+      ],
+      "position": [
+        1.04,
+        0.73,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brown"
+    },
+    {
+      "name": "WhiteCenterStripe",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.34,
+        0.94,
+        0.08
+      ],
+      "position": [
+        0,
+        1.74,
+        -1.28
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.16,
+        0.05
+      ],
+      "position": [
+        -0.38,
+        1.52,
+        -1.275
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.16,
+        0.05
+      ],
+      "position": [
+        0.38,
+        1.52,
+        -1.275
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "WhiteMuzzle",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.16,
+        0.48,
+        0.2
+      ],
+      "position": [
+        0,
+        1.0,
+        -1.31
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "SquareNose",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.28,
+        0.17,
+        0.09
+      ],
+      "position": [
+        0,
+        1.12,
+        -1.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "SmallMouth",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.24,
+        0.04,
+        0.05
+      ],
+      "position": [
+        0,
+        0.91,
+        -1.42
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "ShortBlueDrool",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.13,
+        0.21,
+        0.11
+      ],
+      "position": [
+        0.31,
+        0.79,
+        -1.46
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "drool"
+    },
+    {
+      "name": "ShortTail",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.3,
+        0.46,
+        0.34
+      ],
+      "position": [
+        0,
+        1.48,
+        1.13
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "WhiteTailEnd",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.3,
+        0.2,
+        0.34
+      ],
+      "position": [
+        0,
+        1.81,
+        1.13
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    }
+  ]
+}

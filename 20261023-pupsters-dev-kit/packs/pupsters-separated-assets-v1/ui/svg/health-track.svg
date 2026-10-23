@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="64" viewBox="0 0 480 64" fill="none">
+  <title>Empty health bar track</title>
+  <path d="M30 9 C19 9 12 17 12 29 L12 36 C12 49 21 56 34 55 L447 55 C460 55 468 47 468 34 L467 28 C467 17 458 10 446 10 Z" fill="#D6D5D0" stroke="#171716" stroke-width="8" stroke-linejoin="round"/>
+</svg>

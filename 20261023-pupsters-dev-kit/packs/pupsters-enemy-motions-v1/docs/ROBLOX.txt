@@ -1,0 +1,67 @@
+PUPSTERS enemy motions for Roblox
+==================================
+
+Files
+-----
+roblox/E01-motions.rbxmx through E08-motions.rbxmx
+roblox/B01-motions.rbxmx
+roblox/Pupsters-Enemy-Motions-Demo.rbxmx
+
+Import an .rbxmx file in Roblox Studio. Each enemy Model contains its original
+grouped Parts and HitPoint attachment, plus:
+
+  MotionRoot     invisible anchored PrimaryPart used as the stable model pivot
+  Motion         BindableEvent accepting one string command
+  MotionPlayback server Script containing the three sampled clips
+
+Commands
+--------
+
+  model.Motion:Fire("Move")
+  model.Motion:Fire("Hit")
+  model.Motion:Fire("Death")
+  model.Motion:Fire("Stop")
+  model.Motion:Fire("Reset")
+
+Move loops in place. Firing the same Move command while it is already playing
+does not restart it. Hit plays once and resumes Move when it interrupted Move.
+Hit and Death blend from the current pose for 0.08 seconds. Death stops other
+motion and leaves every animated part hidden; only Reset exits the terminal
+death state. Stop cancels playback and restores the exact rest pose. Reset also
+restores the rest pose and makes another Death possible.
+
+All model Parts are anchored with CanCollide=false. Move the model along a game
+path with Model:PivotTo(...); MotionRoot keeps playback relative to the current
+model pivot, so repeated Hit and Death commands do not accumulate positional
+drift. The clips provide visual motion only: no pathfinding, damage, targeting,
+RemoteEvents, or gameplay authority is included.
+
+Auto preview
+------------
+
+Individual files have the AutoPreview attribute set to false. The combined demo
+sets it to true and cycles Reset -> Move -> Hit -> Move -> Death -> Reset. Set
+AutoPreview=false before Play if you want to control a demo model manually.
+
+Data behavior
+-------------
+
+Each MotionPlayback Script embeds the 30 fps Move (1.2 s), Hit (0.6 s), and
+Death (1.6 s) frame tables from animations/ID.json. A row is position XYZ,
+quaternion XYZW, scale XYZ, and visibility. Scale multiplies the native Part
+size with a 0.001-stud minimum on every axis. Visibility 0 uses Transparency=1;
+visibility 1 restores the part's source opacity, including Clear Crawler's 0.38
+opacity body (Transparency=0.62).
+
+Validation
+----------
+
+Run from this package directory:
+
+  python tools/build_roblox_motions.py
+
+The builder validates source/native part order and properties, exact rest poses,
+clip timing and terminal states, XML references, PrimaryPart wiring, unchanged
+native attachments/materials/transforms, and byte-for-byte regenerated script
+source. It writes roblox/validation.json. This is structural validation; Roblox
+Studio/Luau runtime playback still needs checking in Roblox Studio.

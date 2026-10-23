@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Paw category icon</title>
+  <ellipse cx="34" cy="43" rx="15" ry="21" transform="rotate(-22 34 43)" fill="#171716"/>
+  <ellipse cx="61" cy="31" rx="15" ry="22" transform="rotate(-4 61 31)" fill="#171716"/>
+  <ellipse cx="91" cy="42" rx="15" ry="21" transform="rotate(20 91 42)" fill="#171716"/>
+  <path d="M64 54 C45 53 27 73 29 92 C31 109 48 112 63 103 C78 113 96 108 99 92 C102 73 83 55 64 54 Z" fill="#171716"/>
+</svg>

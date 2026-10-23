@@ -1,0 +1,6320 @@
+{
+  "id": "MAP01",
+  "name": "Pupsters_Block_Playroom_Map",
+  "displayName": "사고멍치 · 블록 놀이방",
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "materials": {
+    "wood": {
+      "color": [
+        0.6627450980392157,
+        0.47843137254901963,
+        0.3176470588235294
+      ]
+    },
+    "floorA": {
+      "color": [
+        0.9529411764705882,
+        0.8745098039215686,
+        0.7372549019607844
+      ]
+    },
+    "floorB": {
+      "color": [
+        0.9215686274509803,
+        0.8313725490196079,
+        0.6862745098039216
+      ]
+    },
+    "trim": {
+      "color": [
+        0.8352941176470589,
+        0.6823529411764706,
+        0.4823529411764706
+      ]
+    },
+    "road": {
+      "color": [
+        0.9058823529411765,
+        0.6862745098039216,
+        0.3803921568627451
+      ]
+    },
+    "roadEnd": {
+      "color": [
+        0.6431372549019608,
+        0.7843137254901961,
+        0.6431372549019608
+      ]
+    },
+    "roadEdge": {
+      "color": [
+        0.7803921568627451,
+        0.5607843137254902,
+        0.3058823529411765
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9450980392156862,
+        0.8352941176470589
+      ]
+    },
+    "dark": {
+      "color": [
+        0.4,
+        0.3333333333333333,
+        0.26666666666666666
+      ]
+    },
+    "mint": {
+      "color": [
+        0.5019607843137255,
+        0.7098039215686275,
+        0.6352941176470588
+      ]
+    },
+    "mintDark": {
+      "color": [
+        0.3215686274509804,
+        0.49411764705882355,
+        0.4392156862745098
+      ]
+    },
+    "pad": {
+      "color": [
+        0.5882352941176471,
+        0.7647058823529411,
+        0.6431372549019608
+      ]
+    },
+    "padInset": {
+      "color": [
+        0.8117647058823529,
+        0.8745098039215686,
+        0.7215686274509804
+      ]
+    },
+    "paw": {
+      "color": [
+        0.4470588235294118,
+        0.596078431372549,
+        0.4745098039215686
+      ]
+    },
+    "sofa": {
+      "color": [
+        0.5725490196078431,
+        0.6941176470588235,
+        0.611764705882353
+      ]
+    },
+    "sofaDark": {
+      "color": [
+        0.43137254901960786,
+        0.5686274509803921,
+        0.49019607843137253
+      ]
+    },
+    "yellow": {
+      "color": [
+        0.9294117647058824,
+        0.792156862745098,
+        0.41568627450980394
+      ]
+    },
+    "blue": {
+      "color": [
+        0.44313725490196076,
+        0.6627450980392157,
+        0.7607843137254902
+      ]
+    },
+    "coral": {
+      "color": [
+        0.8745098039215686,
+        0.47058823529411764,
+        0.36470588235294116
+      ]
+    },
+    "bookshelf": {
+      "color": [
+        0.7725490196078432,
+        0.5803921568627451,
+        0.3843137254901961
+      ]
+    },
+    "green": {
+      "color": [
+        0.4470588235294118,
+        0.5686274509803921,
+        0.36470588235294116
+      ]
+    },
+    "leaf": {
+      "color": [
+        0.596078431372549,
+        0.7176470588235294,
+        0.47058823529411764
+      ]
+    },
+    "pot": {
+      "color": [
+        0.7254901960784313,
+        0.5490196078431373,
+        0.42745098039215684
+      ]
+    },
+    "white": {
+      "color": [
+        1.0,
+        0.9764705882352941,
+        0.9137254901960784
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "MapBase",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        1.12,
+        52
+      ],
+      "position": [
+        0,
+        -0.64,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank00",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank01",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -20
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank02",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -16
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank03",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank04",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank05",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank06",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank07",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank08",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank09",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank10",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        16
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank11",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        20
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorB",
+      "collidable": true
+    },
+    {
+      "name": "FloorPlank12",
+      "group": "Floor",
+      "type": "box",
+      "size": [
+        76,
+        0.08,
+        3.96
+      ],
+      "position": [
+        0,
+        -0.04,
+        24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "floorA",
+      "collidable": true
+    },
+    {
+      "name": "RimW",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.4,
+        0.5,
+        51.2
+      ],
+      "position": [
+        -37.8,
+        0.25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "trim",
+      "collidable": true
+    },
+    {
+      "name": "RimE",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.4,
+        0.5,
+        51.2
+      ],
+      "position": [
+        37.8,
+        0.25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "trim",
+      "collidable": true
+    },
+    {
+      "name": "RimN",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        76,
+        0.5,
+        0.4
+      ],
+      "position": [
+        0,
+        0.25,
+        -25.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "trim",
+      "collidable": true
+    },
+    {
+      "name": "RimS",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        76,
+        0.5,
+        0.4
+      ],
+      "position": [
+        0,
+        0.25,
+        25.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "trim",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge00",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.0,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        -31.225,
+        0.0275,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge01",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        -25.0,
+        0.0275,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge02",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.45
+      ],
+      "position": [
+        -25.0,
+        0.0275,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge03",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        8.55
+      ],
+      "position": [
+        -25.0,
+        0.0275,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge04",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        -25.0,
+        0.0275,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge05",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        43.55,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        0.0,
+        0.0275,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge06",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        43.55,
+        0.055,
+        6.45
+      ],
+      "position": [
+        0.0,
+        0.0275,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge07",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        43.55,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        0.0,
+        0.0275,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge08",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        25.0,
+        0.0275,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge09",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        8.55
+      ],
+      "position": [
+        25.0,
+        0.0275,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge10",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.45
+      ],
+      "position": [
+        25.0,
+        0.0275,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge11",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.450000000000003,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        25.0,
+        0.0275,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "PathEdge12",
+      "group": "PathEdge",
+      "type": "box",
+      "size": [
+        6.0,
+        0.055,
+        6.450000000000001
+      ],
+      "position": [
+        31.225,
+        0.0275,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEdge",
+      "collidable": true
+    },
+    {
+      "name": "Road00",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        -31.0,
+        0.05,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road01",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        -25.0,
+        0.05,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road02",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        -25.0,
+        0.05,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road03",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        9.0
+      ],
+      "position": [
+        -25.0,
+        0.05,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road04",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        -25.0,
+        0.05,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road05",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        44.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        0.0,
+        0.05,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road06",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        44.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road07",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        44.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        0.0,
+        0.05,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road08",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        25.0,
+        0.05,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road09",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        9.0
+      ],
+      "position": [
+        25.0,
+        0.05,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road10",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        25.0,
+        0.05,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road11",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        25.0,
+        0.05,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "road",
+      "collidable": true
+    },
+    {
+      "name": "Road12",
+      "group": "Path",
+      "type": "box",
+      "size": [
+        6.0,
+        0.1,
+        6.0
+      ],
+      "position": [
+        31.0,
+        0.05,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "roadEnd",
+      "collidable": true
+    },
+    {
+      "name": "Arrow0_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -14.0,
+        0.116,
+        -15.58
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -13.71,
+        0.116,
+        -15.29
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -14.58,
+        0.116,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -14.29,
+        0.116,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -14.0,
+        0.116,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -13.71,
+        0.116,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -13.42,
+        0.116,
+        -15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -13.71,
+        0.116,
+        -14.71
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow0_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -14.0,
+        0.116,
+        -14.42
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.58,
+        0.116,
+        -8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.29,
+        0.116,
+        -7.71
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.0,
+        0.116,
+        -8.58
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.0,
+        0.116,
+        -8.29
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.0,
+        0.116,
+        -8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.0,
+        0.116,
+        -7.71
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        25.0,
+        0.116,
+        -7.42
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        24.71,
+        0.116,
+        -7.71
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow1_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        24.42,
+        0.116,
+        -8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        8.0,
+        0.116,
+        0.58
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        7.71,
+        0.116,
+        0.2899999999999999
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        8.58,
+        0.116,
+        7.102951435054648e-17
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        8.29,
+        0.116,
+        3.551475717527324e-17
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        8.0,
+        0.116,
+        0.0
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        7.71,
+        0.116,
+        -3.551475717527324e-17
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        7.42,
+        0.116,
+        -7.102951435054648e-17
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        7.71,
+        0.116,
+        -0.29000000000000004
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow2_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        8.0,
+        0.116,
+        -0.58
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -24.42,
+        0.116,
+        8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -24.71,
+        0.116,
+        8.29
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.0,
+        0.116,
+        7.42
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.0,
+        0.116,
+        7.71
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.0,
+        0.116,
+        8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.0,
+        0.116,
+        8.29
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.0,
+        0.116,
+        8.58
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.29,
+        0.116,
+        8.29
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow3_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -25.58,
+        0.116,
+        8.0
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -8.0,
+        0.116,
+        14.42
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -7.71,
+        0.116,
+        14.71
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -8.58,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -8.29,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -8.0,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -7.71,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -7.42,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -7.71,
+        0.116,
+        15.29
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow4_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        -8.0,
+        0.116,
+        15.58
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_02",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.0,
+        0.116,
+        14.42
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_13",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.29,
+        0.116,
+        14.71
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_20",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        17.42,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_21",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        17.71,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_22",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.0,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_23",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.29,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_24",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.58,
+        0.116,
+        15.0
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_33",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.29,
+        0.116,
+        15.29
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "Arrow5_42",
+      "group": "RouteMarks",
+      "type": "box",
+      "size": [
+        0.29,
+        0.025,
+        0.29
+      ],
+      "position": [
+        18.0,
+        0.116,
+        15.58
+      ],
+      "rotation": [
+        0,
+        0.0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "P01_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -18,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P01_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -18,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P01_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -18,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P01_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -18.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P01_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -18.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P01_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -17.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P01_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -17.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P02_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -11,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P02_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -11,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P02_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -11,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P02_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -11.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P02_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -11.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P02_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -10.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P02_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -10.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P03_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -4,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P03_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -4,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P03_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -4,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P03_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -4.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P03_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -4.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P03_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -3.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P03_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -3.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P04_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        4,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P04_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        4,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P04_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        4,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P04_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        3.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P04_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        3.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P04_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        4.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P04_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        4.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P05_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        11,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P05_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        11,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P05_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        11,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P05_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        10.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P05_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        10.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P05_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        11.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P05_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        11.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P06_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        18,
+        0.11,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P06_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        18,
+        0.24,
+        -7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P06_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        18,
+        0.27,
+        -7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P06_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        17.38,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P06_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        17.79,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P06_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        18.21,
+        0.27,
+        -8.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P06_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        18.62,
+        0.27,
+        -7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P07_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -18,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P07_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -18,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P07_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -18,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P07_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -18.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P07_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -18.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P07_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -17.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P07_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -17.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P08_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -11,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P08_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -11,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P08_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -11,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P08_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -11.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P08_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -11.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P08_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -10.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P08_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -10.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P09_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -4,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P09_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -4,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P09_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -4,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P09_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -4.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P09_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -4.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P09_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -3.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P09_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -3.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P10_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        4,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P10_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        4,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P10_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        4,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P10_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        3.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P10_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        3.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P10_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        4.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P10_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        4.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P11_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        11,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P11_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        11,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P11_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        11,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P11_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        10.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P11_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        10.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P11_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        11.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P11_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        11.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P12_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        18,
+        0.11,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P12_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        18,
+        0.24,
+        7.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P12_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        18,
+        0.27,
+        7.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P12_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        17.38,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P12_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        17.79,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P12_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        18.21,
+        0.27,
+        6.9399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P12_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        18.62,
+        0.27,
+        7.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P13_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -32,
+        0.11,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P13_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -32,
+        0.24,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P13_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -32,
+        0.27,
+        -1.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P13_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -32.62,
+        0.27,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P13_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -32.21,
+        0.27,
+        -2.56
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P13_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -31.79,
+        0.27,
+        -2.56
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P13_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -31.38,
+        0.27,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P14_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        -32,
+        0.11,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P14_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        -32,
+        0.24,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P14_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        -32,
+        0.27,
+        7.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P14_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -32.62,
+        0.27,
+        6.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P14_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -32.21,
+        0.27,
+        6.4399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P14_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -31.79,
+        0.27,
+        6.4399999999999995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P14_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        -31.38,
+        0.27,
+        6.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P15_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        32,
+        0.11,
+        -7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P15_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        32,
+        0.24,
+        -7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P15_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        32,
+        0.27,
+        -6.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P15_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        31.38,
+        0.27,
+        -7.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P15_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        31.79,
+        0.27,
+        -7.5600000000000005
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P15_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        32.21,
+        0.27,
+        -7.5600000000000005
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P15_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        32.62,
+        0.27,
+        -7.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P16_Base",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        4.2,
+        0.22,
+        4.2
+      ],
+      "position": [
+        32,
+        0.11,
+        2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pad",
+      "collidable": true
+    },
+    {
+      "name": "P16_Inset",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        3.65,
+        0.04,
+        3.65
+      ],
+      "position": [
+        32,
+        0.24,
+        2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "padInset",
+      "collidable": true
+    },
+    {
+      "name": "P16_Paw",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.86,
+        0.02,
+        0.7
+      ],
+      "position": [
+        32,
+        0.27,
+        2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P16_Toe0",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        31.38,
+        0.27,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P16_Toe1",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        31.79,
+        0.27,
+        1.94
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P16_Toe2",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        32.21,
+        0.27,
+        1.94
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "P16_Toe3",
+      "group": "PlacementPads",
+      "type": "box",
+      "size": [
+        0.3,
+        0.02,
+        0.34
+      ],
+      "position": [
+        32.62,
+        0.27,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "paw",
+      "collidable": false
+    },
+    {
+      "name": "SofaLeg-8.5_-24",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.65,
+        0.5,
+        0.65
+      ],
+      "position": [
+        -8.5,
+        0.25,
+        -24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": true
+    },
+    {
+      "name": "SofaLeg-8.5_-21.8",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.65,
+        0.5,
+        0.65
+      ],
+      "position": [
+        -8.5,
+        0.25,
+        -21.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": true
+    },
+    {
+      "name": "SofaLeg8.5_-24",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.65,
+        0.5,
+        0.65
+      ],
+      "position": [
+        8.5,
+        0.25,
+        -24
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": true
+    },
+    {
+      "name": "SofaLeg8.5_-21.8",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.65,
+        0.5,
+        0.65
+      ],
+      "position": [
+        8.5,
+        0.25,
+        -21.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": true
+    },
+    {
+      "name": "SofaBase",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        21,
+        0.8,
+        4
+      ],
+      "position": [
+        0,
+        0.9,
+        -23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "sofaDark",
+      "collidable": true
+    },
+    {
+      "name": "SofaBack",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        21,
+        2.3,
+        0.7
+      ],
+      "position": [
+        0,
+        2.1,
+        -24.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "sofa",
+      "collidable": true
+    },
+    {
+      "name": "SofaArmL",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.05,
+        1.65,
+        4.4
+      ],
+      "position": [
+        -10.25,
+        1.35,
+        -23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "sofa",
+      "collidable": true
+    },
+    {
+      "name": "SofaArmR",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.05,
+        1.65,
+        4.4
+      ],
+      "position": [
+        10.25,
+        1.35,
+        -23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "sofa",
+      "collidable": true
+    },
+    {
+      "name": "SofaCushion0",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.35,
+        0.35,
+        2.9
+      ],
+      "position": [
+        -6.7,
+        1.47,
+        -22.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "SofaCushion1",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.35,
+        0.35,
+        2.9
+      ],
+      "position": [
+        0,
+        1.47,
+        -22.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "SofaCushion2",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.35,
+        0.35,
+        2.9
+      ],
+      "position": [
+        6.7,
+        1.47,
+        -22.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "SofaPillowYellow",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        2.3,
+        1.2,
+        0.8
+      ],
+      "position": [
+        -6.5,
+        2.22,
+        -23.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "SofaPillowBlue",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        2.0,
+        1.15,
+        0.8
+      ],
+      "position": [
+        6.5,
+        2.195,
+        -23.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseBack",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        7,
+        4.7,
+        0.4
+      ],
+      "position": [
+        32.5,
+        2.35,
+        -24.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseSide29.2",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.4,
+        4.7,
+        3.2
+      ],
+      "position": [
+        29.2,
+        2.35,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseSide35.8",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.4,
+        4.7,
+        3.2
+      ],
+      "position": [
+        35.8,
+        2.35,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseShelf0",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.6,
+        0.3,
+        3.2
+      ],
+      "position": [
+        32.5,
+        0.25,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseShelf1",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.6,
+        0.3,
+        3.2
+      ],
+      "position": [
+        32.5,
+        2.4,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "BookcaseShelf2",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        6.6,
+        0.3,
+        3.2
+      ],
+      "position": [
+        32.5,
+        4.5,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bookshelf",
+      "collidable": true
+    },
+    {
+      "name": "Book0",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.75,
+        1.3,
+        1.8
+      ],
+      "position": [
+        30,
+        1.05,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "Book1",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.75,
+        1.6,
+        1.8
+      ],
+      "position": [
+        31,
+        1.2000000000000002,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "Book2",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.75,
+        1.4,
+        1.8
+      ],
+      "position": [
+        32.1,
+        1.1,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "Book3",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.75,
+        1.65,
+        1.8
+      ],
+      "position": [
+        33.3,
+        1.225,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mintDark",
+      "collidable": true
+    },
+    {
+      "name": "Book4",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.75,
+        1.2,
+        1.8
+      ],
+      "position": [
+        34.4,
+        1.0,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": true
+    },
+    {
+      "name": "TopToy0",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.6,
+        1.5,
+        1.6
+      ],
+      "position": [
+        30.7,
+        3.3,
+        -23.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "TopToy1",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.6,
+        1.5,
+        1.6
+      ],
+      "position": [
+        33.5,
+        3.3,
+        -23.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "PlantPot",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        3,
+        1.6,
+        3
+      ],
+      "position": [
+        -34,
+        0.8,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "pot",
+      "collidable": true
+    },
+    {
+      "name": "PlantSoil",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        2.5,
+        0.14,
+        2.5
+      ],
+      "position": [
+        -34,
+        1.64,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wood",
+      "collidable": false
+    },
+    {
+      "name": "PlantStem",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        0.65,
+        2.5,
+        0.65
+      ],
+      "position": [
+        -34,
+        2.85,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "green",
+      "collidable": true
+    },
+    {
+      "name": "PlantLeafA",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        3.8,
+        1.65,
+        3.0
+      ],
+      "position": [
+        -34.4,
+        3.65,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "green",
+      "collidable": true
+    },
+    {
+      "name": "PlantLeafB",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        2.8,
+        1.75,
+        3.3
+      ],
+      "position": [
+        -33.45,
+        4.55,
+        22.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "leaf",
+      "collidable": true
+    },
+    {
+      "name": "LooseToy0",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.8,
+        1.7,
+        1.8
+      ],
+      "position": [
+        -8,
+        0.85,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "LooseToy1",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.8,
+        1.7,
+        1.8
+      ],
+      "position": [
+        -5.8,
+        0.85,
+        22.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "LooseToy2",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.8,
+        1.7,
+        1.8
+      ],
+      "position": [
+        -7,
+        0.85,
+        24.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "LooseToy3",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.8,
+        1.7,
+        1.8
+      ],
+      "position": [
+        8,
+        0.85,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "LooseToy4",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.8,
+        1.7,
+        1.8
+      ],
+      "position": [
+        10.3,
+        0.85,
+        23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "ToyStack",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        1.6,
+        1.4,
+        1.6
+      ],
+      "position": [
+        -8,
+        2.4,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "WaterTray",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        5.2,
+        0.65,
+        3.3
+      ],
+      "position": [
+        21,
+        0.325,
+        22.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mintDark",
+      "collidable": true
+    },
+    {
+      "name": "WaterInset",
+      "group": "Props",
+      "type": "box",
+      "size": [
+        4.3,
+        0.12,
+        2.4
+      ],
+      "position": [
+        21,
+        0.71,
+        22.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": false
+    },
+    {
+      "name": "ToyBoxFloor",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        7,
+        0.08,
+        10.4
+      ],
+      "position": [
+        -33.5,
+        0.04,
+        -15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "ToyBoxBack",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.45,
+        4.1,
+        10.4
+      ],
+      "position": [
+        -36.9,
+        2.05,
+        -15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mintDark",
+      "collidable": true
+    },
+    {
+      "name": "ToyBoxSideN",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        7,
+        2.7,
+        0.4
+      ],
+      "position": [
+        -33.5,
+        1.35,
+        -20
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "ToyBoxSideS",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        7,
+        2.7,
+        0.4
+      ],
+      "position": [
+        -33.5,
+        1.35,
+        -10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "SpawnPostN",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.7,
+        4.2,
+        0.7
+      ],
+      "position": [
+        -30.4,
+        2.1,
+        -19.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "SpawnPostS",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.7,
+        4.2,
+        0.7
+      ],
+      "position": [
+        -30.4,
+        2.1,
+        -10.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "SpawnLintel",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.7,
+        0.6,
+        10.0
+      ],
+      "position": [
+        -30.4,
+        4.3,
+        -15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral",
+      "collidable": true
+    },
+    {
+      "name": "SpawnTopBlock0",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.9,
+        0.7,
+        0.9
+      ],
+      "position": [
+        -30.4,
+        4.95,
+        -18
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "blue",
+      "collidable": true
+    },
+    {
+      "name": "SpawnTopBlock1",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.9,
+        0.7,
+        0.9
+      ],
+      "position": [
+        -30.4,
+        4.95,
+        -15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow",
+      "collidable": true
+    },
+    {
+      "name": "SpawnTopBlock2",
+      "group": "Spawn",
+      "type": "box",
+      "size": [
+        0.9,
+        0.7,
+        0.9
+      ],
+      "position": [
+        -30.4,
+        4.95,
+        -12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": true
+    },
+    {
+      "name": "BedBase",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        7.2,
+        0.08,
+        9.4
+      ],
+      "position": [
+        33.4,
+        0.04,
+        15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "BedBack",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.5,
+        2.6,
+        9.4
+      ],
+      "position": [
+        36.75,
+        1.3,
+        15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mintDark",
+      "collidable": true
+    },
+    {
+      "name": "BedRailN",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        7.2,
+        1.3,
+        0.4
+      ],
+      "position": [
+        33.4,
+        0.65,
+        10.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "BedRailS",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        7.2,
+        1.3,
+        0.4
+      ],
+      "position": [
+        33.4,
+        0.65,
+        19.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "mint",
+      "collidable": true
+    },
+    {
+      "name": "BedPillow0",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        1.4,
+        0.55,
+        2.8
+      ],
+      "position": [
+        35.4,
+        0.355,
+        12.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": true
+    },
+    {
+      "name": "BedPillow1",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        1.4,
+        0.55,
+        2.8
+      ],
+      "position": [
+        35.4,
+        0.355,
+        17.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": true
+    },
+    {
+      "name": "GoalBoneInside",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.36,
+        2.5
+      ],
+      "position": [
+        36.48,
+        1.6,
+        15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "GoalBoneInsideA",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.8,
+        0.6
+      ],
+      "position": [
+        36.48,
+        1.6,
+        13.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "GoalBoneInsideB",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.8,
+        0.6
+      ],
+      "position": [
+        36.48,
+        1.6,
+        16.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "GoalBoneOutside",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.36,
+        2.5
+      ],
+      "position": [
+        37.02,
+        1.6,
+        15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "GoalBoneOutsideA",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.8,
+        0.6
+      ],
+      "position": [
+        37.02,
+        1.6,
+        13.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    },
+    {
+      "name": "GoalBoneOutsideB",
+      "group": "Goal",
+      "type": "box",
+      "size": [
+        0.08,
+        0.8,
+        0.6
+      ],
+      "position": [
+        37.02,
+        1.6,
+        16.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "collidable": false
+    }
+  ],
+  "anchors": [
+    {
+      "id": "W01",
+      "position": [
+        -31,
+        0.1,
+        -15
+      ]
+    },
+    {
+      "id": "W02",
+      "position": [
+        25,
+        0.1,
+        -15
+      ]
+    },
+    {
+      "id": "W03",
+      "position": [
+        25,
+        0.1,
+        0
+      ]
+    },
+    {
+      "id": "W04",
+      "position": [
+        -25,
+        0.1,
+        0
+      ]
+    },
+    {
+      "id": "W05",
+      "position": [
+        -25,
+        0.1,
+        15
+      ]
+    },
+    {
+      "id": "W06",
+      "position": [
+        31,
+        0.1,
+        15
+      ]
+    },
+    {
+      "id": "P01",
+      "position": [
+        -18,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P02",
+      "position": [
+        -11,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P03",
+      "position": [
+        -4,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P04",
+      "position": [
+        4,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P05",
+      "position": [
+        11,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P06",
+      "position": [
+        18,
+        0.26,
+        -7.5
+      ]
+    },
+    {
+      "id": "P07",
+      "position": [
+        -18,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P08",
+      "position": [
+        -11,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P09",
+      "position": [
+        -4,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P10",
+      "position": [
+        4,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P11",
+      "position": [
+        11,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P12",
+      "position": [
+        18,
+        0.26,
+        7.5
+      ]
+    },
+    {
+      "id": "P13",
+      "position": [
+        -32,
+        0.26,
+        -2
+      ]
+    },
+    {
+      "id": "P14",
+      "position": [
+        -32,
+        0.26,
+        7
+      ]
+    },
+    {
+      "id": "P15",
+      "position": [
+        32,
+        0.26,
+        -7
+      ]
+    },
+    {
+      "id": "P16",
+      "position": [
+        32,
+        0.26,
+        2.5
+      ]
+    }
+  ]
+}

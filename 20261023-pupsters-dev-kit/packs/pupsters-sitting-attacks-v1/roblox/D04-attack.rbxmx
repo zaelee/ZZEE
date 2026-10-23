@@ -1,0 +1,1515 @@
+<?xml version='1.0' encoding='utf-8'?>
+<roblox version="4">
+  <External>null</External>
+  <External>nil</External>
+  <Item class="Model" referent="RBX1">
+    <Properties>
+      <string name="Name">미글</string>
+      <BinaryString name="AttributesSerialize">AQAAAAsAAABBdXRvUHJldmlldwMA</BinaryString>
+    </Properties>
+    <Item class="Model" referent="RBX2">
+      <Properties>
+        <string name="Name">Body</string>
+      </Properties>
+      <Item class="Part" referent="RBX3">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.87</Y>
+            <Z>0.45</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">NarrowShortTorso</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>1.18</X>
+            <Y>1.18</Y>
+            <Z>0.88</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX4">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.24</Y>
+            <Z>0.7</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">GroundedRump</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>1.48</X>
+            <Y>0.48</Y>
+            <Z>0.94</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX5">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.16</Y>
+            <Z>0.65</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1058823529</R>
+            <G>0.0901960784</G>
+            <B>0.0980392157</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">BlackBackSaddle</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>1.12</X>
+            <Y>0.55</Y>
+            <Z>0.5</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX6">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.74</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">WhiteChest</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.7</X>
+            <Y>0.72</Y>
+            <Z>0.2</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX7">
+      <Properties>
+        <string name="Name">Head</string>
+      </Properties>
+      <Item class="Part" referent="RBX8">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.62</Y>
+            <Z>-0.25</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">NarrowHead</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>1.8</X>
+            <Y>1.54</Y>
+            <Z>1.42</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX9">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-1.04</X>
+            <Y>1.51</Y>
+            <Z>-0.2</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.3215686275</R>
+            <G>0.1843137255</G>
+            <B>0.1254901961</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LongHangingEarL</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>1.28</Y>
+            <Z>0.58</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX10">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-1.04</X>
+            <Y>0.93</Y>
+            <Z>-0.2</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.3215686275</R>
+            <G>0.1843137255</G>
+            <B>0.1254901961</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">SquareEarEndL</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.58</X>
+            <Y>0.46</Y>
+            <Z>0.62</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX11">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>1.04</X>
+            <Y>1.51</Y>
+            <Z>-0.2</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.3215686275</R>
+            <G>0.1843137255</G>
+            <B>0.1254901961</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LongHangingEarR</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>1.28</Y>
+            <Z>0.58</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX12">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>1.04</X>
+            <Y>0.93</Y>
+            <Z>-0.2</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.3215686275</R>
+            <G>0.1843137255</G>
+            <B>0.1254901961</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">SquareEarEndR</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.58</X>
+            <Y>0.46</Y>
+            <Z>0.62</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX13">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.94</Y>
+            <Z>-0.98</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">WhiteCenterStripe</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.34</X>
+            <Y>0.94</Y>
+            <Z>0.08</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX14">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.38</X>
+            <Y>1.72</Y>
+            <Z>-0.975</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1058823529</R>
+            <G>0.0901960784</G>
+            <B>0.0980392157</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">DotEyeL</string>
+          <token name="Shape">0</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.13</X>
+            <Y>0.16</Y>
+            <Z>0.05</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX15">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.38</X>
+            <Y>1.72</Y>
+            <Z>-0.975</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1058823529</R>
+            <G>0.0901960784</G>
+            <B>0.0980392157</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">DotEyeR</string>
+          <token name="Shape">0</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.13</X>
+            <Y>0.16</Y>
+            <Z>0.05</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX16">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.2</Y>
+            <Z>-1.01</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">WhiteMuzzle</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>1.16</X>
+            <Y>0.48</Y>
+            <Z>0.2</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX17">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.32</Y>
+            <Z>-1.13</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1058823529</R>
+            <G>0.0901960784</G>
+            <B>0.0980392157</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">SquareNose</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.28</X>
+            <Y>0.17</Y>
+            <Z>0.09</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX18">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.11</Y>
+            <Z>-1.12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1058823529</R>
+            <G>0.0901960784</G>
+            <B>0.0980392157</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">SmallMouth</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.24</X>
+            <Y>0.04</Y>
+            <Z>0.05</Z>
+          </Vector3>
+        </Properties>
+        <Item class="Attachment" referent="RBX19">
+          <Properties>
+            <CoordinateFrame name="CFrame">
+              <X>0</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>0</R01>
+              <R02>0</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>0</R20>
+              <R21>0</R21>
+              <R22>1</R22>
+            </CoordinateFrame>
+            <string name="Name">Mouth</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="RBX20">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.31</X>
+            <Y>0.99</Y>
+            <Z>-1.16</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.568627451</R>
+            <G>0.8588235294</G>
+            <B>0.9568627451</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">ShortBlueDrool</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.13</X>
+            <Y>0.21</Y>
+            <Z>0.11</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX21">
+      <Properties>
+        <string name="Name">LegFL</string>
+      </Properties>
+      <Item class="Part" referent="RBX22">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.45</X>
+            <Y>0.5</Y>
+            <Z>-0.22</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegFL_Leg</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.38</X>
+            <Y>0.74</Y>
+            <Z>0.5</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX23">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.45</X>
+            <Y>0.15</Y>
+            <Z>-0.38</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegFL_Paw</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>0.3</Y>
+            <Z>0.58</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX24">
+      <Properties>
+        <string name="Name">LegFR</string>
+      </Properties>
+      <Item class="Part" referent="RBX25">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.45</X>
+            <Y>0.5</Y>
+            <Z>-0.22</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegFR_Leg</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.38</X>
+            <Y>0.74</Y>
+            <Z>0.5</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX26">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.45</X>
+            <Y>0.15</Y>
+            <Z>-0.38</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegFR_Paw</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>0.3</Y>
+            <Z>0.58</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX27">
+      <Properties>
+        <string name="Name">LegBL</string>
+      </Properties>
+      <Item class="Part" referent="RBX28">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.68</X>
+            <Y>0.31</Y>
+            <Z>0.56</Z>
+            <R00>0.9928086359</R00>
+            <R01>-0.1197122073</R01>
+            <R02>0</R02>
+            <R10>0.1197122073</R10>
+            <R11>0.9928086359</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegBL_Leg</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.58</X>
+            <Y>0.42</Y>
+            <Z>0.72</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX29">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.8</X>
+            <Y>0.13</Y>
+            <Z>0.3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegBL_Paw</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.26</Y>
+            <Z>0.62</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX30">
+      <Properties>
+        <string name="Name">LegBR</string>
+      </Properties>
+      <Item class="Part" referent="RBX31">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.68</X>
+            <Y>0.31</Y>
+            <Z>0.56</Z>
+            <R00>0.9928086359</R00>
+            <R01>0.1197122073</R01>
+            <R02>0</R02>
+            <R10>-0.1197122073</R10>
+            <R11>0.9928086359</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegBR_Leg</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.58</X>
+            <Y>0.42</Y>
+            <Z>0.72</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX32">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.8</X>
+            <Y>0.13</Y>
+            <Z>0.3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">LegBR_Paw</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.26</Y>
+            <Z>0.62</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX33">
+      <Properties>
+        <string name="Name">Tail</string>
+      </Properties>
+      <Item class="Part" referent="RBX34">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.48</Y>
+            <Z>1.14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.8823529412</R>
+            <G>0.4901960784</G>
+            <B>0.2</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">ShortTail</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.3</X>
+            <Y>0.46</Y>
+            <Z>0.34</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX35">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.76</Y>
+            <Z>1.14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>1</R>
+            <G>0.9568627451</G>
+            <B>0.8705882353</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">WhiteTailEnd</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.314</X>
+            <Y>0.2</Y>
+            <Z>0.354</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX36">
+      <Properties>
+        <string name="Name">MouthBone</string>
+      </Properties>
+    </Item>
+    <Item class="Model" referent="RBX37">
+      <Properties>
+        <string name="Name">FX</string>
+      </Properties>
+      <Item class="Part" referent="RBX38">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.1483473</X>
+            <Y>1.0964415</Y>
+            <Z>-1.1431372</Z>
+            <R00>0.992427833</R00>
+            <R01>0.04657930944</R01>
+            <R02>0.1136545832</R02>
+            <R10>-0.04720070586</R10>
+            <R11>0.9988815541</R11>
+            <R12>0.002781068927</R12>
+            <R20>-0.1133979264</R20>
+            <R21>-0.008124586759</R21>
+            <R22>0.9935164324</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.1</R>
+            <G>0.085</G>
+            <B>0.09</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">AttackMouth</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.27</X>
+            <Y>0.1</Y>
+            <Z>0.045</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX39">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.1439315</X>
+            <Y>1.0815834</Y>
+            <Z>-1.0983071</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.33</R>
+            <G>0.8</G>
+            <B>0.9</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">Spit0</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.29</X>
+            <Y>0.24</Y>
+            <Z>0.24</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX40">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.0190554</X>
+            <Y>0.8788084</Y>
+            <Z>-1.265444</Z>
+            <R00>0.9999789951</R00>
+            <R01>-0.006481470222</R01>
+            <R02>-4.190047726e-08</R02>
+            <R10>0.006481052822</R10>
+            <R11>0.9999146707</R11>
+            <R12>-0.01134227692</R12>
+            <R20>7.355652703e-05</R20>
+            <R21>0.01134203841</R21>
+            <R22>0.9999356743</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.33</R>
+            <G>0.8</G>
+            <B>0.9</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">Spit1</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.123014256</X>
+            <Y>0.12</Y>
+            <Z>0.128907408</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX41">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-0.0029431</X>
+            <Y>0.8884264</Y>
+            <Z>-1.283519</Z>
+            <R00>0.9999159825</R00>
+            <R01>-0.01296256086</R01>
+            <R02>2.883929829e-08</R02>
+            <R10>0.01295922628</R10>
+            <R11>0.9996587068</R11>
+            <R12>-0.0226832164</R12>
+            <R20>0.0002940037437</R20>
+            <R21>0.02268131099</R21>
+            <R22>0.9997427027</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.33</R>
+            <G>0.8</G>
+            <B>0.9</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">Spit2</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.125914908</X>
+            <Y>0.12</Y>
+            <Z>0.129814816</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX42">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>-7.76e-05</X>
+            <Y>0.8595107</Y>
+            <Z>-1.2306688</Z>
+            <R00>0.9999995713</R00>
+            <R01>-0.0009260002122</R01>
+            <R02>-4.975447648e-08</R02>
+            <R10>0.0009259989159</R10>
+            <R11>0.9999982584</R11>
+            <R12>-0.001620399608</R12>
+            <R20>1.55024477e-06</R20>
+            <R21>0.001620398867</R21>
+            <R22>0.9999986872</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.33</R>
+            <G>0.8</G>
+            <B>0.9</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">Spit3</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.120433272</X>
+            <Y>0.12</Y>
+            <Z>0.128129632</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="RBX43">
+        <Properties>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <CoordinateFrame name="CFrame">
+            <X>0.0021986</X>
+            <Y>0.8778616</Y>
+            <Z>-1.2862059</Z>
+            <R00>0.9999725655</R00>
+            <R01>-0.00740730499</R01>
+            <R02>1.036528076e-08</R02>
+            <R10>0.007406682776</R10>
+            <R11>0.9998885496</R11>
+            <R12>-0.01296261706</R12>
+            <R20>9.600769393e-05</R20>
+            <R21>0.01296226152</R21>
+            <R22>0.9999159817</R22>
+          </CoordinateFrame>
+          <Color3 name="Color">
+            <R>0.33</R>
+            <G>0.8</G>
+            <B>0.9</B>
+          </Color3>
+          <token name="Material">272</token>
+          <string name="Name">Spit4</string>
+          <token name="Shape">1</token>
+          <token name="TopSurface">0</token>
+          <token name="BottomSurface">0</token>
+          <token name="LeftSurface">0</token>
+          <token name="RightSurface">0</token>
+          <token name="FrontSurface">0</token>
+          <token name="BackSurface">0</token>
+          <Vector3 name="size">
+            <X>0.123438204</X>
+            <Y>0.12</Y>
+            <Z>0.12903704</Z>
+          </Vector3>
+          <float name="Transparency">1</float>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="BindableEvent" referent="RBX44">
+      <Properties>
+        <string name="Name">Attack</string>
+      </Properties>
+    </Item>
+    <Item class="Script" referent="RBX45">
+      <Properties>
+        <string name="Name">AttackPlayback</string>
+        <bool name="Disabled">false</bool>
+        <ProtectedString name="Source">-- Generated PUPSTERS sitting attack playback. No damage, targeting, or RemoteEvents.
+local RunService = game:GetService("RunService")
+local model = script.Parent
+local attack = model:WaitForChild("Attack")
+local AUTO_PREVIEW_DEFAULT = false
+local DURATION = 2
+local RELEASE_TIME = 0.6
+local anchorIndex = 6
+local names = {"NarrowShortTorso","GroundedRump","BlackBackSaddle","WhiteChest","LegFL_Leg","LegFL_Paw","LegFR_Leg","LegFR_Paw","LegBL_Leg","LegBL_Paw","LegBR_Leg","LegBR_Paw","NarrowHead","LongHangingEarL","SquareEarEndL","LongHangingEarR","SquareEarEndR","WhiteCenterStripe","DotEyeL","DotEyeR","WhiteMuzzle","SquareNose","SmallMouth","ShortBlueDrool","ShortTail","WhiteTailEnd","AttackMouth","Spit0","Spit1","Spit2","Spit3","Spit4"}
+local baseSizes = {Vector3.new(1.18,1.18,0.88),Vector3.new(1.48,0.48,0.94),Vector3.new(1.12,0.55,0.5),Vector3.new(0.7,0.72,0.2),Vector3.new(0.38,0.74,0.5),Vector3.new(0.48,0.3,0.58),Vector3.new(0.38,0.74,0.5),Vector3.new(0.48,0.3,0.58),Vector3.new(0.58,0.42,0.72),Vector3.new(0.6,0.26,0.62),Vector3.new(0.58,0.42,0.72),Vector3.new(0.6,0.26,0.62),Vector3.new(1.8,1.54,1.42),Vector3.new(0.48,1.28,0.58),Vector3.new(0.58,0.46,0.62),Vector3.new(0.48,1.28,0.58),Vector3.new(0.58,0.46,0.62),Vector3.new(0.34,0.94,0.08),Vector3.new(0.13,0.16,0.05),Vector3.new(0.13,0.16,0.05),Vector3.new(1.16,0.48,0.2),Vector3.new(0.28,0.17,0.09),Vector3.new(0.24,0.04,0.05),Vector3.new(0.13,0.21,0.11),Vector3.new(0.3,0.46,0.34),Vector3.new(0.314,0.2,0.354),Vector3.new(0.27,0.2,0.045),Vector3.new(0.29,0.24,0.3),Vector3.new(0.12,0.12,0.16),Vector3.new(0.12,0.12,0.16),Vector3.new(0.12,0.12,0.16),Vector3.new(0.12,0.12,0.16)}
+local frames = {
+	{0,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.0333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.0666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.1,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.1333333,{{0,0.8699291,0.45,0,0,0,1,1.0000815,0.9999185,1.0000652,1},{0,0.2399804,0.7,0,0,0,1,1.0000815,0.9999185,1.0000652,1},{0,1.1599055,0.65,0,0,0,1,1.0000815,0.9999185,1.0000652,1},{0,0.7399397,0,0,0,0,1,1.0000815,0.9999185,1.0000652,1},{-0.45,0.4999601,-0.22,0,0,0,1,1,0.9998859,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4999601,-0.22,0,0,0,1,1,0.9998859,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0001033,1.6200514,-0.2492986,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-1.0401005,1.5102623,-0.1987796,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-1.0402329,0.9302624,-0.1990819,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{1.0398991,1.5097884,-0.1999323,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{1.0397668,0.9297885,-0.2002347,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-0.0004348,1.940432,-0.9791315,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-0.3804821,1.7205161,-0.9740356,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{0.3795177,1.7203429,-0.9744568,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-0.0006202,1.2004478,-1.0095173,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-0.0006593,1.3205104,-1.1294547,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{-0.0007017,1.1105052,-1.1195642,0.0002607,0.0002771,-0.000114,0.9999999,1,1,1,1},{0.3092487,0.9904554,-1.1597985,0.0002607,0.0002771,-0.000114,0.9999999,1,1.0021185,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.1666667,{{0,0.869181,0.45,0,0,0,1,1.0009414,0.9990586,1.0007531,1},{0,0.2397741,0.7,0,0,0,1,1.0009414,0.9990586,1.0007531,1},{0,1.1589079,0.65,0,0,0,1,1.0009414,0.9990586,1.0007531,1},{0,0.7393033,0,0,0,0,1,1.0009414,0.9990586,1.0007531,1},{-0.45,0.4995387,-0.22,0,0,0,1,1,0.998682,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4995387,-0.22,0,0,0,1,1,0.998682,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0011938,1.6205848,-0.2418894,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-1.0411387,1.5129872,-0.1858781,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-1.0426676,0.9329997,-0.1893629,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{1.0388115,1.5075846,-0.1992264,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{1.0372826,0.9275971,-0.2027112,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-0.0050235,1.9449762,-0.9699386,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-0.3855623,1.7259378,-0.9638219,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{0.3744195,1.7239638,-0.9686992,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-0.0071662,1.2051729,-1.0043835,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-0.007618,1.3258933,-1.1236579,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{-0.0081076,1.1158376,-1.11492,0.0030084,0.0032048,-0.0013084,0.9999895,1,1,1,1},{0.3013126,0.995276,-1.1576288,0.0030084,0.0032048,-0.0013084,0.9999895,1,1.0244773,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.2,{{0,0.867738,0.45,0,0,0,1,1.0026,0.9974,1.00208,1},{0,0.239376,0.7,0,0,0,1,1.0026,0.9974,1.00208,1},{0,1.156984,0.65,0,0,0,1,1.0026,0.9974,1.00208,1},{0,0.738076,0,0,0,0,1,1.0026,0.9974,1.00208,1},{-0.45,0.498726,-0.22,0,0,0,1,1,0.99636,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.498726,-0.22,0,0,0,1,1,0.99636,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.003297,1.6215654,-0.2275683,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-1.0430236,1.5180156,-0.1608899,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-1.0472453,0.9381101,-0.1704658,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{1.0365962,1.5034873,-0.1979083,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{1.0323745,0.9235817,-0.2074842,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-0.0138735,1.9536581,-0.9520699,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-0.395317,1.7362649,-0.9439406,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{0.3645441,1.7309565,-0.9574666,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-0.0197902,1.2142776,-0.9942785,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-0.0210382,1.3362545,-1.112262,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{-0.02239,1.1261223,-1.105732,0.0082873,0.0088698,-0.0035662,0.99992,1,1,1,1},{0.2859727,1.004642,-1.1532186,0.0082873,0.0088698,-0.0035662,0.99992,1,1.0676,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.2333333,{{0,0.8657513,0.45,0,0,0,1,1.0048836,0.9951164,1.0039069,1},{0,0.2388279,0.7,0,0,0,1,1.0048836,0.9951164,1.0039069,1},{0,1.1543351,0.65,0,0,0,1,1.0048836,0.9951164,1.0039069,1},{0,0.7363862,0,0,0,0,1,1.0048836,0.9951164,1.0039069,1},{-0.45,0.4976071,-0.22,0,0,0,1,1,0.993163,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4976071,-0.22,0,0,0,1,1,0.993163,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0061938,1.6228111,-0.2077843,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-1.0453664,1.5244465,-0.126269,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-1.0532927,0.9447758,-0.144129,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{1.0332925,1.4981774,-0.196178,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{1.0253662,0.9185066,-0.214038,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-0.0260582,1.9654292,-0.9271717,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-0.4086537,1.7501971,-0.9161796,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{0.3508563,1.7405988,-0.9417232,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-0.0371671,1.2267862,-0.9799274,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-0.0395115,1.350466,-1.0961075,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{-0.0420493,1.1402729,-1.0925844,0.0155107,0.0167078,-0.0065757,0.9997185,1,1,1,1},{0.2647828,1.0176752,-1.1466571,0.0155107,0.0167078,-0.0065757,0.9997185,1,1.1269727,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.2666667,{{0,0.8633719,0.45,0,0,0,1,1.0076185,0.9923815,1.0060948,1},{0,0.2381716,0.7,0,0,0,1,1.0076185,0.9923815,1.0060948,1},{0,1.1511625,0.65,0,0,0,1,1.0076185,0.9923815,1.0060948,1},{0,0.7343623,0,0,0,0,1,1.0076185,0.9923815,1.0060948,1},{-0.45,0.4962669,-0.22,0,0,0,1,1,0.9893341,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4962669,-0.22,0,0,0,1,1,0.9893341,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0096657,1.6241426,-0.1839918,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-1.0477881,1.5313916,-0.0844979,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-1.0601431,0.9521815,-0.1121203,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{1.0289487,1.4923259,-0.194216,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{1.0165937,0.9131158,-0.2218384,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-0.0406506,1.9792387,-0.896906,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-0.4244819,1.766432,-0.8823515,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{0.3343258,1.752158,-0.9224408,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-0.0579673,1.2417067,-0.9620726,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-0.061625,1.3673842,-1.0760542,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{-0.0655805,1.1571834,-1.0760807,0.0240911,0.0261508,-0.0100277,0.9993174,1,1,1,1},{0.2393056,1.0334715,-1.1380467,0.0240911,0.0261508,-0.0100277,0.9993174,1,1.1980815,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.3,{{0,0.8607508,0.45,0,0,0,1,1.0106312,0.9893688,1.008505,1},{0,0.2374485,0.7,0,0,0,1,1.0106312,0.9893688,1.008505,1},{0,1.1476677,0.65,0,0,0,1,1.0106312,0.9893688,1.008505,1},{0,0.7321329,0,0,0,0,1,1.0106312,0.9893688,1.008505,1},{-0.45,0.4947907,-0.22,0,0,0,1,1,0.9851162,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4947907,-0.22,0,0,0,1,1,0.9851162,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0134951,1.625405,-0.1576636,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-1.049973,1.5380787,-0.0381328,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-1.0671906,0.9595923,-0.0763041,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{1.023675,1.4865244,-0.1921651,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{1.0064575,0.908038,-0.2303364,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-0.0567234,1.9940711,-0.8630121,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-0.4417325,1.7837248,-0.844375,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{0.3159466,1.7648876,-0.900656,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-0.0808574,1.2580366,-0.9415659,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-0.0859627,1.3858606,-1.053078,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{-0.0914743,1.1757306,-1.0569478,0.0334499,0.0366194,-0.0136358,0.9986762,1,1,1,1},{0.2111275,1.0510725,-1.1276053,0.0334499,0.0366194,-0.0136358,0.9986762,1,1.2764125,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.3333333,{{0,0.8580391,0.45,0,0,0,1,1.0137481,0.9862519,1.0109985,1},{0,0.2367004,0.7,0,0,0,1,1.0137481,0.9862519,1.0109985,1},{0,1.1440521,0.65,0,0,0,1,1.0137481,0.9862519,1.0109985,1},{0,0.7298264,0,0,0,0,1,1.0137481,0.9862519,1.0109985,1},{-0.45,0.4932634,-0.22,0,0,0,1,1,0.9807526,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4932634,-0.22,0,0,0,1,1,0.9807526,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0174644,1.6264832,-0.1302989,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-1.0517032,1.5439255,0.0101801,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-1.0739272,0.9664142,-0.0386738,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{1.0176797,1.4812358,-0.1901305,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{0.9954557,0.9037244,-0.2389844,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-0.0733493,2.0089786,-0.8273457,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-0.4593727,1.800938,-0.8043224,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{0.296748,1.7780322,-0.8775128,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-0.1045046,1.2747785,-0.9194299,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-0.1111087,1.4047625,-1.028336,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{-0.1182218,1.1947886,-1.0361067,0.0430253,0.0475183,-0.0171519,0.9977959,1,1,1,1},{0.1818637,1.06946,-1.1157396,0.0430253,0.0475183,-0.0171519,0.9977959,1,1.3574519,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.3666667,{{0,0.8553878,0.45,0,0,0,1,1.0167956,0.9832044,1.0134365,1},{0,0.2359691,0.7,0,0,0,1,1.0167956,0.9832044,1.0134365,1},{0,1.1405171,0.65,0,0,0,1,1.0167956,0.9832044,1.0134365,1},{0,0.7275713,0,0,0,0,1,1.0167956,0.9832044,1.0134365,1},{-0.45,0.4917702,-0.22,0,0,0,1,1,0.9764862,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4917702,-0.22,0,0,0,1,1,0.9764862,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0213546,1.6273114,-0.1034253,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-1.0528762,1.5485819,0.0577112,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-1.0799645,0.9722336,-0.0013559,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{1.0112882,1.4767675,-0.1881915,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{0.9841998,0.9004193,-0.2472586,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-0.0896016,2.0231044,-0.7918948,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-0.4764136,1.8170766,-0.7644363,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{0.2778003,1.7908367,-0.8542853,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-0.1275814,1.2909612,-0.8968888,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-0.1356524,1.422996,-1.0031981,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{-0.1443206,1.2132523,-1.014707,0.0522777,0.0582368,-0.0203743,0.9967248,1,1,1,1},{0.1531563,1.0875682,-1.1030868,0.0522777,0.0582368,-0.0203743,0.9967248,1,1.4366856,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.4,{{0,0.852948,0.45,0,0,0,1,1.0196,0.9804,1.01568,1},{0,0.235296,0.7,0,0,0,1,1.0196,0.9804,1.01568,1},{0,1.137264,0.65,0,0,0,1,1.0196,0.9804,1.01568,1},{0,0.725496,0,0,0,0,1,1.0196,0.9804,1.01568,1},{-0.45,0.490396,-0.22,0,0,0,1,1,0.97256,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.490396,-0.22,0,0,0,1,1,0.97256,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0249446,1.6278743,-0.0785958,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-1.0535053,1.5519363,0.1016714,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-1.0850376,0.976831,0.0334106,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{1.0049442,1.4732687,-0.1864207,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{0.9734119,0.8981633,-0.2546815,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-0.1045541,2.0356951,-0.7587756,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-0.491913,1.8313036,-0.7271187,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{0.2602127,1.8025597,-0.8323831,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-0.1487715,1.30566,-0.8753673,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-0.1581938,1.4395275,-0.9792457,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{-0.1682818,1.2300597,-0.9941273,0.0606928,0.0681506,-0.0231496,0.9955581,1,1,1,1},{0.126667,1.104308,-1.0905208,0.0606928,0.0681506,-0.0231496,0.9955581,1,1.5096,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.4333333,{{0,0.8508707,0.45,0,0,0,1,1.0219877,0.9780123,1.0175902,1},{0,0.2347229,0.7,0,0,0,1,1.0219877,0.9780123,1.0175902,1},{0,1.1344942,0.65,0,0,0,1,1.0219877,0.9780123,1.0175902,1},{0,0.7237291,0,0,0,0,1,1.0219877,0.9780123,1.0175902,1},{-0.45,0.489226,-0.22,0,0,0,1,1,0.9692172,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.489226,-0.22,0,0,0,1,1,0.9692172,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0280099,1.6282019,-0.0573836,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-1.0537029,1.5540876,0.1392402,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-1.0889903,0.9801632,0.0633082,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{0.9991942,1.4707516,-0.1849024,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{0.9639069,0.8968272,-0.2608345,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-0.1172819,2.0460955,-0.7302101,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-0.5049705,1.8429314,-0.6948982,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{0.2451266,1.8124817,-0.8133349,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-0.1667725,1.318008,-0.856461,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-0.1773469,1.4533941,-0.9582391,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{-0.1886338,1.2442069,-0.9759411,0.06778,0.0766263,-0.0253677,0.9944299,1,1,1,1},{0.1040676,1.1185914,-1.0791236,0.06778,0.0766263,-0.0253677,0.9944299,1,1.571681,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.4666667,{{0,0.8493069,0.45,0,0,0,1,1.0237852,0.9762148,1.0190281,1},{0,0.2342916,0.7,0,0,0,1,1.0237852,0.9762148,1.0190281,1},{0,1.1324092,0.65,0,0,0,1,1.0237852,0.9762148,1.0190281,1},{0,0.722399,0,0,0,0,1,1.0237852,0.9762148,1.0190281,1},{-0.45,0.4883453,-0.22,0,0,0,1,1,0.9667007,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4883453,-0.22,0,0,0,1,1,0.9667007,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0303234,1.6283559,-0.0413733,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-1.0536477,1.5552787,0.1675933,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-1.0917425,0.9823141,0.0859821,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{0.9946547,1.4691358,-0.1837423,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{0.9565599,0.8961713,-0.2653535,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-0.1268611,2.0537253,-0.7084875,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-0.5147148,1.8513832,-0.6703795,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{0.2337034,1.819908,-0.7987521,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-0.1802959,1.3271913,-0.8418782,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-0.1917384,1.4636948,-0.9420574,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{-0.203921,1.2547455,-0.961851,0.0730669,0.0830263,-0.0269491,0.9934997,1,1,1,1},{0.0870318,1.1293488,-1.07012,0.0730669,0.0830263,-0.0269491,0.9934997,1,1.6184148,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.5,{{0,0.8484077,0.45,0,0,0,1,1.0248188,0.9751812,1.019855,1},{0,0.2340435,0.7,0,0,0,1,1.0248188,0.9751812,1.019855,1},{0,1.1312102,0.65,0,0,0,1,1.0248188,0.9751812,1.019855,1},{0,0.7216341,0,0,0,0,1,1.0248188,0.9751812,1.019855,1},{-0.45,0.4878388,-0.22,0,0,0,1,1,0.9652538,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4878388,-0.22,0,0,0,1,1,0.9652538,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0316561,1.6284083,-0.0321513,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-1.053537,1.555797,0.1839208,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-1.093238,0.9834107,0.0990813,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{0.9919625,1.468315,-0.1830655,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{0.9522614,0.8959286,-0.2679049,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-0.1323684,2.0580334,-0.6959128,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-0.5202846,1.856124,-0.6561808,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{0.2271095,1.8241594,-0.7902719,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-0.1880604,1.3324252,-0.8333577,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-0.2000025,1.469561,-0.9326106,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{-0.2126974,1.2607584,-0.9535945,0.0760878,0.0867135,-0.0278238,0.9929337,1,1,1,1},{0.077228,1.1355325,-1.0647779,0.0760878,0.0867135,-0.0278238,0.9929337,1,1.6452875,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.5333333,{{0,0.84825,0.45,0,0,0,1,1.025,0.975,1.02,1},{0,0.234,0.7,0,0,0,1,1.025,0.975,1.02,1},{0,1.131,0.65,0,0,0,1,1.025,0.975,1.02,1},{0,0.7215,0,0,0,0,1,1.025,0.975,1.02,1},{-0.45,0.48775,-0.22,0,0,0,1,1,0.965,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.48775,-0.22,0,0,0,1,1,0.965,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.03189,1.6289887,-0.0289259,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-1.0535116,1.5564493,0.1883926,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-1.0934937,0.9841663,0.1029899,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{0.9914842,1.468753,-0.181339,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{0.9515021,0.8964701,-0.2667417,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-0.1333341,2.0593568,-0.6920944,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-0.5212588,1.8575203,-0.6520764,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{0.2259512,1.8254774,-0.7871706,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-0.1894211,1.3339133,-0.8302464,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-0.2014509,1.4711592,-0.9293364,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{-0.2142353,1.2623831,-0.9505281,0.0766161,0.0873607,-0.0279746,0.9928321,1,1,1,1},{0.0755083,1.1371905,-1.0622217,0.0766161,0.0873607,-0.0279746,0.9928321,1,1.65,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.5666667,{{0,0.8492308,0.45,0,0,0,1,1.0238726,0.9761274,1.0190981,1},{0,0.2342706,0.7,0,0,0,1,1.0238726,0.9761274,1.0190981,1},{0,1.1323078,0.65,0,0,0,1,1.0238726,0.9761274,1.0190981,1},{0,0.7223343,0,0,0,0,1,1.0238726,0.9761274,1.0190981,1},{-0.45,0.4883024,-0.22,0,0,0,1,1,0.9665783,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4883024,-0.22,0,0,0,1,1,0.9665783,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.030436,1.629335,-0.040158,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-1.0536405,1.5572088,0.1697237,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-1.0918715,0.9839433,0.0903191,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{0.9944293,1.4694191,-0.1825588,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{0.9561983,0.8961536,-0.2619634,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-0.127327,2.0521752,-0.7088271,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-0.5151869,1.8500383,-0.6697068,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{0.2331463,1.8179613,-0.7984254,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-0.1809531,1.3251465,-0.8394163,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-0.1924378,1.4612691,-0.9401076,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{-0.2046638,1.2522478,-0.9590975,0.0711727,0.0832793,-0.0272044,0.993609,1,1,1,1},{0.0862026,1.1263958,-1.0670696,0.0711727,0.0832793,-0.0272044,0.993609,1,1.6206881,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,0},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,0},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.6,{{0,0.8554274,0.45,0,0,0,1,1.0167501,0.9832499,1.0134001,1},{0,0.23598,0.7,0,0,0,1,1.0167501,0.9832499,1.0134001,1},{0,1.1405699,0.65,0,0,0,1,1.0167501,0.9832499,1.0134001,1},{0,0.7276049,0,0,0,0,1,1.0167501,0.9832499,1.0134001,1},{-0.45,0.4917924,-0.22,0,0,0,1,1,0.9765498,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4917924,-0.22,0,0,0,1,1,0.9765498,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0212965,1.5934326,-0.2380914,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-1.0528624,1.5327834,-0.0695879,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-1.0798784,0.9534321,-0.0648756,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{1.0113875,1.4346059,-0.3054558,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{0.9843714,0.8552546,-0.3007435,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-0.089359,1.9110445,-0.9659583,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-0.4761607,1.7092407,-0.916112,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{0.2780844,1.6733681,-1.0022945,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-0.1272373,1.1717887,-0.9897515,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-0.1352864,1.2913207,-1.1099484,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,1},{-0.1439315,1.0815834,-1.0983071,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1,1,0},{0.1535854,0.9469741,-1.1722262,-0.0027316,0.0568711,-0.0234896,0.9981014,1,1.435503,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.1483473,1.0964415,-1.1431372,-0.0027316,0.0568711,-0.0234896,0.9981014,1,0.5,1,1},{-0.1439315,1.0815834,-1.0983071,0,0,0,1,1,1,0.8,1},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.6333333,{{0,0.863604,0.45,0,0,0,1,1.0073518,0.9926482,1.0058814,1},{0,0.2382356,0.7,0,0,0,1,1.0073518,0.9926482,1.0058814,1},{0,1.1514719,0.65,0,0,0,1,1.0073518,0.9926482,1.0058814,1},{0,0.7345597,0,0,0,0,1,1.0073518,0.9926482,1.0058814,1},{-0.45,0.4963976,-0.22,0,0,0,1,1,0.9897075,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4963976,-0.22,0,0,0,1,1,0.9897075,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.0093269,1.5454117,-0.4428587,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-1.0475703,1.4752175,-0.3274318,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-1.0594939,0.9036647,-0.2295275,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{1.0293909,1.4155712,-0.422691,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{1.0174674,0.8440184,-0.3247868,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-0.0392274,1.7383941,-1.2156224,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-0.4229451,1.5333332,-1.1561603,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{0.3359446,1.5115394,-1.1909665,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-0.0559393,1.0041433,-1.1202477,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-0.059469,1.1022821,-1.258654,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,1},{-0.0632864,0.8970167,-1.2133601,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1,1,0},{0.2417949,0.7631703,-1.2466847,-0.0844357,0.0240369,-0.0123571,0.9960623,1,1.1911462,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.0652267,0.9042557,-1.2601984,-0.0844357,0.0240369,-0.0123571,0.9960623,1,0.9803241,1,1},{-0.1439315,1.1207355,-1.2071034,0.0162023,-0.00015,0.0092579,0.9998259,1.068564,1,0.8162037,1},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,0},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.6666667,{{0,0.8693605,0.45,0,0,0,1,1.000735,0.999265,1.000588,1},{0,0.2398236,0.7,0,0,0,1,1.000735,0.999265,1.000588,1},{0,1.1591474,0.65,0,0,0,1,1.000735,0.999265,1.000588,1},{0,0.7394561,0,0,0,0,1,1.000735,0.999265,1.000588,1},{-0.45,0.4996398,-0.22,0,0,0,1,1,0.998971,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.4996398,-0.22,0,0,0,1,1,0.998971,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{-0.000932,1.5409913,-0.4873455,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-1.0408933,1.4474145,-0.4103787,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-1.0420869,0.8808073,-0.286464,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{1.0390763,1.4410116,-0.4196201,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{1.0378827,0.8744045,-0.2957054,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.003922,1.6976495,-1.2688501,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.3843442,1.4849674,-1.2152751,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{0.3756447,1.4826279,-1.2186517,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.0055949,0.9683278,-1.1400589,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.0059477,1.0599208,-1.2829246,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.0063299,0.8569063,-1.2282899,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,0},{0.3032187,0.7301776,-1.2431057,-0.1074424,0.002374,-0.0012915,0.9942076,1,1.0191102,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{-0.0065239,0.8619464,-1.2754551,-0.1074424,0.002374,-0.0012915,0.9942076,1,1,1,1},{-0.1439315,1.1588164,-1.3158997,0.0323962,-0.0006,0.0185077,0.9993036,1.116505,1,0.8324074,1},{-0.0190554,0.8788084,-1.265444,0.0056712,-1.84e-05,0.0032407,0.9999787,1.0251188,1,0.8056713,1},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.7,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5464057,-0.4755577,-0.1097783,0,0,0.9939561,1,1,1,1},{-1.04,1.4499685,-0.4027576,-0.1097783,0,0,0.9939561,1,1,1,1},{-1.04,0.8839479,-0.2761844,-0.1097783,0,0,0.9939561,1,1,1,1},{1.04,1.4499685,-0.4027576,-0.1097783,0,0,0.9939561,1,1,1,1},{1.04,0.8839479,-0.2761844,-0.1097783,0,0,0.9939561,1,1,1,1},{0,1.6993853,-1.2577963,-0.1097783,0,0,0.9939561,1,1,1,1},{-0.38,1.485779,-1.2049063,-0.1097783,0,0,0.9939561,1,1,1,1},{0.38,1.485779,-1.2049063,-0.1097783,0,0,0.9939561,1,1,1,1},{0,0.9706743,-1.1255833,-0.1097783,0,0,0.9939561,1,1,1,1},{0,1.0615944,-1.2688786,-0.1097783,0,0,0.9939561,1,1,1,1},{0,0.8588382,-1.2132914,-0.1097783,0,0,0.9939561,1,1,1,0},{0.31,0.7330014,-1.2261397,-0.1097783,0,0,0.9939561,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8636564,-1.2604802,-0.1097783,0,0,0.9939561,1,1,1,1},{-0.1439315,1.1947776,-1.424696,0.0485732,-0.0013496,0.0277414,0.9984334,1.129403,1,0.8486111,1},{-0.0140037,0.9177067,-1.3742403,0.0218715,-0.0002734,0.0124967,0.9996826,1.088613,1,0.821875,1},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,0},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.7333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5479319,-0.4713073,-0.1096462,0,0,0.9939707,1,1,1,1},{-1.04,1.4514753,-0.3985328,-0.1096462,0,0,0.9939707,1,1,1,1},{-1.04,0.8854211,-0.2721101,-0.1096462,0,0,0.9939707,1,1,1,1},{1.04,1.4514753,-0.3985328,-0.1096462,0,0,0.9939707,1,1,1,1},{1.04,0.8854211,-0.2721101,-0.1096462,0,0,0.9939707,1,1,1,1},{0,1.7011193,-1.2535053,-0.1096462,0,0,0.9939707,1,1,1,1},{-0.38,1.4874989,-1.200672,-0.1096462,0,0,0.9939707,1,1,1,1},{0.38,1.4874989,-1.200672,-0.1096462,0,0,0.9939707,1,1,1,1},{0,0.9723732,-1.1214859,-0.1096462,0,0,0.9939707,1,1,1,1},{0,1.0633314,-1.264757,-0.1096462,0,0,0.9939707,1,1,1,1},{0,0.8605604,-1.2092237,-0.1096462,0,0,0.9939707,1,1,1,0},{0.31,0.734727,-1.2221055,-0.1096462,0,0,0.9939707,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8653911,-1.2564112,-0.1096462,0,0,0.9939707,1,0.9987921,1,1},{-0.1439315,1.2276153,-1.5334923,0.064725,-0.0023983,0.0369508,0.9972159,1.1033786,1,0.8648148,1},{-0.0089521,0.9551631,-1.4830366,0.0380605,-0.0008283,0.0217418,0.9990385,1.1254538,1,0.8380787,1},{-0.0029431,0.8884264,-1.283519,0.0113421,-7.35e-05,0.006481,0.9999147,1.0492909,1,0.8113426,1},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,0},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.7666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.54275,-0.4860571,-0.1082156,0,0,0.9941274,1,1,1,1},{-1.04,1.4460843,-0.4135606,-0.1082156,0,0,0.9941274,1,1,1,1},{-1.04,0.8796686,-0.2887677,-0.1082156,0,0,0.9941274,1,1,1,1},{1.04,1.4460843,-0.4135606,-0.1082156,0,0,0.9941274,1,1,1,1},{1.04,0.8796686,-0.2887677,-0.1082156,0,0,0.9941274,1,1,1,1},{0,1.6981882,-1.2678109,-0.1082156,0,0,0.9941274,1,1,1,1},{-0.38,1.4844167,-1.2155928,-0.1082156,0,0,0.9941274,1,1,1,1},{0.38,1.4844167,-1.2155928,-0.1082156,0,0,0.9941274,1,1,1,1},{0,0.9690651,-1.1378897,-0.1082156,0,0,0.9941274,1,1,1,1},{0,1.0604354,-1.2808984,-0.1082156,0,0,0.9941274,1,1,1,1},{0,0.8575054,-1.225949,-0.1082156,0,0,0.9941274,1,1,1,0},{0.31,0.7317096,-1.2391929,-0.1082156,0,0,0.9941274,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8624719,-1.2731224,-0.1082156,0,0,0.9941274,1,0.9857085,1,1},{-0.1439315,1.2563916,-1.6422886,0.0808432,-0.0037454,0.046128,0.9956518,1.0462595,1,0.8810185,1},{-0.0039004,0.9901423,-1.5918329,0.0542297,-0.0016827,0.0309679,0.9980467,1.12456,1,0.8542824,1},{-0.0071476,0.9269402,-1.3923153,0.0275394,-0.0004335,0.0157341,0.9994968,1.1053223,1,0.8275463,1},{-7.76e-05,0.8595107,-1.2306688,0.0008102,-4e-07,0.000463,0.9999996,1.0036106,1,0.8008102,1},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.8,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5400732,-0.493996,-0.1053475,0,0,0.9944355,1,1,1,1},{-1.04,1.4429909,-0.4220583,-0.1053475,0,0,0.9944355,1,1,1,1},{-1.04,0.8758647,-0.3005353,-0.1053475,0,0,0.9944355,1,1,1,1},{1.04,1.4429909,-0.4220583,-0.1053475,0,0,0.9944355,1,1,1,1},{1.04,0.8758647,-0.3005353,-0.1053475,0,0,0.9944355,1,1,1,1},{0,1.700019,-1.27484,-0.1053475,0,0,0.9944355,1,1,1,1},{-0.38,1.4859498,-1.223856,-0.1053475,0,0,0.9944355,1,1,1,1},{0.38,1.4859498,-1.223856,-0.1053475,0,0,0.9944355,1,1,1,1},{0,0.9701585,-1.1491275,-0.1053475,0,0,0.9944355,1,1,1,1},{0,1.0623522,-1.2916066,-0.1053475,0,0,0.9944355,1,1,1,1},{0,0.8591087,-1.2378289,-0.1053475,0,0,0.9944355,1,1,1,0},{0.31,0.7333913,-1.2517983,-0.1053475,0,0,0.9944355,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8643472,-1.2849729,-0.1053475,0,0,0.9944355,1,0.9594847,1,1},{-0.1439315,1.2802545,-1.7510849,0.0969194,-0.00539,0.0552648,0.9937421,0.9752262,1,0.8972222,1},{0.0011512,1.0216612,-1.7006292,0.0703706,-0.0028359,0.0401669,0.9967079,1.0862004,1,0.8704861,1},{-0.011352,0.9636452,-1.5011116,0.0437224,-0.0010933,0.0249735,0.9987309,1.1296743,1,0.84375,1},{-0.0016299,0.8986346,-1.3394651,0.0170123,-0.0001654,0.0097207,0.999808,1.0716052,1,0.8170139,1},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,0}}},
+	{0.8333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5397237,-0.4955248,-0.1012097,0,0,0.9948651,1,1,1,1},{-1.04,1.4420463,-0.4243973,-0.1012097,0,0,0.9948651,1,1,1,1},{-1.04,0.8739286,-0.3075969,-0.1012097,0,0,0.9948651,1,1,1,1},{1.04,1.4420463,-0.4243973,-0.1012097,0,0,0.9948651,1,1,1,1},{1.04,0.8739286,-0.3075969,-0.1012097,0,0,0.9948651,1,1,1,1},{0,1.7061605,-1.275011,-0.1012097,0,0,0.9948651,1,1,1,1},{-0.38,1.4916745,-1.2258098,-0.1012097,0,0,0.9948651,1,1,1,1},{0.38,1.4916745,-1.2258098,-0.1012097,0,0,0.9948651,1,1,1,1},{0,0.9752794,-1.1553752,-0.1012097,0,0,0.9948651,1,1,1,1},{0,1.0686554,-1.2970824,-0.1012097,0,0,0.9948651,1,1,1,1},{0,0.8649714,-1.2449974,-0.1012097,0,0,0.9948651,1,1,1,0},{0.31,0.7393746,-1.2600124,-0.1012097,0,0,0.9948651,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.870602,-1.2920962,-0.1012097,0,0,0.9948651,1,0.9216664,1,1},{-0.1439315,1.2984557,-1.8598812,0.1129452,-0.0073308,0.0643532,0.9914879,0.9116445,1,0.9134259,1},{0.0062029,1.0488099,-1.8094255,0.0864751,-0.0042872,0.0493308,0.9950227,1.021913,1,0.8866898,1},{-0.0155565,0.9975218,-1.6099079,0.0598826,-0.0020523,0.034191,0.9976176,1.1150223,1,0.8599537,1},{-0.0031822,0.9366341,-1.4482614,0.0332055,-0.0006304,0.0189699,0.9992683,1.118062,1,0.8332176,1},{0.0021986,0.8778616,-1.2862059,0.0064814,-2.4e-05,0.0037036,0.9999721,1.0286517,1,0.8064815,1}}},
+	{0.8666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5415196,-0.4910398,-0.09597,0,0,0.9953842,1,1,1,1},{-1.04,1.4430985,-0.4209449,-0.09597,0,0,0.9953842,1,1,1,1},{-1.04,0.8737824,-0.3101335,-0.09597,0,0,0.9953842,1,1,1,1},{1.04,1.4430985,-0.4209449,-0.09597,0,0,0.9953842,1,1,1,1},{1.04,0.8737824,-0.3101335,-0.09597,0,0,0.9953842,1,1,1,1},{0,1.7161555,-1.2687302,-0.09597,0,0,0.9953842,1,1,1,1},{-0.38,1.5011633,-1.2217904,-0.09597,0,0,0.9953842,1,1,1,1},{0.38,1.5011633,-1.2217904,-0.09597,0,0,0.9953842,1,1,1,1},{0,0.9840551,-1.1567975,-0.09597,0,0,0.9953842,1,1,1,1},{0,1.0789181,-1.2975135,-0.09597,0,0,0.9953842,1,1,1,1},{0,0.8746969,-1.2475764,-0.09597,0,0,0.9953842,1,1,1,0},{0.31,0.7492652,-1.2639131,-0.09597,0,0,0.9953842,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8808232,-1.2946133,-0.09597,0,0,0.9953842,1,0.8737997,1,1},{-0.1439315,1.3103665,-1.9686775,0.1289124,-0.0095666,0.0733854,0.9888906,0.8746388,1,0.9296296,1},{0.0112545,1.0707705,-1.9182218,0.1025346,-0.0060356,0.0584516,0.9929923,0.9510346,1,0.9028935,1},{-0.019761,1.0276103,-1.7187042,0.0760118,-0.00331,0.0433787,0.9961574,1.0657733,1,0.8761574,1},{-0.0047345,0.9724625,-1.5570577,0.0493815,-0.0013949,0.0282025,0.9983808,1.1290075,1,0.8494213,1},{0.007695,0.916713,-1.3950022,0.0226813,-0.000294,0.0129593,0.9996587,1.0912207,1,0.8226852,1}}},
+	{0.9,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5452774,-0.4809371,-0.0897962,0,0,0.9959602,1,1,1,1},{-1.04,1.4459947,-0.412068,-0.0897962,0,0,0.9959602,1,1,1,1},{-1.04,0.8753482,-0.3083252,-0.0897962,0,0,0.9959602,1,1,1,1},{1.04,1.4459947,-0.412068,-0.0897962,0,0,0.9959602,1,1,1,1},{1.04,0.8753482,-0.3083252,-0.0897962,0,0,0.9959602,1,1,1,1},{0,1.729544,-1.256402,-0.0897962,0,0,0.9959602,1,1,1,1},{-0.38,1.5139862,-1.2121319,-0.0897962,0,0,0.9959602,1,1,1,1},{0.38,1.5139862,-1.2121319,-0.0897962,0,0,0.9959602,1,1,1,1},{0,0.9961118,-1.1535566,-0.0897962,0,0,0.9959602,1,1,1,1},{0,1.0927125,-1.2930854,-0.0897962,0,0,0.9959602,1,1,1,1},{0,0.8878878,-1.2456847,-0.0897962,0,0,0.9959602,1,1,1,0},{0.31,0.7626684,-1.2635756,-0.0897962,0,0,0.9959602,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.8945969,-1.292642,-0.0897962,0,0,0.9959602,1,0.8174305,1,1},{-0.1439315,1.3154908,-2.0774738,0.1448127,-0.0120957,0.0823534,0.9859518,0.8753398,1,0.9458333,1},{0.0163062,1.086835,-2.0270181,0.1185408,-0.0080798,0.0675213,0.9906178,0.8948841,1,0.9190972,1},{-0.0239654,1.0530308,-1.8275005,0.0921014,-0.0048654,0.0525284,0.9943513,0.9967407,1,0.8923611,1},{-0.0062868,1.0051188,-1.665854,0.0655318,-0.0024586,0.0374105,0.9971459,1.1011495,1,0.865625,1},{0.0131914,0.9540698,-1.5037985,0.0388695,-0.0008639,0.0222036,0.9989972,1.1263519,1,0.8388889,1}}},
+	{0.9333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5508153,-0.4656153,-0.0828564,0,0,0.9965615,1,1,1,1},{-1.04,1.4505828,-0.3981361,-0.0828564,0,0,0.9965615,1,1,1,1},{-1.04,0.8785464,-0.3023531,-0.0828564,0,0,0.9965615,1,1,1,1},{1.04,1.4505828,-0.3981361,-0.0828564,0,0,0.9965615,1,1,1,1},{1.04,0.8785464,-0.3023531,-0.0828564,0,0,0.9965615,1,1,1,1},{0,1.7458672,-1.2384379,-0.0828564,0,0,0.9965615,1,1,1,1},{-0.38,1.5297136,-1.1971751,-0.0828564,0,0,0.9965615,1,1,1,1},{0.38,1.5297136,-1.1971751,-0.0828564,0,0,0.9965615,1,1,1,1},{0,1.0110734,-1.1458201,-0.0828564,0,0,0.9965615,1,1,1,1},{0,1.1096086,-1.2839897,-0.0828564,0,0,0.9965615,1,1,1,1},{0,0.9041434,-1.2394469,-0.0828564,0,0,0.9965615,1,1,1,0},{0.31,0.7791853,-1.2590805,-0.0828564,0,0,0.9965615,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.911506,-1.2863062,-0.0828564,0,0,0.9965615,1,0.7541047,1,1},{-0.1439315,1.3134761,-2.1862701,0.1606378,-0.0149165,0.0912492,0.9826732,0.9135368,1,0.962037,1},{0.0213578,1.0964198,-2.1358144,0.1344855,-0.0104185,0.0765319,0.9879008,0.870351,1,0.9353009,1},{-0.0281699,1.0730023,-1.9362968,0.1081432,-0.0067175,0.0616323,0.9922003,0.9286884,1,0.9085648,1},{-0.0078392,1.0336689,-1.7746503,0.0816481,-0.0038206,0.0465858,0.9955645,1.0428673,1,0.8818287,1},{0.0186879,0.9888988,-1.6125948,0.0550374,-0.0017332,0.0314285,0.997988,1.1234784,1,0.8550926,1}}},
+	{0.9666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5575875,-0.4465073,-0.0753191,0,0,0.9971595,1,1,1,1},{-1.04,1.4563461,-0.3805515,-0.0753191,0,0,0.9971595,1,1,1,1},{-1.04,0.8829267,-0.2934295,-0.0753191,0,0,0.9971595,1,1,1,1},{1.04,1.4563461,-0.3805515,-0.0753191,0,0,0.9971595,1,1,1,1},{1.04,0.8829267,-0.2934295,-0.0753191,0,0,0.9971595,1,1,1,1},{0,1.7643033,-1.2162921,-0.0753191,0,0,0.9971595,1,1,1,1},{-0.38,1.5475504,-1.1783026,-0.0753191,0,0,0.9971595,1,1,1,1},{0.38,1.5475504,-1.1783026,-0.0753191,0,0,0.9971595,1,1,1,1},{0,1.028193,-1.1347961,-0.0753191,0,0,0.9971595,1,1,1,1},{0,1.1288062,-1.2714598,-0.0753191,0,0,0.9971595,1,1,1,1},{0,0.922691,-1.2300291,-0.0753191,0,0,0.9971595,1,1,1,0},{0.31,0.7980441,-1.25155,-0.0753191,0,0,0.9971595,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.9307613,-1.2767717,-0.0753191,0,0,0.9971595,1,0.6853681,1,1},{-0.1439315,1.3041205,-2.2950664,0.1763796,-0.018027,0.100065,0.9790568,0.9777406,1,0.9782407,1},{0.0264095,1.099078,-2.2446107,0.1503605,-0.0130499,0.0854755,0.9848428,0.8848143,1,0.9515046,1},{-0.0323743,1.0868585,-2.0450931,0.1241289,-0.008865,0.0706822,0.9897057,0.8820856,1,0.9247685,1},{-0.0093915,1.0572656,-1.8834466,0.0977219,-0.00548,0.0557204,0.9936376,0.9716912,1,0.8980324,1},{0.0241843,1.0202201,-1.7213911,0.0711768,-0.0029014,0.040626,0.9966318,1.0834644,1,0.8712963,1}}},
+	{1,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5646634,-0.4261463,-0.0673533,0,0,0.9977292,1,1,1,1},{-1.04,1.4623815,-0.3618159,-0.0673533,0,0,0.9977292,1,1,1,1},{-1.04,0.8876438,-0.2838635,-0.0673533,0,0,0.9977292,1,1,1,1},{1.04,1.4623815,-0.3618159,-0.0673533,0,0,0.9977292,1,1,1,1},{1.04,0.8876438,-0.2838635,-0.0673533,0,0,0.9977292,1,1,1,1},{0,1.7836476,-1.1925313,-0.0673533,0,0,0.9977292,1,1,1,1},{-0.38,1.5663156,-1.1580085,-0.0673533,0,0,0.9977292,1,1,1,1},{0.38,1.5663156,-1.1580085,-0.0673533,0,0,0.9977292,1,1,1,1},{0,1.0463295,-1.1228026,-0.0673533,0,0,0.9977292,1,1,1,1},{0,1.1491127,-1.2578419,-0.0673533,0,0,0.9977292,1,1,1,1},{0,0.942362,-1.2197085,-0.0673533,0,0,0.9977292,1,1,1,0},{0.31,0.8180747,-1.2432175,-0.0673533,0,0,0.9977292,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.9511779,-1.2663162,-0.0673533,0,0,0.9977292,1,0.6127668,1,1},{-0.1439315,1.2873772,-2.4038627,0.19203,-0.0214249,0.1087931,0.9751049,1.0486397,1,0.9944444,1},{0.0314611,1.094509,-2.353407,0.1661573,-0.0159723,0.0943442,0.9814458,0.9339237,1,0.9677083,1},{-0.0365788,1.0940625,-2.1538894,0.1400501,-0.0113063,0.0796702,0.9868692,0.8709496,1,0.9409722,1},{-0.0109438,1.0751661,-1.9922429,0.113745,-0.0074356,0.0648063,0.9913662,0.90903,1,0.9142361,1},{0.0296807,1.0471279,-1.8301874,0.0872792,-0.0043676,0.049788,0.9949294,1.0183456,1,0.8875,1}}},
+	{1.0333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5718545,-0.4050174,-0.0591286,0,0,0.9982504,1,1,1,1},{-1.04,1.4685261,-0.3423815,-0.0591286,0,0,0.9982504,1,1,1,1},{-1.04,0.8925817,-0.2739123,-0.0591286,0,0,0.9982504,1,1,1,1},{1.04,1.4685261,-0.3423815,-0.0591286,0,0,0.9982504,1,1,1,1},{1.04,0.8925817,-0.2739123,-0.0591286,0,0,0.9982504,1,1,1,1},{0,1.8034402,-1.1676891,-0.0591286,0,0,0.9982504,1,1,1,1},{-0.38,1.5855687,-1.1367529,-0.0591286,0,0,0.9982504,1,1,1,1},{0.38,1.5855687,-1.1367529,-0.0591286,0,0,0.9982504,1,1,1,1},{0,1.065073,-1.110122,-0.0591286,0,0,0.9982504,1,1,1,1},{0,1.1700679,-1.243449,-0.0591286,0,0,0.9982504,1,1,1,1},{0,0.9627168,-1.2087284,-0.0591286,0,0,0.9982504,1,1,1,0},{0.31,0.8388339,-1.2342826,-0.0591286,0,0,0.9982504,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.9722996,-1.2551845,-0.0591286,0,0,0.9982504,1,0.5378466,1,1},{-0.1439315,1.2633554,-2.5126589,0.2075808,-0.025108,0.1174256,0.9708198,1.1049087,1,1.0106481,1},{0.0365128,1.0825651,-2.4622033,0.1818681,-0.0191837,0.1031302,0.9777117,1.0029079,1,0.983912,1},{-0.0407832,1.0942177,-2.2626857,0.1558987,-0.0140398,0.0885885,0.9836923,0.8986301,1,0.9571759,1},{-0.0124961,1.0867482,-2.1010392,0.1297091,-0.0096861,0.0738354,0.9887518,0.8737312,1,0.9304398,1},{0.0351772,1.0688096,-1.9389837,0.1033362,-0.0061308,0.0589064,0.9928817,0.9477087,1,0.9037037,1}}},
+	{1.0666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5790033,-0.3835511,-0.050815,0,0,0.9987081,1,1,1,1},{-1.04,1.4746463,-0.3226444,-0.050815,0,0,0.9987081,1,1,1,1},{-1.04,0.8976416,-0.2637752,-0.050815,0,0,0.9987081,1,1,1,1},{1.04,1.4746463,-0.3226444,-0.050815,0,0,0.9987081,1,1,1,1},{1.04,0.8976416,-0.2637752,-0.050815,0,0,0.9987081,1,1,1,1},{0,1.8232567,-1.1422607,-0.050815,0,0,0.9987081,1,1,1,1},{-0.38,1.6049003,-1.1149568,-0.050815,0,0,0.9987081,1,1,1,1},{0.38,1.6049003,-1.1149568,-0.050815,0,0,0.9987081,1,1,1,1},{0,1.0840333,-1.0969968,-0.050815,0,0,0.9987081,1,1,1,1},{0,1.1912337,-1.2285569,-0.050815,0,0,0.9987081,1,1,1,1},{0,0.9833332,-1.1972938,-0.050815,0,0,0.9987081,1,1,1,0},{0.31,0.859893,-1.2249074,-0.050815,0,0,0.9987081,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,0.9936883,-1.2435839,-0.050815,0,0,0.9987081,1,0.4621534,1,1},{-0.1439315,1.2323178,-2.6214552,0.2230241,-0.0290736,0.125955,0.9662041,1.1296227,1,1.0268519,1},{0.0415645,1.0632539,-2.5709996,0.1974845,-0.0226817,0.1118257,0.9736429,1.0710174,1,1.0001157,1},{-0.0449877,1.0870764,-2.371482,0.1716663,-0.0170635,0.0974291,0.9801771,0.956801,1,0.9733796,1},{-0.0140484,1.0915227,-2.2098355,0.1456058,-0.0122299,0.0827999,0.9857959,0.8764121,1,0.9466435,1},{0.0406736,1.0845629,-2.04778,0.1193396,-0.0081898,0.0679733,0.9904901,0.8928003,1,0.9199074,1}}},
+	{1.1,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.585962,-0.3621877,-0.0425828,0,0,0.9990929,1,1,1,1},{-1.04,1.4806153,-0.3030093,-0.0425828,0,0,0.9990929,1,1,1,1},{-1.04,0.9027187,-0.2536581,-0.0425828,0,0,0.9990929,1,1,1,1},{1.04,1.4806153,-0.3030093,-0.0425828,0,0,0.9990929,1,1,1,1},{1.04,0.9027187,-0.2536581,-0.0425828,0,0,0.9990929,1,1,1,1},{0,1.842687,-1.1167686,-0.0425828,0,0,0.9990929,1,1,1,1},{-0.38,1.6239103,-1.0930673,-0.0425828,0,0,0.9990929,1,1,1,1},{0.38,1.6239103,-1.0930673,-0.0425828,0,0,0.9990929,1,1,1,1},{0,1.102818,-1.0836944,-0.0425828,0,0,0.9990929,1,1,1,1},{0,1.2121722,-1.2134698,-0.0425828,0,0,0.9990929,1,1,1,1},{0,1.0037847,-1.1856375,-0.0425828,0,0,0.9990929,1,1,1,0},{0.31,0.8808163,-1.2152819,-0.0425828,0,0,0.9990929,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.0149013,-1.2317507,-0.0425828,0,0,0.9990929,1,0.3872332,1,1},{-0.1439315,1.1946755,-2.7302515,0.2383519,-0.033319,0.1343736,0.9612606,1.1153482,1,1.0430556,1},{0.0466161,1.036739,-2.6797959,0.2129986,-0.0264639,0.120423,0.9692417,1.117766,1,1.0163194,1},{-0.0491922,1.072545,-2.4802783,0.187345,-0.0203755,0.1061843,0.9763256,1.0279656,1,0.9895833,1},{-0.0156007,1.0891445,-2.3186317,0.161427,-0.0150652,0.0916919,0.9825004,0.9162664,1,0.9628472,1},{0.0461701,1.0938107,-2.1565763,0.135281,-0.0105431,0.0769808,0.987756,0.8701359,1,0.9361111,1}}},
+	{1.1333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5925923,-0.341377,-0.0346026,0,0,0.9994012,1,1,1,1},{-1.04,1.4863139,-0.2838888,-0.0346026,0,0,0.9994012,1,1,1,1},{-1.04,0.9077028,-0.2437738,-0.0346026,0,0,0.9994012,1,1,1,1},{1.04,1.4863139,-0.2838888,-0.0346026,0,0,0.9994012,1,1,1,1},{1.04,0.9077028,-0.2437738,-0.0346026,0,0,0.9994012,1,1,1,1},{0,1.8613364,-1.0917613,-0.0346026,0,0,0.9994012,1,1,1,1},{-0.38,1.6422091,-1.0715573,-0.0346026,0,0,0.9994012,1,1,1,1},{0.38,1.6422091,-1.0715573,-0.0346026,0,0,0.9994012,1,1,1,1},{0,1.1210336,-1.0705083,-0.0346026,0,0,0.9994012,1,1,1,1},{0,1.2324466,-1.1985206,-0.0346026,0,0,0.9994012,1,1,1,1},{0,1.0236411,-1.1740202,-0.0346026,0,0,0.9994012,1,1,1,0},{0.31,0.9011619,-1.2056247,-0.0346026,0,0,0.9994012,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.0354928,-1.2199499,-0.0346026,0,0,0.9994012,1,0.3146319,1,1},{-0.1439315,1.150979,-2.8390478,0.2535564,-0.0378412,0.1426738,0.9559923,1.0663787,1,1.0592593,1},{0.0516678,1.0033356,-2.7885922,0.2284024,-0.0305278,0.1289145,0.964511,1.1290923,1,1.0325231,1},{-0.0533966,1.0506861,-2.5890746,0.2029265,-0.0239733,0.1148463,0.9721401,1.0907185,1,1.005787,1},{-0.017153,1.0794193,-2.427428,0.1771644,-0.0181901,0.1005036,0.9788672,0.9813065,1,0.9790509,1},{0.0516665,1.0961135,-2.2653726,0.1511522,-0.0131892,0.0859208,0.984681,0.8865326,1,0.9523148,1}}},
+	{1.1666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.5987656,-0.3215774,-0.0270452,0,0,0.9996342,1,1,1,1},{-1.04,1.4916301,-0.2657028,-0.0270452,0,0,0.9996342,1,1,1,1},{-1.04,0.9124785,-0.2343418,-0.0270452,0,0,0.9996342,1,1,1,1},{1.04,1.4916301,-0.2657028,-0.0270452,0,0,0.9996342,1,1,1,1},{1.04,0.9124785,-0.2343418,-0.0270452,0,0,0.9996342,1,1,1,1},{0,1.878826,-1.0678121,-0.0270452,0,0,0.9996342,1,1,1,1},{-0.38,1.6594182,-1.0509239,-0.0270452,0,0,0.9996342,1,1,1,1},{0.38,1.6594182,-1.0509239,-0.0270452,0,0,0.9996342,1,1,1,1},{0,1.1382864,-1.057756,-0.0270452,0,0,0.9996342,1,1,1,1},{0,1.2516224,-1.1840689,-0.0270452,0,0,0.9996342,1,1,1,1},{0,1.0424703,-1.1627287,-0.0270452,0,0,0.9996342,1,1,1,0},{0.31,0.920483,-1.1961817,-0.0270452,0,0,0.9996342,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.0550152,-1.2084739,-0.0270452,0,0,0.9996342,1,0.2458953,1,1},{-0.1439315,1.1019066,-2.9478441,0.2686298,-0.042637,0.1508483,0.9504025,0.9974435,1,1.075463,1},{0.0567194,0.9635049,-2.8973885,0.243688,-0.0348704,0.1372925,0.9594535,1.1015896,1,1.0487269,1},{-0.0576011,1.0217166,-2.6978709,0.2184029,-0.0278544,0.1234075,0.9676233,1.1261847,1,1.0219907,1},{-0.0187053,1.0623082,-2.5362243,0.19281,-0.0216023,0.109227,0.9748985,1.0519693,1,0.9952546,1},{0.0571629,1.091178,-2.3741689,0.166945,-0.0161261,0.0947855,0.981267,0.9370587,1,0.9685185,1}}},
+	{1.2,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.6043622,-0.3032543,-0.0200813,0,0,0.9997984,1,1,1,1},{-1.04,1.4964587,-0.2488777,-0.0200813,0,0,0.9997984,1,1,1,1},{-1.04,0.9169265,-0.2255881,-0.0200813,0,0,0.9997984,1,1,1,1},{1.04,1.4964587,-0.2488777,-0.0200813,0,0,0.9997984,1,1,1,1},{1.04,0.9169265,-0.2255881,-0.0200813,0,0,0.9997984,1,1,1,1},{0,1.8947914,-1.045515,-0.0200813,0,0,0.9997984,1,1,1,1},{-0.38,1.6751696,-1.0316851,-0.0200813,0,0,0.9997984,1,1,1,1},{0.38,1.6751696,-1.0316851,-0.0200813,0,0,0.9997984,1,1,1,1},{0,1.1541836,-1.0457765,-0.0200813,0,0,0.9997984,1,1,1,1},{0,1.2692682,-1.1704983,-0.0200813,0,0,0.9997984,1,1,1,1},{0,1.0598391,-1.1520739,-0.0200813,0,0,0.9997984,1,1,1,0},{0.31,0.9383297,-1.1872231,-0.0200813,0,0,0.9997984,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.0730201,-1.1976399,-0.0200813,0,0,0.9997984,1,0.1825695,1,1},{-0.1439315,1.0482501,-3.0566404,0.2835644,-0.0477033,0.1588897,0.9444944,0.9292773,1,1.0916667,1},{0.0617711,0.9178435,-3.0061848,0.2588474,-0.0394888,0.1455496,0.9540723,1.0435303,1,1.0649306,1},{-0.0618055,0.9860041,-2.8066672,0.2337662,-0.0320161,0.1318601,0.9627779,1.1236964,1,1.0381944,1},{-0.0202576,1.0379281,-2.6450206,0.2083556,-0.0252996,0.1178546,0.9705968,1.1070005,1,1.0114583,1},{0.0626594,1.0788643,-2.4829652,0.1826512,-0.0193518,0.1035672,0.9775162,1.0065165,1,0.9847222,1}}},
+	{1.2333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.6092699,-0.286879,-0.0138816,0,0,0.9999036,1,1,1,1},{-1.04,1.5007003,-0.2338446,-0.0138816,0,0,0.9999036,1,1,1,1},{-1.04,0.9209238,-0.2177436,-0.0138816,0,0,0.9999036,1,1,1,1},{1.04,1.5007003,-0.2338446,-0.0138816,0,0,0.9999036,1,1,1,1},{1.04,0.9209238,-0.2177436,-0.0138816,0,0,0.9999036,1,1,1,1},{0,1.9088814,-1.0254811,-0.0138816,0,0,0.9999036,1,1,1,1},{-0.38,1.689105,-1.0143757,-0.0138816,0,0,0.9999036,1,1,1,1},{0.38,1.689105,-1.0143757,-0.0138816,0,0,0.9999036,1,1,1,1},{0,1.1683338,-1.0349267,-0.0138816,0,0,0.9999036,1,1,1,1},{0,1.2849563,-1.1582117,-0.0138816,0,0,0.9999036,1,1,1,1},{0,1.0753148,-1.1423859,-0.0138816,0,0,0.9999036,1,1,1,0},{0.31,0.9542506,-1.1790392,-0.0138816,0,0,0.9999036,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.0890598,-1.187785,-0.0138816,0,0,0.9999036,1,0.1262003,1,1},{-0.1439315,0.9908982,-3.1654367,0.2983525,-0.0530362,0.1667906,0.9382717,0.8823833,1,1.1078704,1},{0.0668227,0.8670713,-3.1149811,0.2738731,-0.0443796,0.1536783,0.9483707,0.9723778,1,1.0811343,1},{-0.06601,0.9440582,-2.9154635,0.2490085,-0.0364556,0.1401966,0.9576067,1.0840021,1,1.0543981,1},{-0.0218099,1.0065493,-2.7538169,0.2237933,-0.0292792,0.1263786,0.9659647,1.1298476,1,1.027662,1},{0.0681558,1.0591877,-2.5917615,0.1982627,-0.0228641,0.112258,0.9734307,1.0740143,1,1.0009259,1}}},
+	{1.2666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.6133818,-0.2729262,-0.0086166,0,0,0.9999629,1,1,1,1},{-1.04,1.5042598,-0.2210381,-0.0086166,0,0,0.9999629,1,1,1,1},{-1.04,0.9243459,-0.2110432,-0.0086166,0,0,0.9999629,1,1,1,1},{1.04,1.5042598,-0.2210381,-0.0086166,0,0,0.9999629,1,1,1,1},{1.04,0.9243459,-0.2110432,-0.0086166,0,0,0.9999629,1,1,1,1},{0,1.9207546,-1.0083323,-0.0086166,0,0,0.9999629,1,1,1,1},{-0.38,1.7008734,-0.9995418,-0.0086166,0,0,0.9999629,1,1,1,1},{0.38,1.7008734,-0.9995418,-0.0086166,0,0,0.9999629,1,1,1,1},{0,1.1803475,-1.0255757,-0.0086166,0,0,0.9999629,1,1,1,1},{0,1.2982618,-1.1476258,-0.0086166,0,0,0.9999629,1,1,1,1},{0,1.0884653,-1.1340085,-0.0086166,0,0,0.9999629,1,1,1,0},{0.31,0.9677938,-1.1719346,-0.0086166,0,0,0.9999629,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1026876,-1.1792603,-0.0086166,0,0,0.9999629,1,0.12,1,1},{-0.1439315,0.9308175,-3.274233,0.3129867,-0.0586323,0.1745439,0.9317382,0.8708667,1,1.1240741,1},{0.0718744,0.8120159,-3.2237774,0.2887573,-0.0495396,0.1616713,0.9423521,0.9095336,1,1.097338,1},{-0.0702145,0.8965203,-3.0242598,0.264122,-0.0411697,0.1484096,0.952113,1.0190413,1,1.0706019,1},{-0.0233622,0.9685901,-2.8626132,0.2391152,-0.0335385,0.1347914,0.9610049,1.1136385,1,1.0438657,1},{0.0736522,1.0323196,-2.7005578,0.2137715,-0.0266604,0.1208502,0.969013,1.1192497,1,1.0171296,1}}},
+	{1.3,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.6165943,-0.2618721,-0.0044567,0,0,0.9999901,1,1,1,1},{-1.04,1.5070443,-0.2108936,-0.0044567,0,0,0.9999901,1,1,1,1},{-1.04,0.9270674,-0.2057239,-0.0044567,0,0,0.9999901,1,1,1,1},{1.04,1.5070443,-0.2108936,-0.0044567,0,0,0.9999901,1,1,1,1},{1.04,0.9270674,-0.2057239,-0.0044567,0,0,0.9999901,1,1,1,1},{0,1.9300749,-0.9946953,-0.0044567,0,0,0.9999901,1,1,1,1},{-0.38,1.7101282,-0.9877346,-0.0044567,0,0,0.9999901,1,1,1,1},{0.38,1.7101282,-0.9877346,-0.0044567,0,0,0.9999901,1,1,1,1},{0,1.1898369,-1.0180983,-0.0044567,0,0,0.9999901,1,1,1,1},{0,1.3087625,-1.1391631,-0.0044567,0,0,0.9999901,1,1,1,1},{0,1.09886,-1.1272917,-0.0044567,0,0,0.9999901,1,1,1,0},{0.31,0.9785083,-1.1662206,-0.0044567,0,0,0.9999901,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,1},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,1},{0.076926,0.7535956,-3.3325737,0.3034924,-0.0549651,0.1695214,0.9360201,0.8739003,1,1.1135417,1},{-0.0744189,0.8441498,-3.1330561,0.2790991,-0.0461552,0.1564917,0.9463,0.9483531,1,1.0868056,1},{-0.0249145,0.9246077,-2.9714095,0.2543133,-0.0380745,0.1430856,0.9557205,1.0632486,1,1.0600694,1},{0.0791487,0.9985828,-2.8093541,0.2291695,-0.0307383,0.1293361,0.9642659,1.1286166,1,1.0333333,1}}},
+	{1.3333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.6188029,-0.2541912,-0.0015721,0,0,0.9999988,1,1,1,1},{-1.04,1.5089607,-0.2038456,-0.0015721,0,0,0.9999988,1,1,1,1},{-1.04,0.9289635,-0.202022,-0.0015721,0,0,0.9999988,1,1,1,1},{1.04,1.5089607,-0.2038456,-0.0015721,0,0,0.9999988,1,1,1,1},{1.04,0.9289635,-0.202022,-0.0015721,0,0,0.9999988,1,1,1,1},{0,1.9365061,-0.9851937,-0.0015721,0,0,0.9999988,1,1,1,1},{-0.38,1.7165229,-0.9795021,-0.0015721,0,0,0.9999988,1,1,1,1},{0.38,1.7165229,-0.9795021,-0.0015721,0,0,0.9999988,1,1,1,1},{0,1.1964155,-1.012867,-0.0015721,0,0,0.9999988,1,1,1,1},{0,1.3160376,-1.1332437,-0.0015721,0,0,0.9999988,1,1,1,1},{0,1.10607,-1.1225834,-0.0015721,0,0,0.9999988,1,1,1,1},{0.31,0.9859449,-1.1622059,-0.0015721,0,0,0.9999988,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0819777,0.6927995,-3.44137,0.3180709,-0.0606523,0.1772214,0.9293787,0.8761959,1,1.1297454,1},{-0.0786234,0.7878081,-3.2418524,0.2939319,-0.0514085,0.1644355,0.9401713,0.8931995,1,1.1030093,1},{-0.0264669,0.8752864,-3.0802058,0.2693799,-0.042884,0.1512536,0.9501146,0.9938346,1,1.0762731,1},{0.0846451,0.9584453,-2.9181504,0.244449,-0.0350948,0.1377083,0.9591921,1.0992975,1,1.049537,1}}},
+	{1.3666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.619899,-0.2503544,-0.0001329,0,0,1,1,1,1,1},{-1.04,1.5099123,-0.2003251,-0.0001329,0,0,1,1,1,1,1},{-1.04,0.9299123,-0.200171,-0.0001329,0,0,1,1,1,1,1},{1.04,1.5099123,-0.2003251,-0.0001329,0,0,1,1,1,1,1},{1.04,0.9299123,-0.200171,-0.0001329,0,0,1,1,1,1,1},{0,1.939705,-0.9804394,-0.0001329,0,0,1,1,1,1,1},{-0.38,1.7197063,-0.9753809,-0.0001329,0,0,1,1,1,1,1},{0.38,1.7197063,-0.9753809,-0.0001329,0,0,1,1,1,1,1},{0,1.1996971,-1.0102427,-0.0001329,0,0,1,1,1,1,1},{0,1.3196652,-1.1302746,-0.0001329,0,0,1,1,1,1,1},{0,1.1096678,-1.1202188,-0.0001329,0,0,1,1,1,1,1},{0.31,0.9896572,-1.1601869,-0.0001329,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,1},{-0.0828278,0.7284407,-3.3506487,0.3086131,-0.0569261,0.1722338,0.9337306,0.8701699,1,1.119213,1},{-0.0280192,0.8214233,-3.1890021,0.2843073,-0.0479636,0.1592881,0.9441907,0.9262749,1,1.0924769,1},{0.0901415,0.9125103,-3.0269467,0.259602,-0.0397269,0.1459591,0.9537948,1.0401113,1,1.0657407,1}}},
+	{1.4,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,1},{-0.0295715,0.7639114,-3.2977984,0.299088,-0.0533098,0.1671818,0.9379524,0.8808907,1,1.1086806,1},{0.095638,0.8615034,-3.135743,0.2746207,-0.0446313,0.1540812,0.9480772,0.9688602,1,1.0819444,1}}},
+	{1.4333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0311238,0.7037208,-3.4065947,0.3137142,-0.0589189,0.1749276,0.9314034,0.8713328,1,1.1248843,1},{0.1011344,0.8062573,-3.2445393,0.2894977,-0.0498046,0.1620673,0.9420429,0.9069755,1,1.0981481,1}}},
+	{1.4666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,1},{0.1066308,0.7476942,-3.3533356,0.3042251,-0.0552433,0.16991,0.9356954,0.8730711,1,1.1143519,1}}},
+	{1.5,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1121273,0.6868063,-3.4621319,0.3187956,-0.0609435,0.1776023,0.9290386,0.877345,1,1.1305556,1}}},
+	{1.5333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,1}}},
+	{1.5666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.6,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.6333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.6666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.7,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.7333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.7666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.8,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.8333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.8666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.9,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.9333333,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{1.9666667,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+	{2,{{0,0.87,0.45,0,0,0,1,1,1,1,1},{0,0.24,0.7,0,0,0,1,1,1,1,1},{0,1.16,0.65,0,0,0,1,1,1,1,1},{0,0.74,0,0,0,0,1,1,1,1,1},{-0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{-0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{0.45,0.5,-0.22,0,0,0,1,1,1,1,1},{0.45,0.15,-0.38,0,0,0,1,1,1,1,1},{-0.68,0.31,0.56,0,0,0.059964,0.9982005,1,1,1,1},{-0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0.68,0.31,0.56,0,0,-0.059964,0.9982005,1,1,1,1},{0.8,0.13,0.3,0,0,0,1,1,1,1,1},{0,1.62,-0.25,0,0,0,1,1,1,1,1},{-1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{-1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{1.04,1.51,-0.2,0,0,0,1,1,1,1,1},{1.04,0.93,-0.2,0,0,0,1,1,1,1,1},{0,1.94,-0.98,0,0,0,1,1,1,1,1},{-0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0.38,1.72,-0.975,0,0,0,1,1,1,1,1},{0,1.2,-1.01,0,0,0,1,1,1,1,1},{0,1.32,-1.13,0,0,0,1,1,1,1,1},{0,1.11,-1.12,0,0,0,1,1,1,1,1},{0.31,0.99,-1.16,0,0,0,1,1,1,1,1},{0,0.48,1.14,0,0,0,1,1,1,1,1},{0,0.76,1.14,0,0,0,1,1,1,1,1},{0,1.1134583,-1.1724236,-0.0044567,0,0,0.9999901,1,0.12,1,0},{-0.1439315,0.8690324,-3.3830293,0.3274595,-0.0644875,0.1821425,0.9248977,0.8981914,1,1.1402778,0},{0.0870293,0.6306672,-3.5501663,0.3324855,-0.0665973,0.1847642,0.9224318,0.9157299,1,1.1459491,0},{-0.0870323,0.6670568,-3.459445,0.3231351,-0.0627039,0.1798796,0.9269818,0.8861912,1,1.1354167,0},{-0.0326761,0.6418781,-3.515391,0.3281788,-0.064787,0.1825183,0.9245477,0.900476,1,1.141088,0},{0.1176237,0.624635,-3.5709282,0.3332018,-0.0669012,0.1851371,0.9220765,0.9185117,1,1.1467593,0}}},
+}
+
+if model:GetAttribute("AutoPreview") == nil then
+	model:SetAttribute("AutoPreview", AUTO_PREVIEW_DEFAULT)
+end
+
+local parts = {}
+for index, name in ipairs(names) do
+	local part = model:FindFirstChild(name, true)
+	assert(part and part:IsA("BasePart"), "Missing animated part: " .. name)
+	parts[index] = part
+end
+
+local function frameCFrame(values)
+	local x, y, z, w = values[4], values[5], values[6], values[7]
+	return CFrame.new(values[1], values[2], values[3],
+		1 - 2 * (y * y + z * z), 2 * (x * y - z * w), 2 * (x * z + y * w),
+		2 * (x * y + z * w), 1 - 2 * (x * x + z * z), 2 * (y * z - x * w),
+		2 * (x * z - y * w), 2 * (y * z + x * w), 1 - 2 * (x * x + y * y))
+end
+
+local heartbeatConnection
+local attackConnection
+local destroyingConnection
+local playing = false
+local destroyed = false
+
+local function disconnectHeartbeat()
+	if heartbeatConnection then
+		heartbeatConnection:Disconnect()
+		heartbeatConnection = nil
+	end
+end
+
+local function play()
+	if playing or destroyed then
+		return
+	end
+	playing = true
+	local reset = {}
+	for index, part in ipairs(parts) do
+		reset[index] = { cframe = part.CFrame, size = part.Size, transparency = part.Transparency }
+	end
+	local baseAnchor = frameCFrame(frames[1][2][anchorIndex])
+	local placement = parts[anchorIndex].CFrame * baseAnchor:Inverse()
+	local elapsed = 0
+	local frameIndex = 1
+
+	local function restore()
+		for index, part in ipairs(parts) do
+			local state = reset[index]
+			if part.Parent then
+				part.CFrame = state.cframe
+				part.Size = state.size
+				part.Transparency = state.transparency
+			end
+		end
+	end
+
+	heartbeatConnection = RunService.Heartbeat:Connect(function(dt)
+		elapsed = math.min(elapsed + dt, DURATION)
+		while frameIndex &lt; #frames - 1 and elapsed &gt;= frames[frameIndex + 1][1] do
+			frameIndex += 1
+		end
+		local current = frames[frameIndex]
+		local following = frames[math.min(frameIndex + 1, #frames)]
+		local span = following[1] - current[1]
+		local alpha = span &gt; 0 and math.clamp((elapsed - current[1]) / span, 0, 1) or 0
+		for index, part in ipairs(parts) do
+			local a, b = current[2][index], following[2][index]
+			local currentCFrame = placement * frameCFrame(a)
+			local nextCFrame = placement * frameCFrame(b)
+			part.CFrame = currentCFrame:Lerp(nextCFrame, alpha)
+			local currentSize = Vector3.new(baseSizes[index].X * a[8], baseSizes[index].Y * a[9], baseSizes[index].Z * a[10])
+			local nextSize = Vector3.new(baseSizes[index].X * b[8], baseSizes[index].Y * b[9], baseSizes[index].Z * b[10])
+			part.Size = currentSize:Lerp(nextSize, alpha)
+			local visible = a[11] == 1
+			part.Transparency = visible and 0 or 1
+		end
+		if elapsed &gt;= DURATION then
+			disconnectHeartbeat()
+			restore()
+			playing = false
+			if not destroyed and script.Parent:GetAttribute("AutoPreview") then
+				task.delay(0.45, play)
+			end
+		end
+	end)
+end
+
+attackConnection = attack.Event:Connect(play)
+destroyingConnection = model.Destroying:Connect(function()
+	destroyed = true
+	disconnectHeartbeat()
+	if attackConnection then attackConnection:Disconnect() end
+	if destroyingConnection then destroyingConnection:Disconnect() end
+end)
+
+if script.Parent:GetAttribute("AutoPreview") then
+	task.defer(play)
+end
+
+-- RELEASE_TIME is baked for gameplay integration metadata; this visual player applies no hit logic.</ProtectedString>
+      </Properties>
+    </Item>
+  </Item>
+</roblox>

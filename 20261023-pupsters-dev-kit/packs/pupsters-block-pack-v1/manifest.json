@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "style": "approved Shiba block v3",
+  "models": [
+    {
+      "id": "D01",
+      "slug": "shiba",
+      "name": "Shiba_Block",
+      "displayName": "시바견",
+      "feature": "작은 흰 눈썹 · 네모 뼈",
+      "attackName": "뼈다귀 뱉기",
+      "attackMethod": "입에 문 작은 뼈를 앞으로 퉤! 뱉어요.",
+      "mouth": [
+        0,
+        0.82,
+        -1.48
+      ],
+      "scene": "scenes/D01-shiba.json",
+      "native": "native/D01-shiba.rbxmx",
+      "builder": "native/Build-D01-shiba.luau",
+      "gltf": "models/Shiba_Block.gltf",
+      "glb": "models/Shiba_Block.glb",
+      "obj": "models/Shiba_Block.obj",
+      "mtl": "models/Shiba_Block.mtl",
+      "preview": "previews/D01-shiba.png",
+      "views": "previews/D01-shiba-views.png",
+      "parts": 28,
+      "triangles": 944,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.145,
+          0.0,
+          -1.57
+        ],
+        "max": [
+          1.145,
+          2.7049999999999996,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "D02",
+      "slug": "bulldog",
+      "name": "Bulldog_Block",
+      "displayName": "불도그",
+      "feature": "빵빵한 네모 볼 · 삐죽한 이빨",
+      "attackName": "압축 공기탄",
+      "attackMethod": "양 볼에 공기를 모은 뒤 입으로 공기 충격탄을 뿜어요.",
+      "mouth": [
+        0,
+        0.88,
+        -1.72
+      ],
+      "scene": "scenes/D02-bulldog.json",
+      "native": "native/D02-bulldog.rbxmx",
+      "builder": "native/Build-D02-bulldog.luau",
+      "gltf": "models/Bulldog_Block.gltf",
+      "glb": "models/Bulldog_Block.glb",
+      "obj": "models/Bulldog_Block.obj",
+      "mtl": "models/Bulldog_Block.mtl",
+      "preview": "previews/D02-bulldog.png",
+      "views": "previews/D02-bulldog-views.png",
+      "parts": 27,
+      "triangles": 636,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.270896520882049,
+          0.0,
+          -1.7435
+        ],
+        "max": [
+          1.270896520882049,
+          2.215,
+          1.215
+        ]
+      }
+    },
+    {
+      "id": "D03",
+      "slug": "husky",
+      "name": "Husky_Block",
+      "displayName": "시베리안 허스키",
+      "feature": "회백색 얼굴 마스크 · 양쪽 귀 끝 얼음 결정",
+      "attackName": "냉기 숨결",
+      "attackMethod": "입 앞에서 차가운 숨결을 곧게 내뿜어요.",
+      "mouth": [
+        0,
+        0.84,
+        -1.48
+      ],
+      "scene": "scenes/D03-husky.json",
+      "native": "native/D03-husky.rbxmx",
+      "builder": "native/Build-D03-husky.luau",
+      "gltf": "models/Husky_Block.gltf",
+      "glb": "models/Husky_Block.glb",
+      "obj": "models/Husky_Block.obj",
+      "mtl": "models/Husky_Block.mtl",
+      "preview": "previews/D03-husky.png",
+      "views": "previews/D03-husky-views.png",
+      "parts": 34,
+      "triangles": 672,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.1450000000010208,
+          0.0,
+          -1.490000000000408
+        ],
+        "max": [
+          1.1450000000010208,
+          2.7750000000000004,
+          1.375
+        ]
+      }
+    },
+    {
+      "id": "D04",
+      "slug": "beagle",
+      "name": "Beagle_Block",
+      "displayName": "비글",
+      "feature": "갈색 늘어진 귀 · 짧은 파란 침방울",
+      "attackName": "침방울 튕기기",
+      "attackMethod": "입가의 작은 침방울을 앞으로 톡! 튕겨요.",
+      "mouth": [
+        0,
+        0.88,
+        -1.48
+      ],
+      "scene": "scenes/D04-beagle.json",
+      "native": "native/D04-beagle.rbxmx",
+      "builder": "native/Build-D04-beagle.luau",
+      "gltf": "models/Beagle_Block.gltf",
+      "glb": "models/Beagle_Block.glb",
+      "obj": "models/Beagle_Block.obj",
+      "mtl": "models/Beagle_Block.mtl",
+      "preview": "previews/D04-beagle.png",
+      "views": "previews/D04-beagle-views.png",
+      "parts": 26,
+      "triangles": 624,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.3824603909775295,
+          0.0,
+          -1.55
+        ],
+        "max": [
+          1.3824603909775295,
+          2.26,
+          1.3605890996272154
+        ]
+      }
+    },
+    {
+      "id": "D05",
+      "slug": "poodle",
+      "name": "Poodle_Block",
+      "displayName": "푸들",
+      "feature": "네모 털뭉치 · 노랑·하늘 전기털",
+      "attackName": "정전기 찌릿",
+      "attackMethod": "머리와 귀 끝의 전기털로 짧게 찌릿! 방전해요.",
+      "mouth": [
+        0,
+        0.91,
+        -1.48
+      ],
+      "scene": "scenes/D05-poodle.json",
+      "native": "native/D05-poodle.rbxmx",
+      "builder": "native/Build-D05-poodle.luau",
+      "gltf": "models/Poodle_Block.gltf",
+      "glb": "models/Poodle_Block.glb",
+      "obj": "models/Poodle_Block.obj",
+      "mtl": "models/Poodle_Block.mtl",
+      "preview": "previews/D05-poodle.png",
+      "views": "previews/D05-poodle-views.png",
+      "parts": 38,
+      "triangles": 728,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.462107373040109,
+          0.0,
+          -1.49
+        ],
+        "max": [
+          1.462107373040109,
+          2.8892096590927685,
+          1.3573645705615751
+        ]
+      }
+    },
+    {
+      "id": "D06",
+      "slug": "border-collie",
+      "name": "BorderCollie_Block",
+      "displayName": "보더콜리",
+      "feature": "한쪽 접힌 귀 · 낡은 골판지 왕관",
+      "attackName": "응원 짖기",
+      "attackMethod": "입 앞에서 힘차게 짖어 아군을 응원해요.",
+      "mouth": [
+        0,
+        0.84,
+        -1.48
+      ],
+      "scene": "scenes/D06-border-collie.json",
+      "native": "native/D06-border-collie.rbxmx",
+      "builder": "native/Build-D06-border-collie.luau",
+      "gltf": "models/BorderCollie_Block.gltf",
+      "glb": "models/BorderCollie_Block.glb",
+      "obj": "models/BorderCollie_Block.obj",
+      "mtl": "models/BorderCollie_Block.mtl",
+      "preview": "previews/D06-border-collie.png",
+      "views": "previews/D06-border-collie-views.png",
+      "parts": 39,
+      "triangles": 736,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.090000000002046,
+          0.0,
+          -1.52
+        ],
+        "max": [
+          1.1450000000010208,
+          3.1147489549598237,
+          1.3699999999999999
+        ]
+      }
+    }
+  ]
+}

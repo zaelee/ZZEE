@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "kit": "Pupsters Production UI Starter Kit",
+  "generatedAssetCount": 34,
+  "pairedFileCount": 68,
+  "transparentCanvas": true,
+  "visualRules": {
+    "outline": "near-black, rounded, slightly irregular",
+    "fills": "flat colors only; no gradients or grunge",
+    "content": "surfaces contain no text, dog portraits, or baked icons"
+  },
+  "palette": {
+    "ink": "#171716",
+    "ivory": "#FFF7E8",
+    "bone": "#F3E5CC",
+    "orange": "#FF8738",
+    "orangePressed": "#E96A2B",
+    "sage": "#A8C99A",
+    "mint": "#C9E7B7",
+    "blue": "#86C9F0",
+    "coral": "#FF625B",
+    "green": "#73C94C",
+    "gray": "#D6D5D0",
+    "grayDark": "#777873"
+  },
+  "assets": [
+    {
+      "id": "button-orange-normal",
+      "category": "button",
+      "files": {
+        "svg": "svg/button-orange-normal.svg",
+        "png": "png/button-orange-normal.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "purpose": "Primary button background, normal state",
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "button-orange-pressed",
+      "category": "button",
+      "files": {
+        "svg": "svg/button-orange-pressed.svg",
+        "png": "png/button-orange-pressed.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "purpose": "Primary button background, pressed state",
+      "nineSlice": {
+        "left": 44,
+        "top": 34,
+        "right": 44,
+        "bottom": 28
+      }
+    },
+    {
+      "id": "button-disabled-gray",
+      "category": "button",
+      "files": {
+        "svg": "svg/button-disabled-gray.svg",
+        "png": "png/button-disabled-gray.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "purpose": "Disabled button background",
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "button-ivory-secondary",
+      "category": "button",
+      "files": {
+        "svg": "svg/button-ivory-secondary.svg",
+        "png": "png/button-ivory-secondary.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "purpose": "Secondary ivory button background",
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "button-blue-secondary",
+      "category": "button",
+      "files": {
+        "svg": "svg/button-blue-secondary.svg",
+        "png": "png/button-blue-secondary.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "purpose": "Secondary blue button background",
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "panel-large",
+      "category": "panel",
+      "files": {
+        "svg": "svg/panel-large.svg",
+        "png": "png/panel-large.png"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 500
+      },
+      "purpose": "Large empty content panel",
+      "nineSlice": {
+        "left": 58,
+        "top": 52,
+        "right": 58,
+        "bottom": 52
+      }
+    },
+    {
+      "id": "panel-compact-pill",
+      "category": "panel",
+      "files": {
+        "svg": "svg/panel-compact-pill.svg",
+        "png": "png/panel-compact-pill.png"
+      },
+      "dimensions": {
+        "width": 420,
+        "height": 112
+      },
+      "purpose": "Compact empty pill panel",
+      "nineSlice": {
+        "left": 58,
+        "top": 31,
+        "right": 58,
+        "bottom": 31
+      }
+    },
+    {
+      "id": "panel-speech-bubble",
+      "category": "panel",
+      "files": {
+        "svg": "svg/panel-speech-bubble.svg",
+        "png": "png/panel-speech-bubble.png"
+      },
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      },
+      "purpose": "Empty speech bubble panel",
+      "nineSlice": {
+        "left": 56,
+        "top": 50,
+        "right": 56,
+        "bottom": 66
+      }
+    },
+    {
+      "id": "frame-card-normal",
+      "category": "frame",
+      "files": {
+        "svg": "svg/frame-card-normal.svg",
+        "png": "png/frame-card-normal.png"
+      },
+      "dimensions": {
+        "width": 320,
+        "height": 400
+      },
+      "purpose": "Empty portrait or card frame, normal state",
+      "nineSlice": {
+        "left": 42,
+        "top": 46,
+        "right": 42,
+        "bottom": 44
+      }
+    },
+    {
+      "id": "frame-card-selected",
+      "category": "frame",
+      "files": {
+        "svg": "svg/frame-card-selected.svg",
+        "png": "png/frame-card-selected.png"
+      },
+      "dimensions": {
+        "width": 320,
+        "height": 400
+      },
+      "purpose": "Empty portrait or card frame, selected state",
+      "nineSlice": {
+        "left": 45,
+        "top": 48,
+        "right": 45,
+        "bottom": 48
+      }
+    },
+    {
+      "id": "health-track",
+      "category": "health",
+      "files": {
+        "svg": "svg/health-track.svg",
+        "png": "png/health-track.png"
+      },
+      "dimensions": {
+        "width": 480,
+        "height": 64
+      },
+      "purpose": "Empty health bar track",
+      "nineSlice": {
+        "left": 29,
+        "top": 22,
+        "right": 29,
+        "bottom": 22
+      }
+    },
+    {
+      "id": "health-fill-green",
+      "category": "health",
+      "files": {
+        "svg": "svg/health-fill-green.svg",
+        "png": "png/health-fill-green.png"
+      },
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "purpose": "Healthy-state fill strip",
+      "nineSlice": null
+    },
+    {
+      "id": "health-fill-orange",
+      "category": "health",
+      "files": {
+        "svg": "svg/health-fill-orange.svg",
+        "png": "png/health-fill-orange.png"
+      },
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "purpose": "Warning-state fill strip",
+      "nineSlice": null
+    },
+    {
+      "id": "health-fill-coral",
+      "category": "health",
+      "files": {
+        "svg": "svg/health-fill-coral.svg",
+        "png": "png/health-fill-coral.png"
+      },
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "purpose": "Danger-state fill strip",
+      "nineSlice": null
+    },
+    {
+      "id": "slider-rail",
+      "category": "control",
+      "files": {
+        "svg": "svg/slider-rail.svg",
+        "png": "png/slider-rail.png"
+      },
+      "dimensions": {
+        "width": 440,
+        "height": 48
+      },
+      "purpose": "Slider rail",
+      "nineSlice": {
+        "left": 24,
+        "top": 14,
+        "right": 24,
+        "bottom": 14
+      }
+    },
+    {
+      "id": "control-knob-round",
+      "category": "control",
+      "files": {
+        "svg": "svg/control-knob-round.svg",
+        "png": "png/control-knob-round.png"
+      },
+      "dimensions": {
+        "width": 96,
+        "height": 96
+      },
+      "purpose": "Shared circular knob for sliders and toggles",
+      "nineSlice": null
+    },
+    {
+      "id": "toggle-rail-on",
+      "category": "control",
+      "files": {
+        "svg": "svg/toggle-rail-on.svg",
+        "png": "png/toggle-rail-on.png"
+      },
+      "dimensions": {
+        "width": 240,
+        "height": 112
+      },
+      "purpose": "Toggle rail, on state; pair with separate round knob",
+      "nineSlice": {
+        "left": 57,
+        "top": 34,
+        "right": 57,
+        "bottom": 34
+      }
+    },
+    {
+      "id": "toggle-rail-off",
+      "category": "control",
+      "files": {
+        "svg": "svg/toggle-rail-off.svg",
+        "png": "png/toggle-rail-off.png"
+      },
+      "dimensions": {
+        "width": 240,
+        "height": 112
+      },
+      "purpose": "Toggle rail, off state; pair with separate round knob",
+      "nineSlice": {
+        "left": 57,
+        "top": 34,
+        "right": 57,
+        "bottom": 34
+      }
+    },
+    {
+      "id": "badge-round-empty",
+      "category": "badge",
+      "files": {
+        "svg": "svg/badge-round-empty.svg",
+        "png": "png/badge-round-empty.png"
+      },
+      "dimensions": {
+        "width": 176,
+        "height": 176
+      },
+      "purpose": "Empty round badge background",
+      "nineSlice": {
+        "left": 48,
+        "top": 48,
+        "right": 48,
+        "bottom": 48
+      }
+    },
+    {
+      "id": "selection-ring",
+      "category": "selection",
+      "files": {
+        "svg": "svg/selection-ring.svg",
+        "png": "png/selection-ring.png"
+      },
+      "dimensions": {
+        "width": 240,
+        "height": 240
+      },
+      "purpose": "Selection highlight ring for a character or object",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-play",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-play.svg",
+        "png": "png/icon-play.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Play action icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-pause",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-pause.svg",
+        "png": "png/icon-pause.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Pause action icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-fast-forward",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-fast-forward.svg",
+        "png": "png/icon-fast-forward.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Fast-forward action icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-settings",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-settings.svg",
+        "png": "png/icon-settings.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Settings icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-back",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-back.svg",
+        "png": "png/icon-back.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Back navigation icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-close",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-close.svg",
+        "png": "png/icon-close.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Close or dismiss icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-heart",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-heart.svg",
+        "png": "png/icon-heart.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Health or favorite icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-screw-parts",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-screw-parts.svg",
+        "png": "png/icon-screw-parts.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Parts currency icon represented by a screw",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-target",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-target.svg",
+        "png": "png/icon-target.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Targeting icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-sell-trash",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-sell-trash.svg",
+        "png": "png/icon-sell-trash.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Sell or discard icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-lock",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-lock.svg",
+        "png": "png/icon-lock.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Locked state icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-ping",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-ping.svg",
+        "png": "png/icon-ping.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Ping or alert marker icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-check",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-check.svg",
+        "png": "png/icon-check.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Confirm or selected icon",
+      "nineSlice": null
+    },
+    {
+      "id": "icon-paw",
+      "category": "icon",
+      "files": {
+        "svg": "svg/icon-paw.svg",
+        "png": "png/icon-paw.png"
+      },
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "purpose": "Paw category icon",
+      "nineSlice": null
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "generator": "built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "canvas": {
+    "width": 1254,
+    "height": 1254
+  },
+  "records": [
+    {
+      "dog": "D04-beagle",
+      "phase": "prepare",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, prepare phase. Input image 1 is the exact beagle idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same beagle's release pose reference. Create ONE new preparation keyframe of this exact original beagle preparing to blow one sticky bubble. Make both cheeks visibly and symmetrically puff outward around the snout; lips fully closed; head drawn slightly backward toward the shoulders; long floppy ears lifted a little outward by the cheek inflation; focused narrowed eyes. All four paws remain planted in the same positions, body root and hind paws remain registered to Image 1. Preserve the exact crisp thick black doodle outlines, warm tan/white/black markings, smooth simple fills, huge head and very short broad torso. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Change only articulated pose and facial expression; clearly distinct from idle and release. Genuine transparent background. No bubble, fluid, particles, effects, motion lines, weapons, equipment, held objects, projectiles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D04-beagle-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D04-beagle-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D04-beagle/01-prepare.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "7B513DA167509E276C477C35F11279B6AF753C863A0475788CC6A94EEEC2752D",
+        "visual": "pass: exact beagle markings and framing; puffed closed cheeks, lifted ears, focused eyes; no VFX or props"
+      }
+    },
+    {
+      "dog": "D04-beagle",
+      "phase": "recover",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, recovery phase. Input image 1 is the exact beagle idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same beagle's bubble-blow release pose reference. Create ONE new recovery keyframe immediately after this exact original beagle blows a sticky bubble. Cheeks are fully deflated and relaxed; lips have closed; only a TINY pink tongue tip peeks out; both eyes squeeze shut. Move the head noticeably forward and slightly down from release. Both long ears bounce visibly outward and droop downward. Keep all four feet planted and the torso very short. Preserve exact crisp thick black doodle outlines, warm tan/white/black markings, huge head and short broad body. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Distinct from idle and open-mouth release. Genuine transparent background. No bubble, fluid, particles, effects, motion lines, weapons, equipment, held objects, projectiles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D04-beagle-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D04-beagle-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D04-beagle/03-recover.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "CC7640AF59EDC7E081C762A51BA95993C0E4D85F15AE59F4184F9AD332FF979C",
+        "visual": "pass: exact beagle markings and framing; deflated cheeks, shut eyes, tiny tongue, outward-downward ears; no VFX or props"
+      }
+    },
+    {
+      "dog": "D05-poodle",
+      "phase": "prepare",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, prepare phase. Input image 1 is the exact poodle idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same poodle's release pose reference. Create ONE new preparation keyframe charging static in its curly fur. Compress the whole dog into a noticeably LOWER compact crouch with bent elbows and knees, head lowered slightly, torso tucked tightly behind the large head, and all four paws planted at the same ground positions. Puff attached curly coat scallops outward slightly, lift both ears, squeeze both eyes shut, and use a small determined fully closed mouth. Preserve exact crisp thick black doodle outlines, warm apricot curls, cream muzzle and paws, huge head and extremely short stout body. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Exact identity and registration; visibly distinct from idle and release. Genuine transparent background. No electricity, lightning lines, sparks, detached curls or decorations, motion lines, weapons, equipment, held objects, projectiles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D05-poodle-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D05-poodle-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D05-poodle/01-prepare.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "39923AB05584C3D5EB2925FE8EDCAC343C00CDE820204D810A8F484FE450BCEA",
+        "visual": "pass: exact poodle palette and framing; lowered compact crouch, closed eyes, lifted expanded curls; no VFX or props"
+      }
+    },
+    {
+      "dog": "D05-poodle",
+      "phase": "recover",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, recovery phase. Input image 1 is the exact poodle idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same poodle's static-release pose reference. Create ONE new recovery keyframe immediately after releasing static. Make attached curls visibly settle down and inward; both ears droop and bounce lower beside the cheeks; head rebounds up slightly; eyes blink open wide; legs extend toward neutral while all four paws remain planted. Use a small relaxed closed mouth and keep the short stout body tucked behind the large head. Preserve exact crisp thick black doodle outlines, warm apricot curls, cream muzzle and paws, huge head and extremely short body. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Visibly distinct from idle and release. Genuine transparent background. No electricity, lightning, sparks, detached curls or decorations, effects, motion lines, weapons, equipment, held objects, projectiles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D05-poodle-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D05-poodle-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D05-poodle/03-recover.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "F0CFBEF6E39735DBF966640D3F4CB5352EB7A5F606F28ABA4DA4C7D7D674C62A",
+        "visual": "pass: exact poodle palette and framing; upward head rebound, open eyes, low settled curls and ears; no VFX or props"
+      }
+    },
+    {
+      "dog": "D06-border-collie",
+      "phase": "prepare",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, prepare phase. Input image 1 is the exact border collie idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same border collie's bark release reference. Create ONE new preparation keyframe inhaling before a strong supportive bark. Pull the chin back and lift it clearly, close mouth and lips fully, tilt both ears backward, raise the chest a little, and give a comically serious focused expression. The foreground front paw at lower-right begins lifting visibly off the ground, bent tightly close to cheek/body, while the other three paws remain planted. Preserve exact crisp thick black doodle outlines, black-and-white markings, white blaze and ruff, pink inner ears, huge head, curled white-tip tail and very short compact torso. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Distinct from idle and open-mouth release. Genuine transparent background. No sound rings, effects, motion lines, weapons, equipment, held objects, projectiles, particles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D06-border-collie-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D06-border-collie-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D06-border-collie/01-prepare.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "E69EB45DE34D1991E084F1F779659C2CC564ABEFA720E14A232FC36A86DB9475",
+        "visual": "pass: exact collie markings and framing; chin-back closed-mouth wind-up, swept ears, raised bent foreground paw; no VFX or props"
+      }
+    },
+    {
+      "dog": "D06-border-collie",
+      "phase": "recover",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character animation keyframe, recovery phase. Input image 1 is the exact border collie idle identity, camera, scale, canvas, footprint, and registration target. Input image 2 is the exact same border collie's open-mouth bark release reference. Create ONE new bark follow-through keyframe immediately after barking. Nod the head noticeably forward and slightly down; close the mouth almost fully into a small relaxed curve with no tongue; blink both eyes shut. The foreground front paw at lower-right descends toward the ground with the elbow bent forward. Both floppy ear tips bounce distinctly downward. Other three paws remain planted and body root and hind paws stay registered. Preserve exact crisp thick black doodle outlines, black-and-white markings, white blaze and ruff, pink inner ears, huge head, curled white-tip tail and very short compact torso. Same 1254x1254 square canvas, top-down camera, downward-right facing, scale, centered footprint, and generous transparent margin. One dog only. Distinct from idle and open-mouth release. Genuine transparent background. No sound rings, effects, motion lines, weapons, equipment, held objects, projectiles, particles, base disk, shadow, glow, halo, text, backdrop, extra limbs, long body, long legs, crop, zoom, recoloring, sprite sheet or contact sheet.",
+      "refs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D06-border-collie-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D06-border-collie-ability.png"
+      ],
+      "generatedSource": "[local-source-omitted]",
+      "target": "../frames/D06-border-collie/03-recover.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "A51B108B501BA829DC4A5BEA04EC24ACFEDBB02970C381C56166754BB9AEAC68",
+        "visual": "pass: exact collie markings and framing; forward head nod, shut-eye blink, closed mouth, returned paw and downward ear bounce; no VFX or props"
+      }
+    }
+  ]
+}

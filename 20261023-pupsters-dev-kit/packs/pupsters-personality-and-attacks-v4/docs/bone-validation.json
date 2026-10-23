@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "date": "2026-10-23",
+  "pngs": [
+    {
+      "file": "animations/shiba-bone/00-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "sha256": "e448bb367494abdc3732453af66aa68f06615546646b05ee5335bb060f3aa213"
+    },
+    {
+      "file": "animations/shiba-bone/01-prepare.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "sha256": "6809357ca38ccbec146cd31bd0c5da92c20aa97638b815f2cb374a7bf62e9e90"
+    },
+    {
+      "file": "animations/shiba-bone/02-release.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "sha256": "634267532bce616270eb5690233f614e26939070f2dc82ab136a06d01f65382c"
+    },
+    {
+      "file": "animations/shiba-bone/03-recover.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "sha256": "4f938b9950522d8eae7815558be08af7825e6ba5738b2a2292ea461744a76215"
+    },
+    {
+      "file": "effects/FX01-bone.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "sha256": "25308d15239ad01d71f69eacd1b17a6f00ec5e0f375dc0795fb33fdaf8c8c301"
+    }
+  ],
+  "timing": {
+    "hiddenBeforeSpit": true,
+    "visibleAtSpit": true,
+    "continuesDuringRecovery": true,
+    "goneAtEnd": true,
+    "origin": [
+      0.68,
+      0.758
+    ],
+    "source": "mouth"
+  },
+  "animated": [
+    {
+      "file": "previews/D01-shiba-bone-spit.gif",
+      "pages": 18,
+      "durationMs": 1480
+    },
+    {
+      "file": "previews/D01-shiba-bone-spit.webp",
+      "pages": 19,
+      "durationMs": 1480
+    }
+  ],
+  "distinctRenderedFrames": 18,
+  "loopEndpointsMatch": true,
+  "attackDescriptions": [
+    "뼈다귀 뱉기",
+    "압축 공기탄",
+    "냉기 숨결",
+    "점착 거품",
+    "정전기 방출",
+    "지원 짖음"
+  ],
+  "loadedGalleryImages": 13,
+  "galleryControlsPassed": true,
+  "mobileOverflow": false,
+  "browserErrors": []
+}

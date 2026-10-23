@@ -1,0 +1,120 @@
+{
+  "dir": "..",
+  "common": "Use case: precise-object-edit. Create ONE new animation keyframe of the EXACT same original dog. Input image 1 is the idle pose identity/camera/registration target; input image 2 is the release pose reference. Maintain the same square canvas size, framing, scale, top-down camera, downward-right facing, coloring, markings, ear shape, short broad torso and large head. Change ONLY the articulated body pose and facial expression to the specified phase. This is one frame, NOT a sprite sheet/contact sheet. Keep body root, hind paws and footprint centered at the same position as image 1; do not enlarge or zoom. Draw real changes to paws, head, cheeks, ears and posture as requested. Do not stretch the whole image or redesign the dog. Crisp thick black doodle outlines and simple clean fills. Very short body tucked behind head, no neck, no long legs. Genuine transparent background and transparent empty margin. No weapons, equipment, objects held in mouth/paw, projectiles, sparks, frost, motion lines, extra detached decorations, base disk, shadows, glow, halo, labels, text or backdrop. Whole dog remains inside canvas with generous transparent margins.",
+  "dogs": [
+    {
+      "id": "D01",
+      "slug": "shiba",
+      "name": "시바견",
+      "action": "앞발로 구슬 던지기",
+      "effect": "FX01-pebble",
+      "durations": [
+        360,
+        180,
+        120,
+        180,
+        260
+      ],
+      "prep": "Wind up for a front-paw throw: the foreground front paw is lifted and folded back beside the lower cheek, its elbow bent; the torso crouches just slightly and shifts weight onto the other three planted paws. Clearly raised bent paw, mouth closed, focused eyes. NO pebble in paw and no flying object.",
+      "recovery": "Follow through just after throwing: the same foreground front paw has swung forward and down, extended slightly beyond the normal standing position, pads turned inward; head tilts a little forward, eyes briefly blink. Other three paws remain planted. This is a short compact follow-through, no object, no human hand.",
+      "folder": "frames/D01-shiba",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D01-shiba-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D01-shiba-ability.png"
+    },
+    {
+      "id": "D02",
+      "slug": "bulldog",
+      "name": "불도그",
+      "action": "입으로 공기 뿜기",
+      "effect": "FX02-air-puff",
+      "durations": [
+        360,
+        200,
+        140,
+        180,
+        260
+      ],
+      "prep": "Inhale to prepare an air puff: mouth sealed, both soft jowls inflated round and visibly fuller, head pulled slightly back into shoulders, elbows bent in a short braced crouch. Paws at the same planted places. Cheeks and closed lips are the emphasis.",
+      "recovery": "Recoil immediately after expelling an air puff: head bobs slightly UP and BACK, cheeks deflate, lips relax into a small closed curve, eyelids squeezed shut for an instant. Forelegs extend back toward standing while feet remain planted. No puff or effects.",
+      "folder": "frames/D02-bulldog",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D02-bulldog-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D02-bulldog-ability.png"
+    },
+    {
+      "id": "D03",
+      "slug": "husky",
+      "name": "허스키",
+      "action": "냉기 숨결",
+      "effect": "FX03-frost-breath",
+      "durations": [
+        360,
+        200,
+        360,
+        180,
+        260
+      ],
+      "prep": "Deep inhale before an icy breath: chin rises slightly and pulls back, mouth closed, eyes narrowed, upper chest expands subtly, elbows bend and back stays very short. All paws planted, no visible frost. Make the preparatory backward head movement readable.",
+      "recovery": "Finishing an icy breath: head recoils a little UP and BACK, muzzle closes nearly shut, blue eyes blink, cheeks relax, front legs straighten toward neutral. Same planted paws and tiny body. No mist, snow, ice or particles.",
+      "folder": "frames/D03-husky",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D03-husky-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D03-husky-ability.png"
+    },
+    {
+      "id": "D04",
+      "slug": "beagle",
+      "name": "비글",
+      "action": "점착 거품 뱉기",
+      "effect": "FX04-sticky-bubble",
+      "durations": [
+        360,
+        220,
+        160,
+        180,
+        260
+      ],
+      "prep": "Prepare to blow one sticky bubble: big visibly puffed cheeks on both sides of the snout, lips fully closed, head drawn slightly backward, floppy ears lift a little from cheek inflation. Focused eyes and planted paws. No bubble, fluid or detached particles.",
+      "recovery": "After blowing a sticky bubble: cheeks deflate, lips close and tiny tongue peeks out, eyes briefly squeeze shut, head settles forward and long ears bounce slightly outward then down. Keep feet planted and torso very short. No bubble or particles.",
+      "folder": "frames/D04-beagle",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D04-beagle-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D04-beagle-ability.png"
+    },
+    {
+      "id": "D05",
+      "slug": "poodle",
+      "name": "푸들",
+      "action": "털에서 정전기",
+      "effect": "FX05-static-arc",
+      "durations": [
+        360,
+        220,
+        180,
+        200,
+        260
+      ],
+      "prep": "Charging static from curly fur: whole dog compresses into a noticeably lower compact crouch, all four paws stay planted, curly coat scallops puff outward a little, ears lift, eyes squeeze shut, mouth determined and closed. The head is lowered slightly. NO electricity lines or detached sparks.",
+      "recovery": "After releasing static from fur: curls settle downward, ears droop and bounce, head bobs UP slightly, eyes blink open, legs extend back toward neutral. Short stout body, four planted paws. No lightning or sparks. A readable relaxation/rebound pose, not an idle copy.",
+      "folder": "frames/D05-poodle",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D05-poodle-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D05-poodle-ability.png"
+    },
+    {
+      "id": "D06",
+      "slug": "border-collie",
+      "name": "보더콜리",
+      "action": "지원 짖음",
+      "effect": "FX06-bark-wave",
+      "durations": [
+        360,
+        160,
+        180,
+        160,
+        260
+      ],
+      "prep": "Inhale before a strong supportive bark: chin pulled back and lifted, lips closed, ears tilted backward, chest raised a little, foreground front paw begins lifting but is still bent close to body. Comically serious focused expression. No sound rings or effects.",
+      "recovery": "Bark follow-through: head nods forward slightly after the bark, mouth closing, eyes blink, lifted foreground front paw returns toward the ground, floppy ear tips bounce downward. Keep all breed markings and compact short torso. No sound rings or effects.",
+      "folder": "frames/D06-border-collie",
+      "sourceIdle": "../../pupsters-separated-assets-v1/characters/idle/D06-border-collie-idle.png",
+      "sourceAttack": "../../pupsters-separated-assets-v1/characters/ability/D06-border-collie-ability.png"
+    }
+  ]
+}

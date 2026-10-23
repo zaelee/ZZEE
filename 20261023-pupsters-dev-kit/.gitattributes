@@ -1,0 +1,2 @@
+# Keep hashed JSON, XML and source bundles byte-identical across Git platforms.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol

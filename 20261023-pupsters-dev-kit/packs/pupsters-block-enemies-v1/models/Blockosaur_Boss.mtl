@@ -1,0 +1,25 @@
+newmtl teal
+Kd 0.08 0.72 0.62
+Ks 0 0 0
+Ns 8
+d 1
+newmtl tealDark
+Kd 0.04 0.55 0.5
+Ks 0 0 0
+Ns 8
+d 1
+newmtl coral
+Kd 1.0 0.3058823529 0.2745098039
+Ks 0 0 0
+Ns 8
+d 1
+newmtl yellow
+Kd 1.0 0.8 0.18
+Ks 0 0 0
+Ns 8
+d 1
+newmtl black
+Kd 0.035 0.04 0.05
+Ks 0 0 0
+Ns 8
+d 1

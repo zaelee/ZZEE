@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "clips": [
+    {
+      "id": "D01",
+      "glb": {
+        "channels": 61,
+        "matchesSampledClip": true,
+        "sha256": "3a8e99c0cfa0e39b1b5a732b495c37d52180d1bc23ead057fe0853111fba29e4"
+      },
+      "gif": {
+        "frames": 41,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    },
+    {
+      "id": "D02",
+      "glb": {
+        "channels": 68,
+        "matchesSampledClip": true,
+        "sha256": "036e0ad35c13ec03a3994d31ad6ebc4fb90574901607fcd91f3fc30616d7c4c8"
+      },
+      "gif": {
+        "frames": 41,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    },
+    {
+      "id": "D03",
+      "glb": {
+        "channels": 95,
+        "matchesSampledClip": true,
+        "sha256": "c6c833833359cf2013cef24e95a954de7827e4c3b85ef03ba0d09a34f52211e3"
+      },
+      "gif": {
+        "frames": 48,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    },
+    {
+      "id": "D04",
+      "glb": {
+        "channels": 56,
+        "matchesSampledClip": true,
+        "sha256": "2c6501a3659020ef8764f14a9adb614819005e78d7c32862fbb3643f68a7b36f"
+      },
+      "gif": {
+        "frames": 45,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    },
+    {
+      "id": "D05",
+      "glb": {
+        "channels": 64,
+        "matchesSampledClip": true,
+        "sha256": "b2a4358681b07a4ea02e3660031538874628eca4217ee28126bf8f3534e402b2"
+      },
+      "gif": {
+        "frames": 40,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    },
+    {
+      "id": "D06",
+      "glb": {
+        "channels": 109,
+        "matchesSampledClip": true,
+        "sha256": "ab5137386365f9ac38a96eed2d9c337b37874d23f9849e4874ee43ae7fc877da"
+      },
+      "gif": {
+        "frames": 44,
+        "durationMs": 2000
+      },
+      "feetFixed": true,
+      "noEffectReturnToOrigin": true,
+      "restPoseRestored": true
+    }
+  ],
+  "collectionGif": {
+    "frames": 48,
+    "durationMs": 2000
+  },
+  "htmlLinksChecked": 53,
+  "rendersInspected": true,
+  "robloxStudioTested": false,
+  "browserViewerTested": false
+}

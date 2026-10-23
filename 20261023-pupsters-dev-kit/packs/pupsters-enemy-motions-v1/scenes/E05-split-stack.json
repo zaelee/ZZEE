@@ -1,0 +1,36 @@
+{
+  "id": "E05",
+  "slug": "split-stack",
+  "name": "SplitStack_Block",
+  "displayName": "분열 블록봇",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "살짝 어긋난 세 얼굴 큐브",
+  "role": "분열 압박형",
+  "roleDescription": "세 몸이 층별로 갈라질 수 있는 분열형 적 콘셉트.",
+  "hitPoint": [0.10, 1.39, -0.48],
+  "materials": {
+    "purpleBottom": {"color": [0.47, 0.24, 0.72]},
+    "purpleMiddle": {"color": [0.56, 0.30, 0.81]},
+    "purpleTop": {"color": [0.67, 0.39, 0.88]},
+    "footDark": {"color": [0.20, 0.25, 0.38]},
+    "black": {"color": [0.035, 0.03, 0.055]}
+  },
+  "parts": [
+    {"name": "BottomCube", "group": "SegmentBottom", "type": "box", "size": [1.04, 0.78, 0.86], "position": [-0.06, 0.67, 0.02], "rotation": [0, 0, 0], "material": "purpleBottom"},
+    {"name": "MiddleCube", "group": "SegmentMiddle", "type": "box", "size": [0.98, 0.76, 0.84], "position": [0.10, 1.39, -0.01], "rotation": [0, 0, 0], "material": "purpleMiddle"},
+    {"name": "TopCube", "group": "SegmentTop", "type": "box", "size": [1.00, 0.80, 0.82], "position": [-0.03, 2.08, 0.02], "rotation": [0, 0, 0], "material": "purpleTop"},
+
+    {"name": "BottomEyeLeft", "group": "SegmentBottom", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [-0.25, 0.72, -0.44], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "BottomEyeRight", "group": "SegmentBottom", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [0.13, 0.72, -0.44], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "MiddleEyeLeft", "group": "SegmentMiddle", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [-0.09, 1.44, -0.47], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "MiddleEyeRight", "group": "SegmentMiddle", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [0.29, 1.44, -0.47], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "TopEyeLeft", "group": "SegmentTop", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [-0.22, 2.12, -0.43], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "TopEyeRight", "group": "SegmentTop", "type": "sphere", "size": [0.12, 0.17, 0.08], "position": [0.16, 2.12, -0.43], "rotation": [0, 0, 0], "material": "black"},
+
+    {"name": "FootLeft", "group": "Feet", "type": "box", "size": [0.34, 0.28, 0.48], "position": [-0.36, 0.14, 0.16], "rotation": [0, 0, 0], "material": "footDark"},
+    {"name": "FootRight", "group": "Feet", "type": "box", "size": [0.34, 0.28, 0.48], "position": [0.30, 0.14, 0.16], "rotation": [0, 0, 0], "material": "footDark"}
+  ]
+}

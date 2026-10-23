@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "files": 35,
+  "assets": {
+    ".png": 17,
+    ".gif": 1,
+    ".webp": 1
+  },
+  "bytes": 9400888,
+  "sha256": "ed7b5c3c26632942fc2ee939ca35960588aa9ed4bd0050a2480f84289bc85fc0"
+}

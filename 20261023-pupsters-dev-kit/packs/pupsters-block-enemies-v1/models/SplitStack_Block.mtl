@@ -1,0 +1,25 @@
+newmtl purpleBottom
+Kd 0.47 0.24 0.72
+Ks 0 0 0
+Ns 8
+d 1
+newmtl purpleMiddle
+Kd 0.56 0.3 0.81
+Ks 0 0 0
+Ns 8
+d 1
+newmtl purpleTop
+Kd 0.67 0.39 0.88
+Ks 0 0 0
+Ns 8
+d 1
+newmtl footDark
+Kd 0.2 0.25 0.38
+Ks 0 0 0
+Ns 8
+d 1
+newmtl black
+Kd 0.035 0.03 0.055
+Ks 0 0 0
+Ns 8
+d 1

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "map": {
+    "parts": 271,
+    "groups": 8,
+    "maxNumericError": 4.9019677206274537e-11
+  },
+  "showcase": {
+    "parts": 522,
+    "groups": 19,
+    "maxNumericError": 4.383498009019604e-10
+  },
+  "showcaseActors": {
+    "parts": 251,
+    "groups": 11
+  },
+  "metadata": {
+    "waypoints": 6,
+    "slots": 16,
+    "maxNumericError": 1.2246467991473532e-16
+  },
+  "showcaseMetadata": {
+    "waypoints": 6,
+    "slots": 16,
+    "maxNumericError": 1.2246467991473532e-16
+  },
+  "uniqueReferents": true,
+  "sourceCoordinatesPreserved": true,
+  "mapGeometryIdenticalInBothExports": true,
+  "gameplayScripts": 0,
+  "studioValidation": "not-run (Roblox Studio unavailable; XML structure validated)",
+  "sourceGeometry": {
+    "floorBase": "MapBase",
+    "floorParts": 14,
+    "pathParts": 13,
+    "pads": 16
+  },
+  "inputs": [
+    "scenes\\map.json",
+    "scenes\\showcase.json",
+    "layout.json"
+  ],
+  "outputs": [
+    "native\\Pupsters_Block_Playroom_Map.rbxmx",
+    "native\\Pupsters_Block_Playroom_Showcase.rbxmx"
+  ]
+}

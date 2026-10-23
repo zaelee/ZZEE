@@ -1,0 +1,1073 @@
+{
+  "name": "Poodle_Block",
+  "variant": "block",
+  "version": 3,
+  "id": "D05",
+  "slug": "poodle",
+  "displayName": "무들",
+  "feature": "털 주변에 떠 있는 찌리릭 전기",
+  "attackName": "정전기 찌릿",
+  "attackMethod": "몸 주변에 모인 정전기를 찌리릭! 방출해요.",
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "mouth": [
+    0,
+    0.96,
+    -1.4
+  ],
+  "materials": {
+    "peach": {
+      "color": [
+        1.0,
+        0.7215686275,
+        0.3843137255
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9411764706,
+        0.7725490196
+      ]
+    },
+    "black": {
+      "color": [
+        0.1176470588,
+        0.1019607843,
+        0.1098039216
+      ]
+    },
+    "yellow": {
+      "color": [
+        1.0,
+        0.9254901961,
+        0.1058823529
+      ]
+    },
+    "cyan": {
+      "color": [
+        0.0784313725,
+        0.8,
+        0.9411764706
+      ]
+    },
+    "electricWhite": {
+      "color": [
+        1.0,
+        1.0,
+        0.91
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "CompactTorso",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.26,
+        0.98,
+        1.02
+      ],
+      "position": [
+        0,
+        0.84,
+        0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "BodyPuffL",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        0.58,
+        0.48,
+        0.76
+      ],
+      "position": [
+        -0.43,
+        1.32,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BodyPuffC",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        0.62,
+        0.54,
+        0.8
+      ],
+      "position": [
+        0,
+        1.39,
+        0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "BodyPuffR",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        0.58,
+        0.48,
+        0.76
+      ],
+      "position": [
+        0.43,
+        1.32,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFL_Leg",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.4,
+        0.68,
+        0.48
+      ],
+      "position": [
+        -0.52,
+        0.47,
+        -0.47
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LegFL_Paw",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.5,
+        0.3,
+        0.56
+      ],
+      "position": [
+        -0.52,
+        0.15,
+        -0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFR_Leg",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.4,
+        0.68,
+        0.48
+      ],
+      "position": [
+        0.52,
+        0.47,
+        -0.47
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LegFR_Paw",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.5,
+        0.3,
+        0.56
+      ],
+      "position": [
+        0.52,
+        0.15,
+        -0.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBL_Leg",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.4,
+        0.52,
+        0.48
+      ],
+      "position": [
+        -0.52,
+        0.39,
+        0.78
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LegBL_Paw",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.5,
+        0.3,
+        0.56
+      ],
+      "position": [
+        -0.52,
+        0.15,
+        0.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBR_Leg",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.4,
+        0.52,
+        0.48
+      ],
+      "position": [
+        0.52,
+        0.39,
+        0.78
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LegBR_Paw",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.5,
+        0.3,
+        0.56
+      ],
+      "position": [
+        0.52,
+        0.15,
+        0.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "CoreHead",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.68,
+        1.4,
+        1.34
+      ],
+      "position": [
+        0,
+        1.43,
+        -0.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "BroadHeadPuffL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.76,
+        0.48,
+        1.02
+      ],
+      "position": [
+        -0.58,
+        2.15,
+        -0.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BroadHeadPuffC",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.84,
+        0.58,
+        1.08
+      ],
+      "position": [
+        0,
+        2.27,
+        -0.54
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "BroadHeadPuffR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.76,
+        0.46,
+        1.0
+      ],
+      "position": [
+        0.58,
+        2.12,
+        -0.54
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "SideEarBaseL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.58,
+        0.9,
+        0.72
+      ],
+      "position": [
+        -1.02,
+        1.36,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LargeEarPuffL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.7,
+        0.66,
+        0.78
+      ],
+      "position": [
+        -1.2,
+        1.03,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "SideEarBaseR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.58,
+        0.9,
+        0.72
+      ],
+      "position": [
+        1.02,
+        1.36,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "LargeEarPuffR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.7,
+        0.66,
+        0.78
+      ],
+      "position": [
+        1.2,
+        1.03,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.16,
+        0.05
+      ],
+      "position": [
+        -0.36,
+        1.48,
+        -1.245
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.16,
+        0.05
+      ],
+      "position": [
+        0.36,
+        1.48,
+        -1.245
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "CreamMuzzle",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.0,
+        0.42,
+        0.2
+      ],
+      "position": [
+        0,
+        1.03,
+        -1.27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "SquareNose",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.27,
+        0.16,
+        0.09
+      ],
+      "position": [
+        0,
+        1.12,
+        -1.38
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "SmallMouth",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.22,
+        0.04,
+        0.05
+      ],
+      "position": [
+        0,
+        0.96,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "ShortTail",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.32,
+        0.42,
+        0.36
+      ],
+      "position": [
+        0,
+        1.43,
+        1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "TailPuffL",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4,
+        0.34,
+        0.44
+      ],
+      "position": [
+        -0.14,
+        1.73,
+        1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "TailPuffR",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4,
+        0.35600000000000004,
+        0.456
+      ],
+      "position": [
+        0.14,
+        1.73,
+        1.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "peach"
+    },
+    {
+      "name": "FX_Left_Glow0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.2791249694973141,
+        0.115,
+        0.085
+      ],
+      "position": [
+        -1.8399999999999999,
+        2.036175848582724,
+        -0.9113343308038113
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -0.8960553845713446
+      ],
+      "material": "cyan"
+    },
+    {
+      "name": "FX_Left_Core0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.26412496949731407,
+        0.04,
+        0.024
+      ],
+      "position": [
+        -1.8399999999999999,
+        2.0007306330615107,
+        -0.94938215198525
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -0.8960553845713446
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Left_Glow1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.2689674775249768,
+        0.115,
+        0.085
+      ],
+      "position": [
+        -1.87,
+        1.922764073907282,
+        -0.8056803230001945
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -2.6779450445889874
+      ],
+      "material": "cyan"
+    },
+    {
+      "name": "FX_Left_Core1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.2539674775249768,
+        0.04,
+        0.024
+      ],
+      "position": [
+        -1.87,
+        1.8873188583860685,
+        -0.8437281441816332
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -2.6779450445889874
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Left_Glow2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.33105843601498725,
+        0.115,
+        0.085
+      ],
+      "position": [
+        -1.8900000000000001,
+        1.7910600775099943,
+        -0.6829853461959944
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -0.9467732738181399
+      ],
+      "material": "cyan"
+    },
+    {
+      "name": "FX_Left_Core2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.31605843601498723,
+        0.04,
+        0.024
+      ],
+      "position": [
+        -1.8900000000000001,
+        1.7556148619887808,
+        -0.7210331673774332
+      ],
+      "rotation": [
+        -0.75,
+        0,
+        -0.9467732738181399
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Right_Glow0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.32713812651491114,
+        0.115,
+        0.085
+      ],
+      "position": [
+        1.885,
+        2.022598366834375,
+        0.4704228476041227
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -0.8086497862079117
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Right_Core0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.31213812651491113,
+        0.04,
+        0.024
+      ],
+      "position": [
+        1.885,
+        2.0580435823555887,
+        0.43237502642268394
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -0.8086497862079117
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Right_Glow1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.2735992817228333,
+        0.115,
+        0.085
+      ],
+      "position": [
+        1.88,
+        1.8982112591258253,
+        0.3545442584001556
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -2.6422459319096636
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Right_Core1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.2585992817228333,
+        0.04,
+        0.024
+      ],
+      "position": [
+        1.88,
+        1.9336564746470388,
+        0.3164964372187169
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -2.6422459319096636
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Right_Glow2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.3392277660168379,
+        0.115,
+        0.085
+      ],
+      "position": [
+        1.8599999999999999,
+        1.7591903740397994,
+        0.22503289399572216
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -0.9652516631899267
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Right_Core2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.3242277660168379,
+        0.04,
+        0.024
+      ],
+      "position": [
+        1.8599999999999999,
+        1.7946355895610129,
+        0.18698507281428345
+      ],
+      "rotation": [
+        0.75,
+        0,
+        -0.9652516631899267
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Top_Glow0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.38355512754639903,
+        0.115,
+        0.085
+      ],
+      "position": [
+        -0.32999999999999996,
+        3.0411333895137167,
+        -0.642504268017134
+      ],
+      "rotation": [
+        0.85,
+        0,
+        -0.588002603547568
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Top_Core0",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.368555127546399,
+        0.04,
+        0.024
+      ],
+      "position": [
+        -0.32999999999999996,
+        3.080199970581012,
+        -0.6768233916031532
+      ],
+      "rotation": [
+        0.85,
+        0,
+        -0.588002603547568
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Top_Glow1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.313,
+        0.115,
+        0.085
+      ],
+      "position": [
+        -0.08,
+        3.0444333052431416,
+        -0.6387478659914326
+      ],
+      "rotation": [
+        0.85,
+        0,
+        0.8097835725701668
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Top_Core1",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.298,
+        0.04,
+        0.024
+      ],
+      "position": [
+        -0.08,
+        3.083499886310437,
+        -0.6730669895774518
+      ],
+      "rotation": [
+        0.85,
+        0,
+        0.8097835725701668
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_Top_Glow2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.38919666847201106,
+        0.115,
+        0.085
+      ],
+      "position": [
+        0.17000000000000004,
+        3.0444333052431416,
+        -0.6387478659914326
+      ],
+      "rotation": [
+        0.85,
+        0,
+        -0.6107259643892086
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "FX_Top_Core2",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.37419666847201105,
+        0.04,
+        0.024
+      ],
+      "position": [
+        0.17000000000000004,
+        3.083499886310437,
+        -0.6730669895774518
+      ],
+      "rotation": [
+        0.85,
+        0,
+        -0.6107259643892086
+      ],
+      "material": "electricWhite"
+    },
+    {
+      "name": "FX_SparkL",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.09,
+        0.09,
+        0.07
+      ],
+      "position": [
+        -1.48,
+        2.63,
+        -0.87
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cyan"
+    },
+    {
+      "name": "FX_SparkR",
+      "group": "FX",
+      "type": "box",
+      "size": [
+        0.09,
+        0.09,
+        0.07
+      ],
+      "position": [
+        1.8,
+        2.5,
+        0.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cyan"
+    }
+  ]
+}

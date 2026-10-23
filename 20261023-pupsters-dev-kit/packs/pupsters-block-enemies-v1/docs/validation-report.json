@@ -1,0 +1,176 @@
+{
+  "result": "PASS",
+  "scope": "Structural file and geometry validation, not Studio/WebGL execution",
+  "models": [
+    {
+      "id": "B01",
+      "parts": 19,
+      "triangles": 852,
+      "dimensions": [
+        2.2,
+        2.7,
+        4.64
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E01",
+      "parts": 8,
+      "triangles": 408,
+      "dimensions": [
+        1.35,
+        1.65,
+        1.15
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E02",
+      "parts": 8,
+      "triangles": 408,
+      "dimensions": [
+        2.36,
+        1.075,
+        1.03
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E03",
+      "parts": 9,
+      "triangles": 420,
+      "dimensions": [
+        2.16,
+        1.98,
+        1.11
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E04",
+      "parts": 14,
+      "triangles": 480,
+      "dimensions": [
+        1.815,
+        1.76,
+        1.5
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E05",
+      "parts": 11,
+      "triangles": 1068,
+      "dimensions": [
+        1.17,
+        2.48,
+        0.96
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E06",
+      "parts": 15,
+      "triangles": 492,
+      "dimensions": [
+        2.205,
+        1.67,
+        1.08
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E07",
+      "parts": 19,
+      "triangles": 540,
+      "dimensions": [
+        1.755,
+        1.3275,
+        1.3255
+      ],
+      "checks": "PASS"
+    },
+    {
+      "id": "E08",
+      "parts": 21,
+      "triangles": 1500,
+      "dimensions": [
+        2.5,
+        1.66,
+        1.97
+      ],
+      "checks": "PASS"
+    }
+  ],
+  "nativeValidation": [
+    {
+      "parts": 8,
+      "groups": 3,
+      "hitPointParent": "CubeBody",
+      "maxError": 0.0
+    },
+    {
+      "parts": 8,
+      "groups": 3,
+      "hitPointParent": "LowBody",
+      "maxError": 0.0
+    },
+    {
+      "parts": 9,
+      "groups": 3,
+      "hitPointParent": "BrickTop",
+      "maxError": 0.0
+    },
+    {
+      "parts": 14,
+      "groups": 3,
+      "hitPointParent": "SlateCore",
+      "maxError": 0.0
+    },
+    {
+      "parts": 11,
+      "groups": 4,
+      "hitPointParent": "MiddleCube",
+      "maxError": 0.0
+    },
+    {
+      "parts": 15,
+      "groups": 4,
+      "hitPointParent": "RepairBody",
+      "maxError": 2.582417613083976e-11
+    },
+    {
+      "parts": 19,
+      "groups": 4,
+      "hitPointParent": "ClearBody",
+      "maxError": 0.0
+    },
+    {
+      "parts": 21,
+      "groups": 5,
+      "hitPointParent": "WallFront",
+      "maxError": 0.0
+    },
+    {
+      "parts": 19,
+      "groups": 6,
+      "hitPointParent": "BroadSnout",
+      "maxError": 0.0
+    }
+  ],
+  "localLinksChecked": 72,
+  "totalParts": 124,
+  "totalTriangles": 6168,
+  "checks": [
+    "Closed manifold primitives and positive volume",
+    "Finite geometry, contact graph, Y=0 ground",
+    "GLB/glTF buffer equality and world vertices/normals",
+    "OBJ positions and MTL alpha",
+    "Roblox XML and HitPoint transforms",
+    "Viewer data and local links"
+  ],
+  "notRun": [
+    "Roblox Studio import/runtime",
+    "Browser WebGL rendering"
+  ]
+}

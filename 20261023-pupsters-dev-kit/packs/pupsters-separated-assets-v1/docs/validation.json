@@ -1,0 +1,1478 @@
+{
+  "alphaPolicy": {
+    "cornerMax": 1,
+    "contentBoundsMinAlpha": 8,
+    "note": "FX06 top-left pixel has alpha 1/255; original preserved. All other asset corner samples are zero."
+  },
+  "checkedOn": "2026-10-23",
+  "expected": {
+    "png": 63,
+    "svg": 34
+  },
+  "actual": {
+    "png": 63,
+    "svg": 34
+  },
+  "passed": true,
+  "failures": [],
+  "checks": [
+    "PNG decode",
+    "expected file counts",
+    "non-background corner alpha <= 1/255",
+    "nonempty content",
+    "UI PNG dimensions match SVG manifest",
+    "UI SVG does not bake text or raster images",
+    "every production PNG linked by gallery"
+  ],
+  "records": [
+    {
+      "file": "characters/idle/D00-maltese-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1141391,
+      "semiTransparentPixels": 429910,
+      "opaquePixels": 1215,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 264,
+        "top": 265,
+        "right": 1115,
+        "bottom": 1068
+      },
+      "sha256": "69c6a274e347c645ee3aeaeb16f493dd1cec79a6013c73ce8fd42803fe29e463"
+    },
+    {
+      "file": "characters/idle/D01-shiba-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1107849,
+      "semiTransparentPixels": 463807,
+      "opaquePixels": 860,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 261,
+        "top": 217,
+        "right": 1064,
+        "bottom": 1058
+      },
+      "sha256": "86d1468ba972dbe88db6f396a9bff0c9e55456afef07e5c5489bfa3c94c283cc"
+    },
+    {
+      "file": "characters/idle/D02-bulldog-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1130354,
+      "semiTransparentPixels": 441225,
+      "opaquePixels": 937,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 255,
+        "top": 241,
+        "right": 1048,
+        "bottom": 1053
+      },
+      "sha256": "4434d26bf48f5d8a017aabecc8ad00e078f19241c65b902bc430033df8738447"
+    },
+    {
+      "file": "characters/idle/D03-husky-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1111851,
+      "semiTransparentPixels": 459900,
+      "opaquePixels": 765,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 261,
+        "top": 216,
+        "right": 1058,
+        "bottom": 1057
+      },
+      "sha256": "451fd43051fcd9cc3c2fd2dd1715ee16fe5c13559b29815d3f6405ba244bfdda"
+    },
+    {
+      "file": "characters/idle/D04-beagle-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1164685,
+      "semiTransparentPixels": 406798,
+      "opaquePixels": 1033,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 256,
+        "top": 214,
+        "right": 1060,
+        "bottom": 1046
+      },
+      "sha256": "21da9d993a0459f4b75da86d80e6e2afcd0a8f8e2d79134c0809052506f054c2"
+    },
+    {
+      "file": "characters/idle/D05-poodle-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1142454,
+      "semiTransparentPixels": 429020,
+      "opaquePixels": 1042,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 254,
+        "top": 256,
+        "right": 1075,
+        "bottom": 1049
+      },
+      "sha256": "6f76ed0ccb1a1d396aa62c8b8bd478ef23ca581d9cc86b52b3efeef74c7512a5"
+    },
+    {
+      "file": "characters/idle/D06-border-collie-idle.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1116449,
+      "semiTransparentPixels": 455066,
+      "opaquePixels": 1001,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 261,
+        "top": 211,
+        "right": 1058,
+        "bottom": 1051
+      },
+      "sha256": "148d2be653e5a048b7d9bafa0eb93e31d861d5e2164c6b23e553bf713bffeee3"
+    },
+    {
+      "file": "characters/ability/D01-shiba-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1022945,
+      "semiTransparentPixels": 548417,
+      "opaquePixels": 1154,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 202,
+        "top": 135,
+        "right": 1143,
+        "bottom": 1078
+      },
+      "sha256": "05293bac4b478535795f69268015cb0cb7b50bf1c7ac60163c29c039294dcb22"
+    },
+    {
+      "file": "characters/ability/D02-bulldog-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1100876,
+      "semiTransparentPixels": 470674,
+      "opaquePixels": 966,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 229,
+        "top": 235,
+        "right": 1108,
+        "bottom": 1047
+      },
+      "sha256": "690a01fc71142bca33542231613b241494125ff648e6f0348807e0ea8a3afb3c"
+    },
+    {
+      "file": "characters/ability/D03-husky-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1114358,
+      "semiTransparentPixels": 457206,
+      "opaquePixels": 952,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 262,
+        "top": 219,
+        "right": 1061,
+        "bottom": 1056
+      },
+      "sha256": "f50c1b0196ba3f7a65849dd67c5930c05edaf13899f83f1b0faefeae20a1b205"
+    },
+    {
+      "file": "characters/ability/D04-beagle-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1166398,
+      "semiTransparentPixels": 405378,
+      "opaquePixels": 740,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 253,
+        "top": 212,
+        "right": 1067,
+        "bottom": 1046
+      },
+      "sha256": "842828e304d8c67d6ea4cd9dab6df0ffa66e478e09b3f9c3d7d189a60791c26a"
+    },
+    {
+      "file": "characters/ability/D05-poodle-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1143937,
+      "semiTransparentPixels": 427686,
+      "opaquePixels": 893,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 255,
+        "top": 259,
+        "right": 1070,
+        "bottom": 1052
+      },
+      "sha256": "f4cb172d5f0962925c2778f63a3f21d07b88648aec4934caea1ec263ced1632a"
+    },
+    {
+      "file": "characters/ability/D06-border-collie-ability.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1135846,
+      "semiTransparentPixels": 435855,
+      "opaquePixels": 815,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 262,
+        "top": 212,
+        "right": 1050,
+        "bottom": 1052
+      },
+      "sha256": "f0acbeb94c3e2352ebf541f963bab6f1826dbdb70da49bc997b6a27b1ed7a8a9"
+    },
+    {
+      "file": "effects/FX01-pebble.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1507775,
+      "semiTransparentPixels": 64320,
+      "opaquePixels": 421,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 481,
+        "top": 496,
+        "right": 777,
+        "bottom": 773
+      },
+      "sha256": "c6b362d17113bca1980142adb83b0ccf9705f7ef536902119d258823b8a093f4"
+    },
+    {
+      "file": "effects/FX02-air-puff.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1243739,
+      "semiTransparentPixels": 327768,
+      "opaquePixels": 1009,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 164,
+        "top": 364,
+        "right": 1117,
+        "bottom": 969
+      },
+      "sha256": "b85c065d2770fc73f1af25621c373b33f245b4392423d2e993128d71cac704c1"
+    },
+    {
+      "file": "effects/FX03-frost-breath.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 968969,
+      "semiTransparentPixels": 602652,
+      "opaquePixels": 1917,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 64,
+        "top": 76,
+        "right": 1713,
+        "bottom": 819
+      },
+      "sha256": "07104ad1f97d818ecb931dcacd35d23e53a2da52032ed6de38c79a11571a2fc2"
+    },
+    {
+      "file": "effects/FX04-sticky-bubble.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1255589,
+      "semiTransparentPixels": 315987,
+      "opaquePixels": 940,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 307,
+        "top": 317,
+        "right": 948,
+        "bottom": 946
+      },
+      "sha256": "2144397199a2e891468811bdb30d53bcadf3bac63bce2e9edc3dc3fe81c68db5"
+    },
+    {
+      "file": "effects/FX05-static-arc.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1297063,
+      "semiTransparentPixels": 274968,
+      "opaquePixels": 1507,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 217,
+        "top": 254,
+        "right": 1626,
+        "bottom": 751
+      },
+      "sha256": "3f3d092bc7854c78a3ea9c6d5a9d9f9eb56f95912bc36f26968a83bb68b5b570"
+    },
+    {
+      "file": "effects/FX06-bark-wave.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1307807,
+      "semiTransparentPixels": 262894,
+      "opaquePixels": 1815,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 354,
+        "top": 239,
+        "right": 976,
+        "bottom": 1025
+      },
+      "sha256": "0f2a6de0dc7623511dfc7c74828511670b0a4b359ded7e34c48651747539e1e9"
+    },
+    {
+      "file": "enemies/B01-blockosaur-square.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1111735,
+      "semiTransparentPixels": 459474,
+      "opaquePixels": 1307,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 162,
+        "top": 252,
+        "right": 1092,
+        "bottom": 1012
+      },
+      "sha256": "08232510346d6f3800c4574a22b4a9313fec0a6f71a261a58413461868167316"
+    },
+    {
+      "file": "enemies/E01-block-bot.png",
+      "width": 1295,
+      "height": 1214,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1268535,
+      "semiTransparentPixels": 302901,
+      "opaquePixels": 694,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 354,
+        "top": 265,
+        "right": 951,
+        "bottom": 909
+      },
+      "sha256": "37897817a4214a560a708dfb66b4eaa89e0e9db6209f89e5df4356db71804648"
+    },
+    {
+      "file": "enemies/E02-wheelie.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1287419,
+      "semiTransparentPixels": 284904,
+      "opaquePixels": 1102,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 293,
+        "top": 313,
+        "right": 1001,
+        "bottom": 919
+      },
+      "sha256": "44e3d40a17aebadf1c5680cdb04c2ffb59656cad355e913e376caeacba61282d"
+    },
+    {
+      "file": "enemies/E03-brick-bruiser.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1115986,
+      "semiTransparentPixels": 456327,
+      "opaquePixels": 1112,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 316,
+        "top": 190,
+        "right": 1020,
+        "bottom": 978
+      },
+      "sha256": "7aa5686045889f65d2131db2d42df03a82b54472305a51ea64dcd5038417c3dd"
+    },
+    {
+      "file": "enemies/E04-shellback.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1254268,
+      "semiTransparentPixels": 318278,
+      "opaquePixels": 879,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 334,
+        "top": 259,
+        "right": 972,
+        "bottom": 910
+      },
+      "sha256": "7a3aaf6a6bdd1e655c480cb890d7180c24430ed75be8d23f212cf688a091d9fd"
+    },
+    {
+      "file": "enemies/E05-split-stack.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1251549,
+      "semiTransparentPixels": 320871,
+      "opaquePixels": 1005,
+      "centerAlpha": 254,
+      "contentBounds": {
+        "left": 436,
+        "top": 173,
+        "right": 856,
+        "bottom": 1029
+      },
+      "sha256": "5fab9afd694d137f246d3f484d11a704faae48f8d5d214d0703a58bf679af700"
+    },
+    {
+      "file": "enemies/E06-fix-it-bot.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1289717,
+      "semiTransparentPixels": 282693,
+      "opaquePixels": 1015,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 340,
+        "top": 301,
+        "right": 1077,
+        "bottom": 882
+      },
+      "sha256": "4bc7be8cad645d0030a6f64bac6c36f15fda05962af3614112aa2f50799ea889"
+    },
+    {
+      "file": "enemies/E07-clear-crawler.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1302733,
+      "semiTransparentPixels": 269977,
+      "opaquePixels": 715,
+      "centerAlpha": 153,
+      "contentBounds": {
+        "left": 354,
+        "top": 298,
+        "right": 947,
+        "bottom": 933
+      },
+      "sha256": "4ba564f04db3204d0f71d2b33d4e03ffbd479f18b48916f40f48871bd741eda4"
+    },
+    {
+      "file": "enemies/E08-carrier-cart.png",
+      "width": 1295,
+      "height": 1215,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 1250465,
+      "semiTransparentPixels": 322229,
+      "opaquePixels": 731,
+      "centerAlpha": 253,
+      "contentBounds": {
+        "left": 328,
+        "top": 226,
+        "right": 988,
+        "bottom": 921
+      },
+      "sha256": "72701440ec76c4058f85c09942251118a6f60df0835e20011c9b40fa33c0f869"
+    },
+    {
+      "file": "backgrounds/BG01-living-room-map.png",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "cornerAlpha": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "transparentPixels": 0,
+      "semiTransparentPixels": 0,
+      "opaquePixels": 1573352,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 0,
+        "top": 0,
+        "right": 1671,
+        "bottom": 940
+      },
+      "sha256": "006fc7970de1c6fcc33057f6b2233a1f6ee61f9045496573cccc04247aa0c47a"
+    },
+    {
+      "file": "ui/png/badge-round-empty.png",
+      "width": 176,
+      "height": 176,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 9113,
+      "semiTransparentPixels": 604,
+      "opaquePixels": 21259,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 7,
+        "top": 5,
+        "right": 169,
+        "bottom": 169
+      },
+      "sha256": "326911473a323a47d4841bf4642159fc988cd9f12fb8405cee73e85775e70def"
+    },
+    {
+      "file": "ui/png/button-blue-secondary.png",
+      "width": 480,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11066,
+      "semiTransparentPixels": 1068,
+      "opaquePixels": 49306,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      },
+      "sha256": "48ca8d86fa4bb4352b9ff976a07cb535d3d90eaa74b22105757d2b72385359a3"
+    },
+    {
+      "file": "ui/png/button-disabled-gray.png",
+      "width": 480,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11066,
+      "semiTransparentPixels": 1068,
+      "opaquePixels": 49306,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      },
+      "sha256": "fd26c1db163d0f30fec93e37b69ef066ab762079ce145fa84ebbe282cd251763"
+    },
+    {
+      "file": "ui/png/button-ivory-secondary.png",
+      "width": 480,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11066,
+      "semiTransparentPixels": 1068,
+      "opaquePixels": 49306,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      },
+      "sha256": "a56c0b6f51cb667ce220b6a1c7673b65ba2d13182468d0360eb5f4d10e38a8cb"
+    },
+    {
+      "file": "ui/png/button-orange-normal.png",
+      "width": 480,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11066,
+      "semiTransparentPixels": 1068,
+      "opaquePixels": 49306,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      },
+      "sha256": "bb8bb62a19e3c4d0589da83eca17f81d98914e505ceb295807691fc392d7933b"
+    },
+    {
+      "file": "ui/png/button-orange-pressed.png",
+      "width": 480,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 12452,
+      "semiTransparentPixels": 1062,
+      "opaquePixels": 47926,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 14,
+        "right": 470,
+        "bottom": 122
+      },
+      "sha256": "de064301a0dffd95a0ae269892a4e51d8eb2adca0a39a11af4e82e93df5a4e26"
+    },
+    {
+      "file": "ui/png/control-knob-round.png",
+      "width": 96,
+      "height": 96,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 2755,
+      "semiTransparentPixels": 337,
+      "opaquePixels": 6124,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 4,
+        "top": 3,
+        "right": 92,
+        "bottom": 92
+      },
+      "sha256": "e44d1a4a274c074698df0b1e2c9be5d942b6db3dccfd1767f0e43f6fa9d973a7"
+    },
+    {
+      "file": "ui/png/frame-card-normal.png",
+      "width": 320,
+      "height": 400,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 14446,
+      "semiTransparentPixels": 1308,
+      "opaquePixels": 112246,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 9,
+        "top": 9,
+        "right": 309,
+        "bottom": 390
+      },
+      "sha256": "2529eb393fb48ec8c9c94de3a04f157d80298709afea983fdeca20f1402067ac"
+    },
+    {
+      "file": "ui/png/frame-card-selected.png",
+      "width": 320,
+      "height": 400,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 14247,
+      "semiTransparentPixels": 1306,
+      "opaquePixels": 112447,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 9,
+        "right": 310,
+        "bottom": 390
+      },
+      "sha256": "d0da61ae07b590ef712eaf3962d944d4b4265ac620e2509d9cf353c4f0f4828b"
+    },
+    {
+      "file": "ui/png/health-fill-coral.png",
+      "width": 420,
+      "height": 32,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 4526,
+      "semiTransparentPixels": 83,
+      "opaquePixels": 8831,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      },
+      "sha256": "762d449ca03966f06fe36ebad34260fb81560280c48e5316bd383afb98041e20"
+    },
+    {
+      "file": "ui/png/health-fill-green.png",
+      "width": 420,
+      "height": 32,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 4526,
+      "semiTransparentPixels": 83,
+      "opaquePixels": 8831,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      },
+      "sha256": "343d62a352bdea31702639167fee5948ee809b4200fd74697830c12ebfbaa1dc"
+    },
+    {
+      "file": "ui/png/health-fill-orange.png",
+      "width": 420,
+      "height": 32,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 4526,
+      "semiTransparentPixels": 83,
+      "opaquePixels": 8831,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      },
+      "sha256": "19a897484b5690464b4a822efc3c09a6d1ffceaf12ac2ee247bd88a847d2c1c3"
+    },
+    {
+      "file": "ui/png/health-track.png",
+      "width": 480,
+      "height": 64,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 6081,
+      "semiTransparentPixels": 572,
+      "opaquePixels": 24067,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 8,
+        "top": 5,
+        "right": 471,
+        "bottom": 59
+      },
+      "sha256": "66f29386519cf101f9dc1e71b7e2253d67a39b2569f8bfc31a748a175cecd25f"
+    },
+    {
+      "file": "ui/png/icon-back.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 12111,
+      "semiTransparentPixels": 347,
+      "opaquePixels": 3926,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 17,
+        "top": 23,
+        "right": 116,
+        "bottom": 106
+      },
+      "sha256": "01d18e0d07423d4be7ff6a3ef3852f836e7ceb61602c9b041cf6f1813ca833b1"
+    },
+    {
+      "file": "ui/png/icon-check.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 13621,
+      "semiTransparentPixels": 345,
+      "opaquePixels": 2418,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 14,
+        "top": 25,
+        "right": 112,
+        "bottom": 99
+      },
+      "sha256": "7282b7fbd4b8a19f80f71a1c6febb1efc43b2ca85eaa12673054233672946b20"
+    },
+    {
+      "file": "ui/png/icon-close.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 12230,
+      "semiTransparentPixels": 560,
+      "opaquePixels": 3594,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 15,
+        "top": 18,
+        "right": 110,
+        "bottom": 108
+      },
+      "sha256": "73e3de1e9d61bc646c1933f20a49c359c86de0d7ca526b8d550d7f2451d5c1c3"
+    },
+    {
+      "file": "ui/png/icon-fast-forward.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11023,
+      "semiTransparentPixels": 446,
+      "opaquePixels": 4915,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 10,
+        "top": 28,
+        "right": 117,
+        "bottom": 99
+      },
+      "sha256": "0916687b4374797887471a2a74b1152e0ab5fc3b1eee02f9d4b001924a5500e7"
+    },
+    {
+      "file": "ui/png/icon-heart.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 8922,
+      "semiTransparentPixels": 404,
+      "opaquePixels": 7058,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 10,
+        "top": 16,
+        "right": 118,
+        "bottom": 111
+      },
+      "sha256": "23261b7ff1a99cd1c92685a7acb5369d26d3c7a6225cde8b88a56f953ae0a4d1"
+    },
+    {
+      "file": "ui/png/icon-lock.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 9003,
+      "semiTransparentPixels": 502,
+      "opaquePixels": 6879,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 18,
+        "top": 6,
+        "right": 109,
+        "bottom": 117
+      },
+      "sha256": "68108386aeb19c957fe51c52f4fc0e0c542a790cb331b01d98a34f6ebcc004c7"
+    },
+    {
+      "file": "ui/png/icon-pause.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11629,
+      "semiTransparentPixels": 96,
+      "opaquePixels": 4659,
+      "centerAlpha": 0,
+      "contentBounds": {
+        "left": 25,
+        "top": 24,
+        "right": 102,
+        "bottom": 103
+      },
+      "sha256": "9c39e15937a9fe7734167c11dda9cb60eaf2b6f9c8cb58be96c346a0eaa1f43b"
+    },
+    {
+      "file": "ui/png/icon-paw.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 10066,
+      "semiTransparentPixels": 609,
+      "opaquePixels": 5709,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 18,
+        "top": 9,
+        "right": 106,
+        "bottom": 108
+      },
+      "sha256": "83e6d81c5007d13ca05b617243ce0bce41c090a53e31f08031401e1cc0d8b07a"
+    },
+    {
+      "file": "ui/png/icon-ping.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 12977,
+      "semiTransparentPixels": 828,
+      "opaquePixels": 2579,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 16,
+        "top": 30,
+        "right": 111,
+        "bottom": 117
+      },
+      "sha256": "e1854db36829d2da0c454e539743f464591c9b8cd50ae6b87a2cd06febe5d255"
+    },
+    {
+      "file": "ui/png/icon-play.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 12867,
+      "semiTransparentPixels": 286,
+      "opaquePixels": 3231,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 32,
+        "top": 24,
+        "right": 103,
+        "bottom": 103
+      },
+      "sha256": "01c5c102907aea52e7f1dd85984e5d0279a4f499defc0f5e19a07bec43a4a323"
+    },
+    {
+      "file": "ui/png/icon-screw-parts.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 13551,
+      "semiTransparentPixels": 637,
+      "opaquePixels": 2196,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 20,
+        "top": 14,
+        "right": 92,
+        "bottom": 105
+      },
+      "sha256": "38ae909a5eb5ea9952f030ca99d1d8b55ed6181fc8267c07cbed0e7de5ff4661"
+    },
+    {
+      "file": "ui/png/icon-sell-trash.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 10057,
+      "semiTransparentPixels": 505,
+      "opaquePixels": 5822,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 27,
+        "top": 10,
+        "right": 116,
+        "bottom": 116
+      },
+      "sha256": "96cfba26e36ac564acae8eb5b122e52b60942f1489bab49769d9d9b14256af1b"
+    },
+    {
+      "file": "ui/png/icon-settings.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 9345,
+      "semiTransparentPixels": 586,
+      "opaquePixels": 6453,
+      "centerAlpha": 0,
+      "contentBounds": {
+        "left": 11,
+        "top": 8,
+        "right": 116,
+        "bottom": 119
+      },
+      "sha256": "0580e032d2a72bb633bdc2c15e4c9ba65f5e791c725f69cd7c4110d6a41267a3"
+    },
+    {
+      "file": "ui/png/icon-target.png",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 11011,
+      "semiTransparentPixels": 1243,
+      "opaquePixels": 4130,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 125,
+        "bottom": 125
+      },
+      "sha256": "a496f4cd5111b46358e16d6fec94ce4a7d7e89c04f9d7a55a35ece046418749d"
+    },
+    {
+      "file": "ui/png/panel-compact-pill.png",
+      "width": 420,
+      "height": 112,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 9373,
+      "semiTransparentPixels": 930,
+      "opaquePixels": 36737,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 9,
+        "top": 7,
+        "right": 410,
+        "bottom": 104
+      },
+      "sha256": "1a0a231bc7e8d3bd766e681a2eca26784f55c5817aef29b4592ed47504d73bd2"
+    },
+    {
+      "file": "ui/png/panel-large.png",
+      "width": 720,
+      "height": 500,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 36917,
+      "semiTransparentPixels": 2196,
+      "opaquePixels": 320887,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 15,
+        "top": 13,
+        "right": 703,
+        "bottom": 486
+      },
+      "sha256": "13b674fad48d243dcb07657a1efece8d898df00fae48929754ffde4f405be0c6"
+    },
+    {
+      "file": "ui/png/panel-speech-bubble.png",
+      "width": 600,
+      "height": 300,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 42126,
+      "semiTransparentPixels": 1653,
+      "opaquePixels": 136221,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 14,
+        "top": 12,
+        "right": 585,
+        "bottom": 296
+      },
+      "sha256": "12a0be3c98c4bde2f99c13f8559ba425dba1f0e151aa309453dcedd695906a1f"
+    },
+    {
+      "file": "ui/png/selection-ring.png",
+      "width": 240,
+      "height": 240,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 39888,
+      "semiTransparentPixels": 2022,
+      "opaquePixels": 15690,
+      "centerAlpha": 0,
+      "contentBounds": {
+        "left": 7,
+        "top": 6,
+        "right": 233,
+        "bottom": 233
+      },
+      "sha256": "ad68d1bc8072041a53ba36a5568cd51cf5f92a21862c12070ca80ab3eb4a1ae2"
+    },
+    {
+      "file": "ui/png/slider-rail.png",
+      "width": 440,
+      "height": 48,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 8529,
+      "semiTransparentPixels": 901,
+      "opaquePixels": 11690,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 7,
+        "top": 9,
+        "right": 432,
+        "bottom": 38
+      },
+      "sha256": "f4065dfc1683e4a9cec99a15783d4b4b1ac21a0088e4739c6278bf147a3b6e86"
+    },
+    {
+      "file": "ui/png/toggle-rail-off.png",
+      "width": 240,
+      "height": 112,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 7316,
+      "semiTransparentPixels": 592,
+      "opaquePixels": 18972,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 9,
+        "top": 8,
+        "right": 230,
+        "bottom": 103
+      },
+      "sha256": "04ecc14af6557182130c8c18948c8d16247cb68d7b1021a89e1d80fa6dd29d9b"
+    },
+    {
+      "file": "ui/png/toggle-rail-on.png",
+      "width": 240,
+      "height": 112,
+      "hasAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparentPixels": 7316,
+      "semiTransparentPixels": 592,
+      "opaquePixels": 18972,
+      "centerAlpha": 255,
+      "contentBounds": {
+        "left": 9,
+        "top": 8,
+        "right": 230,
+        "bottom": 103
+      },
+      "sha256": "3be02cd2a41b48258deb1d204491876b89f6b13349028991e049f73c2c66ed94"
+    }
+  ]
+}

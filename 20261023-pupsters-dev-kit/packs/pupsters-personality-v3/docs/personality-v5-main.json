@@ -1,0 +1,66 @@
+{
+  "version": 5,
+  "date": "2026-10-23",
+  "mode": "built-in image_gen edit",
+  "transparentBackground": true,
+  "edits": [
+    {
+      "id": "D05",
+      "prompt": "Use case: precise-object-edit. Input image 1 is the exact existing original game dog to edit. Preserve breed identity, original coat pattern, large head, extremely SHORT compact chubby torso, stubby paws, same top-down three-quarter 65 degree camera facing bottom-right, exact framing and dog size. Retain all paws planted, original body placement and curled tail. Match bold slightly irregular black doodle contours and simple clean colored fills. Make only requested character detail changes. ONE full body dog with generous clear margin on same square canvas. Genuine transparent background; no background, floor, shadow, haze or glow halo. No text, logo, watermarks, guns, machinery, extra limbs or human anatomy. Do not lengthen torso or legs, do not make the dog obese or resize the head. Keep it readable as a small tower-defense character.\nSpecific edit: make the orange poodle's ELECTRIC identity substantially clearer at a glance, while preserving the curly poodle breed. REMOVE all previous pale purple accents. The main silhouette should still be round curly poodle fur, but sculpt the top FOREHEAD TUFT into a compact bold three-pronged zigzag/lightning-shaped FUR crest, with bright electric-yellow tips and crisp small cyan inner accents. Give the ends of BOTH curly ears a few strong short angular electric-yellow lightning points (not long spikes). Repeat a small yellow/cyan charged-fur patch on the round tail pompom. Keep at least 80% of coat its original orange and cream. Add only TWO tiny cyan/white jagged spark arcs closely hugging the fur at the ear tips, sized like small snap sparks, no big floating bolt, no aura. Expression: alert, slightly high-strung determined eyes, asymmetric tense eyebrows and small crooked mouth. Electric palette must be bright yellow + cyan + white, no lavender or pink. This is a live-wire poodle powered by its fur, not an animal wearing a lightning helmet/crown, no device, battery, cords, jewelry or clothes.",
+      "reference": "../characters/D05-poodle.png",
+      "source": "[local-source-omitted]",
+      "target": "../characters/D05-poodle-electric.png",
+      "visualReview": "Orange poodle curls and compact body preserved. Strong yellow/cyan lightning-shaped fur at forehead, both ears and tail. Two small sparks. No purple.",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxEdgeAlpha": 0,
+        "visibleBoundsAlphaThreshold": 8,
+        "contentBounds": {
+          "left": 198,
+          "top": 177,
+          "right": 1158,
+          "bottom": 1080
+        },
+        "sha256": "66d48c7815c6c9e370db14604644122e1d5c08196dda69d5d249dead83768857",
+        "sourceCopyIdentical": true
+      }
+    },
+    {
+      "id": "D06",
+      "prompt": "Use case: precise-object-edit. Input image 1 is the exact existing original game dog to edit. Preserve breed identity, original coat pattern, large head, extremely SHORT compact chubby torso, stubby paws, same top-down three-quarter 65 degree camera facing bottom-right, exact framing and dog size. Retain all paws planted, original body placement and curled tail. Match bold slightly irregular black doodle contours and simple clean colored fills. Make only requested character detail changes. ONE full body dog with generous clear margin on same square canvas. Genuine transparent background; no background, floor, shadow, haze or glow halo. No text, logo, watermarks, guns, machinery, extra limbs or human anatomy. Do not lengthen torso or legs, do not make the dog obese or resize the head. Keep it readable as a small tower-defense character.\nSpecific edit: put a SMALL SHABBY HOMEMADE CARDBOARD CROWN on this border collie's head, at a jaunty slightly crooked tilt between the ears. The crown is worn warm ochre/brown paperboard with THREE chunky triangular points, one point folded over and slightly torn, a few visible dark crease lines and one tiny pale tape patch on its front. It should look like an improvised dog king's old paper crown, NOT shiny gold, not jewels, not luxurious royal regalia, not huge headwear. Crown width about 30% of head width, enough to read but both ears remain clearly visible. Correct overhead foreshortening: short flattened ellipse at base, fitted naturally to head. Keep the current one-up/one-folded ears, confident sly smile, alert eyes, black-white coat, mint throat ruff and mint tail tip. The result should feel like a cheeky scrappy little squad leader who crowned himself. No other costume or accessories.",
+      "reference": "../characters/D06-border-collie.png",
+      "source": "[local-source-omitted]",
+      "target": "../characters/D06-border-collie-crown.png",
+      "visualReview": "Compact collie, coat, asymmetric ears and mint accents preserved. Small ochre paper crown, folded torn point, creases and pale tape patch. No royal jewelry.",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxEdgeAlpha": 0,
+        "visibleBoundsAlphaThreshold": 8,
+        "contentBounds": {
+          "left": 233,
+          "top": 180,
+          "right": 1074,
+          "bottom": 1082
+        },
+        "sha256": "646a8391cde44f921ca81052a2f8f053dcd2fb976e67833ccd75ced578c78313",
+        "sourceCopyIdentical": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "outputRoot": "..",
+  "common": "Use case: stylized-concept.\nCreate ONE independently reusable game art asset, not a screenshot, not a contact sheet, not a character card.\nArt style: clean thick near-black hand-drawn contours, simple flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. No grime, grain, gray smoky shading, paper texture, gradients, photorealism, glossy 3D or pixel art.\nGame camera: orthographic overhead looking down at about 65 degrees; tops of head and back clearly visible, a small portion of face still visible. Unit faces diagonally toward bottom-right. Keep compact readable silhouette at small in-game sizes. No scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows or border.\nThe whole subject is centered with generous margins and genuine transparent alpha everywhere outside it. Preserve any transparency requested inside the subject too. One cohesive asset only; no detached decorative elements.\n",
+  "specs": [
+    {
+      "id": "E02",
+      "slug": "wheelie",
+      "ko": "바퀴 블록봇",
+      "brief": "A single speedy yellow low rectangular toy block creature on two large dark navy wheels with simple pale hubs. Squat horizontal body, tiny black eyes on front face, clearly lower than standard cube enemy. All wheel/body pieces connected as one unit. No gun, exhaust, speed lines, trail or detached parts.",
+      "file": "enemies/E02-wheelie.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E03",
+      "slug": "brick-bruiser",
+      "ko": "벽돌 덩치",
+      "brief": "A single heavy green block creature, three chunky wide rectangular green brick layers forming one stout low tower of blocks, two stubby broad foot blocks, small determined black eyes on the upper front layer. Clear layered silhouette and seams, wide strong chunky form. No weapon or detached debris.",
+      "file": "enemies/E03-brick-bruiser.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E04",
+      "slug": "shellback",
+      "ko": "장갑 블록봇",
+      "brief": "A single armored slate-blue block creature, squat square blue core enclosed by three thick pale-gray flat armor plates, a few large simple rivets, tiny eyes visible through a narrow frontal gap, two dark block feet. Readable armor identity, not a tank, no cannon or machinery weapon.",
+      "file": "enemies/E04-shellback.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E05",
+      "slug": "split-stack",
+      "ko": "분열 블록봇",
+      "brief": "A single stack of THREE small lavender/purple cube creatures forming one connected enemy. Each cube has its own pair of small black eyes, slight offsets make three segments recognizable, feet on bottom cube only. One stacked silhouette, no separate duplicates or exploded fragments.",
+      "file": "enemies/E05-split-stack.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E06",
+      "slug": "fix-it-bot",
+      "ko": "수리 블록봇",
+      "brief": "A single mint-green repair block creature with tiny black eyes, stubby feet, one short simple wrench-shaped arm and a small side pouch containing two spare toy bricks. All parts attached to its body, cute repair worker silhouette. Wrench is a repair tool, no cannon, no rifle, no separate spare parts around.",
+      "file": "enemies/E06-fix-it-bot.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E07",
+      "slug": "clear-crawler",
+      "ko": "투명 블록봇",
+      "brief": "A single stealth block crawler made of pale icy-blue translucent material, low wide cube body, two tiny visible dark eyes, four small dark blue peg feet. Preserve very readable dark blue outer contour and a few simple inner edge lines, but the body FILL is genuinely partly transparent (alpha about 35–50%) so the map can show through. No white background fill, no checkerboard, no fog or glow. Single transparent-body enemy with defined silhouette.",
+      "file": "enemies/E07-clear-crawler.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "E08",
+      "slug": "carrier-cart",
+      "ko": "블록 운반차",
+      "brief": "A single ochre-yellow toy cargo wagon with four small dark wheels, simple sleepy eyes on forward wall, and THREE small coral/red cube creatures visibly nestled INSIDE the cargo bed. Whole wagon and carried cubes form one connected enemy asset, no second wagon or loose cubes outside. Clear overhead view showing cargo, no weapon.",
+      "file": "enemies/E08-carrier-cart.png",
+      "kind": "enemy",
+      "refs": "E01"
+    },
+    {
+      "id": "B01",
+      "slug": "blockosaur",
+      "ko": "블록사우루스",
+      "brief": "A single original chunky toy-block dinosaur boss. Match the teal-and-coral block dinosaur in the boss reference, isolated entirely: teal square torso and legs, coral/red square snout and triangular back plates, yellow blunt rectangular teeth and belly/core details, short block tail. Three readable armor groupings, comically menacing small black eyes. Orthographic overhead 65-degree camera, facing bottom-right, top of back visible. Entire boss fits with generous margins. No health bar, dogs, UI, floor, effects, detached debris, text or brand marks.",
+      "file": "enemies/B01-blockosaur.png",
+      "kind": "enemy",
+      "refs": "boss"
+    }
+  ],
+  "referenceBasic": "../enemies/E01-block-bot.png",
+  "referenceBoss": "../../pupsters-topdown-ui-v1/screens/10-boss.png"
+}

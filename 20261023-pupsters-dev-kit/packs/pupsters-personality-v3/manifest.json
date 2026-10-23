@@ -1,0 +1,88 @@
+{
+  "version": 5,
+  "date": "2026-10-23",
+  "mode": "built-in image_gen",
+  "scope": "Six representative designs and attack descriptions; revised Beagle saliva, electric Poodle and crowned Collie; separate saliva projectile. Existing Shiba mouth-spit animation retained.",
+  "characters": [
+    {
+      "id": "D01",
+      "slug": "shiba",
+      "name": "시바견",
+      "personality": "뼈다귀 사고뭉치",
+      "description": "능청스러운 눈썹과 비대칭 미소. 작은 뼈다귀를 입에 물고 공격을 준비해요.",
+      "color": "#f1e9d7",
+      "file": "characters/D01-shiba-bone.png",
+      "before": "before/D01-shiba.png",
+      "attackName": "뼈다귀 뱉기",
+      "attackMethod": "작은 뼈를 입에 물고 힘을 모았다가, 입으로 퉤! 하고 뱉어요.",
+      "attackSource": "입 · 뼈 발사체",
+      "animation": "previews/D01-shiba-bone-spit.webp"
+    },
+    {
+      "id": "D02",
+      "slug": "bulldog",
+      "name": "불도그",
+      "personality": "볼빵빵 고집쟁이",
+      "description": "공기를 가득 머금은 양 볼, 삐죽한 작은 이빨, 바람처럼 말린 귀끝.",
+      "color": "#f8e4cc",
+      "file": "characters/D02-bulldog.png",
+      "before": "before/D02-bulldog.png",
+      "attackName": "압축 공기탄",
+      "attackMethod": "양 볼에 공기를 가득 모았다가 입으로 공기 충격탄을 뿜어요.",
+      "attackSource": "입 · 공기탄"
+    },
+    {
+      "id": "D03",
+      "slug": "husky",
+      "name": "허스키",
+      "personality": "시크한 냉기쟁이",
+      "description": "귀끝과 꼬리 끝에 붙은 얼음 결정. 차가운 눈빛과 볼의 서리 조각.",
+      "color": "#dff4fa",
+      "file": "characters/D03-husky.png",
+      "before": "before/D03-husky.png",
+      "attackName": "냉기 숨결",
+      "attackMethod": "숨을 들이마신 뒤 입에서 차가운 냉기를 길게 내뿜어요.",
+      "attackSource": "입 · 냉기"
+    },
+    {
+      "id": "D04",
+      "slug": "beagle",
+      "name": "비글",
+      "personality": "침흘리는 말썽꾸러기",
+      "description": "능청스러운 옆눈질과 입꼬리의 짧은 침방울. 작은 흰 침거품이 입가에 붙었어요.",
+      "color": "#e3f1f5",
+      "file": "characters/D04-beagle-drool.png",
+      "before": "before/D04-beagle.png",
+      "attackName": "끈적한 침탄",
+      "attackMethod": "입에 모은 침을 작은 거품과 함께 퉤! 뱉어요. 끈적한 침탄이 적에게 달라붙어요.",
+      "attackSource": "입 · 침 발사체",
+      "effect": "effects/FX04-drool.png"
+    },
+    {
+      "id": "D05",
+      "slug": "poodle",
+      "name": "푸들",
+      "personality": "찌릿한 예민보스",
+      "description": "정수리·귀끝·꼬리에 노랑과 하늘색 번개 털. 귀끝의 작은 스파크가 찌릿!",
+      "color": "#f4f2cd",
+      "file": "characters/D05-poodle-electric.png",
+      "before": "before/D05-poodle.png",
+      "attackName": "정전기 방출",
+      "attackMethod": "번개처럼 선 털에 전기를 모은 뒤, 정수리와 귀끝에서 찌릿한 전기를 방출해요.",
+      "attackSource": "털 · 정전기"
+    },
+    {
+      "id": "D06",
+      "slug": "border-collie",
+      "name": "보더콜리",
+      "personality": "종이 왕관의 자칭 대장",
+      "description": "접히고 찢어진 종이 왕관에 테이프까지. 삐딱하게 왕관을 쓰고 의기양양하게 웃어요.",
+      "color": "#e2f2e7",
+      "file": "characters/D06-border-collie-crown.png",
+      "before": "before/D06-border-collie.png",
+      "attackName": "지원 짖음",
+      "attackMethod": "힘차게 짖어 파동을 보내고 주변 아군을 강화해요. 직접 공격보다 지원 역할이에요.",
+      "attackSource": "짖음 · 아군 지원"
+    }
+  ]
+}

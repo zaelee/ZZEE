@@ -1,0 +1,101 @@
+{
+  "status": "complete",
+  "mode": "built-in image_gen",
+  "characters": [
+    {
+      "file": "characters/01-maltese-topdown.png",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "characters/02-shiba-topdown.png",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "characters/03-bulldog-topdown.png",
+      "generated": "[local-source-omitted]"
+    }
+  ],
+  "worldAndUi": [
+    {
+      "file": "backgrounds/01-living-room-map.png",
+      "name": "거실 전투 배경",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/01-title.png",
+      "name": "메인 타이틀",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/02-hideout.png",
+      "name": "아지트",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/03-loadout.png",
+      "name": "강아지 편성",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/04-story-map.png",
+      "name": "스토리 맵",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/05-intro.png",
+      "name": "도입 연출",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/06-solo-battle.png",
+      "name": "탑뷰 전투 UI",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/07-upgrade.png",
+      "name": "선택 및 업그레이드",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/08-coop-lobby.png",
+      "name": "협동 대기실",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/09-coop-battle.png",
+      "name": "협동 전투",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/10-boss.png",
+      "name": "보스 등장",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/11-victory.png",
+      "name": "승리",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/12-defeat.png",
+      "name": "패배 및 재도전",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/13-codex.png",
+      "name": "도감 및 성장",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/14-pause-settings.png",
+      "name": "일시정지 및 설정",
+      "generated": "[local-source-omitted]"
+    },
+    {
+      "file": "screens/15-ui-kit.png",
+      "name": "공통 UI 구성요소",
+      "generated": "[local-source-omitted]"
+    }
+  ],
+  "remaining": []
+}

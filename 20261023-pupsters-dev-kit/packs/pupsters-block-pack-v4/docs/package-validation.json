@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "archive": "pupsters-block-pack-v4.zip",
+  "fileCount": 88,
+  "bytes": 1473684,
+  "sha256": "42fdcee99425b482d442a1940cdfb2473359160193ae623a272517b20c76f3e8",
+  "crcAndFileBytesMatch": true,
+  "excluded": [
+    "__pycache__",
+    "work-*",
+    "docs/package-validation.json"
+  ],
+  "robloxStudioTested": false,
+  "browserViewerTested": false
+}
