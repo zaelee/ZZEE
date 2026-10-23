@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "generator": "built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "designs": [
+    {
+      "id": "D01",
+      "name": "shiba",
+      "prompt": "Use case: precise-object-edit. Asset type: representative top-down game character PNG. Primary request: Edit the provided original shiba into the personality design for a mischievous marble thrower while preserving the exact original dog identity. Input image: the sole reference is the exact identity, registration, camera, anatomy, palette and line-style target. Composition/framing: exact same 1254x1254 square canvas, very large transparent margins, single whole dog centered in the same position and scale. Preserve the 65-degree high-angle top-down camera and downward-right facing direction. Subject invariants: preserve the short plump broad body tucked behind the oversized head, very short legs, curled tail, triangular ears, orange-brown and cream markings, thick crisp black doodle outlines and simple fills. Do not enlarge the head or body. Personality edit: give the dog one slightly raised eyebrow and a sly, playful asymmetrical closed-mouth smile. Lift one front paw only a little, close to the body, and have that normal canine paw naturally cup exactly ONE small cobalt-blue glass marble. The marble is modest, smaller than the paw, glossy translucent cobalt blue with one tiny white highlight. The paw remains unmistakably a rounded dog paw with short toe divisions/pads; no fingers, thumb, hand, wrist, or human-like grip. The gesture is subtle, compact and non-anthropomorphic. Scene/backdrop: genuine transparent background and transparent empty margin. Constraints: one dog, exactly one marble, original colors and silhouette, clean readable game asset. Avoid: extra marbles, thrown/flying marble, projectile trail, VFX, motion lines, weapon, machine, clothing, armor, collar, background, floor, base disk, cast shadow, glow, text, label, sprite sheet, contact sheet, humanoid hand or arm.",
+      "references": [
+        "../../pupsters-attack-motion-v1/frames/D01-shiba/00-idle.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../characters/D01-shiba.png",
+      "checks": {
+        "visualReview": "pass: raised eyebrow, sly asymmetrical smile, exactly one small cobalt glass marble cupped by a compact canine paw; original identity, scale and framing retained; no prohibited elements",
+        "pngDecode": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "pixelFormat": "Format32bppArgb",
+        "transparentCorners": true,
+        "centerAlpha": 253,
+        "exactCopyOfGeneratedSource": true
+      }
+    },
+    {
+      "id": "D02",
+      "name": "bulldog",
+      "prompt": "Use case: precise-object-edit. Asset type: representative top-down game character PNG. Primary request: Edit the provided original bulldog into the personality design for a compressed-air bulldog while preserving the exact original dog identity. Input image: the sole reference is the exact identity, registration, camera, anatomy, palette and line-style target. Composition/framing: exact same 1254x1254 square canvas, very large transparent margins, single whole dog centered in the same position and scale. Preserve the 65-degree high-angle top-down camera and downward-right facing direction. Subject invariants: preserve the short plump broad body tucked behind the oversized head, extremely short legs, tan and cream irregular markings, floppy ears, thick crisp black doodle outlines and simple fills. Do not enlarge the head or entire body. Personality edit: make BOTH jowls exceptionally round, taut and visibly full of compressed air, symmetrically puffy but still part of the face. Give it a very short tightly closed mouth line and exactly ONE very small lower tooth peeking from one side of the sealed lip. Expression is stubborn, proud and self-confident: low firm brows and steady eyes, not angry. Add one tiny integrated curl in the fur at the tip of ONE floppy ear, shaped like a compact wind swirl. The curl must be part of the ear silhouette/fur, not a detached effect or particle. The inflated cheeks are the main ability cue. Scene/backdrop: genuine transparent background and transparent empty margin. Constraints: one dog, preserve original scale, silhouette language and identity, clean readable game asset. Avoid: open mouth, tongue, extra teeth, detached wind ring, cloud, puff, projectile, VFX, motion lines, weapon, machine, clothing, armor, collar, background, floor, base disk, cast shadow, glow, text, label, sprite sheet, contact sheet.",
+      "references": [
+        "../../pupsters-attack-motion-v1/frames/D02-bulldog/00-idle.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../characters/D02-bulldog.png",
+      "checks": {
+        "visualReview": "pass: exceptionally round compressed-air jowls, short sealed mouth, one small lower tooth, proud stubborn expression and a small ear-tip fur curl; original identity, scale and framing retained; no prohibited elements",
+        "pngDecode": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "pixelFormat": "Format32bppArgb",
+        "transparentCorners": true,
+        "centerAlpha": 253,
+        "exactCopyOfGeneratedSource": true
+      }
+    }
+  ]
+}

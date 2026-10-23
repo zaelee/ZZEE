@@ -1,0 +1,52 @@
+{
+  "generator": "built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "assets": [
+    {
+      "id": "D04-beagle-drool",
+      "prompt": "Use case: precise-object-edit. Asset type: representative top-down game character artwork. Input image is the exact existing beagle; preserve its body, registration, canvas, scale, footprint, tricolor markings, ear length, tail, thick black doodle style, large head, extremely short plump broad torso, short legs, 65-degree high-angle view and downward-right orientation. Replace the pink bubble theme with cute saliva. Remove every pink bubble, cheek/lip residue and pink ear-tip stain, restoring both ear tips to normal warm brown. At only one mouth corner, draw one short thick translucent pale icy-blue drool strand ending in exactly one rounded attached droplet. Add about two tiny pearly-white saliva foam beads touching the lip. Make it cute and non-gross. Give a sly, slightly vacant troublemaker expression with one eyebrow higher and pupils glancing sideways. Same 1254x1254 transparent canvas, size, position and generous margin. One dog only. No pink, detached effects, long thin thread, multiple strands, vomit, large liquid mass, giant or gum bubble, water realism, weapons, machinery, clothing, armor, text, background, floor, base disk, shadow, glow, halo, extra characters, extra limbs, crop, zoom, sprite sheet or contact sheet.",
+      "references": [
+        "../characters/D04-beagle.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../characters/D04-beagle-drool.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "F017680155BCEAC705163BC495AED81A31CA2FAB4BF1D521D571D3C466920C45",
+        "visual": "pass: original tricolor markings, scale, footprint and compact proportions preserved; all pink removed; ear tips restored brown; one short attached pale-blue drool drop plus two white lip foam beads; raised eyebrow and sideways glance; no detached effect, background or shadow"
+      }
+    },
+    {
+      "id": "FX04-drool",
+      "prompt": "Use case: precise-object-edit. Asset type: standalone game projectile effect sprite. Input image is a style reference only for crisp thick black doodle outline, simple fills, square transparent canvas, centered object and generous margin; do not retain the bone. Create ONE cohesive sticky saliva projectile flying right. Use an irregular rounded pearly-white and pale icy-blue blob, wider at the right/front and tapering toward the left/rear. A short thick sticky trailing strand remains physically joined to the rear-left. Add only one or two tiny rounded foam lobes attached directly to the main blob or tail. Thick black cartoon outline, simple pale fills and a small white highlight. Same 1254x1254 square canvas, centered with generous transparent margin, one projectile only. Every lobe and tail segment forms one connected silhouette. No pink, bone, dog, round gum bubble, perfectly circular bubble, realistic water splash, long thin string, detached droplets, spray cloud, giant effect, weapon, text, background, floor, base disk, shadow, glow, halo, crop, zoom, sprite sheet or contact sheet.",
+      "references": [
+        "../effects/FX01-bone.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../effects/FX04-drool.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "A9C07695B2317D431A1936A92F43AA8F20574100D387537EB9E0E4809996EA53",
+        "visual": "pass: one connected right-facing pearly-white and pale-blue projectile with short thick rear tail and attached foam lobe; thick black doodle outline and generous margin; no pink, dog, bone, detached droplets, background or shadow"
+      }
+    }
+  ]
+}

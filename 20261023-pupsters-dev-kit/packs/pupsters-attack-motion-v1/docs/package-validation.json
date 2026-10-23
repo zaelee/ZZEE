@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "zip": "pupsters-attack-motion-v1.zip",
+  "fileCount": 54,
+  "imageCounts": {
+    ".png": 30,
+    ".gif": 6,
+    ".webp": 6
+  },
+  "allFilesHashMatch": true,
+  "htmlReferencesExist": true,
+  "bytes": 32529199,
+  "sha256": "68d3cc918a17ded63bc49c6b2ced9b427198665b1c5ce3a4c496022496a249d0"
+}

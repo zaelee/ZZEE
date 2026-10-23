@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "fileCount": 49,
+  "imageCounts": {
+    ".png": 30,
+    ".gif": 6,
+    ".webp": 6
+  },
+  "zipBytes": 19352441,
+  "zipSha256": "6a0f51f8f50459669f53c058f45118f6892176e29be9dc15d06dea140403f871",
+  "htmlReferencesExist": true
+}

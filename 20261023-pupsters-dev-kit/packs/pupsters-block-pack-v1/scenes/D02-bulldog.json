@@ -1,0 +1,639 @@
+{
+  "name": "Bulldog_Block",
+  "variant": "block",
+  "version": 3,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "mouth": [
+    0,
+    0.88,
+    -1.72
+  ],
+  "materials": {
+    "orange": {
+      "color": [
+        0.9607843137254902,
+        0.6274509803921569,
+        0.2235294117647059
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9411764705882353,
+        0.8352941176470589
+      ]
+    },
+    "black": {
+      "color": [
+        0.1450980392156863,
+        0.12156862745098039,
+        0.12941176470588237
+      ]
+    },
+    "white": {
+      "color": [
+        1.0,
+        0.9882352941176471,
+        0.9568627450980393
+      ]
+    },
+    "bone": {
+      "color": [
+        0.9725490196078431,
+        0.8784313725490196,
+        0.6588235294117647
+      ]
+    },
+    "inner": {
+      "color": [
+        1.0,
+        0.8392156862745098,
+        0.6549019607843137
+      ]
+    },
+    "fawn": {
+      "color": [
+        0.9176470588235294,
+        0.7098039215686275,
+        0.49019607843137253
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "ShortTorso",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.49,
+        1.17,
+        1.13
+      ],
+      "position": [
+        0,
+        0.99,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "CreamChest",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.0,
+        0.76,
+        0.22
+      ],
+      "position": [
+        0,
+        0.86,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFL_Leg",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        -0.67,
+        0.48,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "LegFL_Paw",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        -0.67,
+        0.18,
+        -0.6599999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBL_Leg",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        -0.67,
+        0.48,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "LegBL_Paw",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        -0.67,
+        0.18,
+        0.8700000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFR_Leg",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        0.67,
+        0.48,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "LegFR_Paw",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        0.67,
+        0.18,
+        -0.6599999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBR_Leg",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        0.67,
+        0.48,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "LegBR_Paw",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        0.67,
+        0.18,
+        0.8700000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BigHead",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        2.16,
+        1.57,
+        1.49
+      ],
+      "position": [
+        0,
+        1.43,
+        -0.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.14,
+        0.17,
+        0.05
+      ],
+      "position": [
+        -0.47,
+        1.55,
+        -1.287
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.14,
+        0.17,
+        0.05
+      ],
+      "position": [
+        0.47,
+        1.55,
+        -1.287
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "MouthCenter",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.26,
+        0.17,
+        0.055
+      ],
+      "position": [
+        0,
+        0.88,
+        -1.68
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "FaceBlaze",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.36,
+        1.04,
+        0.045
+      ],
+      "position": [
+        0,
+        1.66,
+        -1.285
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "BackWhitePatch",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        0.9,
+        0.045,
+        0.74
+      ],
+      "position": [
+        0.22,
+        1.585,
+        0.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "FoldEarL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.47,
+        0.22,
+        0.58
+      ],
+      "position": [
+        -1.02,
+        2.04,
+        -0.46
+      ],
+      "rotation": [
+        0,
+        0,
+        0.18
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "FoldEarTipL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.2,
+        0.31,
+        0.39
+      ],
+      "position": [
+        -1.16,
+        1.87,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "PuffedCheekL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.91,
+        0.64,
+        0.45
+      ],
+      "position": [
+        -0.48,
+        1.02,
+        -1.405
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "FoldEarR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.47,
+        0.22,
+        0.58
+      ],
+      "position": [
+        1.02,
+        2.04,
+        -0.46
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.18
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "FoldEarTipR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.2,
+        0.31,
+        0.39
+      ],
+      "position": [
+        1.16,
+        1.87,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "PuffedCheekR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.91,
+        0.64,
+        0.45
+      ],
+      "position": [
+        0.48,
+        1.02,
+        -1.405
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "SquareNose",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.34,
+        0.18,
+        0.09
+      ],
+      "position": [
+        0,
+        1.24,
+        -1.66
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "TinyTooth",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.09,
+        0.13,
+        0.045
+      ],
+      "position": [
+        0.065,
+        0.925,
+        -1.721
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "ForeheadCrease",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.22,
+        0.035,
+        0.035
+      ],
+      "position": [
+        0,
+        1.91,
+        -1.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "TailRoot",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.3,
+        0.38,
+        0.33
+      ],
+      "position": [
+        0,
+        1.56,
+        1.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "fawn"
+    },
+    {
+      "name": "TailWhiteTip",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.3,
+        0.13,
+        0.33
+      ],
+      "position": [
+        0,
+        1.815,
+        1.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    }
+  ],
+  "id": "D02",
+  "slug": "bulldog",
+  "displayName": "불도그",
+  "feature": "빵빵한 네모 볼 · 삐죽한 이빨",
+  "attackName": "압축 공기탄",
+  "attackMethod": "양 볼에 공기를 모은 뒤 입으로 공기 충격탄을 뿜어요."
+}

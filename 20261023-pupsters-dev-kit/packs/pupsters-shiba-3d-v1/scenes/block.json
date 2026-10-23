@@ -1,0 +1,1002 @@
+{
+  "name": "Shiba_Block",
+  "variant": "block",
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "mouth": [
+    0,
+    0.82,
+    -1.53
+  ],
+  "materials": {
+    "orange": {
+      "color": [
+        0.9607843137254902,
+        0.6274509803921569,
+        0.2235294117647059
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9411764705882353,
+        0.8352941176470589
+      ]
+    },
+    "black": {
+      "color": [
+        0.1450980392156863,
+        0.12156862745098039,
+        0.12941176470588237
+      ]
+    },
+    "white": {
+      "color": [
+        1.0,
+        0.9882352941176471,
+        0.9568627450980393
+      ]
+    },
+    "bone": {
+      "color": [
+        0.9725490196078431,
+        0.8784313725490196,
+        0.6588235294117647
+      ]
+    },
+    "inner": {
+      "color": [
+        1.0,
+        0.8392156862745098,
+        0.6549019607843137
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "ShortTorso",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.49,
+        1.17,
+        1.13
+      ],
+      "position": [
+        0,
+        0.99,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.8
+    },
+    {
+      "name": "CreamChest",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.0,
+        0.76,
+        0.22
+      ],
+      "position": [
+        0,
+        0.86,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.8
+    },
+    {
+      "name": "LegFL_Leg",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        -0.67,
+        0.48,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegFL_Paw",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        -0.67,
+        0.18,
+        -0.6599999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegBL_Leg",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        -0.67,
+        0.48,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegBL_Paw",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        -0.67,
+        0.18,
+        0.8700000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegFR_Leg",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        0.67,
+        0.48,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegFR_Paw",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        0.67,
+        0.18,
+        -0.6599999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegBR_Leg",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.51,
+        0.68,
+        0.57
+      ],
+      "position": [
+        0.67,
+        0.48,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.65
+    },
+    {
+      "name": "LegBR_Paw",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.55,
+        0.36,
+        0.64
+      ],
+      "position": [
+        0.67,
+        0.18,
+        0.8700000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.65
+    },
+    {
+      "name": "BigHead",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        2.16,
+        1.57,
+        1.49
+      ],
+      "position": [
+        0,
+        1.43,
+        -0.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange",
+      "exponent": 0.48
+    },
+    {
+      "name": "EarL",
+      "group": "Head",
+      "type": "wedge",
+      "size": [
+        0.4,
+        0.85,
+        0.77
+      ],
+      "position": [
+        -0.76,
+        2.28,
+        -0.48
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarInnerL",
+      "group": "Head",
+      "type": "wedge",
+      "size": [
+        0.065,
+        0.5,
+        0.43
+      ],
+      "position": [
+        -0.78,
+        2.34,
+        -0.713
+      ],
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "CheekL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.0,
+        0.58,
+        0.38
+      ],
+      "position": [
+        -0.43,
+        1.015,
+        -1.265
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.8
+    },
+    {
+      "name": "EyeWhiteL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.4,
+        0.34,
+        0.14
+      ],
+      "position": [
+        -0.5,
+        1.52,
+        -1.283
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "EyePupilL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.2,
+        0.25,
+        0.1
+      ],
+      "position": [
+        -0.46499999999999997,
+        1.49,
+        -1.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "EyeGlintL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.055,
+        0.065,
+        0.035
+      ],
+      "position": [
+        -0.488,
+        1.55,
+        -1.431
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "EyelidL",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.43,
+        0.105,
+        0.1
+      ],
+      "position": [
+        -0.5,
+        1.655,
+        -1.38
+      ],
+      "rotation": [
+        0,
+        0,
+        0.1
+      ],
+      "material": "black",
+      "exponent": 0.85
+    },
+    {
+      "name": "BrowMarkL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.14,
+        0.08
+      ],
+      "position": [
+        -0.5,
+        1.88,
+        -1.295
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.2
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "EarR",
+      "group": "Head",
+      "type": "wedge",
+      "size": [
+        0.4,
+        0.85,
+        0.77
+      ],
+      "position": [
+        0.76,
+        2.28,
+        -0.48
+      ],
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarInnerR",
+      "group": "Head",
+      "type": "wedge",
+      "size": [
+        0.065,
+        0.5,
+        0.43
+      ],
+      "position": [
+        0.78,
+        2.34,
+        -0.713
+      ],
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "CheekR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.0,
+        0.58,
+        0.38
+      ],
+      "position": [
+        0.43,
+        1.015,
+        -1.265
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream",
+      "exponent": 0.8
+    },
+    {
+      "name": "EyeWhiteR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.4,
+        0.34,
+        0.14
+      ],
+      "position": [
+        0.5,
+        1.52,
+        -1.283
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "EyePupilR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.2,
+        0.25,
+        0.1
+      ],
+      "position": [
+        0.535,
+        1.49,
+        -1.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "EyeGlintR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.055,
+        0.065,
+        0.035
+      ],
+      "position": [
+        0.512,
+        1.55,
+        -1.431
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "EyelidR",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.43,
+        0.105,
+        0.1
+      ],
+      "position": [
+        0.5,
+        1.64,
+        -1.38
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.24
+      ],
+      "material": "black",
+      "exponent": 0.85
+    },
+    {
+      "name": "BrowMarkR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.14,
+        0.08
+      ],
+      "position": [
+        0.5,
+        1.91,
+        -1.295
+      ],
+      "rotation": [
+        0,
+        0,
+        0.2
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BigNose",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.49,
+        0.3,
+        0.26
+      ],
+      "position": [
+        0,
+        1.185,
+        -1.52
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black",
+      "exponent": 0.7
+    },
+    {
+      "name": "MouthCenter",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.055,
+        0.2,
+        0.065
+      ],
+      "position": [
+        0,
+        0.975,
+        -1.49
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black",
+      "exponent": 0.9
+    },
+    {
+      "name": "Smile-1",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.32,
+        0.055,
+        0.065
+      ],
+      "position": [
+        -0.155,
+        0.89,
+        -1.465
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.1
+      ],
+      "material": "black",
+      "exponent": 0.9
+    },
+    {
+      "name": "Smile1",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.32,
+        0.055,
+        0.065
+      ],
+      "position": [
+        0.155,
+        0.89,
+        -1.465
+      ],
+      "rotation": [
+        0,
+        0,
+        0.1
+      ],
+      "material": "black",
+      "exponent": 0.9
+    },
+    {
+      "name": "TailRoot",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.35,
+        0.66,
+        0.35
+      ],
+      "position": [
+        0,
+        1.46,
+        1.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl0",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436617,
+        0.33,
+        0.36
+      ],
+      "position": [
+        0.3645945237499811,
+        1.8065569751829926,
+        1.035
+      ],
+      "rotation": [
+        0,
+        0,
+        1.149367755366325
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl1",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436619,
+        0.33,
+        0.36
+      ],
+      "position": [
+        0.3772482707809903,
+        2.1016302826197717,
+        1.029
+      ],
+      "rotation": [
+        0,
+        0,
+        1.9065106125091822
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl2",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436616,
+        0.33,
+        0.36
+      ],
+      "position": [
+        0.18377461633929854,
+        2.324781171286121,
+        1.023
+      ],
+      "rotation": [
+        0,
+        0,
+        2.66365346965204
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl3",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436617,
+        0.33,
+        0.36
+      ],
+      "position": [
+        -0.11011297517423158,
+        2.354080618891513,
+        1.017
+      ],
+      "rotation": [
+        0,
+        0,
+        -2.8623889803846905
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl4",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436619,
+        0.33,
+        0.36
+      ],
+      "position": [
+        -0.34383514460616066,
+        2.173519489099862,
+        1.011
+      ],
+      "rotation": [
+        0,
+        0,
+        -2.105246123241832
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCurl5",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436616,
+        0.33,
+        0.36
+      ],
+      "position": [
+        -0.3896867513820086,
+        1.881755878908876,
+        1.005
+      ],
+      "rotation": [
+        0,
+        0,
+        -1.3481032660989756
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "TailCurl6",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.4178503477436616,
+        0.33,
+        0.36
+      ],
+      "position": [
+        -0.22261460562634594,
+        1.6382086100097912,
+        0.9989999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.5909604089561182
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BoneShaft",
+      "group": "MouthBone",
+      "type": "box",
+      "size": [
+        0.78,
+        0.14,
+        0.17
+      ],
+      "position": [
+        0,
+        0.82,
+        -1.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone",
+      "exponent": 0.8
+    },
+    {
+      "name": "BoneKnuckle-1_-1",
+      "group": "MouthBone",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.23,
+        0.23
+      ],
+      "position": [
+        -0.43,
+        0.7549999999999999,
+        -1.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "BoneKnuckle-1_1",
+      "group": "MouthBone",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.23,
+        0.23
+      ],
+      "position": [
+        -0.43,
+        0.885,
+        -1.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "BoneKnuckle1_-1",
+      "group": "MouthBone",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.23,
+        0.23
+      ],
+      "position": [
+        0.43,
+        0.7549999999999999,
+        -1.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "BoneKnuckle1_1",
+      "group": "MouthBone",
+      "type": "sphere",
+      "size": [
+        0.25,
+        0.23,
+        0.23
+      ],
+      "position": [
+        0.43,
+        0.885,
+        -1.53
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Sell or discard icon</title>
+  <defs><mask id="trash-cuts" maskUnits="userSpaceOnUse"><rect width="128" height="128" fill="white"/><path d="M60 54 L61 97 M84 54 L82 97" stroke="black" stroke-width="6" stroke-linecap="round"/></mask></defs>
+  <g mask="url(#trash-cuts)">
+    <path d="M36 40 L42 104 C43 112 49 117 57 117 L87 117 C95 117 101 111 102 103 L108 40 Z" fill="#171716"/>
+    <path d="M27 29 C27 24 31 21 36 21 L52 21 L57 14 C59 11 62 10 66 10 L80 10 C84 10 87 12 89 15 L93 21 L109 21 C114 21 117 24 117 29 C117 34 114 37 109 37 L36 37 C31 37 27 34 27 29 Z" fill="#171716"/>
+  </g>
+</svg>

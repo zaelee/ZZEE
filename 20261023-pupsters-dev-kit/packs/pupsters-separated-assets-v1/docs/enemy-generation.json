@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-10-23",
+  "generator": "built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "assets": [
+    {
+      "id": "E02",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One speedy yellow low rectangular toy block creature on two large dark navy wheels with simple pale hubs. Squat horizontal body, tiny black eyes on its front face, clearly lower than a standard cube enemy. All wheel and body pieces connected as one unit. No gun, exhaust, speed lines, trail, or detached parts.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E02-wheelie.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "E03",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One heavy green block creature made from three chunky wide rectangular green brick layers forming one stout low tower. Add two stubby broad foot blocks and small determined black eyes on the upper front layer. Clear layered silhouette and simple seams, wide strong chunky form. No weapon or detached debris.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E03-brick-bruiser.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "E04",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One armored slate-blue block creature. A squat square blue core is enclosed by three thick pale-gray flat armor plates with a few large simple rivets. Tiny black eyes visible through a narrow frontal gap and two dark block feet. Readable armor identity. It is not a tank: no cannon and no machinery weapon.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E04-shellback.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "E05",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One connected stack of exactly THREE small lavender-purple cube creatures forming one enemy. Each of the three cubes has its own pair of tiny black eyes. Slight offsets make all three segments recognizable. Feet only on the bottom cube. One stacked silhouette with touching cubes; no separate duplicates and no exploded fragments.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E05-split-stack.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "E06",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One mint-green repair block creature with tiny black eyes and stubby feet. It has one short simple wrench-shaped arm and one small side pouch containing exactly two spare toy bricks. All parts attached to the body in a cute repair-worker silhouette. The wrench is a repair tool. No cannon, rifle, loose tools, or spare parts outside the pouch.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E06-fix-it-bot.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "E07",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nSubject: One stealth block crawler with a low wide cube body made of pale icy-blue translucent material, two tiny visible dark eyes, and four small dark-blue peg feet. Keep a readable dark-blue outer contour and only a few simple inner edge lines. Critical alpha requirement: the icy-blue BODY FILL itself must be genuinely semi-transparent at about 35–50% alpha so a game map can show through it; the outline, eyes, and feet stay opaque. No white background fill, checkerboard, fog, glow, or false painted transparency.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E07-clear-crawler.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true,
+        "bodyCenterAlpha": 153,
+        "nonzeroAlphaMedian": 189,
+        "note": "Body is genuinely semi-transparent; center alpha is 60%."
+      }
+    },
+    {
+      "id": "E08",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters outside the connected subject, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nInput image: E01 is a style and camera reference only; do not reproduce its exact character.\nSubject: One ochre-yellow toy cargo wagon with four small dark wheels, simple sleepy black eyes on the forward wall, and exactly THREE small coral-red cube creatures visibly nestled INSIDE the cargo bed. The wagon and carried cubes form one connected enemy asset. Clear overhead view showing the cargo. No second wagon, loose cubes outside, or weapon.",
+      "source": "../enemies/E01-block-bot.png",
+      "sourceRole": "style and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/E08-carrier-cart.png",
+      "verification": {
+        "decoded": true,
+        "width": 1295,
+        "height": 1215,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true
+      }
+    },
+    {
+      "id": "B01",
+      "prompt": "Use case: stylized-concept.\nAsset type: independently reusable 2D game enemy sprite with genuine transparent alpha.\nCreate ONE cohesive subject only, centered with generous transparent margins.\nArt style: clean thick near-black slightly hand-drawn contour, flat solid color regions, minimal detail, charming slightly deadpan original indie-game doodle look. Make it flatter and simpler than the reference. No grime, grain, smoky shading, paper texture, gradients, photorealism, glossy 3D, or pixel art.\nCamera: orthographic overhead at about 65 degrees, top and back clearly visible with a small portion of face visible. Face diagonally toward bottom-right. Compact silhouette readable at small game sizes.\nNo scene, UI, floor, ground shadow, base disk, pedestal, text, labels, watermark, arrows, border, extra characters outside the connected subject, detached decoration, guns, weapons, projectiles, or effects.\nOutside the subject must be genuinely transparent.\nInput image: the boss screenshot is a shape, palette, and camera reference. Extract and reinterpret only the teal-and-coral dinosaur boss body; omit every other pictured element.\nSubject: One original chunky toy-block dinosaur boss with teal square torso and legs, coral-red square snout and triangular back plates, yellow blunt rectangular teeth and yellow belly or core details, and a short block tail. Show three readable armor groupings and comically menacing small black eyes. Entire boss fits in frame with generous margins. No health bar, dogs, UI, track, room, floor, effects, detached debris, text, or brand marks.",
+      "source": "../../pupsters-topdown-ui-v1/screens/10-boss.png",
+      "sourceRole": "boss body shape, palette, and camera reference",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../enemies/B01-blockosaur.png",
+      "verification": {
+        "decoded": true,
+        "width": 1536,
+        "height": 1024,
+        "hasAlpha": true,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visualChecked": true,
+        "note": "The generator introduced a faint semi-transparent colored halo around the isolated boss and used little lower margin; no UI, floor, dogs, or weapons are present."
+      },
+      "finalFile": {
+        "path": "../enemies/B01-blockosaur-square.png",
+        "accepted": true,
+        "reason": "Final square-format regeneration removed the visible halo and preserved safe visible margins. See boss-square-generation.json and validation.json."
+      },
+      "targetedFix": {
+        "operation": "built-in image_gen edit",
+        "editTarget": "../enemies/B01-blockosaur.png",
+        "prompt": "Use case: precise-object-edit.\nAsset type: independently reusable 2D game boss sprite with genuine transparent alpha.\nInput image: edit target. Preserve the blockosaur character's exact overall silhouette, teal/coral/yellow palette, thick near-black contour, component arrangement, orthographic 65-degree camera, facing direction, facial expression, teeth, legs, back plates, and tail.\nPrimary edit: remove EVERY surrounding glow, halo, colored haze, smoke, aura, cast shadow, ground shadow, and stray effect pixel outside the character contour. Pixels beyond the outer black character contour must be alpha 0.\nReframe only as needed so the complete head, snout, tail, back plates, and all feet fit with about 12% transparent margin on every side.\nKeep the character as clean flat solid color planes with crisp readable edges. No gradients or glossy lighting. Do not redesign, add, remove, crop, or obscure character parts.\nNo scene, floor, UI, dogs, text, border, effects, weapons, or debris. Output exactly one isolated blockosaur boss on a genuinely transparent background.",
+        "generatedSourcePath": "[local-source-omitted]",
+        "target": "../enemies/B01-blockosaur-clean.png",
+        "verification": {
+          "decoded": true,
+          "width": 1536,
+          "height": 1024,
+          "hasAlpha": true,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "visibleBounds": [
+            0,
+            41,
+            1499,
+            1007
+          ],
+          "transparentMarginFractions": {
+            "left": 0,
+            "top": 0.0400390625,
+            "right": 0.0234375,
+            "bottom": 0.015625
+          },
+          "haloRemoved": false,
+          "marginRequirementMet": false,
+          "visualChecked": true
+        }
+      }
+    }
+  ]
+}

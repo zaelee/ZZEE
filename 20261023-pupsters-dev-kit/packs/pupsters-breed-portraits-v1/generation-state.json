@@ -1,0 +1,110 @@
+{
+  "status": "complete",
+  "completed": [
+    {
+      "n": 1,
+      "slug": "maltese",
+      "ko": "흰색 말티즈",
+      "file": "01-maltese-v1.png"
+    },
+    {
+      "n": 2,
+      "slug": "shiba-inu",
+      "ko": "시바견",
+      "source": "[local-source-omitted]",
+      "file": "02-shiba-inu-v1.png"
+    },
+    {
+      "n": 3,
+      "slug": "bulldog",
+      "ko": "불도그",
+      "source": "[local-source-omitted]",
+      "file": "03-bulldog-v1.png"
+    },
+    {
+      "n": 4,
+      "slug": "husky",
+      "ko": "허스키",
+      "source": "[local-source-omitted]",
+      "file": "04-husky-v1.png"
+    },
+    {
+      "n": 5,
+      "slug": "beagle",
+      "ko": "비글",
+      "source": "[local-source-omitted]",
+      "file": "05-beagle-v1.png"
+    },
+    {
+      "n": 6,
+      "slug": "poodle",
+      "ko": "푸들",
+      "source": "[local-source-omitted]",
+      "file": "06-poodle-v1.png"
+    },
+    {
+      "n": 7,
+      "slug": "border-collie",
+      "ko": "보더콜리",
+      "source": "[local-source-omitted]",
+      "file": "07-border-collie-v1.png"
+    },
+    {
+      "n": 8,
+      "slug": "dachshund",
+      "ko": "닥스훈트",
+      "source": "[local-source-omitted]",
+      "file": "08-dachshund-v1.png"
+    },
+    {
+      "n": 9,
+      "slug": "jack-russell-terrier",
+      "ko": "잭 러셀 테리어",
+      "source": "[local-source-omitted]",
+      "file": "09-jack-russell-terrier-v1.png"
+    },
+    {
+      "n": 10,
+      "slug": "corgi",
+      "ko": "코기",
+      "source": "[local-source-omitted]",
+      "file": "10-corgi-v1.png"
+    },
+    {
+      "n": 11,
+      "slug": "german-shepherd",
+      "ko": "저먼 셰퍼드",
+      "source": "[local-source-omitted]",
+      "file": "11-german-shepherd-v1.png"
+    },
+    {
+      "n": 12,
+      "slug": "golden-retriever",
+      "ko": "골든 리트리버",
+      "source": "[local-source-omitted]",
+      "file": "12-golden-retriever-v1.png"
+    },
+    {
+      "n": 13,
+      "slug": "labrador",
+      "ko": "래브라도",
+      "source": "[local-source-omitted]",
+      "file": "13-labrador-v1.png"
+    },
+    {
+      "n": 14,
+      "slug": "saint-bernard",
+      "ko": "세인트버나드",
+      "source": "[local-source-omitted]",
+      "file": "14-saint-bernard-v1.png"
+    },
+    {
+      "n": 15,
+      "slug": "chihuahua",
+      "ko": "치와와",
+      "source": "[local-source-omitted]",
+      "file": "15-chihuahua-v1.png"
+    }
+  ],
+  "remaining": []
+}

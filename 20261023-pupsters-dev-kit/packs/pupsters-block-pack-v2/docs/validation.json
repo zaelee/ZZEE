@@ -1,0 +1,229 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "id": "D01",
+      "file": "Shiba_Block.gltf",
+      "meshCount": 30,
+      "triangles": 984,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.82,
+        -1.48
+      ],
+      "sha256": "f0bce0698f8f2808f3f3d79339002687cd73569d3cd0f9b5a0dbfff853fed69c"
+    },
+    {
+      "id": "D02",
+      "file": "Bulldog_Block.gltf",
+      "meshCount": 27,
+      "triangles": 636,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.78,
+        -1.78
+      ],
+      "sha256": "a44452dbf805994f1bfdf30280027c43d6f081a26ddcf2d363074afe525b74c4"
+    },
+    {
+      "id": "D03",
+      "file": "Husky_Block.gltf",
+      "meshCount": 36,
+      "triangles": 744,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.96,
+        -1.425
+      ],
+      "sha256": "02254e23f05931663f5fcdf68dd59c4abcb82f7a88373545255486e42e1f2f12"
+    },
+    {
+      "id": "D04",
+      "file": "Beagle_Block.gltf",
+      "meshCount": 25,
+      "triangles": 612,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.91,
+        -1.42
+      ],
+      "sha256": "d761db45098e9e2581be92b14545227d3ae7a0202fcfa17f8c4e9928320dff03"
+    },
+    {
+      "id": "D05",
+      "file": "Poodle_Block.gltf",
+      "meshCount": 33,
+      "triangles": 708,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.96,
+        -1.4
+      ],
+      "sha256": "d922583fdbbc4529acff089e3e243fc54956a2f22404753a940cd20ab8ee2e0e"
+    },
+    {
+      "id": "D06",
+      "file": "BorderCollie_Block.gltf",
+      "meshCount": 37,
+      "triangles": 756,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "objTriangleCountMatches": true,
+      "worldBoundsMatchManifest": true,
+      "feetGrounded": true,
+      "mouthWorld": [
+        0.0,
+        0.93,
+        -1.455
+      ],
+      "sha256": "ed6beccc05fc08a7f1336cee9c1c3c2e0b6677730f42588992123e6eedcd5ab6"
+    }
+  ],
+  "nativeModels": [
+    {
+      "id": "D01",
+      "file": "native/D01-shiba.rbxmx",
+      "parts": 30,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D02",
+      "file": "native/D02-bulldog.rbxmx",
+      "parts": 27,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D03",
+      "file": "native/D03-husky.rbxmx",
+      "parts": 36,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D04",
+      "file": "native/D04-beagle.rbxmx",
+      "parts": 25,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D05",
+      "file": "native/D05-poodle.rbxmx",
+      "parts": 33,
+      "sceneSha256Current": true
+    },
+    {
+      "id": "D06",
+      "file": "native/D06-border-collie.rbxmx",
+      "parts": 37,
+      "sceneSha256Current": true
+    }
+  ],
+  "nativePack": {
+    "file": "native/Pupsters-All-Dogs.rbxmx",
+    "models": 6,
+    "uniqueReferents": true,
+    "gridTranslations": true
+  },
+  "pointedWedgeParts": 0,
+  "headDimensions": [
+    {
+      "id": "D01",
+      "headSize": [
+        2.16,
+        1.57,
+        1.49
+      ]
+    },
+    {
+      "id": "D02",
+      "headSize": [
+        2.55,
+        1.25,
+        1.45
+      ]
+    },
+    {
+      "id": "D03",
+      "headSize": [
+        1.94,
+        1.65,
+        1.4
+      ]
+    },
+    {
+      "id": "D04",
+      "headSize": [
+        1.8,
+        1.54,
+        1.42
+      ]
+    },
+    {
+      "id": "D05",
+      "headSize": [
+        1.68,
+        1.4,
+        1.34
+      ]
+    },
+    {
+      "id": "D06",
+      "headSize": [
+        2.1,
+        1.45,
+        1.44
+      ]
+    }
+  ],
+  "htmlFilesChecked": [
+    "index.html",
+    "viewer.html"
+  ],
+  "cpuRendersInspected": true,
+  "cpuRenderModelCount": 6,
+  "robloxStudioTested": false,
+  "browserViewerTested": false,
+  "scope": "Static models, no skeletal rig or animation."
+}

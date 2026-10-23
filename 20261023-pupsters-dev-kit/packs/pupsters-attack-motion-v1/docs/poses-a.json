@@ -1,0 +1,158 @@
+{
+  "status": "complete",
+  "generator": "built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "canvas": [
+    1254,
+    1254
+  ],
+  "commonSource": "motion-brief.json",
+  "commonPrompt": "Use case: precise-object-edit. Create ONE new animation keyframe of the EXACT same original dog. Input image 1 is the idle pose identity/camera/registration target; input image 2 is the release pose reference. Maintain the same square canvas size, framing, scale, top-down camera, downward-right facing, coloring, markings, ear shape, short broad torso and large head. Change ONLY the articulated body pose and facial expression to the specified phase. This is one frame, NOT a sprite sheet/contact sheet. Keep body root, hind paws and footprint centered at the same position as image 1; do not enlarge or zoom. Draw real changes to paws, head, cheeks, ears and posture as requested. Do not stretch the whole image or redesign the dog. Crisp thick black doodle outlines and simple clean fills. Very short body tucked behind head, no neck, no long legs. Genuine transparent background and transparent empty margin. No weapons, equipment, objects held in mouth/paw, projectiles, sparks, frost, motion lines, extra detached decorations, base disk, shadows, glow, halo, labels, text or backdrop. Whole dog remains inside canvas with generous transparent margins.",
+  "records": [
+    {
+      "dog": "D01-shiba",
+      "phase": "prepare",
+      "prompt": "Corrected prepare/wind-up: the foreground front paw on screen-right nearest the viewer is visibly lifted off the ground, folded backward and inward, and tucked tightly beside the lower screen-right cheek. Show a clearly bent elbow. The lifted paw must not reach outward or resemble the release image's extended paw. Other three paws stay planted. Torso crouches slightly; mouth fully closed; eyes focused. Preserve exact 1254x1254 registration and identity.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D01-shiba-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D01-shiba-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "supersededGeneratedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D01-shiba/01-prepare.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 254,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "screen-right foreground paw lifted and tucked inward beside lower cheek; mouth closed and focused",
+        "oneDogNoBakedVfx": true
+      }
+    },
+    {
+      "dog": "D01-shiba",
+      "phase": "recover",
+      "prompt": "Follow through just after throwing: the same foreground front paw has swung forward and down, extended slightly beyond the normal standing position, pads turned inward; head tilts a little forward, eyes briefly blink. Other three paws remain planted. This is a short compact follow-through, no object, no human hand.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D01-shiba-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D01-shiba-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D01-shiba/03-recover.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 254,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "foreground paw swung down and forward; head forward; eyes blinked",
+        "oneDogNoBakedVfx": true
+      }
+    },
+    {
+      "dog": "D02-bulldog",
+      "phase": "prepare",
+      "prompt": "Inhale to prepare an air puff: mouth sealed, both soft jowls inflated round and visibly fuller, head pulled slightly back into shoulders, elbows bent in a short braced crouch. Paws at the same planted places. Cheeks and closed lips are the emphasis.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D02-bulldog-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D02-bulldog-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D02-bulldog/01-prepare.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 253,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "both jowls inflated, lips sealed, head tucked and forelegs braced",
+        "oneDogNoBakedVfx": true
+      }
+    },
+    {
+      "dog": "D02-bulldog",
+      "phase": "recover",
+      "prompt": "Recoil immediately after expelling an air puff: head bobs slightly UP and BACK, cheeks deflate, lips relax into a small closed curve, eyelids squeezed shut for an instant. Forelegs extend back toward standing while feet remain planted. No puff or effects.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D02-bulldog-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D02-bulldog-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D02-bulldog/03-recover.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 254,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "head rebounded up/back, cheeks deflated, eyes shut, legs extended",
+        "oneDogNoBakedVfx": true
+      }
+    },
+    {
+      "dog": "D03-husky",
+      "phase": "prepare",
+      "prompt": "Deep inhale before an icy breath: chin rises slightly and pulls back, mouth closed, eyes narrowed, upper chest expands subtly, elbows bend and back stays very short. All paws planted, no visible frost. Make the preparatory backward head movement readable.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D03-husky-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D03-husky-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D03-husky/01-prepare.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 254,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "chin lifted/back, mouth closed, eyes narrowed, chest braced",
+        "oneDogNoBakedVfx": true
+      }
+    },
+    {
+      "dog": "D03-husky",
+      "phase": "recover",
+      "prompt": "Finishing an icy breath: head recoils a little UP and BACK, muzzle closes nearly shut, blue eyes blink, cheeks relax, front legs straighten toward neutral. Same planted paws and tiny body. No mist, snow, ice or particles.",
+      "sourceRefs": [
+        "../../pupsters-separated-assets-v1/characters/idle/D03-husky-idle.png",
+        "../../pupsters-separated-assets-v1/characters/ability/D03-husky-ability.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../frames/D03-husky/03-recover.png",
+      "checks": {
+        "pngDecode": true,
+        "mode": "Format32bppArgb",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "cornerAlpha": 0,
+        "sampleOpaqueAlpha": 254,
+        "visualIdentityMatch": true,
+        "visibleArticulation": "head rebounded up/back, muzzle closed, eyes shut, forelegs straightened",
+        "oneDogNoBakedVfx": true
+      }
+    }
+  ]
+}

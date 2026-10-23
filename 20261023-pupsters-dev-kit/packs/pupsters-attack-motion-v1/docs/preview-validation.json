@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "checkedOn": "2026-10-23",
+  "loadedImages": 30,
+  "desktopOverflow": false,
+  "records": [
+    {
+      "id": "D01",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "513316a5611b4bd544058a4cfa9f4ff4fb1daa0977949c684ebd0106f6d05c63",
+        "b0b980cac911c0328ee8fe5c4e04a45c0e6caf31c1ed6ee4cf093bf52fb88c26",
+        "f4fe78fbd226007ba3aaf4bbc9e987862876f5872402fd5beb4d55856901b130",
+        "ad73577eb7828d1239fae50f550001c9ec3854bddff88ae3d3ca50425844509b"
+      ]
+    },
+    {
+      "id": "D02",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "fdf3cc623a8835d4c75bfa206be8fb195aa2717ffb0b5ee86d608779d5400e60",
+        "5db1de033f029047aea2d417ad1b27c3cde24f611832d49765243b8adfe90f71",
+        "26924971cb46f0ac862e71acee6adef17c74fce543b3537b089fc984644d1c38",
+        "273c54efcacd44c5fe7a82cbf0196f06c141724176454d7b3d3b876066b1d306"
+      ]
+    },
+    {
+      "id": "D03",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "92e231e23433e7ab1654d9ea411d016b6c341af0ca9fcf6d1fb13db03b2509cb",
+        "5c6d289a033c6f48c5daec1a549e1efc5cae669281c3b04f245159a28f39e4ce",
+        "e79b9e251a676fe060ea990c9cec0d55c6d1fa7a10b004902f9b60c0727423c3",
+        "7aa9a9ebd3198d1096a3b9e94f8f0185fee6ec897e4418362abeb1c45c6b0db1"
+      ]
+    },
+    {
+      "id": "D04",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "3c8f62d490c6ba5abee53f11f00eeb423bf5171ecfa3ff738ea810c817b374c1",
+        "299e68ac720dc11404a9d47bbbed511c2d19442872e627a90ee5dcf5f98bf4e5",
+        "1af06e59aad986ea4eecf3903e9fe96164507539555d891e179236c260dbcb78",
+        "ed880ccf5ab339b295285bd017241e77a493fe674c2a1bec2bd923addc86633c"
+      ]
+    },
+    {
+      "id": "D05",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "b3dedd9b22b85bfc80527c3f0102125663c29850e7af154b440d12655fa3b28c",
+        "0bab5baee583493d504d02eb8041fa62ab0586e70eba6641539160ac0e5476fc",
+        "511baeef0885388827174d894699b1ca642a7065752fdaeb3a903f0870bc38ec",
+        "818f76b3c5cee467b01ca6c4f722de5f5b7380a635eee64ec213a8862886ae4a"
+      ]
+    },
+    {
+      "id": "D06",
+      "phases": [
+        {
+          "phase": "idle",
+          "label": "대기"
+        },
+        {
+          "phase": "prepare",
+          "label": "준비"
+        },
+        {
+          "phase": "release",
+          "label": "발동"
+        },
+        {
+          "phase": "recover",
+          "label": "반동"
+        }
+      ],
+      "distinctCanvasImages": 4,
+      "screenHashes": [
+        "df3b2987a8f685deddd57cdd9a473b93819cd28111e1ee61d6a5aaf9ae4c48b1",
+        "3e83f5216b7c335febcc42d24afb89cbc86bfccf26eea7abed68908335b2ddef",
+        "3ac04f87ddc51a34d24f60fbea92ae46cab92ca6e1a07f1f50105977e66325a7",
+        "eb8716146373205aae6aed018a386de5c149af0aa73f99229e61478e4baf448f"
+      ]
+    }
+  ],
+  "effectLayerChangesPixels": true,
+  "mobileOverflow": false,
+  "errors": [],
+  "controls": "replay and pause/resume passed"
+}

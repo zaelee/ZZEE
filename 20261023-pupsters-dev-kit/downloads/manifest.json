@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23",
+  "archives": [
+    {
+      "file": "downloads/pupsters-block-map-v1.zip",
+      "files": 44,
+      "bytes": 1454482,
+      "sha256": "9ab8e43de45e209b0107b1a0540093a95309489fc09b53696a1d0241c9546498"
+    },
+    {
+      "file": "downloads/pupsters-sitting-attacks-v1.zip",
+      "files": 120,
+      "bytes": 5685913,
+      "sha256": "ceb0013c1eba3264eee0e7177bc5a9fa53f1b762c10557c9dcb6bee66228b585"
+    },
+    {
+      "file": "downloads/pupsters-enemy-motions-v1.zip",
+      "files": 132,
+      "bytes": 10878675,
+      "sha256": "33c6a0becf6f3eefa994a4b1ab577ccb083227f62d3fa1207c726018abcd38af"
+    },
+    {
+      "file": "downloads/pupsters-block-pack-v4.zip",
+      "files": 96,
+      "bytes": 1758239,
+      "sha256": "2f068f1d9271689257c9319f6734566bbe08ceb4da8d29f5689550e3047007cd"
+    },
+    {
+      "file": "downloads/pupsters-block-enemies-v1.zip",
+      "files": 100,
+      "bytes": 1623183,
+      "sha256": "ad52c5aad0cfb98523ee1e167120e040ae2509295515e31f69d60c4bf7b9567b"
+    },
+    {
+      "file": "downloads/pupsters-personality-v3.zip",
+      "files": 55,
+      "bytes": 13261446,
+      "sha256": "447a3e32f141b5a53aefc086dadaa0b50b5936d93ec92a0fa2ba24d3cfc094b1"
+    },
+    {
+      "file": "downloads/pupsters-separated-assets-v1.zip",
+      "files": 120,
+      "bytes": 17305471,
+      "sha256": "63c5e473d5b6e0d3e5368c3ea150c5208d758ebfe8fc9cd103a7e3cf2091eb63"
+    },
+    {
+      "file": "downloads/pupsters-block-production-skill.zip",
+      "files": 1,
+      "bytes": 2229,
+      "sha256": "9e65d90ad918205eb1932566a522b6b1df216ad9ef363ed26cffa5877fabb01e"
+    }
+  ]
+}

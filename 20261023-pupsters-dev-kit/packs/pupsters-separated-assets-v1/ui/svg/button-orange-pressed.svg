@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="128" viewBox="0 0 480 128" fill="none">
+  <title>Primary button background, pressed state</title>
+  <path d="M40 19 C24 20 13 32 14 50 L15 93 C16 109 28 118 46 118 L437 117 C455 117 467 106 466 89 L465 48 C464 31 452 22 434 22 Z" fill="#E96A2B" stroke="#171716" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M44 30 C144 24 337 25 432 30" stroke="#FFAD6E" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+</svg>

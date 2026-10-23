@@ -1,0 +1,27 @@
+PUPSTERS Block Playroom - Roblox native files
+
+Files
+- native/Pupsters_Block_Playroom_Map.rbxmx: empty play map at the source coordinates.
+- native/Pupsters_Block_Playroom_Showcase.rbxmx: the same map plus sample actors.
+- native/export-checks.json: exporter structural-validation report.
+
+Import
+1. Open a place in Roblox Studio.
+2. In Explorer, right-click Workspace and choose Insert from File.
+3. Choose one RBXMX file above. Do not import both into the same place unless you want duplicate map geometry.
+
+Structure
+- Every visible scene part is anchored. CanCollide follows the scene JSON and defaults to false.
+- PathWaypoints contains invisible, non-colliding W01-W06 marker parts at the layout coordinates.
+- PlacementSlots contains invisible, non-colliding P01-P16 marker parts. Each marker CFrame includes the slot yaw.
+- MapData is a data-only ModuleScript. Requiring it returns pathWidth, pathY, a Vector3 waypoint list, and slot records with id, position, yaw, and Vector2 size.
+- The files contain no gameplay Script or LocalScript. Connect your own placement, path-following, spawn, and goal systems to the metadata.
+
+Regenerate
+Run from this package directory:
+  python tools/export_map_native.py
+
+The exporter rejects missing/duplicate IDs, unresolved materials, shifted coordinates, incorrect floor/path/pad geometry, duplicate RBXMX referents, and metadata that differs from layout.json. It rewrites both RBXMX files and native/export-checks.json only after all in-memory checks pass.
+
+Validation limit
+Roblox Studio was not available in this environment. The exporter parses and checks the generated RBXMX structure and numeric values, but the final files still need a Studio import smoke test before release.

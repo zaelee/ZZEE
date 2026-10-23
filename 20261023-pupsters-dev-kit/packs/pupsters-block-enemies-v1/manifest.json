@@ -1,0 +1,383 @@
+{
+  "title": "사고멍치 네모네모 몹",
+  "version": 1,
+  "coordinateSystem": {
+    "up": "+Y",
+    "front": "-Z",
+    "units": "studs"
+  },
+  "status": "static editable models; gameplay and animations not implemented",
+  "studioVerified": false,
+  "browserVerified": false,
+  "models": [
+    {
+      "id": "E01",
+      "name": "BlockBot_Enemy",
+      "displayName": "기본 블록봇",
+      "feature": "산호빛 정육면체와 짧은 남색 발",
+      "role": "기본 접근형",
+      "roleDescription": "천천히 다가와 길을 압박하는 가장 단순한 기본 적 콘셉트.",
+      "preview": "previews/E01.png",
+      "views": "previews/E01-views.png",
+      "native": "native/BlockBot_Enemy.rbxmx",
+      "glb": "models/BlockBot_Enemy.glb",
+      "gltf": "models/BlockBot_Enemy.gltf",
+      "obj": "models/BlockBot_Enemy.obj",
+      "mtl": "models/BlockBot_Enemy.mtl",
+      "triangles": 408,
+      "bounds": [
+        [
+          -0.675,
+          0.0,
+          -0.6
+        ],
+        [
+          0.675,
+          1.6500000000000001,
+          0.55
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.8250000000000001,
+        -0.024999999999999967
+      ],
+      "partCount": 8,
+      "dimensions": [
+        1.35,
+        1.65,
+        1.15
+      ],
+      "scene": "scenes/E01-block-bot.json"
+    },
+    {
+      "id": "E02",
+      "name": "Wheelie_Enemy",
+      "displayName": "바퀴 블록봇",
+      "feature": "낮은 노랑 몸체와 네모 바퀴",
+      "role": "고속 이동형",
+      "roleDescription": "낮은 차체로 빠르게 접근해 빈틈을 파고드는 이동 적 콘셉트.",
+      "preview": "previews/E02.png",
+      "views": "previews/E02-views.png",
+      "native": "native/Wheelie_Enemy.rbxmx",
+      "glb": "models/Wheelie_Enemy.glb",
+      "gltf": "models/Wheelie_Enemy.gltf",
+      "obj": "models/Wheelie_Enemy.obj",
+      "mtl": "models/Wheelie_Enemy.mtl",
+      "triangles": 408,
+      "bounds": [
+        [
+          -1.18,
+          0.0,
+          -0.53
+        ],
+        [
+          1.18,
+          1.075,
+          0.5
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.5375,
+        -0.015000000000000013
+      ],
+      "partCount": 8,
+      "dimensions": [
+        2.36,
+        1.075,
+        1.03
+      ],
+      "scene": "scenes/E02-wheelie.json"
+    },
+    {
+      "id": "E03",
+      "name": "BrickBruiser_Enemy",
+      "displayName": "벽돌 덩치",
+      "feature": "넓은 초록 벽돌 3단과 굵은 발",
+      "role": "고내구 길막형",
+      "roleDescription": "넓은 몸으로 이동 경로를 막고 오래 버티는 중장 적 콘셉트.",
+      "preview": "previews/E03.png",
+      "views": "previews/E03-views.png",
+      "native": "native/BrickBruiser_Enemy.rbxmx",
+      "glb": "models/BrickBruiser_Enemy.glb",
+      "gltf": "models/BrickBruiser_Enemy.gltf",
+      "obj": "models/BrickBruiser_Enemy.obj",
+      "mtl": "models/BrickBruiser_Enemy.mtl",
+      "triangles": 420,
+      "bounds": [
+        [
+          -1.08,
+          0.0,
+          -0.5850000000000001
+        ],
+        [
+          1.08,
+          1.98,
+          0.525
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.99,
+        -0.030000000000000027
+      ],
+      "partCount": 9,
+      "dimensions": [
+        2.16,
+        1.98,
+        1.11
+      ],
+      "scene": "scenes/E03-brick-bruiser.json"
+    },
+    {
+      "id": "E04",
+      "name": "Shellback_Block",
+      "displayName": "장갑 블록봇",
+      "feature": "세 장갑판과 좁은 눈 틈",
+      "role": "전방 방어형",
+      "roleDescription": "장갑으로 길목을 막는 방어형 적 콘셉트.",
+      "preview": "previews/E04.png",
+      "views": "previews/E04-views.png",
+      "native": "native/Shellback_Block.rbxmx",
+      "glb": "models/Shellback_Block.glb",
+      "gltf": "models/Shellback_Block.gltf",
+      "obj": "models/Shellback_Block.obj",
+      "mtl": "models/Shellback_Block.mtl",
+      "triangles": 480,
+      "bounds": [
+        [
+          -0.825,
+          0.0,
+          -0.8
+        ],
+        [
+          0.99,
+          1.76,
+          0.7
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.88,
+        -0.050000000000000044
+      ],
+      "partCount": 14,
+      "dimensions": [
+        1.815,
+        1.76,
+        1.5
+      ],
+      "scene": "scenes/E04-shellback.json"
+    },
+    {
+      "id": "E05",
+      "name": "SplitStack_Block",
+      "displayName": "분열 블록봇",
+      "feature": "살짝 어긋난 세 얼굴 큐브",
+      "role": "분열 압박형",
+      "roleDescription": "세 몸이 층별로 갈라질 수 있는 분열형 적 콘셉트.",
+      "preview": "previews/E05.png",
+      "views": "previews/E05-views.png",
+      "native": "native/SplitStack_Block.rbxmx",
+      "glb": "models/SplitStack_Block.glb",
+      "gltf": "models/SplitStack_Block.gltf",
+      "obj": "models/SplitStack_Block.obj",
+      "mtl": "models/SplitStack_Block.mtl",
+      "triangles": 1068,
+      "bounds": [
+        [
+          -0.5800000000000001,
+          0.0,
+          -0.51
+        ],
+        [
+          0.59,
+          2.48,
+          0.45
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        1.24,
+        -0.03
+      ],
+      "partCount": 11,
+      "dimensions": [
+        1.17,
+        2.48,
+        0.96
+      ],
+      "scene": "scenes/E05-split-stack.json"
+    },
+    {
+      "id": "E06",
+      "name": "FixItBot_Block",
+      "displayName": "수리 블록봇",
+      "feature": "사각 U자 렌치와 부품 주머니",
+      "role": "지원 수리형",
+      "roleDescription": "주변 적을 보조하고 고치는 지원형 적 콘셉트.",
+      "preview": "previews/E06.png",
+      "views": "previews/E06-views.png",
+      "native": "native/FixItBot_Block.rbxmx",
+      "glb": "models/FixItBot_Block.glb",
+      "gltf": "models/FixItBot_Block.gltf",
+      "obj": "models/FixItBot_Block.obj",
+      "mtl": "models/FixItBot_Block.mtl",
+      "triangles": 492,
+      "bounds": [
+        [
+          -1.0699999999999998,
+          0.0,
+          -0.5800000000000001
+        ],
+        [
+          1.135,
+          1.67,
+          0.5
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.835,
+        -0.040000000000000036
+      ],
+      "partCount": 15,
+      "dimensions": [
+        2.205,
+        1.67,
+        1.08
+      ],
+      "scene": "scenes/E06-fix-it-bot.json"
+    },
+    {
+      "id": "E07",
+      "name": "ClearCrawler_Enemy",
+      "displayName": "투명 블록봇",
+      "feature": "비치는 몸통 · 짙은 파랑 테두리 · 짧은 네 발",
+      "role": "은신 접근형",
+      "roleDescription": "투명한 몸통으로 탐지를 피하는 적 콘셉트. 은신 판정은 미구현.",
+      "preview": "previews/E07.png",
+      "views": "previews/E07-views.png",
+      "native": "native/ClearCrawler_Enemy.rbxmx",
+      "glb": "models/ClearCrawler_Enemy.glb",
+      "gltf": "models/ClearCrawler_Enemy.gltf",
+      "obj": "models/ClearCrawler_Enemy.obj",
+      "mtl": "models/ClearCrawler_Enemy.mtl",
+      "triangles": 540,
+      "bounds": [
+        [
+          -0.8775,
+          0.0,
+          -0.673
+        ],
+        [
+          0.8775,
+          1.3275000000000001,
+          0.6525
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.6637500000000001,
+        -0.010250000000000037
+      ],
+      "partCount": 19,
+      "dimensions": [
+        1.755,
+        1.3275,
+        1.3255
+      ],
+      "scene": "scenes/E07-clear-crawler.json"
+    },
+    {
+      "id": "E08",
+      "name": "CarrierCart_Enemy",
+      "displayName": "블록 운반차",
+      "feature": "졸린 눈의 황토색 수레와 안에 탄 산호빛 꼬마 블록봇 셋",
+      "role": "적 수송형",
+      "roleDescription": "꼬마 블록봇 셋을 전장 안쪽으로 운반하는 느긋한 수송 적 콘셉트.",
+      "preview": "previews/E08.png",
+      "views": "previews/E08-views.png",
+      "native": "native/CarrierCart_Enemy.rbxmx",
+      "glb": "models/CarrierCart_Enemy.glb",
+      "gltf": "models/CarrierCart_Enemy.gltf",
+      "obj": "models/CarrierCart_Enemy.obj",
+      "mtl": "models/CarrierCart_Enemy.mtl",
+      "triangles": 1500,
+      "bounds": [
+        [
+          -1.25,
+          0.0,
+          -1.005
+        ],
+        [
+          1.25,
+          1.6600000000000001,
+          0.965
+        ]
+      ],
+      "viewWidth": 3.8,
+      "target": [
+        0,
+        0.8300000000000001,
+        -0.019999999999999962
+      ],
+      "partCount": 21,
+      "dimensions": [
+        2.5,
+        1.66,
+        1.97
+      ],
+      "scene": "scenes/E08-carrier-cart.json"
+    },
+    {
+      "id": "B01",
+      "name": "Blockosaur_Boss",
+      "displayName": "블록사우루스",
+      "feature": "청록색 네모 공룡 몸과 산호빛 넓은 주둥이·등 블록",
+      "role": "대형 돌진형",
+      "roleDescription": "큰 몸과 짧고 굵은 다리로 전방을 묵직하게 밀어붙이는 대형 적 콘셉트.",
+      "preview": "previews/B01.png",
+      "views": "previews/B01-views.png",
+      "native": "native/Blockosaur_Boss.rbxmx",
+      "glb": "models/Blockosaur_Boss.glb",
+      "gltf": "models/Blockosaur_Boss.gltf",
+      "obj": "models/Blockosaur_Boss.obj",
+      "mtl": "models/Blockosaur_Boss.mtl",
+      "triangles": 852,
+      "bounds": [
+        [
+          -1.1,
+          0.0,
+          -2.2399999999999998
+        ],
+        [
+          1.1,
+          2.7,
+          2.4
+        ]
+      ],
+      "viewWidth": 6.3,
+      "target": [
+        0,
+        1.35,
+        0.08000000000000007
+      ],
+      "partCount": 19,
+      "dimensions": [
+        2.2,
+        2.7,
+        4.64
+      ],
+      "scene": "scenes/B01-blockosaur.json"
+    }
+  ]
+}

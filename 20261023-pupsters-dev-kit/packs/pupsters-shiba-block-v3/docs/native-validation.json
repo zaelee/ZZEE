@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "generatedAt": "2026-10-23T05:44:01.274450+00:00",
+  "source": "scenes/block.json",
+  "sourceSha256": "9d663258be87f0560ae763ec47f6730444a6fdf7a09e7ce703e379eaf97732a1",
+  "outputs": [
+    "native/Shiba-Block.rbxmx",
+    "native/BuildShiba.luau"
+  ],
+  "coordinateConvention": "right-handed Y-up; character faces -Z; no axis conversion",
+  "rotationConvention": "R=Rx*Ry*Rz (THREE Euler XYZ)",
+  "checks": {
+    "xmlItemCount": 38,
+    "classCounts": {
+      "Model": 9,
+      "Part": 24,
+      "WedgePart": 4,
+      "Attachment": 1
+    },
+    "partCount": 28,
+    "groupCount": 8,
+    "materialCount": 6,
+    "positiveSizes": true,
+    "materialReferencesResolved": true,
+    "rbxmxPropertySchemaConsistent": true,
+    "uniqueReferents": true,
+    "maxCFrameOrthonormalError": 0.0,
+    "maxCFrameDeterminantError": 0.0,
+    "maxSerializedNumericError": 4.90196078173355e-11,
+    "mouthParentPart": "MouthCenter",
+    "mouthParentGroup": "Head",
+    "maxMouthWorldPositionError": 1.1102230246251565e-16,
+    "luauCreatesWithoutDeletion": true,
+    "luauTemplateStaticChecks": true,
+    "luauInterpreterCheck": "not-run (no Luau CLI installed)"
+  },
+  "limitations": [
+    "Roblox Studio is not installed, so Studio import and Command Bar execution were not tested.",
+    "The export is an anchored, non-colliding display/NPC primitive model; it has no joins or animation."
+  ]
+}

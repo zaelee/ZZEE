@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "file": "Shiba_Block.gltf",
+      "meshCount": 28,
+      "triangles": 944,
+      "largestMeshTriangles": 168,
+      "closedMeshes": true,
+      "positiveVolumes": true,
+      "normalsAndWinding": true,
+      "glbMatchesGltf": true,
+      "worldBoundsMatchScene": true,
+      "mouthWorld": [
+        0.0,
+        0.82,
+        -1.48
+      ],
+      "sha256": "30645997557f0d4726ff6222f6fef3ac8536a8652209ad0cbd74e3fef9f507d9"
+    }
+  ],
+  "nativeParts": 28,
+  "actualMeshRendersInspected": true,
+  "robloxStudioTested": false,
+  "browserViewerTested": false,
+  "scope": "Static models, no skeletal rig or animation. Browser local-file access restricted; no bypass used."
+}

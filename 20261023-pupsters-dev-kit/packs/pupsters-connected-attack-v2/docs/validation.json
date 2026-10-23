@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "date": "2026-10-23",
+  "records": [
+    {
+      "id": "D01",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 30,
+      "distinctFrames": 16,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D01-shiba-connected.gif",
+          "pages": 16,
+          "durationMs": 1100,
+          "bytes": 505029
+        },
+        {
+          "file": "previews/D01-shiba-connected.webp",
+          "pages": 17,
+          "durationMs": 1100,
+          "bytes": 333064
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 30,
+      "distinctFrames": 15,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D02-bulldog-connected.gif",
+          "pages": 15,
+          "durationMs": 1140,
+          "bytes": 491995
+        },
+        {
+          "file": "previews/D02-bulldog-connected.webp",
+          "pages": 16,
+          "durationMs": 1140,
+          "bytes": 365282
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 35,
+      "distinctFrames": 15,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D03-husky-connected.gif",
+          "pages": 16,
+          "durationMs": 1360,
+          "bytes": 525341
+        },
+        {
+          "file": "previews/D03-husky-connected.webp",
+          "pages": 16,
+          "durationMs": 1360,
+          "bytes": 454278
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 32,
+      "distinctFrames": 16,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D04-beagle-connected.gif",
+          "pages": 16,
+          "durationMs": 1180,
+          "bytes": 400014
+        },
+        {
+          "file": "previews/D04-beagle-connected.webp",
+          "pages": 17,
+          "durationMs": 1180,
+          "bytes": 299728
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 33,
+      "distinctFrames": 13,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D05-poodle-connected.gif",
+          "pages": 14,
+          "durationMs": 1220,
+          "bytes": 416896
+        },
+        {
+          "file": "previews/D05-poodle-connected.webp",
+          "pages": 14,
+          "durationMs": 1220,
+          "bytes": 414186
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "noEffectBeforeStart": true,
+      "effectAtRelease": true,
+      "continuesDuringRecovery": true,
+      "goneAfterEnd": true,
+      "releasePhase": "release",
+      "sampledFrames": 31,
+      "distinctFrames": 16,
+      "loopEndpointsMatch": true,
+      "exported": [
+        {
+          "file": "previews/D06-border-collie-connected.gif",
+          "pages": 15,
+          "durationMs": 1120,
+          "bytes": 491059
+        },
+        {
+          "file": "previews/D06-border-collie-connected.webp",
+          "pages": 17,
+          "durationMs": 1120,
+          "bytes": 377042
+        }
+      ]
+    }
+  ],
+  "originalsUnchanged": 30,
+  "controlsPassed": true,
+  "mobileOverflow": false,
+  "errors": []
+}

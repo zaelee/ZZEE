@@ -1,0 +1,519 @@
+{
+  "passed": true,
+  "checkedOn": "2026-10-23",
+  "dogCount": 6,
+  "uniquePosePngs": 24,
+  "animatedFiles": 12,
+  "checks": [
+    {
+      "id": "D01",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D01-shiba/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "86d1468ba972dbe88db6f396a9bff0c9e55456afef07e5c5489bfa3c94c283cc"
+        },
+        {
+          "file": "frames/D01-shiba/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "ecec7ca7c84699ddc9036d953ad97253b7c60bddb80c23fba55809042c81f7db"
+        },
+        {
+          "file": "frames/D01-shiba/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "05293bac4b478535795f69268015cb0cb7b50bf1c7ac60163c29c039294dcb22"
+        },
+        {
+          "file": "frames/D01-shiba/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "239d875741f31d80fe2092ccb17439b2b76a8ac8a1ff385e3fb79d99dd9031d7"
+        },
+        {
+          "file": "frames/D01-shiba/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "86d1468ba972dbe88db6f396a9bff0c9e55456afef07e5c5489bfa3c94c283cc"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        180,
+        120,
+        180,
+        260
+      ],
+      "loopDurationMs": 1100,
+      "gif": "previews/D01-shiba-attack.gif",
+      "webp": "previews/D01-shiba-attack.webp",
+      "decodedFrameHashes": [
+        "c933114256cc7e2660aa91593c36d38a7ebb0ac835a00e0780723ab51d188d96",
+        "4b605846d86595c5aa43692f7932ac07e460db7095cb3003a0ac009ba0587aa0",
+        "6acfba8d4ea311538ec121c1ead07b4def6a1992c85859f5eceed975e7907780",
+        "9357884c94a1c9ce4a40455d4d0ce0968561129afc1d26907806dec6b806b552",
+        "c933114256cc7e2660aa91593c36d38a7ebb0ac835a00e0780723ab51d188d96"
+      ]
+    },
+    {
+      "id": "D02",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D02-bulldog/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "4434d26bf48f5d8a017aabecc8ad00e078f19241c65b902bc430033df8738447"
+        },
+        {
+          "file": "frames/D02-bulldog/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "a45823d67b46ae012ab083f16d044f0d3b8a8bac8b79a78a0de2640b6591771b"
+        },
+        {
+          "file": "frames/D02-bulldog/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "690a01fc71142bca33542231613b241494125ff648e6f0348807e0ea8a3afb3c"
+        },
+        {
+          "file": "frames/D02-bulldog/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "e11f3907a006bde978620ae8255eb657f2202632f8f5c2db4c30c24f6c270c54"
+        },
+        {
+          "file": "frames/D02-bulldog/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "4434d26bf48f5d8a017aabecc8ad00e078f19241c65b902bc430033df8738447"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        200,
+        140,
+        180,
+        260
+      ],
+      "loopDurationMs": 1140,
+      "gif": "previews/D02-bulldog-attack.gif",
+      "webp": "previews/D02-bulldog-attack.webp",
+      "decodedFrameHashes": [
+        "56a51cfda7d07d581ab95bd604ef2cbaa95943081f0df7388a1c332a7a01d953",
+        "069fad8bdf14087f3f59ad058d6101b0e014cca6ae3971671f4645ea489c5ac9",
+        "3455fe753b79010c3a293d9c6d3c386e8b90efab5dd95e8f649a9be99ffefb83",
+        "8bff9f2f82ef528759611aeaa9706a9a5472aa85fad6a021a96e332a6a91ec16",
+        "56a51cfda7d07d581ab95bd604ef2cbaa95943081f0df7388a1c332a7a01d953"
+      ]
+    },
+    {
+      "id": "D03",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D03-husky/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "451fd43051fcd9cc3c2fd2dd1715ee16fe5c13559b29815d3f6405ba244bfdda"
+        },
+        {
+          "file": "frames/D03-husky/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "4d61d4b986e0488238a2192d1da44887f0eda2efc6c2ae40b9d4c2d0f9bed3ab"
+        },
+        {
+          "file": "frames/D03-husky/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "f50c1b0196ba3f7a65849dd67c5930c05edaf13899f83f1b0faefeae20a1b205"
+        },
+        {
+          "file": "frames/D03-husky/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "250830dcdc866230c2845963325b05dda6da798ae5e5a456383673ef8b5c755e"
+        },
+        {
+          "file": "frames/D03-husky/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "451fd43051fcd9cc3c2fd2dd1715ee16fe5c13559b29815d3f6405ba244bfdda"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        200,
+        360,
+        180,
+        260
+      ],
+      "loopDurationMs": 1360,
+      "gif": "previews/D03-husky-attack.gif",
+      "webp": "previews/D03-husky-attack.webp",
+      "decodedFrameHashes": [
+        "e1b80a267dfbff6038ad6060a0d920060ee32f7b760d92ab512db678b42cdbad",
+        "7d35bcb834a27a5cd78ea1a96b2972268cf3808f78d3cce5b911f8289213addd",
+        "43f2335220196a327b33e404b9204abc1117bb80630492280498e1ec71883dc6",
+        "25a10eaa2e1de27bc4565917a9543232e51352817bbe4467f23543f269231a0c",
+        "e1b80a267dfbff6038ad6060a0d920060ee32f7b760d92ab512db678b42cdbad"
+      ]
+    },
+    {
+      "id": "D04",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D04-beagle/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "21da9d993a0459f4b75da86d80e6e2afcd0a8f8e2d79134c0809052506f054c2"
+        },
+        {
+          "file": "frames/D04-beagle/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "7b513da167509e276c477c35f11279b6af753c863a0475788cc6a94eeec2752d"
+        },
+        {
+          "file": "frames/D04-beagle/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "842828e304d8c67d6ea4cd9dab6df0ffa66e478e09b3f9c3d7d189a60791c26a"
+        },
+        {
+          "file": "frames/D04-beagle/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "cc7640af59edc7e081c762a51ba95993c0e4d85f15ae59f4184f9ad332ff979c"
+        },
+        {
+          "file": "frames/D04-beagle/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "21da9d993a0459f4b75da86d80e6e2afcd0a8f8e2d79134c0809052506f054c2"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        220,
+        160,
+        180,
+        260
+      ],
+      "loopDurationMs": 1180,
+      "gif": "previews/D04-beagle-attack.gif",
+      "webp": "previews/D04-beagle-attack.webp",
+      "decodedFrameHashes": [
+        "710b8cfa51486d7220e469dc68057d5e9a60ae7982ed6e3fd89d4667dde0fb7a",
+        "6d3440b9a67efd3caabe21c64d33d9a6e747b606805817c803ea47f4724b88db",
+        "341178c97d41d00cbbcfd2a7ecbbd68730046d4466e99d563f22da21efefd7a5",
+        "c43b268401530a8c7c8f55825dc82aabba115c3d8c58ddc5b152cc2263e9c29d",
+        "710b8cfa51486d7220e469dc68057d5e9a60ae7982ed6e3fd89d4667dde0fb7a"
+      ]
+    },
+    {
+      "id": "D05",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D05-poodle/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "6f76ed0ccb1a1d396aa62c8b8bd478ef23ca581d9cc86b52b3efeef74c7512a5"
+        },
+        {
+          "file": "frames/D05-poodle/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "39923ab05584c3d5eb2925fe8edcac343c00cde820204d810a8f484fe450bcea"
+        },
+        {
+          "file": "frames/D05-poodle/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "f4cb172d5f0962925c2778f63a3f21d07b88648aec4934caea1ec263ced1632a"
+        },
+        {
+          "file": "frames/D05-poodle/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "f0cfbef6e39735dbf966640d3f4cb5352eb7a5f606f28aba4da4c7d7d674c62a"
+        },
+        {
+          "file": "frames/D05-poodle/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "6f76ed0ccb1a1d396aa62c8b8bd478ef23ca581d9cc86b52b3efeef74c7512a5"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        220,
+        180,
+        200,
+        260
+      ],
+      "loopDurationMs": 1220,
+      "gif": "previews/D05-poodle-attack.gif",
+      "webp": "previews/D05-poodle-attack.webp",
+      "decodedFrameHashes": [
+        "77c1d7df59a768f4ef6d9c7ff24876d4b60549a5c3d26a2957055d81755e89a5",
+        "25fe9cc1603c0b75883c8c1df8d04e108cdda33b46c89718f0b79835a0e5aa3f",
+        "75252406d11053806c59f7468a588b3b252d5c51349dcbc67c147a2b9273f7c5",
+        "aab8e494f11550f9a7a14c6e5e8668bd107c63415a6d0e1d36f7ca063e1837e8",
+        "77c1d7df59a768f4ef6d9c7ff24876d4b60549a5c3d26a2957055d81755e89a5"
+      ]
+    },
+    {
+      "id": "D06",
+      "passed": true,
+      "images": [
+        {
+          "file": "frames/D06-border-collie/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "148d2be653e5a048b7d9bafa0eb93e31d861d5e2164c6b23e553bf713bffeee3"
+        },
+        {
+          "file": "frames/D06-border-collie/01-prepare.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "e69eb45de34d1991e084f1f779659c2cc564abefa720e14a232fc36a86db9475"
+        },
+        {
+          "file": "frames/D06-border-collie/02-release.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "f0acbeb94c3e2352ebf541f963bab6f1826dbdb70da49bc997b6a27b1ed7a8a9"
+        },
+        {
+          "file": "frames/D06-border-collie/03-recover.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "a51b108b501ba829dc4a5bea04ec24acfedbb02970c381c56166754bb9aeac68"
+        },
+        {
+          "file": "frames/D06-border-collie/00-idle.png",
+          "width": 1254,
+          "height": 1254,
+          "cornerAlpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "148d2be653e5a048b7d9bafa0eb93e31d861d5e2164c6b23e553bf713bffeee3"
+        }
+      ],
+      "animatedPages": 5,
+      "uniquePoses": 4,
+      "durationsMs": [
+        360,
+        160,
+        180,
+        160,
+        260
+      ],
+      "loopDurationMs": 1120,
+      "gif": "previews/D06-border-collie-attack.gif",
+      "webp": "previews/D06-border-collie-attack.webp",
+      "decodedFrameHashes": [
+        "2e411d48db7cbe0884644ad756db9738a92182fb529460618d885554ba911ca0",
+        "780b57b9771e963d6139eaeb39f63ddf0282169f0a3e5ba620eda7e6d57a5e50",
+        "2d5adefef27f7dbd81a444fe5893eb5efed3ac2efd0edbb9737930485c66cc1d",
+        "98bd737ed24e15bbb74d2b59f0ec2e5ad18a0d6c6ae4e03697f97303263f518f",
+        "2e411d48db7cbe0884644ad756db9738a92182fb529460618d885554ba911ca0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "generator": "built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "designs": [
+    {
+      "dog": "D04-beagle",
+      "prompt": "Use case: precise-object-edit. Asset type: representative top-down game character artwork. Input image is the exact original beagle identity, camera, canvas, scale, footprint, proportions, colors and breed markings; preserve these exactly. Make this exact beagle look slyly curious and slightly mischievous, with a sticky strawberry-milk bubble personality. Replace the sleepy eyes with two rounded curious eyes that are intentionally just a little different in height. Attach exactly 2 or 3 small pale strawberry-milk-pink soap-foam bubbles directly to one corner of the muzzle/cheek, plus exactly one tiny attached bubble sitting on the lip. Add only a tiny faint pink bubble stain at the tip of each long floppy ear. Bubbles must touch the dog and read as physical residue, not floating VFX. Maintain the 1254x1254 canvas, genuine transparent background, generous margin, 65-degree high-angle top-down view, downward-right direction, centered footprint, large head, extremely short plump broad torso, short legs, original ear/body length, black saddle, tan head, white blaze/muzzle/paws/tail tip, thick crisp black doodle outlines and clean fills. One dog only. No detached bubble clusters, large bubbles, bubble cloud, projectile effects, motion lines, weapon, machine, clothing, armor, accessories, text, background, floor, base disk, shadow, glow, halo, extra characters, extra limbs, crop, zoom, sprite sheet or contact sheet.",
+      "references": [
+        "../../pupsters-attack-motion-v1/frames/D04-beagle/00-idle.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../characters/D04-beagle.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "637E327F07975FE99D3E55BEB6AA4BBF44544A63BB1BE7E862D67E4BFDB9B835",
+        "visual": "pass: original beagle colors, markings, short body, long-ear length and camera preserved; uneven-height round curious eyes; small strawberry-milk bubbles attached to cheek/lip; tiny pink residue at ear tips; no detached effect, props, background or shadow"
+      }
+    },
+    {
+      "dog": "D05-poodle",
+      "prompt": "Use case: precise-object-edit. Asset type: representative top-down game character artwork. Input image is the exact original poodle identity, camera, canvas, scale, footprint, proportions, warm apricot palette and cream markings; preserve these exactly. Make this exact poodle look electrically tense, sensitive, and busily alert without a separate effect. Preserve the round fluffy curl masses across body, face, ears and tail. Change only a small portion of curls at the crown and outer tips of both ears into short pointed zigzag tufts growing directly from the fur silhouette. Add very small lemon-yellow and pale-lavender accents only at a few attached fur tips. Give the dog wide taut round eyes and a small slightly crooked closed mouth. Maintain the 1254x1254 canvas, genuine transparent background, generous margin, 65-degree high-angle top-down view, downward-right direction, centered footprint, large head, extremely short plump stout torso, short legs, original tail/ear size, warm apricot coat, cream muzzle/paws, thick crisp black doodle outlines and clean fills. One dog only. Most curls remain round and soft; static is implied only by attached zigzag fur tips. No giant spikes, all-over spiky fur, lightning bolts, separate electricity lines, detached sparks, independent VFX, aura, halo, glow, weapon, machine, clothing, armor, accessories, text, background, floor, base disk, shadow, extra characters, extra limbs, crop, zoom, sprite sheet or contact sheet.",
+      "references": [
+        "../../pupsters-attack-motion-v1/frames/D05-poodle/00-idle.png"
+      ],
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../characters/D05-poodle.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "77E83122E01077D5D8B5773BB953AC090B4AFC841BA6B72A1C37B3055F15DDA3",
+        "visual": "pass: original poodle palette, round curls, short body and camera preserved; localized crown/ear-tip zigzags with lemon and pale-lavender tips; tense round eyes and crooked closed mouth; no detached effect, props, background or shadow"
+      }
+    }
+  ]
+}

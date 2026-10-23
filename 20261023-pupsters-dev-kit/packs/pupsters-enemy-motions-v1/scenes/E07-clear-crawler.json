@@ -1,0 +1,450 @@
+{
+  "id": "E07",
+  "slug": "clear-crawler",
+  "name": "ClearCrawler_Enemy",
+  "displayName": "투명 블록봇",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "비치는 몸통 · 짙은 파랑 테두리 · 짧은 네 발",
+  "role": "은신 접근형",
+  "roleDescription": "투명한 몸통으로 탐지를 피하는 적 콘셉트. 은신 판정은 미구현.",
+  "hitPoint": [
+    0,
+    0.81,
+    -0.64
+  ],
+  "materials": {
+    "glass": {
+      "color": [
+        0.45,
+        0.82,
+        0.96
+      ],
+      "opacity": 0.38
+    },
+    "frame": {
+      "color": [
+        0.15,
+        0.43,
+        0.64
+      ]
+    },
+    "foot": {
+      "color": [
+        0.18,
+        0.51,
+        0.76
+      ]
+    },
+    "eyes": {
+      "color": [
+        0.05,
+        0.12,
+        0.2
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "ClearBody",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.7,
+        1.0,
+        1.25
+      ],
+      "position": [
+        0,
+        0.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "glass"
+    },
+    {
+      "name": "EdgeLFront",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        1.04,
+        0.055
+      ],
+      "position": [
+        -0.85,
+        0.8,
+        -0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "EdgeLBack",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        1.04,
+        0.055
+      ],
+      "position": [
+        -0.85,
+        0.8,
+        0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "EdgeRFront",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        1.04,
+        0.055
+      ],
+      "position": [
+        0.85,
+        0.8,
+        -0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "EdgeRBack",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        1.04,
+        0.055
+      ],
+      "position": [
+        0.85,
+        0.8,
+        0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailBottomFront",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        1.755,
+        0.055,
+        0.055
+      ],
+      "position": [
+        0,
+        0.3,
+        -0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailBottomBack",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        1.755,
+        0.055,
+        0.055
+      ],
+      "position": [
+        0,
+        0.3,
+        0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailBottomL",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        0.055,
+        1.3
+      ],
+      "position": [
+        -0.85,
+        0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailBottomR",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        0.055,
+        1.3
+      ],
+      "position": [
+        0.85,
+        0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailTopFront",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        1.755,
+        0.055,
+        0.055
+      ],
+      "position": [
+        0,
+        1.3,
+        -0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailTopBack",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        1.755,
+        0.055,
+        0.055
+      ],
+      "position": [
+        0,
+        1.3,
+        0.625
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailTopL",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        0.055,
+        1.3
+      ],
+      "position": [
+        -0.85,
+        1.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "RailTopR",
+      "group": "Frame",
+      "type": "box",
+      "size": [
+        0.055,
+        0.055,
+        1.3
+      ],
+      "position": [
+        0.85,
+        1.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "frame"
+    },
+    {
+      "name": "FootLF",
+      "group": "Feet",
+      "type": "box",
+      "size": [
+        0.32,
+        0.34,
+        0.36
+      ],
+      "position": [
+        -0.61,
+        0.17,
+        -0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "foot"
+    },
+    {
+      "name": "FootLB",
+      "group": "Feet",
+      "type": "box",
+      "size": [
+        0.32,
+        0.34,
+        0.36
+      ],
+      "position": [
+        -0.61,
+        0.17,
+        0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "foot"
+    },
+    {
+      "name": "FootRF",
+      "group": "Feet",
+      "type": "box",
+      "size": [
+        0.32,
+        0.34,
+        0.36
+      ],
+      "position": [
+        0.61,
+        0.17,
+        -0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "foot"
+    },
+    {
+      "name": "FootRB",
+      "group": "Feet",
+      "type": "box",
+      "size": [
+        0.32,
+        0.34,
+        0.36
+      ],
+      "position": [
+        0.61,
+        0.17,
+        0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "foot"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.11,
+        0.145,
+        0.06
+      ],
+      "position": [
+        -0.31,
+        0.84,
+        -0.643
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "eyes"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.11,
+        0.145,
+        0.06
+      ],
+      "position": [
+        0.31,
+        0.84,
+        -0.643
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "eyes"
+    }
+  ]
+}

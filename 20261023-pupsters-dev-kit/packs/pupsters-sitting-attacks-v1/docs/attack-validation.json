@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "clips": [
+    {
+      "id": "D01",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    },
+    {
+      "id": "D02",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    },
+    {
+      "id": "D03",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    },
+    {
+      "id": "D04",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    },
+    {
+      "id": "D05",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    },
+    {
+      "id": "D06",
+      "frames": 61,
+      "fourPawsFixed": true,
+      "restPoseReturnsExactly": true,
+      "finiteNormalizedTransforms": true,
+      "effectsTimed": true
+    }
+  ],
+  "robloxStudioTested": false,
+  "browserViewerTested": false
+}

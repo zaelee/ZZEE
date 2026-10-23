@@ -1,0 +1,327 @@
+{
+  "version": 1,
+  "title": "사고멍치 공격 모션",
+  "date": "2026-10-23",
+  "layout": "one transparent PNG per distinct pose; animated previews are encoded from the same images",
+  "generation": "built-in image_gen for new articulated poses",
+  "characters": [
+    {
+      "id": "D01",
+      "name": "시바견",
+      "slug": "shiba",
+      "action": "앞발로 구슬 던지기",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1100,
+      "previewGif": "previews/D01-shiba-attack.gif",
+      "previewWebp": "previews/D01-shiba-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D01-shiba/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D01-shiba/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D01-shiba/02-release.png",
+          "phase": "release",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/D01-shiba/03-recover.png",
+          "phase": "recover",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D01-shiba/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 540,
+          "effectFile": "effects/FX01-pebble.png",
+          "origin": "front-paw"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 660
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "name": "불도그",
+      "slug": "bulldog",
+      "action": "입으로 공기 뿜기",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1140,
+      "previewGif": "previews/D02-bulldog-attack.gif",
+      "previewWebp": "previews/D02-bulldog-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D02-bulldog/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D02-bulldog/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 200
+        },
+        {
+          "file": "frames/D02-bulldog/02-release.png",
+          "phase": "release",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/D02-bulldog/03-recover.png",
+          "phase": "recover",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D02-bulldog/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 560,
+          "effectFile": "effects/FX02-air-puff.png",
+          "origin": "mouth"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 700
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "name": "허스키",
+      "slug": "husky",
+      "action": "냉기 숨결",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1360,
+      "previewGif": "previews/D03-husky-attack.gif",
+      "previewWebp": "previews/D03-husky-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D03-husky/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D03-husky/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 200
+        },
+        {
+          "file": "frames/D03-husky/02-release.png",
+          "phase": "release",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D03-husky/03-recover.png",
+          "phase": "recover",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D03-husky/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 560,
+          "effectFile": "effects/FX03-frost-breath.png",
+          "origin": "mouth"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 920
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "name": "비글",
+      "slug": "beagle",
+      "action": "점착 거품 뱉기",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1180,
+      "previewGif": "previews/D04-beagle-attack.gif",
+      "previewWebp": "previews/D04-beagle-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D04-beagle/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D04-beagle/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 220
+        },
+        {
+          "file": "frames/D04-beagle/02-release.png",
+          "phase": "release",
+          "durationMs": 160
+        },
+        {
+          "file": "frames/D04-beagle/03-recover.png",
+          "phase": "recover",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D04-beagle/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 580,
+          "effectFile": "effects/FX04-sticky-bubble.png",
+          "origin": "mouth"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 740
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "name": "푸들",
+      "slug": "poodle",
+      "action": "털에서 정전기",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1220,
+      "previewGif": "previews/D05-poodle-attack.gif",
+      "previewWebp": "previews/D05-poodle-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D05-poodle/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D05-poodle/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 220
+        },
+        {
+          "file": "frames/D05-poodle/02-release.png",
+          "phase": "release",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D05-poodle/03-recover.png",
+          "phase": "recover",
+          "durationMs": 200
+        },
+        {
+          "file": "frames/D05-poodle/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 580,
+          "effectFile": "effects/FX05-static-arc.png",
+          "origin": "fur"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 760
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "name": "보더콜리",
+      "slug": "border-collie",
+      "action": "지원 짖음",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "direction": "down-right",
+      "loopDurationMs": 1120,
+      "previewGif": "previews/D06-border-collie-attack.gif",
+      "previewWebp": "previews/D06-border-collie-attack.webp",
+      "frames": [
+        {
+          "file": "frames/D06-border-collie/00-idle.png",
+          "phase": "idle",
+          "durationMs": 360
+        },
+        {
+          "file": "frames/D06-border-collie/01-prepare.png",
+          "phase": "prepare",
+          "durationMs": 160
+        },
+        {
+          "file": "frames/D06-border-collie/02-release.png",
+          "phase": "release",
+          "durationMs": 180
+        },
+        {
+          "file": "frames/D06-border-collie/03-recover.png",
+          "phase": "recover",
+          "durationMs": 160
+        },
+        {
+          "file": "frames/D06-border-collie/00-idle.png",
+          "phase": "settle",
+          "durationMs": 260
+        }
+      ],
+      "events": [
+        {
+          "name": "ability_start",
+          "timeMs": 520,
+          "effectFile": "effects/FX06-bark-wave.png",
+          "origin": "mouth"
+        },
+        {
+          "name": "ability_end",
+          "timeMs": 700
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Locked state icon</title>
+  <defs><mask id="lock-keyhole" maskUnits="userSpaceOnUse"><rect width="128" height="128" fill="white"/><circle cx="64" cy="78" r="9" fill="black"/><path d="M64 84 L64 101" stroke="black" stroke-width="7" stroke-linecap="round"/></mask></defs>
+  <path d="M34 54 L34 44 C34 25 46 12 64 12 C82 12 94 25 94 44 L94 54" stroke="#171716" stroke-width="12" stroke-linecap="round"/>
+  <path d="M27 49 C21 49 18 53 18 59 L19 108 C19 114 23 118 29 118 L99 118 C105 118 109 114 109 108 L110 60 C110 53 106 49 99 49 Z" fill="#171716" mask="url(#lock-keyhole)"/>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "otherFourScenesAndRendersUnchanged": true,
+  "poodleBodyUnchanged": true,
+  "collieNonEarCrownPartsUnchanged": 25,
+  "electricParts": 20,
+  "electricPartsPhysicallySeparatedFromBody": true,
+  "nativeNeonParts": 20,
+  "emissiveGltfMaterials": 3,
+  "bothCollieEarsAndHollowCrownVisuallyInspected": true,
+  "frontAndTopElectricZigzagsVisuallyInspected": true,
+  "studioTested": false
+}

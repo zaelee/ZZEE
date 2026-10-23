@@ -1,0 +1,161 @@
+{
+  "Status": "passed",
+  "PngCount": 19,
+  "CharacterCount": 3,
+  "ScreenCount": 15,
+  "BackgroundCount": 1,
+  "Checks": [
+    {
+      "File": "backgrounds/01-living-room-map.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1532177
+    },
+    {
+      "File": "characters/01-maltese-topdown.png",
+      "Width": 1254,
+      "Height": 1254,
+      "PixelFormat": "Format32bppArgb",
+      "CornerAlpha": 0,
+      "Bytes": 635257
+    },
+    {
+      "File": "characters/02-shiba-topdown.png",
+      "Width": 1254,
+      "Height": 1254,
+      "PixelFormat": "Format32bppArgb",
+      "CornerAlpha": 0,
+      "Bytes": 707956
+    },
+    {
+      "File": "characters/03-bulldog-topdown.png",
+      "Width": 1254,
+      "Height": 1254,
+      "PixelFormat": "Format32bppArgb",
+      "CornerAlpha": 0,
+      "Bytes": 746239
+    },
+    {
+      "File": "screens/01-title.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1777545
+    },
+    {
+      "File": "screens/02-hideout.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 2014629
+    },
+    {
+      "File": "screens/03-loadout.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1815302
+    },
+    {
+      "File": "screens/04-story-map.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 2034252
+    },
+    {
+      "File": "screens/05-intro.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1810714
+    },
+    {
+      "File": "screens/06-solo-battle.png",
+      "Width": 1673,
+      "Height": 940,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1835604
+    },
+    {
+      "File": "screens/07-upgrade.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1806614
+    },
+    {
+      "File": "screens/08-coop-lobby.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1961304
+    },
+    {
+      "File": "screens/09-coop-battle.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1980539
+    },
+    {
+      "File": "screens/10-boss.png",
+      "Width": 1672,
+      "Height": 940,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1969679
+    },
+    {
+      "File": "screens/11-victory.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1792007
+    },
+    {
+      "File": "screens/12-defeat.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1758059
+    },
+    {
+      "File": "screens/13-codex.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1929976
+    },
+    {
+      "File": "screens/14-pause-settings.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1764030
+    },
+    {
+      "File": "screens/15-ui-kit.png",
+      "Width": 1672,
+      "Height": 941,
+      "PixelFormat": "Format24bppRgb",
+      "CornerAlpha": 255,
+      "Bytes": 1715234
+    }
+  ]
+}

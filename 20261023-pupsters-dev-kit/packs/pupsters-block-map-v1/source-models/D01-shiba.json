@@ -1,0 +1,703 @@
+{
+  "name": "Shiba_Block",
+  "variant": "block",
+  "version": 4,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "mouth": [
+    0,
+    1.0,
+    -1.08
+  ],
+  "materials": {
+    "orange": {
+      "color": [
+        0.9607843137254902,
+        0.6274509803921569,
+        0.2235294117647059
+      ]
+    },
+    "cream": {
+      "color": [
+        1.0,
+        0.9411764705882353,
+        0.8352941176470589
+      ]
+    },
+    "black": {
+      "color": [
+        0.1450980392156863,
+        0.12156862745098039,
+        0.12941176470588237
+      ]
+    },
+    "white": {
+      "color": [
+        1.0,
+        0.9882352941176471,
+        0.9568627450980393
+      ]
+    },
+    "bone": {
+      "color": [
+        0.9725490196078431,
+        0.8784313725490196,
+        0.6588235294117647
+      ]
+    },
+    "inner": {
+      "color": [
+        1.0,
+        0.8392156862745098,
+        0.6549019607843137
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "ShortTorso",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.3,
+        1.15,
+        0.95
+      ],
+      "position": [
+        0,
+        0.575,
+        0.33
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "CreamChest",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.0,
+        0.7,
+        0.14
+      ],
+      "position": [
+        0,
+        0.64,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFL_Leg",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.43,
+        0.85,
+        0.46
+      ],
+      "position": [
+        -0.49,
+        0.555,
+        -0.42
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegFL_Paw",
+      "group": "LegFL",
+      "type": "box",
+      "size": [
+        0.52,
+        0.28,
+        0.6
+      ],
+      "position": [
+        -0.49,
+        0.14,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBL_Leg",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.65,
+        0.6,
+        0.84
+      ],
+      "position": [
+        -0.67,
+        0.3,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegBL_Paw",
+      "group": "LegBL",
+      "type": "box",
+      "size": [
+        0.52,
+        0.26,
+        0.68
+      ],
+      "position": [
+        -0.85,
+        0.13,
+        0.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegFR_Leg",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.43,
+        0.85,
+        0.46
+      ],
+      "position": [
+        0.49,
+        0.555,
+        -0.42
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegFR_Paw",
+      "group": "LegFR",
+      "type": "box",
+      "size": [
+        0.52,
+        0.28,
+        0.6
+      ],
+      "position": [
+        0.49,
+        0.14,
+        -0.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "LegBR_Leg",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.65,
+        0.6,
+        0.84
+      ],
+      "position": [
+        0.67,
+        0.3,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "LegBR_Paw",
+      "group": "LegBR",
+      "type": "box",
+      "size": [
+        0.52,
+        0.26,
+        0.68
+      ],
+      "position": [
+        0.85,
+        0.13,
+        0.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BigHead",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        2.16,
+        1.57,
+        1.49
+      ],
+      "position": [
+        0,
+        1.6099999999999999,
+        -0.13
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.14,
+        0.17,
+        0.05
+      ],
+      "position": [
+        -0.47,
+        1.73,
+        -0.8869999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "WhiteBrowL",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.17,
+        0.14,
+        0.05
+      ],
+      "position": [
+        -0.47,
+        1.98,
+        -0.8869999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.14,
+        0.17,
+        0.05
+      ],
+      "position": [
+        0.47,
+        1.73,
+        -0.8869999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "WhiteBrowR",
+      "group": "Head",
+      "type": "sphere",
+      "size": [
+        0.17,
+        0.14,
+        0.05
+      ],
+      "position": [
+        0.47,
+        1.98,
+        -0.8869999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "white"
+    },
+    {
+      "name": "CreamMuzzle",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        1.75,
+        0.5,
+        0.19
+      ],
+      "position": [
+        0,
+        1.19,
+        -0.92
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "SquareNose",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.3,
+        0.17,
+        0.08
+      ],
+      "position": [
+        0,
+        1.3199999999999998,
+        -1.0499999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "MouthCenter",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.038,
+        0.14,
+        0.045
+      ],
+      "position": [
+        0,
+        1.178,
+        -1.0350000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "SmallMouth",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.23,
+        0.035,
+        0.045
+      ],
+      "position": [
+        0,
+        1.115,
+        -1.0350000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "TailRoot",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.34,
+        0.55,
+        0.36
+      ],
+      "position": [
+        0,
+        0.76,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "TailCreamTip",
+      "group": "Tail",
+      "type": "box",
+      "size": [
+        0.34,
+        0.23,
+        0.36
+      ],
+      "position": [
+        0,
+        1.15,
+        0.93
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "cream"
+    },
+    {
+      "name": "BoneShaft",
+      "group": "MouthBone",
+      "type": "box",
+      "size": [
+        0.68,
+        0.128,
+        0.16
+      ],
+      "position": [
+        0,
+        1.0,
+        -1.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "BoneBlockEndL",
+      "group": "MouthBone",
+      "type": "box",
+      "size": [
+        0.2,
+        0.34,
+        0.18
+      ],
+      "position": [
+        -0.37,
+        1.0,
+        -1.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "BoneBlockEndR",
+      "group": "MouthBone",
+      "type": "box",
+      "size": [
+        0.2,
+        0.34,
+        0.18
+      ],
+      "position": [
+        0.37,
+        1.0,
+        -1.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "bone"
+    },
+    {
+      "name": "EarL_Base",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.56,
+        0.43,
+        0.54
+      ],
+      "position": [
+        -0.76,
+        2.47,
+        -0.09999999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarL_BluntTop",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.4,
+        0.23,
+        0.5
+      ],
+      "position": [
+        -0.76,
+        2.74,
+        -0.09999999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarL_Inner",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.24,
+        0.3,
+        0.035
+      ],
+      "position": [
+        -0.76,
+        2.5,
+        -0.387
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "inner"
+    },
+    {
+      "name": "EarR_Base",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.56,
+        0.43,
+        0.54
+      ],
+      "position": [
+        0.76,
+        2.47,
+        -0.09999999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarR_BluntTop",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.4,
+        0.23,
+        0.5
+      ],
+      "position": [
+        0.76,
+        2.74,
+        -0.09999999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "orange"
+    },
+    {
+      "name": "EarR_Inner",
+      "group": "Head",
+      "type": "box",
+      "size": [
+        0.24,
+        0.3,
+        0.035
+      ],
+      "position": [
+        0.76,
+        2.5,
+        -0.387
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "inner"
+    }
+  ],
+  "id": "D01",
+  "slug": "shiba",
+  "displayName": "시바멈",
+  "feature": "짧고 뭉툭한 귀 · 작은 흰 눈썹",
+  "attackName": "뼈다귀 뱉기",
+  "attackMethod": "입에 문 작은 뼈를 앞으로 퉤! 뱉어요.",
+  "silhouette": "짧은 사각 귀와 균형 잡힌 머리",
+  "pose": "sitting",
+  "poseNotes": "Grounded rump, low folded hind thighs, side hind paws and planted upright front legs.",
+  "headTranslationFromV3": [
+    0,
+    0.18,
+    0.4
+  ]
+}

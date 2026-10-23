@@ -1,0 +1,101 @@
+{
+  "version": 5,
+  "date": "2026-10-23",
+  "passed": true,
+  "images": [
+    {
+      "file": "characters/D05-poodle-electric.png",
+      "pngDecoded": true,
+      "width": 1254,
+      "height": 1254,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maxEdgeAlpha": 0,
+      "visibleBoundsAlphaThreshold": 8,
+      "contentBounds": {
+        "left": 198,
+        "top": 177,
+        "right": 1158,
+        "bottom": 1080
+      },
+      "sha256": "66d48c7815c6c9e370db14604644122e1d5c08196dda69d5d249dead83768857",
+      "sourceCopyIdentical": true
+    },
+    {
+      "file": "characters/D06-border-collie-crown.png",
+      "pngDecoded": true,
+      "width": 1254,
+      "height": 1254,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maxEdgeAlpha": 0,
+      "visibleBoundsAlphaThreshold": 8,
+      "contentBounds": {
+        "left": 233,
+        "top": 180,
+        "right": 1074,
+        "bottom": 1082
+      },
+      "sha256": "646a8391cde44f921ca81052a2f8f053dcd2fb976e67833ccd75ced578c78313",
+      "sourceCopyIdentical": true
+    },
+    {
+      "file": "characters/D04-beagle-drool.png",
+      "pngDecoded": true,
+      "width": 1254,
+      "height": 1254,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maxEdgeAlpha": 0,
+      "visibleBoundsAlphaThreshold": 8,
+      "contentBounds": {
+        "left": 256,
+        "top": 214,
+        "right": 1064,
+        "bottom": 1045
+      },
+      "sha256": "f017680155bceac705163bc495aed81a31ca2fab4bf1d521d571d3c466920c45",
+      "sourceCopyIdentical": true
+    },
+    {
+      "file": "effects/FX04-drool.png",
+      "pngDecoded": true,
+      "width": 1254,
+      "height": 1254,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maxEdgeAlpha": 1,
+      "visibleBoundsAlphaThreshold": 8,
+      "contentBounds": {
+        "left": 274,
+        "top": 493,
+        "right": 997,
+        "bottom": 838
+      },
+      "sha256": "a9c07695b2317d431a1936a92f43aa8f20574100d387537eb9e0e4809996ea53",
+      "sourceCopyIdentical": true
+    }
+  ],
+  "characters": 6,
+  "attackCards": 6,
+  "activeCopyUpdated": true,
+  "alphaNote": "Saliva FX has three edge pixels at alpha 1/255. Visible bounds use alpha >8; no visible clipping. Original PNGs preserved.",
+  "browserRenderRechecked": false,
+  "browserReason": "Browser tool rejects local file URLs. Static file references and image assets checked; no bypass attempted."
+}

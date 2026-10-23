@@ -1,0 +1,1238 @@
+{
+  "version": 1,
+  "title": "사고멍치 / PUPSTERS",
+  "date": "2026-10-23",
+  "productionPngCount": 63,
+  "uiSvgCount": 34,
+  "assets": [
+    {
+      "id": "D00",
+      "kind": "dog-idle",
+      "ko": "말티즈 · 마스코트",
+      "file": "characters/idle/D00-maltese-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 264,
+        "top": 265,
+        "right": 1115,
+        "bottom": 1068
+      }
+    },
+    {
+      "id": "D01",
+      "kind": "dog-idle",
+      "ko": "시바견",
+      "file": "characters/idle/D01-shiba-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 261,
+        "top": 217,
+        "right": 1064,
+        "bottom": 1058
+      }
+    },
+    {
+      "id": "D02",
+      "kind": "dog-idle",
+      "ko": "불도그",
+      "file": "characters/idle/D02-bulldog-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 255,
+        "top": 241,
+        "right": 1048,
+        "bottom": 1053
+      }
+    },
+    {
+      "id": "D03",
+      "kind": "dog-idle",
+      "ko": "허스키",
+      "file": "characters/idle/D03-husky-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 261,
+        "top": 216,
+        "right": 1058,
+        "bottom": 1057
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "dog-idle",
+      "ko": "비글",
+      "file": "characters/idle/D04-beagle-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 256,
+        "top": 214,
+        "right": 1060,
+        "bottom": 1046
+      }
+    },
+    {
+      "id": "D05",
+      "kind": "dog-idle",
+      "ko": "푸들",
+      "file": "characters/idle/D05-poodle-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 254,
+        "top": 256,
+        "right": 1075,
+        "bottom": 1049
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "dog-idle",
+      "ko": "보더콜리",
+      "file": "characters/idle/D06-border-collie-idle.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 261,
+        "top": 211,
+        "right": 1058,
+        "bottom": 1051
+      }
+    },
+    {
+      "id": "D01",
+      "kind": "dog-ability",
+      "ko": "시바견",
+      "file": "characters/ability/D01-shiba-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 202,
+        "top": 135,
+        "right": 1143,
+        "bottom": 1078
+      }
+    },
+    {
+      "id": "D02",
+      "kind": "dog-ability",
+      "ko": "불도그",
+      "file": "characters/ability/D02-bulldog-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 229,
+        "top": 235,
+        "right": 1108,
+        "bottom": 1047
+      }
+    },
+    {
+      "id": "D03",
+      "kind": "dog-ability",
+      "ko": "허스키",
+      "file": "characters/ability/D03-husky-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 262,
+        "top": 219,
+        "right": 1061,
+        "bottom": 1056
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "dog-ability",
+      "ko": "비글",
+      "file": "characters/ability/D04-beagle-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 253,
+        "top": 212,
+        "right": 1067,
+        "bottom": 1046
+      }
+    },
+    {
+      "id": "D05",
+      "kind": "dog-ability",
+      "ko": "푸들",
+      "file": "characters/ability/D05-poodle-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 255,
+        "top": 259,
+        "right": 1070,
+        "bottom": 1052
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "dog-ability",
+      "ko": "보더콜리",
+      "file": "characters/ability/D06-border-collie-ability.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 262,
+        "top": 212,
+        "right": 1050,
+        "bottom": 1052
+      }
+    },
+    {
+      "id": "FX01",
+      "kind": "effect",
+      "ko": "던지는 구슬",
+      "file": "effects/FX01-pebble.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 481,
+        "top": 496,
+        "right": 777,
+        "bottom": 773
+      }
+    },
+    {
+      "id": "FX02",
+      "kind": "effect",
+      "ko": "압축 공기탄",
+      "file": "effects/FX02-air-puff.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 164,
+        "top": 364,
+        "right": 1117,
+        "bottom": 969
+      }
+    },
+    {
+      "id": "FX03",
+      "kind": "effect",
+      "ko": "냉기 숨결",
+      "file": "effects/FX03-frost-breath.png",
+      "dimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "contentBounds": {
+        "left": 64,
+        "top": 76,
+        "right": 1713,
+        "bottom": 819
+      }
+    },
+    {
+      "id": "FX04",
+      "kind": "effect",
+      "ko": "점착 거품",
+      "file": "effects/FX04-sticky-bubble.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 307,
+        "top": 317,
+        "right": 948,
+        "bottom": 946
+      }
+    },
+    {
+      "id": "FX05",
+      "kind": "effect",
+      "ko": "정전기",
+      "file": "effects/FX05-static-arc.png",
+      "dimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "contentBounds": {
+        "left": 217,
+        "top": 254,
+        "right": 1626,
+        "bottom": 751
+      }
+    },
+    {
+      "id": "FX06",
+      "kind": "effect",
+      "ko": "지원 짖음 파동",
+      "file": "effects/FX06-bark-wave.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 354,
+        "top": 239,
+        "right": 976,
+        "bottom": 1025
+      }
+    },
+    {
+      "id": "B01",
+      "kind": "enemy",
+      "ko": "블록사우루스",
+      "file": "enemies/B01-blockosaur-square.png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "contentBounds": {
+        "left": 162,
+        "top": 252,
+        "right": 1092,
+        "bottom": 1012
+      }
+    },
+    {
+      "id": "E01",
+      "kind": "enemy",
+      "ko": "기본 블록봇",
+      "file": "enemies/E01-block-bot.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1214
+      },
+      "contentBounds": {
+        "left": 354,
+        "top": 265,
+        "right": 951,
+        "bottom": 909
+      }
+    },
+    {
+      "id": "E02",
+      "kind": "enemy",
+      "ko": "바퀴 블록봇",
+      "file": "enemies/E02-wheelie.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 293,
+        "top": 313,
+        "right": 1001,
+        "bottom": 919
+      }
+    },
+    {
+      "id": "E03",
+      "kind": "enemy",
+      "ko": "벽돌 덩치",
+      "file": "enemies/E03-brick-bruiser.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 316,
+        "top": 190,
+        "right": 1020,
+        "bottom": 978
+      }
+    },
+    {
+      "id": "E04",
+      "kind": "enemy",
+      "ko": "장갑 블록봇",
+      "file": "enemies/E04-shellback.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 334,
+        "top": 259,
+        "right": 972,
+        "bottom": 910
+      }
+    },
+    {
+      "id": "E05",
+      "kind": "enemy",
+      "ko": "분열 블록봇",
+      "file": "enemies/E05-split-stack.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 436,
+        "top": 173,
+        "right": 856,
+        "bottom": 1029
+      }
+    },
+    {
+      "id": "E06",
+      "kind": "enemy",
+      "ko": "수리 블록봇",
+      "file": "enemies/E06-fix-it-bot.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 340,
+        "top": 301,
+        "right": 1077,
+        "bottom": 882
+      }
+    },
+    {
+      "id": "E07",
+      "kind": "enemy",
+      "ko": "투명 블록봇",
+      "file": "enemies/E07-clear-crawler.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 354,
+        "top": 298,
+        "right": 947,
+        "bottom": 933
+      }
+    },
+    {
+      "id": "E08",
+      "kind": "enemy",
+      "ko": "블록 운반차",
+      "file": "enemies/E08-carrier-cart.png",
+      "dimensions": {
+        "width": 1295,
+        "height": 1215
+      },
+      "contentBounds": {
+        "left": 328,
+        "top": 226,
+        "right": 988,
+        "bottom": 921
+      }
+    },
+    {
+      "id": "BG01",
+      "kind": "background",
+      "ko": "거실 맵 배경",
+      "file": "backgrounds/BG01-living-room-map.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "contentBounds": {
+        "left": 0,
+        "top": 0,
+        "right": 1671,
+        "bottom": 940
+      }
+    },
+    {
+      "id": "badge-round-empty",
+      "kind": "ui",
+      "ko": "badge-round-empty",
+      "file": "ui/png/badge-round-empty.png",
+      "svg": "ui/svg/badge-round-empty.svg",
+      "dimensions": {
+        "width": 176,
+        "height": 176
+      },
+      "nineSlice": {
+        "left": 48,
+        "top": 48,
+        "right": 48,
+        "bottom": 48
+      },
+      "uiCategory": "badge",
+      "contentBounds": {
+        "left": 7,
+        "top": 5,
+        "right": 169,
+        "bottom": 169
+      }
+    },
+    {
+      "id": "button-blue-secondary",
+      "kind": "ui",
+      "ko": "button-blue-secondary",
+      "file": "ui/png/button-blue-secondary.png",
+      "svg": "ui/svg/button-blue-secondary.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      },
+      "uiCategory": "button",
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      }
+    },
+    {
+      "id": "button-disabled-gray",
+      "kind": "ui",
+      "ko": "button-disabled-gray",
+      "file": "ui/png/button-disabled-gray.png",
+      "svg": "ui/svg/button-disabled-gray.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      },
+      "uiCategory": "button",
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      }
+    },
+    {
+      "id": "button-ivory-secondary",
+      "kind": "ui",
+      "ko": "button-ivory-secondary",
+      "file": "ui/png/button-ivory-secondary.png",
+      "svg": "ui/svg/button-ivory-secondary.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      },
+      "uiCategory": "button",
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      }
+    },
+    {
+      "id": "button-orange-normal",
+      "kind": "ui",
+      "ko": "button-orange-normal",
+      "file": "ui/png/button-orange-normal.png",
+      "svg": "ui/svg/button-orange-normal.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "nineSlice": {
+        "left": 44,
+        "top": 32,
+        "right": 44,
+        "bottom": 32
+      },
+      "uiCategory": "button",
+      "contentBounds": {
+        "left": 8,
+        "top": 7,
+        "right": 470,
+        "bottom": 118
+      }
+    },
+    {
+      "id": "button-orange-pressed",
+      "kind": "ui",
+      "ko": "button-orange-pressed",
+      "file": "ui/png/button-orange-pressed.png",
+      "svg": "ui/svg/button-orange-pressed.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 128
+      },
+      "nineSlice": {
+        "left": 44,
+        "top": 34,
+        "right": 44,
+        "bottom": 28
+      },
+      "uiCategory": "button",
+      "contentBounds": {
+        "left": 8,
+        "top": 14,
+        "right": 470,
+        "bottom": 122
+      }
+    },
+    {
+      "id": "control-knob-round",
+      "kind": "ui",
+      "ko": "control-knob-round",
+      "file": "ui/png/control-knob-round.png",
+      "svg": "ui/svg/control-knob-round.svg",
+      "dimensions": {
+        "width": 96,
+        "height": 96
+      },
+      "nineSlice": null,
+      "uiCategory": "control",
+      "contentBounds": {
+        "left": 4,
+        "top": 3,
+        "right": 92,
+        "bottom": 92
+      }
+    },
+    {
+      "id": "frame-card-normal",
+      "kind": "ui",
+      "ko": "frame-card-normal",
+      "file": "ui/png/frame-card-normal.png",
+      "svg": "ui/svg/frame-card-normal.svg",
+      "dimensions": {
+        "width": 320,
+        "height": 400
+      },
+      "nineSlice": {
+        "left": 42,
+        "top": 46,
+        "right": 42,
+        "bottom": 44
+      },
+      "uiCategory": "frame",
+      "contentBounds": {
+        "left": 9,
+        "top": 9,
+        "right": 309,
+        "bottom": 390
+      }
+    },
+    {
+      "id": "frame-card-selected",
+      "kind": "ui",
+      "ko": "frame-card-selected",
+      "file": "ui/png/frame-card-selected.png",
+      "svg": "ui/svg/frame-card-selected.svg",
+      "dimensions": {
+        "width": 320,
+        "height": 400
+      },
+      "nineSlice": {
+        "left": 45,
+        "top": 48,
+        "right": 45,
+        "bottom": 48
+      },
+      "uiCategory": "frame",
+      "contentBounds": {
+        "left": 8,
+        "top": 9,
+        "right": 310,
+        "bottom": 390
+      }
+    },
+    {
+      "id": "health-fill-coral",
+      "kind": "ui",
+      "ko": "health-fill-coral",
+      "file": "ui/png/health-fill-coral.png",
+      "svg": "ui/svg/health-fill-coral.svg",
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "nineSlice": null,
+      "uiCategory": "health",
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      }
+    },
+    {
+      "id": "health-fill-green",
+      "kind": "ui",
+      "ko": "health-fill-green",
+      "file": "ui/png/health-fill-green.png",
+      "svg": "ui/svg/health-fill-green.svg",
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "nineSlice": null,
+      "uiCategory": "health",
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      }
+    },
+    {
+      "id": "health-fill-orange",
+      "kind": "ui",
+      "ko": "health-fill-orange",
+      "file": "ui/png/health-fill-orange.png",
+      "svg": "ui/svg/health-fill-orange.svg",
+      "dimensions": {
+        "width": 420,
+        "height": 32
+      },
+      "nineSlice": null,
+      "uiCategory": "health",
+      "contentBounds": {
+        "left": 6,
+        "top": 5,
+        "right": 413,
+        "bottom": 26
+      }
+    },
+    {
+      "id": "health-track",
+      "kind": "ui",
+      "ko": "health-track",
+      "file": "ui/png/health-track.png",
+      "svg": "ui/svg/health-track.svg",
+      "dimensions": {
+        "width": 480,
+        "height": 64
+      },
+      "nineSlice": {
+        "left": 29,
+        "top": 22,
+        "right": 29,
+        "bottom": 22
+      },
+      "uiCategory": "health",
+      "contentBounds": {
+        "left": 8,
+        "top": 5,
+        "right": 471,
+        "bottom": 59
+      }
+    },
+    {
+      "id": "icon-back",
+      "kind": "ui",
+      "ko": "icon-back",
+      "file": "ui/png/icon-back.png",
+      "svg": "ui/svg/icon-back.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 17,
+        "top": 23,
+        "right": 116,
+        "bottom": 106
+      }
+    },
+    {
+      "id": "icon-check",
+      "kind": "ui",
+      "ko": "icon-check",
+      "file": "ui/png/icon-check.png",
+      "svg": "ui/svg/icon-check.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 14,
+        "top": 25,
+        "right": 112,
+        "bottom": 99
+      }
+    },
+    {
+      "id": "icon-close",
+      "kind": "ui",
+      "ko": "icon-close",
+      "file": "ui/png/icon-close.png",
+      "svg": "ui/svg/icon-close.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 15,
+        "top": 18,
+        "right": 110,
+        "bottom": 108
+      }
+    },
+    {
+      "id": "icon-fast-forward",
+      "kind": "ui",
+      "ko": "icon-fast-forward",
+      "file": "ui/png/icon-fast-forward.png",
+      "svg": "ui/svg/icon-fast-forward.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 10,
+        "top": 28,
+        "right": 117,
+        "bottom": 99
+      }
+    },
+    {
+      "id": "icon-heart",
+      "kind": "ui",
+      "ko": "icon-heart",
+      "file": "ui/png/icon-heart.png",
+      "svg": "ui/svg/icon-heart.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 10,
+        "top": 16,
+        "right": 118,
+        "bottom": 111
+      }
+    },
+    {
+      "id": "icon-lock",
+      "kind": "ui",
+      "ko": "icon-lock",
+      "file": "ui/png/icon-lock.png",
+      "svg": "ui/svg/icon-lock.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 18,
+        "top": 6,
+        "right": 109,
+        "bottom": 117
+      }
+    },
+    {
+      "id": "icon-pause",
+      "kind": "ui",
+      "ko": "icon-pause",
+      "file": "ui/png/icon-pause.png",
+      "svg": "ui/svg/icon-pause.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 25,
+        "top": 24,
+        "right": 102,
+        "bottom": 103
+      }
+    },
+    {
+      "id": "icon-paw",
+      "kind": "ui",
+      "ko": "icon-paw",
+      "file": "ui/png/icon-paw.png",
+      "svg": "ui/svg/icon-paw.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 18,
+        "top": 9,
+        "right": 106,
+        "bottom": 108
+      }
+    },
+    {
+      "id": "icon-ping",
+      "kind": "ui",
+      "ko": "icon-ping",
+      "file": "ui/png/icon-ping.png",
+      "svg": "ui/svg/icon-ping.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 16,
+        "top": 30,
+        "right": 111,
+        "bottom": 117
+      }
+    },
+    {
+      "id": "icon-play",
+      "kind": "ui",
+      "ko": "icon-play",
+      "file": "ui/png/icon-play.png",
+      "svg": "ui/svg/icon-play.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 32,
+        "top": 24,
+        "right": 103,
+        "bottom": 103
+      }
+    },
+    {
+      "id": "icon-screw-parts",
+      "kind": "ui",
+      "ko": "icon-screw-parts",
+      "file": "ui/png/icon-screw-parts.png",
+      "svg": "ui/svg/icon-screw-parts.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 20,
+        "top": 14,
+        "right": 92,
+        "bottom": 105
+      }
+    },
+    {
+      "id": "icon-sell-trash",
+      "kind": "ui",
+      "ko": "icon-sell-trash",
+      "file": "ui/png/icon-sell-trash.png",
+      "svg": "ui/svg/icon-sell-trash.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 27,
+        "top": 10,
+        "right": 116,
+        "bottom": 116
+      }
+    },
+    {
+      "id": "icon-settings",
+      "kind": "ui",
+      "ko": "icon-settings",
+      "file": "ui/png/icon-settings.png",
+      "svg": "ui/svg/icon-settings.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 11,
+        "top": 8,
+        "right": 116,
+        "bottom": 119
+      }
+    },
+    {
+      "id": "icon-target",
+      "kind": "ui",
+      "ko": "icon-target",
+      "file": "ui/png/icon-target.png",
+      "svg": "ui/svg/icon-target.svg",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      },
+      "nineSlice": null,
+      "uiCategory": "icon",
+      "contentBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 125,
+        "bottom": 125
+      }
+    },
+    {
+      "id": "panel-compact-pill",
+      "kind": "ui",
+      "ko": "panel-compact-pill",
+      "file": "ui/png/panel-compact-pill.png",
+      "svg": "ui/svg/panel-compact-pill.svg",
+      "dimensions": {
+        "width": 420,
+        "height": 112
+      },
+      "nineSlice": {
+        "left": 58,
+        "top": 31,
+        "right": 58,
+        "bottom": 31
+      },
+      "uiCategory": "panel",
+      "contentBounds": {
+        "left": 9,
+        "top": 7,
+        "right": 410,
+        "bottom": 104
+      }
+    },
+    {
+      "id": "panel-large",
+      "kind": "ui",
+      "ko": "panel-large",
+      "file": "ui/png/panel-large.png",
+      "svg": "ui/svg/panel-large.svg",
+      "dimensions": {
+        "width": 720,
+        "height": 500
+      },
+      "nineSlice": {
+        "left": 58,
+        "top": 52,
+        "right": 58,
+        "bottom": 52
+      },
+      "uiCategory": "panel",
+      "contentBounds": {
+        "left": 15,
+        "top": 13,
+        "right": 703,
+        "bottom": 486
+      }
+    },
+    {
+      "id": "panel-speech-bubble",
+      "kind": "ui",
+      "ko": "panel-speech-bubble",
+      "file": "ui/png/panel-speech-bubble.png",
+      "svg": "ui/svg/panel-speech-bubble.svg",
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      },
+      "nineSlice": {
+        "left": 56,
+        "top": 50,
+        "right": 56,
+        "bottom": 66
+      },
+      "uiCategory": "panel",
+      "contentBounds": {
+        "left": 14,
+        "top": 12,
+        "right": 585,
+        "bottom": 296
+      }
+    },
+    {
+      "id": "selection-ring",
+      "kind": "ui",
+      "ko": "selection-ring",
+      "file": "ui/png/selection-ring.png",
+      "svg": "ui/svg/selection-ring.svg",
+      "dimensions": {
+        "width": 240,
+        "height": 240
+      },
+      "nineSlice": null,
+      "uiCategory": "selection",
+      "contentBounds": {
+        "left": 7,
+        "top": 6,
+        "right": 233,
+        "bottom": 233
+      }
+    },
+    {
+      "id": "slider-rail",
+      "kind": "ui",
+      "ko": "slider-rail",
+      "file": "ui/png/slider-rail.png",
+      "svg": "ui/svg/slider-rail.svg",
+      "dimensions": {
+        "width": 440,
+        "height": 48
+      },
+      "nineSlice": {
+        "left": 24,
+        "top": 14,
+        "right": 24,
+        "bottom": 14
+      },
+      "uiCategory": "control",
+      "contentBounds": {
+        "left": 7,
+        "top": 9,
+        "right": 432,
+        "bottom": 38
+      }
+    },
+    {
+      "id": "toggle-rail-off",
+      "kind": "ui",
+      "ko": "toggle-rail-off",
+      "file": "ui/png/toggle-rail-off.png",
+      "svg": "ui/svg/toggle-rail-off.svg",
+      "dimensions": {
+        "width": 240,
+        "height": 112
+      },
+      "nineSlice": {
+        "left": 57,
+        "top": 34,
+        "right": 57,
+        "bottom": 34
+      },
+      "uiCategory": "control",
+      "contentBounds": {
+        "left": 9,
+        "top": 8,
+        "right": 230,
+        "bottom": 103
+      }
+    },
+    {
+      "id": "toggle-rail-on",
+      "kind": "ui",
+      "ko": "toggle-rail-on",
+      "file": "ui/png/toggle-rail-on.png",
+      "svg": "ui/svg/toggle-rail-on.svg",
+      "dimensions": {
+        "width": 240,
+        "height": 112
+      },
+      "nineSlice": {
+        "left": 57,
+        "top": 34,
+        "right": 57,
+        "bottom": 34
+      },
+      "uiCategory": "control",
+      "contentBounds": {
+        "left": 9,
+        "top": 8,
+        "right": 230,
+        "bottom": 103
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "dog": "D01",
+      "name": "시바견",
+      "action": "앞발로 구슬 던지기",
+      "effect": "FX01",
+      "origin": "front-paw"
+    },
+    {
+      "dog": "D02",
+      "name": "불도그",
+      "action": "입으로 압축 공기 뿜기",
+      "effect": "FX02",
+      "origin": "mouth"
+    },
+    {
+      "dog": "D03",
+      "name": "허스키",
+      "action": "입으로 냉기 내뿜기",
+      "effect": "FX03",
+      "origin": "mouth"
+    },
+    {
+      "dog": "D04",
+      "name": "비글",
+      "action": "입으로 점착 거품 뱉기",
+      "effect": "FX04",
+      "origin": "mouth"
+    },
+    {
+      "dog": "D05",
+      "name": "푸들",
+      "action": "털에서 정전기 방출",
+      "effect": "FX05",
+      "origin": "fur"
+    },
+    {
+      "dog": "D06",
+      "name": "보더콜리",
+      "action": "지원 짖음",
+      "effect": "FX06",
+      "origin": "mouth"
+    }
+  ]
+}

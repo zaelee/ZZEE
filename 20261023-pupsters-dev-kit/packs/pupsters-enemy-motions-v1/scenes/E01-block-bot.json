@@ -1,0 +1,29 @@
+{
+  "id": "E01",
+  "slug": "block-bot",
+  "name": "BlockBot_Enemy",
+  "displayName": "기본 블록봇",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "산호빛 정육면체와 짧은 남색 발",
+  "role": "기본 접근형",
+  "roleDescription": "천천히 다가와 길을 압박하는 가장 단순한 기본 적 콘셉트.",
+  "hitPoint": [0, 1.0, -0.58],
+  "materials": {
+    "coral": { "color": [1.0, 0.3058823529, 0.2745098039] },
+    "navy": { "color": [0.1176470588, 0.1725490196, 0.3137254902] },
+    "black": { "color": [0.0862745098, 0.0784313725, 0.0901960784] }
+  },
+  "parts": [
+    { "name": "CubeBody", "group": "Body", "type": "box", "size": [1.35, 1.15, 1.1], "position": [0, 0.875, 0], "rotation": [0, 0, 0], "material": "coral" },
+    { "name": "PlainTop", "group": "Body", "type": "box", "size": [1.35, 0.2, 1.1], "position": [0, 1.55, 0], "rotation": [0, 0, 0], "material": "coral" },
+    { "name": "FootStemL", "group": "Feet", "type": "box", "size": [0.28, 0.12, 0.34], "position": [-0.4, 0.36, 0.02], "rotation": [0, 0, 0], "material": "navy" },
+    { "name": "FootL", "group": "Feet", "type": "box", "size": [0.4, 0.3, 0.46], "position": [-0.4, 0.15, -0.08], "rotation": [0, 0, 0], "material": "navy" },
+    { "name": "FootStemR", "group": "Feet", "type": "box", "size": [0.28, 0.12, 0.34], "position": [0.4, 0.36, 0.02], "rotation": [0, 0, 0], "material": "navy" },
+    { "name": "FootR", "group": "Feet", "type": "box", "size": [0.4, 0.3, 0.46], "position": [0.4, 0.15, -0.08], "rotation": [0, 0, 0], "material": "navy" },
+    { "name": "DotEyeL", "group": "Face", "type": "sphere", "size": [0.12, 0.16, 0.05], "position": [-0.3, 1.0, -0.575], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "DotEyeR", "group": "Face", "type": "sphere", "size": [0.12, 0.16, 0.05], "position": [0.3, 1.0, -0.575], "rotation": [0, 0, 0], "material": "black" }
+  ]
+}

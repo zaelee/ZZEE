@@ -1,0 +1,6 @@
+{
+  "status": "not_render_verified",
+  "reason": "Headless Edge could not launch in this execution environment; in-app browser timed out accessing the local preview server.",
+  "staticChecks": "All 63 production image paths referenced by index.html exist and decode successfully. No runtime JavaScript or remote dependencies.",
+  "scope": "This gallery is a convenience for browsing independent files; production asset checks passed."
+}

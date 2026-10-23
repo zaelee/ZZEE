@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-23",
+  "repositoryChecks": {
+    "node": "24.18.0",
+    "npmRunCheck": "pass",
+    "javascriptFiles": 170,
+    "htmlLocalReferences": 1252,
+    "tests": 63,
+    "failedTests": 0
+  },
+  "latestPackChecks": {
+    "dogs": "pass",
+    "dogAttacks": "pass",
+    "enemies": "pass",
+    "enemyMotions": "pass",
+    "map": "pass",
+    "mapAssertions": 6575
+  },
+  "actualRobloxStudioTested": false,
+  "actualBrowserWebGLTested": false,
+  "skillFrontmatter": "pass",
+  "zipVerification": "Each download is checked for CRC, unique members, and byte equality by tools/build_publication.py.",
+  "fontConfigurationChecks": {
+    "packs": 5,
+    "default": "pass",
+    "customNormalAndBold": "pass",
+    "missingFontError": "pass"
+  }
+}

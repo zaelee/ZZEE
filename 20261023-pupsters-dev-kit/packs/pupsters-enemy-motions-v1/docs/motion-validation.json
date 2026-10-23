@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "generatedAt": "2026-10-23T09:06:40.894471+00:00",
+  "scope": {
+    "models": 9,
+    "parts": 124,
+    "clipsPerModel": 3,
+    "sampledFrames": 945,
+    "fps": 30
+  },
+  "checks": {
+    "motionJson": "source identity, geometry, timing, rest/loop/death rules, finite normalized sign-continuous quaternions, positive scales, visibility, ground clearance, and distinct non-static clips",
+    "glb": "GLB structure, local mesh topology, materials/alpha, Move/Hit/Death LINEAR TRS channels, key times, and JSON-equivalent outputs",
+    "viewer": "all nine embedded model payloads exactly match canonical animation JSON",
+    "roblox": "XML/referent integrity, unique BasePart coverage, source alpha, readable script frame payload, and demo model coverage"
+  },
+  "models": {
+    "E01": {
+      "status": "passed",
+      "json": {
+        "parts": 8,
+        "frames": 105,
+        "minimumGroundY": -1.0619188228755405e-07,
+        "maxMotion": 1.6
+      },
+      "glb": {
+        "nodes": 9,
+        "meshes": 8,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 24
+      },
+      "roblox": {
+        "file": "roblox/E01-motions.rbxmx",
+        "root": "기본 블록봇",
+        "baseParts": 8,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "dd86f58462ac434a17b1d1f6c7ad804b0a5659a1428d755ed7f8ad1a10cea131",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E02": {
+      "status": "passed",
+      "json": {
+        "parts": 8,
+        "frames": 105,
+        "minimumGroundY": -8.483857760754887e-08,
+        "maxMotion": 1.9881617
+      },
+      "glb": {
+        "nodes": 9,
+        "meshes": 8,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 24
+      },
+      "roblox": {
+        "file": "roblox/E02-motions.rbxmx",
+        "root": "바퀴 블록봇",
+        "baseParts": 8,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "c208ae891218ea9098ba697e10c7265505ae1b63c0f2649fda6b9f3b33362b6e",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E03": {
+      "status": "passed",
+      "json": {
+        "parts": 9,
+        "frames": 105,
+        "minimumGroundY": -1.3104007601238976e-07,
+        "maxMotion": 1.679087
+      },
+      "glb": {
+        "nodes": 10,
+        "meshes": 9,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 27
+      },
+      "roblox": {
+        "file": "roblox/E03-motions.rbxmx",
+        "root": "벽돌 덩치",
+        "baseParts": 9,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "0115bd10be4fdfeb8db829f9f9b27b7715082c4ea4608dd5b385bc1f1a20ef66",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E04": {
+      "status": "passed",
+      "json": {
+        "parts": 14,
+        "frames": 105,
+        "minimumGroundY": -5.198402599007612e-08,
+        "maxMotion": 1.69955
+      },
+      "glb": {
+        "nodes": 15,
+        "meshes": 14,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 42
+      },
+      "roblox": {
+        "file": "roblox/E04-motions.rbxmx",
+        "root": "장갑 블록봇",
+        "baseParts": 14,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "cca79385390df43beaa76b2fdefbf3e49db13d9817ddf62da733a7d7d90eeddb",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E05": {
+      "status": "passed",
+      "json": {
+        "parts": 11,
+        "frames": 105,
+        "minimumGroundY": -8.327173361966089e-08,
+        "maxMotion": 2.1193396
+      },
+      "glb": {
+        "nodes": 12,
+        "meshes": 11,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 33
+      },
+      "roblox": {
+        "file": "roblox/E05-motions.rbxmx",
+        "root": "분열 블록봇",
+        "baseParts": 11,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "ad86098aff7862cd671507a9b04609a610c4244d9ede57bb5f0ba8e5384816c0",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E06": {
+      "status": "passed",
+      "json": {
+        "parts": 15,
+        "frames": 105,
+        "minimumGroundY": -8.214237745551856e-08,
+        "maxMotion": 1.53983
+      },
+      "glb": {
+        "nodes": 16,
+        "meshes": 15,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 45
+      },
+      "roblox": {
+        "file": "roblox/E06-motions.rbxmx",
+        "root": "수리 블록봇",
+        "baseParts": 15,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "a3676537485714faecf816805196cba6b7fe0df90f95497c9fc4c7a284dc0087",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E07": {
+      "status": "passed",
+      "json": {
+        "parts": 19,
+        "frames": 105,
+        "minimumGroundY": -6.09167464526994e-08,
+        "maxMotion": 1.299779
+      },
+      "glb": {
+        "nodes": 20,
+        "meshes": 19,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 57
+      },
+      "roblox": {
+        "file": "roblox/E07-motions.rbxmx",
+        "root": "투명 블록봇",
+        "baseParts": 19,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "55ad38d1d7d0a0cc70712b93725abbab687331a898392b31b8d7c9616b47bae7",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "E08": {
+      "status": "passed",
+      "json": {
+        "parts": 21,
+        "frames": 105,
+        "minimumGroundY": -1.2073130079004457e-07,
+        "maxMotion": 2.2001404
+      },
+      "glb": {
+        "nodes": 22,
+        "meshes": 21,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 63
+      },
+      "roblox": {
+        "file": "roblox/E08-motions.rbxmx",
+        "root": "블록 운반차",
+        "baseParts": 21,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "fcec2323f02c5d878036820c4fe965cd894c73d173042a4ff8a4e5dd7673a6b3",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    },
+    "B01": {
+      "status": "passed",
+      "json": {
+        "parts": 19,
+        "frames": 105,
+        "minimumGroundY": -6.076354747142076e-08,
+        "maxMotion": 2.472705
+      },
+      "glb": {
+        "nodes": 20,
+        "meshes": 19,
+        "animations": [
+          "Move",
+          "Hit",
+          "Death"
+        ],
+        "channelsPerClip": 57
+      },
+      "roblox": {
+        "file": "roblox/B01-motions.rbxmx",
+        "root": "블록사우루스",
+        "baseParts": 19,
+        "motionRoot": true,
+        "scriptClass": "Script",
+        "script": "MotionPlayback",
+        "digest": "28ae433858a12ba097baf6440eab8ed516249feda4628bc040a7b2b61bdae424",
+        "clips": {
+          "move": 37,
+          "hit": 19,
+          "death": 49
+        }
+      }
+    }
+  },
+  "demo": {
+    "file": "roblox/Pupsters-Enemy-Motions-Demo.rbxmx",
+    "models": 9
+  },
+  "limitations": [
+    "Roblox Studio playback was not executed; RBXMX structure and embedded animation payload were validated statically.",
+    "Browser playback was not executed; viewer data equivalence was validated statically."
+  ]
+}

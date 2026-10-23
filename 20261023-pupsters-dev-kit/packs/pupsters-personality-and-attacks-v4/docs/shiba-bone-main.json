@@ -1,0 +1,20 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-10-23",
+  "records": [
+    {
+      "role": "idle",
+      "prompt": "Use case: precise-object-edit. Input image is the existing original Shiba Inu character; preserve its identity, orange-and-cream coat markings, curled tail, mischievous asymmetric eyebrows, chunky dark outlines and simple clean fills. Same 1254x1254 square composition, top-down three-quarter view around 65 degrees facing down-right, oversized head with extremely short compact chubby body, tiny short dog legs. Keep original full body scale and location and plenty of clear margin. Real transparent background. No scenery, shadow, halo, backdrop, text, logos, guns, tools, costumes, extra limbs, human hands, motion lines or floating effects. This character now spits small chew bones from its MOUTH, not paws. Change only these parts: REMOVE the blue glass marble entirely. Put the raised foreground paw back on the ground beside the other front paw, so all four paws are planted normally and hold nothing. Place ONE SMALL ivory cartoon chew bone sideways across the dog's lips, lightly clamped at its centre between its teeth; two rounded knobby lobes at each end, narrow middle, thick dark outline, minimal pale warm beige shading. Bone length about 1.4 times the black nose width, clearly a small chew bone not a large club. No visible tongue while holding bone. Dog looks sly and pleased with itself. The bone must be held by the MOUTH only, do not put it in any paw. Keep the same very short body.",
+      "reference": "../../pupsters-personality-v3/characters/D01-shiba.png",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../../pupsters-personality-v3/characters/D01-shiba-bone.png"
+    },
+    {
+      "role": "projectile",
+      "prompt": "Use case: stylized-concept. Asset type: standalone game projectile sprite. Input image is STYLE reference only: match its thick slightly irregular black doodle outline and simple clean warm fills. Draw ONE small cute ivory dog chew-bone icon by itself, horizontal left-to-right orientation. Narrow short shaft and two rounded knobby lobes at EACH end, simple clean silhouette, minimal pale beige underside fill, no texture details. The bone should be centred within a square canvas with very generous real transparent margins, occupying about 45% of canvas width and 18% of height. No dog or paw or mouth, no other objects, no speed lines, no glow, no shadows, no background, no platform, no text. Original friendly comic game artwork, not photorealistic.",
+      "reference": "../../pupsters-personality-v3/characters/D01-shiba.png",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../../pupsters-personality-v3/effects/FX01-bone.png"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "basedOn": "pupsters-block-pack-v4",
+  "pose": "sitting",
+  "models": [
+    {
+      "id": "D01",
+      "displayName": "시바멈",
+      "scene": "scenes/D01-shiba.json",
+      "native": "native/D01-shiba.rbxmx"
+    },
+    {
+      "id": "D02",
+      "displayName": "불돔",
+      "scene": "scenes/D02-bulldog.json",
+      "native": "native/D02-bulldog.rbxmx"
+    },
+    {
+      "id": "D03",
+      "displayName": "머스키",
+      "scene": "scenes/D03-husky.json",
+      "native": "native/D03-husky.rbxmx"
+    },
+    {
+      "id": "D04",
+      "displayName": "미글",
+      "scene": "scenes/D04-beagle.json",
+      "native": "native/D04-beagle.rbxmx"
+    },
+    {
+      "id": "D05",
+      "displayName": "무들",
+      "scene": "scenes/D05-poodle.json",
+      "native": "native/D05-poodle.rbxmx"
+    },
+    {
+      "id": "D06",
+      "displayName": "모더콜리",
+      "scene": "scenes/D06-border-collie.json",
+      "native": "native/D06-border-collie.rbxmx"
+    }
+  ],
+  "clips": [
+    {
+      "id": "D01",
+      "displayName": "시바멈",
+      "attackName": "뼈다귀 뱉기",
+      "description": "뼈를 문 채 고개를 젖혔다가, 앞으로 까딱하며 퉤! 뼈를 뱉어요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D01.json",
+      "glb": "animations/D01-attack.glb",
+      "roblox": "roblox/D01-attack.rbxmx",
+      "gif": "previews/D01-attack.gif"
+    },
+    {
+      "id": "D02",
+      "displayName": "불돔",
+      "attackName": "압축 공기탄",
+      "description": "볼에 공기를 빵빵하게 모은 뒤, 고개 반동과 함께 공기 충격파를 뿜어요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D02.json",
+      "glb": "animations/D02-attack.glb",
+      "roblox": "roblox/D02-attack.rbxmx",
+      "gif": "previews/D02-attack.gif"
+    },
+    {
+      "id": "D03",
+      "displayName": "머스키",
+      "attackName": "냉기 숨결",
+      "description": "숨을 들이마시고 고개를 내밀어, 입에서 얼음 알갱이와 냉기를 길게 내뿜어요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D03.json",
+      "glb": "animations/D03-attack.glb",
+      "roblox": "roblox/D03-attack.rbxmx",
+      "gif": "previews/D03-attack.gif"
+    },
+    {
+      "id": "D04",
+      "displayName": "미글",
+      "attackName": "침방울 튕기기",
+      "description": "침을 모으며 고개를 갸웃하고, 끈적한 침방울을 앞으로 퉤! 튕겨요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D04.json",
+      "glb": "animations/D04-attack.glb",
+      "roblox": "roblox/D04-attack.rbxmx",
+      "gif": "previews/D04-attack.gif"
+    },
+    {
+      "id": "D05",
+      "displayName": "무들",
+      "attackName": "정전기 찌릿",
+      "description": "몸을 작게 부르르 떨며 충전하고, 머리 중앙 번개에서 전기를 찌리릭 뻗어요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D05.json",
+      "glb": "animations/D05-attack.glb",
+      "roblox": "roblox/D05-attack.rbxmx",
+      "gif": "previews/D05-attack.gif"
+    },
+    {
+      "id": "D06",
+      "displayName": "모더콜리",
+      "attackName": "응원 짖기",
+      "description": "고개를 세 번 까딱하며 왕! 왕! 왕! 왕관이 덜렁이고 응원 파동이 퍼져요.",
+      "duration": 2.0,
+      "fps": 30,
+      "release": 0.6,
+      "clip": "animations/D06.json",
+      "glb": "animations/D06-attack.glb",
+      "roblox": "roblox/D06-attack.rbxmx",
+      "gif": "previews/D06-attack.gif"
+    }
+  ]
+}

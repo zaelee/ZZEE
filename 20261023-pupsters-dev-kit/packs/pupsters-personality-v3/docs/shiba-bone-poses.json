@@ -1,0 +1,67 @@
+{
+  "generator": "built-in image_gen",
+  "source": "../animations/shiba-bone/00-idle.png",
+  "transparentBackgroundRequested": true,
+  "poses": [
+    {
+      "phase": "prepare",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character attack animation keyframe, prepare phase. Input image is the exact new Shiba bone-holding idle. Preserve its exact identity, registration, canvas, scale, footprint, colors, markings, eyebrows, ear shape, tail, line weight, short broad body and camera. Create ONE prepare keyframe for spitting the small bone. The Shiba CONTINUES HOLDING THE SAME SMALL BONE gently and horizontally in its mouth, exactly attached at the lips. Pull the neck and head only a very small distance backward toward the shoulders as if gathering breath. Puff both cheeks slightly around the held bone. Make the focused gaze and eyebrows more intent. Keep all four paws flat on the ground in exactly the same positions; no paw lifts, gestures, or throwing pose. Same 1254x1254 square canvas, body root, size, generous transparent margin, 65-degree high-angle top-down view, downward-right facing direction, one dog, thick black doodle outlines and clean fills. Genuine transparent background. No bead, marble, raised paw, throwing motion, human hand, weapon, detached bone, flying projectile, extra bone, motion lines, effects, background, floor, base disk, shadow, glow, halo, text, clothing, armor, machine, extra limbs, long body, crop, zoom, sprite sheet or contact sheet.",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../animations/shiba-bone/01-prepare.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "6809357CA38CCBEC146CD31BD0C5DA92C20AA97638B815F2CB374A7BF62E9E90",
+        "visual": "pass: bone remains held at lips; cheeks puffed and head drawn slightly back; all four paws remain planted; no bead, throwing gesture, detached projectile, hand, weapon, background or shadow"
+      }
+    },
+    {
+      "phase": "release",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character attack animation keyframe, release phase. Input image is the exact new Shiba bone-holding idle. Preserve its exact identity, registration, canvas, scale, footprint, colors, markings, eyebrows, ear shape, tail, line weight, short broad body and camera. Create ONE release keyframe immediately after this Shiba spits its small bone. REMOVE THE BONE COMPLETELY. The mouth becomes a small, clear, round O shape with no tongue or object visible. Nod the head a small but readable distance forward while keeping the torso root fixed. Use focused eyes and eyebrows. Keep all four paws flat on the ground in exactly the same positions; no paw lifts, gestures, or throwing pose. Same 1254x1254 square canvas, body root, size, generous transparent margin, 65-degree high-angle top-down view, downward-right facing direction, one dog, thick black doodle outlines and clean fills. Genuine transparent background. The projectile is separate FX, so nothing appears inside or outside the mouth except the small dark O-shaped mouth. No bone, bead, marble, projectile, raised paw, throwing motion, human hand, weapon, motion lines, spit droplets, particles, effects, background, floor, base disk, shadow, glow, halo, text, clothing, armor, machine, extra limbs, long body, crop, zoom, sprite sheet or contact sheet.",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../animations/shiba-bone/02-release.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "634267532BCE616270EB5690233F614E26939070F2DC82AB136A06D01F65382C",
+        "visual": "pass: small round O-mouth and forward head nod; bone completely absent; all four paws remain planted; no bead, throwing gesture, projectile, hand, weapon, background or shadow"
+      }
+    },
+    {
+      "phase": "recover",
+      "prompt": "Use case: precise-object-edit. Asset type: top-down game character attack animation keyframe, recovery phase. Input image is the exact new Shiba bone-holding idle. Preserve its exact identity, registration, canvas, scale, footprint, colors, markings, eyebrows, ear shape, tail, line weight, short broad body and camera. Create ONE recovery keyframe after this Shiba has spat the small bone. REMOVE THE BONE COMPLETELY. Move the head a small readable distance back toward its original idle position. Close the mouth into a tiny sly, satisfied smirk. Show a brief blink with both eyes squeezed shut while the eyebrows keep the mischievous personality. Keep all four paws flat on the ground in exactly the same positions; no paw lifts, gestures, or throwing pose. Same 1254x1254 square canvas, body root, size, generous transparent margin, 65-degree high-angle top-down view, downward-right facing direction, one dog, thick black doodle outlines and clean fills. Genuine transparent background. Clearly distinct from open O-mouth release and bone-holding idle. No bone, bead, marble, projectile, raised paw, throwing motion, human hand, weapon, motion lines, spit droplets, particles, effects, background, floor, base disk, shadow, glow, halo, text, clothing, armor, machine, extra limbs, long body, crop, zoom, sprite sheet or contact sheet.",
+      "generatedSourcePath": "[local-source-omitted]",
+      "target": "../animations/shiba-bone/03-recover.png",
+      "checks": {
+        "pngDecoded": true,
+        "width": 1254,
+        "height": 1254,
+        "pixelFormat": "Format32bppArgb",
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "4F938B9950522D8EAE7815558BE08AF7825E6BA5738B2A2292EA461744A76215",
+        "visual": "pass: blink, closed sly smirk and head returned back; bone completely absent; all four paws remain planted; no bead, throwing gesture, projectile, hand, weapon, background or shadow"
+      }
+    }
+  ]
+}

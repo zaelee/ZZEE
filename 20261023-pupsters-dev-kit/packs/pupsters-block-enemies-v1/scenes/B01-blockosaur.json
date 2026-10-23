@@ -1,0 +1,46 @@
+{
+  "id": "B01",
+  "slug": "blockosaur",
+  "name": "Blockosaur_Boss",
+  "displayName": "블록사우루스",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "청록색 네모 공룡 몸과 산호빛 넓은 주둥이·등 블록",
+  "role": "대형 돌진형",
+  "roleDescription": "큰 몸과 짧고 굵은 다리로 전방을 묵직하게 밀어붙이는 대형 적 콘셉트.",
+  "hitPoint": [0, 1.5, -2.22],
+  "materials": {
+    "teal": { "color": [0.08, 0.72, 0.62] },
+    "tealDark": { "color": [0.04, 0.55, 0.5] },
+    "coral": { "color": [1.0, 0.3058823529, 0.2745098039] },
+    "yellow": { "color": [1.0, 0.8, 0.18] },
+    "black": { "color": [0.035, 0.04, 0.05] }
+  },
+  "parts": [
+    { "name": "LongBody", "group": "Body", "type": "box", "size": [1.75, 1.28, 2.2], "position": [0, 1.16, 0.25], "rotation": [0, 0, 0], "material": "teal" },
+    { "name": "SquareHead", "group": "Head", "type": "box", "size": [1.9, 1.58, 1.28], "position": [0, 1.7, -0.87], "rotation": [0, 0, 0], "material": "teal" },
+    { "name": "BroadSnout", "group": "Head", "type": "box", "size": [2.2, 0.62, 0.9], "position": [0, 1.38, -1.76], "rotation": [0, 0, 0], "material": "coral" },
+
+    { "name": "LegFrontLeft", "group": "Legs", "type": "box", "size": [0.62, 0.66, 0.72], "position": [-0.66, 0.33, -0.38], "rotation": [0, 0, 0], "material": "tealDark" },
+    { "name": "LegFrontRight", "group": "Legs", "type": "box", "size": [0.62, 0.66, 0.72], "position": [0.66, 0.33, -0.38], "rotation": [0, 0, 0], "material": "teal" },
+    { "name": "LegRearLeft", "group": "Legs", "type": "box", "size": [0.62, 0.66, 0.72], "position": [-0.66, 0.33, 0.94], "rotation": [0, 0, 0], "material": "tealDark" },
+    { "name": "LegRearRight", "group": "Legs", "type": "box", "size": [0.62, 0.66, 0.72], "position": [0.66, 0.33, 0.94], "rotation": [0, 0, 0], "material": "teal" },
+
+    { "name": "BackBlockFront", "group": "Back", "type": "box", "size": [0.72, 0.9, 0.5], "position": [0, 2.25, -0.05], "rotation": [0, 0, 0], "material": "coral" },
+    { "name": "BackBlockMiddle", "group": "Back", "type": "box", "size": [0.58, 0.66, 0.46], "position": [0, 2.1, 0.62], "rotation": [0, 0, 0], "material": "coral" },
+    { "name": "BackBlockRear", "group": "Back", "type": "box", "size": [0.44, 0.48, 0.4], "position": [0, 1.98, 1.12], "rotation": [0, 0, 0], "material": "coral" },
+
+    { "name": "TailRoot", "group": "Tail", "type": "box", "size": [1.1, 0.72, 0.78], "position": [0, 1.12, 1.43], "rotation": [0, 0, 0], "material": "teal" },
+    { "name": "TailMiddle", "group": "Tail", "type": "box", "size": [0.82, 0.56, 0.66], "position": [0, 1.08, 1.82], "rotation": [0, 0, 0], "material": "tealDark" },
+    { "name": "CoralTailTip", "group": "Tail", "type": "box", "size": [0.66, 0.48, 0.54], "position": [0, 1.06, 2.13], "rotation": [0, 0, 0], "material": "coral" },
+
+    { "name": "DotEyeLeft", "group": "Face", "type": "sphere", "size": [0.12, 0.17, 0.05], "position": [-0.5, 1.94, -1.515], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "DotEyeRight", "group": "Face", "type": "sphere", "size": [0.12, 0.17, 0.05], "position": [0.5, 1.94, -1.515], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "NostrilLeft", "group": "Face", "type": "sphere", "size": [0.11, 0.14, 0.05], "position": [-0.48, 1.47, -2.215], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "NostrilRight", "group": "Face", "type": "sphere", "size": [0.11, 0.14, 0.05], "position": [0.48, 1.47, -2.215], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "LowerToothLeft", "group": "Face", "type": "box", "size": [0.24, 0.32, 0.16], "position": [-0.52, 0.94, -2.08], "rotation": [0, 0, 0], "material": "yellow" },
+    { "name": "LowerToothRight", "group": "Face", "type": "box", "size": [0.24, 0.32, 0.16], "position": [0.52, 0.94, -2.08], "rotation": [0, 0, 0], "material": "yellow" }
+  ]
+}

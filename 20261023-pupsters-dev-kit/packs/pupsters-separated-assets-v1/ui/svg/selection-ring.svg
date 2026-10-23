@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none">
+  <title>Selection highlight ring for a character or object</title>
+  <path d="M121 14 C59 12 17 53 15 116 C13 180 55 225 118 226 C182 227 225 184 226 121 C227 58 184 16 121 14 Z" stroke="#171716" stroke-width="15"/>
+  <path d="M121 27 C66 25 29 62 28 117 C27 173 63 212 119 213 C175 214 212 177 213 121 C214 66 176 29 121 27 Z" stroke="#C9E7B7" stroke-width="12"/>
+</svg>

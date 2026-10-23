@@ -1,0 +1,498 @@
+{
+  "id": "E08",
+  "slug": "carrier-cart",
+  "name": "CarrierCart_Enemy",
+  "displayName": "블록 운반차",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "졸린 눈의 황토색 수레와 안에 탄 산호빛 꼬마 블록봇 셋",
+  "role": "적 수송형",
+  "roleDescription": "꼬마 블록봇 셋을 전장 안쪽으로 운반하는 느긋한 수송 적 콘셉트.",
+  "hitPoint": [
+    0,
+    1.02,
+    -0.96
+  ],
+  "materials": {
+    "ochre": {
+      "color": [
+        0.93,
+        0.61,
+        0.12
+      ]
+    },
+    "ochreLight": {
+      "color": [
+        1.0,
+        0.76,
+        0.2
+      ]
+    },
+    "coral": {
+      "color": [
+        1.0,
+        0.3058823529,
+        0.2745098039
+      ]
+    },
+    "wheelDark": {
+      "color": [
+        0.12,
+        0.15,
+        0.24
+      ]
+    },
+    "black": {
+      "color": [
+        0.04,
+        0.04,
+        0.055
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "BedBase",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        2.15,
+        0.3,
+        1.75
+      ],
+      "position": [
+        0,
+        0.62,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochre"
+    },
+    {
+      "name": "BedFloor",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        1.8,
+        0.36,
+        1.42
+      ],
+      "position": [
+        0,
+        0.93,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochreLight"
+    },
+    {
+      "name": "WallFront",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        2.15,
+        0.61,
+        0.18
+      ],
+      "position": [
+        0,
+        1.075,
+        -0.875
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochreLight"
+    },
+    {
+      "name": "WallBack",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        2.15,
+        0.57,
+        0.18
+      ],
+      "position": [
+        0,
+        1.055,
+        0.875
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochre"
+    },
+    {
+      "name": "WallLeft",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        0.18,
+        0.63,
+        1.57
+      ],
+      "position": [
+        -0.985,
+        1.085,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochre"
+    },
+    {
+      "name": "WallRight",
+      "group": "Cart",
+      "type": "box",
+      "size": [
+        0.18,
+        0.63,
+        1.57
+      ],
+      "position": [
+        0.985,
+        1.085,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "ochreLight"
+    },
+    {
+      "name": "WheelFrontLeft",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.36,
+        0.62,
+        0.5
+      ],
+      "position": [
+        -1.07,
+        0.31,
+        -0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wheelDark"
+    },
+    {
+      "name": "WheelRearLeft",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.36,
+        0.62,
+        0.5
+      ],
+      "position": [
+        -1.07,
+        0.31,
+        0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wheelDark"
+    },
+    {
+      "name": "WheelFrontRight",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.36,
+        0.62,
+        0.5
+      ],
+      "position": [
+        1.07,
+        0.31,
+        -0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wheelDark"
+    },
+    {
+      "name": "WheelRearRight",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.36,
+        0.62,
+        0.5
+      ],
+      "position": [
+        1.07,
+        0.31,
+        0.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "wheelDark"
+    },
+    {
+      "name": "SleepyEyeLeft",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.18,
+        0.05
+      ],
+      "position": [
+        -0.43,
+        1.09,
+        -0.98
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "SleepyEyeRight",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.13,
+        0.18,
+        0.05
+      ],
+      "position": [
+        0.43,
+        1.09,
+        -0.98
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotLeft",
+      "group": "Cargo",
+      "type": "box",
+      "size": [
+        0.56,
+        0.58,
+        0.56
+      ],
+      "position": [
+        -0.57,
+        1.35,
+        -0.16
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral"
+    },
+    {
+      "name": "BotRight",
+      "group": "Cargo",
+      "type": "box",
+      "size": [
+        0.56,
+        0.58,
+        0.56
+      ],
+      "position": [
+        0.57,
+        1.35,
+        -0.16
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral"
+    },
+    {
+      "name": "BotRear",
+      "group": "Cargo",
+      "type": "box",
+      "size": [
+        0.56,
+        0.58,
+        0.56
+      ],
+      "position": [
+        0,
+        1.37,
+        0.43
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "coral"
+    },
+    {
+      "name": "BotLeftEyeL",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        -0.67,
+        1.38,
+        -0.445
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotLeftEyeR",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        -0.47,
+        1.38,
+        -0.445
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotRightEyeL",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        0.47,
+        1.38,
+        -0.445
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotRightEyeR",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        0.67,
+        1.38,
+        -0.445
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotRearEyeL",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        -0.1,
+        1.4,
+        0.145
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "BotRearEyeR",
+      "group": "CargoFace",
+      "type": "sphere",
+      "size": [
+        0.08,
+        0.12,
+        0.04
+      ],
+      "position": [
+        0.1,
+        1.4,
+        0.145
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    }
+  ]
+}

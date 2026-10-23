@@ -1,0 +1,45 @@
+{
+  "id": "E06",
+  "slug": "fix-it-bot",
+  "name": "FixItBot_Block",
+  "displayName": "수리 블록봇",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "사각 U자 렌치와 부품 주머니",
+  "role": "지원 수리형",
+  "roleDescription": "주변 적을 보조하고 고치는 지원형 적 콘셉트.",
+  "hitPoint": [0, 0.86, -0.59],
+  "materials": {
+    "mint": {"color": [0.36, 0.82, 0.61]},
+    "mintDark": {"color": [0.20, 0.60, 0.46]},
+    "black": {"color": [0.035, 0.045, 0.05]},
+    "footDark": {"color": [0.20, 0.25, 0.36]},
+    "toolGray": {"color": [0.72, 0.74, 0.75]},
+    "toolDark": {"color": [0.34, 0.37, 0.40]},
+    "pouchBrown": {"color": [0.55, 0.34, 0.18]},
+    "pouchLight": {"color": [0.72, 0.49, 0.27]},
+    "brickRed": {"color": [0.91, 0.22, 0.18]},
+    "brickBlue": {"color": [0.20, 0.48, 0.88]}
+  },
+  "parts": [
+    {"name": "RepairBody", "group": "Core", "type": "box", "size": [1.20, 1.14, 1.00], "position": [0, 0.82, 0], "rotation": [0, 0, 0], "material": "mint"},
+    {"name": "EyeLeft", "group": "Core", "type": "sphere", "size": [0.13, 0.19, 0.08], "position": [-0.24, 0.91, -0.54], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "EyeRight", "group": "Core", "type": "sphere", "size": [0.13, 0.19, 0.08], "position": [0.24, 0.91, -0.54], "rotation": [0, 0, 0], "material": "black"},
+    {"name": "FootLeft", "group": "Feet", "type": "box", "size": [0.38, 0.30, 0.50], "position": [-0.36, 0.15, 0.16], "rotation": [0, 0, 0], "material": "footDark"},
+    {"name": "FootRight", "group": "Feet", "type": "box", "size": [0.38, 0.30, 0.50], "position": [0.36, 0.15, 0.16], "rotation": [0, 0, 0], "material": "footDark"},
+
+    {"name": "ToolShoulder", "group": "Tool", "type": "box", "size": [0.30, 0.30, 0.34], "position": [0.67, 0.86, 0], "rotation": [0, 0, 0], "material": "mintDark"},
+    {"name": "ToolGrip", "group": "Tool", "type": "box", "size": [0.20, 0.48, 0.20], "position": [0.79, 1.10, 0], "rotation": [0, 0, -0.18], "material": "toolDark"},
+    {"name": "WrenchNeck", "group": "Tool", "type": "box", "size": [0.18, 0.28, 0.18], "position": [0.86, 1.31, 0], "rotation": [0, 0, -0.18], "material": "toolGray"},
+    {"name": "WrenchJawBase", "group": "Tool", "type": "box", "size": [0.46, 0.18, 0.20], "position": [0.90, 1.42, 0], "rotation": [0, 0, 0], "material": "toolGray"},
+    {"name": "WrenchJawLeft", "group": "Tool", "type": "box", "size": [0.17, 0.26, 0.20], "position": [0.75, 1.54, 0], "rotation": [0, 0, 0], "material": "toolGray"},
+    {"name": "WrenchJawRight", "group": "Tool", "type": "box", "size": [0.17, 0.26, 0.20], "position": [1.05, 1.54, 0], "rotation": [0, 0, 0], "material": "toolGray"},
+
+    {"name": "PouchBody", "group": "Pouch", "type": "box", "size": [0.50, 0.58, 0.44], "position": [-0.82, 0.73, -0.08], "rotation": [0, 0, 0], "material": "pouchBrown"},
+    {"name": "PouchFlap", "group": "Pouch", "type": "box", "size": [0.42, 0.17, 0.08], "position": [-0.82, 0.85, -0.34], "rotation": [0, 0, 0], "material": "pouchLight"},
+    {"name": "SpareBrickRed", "group": "Pouch", "type": "box", "size": [0.21, 0.32, 0.29], "position": [-0.94, 1.12, -0.10], "rotation": [0, 0, 0], "material": "brickRed"},
+    {"name": "SpareBrickBlue", "group": "Pouch", "type": "box", "size": [0.21, 0.28, 0.29], "position": [-0.70, 1.10, -0.30], "rotation": [0, 0, 0], "material": "brickBlue"}
+  ]
+}

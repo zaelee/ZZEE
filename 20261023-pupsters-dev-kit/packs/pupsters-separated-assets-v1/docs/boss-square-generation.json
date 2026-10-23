@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "A square 1:1 transparent PNG asset. Single cute toy dinosaur made out of chunky colored blocks, drawn as a very simple flat 2D ink doodle matching the attached little cube character's visual language. The dinosaur has a rounded teal green block head, a broad coral nose, two little yellow teeth, three coral blocks down its back, a tiny tail and four stumpy teal block legs. Friendly sleepy dot eyes. Thick solid black hand-drawn outline. Three simple flat colors plus black. Top-down three-quarter orthographic angle, looking toward bottom right. The dinosaur fits in the central 65% of the square, generous empty transparent space around every side. It is a small clean isolated sticker-like drawing with a hard ink silhouette boundary. Every pixel beyond that boundary is alpha zero. Every internal region is one solid flat color with only simple cel-shaded planes. Plain reusable toy character art. Image contains ONLY the dinosaur, nothing surrounding it, nothing underneath. Square canvas. Transparent background.",
+  "generated": "[local-source-omitted]",
+  "file": "enemies/B01-blockosaur-square.png"
+}

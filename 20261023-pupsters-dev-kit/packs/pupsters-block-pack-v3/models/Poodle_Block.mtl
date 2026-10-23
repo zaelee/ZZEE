@@ -1,0 +1,30 @@
+newmtl peach
+Kd 1.0 0.7215686275 0.3843137255
+Ks 0 0 0
+Ns 8
+d 1
+newmtl cream
+Kd 1.0 0.9411764706 0.7725490196
+Ks 0 0 0
+Ns 8
+d 1
+newmtl black
+Kd 0.1176470588 0.1019607843 0.1098039216
+Ks 0 0 0
+Ns 8
+d 1
+newmtl yellow
+Kd 1.0 0.9254901961 0.1058823529
+Ks 0 0 0
+Ns 8
+d 1
+newmtl cyan
+Kd 0.0784313725 0.8 0.9411764706
+Ks 0 0 0
+Ns 8
+d 1
+newmtl electricWhite
+Kd 1.0 1.0 0.91
+Ks 0 0 0
+Ns 8
+d 1

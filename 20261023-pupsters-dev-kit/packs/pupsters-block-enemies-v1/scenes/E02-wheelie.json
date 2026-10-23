@@ -1,0 +1,225 @@
+{
+  "id": "E02",
+  "slug": "wheelie",
+  "name": "Wheelie_Enemy",
+  "displayName": "바퀴 블록봇",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "낮은 노랑 몸체와 네모 바퀴",
+  "role": "고속 이동형",
+  "roleDescription": "낮은 차체로 빠르게 접근해 빈틈을 파고드는 이동 적 콘셉트.",
+  "hitPoint": [
+    0,
+    0.7,
+    -0.53
+  ],
+  "materials": {
+    "yellow": {
+      "color": [
+        1.0,
+        0.7843137255,
+        0.0588235294
+      ]
+    },
+    "yellowTop": {
+      "color": [
+        1.0,
+        0.8666666667,
+        0.1960784314
+      ]
+    },
+    "navy": {
+      "color": [
+        0.1137254902,
+        0.1647058824,
+        0.3137254902
+      ]
+    },
+    "hub": {
+      "color": [
+        0.8588235294,
+        0.862745098,
+        0.7803921569
+      ]
+    },
+    "black": {
+      "color": [
+        0.0862745098,
+        0.0784313725,
+        0.0901960784
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "LowChassis",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.8,
+        0.34,
+        1.0
+      ],
+      "position": [
+        0,
+        0.38,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "LowBody",
+      "group": "Body",
+      "type": "box",
+      "size": [
+        1.7,
+        0.65,
+        0.96
+      ],
+      "position": [
+        0,
+        0.75,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "yellowTop"
+    },
+    {
+      "name": "WheelL",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.32,
+        0.72,
+        0.72
+      ],
+      "position": [
+        -0.94,
+        0.36,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "HubL",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.08,
+        0.3,
+        0.3
+      ],
+      "position": [
+        -1.14,
+        0.36,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "hub"
+    },
+    {
+      "name": "WheelR",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.32,
+        0.72,
+        0.72
+      ],
+      "position": [
+        0.94,
+        0.36,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "HubR",
+      "group": "Wheels",
+      "type": "box",
+      "size": [
+        0.08,
+        0.3,
+        0.3
+      ],
+      "position": [
+        1.14,
+        0.36,
+        0.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "hub"
+    },
+    {
+      "name": "DotEyeL",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.11,
+        0.15,
+        0.05
+      ],
+      "position": [
+        -0.3,
+        0.7,
+        -0.505
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    },
+    {
+      "name": "DotEyeR",
+      "group": "Face",
+      "type": "sphere",
+      "size": [
+        0.11,
+        0.15,
+        0.05
+      ],
+      "position": [
+        0.3,
+        0.7,
+        -0.505
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "black"
+    }
+  ]
+}

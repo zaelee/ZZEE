@@ -1,0 +1,31 @@
+{
+  "id": "E03",
+  "slug": "brick-bruiser",
+  "name": "BrickBruiser_Enemy",
+  "displayName": "벽돌 덩치",
+  "version": 1,
+  "units": "studs",
+  "up": "+Y",
+  "front": "-Z",
+  "feature": "넓은 초록 벽돌 3단과 굵은 발",
+  "role": "고내구 길막형",
+  "roleDescription": "넓은 몸으로 이동 경로를 막고 오래 버티는 중장 적 콘셉트.",
+  "hitPoint": [0, 1.62, -0.56],
+  "materials": {
+    "green": { "color": [0.3215686275, 0.6862745098, 0.2078431373] },
+    "greenLight": { "color": [0.4941176471, 0.8196078431, 0.2862745098] },
+    "seam": { "color": [0.1176470588, 0.2862745098, 0.1058823529] },
+    "black": { "color": [0.0862745098, 0.0784313725, 0.0901960784] }
+  },
+  "parts": [
+    { "name": "BrickBottom", "group": "Armor", "type": "box", "size": [2.05, 0.56, 1.05], "position": [-0.03, 0.56, 0], "rotation": [0, 0, 0], "material": "green" },
+    { "name": "BrickMiddle", "group": "Armor", "type": "box", "size": [2.1, 0.56, 1.05], "position": [0.03, 1.1, 0], "rotation": [0, 0, 0], "material": "greenLight" },
+    { "name": "BrickTop", "group": "Armor", "type": "box", "size": [2.0, 0.6, 1.05], "position": [0, 1.68, 0], "rotation": [0, 0, 0], "material": "greenLight" },
+    { "name": "LowerBrickSeam", "group": "Armor", "type": "box", "size": [2.0, 0.08, 0.06], "position": [0, 0.83, -0.555], "rotation": [0, 0, 0], "material": "seam" },
+    { "name": "UpperBrickSeam", "group": "Armor", "type": "box", "size": [1.98, 0.08, 0.06], "position": [0, 1.38, -0.555], "rotation": [0, 0, 0], "material": "seam" },
+    { "name": "HeavyFootL", "group": "Feet", "type": "box", "size": [0.72, 0.32, 0.76], "position": [-0.72, 0.16, 0.1], "rotation": [0, 0, 0], "material": "green" },
+    { "name": "HeavyFootR", "group": "Feet", "type": "box", "size": [0.72, 0.32, 0.76], "position": [0.72, 0.16, 0.1], "rotation": [0, 0, 0], "material": "green" },
+    { "name": "DotEyeL", "group": "Face", "type": "sphere", "size": [0.13, 0.17, 0.05], "position": [-0.38, 1.62, -0.55], "rotation": [0, 0, 0], "material": "black" },
+    { "name": "DotEyeR", "group": "Face", "type": "sphere", "size": [0.13, 0.17, 0.05], "position": [0.38, 1.62, -0.55], "rotation": [0, 0, 0], "material": "black" }
+  ]
+}

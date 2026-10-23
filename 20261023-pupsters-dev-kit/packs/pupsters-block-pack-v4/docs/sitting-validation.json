@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "id": "D01",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.18000000000000005,
+        0.3999999999999999
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    },
+    {
+      "id": "D02",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.15000000000000002,
+        0.40000000000000013
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    },
+    {
+      "id": "D03",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.19999999999999996,
+        0.32000000000000006
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    },
+    {
+      "id": "D04",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.20000000000000007,
+        0.2999999999999998
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    },
+    {
+      "id": "D05",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.19999999999999996,
+        0.2999999999999998
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    },
+    {
+      "id": "D06",
+      "headAndAccessoriesRigidlyPreserved": true,
+      "mouthShift": [
+        0.0,
+        0.19999999999999984,
+        0.30000000000000004
+      ],
+      "groundedRump": true,
+      "lowFoldedHindLegs": true,
+      "structuralAabbsConnected": true
+    }
+  ],
+  "basePoodleZigzags": 1,
+  "baseZigzagBars": 3,
+  "headGapStuds": 0.1299999999999999,
+  "upgradeFxParts": 20,
+  "baseAndUpgradeBodiesMatch": true,
+  "visualReview": "All seven representative renders and four-view sheets inspected; corrected foreleg gaps and tail overlap.",
+  "studioTested": false,
+  "browserViewerTested": false
+}

@@ -1,0 +1,235 @@
+{
+  "version": 2,
+  "date": "2026-10-23",
+  "style": "distinct blunt block silhouettes",
+  "models": [
+    {
+      "id": "D01",
+      "slug": "shiba",
+      "name": "Shiba_Block",
+      "displayName": "시바멈",
+      "feature": "짧고 뭉툭한 귀 · 작은 흰 눈썹",
+      "attackName": "뼈다귀 뱉기",
+      "attackMethod": "입에 문 작은 뼈를 앞으로 퉤! 뱉어요.",
+      "mouth": [
+        0,
+        0.82,
+        -1.48
+      ],
+      "scene": "scenes/D01-shiba.json",
+      "native": "native/D01-shiba.rbxmx",
+      "builder": "native/Build-D01-shiba.luau",
+      "gltf": "models/Shiba_Block.gltf",
+      "glb": "models/Shiba_Block.glb",
+      "obj": "models/Shiba_Block.obj",
+      "mtl": "models/Shiba_Block.mtl",
+      "preview": "previews/D01-shiba.png",
+      "views": "previews/D01-shiba-views.png",
+      "parts": 30,
+      "triangles": 984,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.08,
+          0.0,
+          -1.57
+        ],
+        "max": [
+          1.08,
+          2.6750000000000003,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "D02",
+      "slug": "bulldog",
+      "name": "Bulldog_Block",
+      "displayName": "불돔",
+      "feature": "넓고 납작한 얼굴 · 빵빵한 볼",
+      "attackName": "압축 공기탄",
+      "attackMethod": "양 볼에 공기를 모은 뒤 입으로 공기 충격탄을 뿜어요.",
+      "mouth": [
+        0,
+        0.78,
+        -1.78
+      ],
+      "scene": "scenes/D02-bulldog.json",
+      "native": "native/D02-bulldog.rbxmx",
+      "builder": "native/Build-D02-bulldog.luau",
+      "gltf": "models/Bulldog_Block.gltf",
+      "glb": "models/Bulldog_Block.glb",
+      "obj": "models/Bulldog_Block.obj",
+      "mtl": "models/Bulldog_Block.mtl",
+      "preview": "previews/D02-bulldog.png",
+      "views": "previews/D02-bulldog-views.png",
+      "parts": 27,
+      "triangles": 636,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.525,
+          0.0,
+          -1.7875
+        ],
+        "max": [
+          1.525,
+          2.02,
+          1.62
+        ]
+      }
+    },
+    {
+      "id": "D03",
+      "slug": "husky",
+      "name": "Husky_Block",
+      "displayName": "머스키",
+      "feature": "사각 얼음 귀끝·좁고 긴 회색 얼굴",
+      "attackName": "냉기 숨결",
+      "attackMethod": "입 앞에서 차가운 숨결을 곧게 내뿜어요.",
+      "mouth": [
+        0,
+        0.96,
+        -1.425
+      ],
+      "scene": "scenes/D03-husky.json",
+      "native": "native/D03-husky.rbxmx",
+      "builder": "native/Build-D03-husky.luau",
+      "gltf": "models/Husky_Block.gltf",
+      "glb": "models/Husky_Block.glb",
+      "obj": "models/Husky_Block.obj",
+      "mtl": "models/Husky_Block.mtl",
+      "preview": "previews/D03-husky.png",
+      "views": "previews/D03-husky-views.png",
+      "parts": 36,
+      "triangles": 744,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -0.97,
+          0.0,
+          -1.5
+        ],
+        "max": [
+          0.97,
+          2.93,
+          1.3
+        ]
+      }
+    },
+    {
+      "id": "D04",
+      "slug": "beagle",
+      "name": "Beagle_Block",
+      "displayName": "미글",
+      "feature": "긴 네모 귀 · 삼색 얼굴 · 파란 침",
+      "attackName": "침방울 튕기기",
+      "attackMethod": "입가의 작은 침방울을 앞으로 톡! 튕겨요.",
+      "mouth": [
+        0,
+        0.91,
+        -1.42
+      ],
+      "scene": "scenes/D04-beagle.json",
+      "native": "native/D04-beagle.rbxmx",
+      "builder": "native/Build-D04-beagle.luau",
+      "gltf": "models/Beagle_Block.gltf",
+      "glb": "models/Beagle_Block.glb",
+      "obj": "models/Beagle_Block.obj",
+      "mtl": "models/Beagle_Block.mtl",
+      "preview": "previews/D04-beagle.png",
+      "views": "previews/D04-beagle-views.png",
+      "parts": 25,
+      "triangles": 612,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.33,
+          0.0,
+          -1.515
+        ],
+        "max": [
+          1.33,
+          2.21,
+          1.2999999999999998
+        ]
+      }
+    },
+    {
+      "id": "D05",
+      "slug": "poodle",
+      "name": "Poodle_Block",
+      "displayName": "무들",
+      "feature": "계단 털뭉치 · 노랑·하늘 전기",
+      "attackName": "정전기 찌릿",
+      "attackMethod": "머리와 귀 끝의 전기털로 짧게 찌릿! 방전해요.",
+      "mouth": [
+        0,
+        0.96,
+        -1.4
+      ],
+      "scene": "scenes/D05-poodle.json",
+      "native": "native/D05-poodle.rbxmx",
+      "builder": "native/Build-D05-poodle.luau",
+      "gltf": "models/Poodle_Block.gltf",
+      "glb": "models/Poodle_Block.glb",
+      "obj": "models/Poodle_Block.obj",
+      "mtl": "models/Poodle_Block.mtl",
+      "preview": "previews/D05-poodle.png",
+      "views": "previews/D05-poodle-views.png",
+      "parts": 33,
+      "triangles": 708,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.5499999999999998,
+          0.0,
+          -1.4249999999999998
+        ],
+        "max": [
+          1.5499999999999998,
+          2.56,
+          1.268
+        ]
+      }
+    },
+    {
+      "id": "D06",
+      "slug": "border-collie",
+      "name": "BorderCollie_Block",
+      "displayName": "모더콜리",
+      "feature": "짝귀·네모 볼털·낡은 골판지 왕관",
+      "attackName": "응원 짖기",
+      "attackMethod": "입 앞에서 힘차게 짖어 아군을 응원해요.",
+      "mouth": [
+        0,
+        0.93,
+        -1.455
+      ],
+      "scene": "scenes/D06-border-collie.json",
+      "native": "native/D06-border-collie.rbxmx",
+      "builder": "native/Build-D06-border-collie.luau",
+      "gltf": "models/BorderCollie_Block.gltf",
+      "glb": "models/BorderCollie_Block.glb",
+      "obj": "models/BorderCollie_Block.obj",
+      "mtl": "models/BorderCollie_Block.mtl",
+      "preview": "previews/D06-border-collie.png",
+      "views": "previews/D06-border-collie-views.png",
+      "parts": 37,
+      "triangles": 756,
+      "largestMeshTriangles": 168,
+      "bounds": {
+        "min": [
+          -1.1,
+          0.0,
+          -1.52
+        ],
+        "max": [
+          1.1,
+          2.7,
+          1.47
+        ]
+      }
+    }
+  ]
+}

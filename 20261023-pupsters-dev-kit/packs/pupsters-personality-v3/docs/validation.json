@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "date": "2026-10-23",
+  "images": [
+    {
+      "id": "D01",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "382a0881484b53253b3b2e1851aeb17d598840adf5abdf59db7c1085acadcc77"
+    },
+    {
+      "id": "D02",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "5171b603fff37daa89b8cc6209e468a2de2bc129874ba6c27fc507c30fb211ef"
+    },
+    {
+      "id": "D03",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "9b5e586a5418429e3a3e25136442caa07fb70e4354aab6cd9ff5d4f3212cbb14"
+    },
+    {
+      "id": "D04",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "637e327f07975fe99d3e55beb6aa4bbf44544a63bb1be7e862d67e4bfdb9b835"
+    },
+    {
+      "id": "D05",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "77e83122e01077d5d8b5773bb953ac090b4afc841ba6b72a1c37b3055f15dda3"
+    },
+    {
+      "id": "D06",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "78571204717ebe582b2a54210606488ba823ed2381296a06485cabbf0f8780a0"
+    }
+  ],
+  "loadedImages": 12,
+  "beforeComparisonToggle": true,
+  "desktopOverflow": false,
+  "mobileOverflow": false,
+  "browserErrors": []
+}

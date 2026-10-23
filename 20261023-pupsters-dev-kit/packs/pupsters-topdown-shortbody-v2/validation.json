@@ -1,0 +1,26 @@
+[
+  {
+    "File": "01-maltese-topdown-short.png",
+    "Width": 1254,
+    "Height": 1254,
+    "CornerAlpha": 0
+  },
+  {
+    "File": "02-shiba-topdown-short.png",
+    "Width": 1254,
+    "Height": 1254,
+    "CornerAlpha": 0
+  },
+  {
+    "File": "03-bulldog-topdown-short.png",
+    "Width": 1254,
+    "Height": 1254,
+    "CornerAlpha": 0
+  },
+  {
+    "File": "04-solo-battle-shortbody.png",
+    "Width": 1673,
+    "Height": 940,
+    "CornerAlpha": 255
+  }
+]
