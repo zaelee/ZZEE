@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "checks": 40,
+  "method": "Node VM event handlers and generated markup; no browser, layout, or real click verification",
+  "routes": 10
+}

@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const dataContext={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'data.js'),'utf8'),dataContext);
+const data=dataContext.window.PUPSTERS_DATA;
+const scan=(dir)=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?scan(path.join(dir,e.name)):[path.join(dir,e.name)]);
+const artStats=JSON.parse(fs.readFileSync(path.join(root,'docs/artwork-check.json'),'utf8'));
+const assets=scan(path.join(root,'assets')).map(file=>{
+  const relative=path.relative(root,file).replaceAll('\\','/');
+  const dog=data.dogs.find(d=>d.image===relative||d.effect===relative);
+  const enemy=data.enemies.find(e=>e.image===relative);
+  const stat=artStats.find(s=>s.file===relative);
+  return {file:relative,category:relative.split('/')[1],name:dog?.name||enemy?.name||path.basename(file),bytes:fs.statSync(file).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),...(stat?{width:stat.width,height:stat.height,transparent:stat.transparent_corners}:{format:'SVG'})};
+});
+if(assets.length!==41) throw new Error(`Expected41 assets, found ${assets.length}`);
+fs.writeFileSync(path.join(root,'docs/asset-manifest.json'),JSON.stringify({title:'사고멍치 / PUPSTERS 2D 리디자인',date:'2026-10-26',entry:'index.html',assetCount:assets.length,counts:{characters:6,enemies:9,backgrounds:1,ui:19,effects:6},assets},null,2));
+console.log(`Manifest saved: ${assets.length} assets with hashes.`);

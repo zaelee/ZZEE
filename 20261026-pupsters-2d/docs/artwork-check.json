@@ -1,0 +1,258 @@
+[
+  {
+    "file": "assets/backgrounds/living-room.png",
+    "width": 1672,
+    "height": 941,
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "visible_bounds": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "transparent_corners": false
+  },
+  {
+    "file": "assets/characters/D01-shiba.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      176,
+      84,
+      1159,
+      1157
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/characters/D02-bulldog.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      163,
+      127,
+      1110,
+      1151
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/characters/D03-husky.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      184,
+      81,
+      1160,
+      1177
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/characters/D04-beagle.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      106,
+      138,
+      1166,
+      1151
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/characters/D05-poodle.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      127,
+      89,
+      1146,
+      1166
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/characters/D06-collie.png",
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      188,
+      87,
+      1175,
+      1164
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/B01-blockosaur.png",
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      22,
+      29,
+      1286,
+      1179
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E01-block-bot.png",
+    "width": 1305,
+    "height": 1205,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      235,
+      221,
+      1099,
+      1028
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E02-wheelie.png",
+    "width": 1402,
+    "height": 1122,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      137,
+      252,
+      1287,
+      878
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E03-brick-bruiser.png",
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      105,
+      125,
+      1259,
+      1144
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E04-shellback.png",
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      155,
+      188,
+      1160,
+      1021
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E05-split-stack.png",
+    "width": 1199,
+    "height": 1312,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      366,
+      122,
+      888,
+      1212
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E06-fix-it-bot.png",
+    "width": 1330,
+    "height": 1182,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      149,
+      181,
+      1149,
+      1030
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E07-clear-crawler.png",
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      217,
+      234,
+      1119,
+      1020
+    ],
+    "transparent_corners": true
+  },
+  {
+    "file": "assets/enemies/E08-carrier-cart.png",
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      76,
+      136,
+      1242,
+      1001
+    ],
+    "transparent_corners": true
+  }
+]

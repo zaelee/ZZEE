@@ -1,0 +1,375 @@
+{
+  "title": "사고멍치 / PUPSTERS 2D 리디자인",
+  "date": "2026-10-26",
+  "entry": "index.html",
+  "assetCount": 41,
+  "counts": {
+    "characters": 6,
+    "enemies": 9,
+    "backgrounds": 1,
+    "ui": 19,
+    "effects": 6
+  },
+  "assets": [
+    {
+      "file": "assets/backgrounds/living-room.png",
+      "category": "backgrounds",
+      "name": "living-room.png",
+      "bytes": 1405525,
+      "sha256": "c050eecf70d10fb479afd3f3a993d3e33d2fd96e99d328897937d69fb8cf3c73",
+      "width": 1672,
+      "height": 941,
+      "transparent": false
+    },
+    {
+      "file": "assets/characters/D01-shiba.png",
+      "category": "characters",
+      "name": "시바멈",
+      "bytes": 919595,
+      "sha256": "f4e509fd88af89498a3ed8e38c6eb783f7f72b8c206d72c918b57f2b74eb0e1a",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/characters/D02-bulldog.png",
+      "category": "characters",
+      "name": "불돔",
+      "bytes": 881001,
+      "sha256": "8f5dc8609ae2da753bc4683d3aca7386866ae37626b89bc902962cecbc67b3a8",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/characters/D03-husky.png",
+      "category": "characters",
+      "name": "머스키",
+      "bytes": 889021,
+      "sha256": "85f285c5c28428611544116c558395e4433e68149f70af5ec7448a2dfda489e4",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/characters/D04-beagle.png",
+      "category": "characters",
+      "name": "미글",
+      "bytes": 927429,
+      "sha256": "9d30143827e006900343fd2317400dd38dae34c6f04725bf4dd7e1b6ca477812",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/characters/D05-poodle.png",
+      "category": "characters",
+      "name": "무들",
+      "bytes": 880899,
+      "sha256": "4a338a0e6e0e12f1366fd97cba297ba0daf4fb0b5bb887c14d376eb24921f768",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/characters/D06-collie.png",
+      "category": "characters",
+      "name": "모더콜리",
+      "bytes": 942212,
+      "sha256": "e79effb221df9cac6776401f516213a8ce524848175e69efc1ff96d40daa1eda",
+      "width": 1254,
+      "height": 1254,
+      "transparent": true
+    },
+    {
+      "file": "assets/effects/fx-air.svg",
+      "category": "effects",
+      "name": "불돔",
+      "bytes": 379,
+      "sha256": "11587279724f4f55680cab7106769caa140ee725a3f680788fbba0909baf5068",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/effects/fx-bark.svg",
+      "category": "effects",
+      "name": "모더콜리",
+      "bytes": 340,
+      "sha256": "e521fce9695e8402c342060d5537e4e85fbeda44f02faec73ff26da700f6222d",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/effects/fx-bone.svg",
+      "category": "effects",
+      "name": "시바멈",
+      "bytes": 329,
+      "sha256": "b6e6c6c0c394db24e4d5f4515c24d04e354a8ac60faa06394427896d0262b1d0",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/effects/fx-frost.svg",
+      "category": "effects",
+      "name": "머스키",
+      "bytes": 379,
+      "sha256": "427e84f53dc428c77f90ea575ea96ffcafca17c5fa1b4fa8370e6f7b4c099e3e",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/effects/fx-saliva.svg",
+      "category": "effects",
+      "name": "미글",
+      "bytes": 409,
+      "sha256": "044d22298bbc0e5eb6ce4acc48939a654fa389e54a82f41fe7c9f3c3cde81576",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/effects/fx-static.svg",
+      "category": "effects",
+      "name": "무들",
+      "bytes": 323,
+      "sha256": "473b106e5b8a743b0d117c19f6f5d5638b4c85c8bc1921c98c5cd6aff9caade1",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/enemies/B01-blockosaur.png",
+      "category": "enemies",
+      "name": "블록사우루스",
+      "bytes": 1225949,
+      "sha256": "e6f02b05dbba4c7be5214a04fead029c56fdb5e594cdfc4304234788216c766d",
+      "width": 1312,
+      "height": 1199,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E01-block-bot.png",
+      "category": "enemies",
+      "name": "기본 블록봇",
+      "bytes": 633004,
+      "sha256": "afd297ed7be504ef921fddd2f799a683051ace8b05d90290cd9a613205115e51",
+      "width": 1305,
+      "height": 1205,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E02-wheelie.png",
+      "category": "enemies",
+      "name": "바퀴 블록봇",
+      "bytes": 634685,
+      "sha256": "33c3634ec9ef92d7c3f572566b66e526e80a10e25011d85c6a4fc6e8a501ae8f",
+      "width": 1402,
+      "height": 1122,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E03-brick-bruiser.png",
+      "category": "enemies",
+      "name": "벽돌 덩치",
+      "bytes": 1024400,
+      "sha256": "9765ba49713ccfc31e50fd30c1c14b43518e9f702d40891bfeec6940ff58cc52",
+      "width": 1312,
+      "height": 1199,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E04-shellback.png",
+      "category": "enemies",
+      "name": "장갑 블록봇",
+      "bytes": 747210,
+      "sha256": "2c0d032f554dbbd7c0c00a6973e658e7c49b0a45da935bbf0b9498b4a0e9fbdf",
+      "width": 1312,
+      "height": 1199,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E05-split-stack.png",
+      "category": "enemies",
+      "name": "분열 블록봇",
+      "bytes": 623323,
+      "sha256": "8cce390285e638d88f15ea864a5fad8cf8878eadd61c517075230ae5c32191ea",
+      "width": 1199,
+      "height": 1312,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E06-fix-it-bot.png",
+      "category": "enemies",
+      "name": "수리 블록봇",
+      "bytes": 814433,
+      "sha256": "3356822f1ff1487e1e86a33d87499357cff25aa5602b3c8d5ff85791f8b5e711",
+      "width": 1330,
+      "height": 1182,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E07-clear-crawler.png",
+      "category": "enemies",
+      "name": "투명 블록봇",
+      "bytes": 672518,
+      "sha256": "3ff2b4c90f51c15ec9b2df17c809879eefa2defdc99ed1820a809c2cd3774bb1",
+      "width": 1312,
+      "height": 1199,
+      "transparent": true
+    },
+    {
+      "file": "assets/enemies/E08-carrier-cart.png",
+      "category": "enemies",
+      "name": "블록 운반차",
+      "bytes": 1038142,
+      "sha256": "36198a35ae557478e2565c3c0817a2a62773d1aca1c5d3076595badcd0afc768",
+      "width": 1312,
+      "height": 1199,
+      "transparent": true
+    },
+    {
+      "file": "assets/ui/button-default.svg",
+      "category": "ui",
+      "name": "button-default.svg",
+      "bytes": 325,
+      "sha256": "2ae6c587b611711c90ab4cf2c855d991b2a67cc6e93d7ed383c1a1df4a999be2",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/button-disabled.svg",
+      "category": "ui",
+      "name": "button-disabled.svg",
+      "bytes": 430,
+      "sha256": "158d991c25c138781cfbf2ecfe9966dd3fca9ada40a746e059ffb01d41cf8d91",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/button-selected.svg",
+      "category": "ui",
+      "name": "button-selected.svg",
+      "bytes": 447,
+      "sha256": "05b6a566a1a3f66a981e4c55516c9bf4f9f2880299289d51eeacb4cf6de2cbb9",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-arrow.svg",
+      "category": "ui",
+      "name": "icon-arrow.svg",
+      "bytes": 205,
+      "sha256": "6765a5312a0521f672a1b103634fe2aa15368d490ad1cf88a3769c0cf59d5899",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-bolt.svg",
+      "category": "ui",
+      "name": "icon-bolt.svg",
+      "bytes": 187,
+      "sha256": "dba0c5e16294e725dd6382f401afb88e787e97244f000f35fc9ba296329a9492",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-bone.svg",
+      "category": "ui",
+      "name": "icon-bone.svg",
+      "bytes": 226,
+      "sha256": "3d4273066888aefe265d0a9b735bdfffca62276e70024fa50ad803209f7ae080",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-coin.svg",
+      "category": "ui",
+      "name": "icon-coin.svg",
+      "bytes": 365,
+      "sha256": "3171a5c9554e56a7524f59a11ab90c66324cd7c4a3d232c266d96ca338744159",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-crown.svg",
+      "category": "ui",
+      "name": "icon-crown.svg",
+      "bytes": 389,
+      "sha256": "d28cdc59ea210260526310eba56ef94dbe4010740716cd05b71cddff9e35b6d1",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-frost.svg",
+      "category": "ui",
+      "name": "icon-frost.svg",
+      "bytes": 409,
+      "sha256": "f431273d12d616ed6727e1a8b64022ddd346c2ceea7875f7960291d8278d2ecb",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-heart.svg",
+      "category": "ui",
+      "name": "icon-heart.svg",
+      "bytes": 222,
+      "sha256": "673573a4e52033a4f97b7faaa835ef4a625a89fc60ccca81e19c51a0639235f9",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-pause.svg",
+      "category": "ui",
+      "name": "icon-pause.svg",
+      "bytes": 254,
+      "sha256": "0819d7fd5fdb71903038e3d4e66c2cfb79d7e0c0a78a36545806998af8d4712c",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-paw.svg",
+      "category": "ui",
+      "name": "icon-paw.svg",
+      "bytes": 602,
+      "sha256": "914dd7ab8fe038f9c459fd29e5e8e1255c21810ed4e7ac73bd855edfb1d07ab8",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-play.svg",
+      "category": "ui",
+      "name": "icon-play.svg",
+      "bytes": 199,
+      "sha256": "11e033d135ffff2636f715d3503cdd614aa7b7460715255d6546dd0e841b30e9",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-settings.svg",
+      "category": "ui",
+      "name": "icon-settings.svg",
+      "bytes": 356,
+      "sha256": "8b357103f4e9748d8c596537f93fcacf6a9971653d75da477f66e3d3d3610b86",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/icon-speaker.svg",
+      "category": "ui",
+      "name": "icon-speaker.svg",
+      "bytes": 310,
+      "sha256": "6ecd7d2eeb486a99700fdb97e5dae804f55f84dce8bdf4f40fd50c1d46ef46e9",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/panel.svg",
+      "category": "ui",
+      "name": "panel.svg",
+      "bytes": 383,
+      "sha256": "e3ebbfea44b372281febd1709bd1f71d6f4cf0c07e4400a0c3e27a423ad3ef37",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/path-overlay.svg",
+      "category": "ui",
+      "name": "path-overlay.svg",
+      "bytes": 598,
+      "sha256": "02b680c10b2c67973c7a07d171c3d266101b3663858fe573fb30db4428fc29d5",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/placement-slot.svg",
+      "category": "ui",
+      "name": "placement-slot.svg",
+      "bytes": 345,
+      "sha256": "56fa95a0739a8022482c752b3710e046fc41d6f6b0391fee0941e057c3dac119",
+      "format": "SVG"
+    },
+    {
+      "file": "assets/ui/progress-bar.svg",
+      "category": "ui",
+      "name": "progress-bar.svg",
+      "bytes": 376,
+      "sha256": "627020ae34e3d94c698d26b40de4a8165ae0862bb06183c8ce5dacd949f57826",
+      "format": "SVG"
+    }
+  ]
+}

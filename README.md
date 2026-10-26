@@ -4,6 +4,8 @@
 
 ## Projects
 
+- [사고멍치 2D 최신 작업본](20261026-pupsters-2d/README.md): 강아지 6종·몹 9종·UI 10개 화면·선 두께 기준과 이어서 작업할 메모
+
 - [사고멍치 제작 기록과 개발 키트](20261023-pupsters-dev-kit/README.md): 22개 아트·3D 버전, Roblox 파일, 모션, 맵, 제작 스킬과 인수인계
 
 - `kitchen-setup/`: 자취방 주방 준비 목록·품목별 규격·공식 상품 링크·인수인계 ([HANDOFF.md](kitchen-setup/HANDOFF.md))
