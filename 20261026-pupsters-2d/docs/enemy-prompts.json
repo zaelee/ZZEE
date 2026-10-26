@@ -1,0 +1,59 @@
+{
+  "style_reference": "assets/characters/D01-shiba.png",
+  "assets": [
+    {
+      "id": "E01",
+      "file": "E01-block-bot.png",
+      "prompt": "Coral pink squat square toy blockbot, tiny dot eyes, off-center grumpy mouth, two stub dark feet, one shallow top stud; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra parts.",
+      "final_path": "assets/enemies/E01-block-bot.png"
+    },
+    {
+      "id": "E02",
+      "file": "E02-wheelie.png",
+      "prompt": "Mustard yellow low wide squat toy blockbot car, exactly two visible chunky round dark wheels, cheeky dot/slit eyes; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no glow, dogs, bones, text, border, ground, shadow, realism, or extra wheels.",
+      "final_path": "assets/enemies/E02-wheelie.png"
+    },
+    {
+      "id": "E03",
+      "file": "E03-brick-bruiser.png",
+      "prompt": "Broad sage green tank of three stacked horizontal toy bricks, angry dot eyes on top, stout feet, tiny block fists; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra parts.",
+      "final_path": "assets/enemies/E03-brick-bruiser.png"
+    },
+    {
+      "id": "E04",
+      "file": "E04-shellback.png",
+      "prompt": "Squat slate-blue blockbot under three overlapping rounded armor plates, narrow eye slit under front plate, two small feet; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra parts.",
+      "final_path": "assets/enemies/E04-shellback.png"
+    },
+    {
+      "id": "E05",
+      "file": "E05-split-stack.png",
+      "prompt": "Three lavender cubes stacked slightly crooked vertically, each with a tiny simple face, bottom two feet; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra parts.",
+      "final_path": "assets/enemies/E05-split-stack.png"
+    },
+    {
+      "id": "E06",
+      "file": "E06-fix-it-bot.png",
+      "prompt": "Mint square toy mechanic with cream bandage mark, two stub feet, one tiny blunt gray toy wrench at side, dot eyes; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra tools.",
+      "final_path": "assets/enemies/E06-fix-it-bot.png"
+    },
+    {
+      "id": "E07",
+      "file": "E07-clear-crawler.png",
+      "prompt": "Pale icy-blue translucent cuboid crawler, dark readable contour and eyes, faint interior cube edges, two white gleam strokes, four very short nubs; genuinely transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra parts.",
+      "final_path": "assets/enemies/E07-clear-crawler.png"
+    },
+    {
+      "id": "E08",
+      "file": "E08-carrier-cart.png",
+      "prompt": "Ochre cart on exactly two visible round dark wheels carrying three coral blockbot heads inside; grouped single enemy, no detached bots; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra wheels.",
+      "final_path": "assets/enemies/E08-carrier-cart.png"
+    },
+    {
+      "id": "B01",
+      "file": "B01-blockosaur.png",
+      "prompt": "Large cute teal/coral toy-block dinosaur boss, broad rounded rectangular head with goofy underbite, short broad body, two stout legs, two tiny arms, one chunky curled tail, three rounded coral back plates, simple toy brick seams; transparent background; thick rounded irregular dark brown marker outline, flat indie doodle colors; no dogs, bones, text, border, ground, shadow, realism, or extra limbs/heads.",
+      "final_path": "assets/enemies/B01-blockosaur.png"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f0df">
+  <title>사고멍치 PUPSTERS — 2D 게임 화면 디자인</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">본문으로 건너뛰기</a>
+  <header class="review-bar">
+    <a class="review-brand" href="#home" data-route="home" aria-label="사고멍치 홈">
+      <span class="brand-paw" aria-hidden="true">●</span>
+      <span><b>사고멍치</b><small>PUPSTERS</small></span>
+    </a>
+    <span class="review-note">UI 프로토타입 · 수치와 능력은 디자인 샘플</span>
+    <nav class="review-nav" aria-label="화면 검토 메뉴">
+      <button data-route="home">타이틀</button>
+      <button data-route="squad">멍치 편성</button>
+      <button data-route="stages">스테이지</button>
+      <button data-route="battle">솔로 전투</button>
+      <button data-route="coop">함께 놀기</button>
+      <button data-route="boss">보스</button>
+      <button data-route="victory">승리</button>
+      <button data-route="defeat">패배</button>
+      <button data-route="codex">도감</button>
+      <button data-route="kit">에셋 / UI 킷</button>
+    </nav>
+    <button class="round-tool" id="open-settings" aria-label="설정 열기">
+      <img src="assets/ui/icon-settings.svg" alt="">
+    </button>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+
+  <dialog id="settings-modal" class="ink-modal" aria-labelledby="settings-title">
+    <form method="dialog">
+      <div class="modal-head">
+        <div><p class="eyebrow">잠깐 쉬어가기</p><h2 id="settings-title">설정</h2></div>
+        <button class="round-tool" value="close" aria-label="설정 닫기">×</button>
+      </div>
+      <div class="setting-row"><span><b>배경 음악</b><small>데모 화면의 소리 설정</small></span><button type="button" class="toggle is-on" data-setting="music" aria-pressed="true"><span></span></button></div>
+      <div class="setting-row"><span><b>효과음</b><small>공격과 버튼 소리</small></span><button type="button" class="toggle is-on" data-setting="sfx" aria-pressed="true"><span></span></button></div>
+      <label class="setting-slider"><span><b>전체 음량</b><output id="volume-output">70%</output></span><input id="volume" type="range" min="0" max="100" value="70"></label>
+      <div class="setting-row"><span><b>화면 흔들림</b><small>강한 공격 때만 살짝</small></span><button type="button" class="toggle" data-setting="shake" aria-pressed="false"><span></span></button></div>
+      <p class="modal-note">설정 UI 미리보기입니다. 음원은 포함하지 않았어요. 기기의 ‘동작 줄이기’ 설정을 우선해서 따릅니다.</p>
+      <button class="shape-button selected wide" value="close">돌아가기</button>
+    </form>
+  </dialog>
+
+  <noscript><p class="noscript">이 화면 디자인을 살펴보려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

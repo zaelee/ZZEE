@@ -1,0 +1,64 @@
+{
+  "title": "사고멍치 / Pupsters — 2D art direction",
+  "date": "2026-10-26",
+  "latest_feedback": "선두께 일관성 줄 수 있도록 생각하면서 제작해야해",
+  "line_weight_spec": "line-weight-spec.json",
+  "applied_change": "First Shiba nose reduced to approximately 65% of prior width and height. All other characters generated from the corrected small-nose Shiba reference.",
+  "medium": "2D raster character/enemy/background art plus editable native SVG UI/effects",
+  "palette": {
+    "ink": "#29180f",
+    "ivory": "#fff5df",
+    "shiba": "#ffae55",
+    "ice": "#aee7f2",
+    "saliva": "#97d7cf",
+    "electric": "#ffe36c",
+    "poodle": "#c6adff",
+    "crown": "#e3b542"
+  },
+  "proportion": {
+    "nose_width": "Target approximately 25–30% of head width; eye dots remain small",
+    "body": "Seated, very short torso and stubby paws, broad but not obese",
+    "view": "Near-front, slight three-quarter character presentation; not a full directional gameplay sheet"
+  },
+  "signatures": [
+    {
+      "id": "D01",
+      "name": "시바멈",
+      "feature": "White eyebrows; small held bone",
+      "attack": "Spit small bone from mouth"
+    },
+    {
+      "id": "D02",
+      "name": "불돔",
+      "feature": "Folded ears and puffy jowls",
+      "attack": "Compressed air spit"
+    },
+    {
+      "id": "D03",
+      "name": "머스키",
+      "feature": "Frozen cyan ear tips",
+      "attack": "Ice breath"
+    },
+    {
+      "id": "D04",
+      "name": "미글",
+      "feature": "Long ears and small drool",
+      "attack": "Sticky saliva spit"
+    },
+    {
+      "id": "D05",
+      "name": "무들",
+      "feature": "Curly lavender fur; one small zigzag above center head",
+      "attack": "Static electricity; orbital sparks reserved for future upgrades"
+    },
+    {
+      "id": "D06",
+      "name": "모더콜리",
+      "feature": "Both ears visible; worn taped paper crown",
+      "attack": "Supporting bark"
+    }
+  ],
+  "separation": "Individual transparent PNGs; separate opaque room background, editable route/slots/UI/effects; text remains live HTML.",
+  "implementation_status": "Local UI design prototype. Motion is a CSS pose transform plus separate effect. No production animation sprites, real combat simulation, co-op server, or Roblox Studio integration.",
+  "verification": "16 PNGs inspected; 15 transparent sprites. 10 routes and 40 event/markup assertions passed without a browser. Actual browser layout/click validation blocked by local-file URL policy."
+}
