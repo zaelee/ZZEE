@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 540" role="img" aria-labelledby="title desc">
+<title id="title">삼중 방어형의 한쪽 변 확대 배치도</title>
+<desc id="desc">위에서 내려다본 북쪽 변의 예시다. 기지에서 바깥 방향으로 통나무벽, 나무층, 장작 보관대가 이어진다. 장작 보관대의 열린 면은 숲 방향을 향한다. 묘목은 두 시설 사이에 심고 성장 공간과 출입 동선을 미리 확인한다. 같은 원리로 나머지 변을 잇는다.</desc>
+<defs><marker id="out" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7" fill="#246b86"/></marker></defs>
+<rect width="480" height="540" rx="14" fill="#e8eddf"/>
+<g font-family="'Malgun Gothic',sans-serif" text-anchor="middle" fill="#203c32">
+<text x="240" y="34" font-size="22" font-weight="700">B · 삼중형 한쪽 변 확대</text>
+<text x="240" y="64" font-size="18">숲 / 적이 있는 바깥쪽 ↑</text>
+<text x="240" y="100" font-size="18" font-weight="700">③ 장작 보관대 · 열린 면이 바깥</text>
+<g fill="#bfa07d" stroke="#805636" stroke-width="3"><path d="M30 134h13v53h64v-53h13v68H30Z"/><path d="M140 134h13v53h64v-53h13v68h-90Z"/><path d="M250 134h13v53h64v-53h13v68h-90Z"/><path d="M360 134h13v53h64v-53h13v68h-90Z"/></g>
+<g stroke="#246b86" stroke-width="2" marker-end="url(#out)"><path d="M75 175v-53"/><path d="M185 175v-53"/><path d="M295 175v-53"/><path d="M405 175v-53"/></g>
+<text x="240" y="237" font-size="17">성장 공간 확보 · 지붕과 벽을 붙이지 않기</text>
+<g fill="#bdd0a7" stroke="#416b44" stroke-width="2"><circle cx="75" cy="295" r="37"/><circle cx="185" cy="295" r="37"/><circle cx="295" cy="295" r="37"/><circle cx="405" cy="295" r="37"/></g>
+<g fill="#416b44"><circle cx="75" cy="295" r="6"/><circle cx="185" cy="295" r="6"/><circle cx="295" cy="295" r="6"/><circle cx="405" cy="295" r="6"/></g>
+<text x="240" y="363" font-size="19" font-weight="700">② 묘목을 키운 나무층</text>
+<g fill="#805636" stroke="#f5f2e9" stroke-width="1"><rect x="30" y="393" width="109" height="27"/><rect x="135" y="393" width="109" height="27"/><rect x="240" y="393" width="109" height="27"/><rect x="345" y="393" width="105" height="27"/></g>
+<g fill="#fffef8" font-size="18"><text x="84" y="413">01</text><text x="189" y="413">02</text><text x="294" y="413">03</text><text x="397" y="413">04</text></g>
+<text x="240" y="454" font-size="19" font-weight="700">① 통나무벽 · 틈없이 연결</text>
+<text x="240" y="489" font-size="19">모닥불과 생활 공간 ↓</text>
+<text x="240" y="523" font-size="16">보관대·나무 수량과 간격은 설명용 · 네 변에 응용</text>
+</g></svg>

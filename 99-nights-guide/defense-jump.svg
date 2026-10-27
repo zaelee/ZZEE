@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 390" role="img" aria-labelledby="title desc">
+<title id="title">문 없는 통나무벽의 점프 출입 단면</title>
+<desc id="desc">바깥 발판 S를 통나무벽에서 떨어뜨린 뒤 점프로 벽을 넘는다. 안쪽 발판 I와 착지 공간을 확보한다. 발판과 벽을 연속된 계단으로 연결하지 않으며 실제 점프 가능한 거리를 게임에서 맞춘다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#246b86" stroke-width="1.5"/></marker></defs>
+<rect width="480" height="390" rx="14" fill="#e8eddf"/>
+<g font-family="'Malgun Gothic',sans-serif" text-anchor="middle" fill="#203c32">
+<text x="240" y="34" font-size="22" font-weight="700">출입 확대 · 옆에서 본 모습</text>
+<text x="91" y="75" font-size="18">바깥</text><text x="371" y="75" font-size="18">기지 안</text>
+<path d="M22 289H458" stroke="#7c906e" stroke-width="4"/>
+<path d="M41 289 87 223 133 289Z" fill="#acd0dc" stroke="#246b86" stroke-width="2"/>
+<text x="87" y="274" font-size="19" font-weight="700">S</text>
+<path d="M222 289V153L235 122 248 153V289" fill="#805636"/>
+<text x="235" y="215" font-size="18" fill="#fffef8">벽</text>
+<rect x="330" y="244" width="54" height="45" rx="4" fill="#acd0dc" stroke="#246b86" stroke-width="2"/><text x="357" y="273" font-size="19" font-weight="700">I</text>
+<path d="M87 211Q180 26 273 159Q309 192 330 235" fill="none" stroke="#246b86" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<text x="171" y="105" font-size="17" fill="#246b86">점프 →</text>
+<path d="M137 269H211M137 263V275M211 263V275" stroke="#b94423" stroke-width="2"/>
+<text x="176" y="247" font-size="17" fill="#b94423">틈 유지</text>
+<text x="86" y="319" font-size="18">텐트·발판</text><text x="358" y="319" font-size="18">안쪽 발판</text>
+<text x="240" y="354" font-size="18">착지점과 돌아가는 길에는 덫을 놓지 않기</text>
+<text x="240" y="379" font-size="16">축척 없음 · 실제 점프 거리와 높이는 현장에서 조절</text>
+</g></svg>
