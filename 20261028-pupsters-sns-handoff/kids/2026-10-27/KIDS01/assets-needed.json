@@ -1,0 +1,48 @@
+[
+  {
+    "id": "D06",
+    "reference": "../../../brand/assets/D06-collie.png",
+    "needed_poses": [
+      "방석 옮기기",
+      "왕관 내려놓기",
+      "문패 보여주기",
+      "나란히 앉기"
+    ],
+    "status": "reference_exists_new_poses_needed"
+  },
+  {
+    "id": "D02",
+    "reference": "../../../brand/assets/D02-bulldog.png",
+    "needed_poses": [
+      "방석 놓기",
+      "고개 갸웃",
+      "편안하게 눕기"
+    ],
+    "status": "reference_exists_new_poses_needed"
+  },
+  {
+    "id": "D03",
+    "reference": "../../../brand/assets/D03-husky.png",
+    "needed_poses": [
+      "방석 옮기기",
+      "함께 앉기",
+      "조용히 고개 끄덕이기"
+    ],
+    "status": "reference_exists_new_poses_needed"
+  },
+  {
+    "id": "BG01",
+    "needed": "밝고 단순한 거실 배경, 바닥 중심의 가로 화면",
+    "status": "needed"
+  },
+  {
+    "id": "PROP01",
+    "needed": "작은 열린 종이 상자, 낮은 종이 벽, 방석 3개, 발자국 문패, 장난감 곰",
+    "status": "needed"
+  },
+  {
+    "id": "AUDIO01",
+    "needed": "한국어 대사 녹음 또는 사용 조건 확인한 합성 음성. 권리 확인된 작고 부드러운 효과음",
+    "status": "voice_choice_and_audio_needed"
+  }
+]

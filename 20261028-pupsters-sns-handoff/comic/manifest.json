@@ -1,0 +1,28 @@
+{
+  "episode": "EP01",
+  "revision": 2,
+  "title": "좋은 자리",
+  "created_at": "2026-10-27",
+  "cast": [
+    "시바멈",
+    "모더콜리"
+  ],
+  "status": "awaiting_user_review",
+  "tool": "built-in image_gen",
+  "image": "EP01-good-spot.png",
+  "width": 1122,
+  "height": 1402,
+  "sha256": "f89a652ffdec7ec7e9a1885c3e1fa13e41a18c2e04064c358e158b8edfab55d7",
+  "prompt": "generation-prompt.txt",
+  "storyboard": "storyboard.txt",
+  "workflow": "workflow-notes.txt",
+  "caption": "caption.txt",
+  "review": "review.txt",
+  "previous_version": "../archive/rejected-ep01/",
+  "published": false,
+  "reader_tested": false,
+  "reference_images": [
+    "../brand/assets/D01-shiba.png",
+    "../brand/assets/D06-collie.png"
+  ]
+}

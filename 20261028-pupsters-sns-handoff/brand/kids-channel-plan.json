@@ -1,0 +1,357 @@
+{
+  "brand": {
+    "ko": "사고멍치",
+    "en": "PUPSTERS"
+  },
+  "channel_name_proposal": "사고멍치 키즈 | PUPSTERS Kids",
+  "handle_proposal": "pupsterskids",
+  "prepared_at": "2026-10-27",
+  "target_age": {
+    "primary": [
+      5,
+      8
+    ],
+    "status": "recommended_after_user_asked_age_comparison",
+    "basis": "캐릭터 우정·작은 문제 해결에 맞춘 제작 선택. 시청자 규모·수익 통계 아님.",
+    "secondary": "형제자매·가족 공동 시청",
+    "expansion": "9–12세 모험은 후속 검토"
+  },
+  "audience_intent": "made_for_kids",
+  "languages": [
+    "ko"
+  ],
+  "cadence": {
+    "main": "파일럿 검수 후 주 1편 목표, 제작 시간에 따라 격주 조정",
+    "short": "각 본편에서 완결되는 15–30초 한 편",
+    "sns_recut": "Instagram Reels만. 키즈에는 별도 대본"
+  },
+  "formats": {
+    "main": {
+      "aspect_ratio": "16:9",
+      "duration_s": [
+        120,
+        180
+      ]
+    },
+    "short": {
+      "aspect_ratio": "9:16",
+      "duration_s": [
+        15,
+        30
+      ]
+    }
+  },
+  "cast_source": "content-plan.json",
+  "style_source": "../reference/line-weight-spec.json",
+  "production_index": "../kids/production-index.json",
+  "pilot": {
+    "id": "KIDS01",
+    "title": "왕관보다 큰 집",
+    "target_age_recommendation": [
+      5,
+      8
+    ],
+    "cast": [
+      "D06",
+      "D02",
+      "D03"
+    ],
+    "status": "script_review",
+    "duration_s": 150,
+    "aspect_ratio": "16:9",
+    "made_for_kids_intent": true,
+    "premise": "왕관에 맞는 작은 집을 만들던 모더콜리가 친구들이 함께 쉴 수 있는 집을 만든다.",
+    "scenes": [
+      {
+        "scene": 1,
+        "start_s": 0,
+        "end_s": 8,
+        "duration_s": 8,
+        "action": "거실 전경. 모더콜리가 바닥에 놓인 작은 종이 상자 위에 왕관을 살짝 얹고 뿌듯해한다.",
+        "dialogue": "모더콜리: 오늘은 우리 집을 만들 거야!",
+        "direction": "상자는 바닥에 고정. 캐릭터를 가두지 않는 열린 놀이 소품."
+      },
+      {
+        "scene": 2,
+        "start_s": 8,
+        "end_s": 20,
+        "duration_s": 12,
+        "action": "왕관이 상자 꼭대기에 딱 맞는다. 모더콜리가 왕관을 다시 쓴다.",
+        "dialogue": "모더콜리: 왕관도 딱 맞아. 아주 멋진 집이야.",
+        "direction": "왕관 크기와 상자 크기를 한 화면에 보여 목표를 명확히 한다."
+      },
+      {
+        "scene": 3,
+        "start_s": 20,
+        "end_s": 34,
+        "duration_s": 14,
+        "action": "불돔과 머스키가 작은 방석을 하나씩 들고 온다. 입구 앞에 나란히 놓자 입구가 전부 가려진다.",
+        "dialogue": "불돔: 내 방석은 어디에 놓지? / 머스키: 내 것도 왔어.",
+        "direction": "누군가의 몸을 웃음거리로 삼지 않는다. 문제는 방석과 집의 공간."
+      },
+      {
+        "scene": 4,
+        "start_s": 34,
+        "end_s": 48,
+        "duration_s": 14,
+        "action": "모더콜리는 두 방석을 겹쳐 놓는다. 친구들이 앉으려다가 좁아 서로 눈을 마주친다.",
+        "dialogue": "모더콜리: 위에 또 놓으면… / 불돔: 같이 앉을 자리가 없네.",
+        "direction": "넘어지거나 추락하지 않고 바닥의 낮은 방석 두 장으로 연출."
+      },
+      {
+        "scene": 5,
+        "start_s": 48,
+        "end_s": 58,
+        "duration_s": 10,
+        "action": "머스키가 자기 방석을 밖으로 옮긴다. 불돔도 옆에 놓는다. 모더콜리는 작은 집 안쪽과 친구들을 번갈아 본다.",
+        "dialogue": "머스키: 여기서는 같이 앉을 수 있어.",
+        "direction": "화면 방향을 유지해 안과 밖의 위치를 이해시킨다."
+      },
+      {
+        "scene": 6,
+        "start_s": 58,
+        "end_s": 70,
+        "duration_s": 12,
+        "action": "모더콜리가 왕관을 만지다가 내려놓는다. 자기 방석도 친구들 쪽으로 가져온다.",
+        "dialogue": "모더콜리: 왕관 말고… 우리한테 맞는 집을 만들까?",
+        "direction": "대사의 뜻은 방석 세 장을 나란히 놓는 행동으로 보완."
+      },
+      {
+        "scene": 7,
+        "start_s": 70,
+        "end_s": 86,
+        "duration_s": 16,
+        "action": "세 친구가 방석을 나란히 놓고 준비된 종이 벽 조각을 낮게 세운다. 정면이 활짝 열린 성 모양이다.",
+        "dialogue": "불돔: 여기는 쉬는 자리. / 머스키: 여기는 같이 앉는 자리.",
+        "direction": "미리 잘린 소품만 사용. 칼·가위 제작 절차나 머리 위 무거운 구조물 없음."
+      },
+      {
+        "scene": 8,
+        "start_s": 86,
+        "end_s": 98,
+        "duration_s": 12,
+        "action": "모더콜리가 종이 문패를 가져온다. 세 친구의 발자국 그림이 들어 있다.",
+        "dialogue": "모더콜리: 우리 셋의 집!",
+        "direction": "글자를 읽지 못해도 발자국 세 개로 뜻이 전달되게 한다."
+      },
+      {
+        "scene": 9,
+        "start_s": 98,
+        "end_s": 114,
+        "duration_s": 16,
+        "action": "셋이 나란히 앉아 본다. 불돔이 작은 장난감 곰을 바라본다. 셋이 조금씩 자리를 옮겨 곰 자리도 만든다.",
+        "dialogue": "불돔: 친구가 하나 더 왔는데? / 머스키: 조금씩 옆으로 가자.",
+        "direction": "같은 실패를 반복하지 않고 처음 배운 해결법을 새 상황에 적용."
+      },
+      {
+        "scene": 10,
+        "start_s": 114,
+        "end_s": 128,
+        "duration_s": 14,
+        "action": "장난감 곰이 가운데 앉는다. 모더콜리가 자신의 왕관을 문패 위에 얹는다. 모두 집을 바라보며 웃는다.",
+        "dialogue": "모더콜리: 이제 정말 딱 맞아.",
+        "direction": "공유를 강요하기보다 함께 정한 공간 배치로 마무리."
+      },
+      {
+        "scene": 11,
+        "start_s": 128,
+        "end_s": 140,
+        "duration_s": 12,
+        "action": "불돔이 편안히 눕는다. 모더콜리가 목소리를 낮추고 머스키가 고개를 끄덕인다.",
+        "dialogue": "모더콜리: 우리 집 첫 번째 규칙. 쉬는 친구는… / 머스키: 조용히!",
+        "direction": "소리를 갑자기 크게 내지 않는다. 짧은 대사 사이 표정 반응."
+      },
+      {
+        "scene": 12,
+        "start_s": 140,
+        "end_s": 150,
+        "duration_s": 10,
+        "action": "불돔이 눈을 잠깐 뜨고 웃는다. 세 친구와 곰이 함께 보인다. 작은 사고멍치 로고로 끝난다.",
+        "dialogue": "불돔: 그 규칙, 좋아.",
+        "direction": "게임 설치·구매·댓글·알림 벨 요청 없음. 이야기 안에서 완결."
+      }
+    ],
+    "short_duration_s": 25,
+    "short": [
+      {
+        "start_s": 0,
+        "end_s": 5,
+        "action": "왕관이 작은 상자에 딱 맞는다. 모더콜리가 뿌듯해한다.",
+        "dialogue": "왕관은 딱 맞는데…"
+      },
+      {
+        "start_s": 5,
+        "end_s": 11,
+        "action": "친구들의 방석 두 개가 입구를 가린다. 모두 갸웃한다.",
+        "dialogue": "친구들 자리는?"
+      },
+      {
+        "start_s": 11,
+        "end_s": 20,
+        "action": "방석 세 개를 넓게 놓고 열린 종이 집을 만든다.",
+        "dialogue": "우리한테 맞게 만들자!"
+      },
+      {
+        "start_s": 20,
+        "end_s": 25,
+        "action": "다 함께 앉고 장난감 곰도 가운데 놓인다.",
+        "dialogue": "이제 딱 맞아."
+      }
+    ],
+    "render_status": "not_rendered",
+    "art_status": "additional_poses_needed",
+    "audio_status": "not_created"
+  },
+  "required_assets": [
+    {
+      "id": "D06",
+      "reference": "assets/D06-collie.png",
+      "needed_poses": [
+        "방석 옮기기",
+        "왕관 내려놓기",
+        "문패 보여주기",
+        "나란히 앉기"
+      ],
+      "status": "reference_exists_new_poses_needed"
+    },
+    {
+      "id": "D02",
+      "reference": "assets/D02-bulldog.png",
+      "needed_poses": [
+        "방석 놓기",
+        "고개 갸웃",
+        "편안하게 눕기"
+      ],
+      "status": "reference_exists_new_poses_needed"
+    },
+    {
+      "id": "D03",
+      "reference": "assets/D03-husky.png",
+      "needed_poses": [
+        "방석 옮기기",
+        "함께 앉기",
+        "조용히 고개 끄덕이기"
+      ],
+      "status": "reference_exists_new_poses_needed"
+    },
+    {
+      "id": "BG01",
+      "needed": "밝고 단순한 거실 배경, 바닥 중심의 가로 화면",
+      "status": "needed"
+    },
+    {
+      "id": "PROP01",
+      "needed": "작은 열린 종이 상자, 낮은 종이 벽, 방석 3개, 발자국 문패, 장난감 곰",
+      "status": "needed"
+    },
+    {
+      "id": "AUDIO01",
+      "needed": "한국어 대사 녹음 또는 사용 조건 확인한 합성 음성. 권리 확인된 작고 부드러운 효과음",
+      "status": "voice_choice_and_audio_needed"
+    }
+  ],
+  "planned_episodes": [
+    {
+      "id": "KIDS02",
+      "title": "차례가 바뀌었어",
+      "cast": [
+        "D01",
+        "D04"
+      ],
+      "status": "idea"
+    },
+    {
+      "id": "KIDS03",
+      "title": "작게 말해도 들려",
+      "cast": [
+        "D03",
+        "D05"
+      ],
+      "status": "idea"
+    },
+    {
+      "id": "KIDS04",
+      "title": "반짝이는 실수",
+      "cast": [
+        "D05",
+        "D06"
+      ],
+      "status": "idea"
+    }
+  ],
+  "automation": {
+    "status": "snapshot_only_current_environment_unverified",
+    "last_known_original_status": "ACTIVE",
+    "transferred_by_handoff": false,
+    "cadence_label": "매주 월요일 오전 10시",
+    "timezone": "Asia/Seoul",
+    "scope": "텍스트 대본·초 단위 콘티·필요 소재·메타데이터 적립",
+    "max_pending_drafts": 4,
+    "automatic_upload": false,
+    "new_paid_services": false,
+    "model_usage": "현재 계정 사용량·한도 적용",
+    "id": "automation-2",
+    "registered_at": "2026-10-27",
+    "first_scheduled_date": "2026-11-02",
+    "manual_prompt_check": "KIDS01 대본·콘티·자산 목록 작성 및 시간·파일 확인. 스케줄러 실제 실행은 아직 미확인.",
+    "snapshot_checked_at": "2026-10-27",
+    "portable_note": "원래 PC/채팅의 등록 기록. 이 파일만으로 다른 PC에 자동화가 등록되지 않는다. 인수인계 작업에서 자동화를 생성하거나 변경하지 않았다."
+  },
+  "monetization": {
+    "status": "not_applied_no_channel_connected",
+    "checked_at": "2026-10-27",
+    "current": {
+      "subscribers": 1000,
+      "watch_hours_last_12_months": 4000,
+      "or_shorts_views_last_90_days": 10000000
+    },
+    "announced_from_2027_02_01": {
+      "new_applicants_subscribers": 1000,
+      "watch_hours_last_365_days": 8000,
+      "or_shorts_views_last_90_days": 20000000,
+      "monthly_shorts_pool_views_last_90_days": 10000000
+    },
+    "note": "시청 수치는 유효 공개 콘텐츠 기준. Shorts 피드 시청시간은 긴 영상 기준에서 제외. 채널 심사·가입·정산 조건 별도. 신청 시 공식 기준 재확인."
+  },
+  "quality_gate": [
+    "시작·중간·결말이 이어짐",
+    "회차별 다른 사건과 해결",
+    "등장인물 2–3명·한 가지 중심 문제",
+    "작은 코·점눈·두 귀·선 굵기·시그니처 일관성",
+    "자막을 읽지 않아도 핵심 행동 이해 가능",
+    "명확한 음성·사용 권리 확인",
+    "실제 영상 재생 검수",
+    "아동용 설정 확인",
+    "댓글·벨·구매·게임 설치를 요구하지 않는 본편"
+  ],
+  "sources": [
+    {
+      "topic": "age_and_kids_app",
+      "url": "https://support.google.com/youtubekids/answer/10938174?hl=ko"
+    },
+    {
+      "topic": "audience_restrictions",
+      "url": "https://support.google.com/youtube/answer/9527654?hl=en"
+    },
+    {
+      "topic": "current_ypp",
+      "url": "https://support.google.com/youtube/answer/72851?hl=en"
+    },
+    {
+      "topic": "2027_changes",
+      "url": "https://support.google.com/youtube/answer/12843009?hl=en"
+    },
+    {
+      "topic": "authenticity",
+      "url": "https://support.google.com/youtube/answer/1311392?hl=en"
+    },
+    {
+      "topic": "kids_quality",
+      "url": "https://support.google.com/youtube/answer/10774223?hl=ko"
+    },
+    {
+      "topic": "codex_automations",
+      "url": "https://developers.openai.com/codex/app/automations"
+    }
+  ]
+}

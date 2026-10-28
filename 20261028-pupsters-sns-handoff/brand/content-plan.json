@@ -1,0 +1,448 @@
+{
+  "brand": {
+    "ko": "사고멍치",
+    "en": "PUPSTERS",
+    "pronunciation": "펍스터즈"
+  },
+  "prepared_at": "2026-10-27",
+  "status": "sns_plan_with_separate_kids_workflow",
+  "timezone": "Asia/Seoul",
+  "cadence": "SNS 주 2편 만화 + 선택형 Instagram Reels 주 1편. YouTube는 kids-channel-plan.json의 별도 키즈 본편·Shorts 계획을 따른다.",
+  "format": {
+    "comic": "4–6컷, 제작 캔버스 1080×1350",
+    "video": "15–25초, 제작 캔버스 1080×1920",
+    "note": "내부 제작 권장값이며 플랫폼 최대 규격 주장이 아님"
+  },
+  "cast": [
+    {
+      "id": "D01",
+      "name": "시바멈",
+      "signature": "흰 눈썹, 작은 점눈·코, 입에 문 작은 뼈",
+      "attack": "앞발로 던지지 않고 입에서 작은 뼈를 뱉는다",
+      "proposed_personality": "무심한 척하지만 좋아하는 친구에게 자기 간식을 내어주는 소유권 전문가"
+    },
+    {
+      "id": "D02",
+      "name": "불돔",
+      "signature": "접힌 귀, 통통한 볼",
+      "attack": "압축한 공기 충격탄을 입에서 뱉는다",
+      "proposed_personality": "안 움직이고 해결하고 싶지만 친구가 기대는 자리가 되어주는 실용파"
+    },
+    {
+      "id": "D03",
+      "name": "머스키",
+      "signature": "양쪽 귀끝의 작은 얼음",
+      "attack": "입에서 냉기를 내뿜는다",
+      "proposed_personality": "멋있게 보이고 싶지만 타이밍을 놓치는 조용한 배려형"
+    },
+    {
+      "id": "D04",
+      "name": "미글",
+      "signature": "긴 귀와 작은 침방울",
+      "attack": "끈적한 침을 뱉는다",
+      "proposed_personality": "뭐든 먼저 확인하는 행동파. 잘 찾은 단서에는 침이 묻어 있다"
+    },
+    {
+      "id": "D05",
+      "name": "무들",
+      "signature": "머리 중앙에 살짝 떠 있는 작은 지그재그 하나",
+      "attack": "털에서 정전기를 일으킨다. 주변 궤도 번개는 향후 업그레이드",
+      "proposed_personality": "단정하고 침착해 보이고 싶은데 감정이 털에 먼저 나타난다"
+    },
+    {
+      "id": "D06",
+      "name": "모더콜리",
+      "signature": "양쪽 귀와 테이프로 고친 허름한 왕관",
+      "attack": "짖어서 아군을 지원한다",
+      "proposed_personality": "규칙을 만드는 리더지만 친구 사정에는 예외를 만든다"
+    }
+  ],
+  "episodes": [
+    {
+      "id": "EP01",
+      "title": "좋은 자리",
+      "tone": "comedy",
+      "cast": [
+        "D01",
+        "D06"
+      ],
+      "status": "awaiting_user_review",
+      "panels": [
+        "시바멈이 유일한 방석을 차지하고 늘어져 있다. 모더콜리: ‘나도 좀.’",
+        "모더콜리가 현관을 흘끗 보며 ‘산책?’이라고 말한다. 시바멈의 귀가 선다.",
+        "시바멈이 방석을 떠나 닫힌 현관으로 달려가 산책줄을 문다.",
+        "모더콜리는 빈 방석에서 잠들고, 시바멈은 현관 앞에서 줄을 문 채 고개를 돌려 본다. 대사는 없다."
+      ],
+      "caption_ko": "좋은 자리는 말 한마디면 된다.",
+      "caption_en": "One word. One comfy spot.",
+      "game_cta": false,
+      "image": "../comic/EP01-good-spot.png",
+      "revision": 2,
+      "workflow": "../comic/workflow-notes.txt",
+      "previous_version": "../archive/rejected-ep01/manifest.json",
+      "published_at": null
+    },
+    {
+      "id": "EP02",
+      "title": "머스키 자리",
+      "tone": "warm",
+      "cast": [
+        "D03",
+        "D02"
+      ],
+      "status": "script_draft",
+      "panels": [
+        "더운 거실. 불돔이 시원한 바닥을 찾다가 지친다.",
+        "머스키가 자기가 눕던 방석에서 조용히 일어난다.",
+        "불돔이 앉으니 방석 가장자리가 조금 시원하다. 머스키 귀끝에 작은 얼음.",
+        "불돔이 방석 절반을 비운다. 둘이 붙어 앉는다. 대사는 없다."
+      ],
+      "caption_ko": "좋은 자리는 나누면 더 좋다.",
+      "caption_en": "The best spot has room for two.",
+      "game_cta": false
+    },
+    {
+      "id": "EP03",
+      "title": "왕관 수리점",
+      "tone": "comedy",
+      "cast": [
+        "D06",
+        "D04"
+      ],
+      "status": "script_draft",
+      "panels": [
+        "왕관 끝이 찢어져 모더콜리가 가린다.",
+        "미글: ‘내가 붙여줄게.’ 모더콜리는 잠깐 망설인다.",
+        "화면 밖에서 ‘쩝’. 왕관은 붙었지만 살짝 축축하다.",
+        "모더콜리는 왕관을 쓰고 공식 표정을 짓는다. 미글: ‘방수는 안 돼.’"
+      ],
+      "caption_ko": "수리는 됐습니다. 성능 보장은 없습니다.",
+      "caption_en": "Fixed. Not waterproof.",
+      "game_cta": false
+    },
+    {
+      "id": "EP04",
+      "title": "차분하게, 차분하게",
+      "tone": "comedy",
+      "cast": [
+        "D05",
+        "D04"
+      ],
+      "status": "script_draft",
+      "panels": [
+        "단정하게 앉은 무들. 미글이 ‘오늘 산책길에 네 친구 있대’라고 말한다.",
+        "무들: ‘그래? 별로 상관없어.’ 머리 위 작은 번개 하나가 살짝 반짝인다.",
+        "무들의 앞머리가 정전기로 조금씩 들린다. 미글은 말없이 본다.",
+        "무들: ‘나 티 안 나지?’ 미글은 무들 머리에 붙은 가벼운 종잇조각을 떼어 준다."
+      ],
+      "caption_ko": "표정 관리는 성공. 머리는 실패.",
+      "caption_en": "The face stayed calm. The fluff did not.",
+      "game_cta": false
+    },
+    {
+      "id": "EP05",
+      "title": "낮잠 경비원",
+      "tone": "comedy",
+      "cast": [
+        "D02",
+        "D06"
+      ],
+      "status": "script_draft",
+      "panels": [
+        "모더콜리가 불돔에게 방석 주변 순찰을 부탁한다.",
+        "불돔: ‘360도 확인할게.’ 천천히 몸을 돌린다.",
+        "한 바퀴 돌아 처음 자세로 앉은 불돔이 눈을 감는다.",
+        "모더콜리: ‘순찰은?’ 불돔: ‘이상 없음. 눈꺼풀만 내려옴.’"
+      ],
+      "caption_ko": "순찰 반경: 방석 한 장.",
+      "caption_en": "Patrol radius: one cushion.",
+      "game_cta": false
+    },
+    {
+      "id": "EP06",
+      "title": "혼자 먹는 법",
+      "tone": "warm",
+      "cast": [
+        "D01",
+        "D05"
+      ],
+      "status": "script_draft",
+      "panels": [
+        "시바멈이 간식을 세어 혼자 먹을 자리를 찾는다.",
+        "멀리 무들이 실수로 망가뜨린 작은 장식을 보고 풀이 죽어 있다.",
+        "시바멈이 마지막 조각을 무들 옆에 놓고 돌아선다.",
+        "무들이 간식을 반으로 나눠 한 조각을 시바멈 옆에 놓는다. 둘 다 못 본 척한다."
+      ],
+      "caption_ko": "혼자 먹을 생각이었는데.",
+      "caption_en": "It was supposed to be a snack for one.",
+      "game_cta": false
+    },
+    {
+      "id": "EP07",
+      "title": "산책 회의",
+      "tone": "comedy",
+      "cast": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "status": "outline",
+      "panels": [
+        "비 오는 날, 모더콜리가 우비·우산·실내 활동을 두고 회의를 연다.",
+        "여섯 마리가 제각각 의견을 낸다. 불돔은 실내파.",
+        "현관에서 산책줄 소리가 난다.",
+        "모두 문 앞에 모였다. 불돔이 맨 앞. 바닥의 회의록에는 ‘만장일치’라고 적혀 있다."
+      ],
+      "caption_ko": "회의를 끝내는 가장 빠른 방법.",
+      "caption_en": "One leash. Six unanimous votes.",
+      "game_cta": false
+    },
+    {
+      "id": "EP08",
+      "title": "우리 자리",
+      "tone": "world_bridge",
+      "cast": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "status": "outline",
+      "panels": [
+        "제각각 낮잠을 자던 강아지들 앞에 작은 장난감 로봇이 지나간다.",
+        "로봇 바퀴가 방석 끝을 끌고 간다. 여섯 마리가 동시에 눈을 뜬다.",
+        "모더콜리가 짧게 짖고 모두 방석 주위를 지킨다. 총은 없다.",
+        "장난감이 멈춘 뒤 모두 다시 누운다. 모더콜리: ‘회의 종료.’"
+      ],
+      "caption_ko": "우리가 지키는 건 생각보다 작고 소중해.",
+      "caption_en": "Some things are worth getting up for.",
+      "game_cta": "게임이 실제 공개된 경우에만 마지막 설명에 공식 Roblox 링크 안내. 미공개면 개발 중이라고 쓰거나 CTA 생략."
+    },
+    {
+      "id": "SP01",
+      "title": "정전기 악수",
+      "tone": "comedy",
+      "cast": [
+        "D05",
+        "D03"
+      ],
+      "status": "spare_idea",
+      "premise": "무들이 악수를 피하려고 앞발을 숨긴다. 머스키는 화해가 싫다는 뜻으로 오해한다. 결국 서로 작은 물건을 건네며 먼저 웃는다."
+    },
+    {
+      "id": "SP02",
+      "title": "냄새 수사대",
+      "tone": "comedy",
+      "cast": [
+        "D04",
+        "D01"
+      ],
+      "status": "spare_idea",
+      "premise": "미글이 뼈의 냄새를 추적한다. 시바멈은 본인 입에 문 뼈를 끝까지 모르는 척한다."
+    },
+    {
+      "id": "SP03",
+      "title": "왕관 없는 대장",
+      "tone": "warm",
+      "cast": [
+        "D06",
+        "D02"
+      ],
+      "status": "spare_idea",
+      "premise": "수리하느라 왕관을 벗은 모더콜리가 지시를 머뭇거린다. 불돔은 평소처럼 그의 옆에 앉아 기다린다. 왕관 없이도 자리는 그대로다."
+    },
+    {
+      "id": "SP04",
+      "title": "택배 상자 입주식",
+      "tone": "comedy",
+      "cast": [
+        "D01",
+        "D04",
+        "D05"
+      ],
+      "status": "spare_idea",
+      "premise": "새 장난감보다 포장 상자의 자리 배분이 더 심각하다. 상자가 작은 줄 알았는데 친구에게 한 칸씩 양보하며 결국 다 같이 붙어 앉는다."
+    }
+  ],
+  "publishing_slots": [
+    {
+      "week": 1,
+      "day": "Tue",
+      "format": "comic",
+      "episode": "EP01",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 1,
+      "day": "Fri",
+      "format": "comic",
+      "episode": "EP02",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 1,
+      "day": "Sun",
+      "format": "video_recut",
+      "episode": "EP01",
+      "channels": [
+        "Instagram Reels"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 2,
+      "day": "Tue",
+      "format": "comic",
+      "episode": "EP03",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 2,
+      "day": "Fri",
+      "format": "comic",
+      "episode": "EP04",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 2,
+      "day": "Sun",
+      "format": "video_recut",
+      "episode": "EP03",
+      "channels": [
+        "Instagram Reels"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 3,
+      "day": "Tue",
+      "format": "comic",
+      "episode": "EP05",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 3,
+      "day": "Fri",
+      "format": "comic",
+      "episode": "EP06",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 3,
+      "day": "Sun",
+      "format": "video_recut",
+      "episode": "EP05",
+      "alternate_episode": "EP06",
+      "channels": [
+        "Instagram Reels"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 4,
+      "day": "Tue",
+      "format": "comic",
+      "episode": "EP07",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 4,
+      "day": "Fri",
+      "format": "comic",
+      "episode": "EP08",
+      "channels": [
+        "Instagram"
+      ],
+      "scheduled_at": null
+    },
+    {
+      "week": 4,
+      "day": "Sun",
+      "format": "video_recut",
+      "episode": "EP08",
+      "channels": [
+        "Instagram Reels"
+      ],
+      "scheduled_at": null
+    }
+  ],
+  "quality_gate": [
+    "한 회차만 읽어도 이해 가능",
+    "다른 작가의 구체적 대사·사건·그림을 베끼지 않음",
+    "작은 코·점눈·양쪽 귀·캐릭터 시그니처 유지",
+    "표시 크기를 맞춰 선 굵기 확인",
+    "무들 기본 번개는 머리 위 하나",
+    "게임 플레이가 가능할 때만 실제 플레이 안내",
+    "실화나 제보가 아니면 창작으로 취급",
+    "이미지·글·영상·음원 권리와 인간 수정 기록 보관",
+    "게시 전 최종 확인"
+  ],
+  "metrics": [
+    "회차별 도달·저장·공유",
+    "캐릭터 언급 댓글",
+    "영상 시청 지속·완주",
+    "프로필 방문·팔로우",
+    "가능한 범위의 공식 게임 링크 클릭",
+    "Roblox 첫 판 완료·재방문"
+  ],
+  "actions_taken": {
+    "accounts_created": false,
+    "posts_published": false,
+    "automation_registration_snapshot": {
+      "registered_in_original_environment": true,
+      "checked_at": "2026-10-27",
+      "current_environment_status": "unverified",
+      "transferred_by_handoff": false
+    },
+    "paid_services_connected": false,
+    "automation_scope": "키즈 대본·콘티 주간 적립만; SNS 발행·영상 업로드·수익화 신청 미실행"
+  },
+  "brand_streams": [
+    {
+      "id": "sns",
+      "name": "사고멍치 · PUPSTERS",
+      "purpose": "일반 독자 대상 강아지툰"
+    },
+    {
+      "id": "youtube_kids",
+      "name": "사고멍치 키즈 | PUPSTERS Kids",
+      "target_age_recommendation": [
+        5,
+        8
+      ],
+      "plan": "kids-channel-plan.json"
+    },
+    {
+      "id": "roblox",
+      "name": "사고멍치 | PUPSTERS",
+      "purpose": "캐릭터 게임"
+    }
+  ],
+  "handoff_note": "2026-10-28 전달용 복사본. 정책 조사와 자동화 등록 기록은 2026-10-27 기준이며, 파일을 내려받아도 예약 작업이나 외부 계정 연결이 이전되지는 않는다."
+}

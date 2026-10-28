@@ -1,0 +1,20 @@
+{
+  "episode": "EP01",
+  "title": "아무것도 안 했는데",
+  "created_at": "2026-10-27",
+  "cast": [
+    "시바멈",
+    "모더콜리"
+  ],
+  "status": "rejected_by_user",
+  "tool": "built-in image_gen",
+  "image": "EP01-four-panel.png",
+  "width": 1122,
+  "height": 1402,
+  "sha256": "412008fc2c89b7e5368bdb5691bf1ca03966fb09a333c460b442ddb5397d4a0f",
+  "prompt": "generation-prompt.txt",
+  "caption": "caption.txt",
+  "published": false,
+  "feedback": "사용자가 결과를 부정적으로 평가하고 4컷 제작 스킬 분석 및 재제작을 요청함.",
+  "superseded_by": "../../comic/manifest.json"
+}

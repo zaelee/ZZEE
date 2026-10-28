@@ -1,0 +1,38 @@
+Use case: illustration-story.
+Create one finished original Korean four-panel Instagram dog comic for the user's brand 사고멍치 / PUPSTERS. Use the TWO supplied images only as character identity references, NOT as a static pose template. Image 1 is orange Shiba 시바멈. Image 2 is charcoal Border Collie 모더콜리 with a taped yellow paper crown. Create new expressive narrative poses, camera staging, and a complete coherent comic.
+
+FORMAT: Portrait 4:5, high-resolution raster. EXACTLY FOUR equal panels in a 2x2 grid, reading top left, top right, bottom left, bottom right. Clean ivory page, spacious gutters, slim dark brown rectangular panel frames. A small tasteful title above the grid: "좋은 자리". Tiny centered brand footer: "사고멍치 · PUPSTERS". Title is modest, not a massive banner. No fifth scene or extra inset.
+
+ART DIRECTION: Charming, understated contemporary Korean dog webcomic with deadpan visual timing. Flat restrained warm colors; uniform rounded dark-chocolate ink #29180f. Very short bodies and short paws, large heads, slightly chubby but not spherical or obese. Give the poses genuine canine body language (sprawling, ears perking, springing toward a door, curling up) rather than four identical seated character portraits. Tiny black dot eyes, no shiny large anime eyes or white sclera. SMALL black-brown oval noses, around 15% of face width, much smaller than the reference nose. Exactly two ears per dog. No fussy fur detail. No shading, gradients, paper grain, soot, fuzzy strokes, huge noses, 3D, human hands or bipedal bodies. At the same drawn size, both characters must have the same contour thickness. Outer contour approx 6-7px per 1080px page width, internal detail 4-5px, frames 3px. These are visual targets: clean near-uniform monoline, rounded joins, controlled slight handmade path irregularity, no brush taper or doubled black edges. Dialogues and frames use lighter lines than dog silhouettes.
+
+CHARACTER LOCKS:
+SHIBA: warm orange coat, cream cheeks/muzzle/chest/toes, TWO tiny cream-white eyebrows above black dot eyes, short curled tail, two rounded triangular upright ears. Small cream bone is his possession, but in this story the bone lies ON THE FLOOR beside the cushion from the first panel and stays there; it is NOT in his mouth. No changes in coat markings. Mouth used only for holding the teal leash in the ending.
+COLLIE: charcoal coat, ivory central blaze/muzzle/chest/toes, two visible floppy ears, worn ochre PAPER crown with one off-white repair tape patch. Crown modest size and crooked; still on his head in every panel. No long torso, no upright human stance. Do not swap these identities or crowns.
+
+ENVIRONMENT AND CONTINUITY: A very simple room with one salmon-pink oval pet cushion at LEFT and a CLOSED light beige front door at RIGHT. A teal dog leash with a clear loop handle is initially hanging LOW from a hook beside that door, within reach of a dog. The door always stays shut. A simple beige floor line, no furniture or household clutter. The same SINGLE cushion, SINGLE bone on the floor next to it, SAME leash and SAME closed door throughout. Show cushion and doorway within one wide shot in panel 4 so the cause and result are immediately clear. Leave generous calm negative space; do not fill everything with beige backgrounds.
+
+STORY: the collie wants the shiba's comfortable spot and uses the word "walk" to get him to reflexively leave it. The funny reveal is the collie taking the spot while the shiba waits at the door. It is friendly mischievous everyday dog behavior; no moral or explanation.
+
+PANEL 1 / top LEFT / SETUP:
+Medium-wide establishing shot. Shiba sprawls luxuriously across the ONLY salmon-pink cushion on the LEFT, relaxed half-closed dot eyes, short paws stretched out, occupying all its room. His small bone lies on the floor beside the cushion. Collie sits just to the RIGHT of the cushion looking hopefully at the occupied space, shoulders slightly drooped. Collie has ONE small speech bubble "나도 좀." with tail unmistakably pointing to the collie's mouth. Shiba gives no spoken reply. Closed front door and hanging teal leash can be minimal in the far right background. Need clearly distinguish shiba using all the bed from collie wanting a place.
+
+PANEL 2 / top RIGHT / TRIGGER:
+Closer framing of both heads and cushion edge. Collie on RIGHT casually glances toward the closed door and says exactly "산책?" in ONE small clear speech bubble with tail pointing to the COLLIE. Shiba still on cushion LEFT reacts immediately: his two ears pop up, tiny dot eyes open, head lifts; a small pair of motion marks by ears suffices. The collie stays calm. Do not move shiba to the door yet. No question marks or extra text outside that one speech bubble.
+
+PANEL 3 / bottom LEFT / REFLEX ACTION:
+Wider dynamic side view, same left-to-right orientation. Shiba springs low and FAST from the now-empty cushion on LEFT toward the CLOSED door on RIGHT. Draw the shiba only ONCE, with short dash lines behind his stubby rear legs and an eager curled tail. Shiba reaches his mouth for the teal leash's loop at the low hook near the door; the leash is not tied to either dog. Collie remains near the now-empty cushion on LEFT, stationary, looking at the vacancy. The bone remains near the cushion. Small restrained sound text "다다닥" next to shiba's running paws. One clear dominant running action, no time-duplicate shiba, no magical teleportation, no speaking here.
+
+PANEL 4 / bottom RIGHT / SILENT VISUAL PAYOFF:
+A spacious quiet wide shot of the same room. LEFT: collie is now curled comfortably asleep ON THAT SAME cushion, head resting on his short front paws, both floppy ears visible, crooked taped crown still on head, tiny relaxed closed-eye curves. A very small curled smile is acceptable, never an evil grin. The little bone still sits untouched on the floor beside the cushion.
+RIGHT: shiba sits right beside the SAME CLOSED DOOR, holding the teal leash loop in his MOUTH, leash slack trailing down to the floor and visibly detached from the hook. He turns only his head LEFT to stare at the sleeping collie. Tiny blank black dot eyes, flat deadpan expression, ears slightly sideways; tail now still. Silhouette readable and physically plausible. He has not walked back to the cushion. The composition should silently communicate: "I fell for that." No speech bubble, NO explaining caption, no moral, no "Zzz", no symbols covering faces. Let the stillness and swapped bed ownership carry the punchline.
+
+EXACT TEXT whitelist only:
+Title: "좋은 자리"
+Panel 1: "나도 좀."
+Panel 2: "산책?"
+Panel 3: "다다닥"
+Panel 4: NO TEXT.
+Footer: "사고멍치 · PUPSTERS"
+Use legible Korean rounded hand lettering. Respect native Korean spelling. Text comfortably readable at phone size, no crowded bubbles. Do not add panel numbers, headings inside panels, English translations, narration or any other copy.
+
+FINAL CHECKS: exactly 4 panels, two same recognizable dogs, exactly two ears each, crown always on collie, 1 cushion (left), 1 bone (beside cushion), 1 teal leash (hook then shiba's mouth), closed door (right). Progressively different poses. Tiny noses and consistent dark brown line weight. No extra dog, no gun, no power effects, no watermark, no style imitation of named artists.

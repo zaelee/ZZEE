@@ -1,0 +1,30 @@
+{
+  "handoff_date": "2026-10-28",
+  "source_work_date": "2026-10-27",
+  "json_parse": "passed",
+  "json_file_references": "passed",
+  "episode_status_consistency": "passed",
+  "original_image_sha256": "passed",
+  "character_reference_count": 6,
+  "new_image_generated_for_handoff": false,
+  "browser_render_check_this_handoff": "not_run; existing report copied with link/header edits; comic artwork not changed",
+  "research_policy_recheck_this_handoff": false,
+  "repository_npm_run_check": "failed_on_unchanged_food_map_data",
+  "repository_checks": {
+    "node": "v24.18.0",
+    "syntax": "passed: 173 JavaScript files",
+    "local_links": "passed: 1319 references",
+    "tests": "passed: 63 tests",
+    "validate_data": "failed: existing food-map snapshots include Boryeong addresses outside the validator's expected region",
+    "scope_evidence": "git diff HEAD -- zzee's food map is empty; data and validators were not modified in this handoff",
+    "base_commit": "c5d681d5576c84d064bca3e64e493bb4ae955b5a",
+    "smoke_food_map": "passed when run separately: 351 places, 351 valid coordinates, no invalid platform ratings",
+    "git_diff_check": "passed"
+  },
+  "local_markdown_html_links": {
+    "status": "passed",
+    "count": 49
+  },
+  "archive_integrity": "passed",
+  "archive_member_hashes": "passed"
+}
