@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-28",
+  "scope": "handoff files, links, package integrity and arithmetic; not game implementation or gameplay balance QA",
+  "package_checks": {
+    "documents": 7,
+    "dog_entries": 14,
+    "ui_art_progression_economy_requirement_ids": 27,
+    "local_md_html_links_checked": 82,
+    "growth_boundary_cases": 10,
+    "growth_break_even_checks": 2,
+    "encoding_and_fences": "passed",
+    "source_gameplay_md_identical": true
+  },
+  "repository": {
+    "node": "24.18.0",
+    "syntax_files_passed": 173,
+    "html_links_passed": 1319,
+    "tests_passed": 63,
+    "tests_failed": 0,
+    "npm_run_check": "blocked by 40 pre-existing out-of-area Boryeong address validation errors in unrelated food-map data",
+    "food_map_smoke": "passed separately"
+  },
+  "manual_review": "latest requests, confirmed-versus-proposed distinction, 14 dog roles, support requirements, scaling boundaries and 3-channel state reviewed; independent reviewer feedback considered",
+  "not_performed": [
+    "latest 14-dog game implementation",
+    "live gameplay balance QA",
+    "iPhone device verification",
+    "new skin/evolution/attack image generation",
+    "SNS or YouTube publishing",
+    "automation/account migration",
+    "current platform fee or trademark research"
+  ],
+  "archive": {
+    "name": "pupsters-complete-handoff-20261028.zip",
+    "contains": [
+      "20261028-pupsters-game-ui-handoff",
+      "20261028-pupsters-sns-handoff"
+    ],
+    "self_excluded": true,
+    "crc_and_payload_sha256": "verified by packaging script before publication"
+  },
+  "privacy": "new request documents plus already-published SNS package; no credentials or personal browser data included"
+}

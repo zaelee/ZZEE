@@ -1,0 +1,275 @@
+{
+  "created_at": "2026-10-28",
+  "path_base": "archive extraction root / repository root",
+  "excluded": [
+    "20261028-pupsters-game-ui-handoff/file-manifest.json",
+    "20261028-pupsters-game-ui-handoff/pupsters-complete-handoff-20261028.zip"
+  ],
+  "files": [
+    {
+      "path": "20261028-pupsters-game-ui-handoff/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/AGENTS.md",
+      "bytes": 1342,
+      "sha256": "b1a63dd43dac326204a7bf0fbeb8f8f79d747ed6faae2c18feefce9a5f0dc937"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/checks.json",
+      "bytes": 1697,
+      "sha256": "f1b49a6719ac0b073d89ad2649a701644d073e31bc64496214975936e29338dd"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/PUPSTERS_GAMEPLAY_REWORK_REQUEST.md",
+      "bytes": 49974,
+      "sha256": "1b448b712760c6abaa4be73dce43c64598f0d2000802a620715d47e76aefa796"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/README.md",
+      "bytes": 4210,
+      "sha256": "09ba4634df2793dcdf7c12bf0c78b238d44c7692bbeac2d760025ddcb8a6b731"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/START_HERE.md",
+      "bytes": 4716,
+      "sha256": "fcab001f470e6f449b1a5f9eb916cfbf8b390ec0223f431754be4afb9c37a478"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/THREE_CHANNEL_OPERATIONS.md",
+      "bytes": 9816,
+      "sha256": "dea72149bff361e0e151f2ad9ee3d5cb3d07f790c2115f9e435de9d41143ed1b"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/UI_PROGRESSION_REWORK_REQUEST.md",
+      "bytes": 29570,
+      "sha256": "6b121030079a62ae681dab3a645b365f0ea813c5e9a90778ac937401c66695f7"
+    },
+    {
+      "path": "20261028-pupsters-game-ui-handoff/USER_REQUESTS_20261028.md",
+      "bytes": 6822,
+      "sha256": "5210dc3e6ffc4e6fef64ff0341c3408741174ea84a67224b4ea4ac53f89ec008"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/.gitattributes",
+      "bytes": 45,
+      "sha256": "8d75fbed0329d55480242ea79c61cbdd3da312c700298bfba9572b81ec325cc6"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/AGENTS.md",
+      "bytes": 1520,
+      "sha256": "aeb25255583ac93fa14143ca2c740220a7be5cf29e6e959dc3af21f32d7e9d05"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/archive/rejected-ep01/caption.txt",
+      "bytes": 766,
+      "sha256": "39e7a82d1dacfc70f8e94d55c82acc41b7f306e85060441844e083f789c8c848"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/archive/rejected-ep01/EP01-four-panel.png",
+      "bytes": 1738822,
+      "sha256": "412008fc2c89b7e5368bdb5691bf1ca03966fb09a333c460b442ddb5397d4a0f"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/archive/rejected-ep01/generation-prompt.txt",
+      "bytes": 4841,
+      "sha256": "1e6828152b2bc9fceee2d26bd75fa706b408917b2aa5e9566d236b4c127d249c"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/archive/rejected-ep01/manifest.json",
+      "bytes": 619,
+      "sha256": "eb75834807cd6e000849eb92963edac18b30c2d12437e67a7ff71fb646d6e2d9"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/archive/rejected-ep01/review.txt",
+      "bytes": 605,
+      "sha256": "965c80ae8846f3166d6d980f35d6ea1a9e2dd3277a5d4b01d42ab6a746f0084b"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D01-shiba.png",
+      "bytes": 919595,
+      "sha256": "f4e509fd88af89498a3ed8e38c6eb783f7f72b8c206d72c918b57f2b74eb0e1a"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D02-bulldog.png",
+      "bytes": 881001,
+      "sha256": "8f5dc8609ae2da753bc4683d3aca7386866ae37626b89bc902962cecbc67b3a8"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D03-husky.png",
+      "bytes": 889021,
+      "sha256": "85f285c5c28428611544116c558395e4433e68149f70af5ec7448a2dfda489e4"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D04-beagle.png",
+      "bytes": 927429,
+      "sha256": "9d30143827e006900343fd2317400dd38dae34c6f04725bf4dd7e1b6ca477812"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D05-poodle.png",
+      "bytes": 880899,
+      "sha256": "4a338a0e6e0e12f1366fd97cba297ba0daf4fb0b5bb887c14d376eb24921f768"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/assets/D06-collie.png",
+      "bytes": 942212,
+      "sha256": "e79effb221df9cac6776401f516213a8ce524848175e69efc1ff96d40daa1eda"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/automation-prompt.txt",
+      "bytes": 3756,
+      "sha256": "c1adb86da28752d4cbaf8ab304e91150e916b9aff26f78b7fb3ff4d7d2ce1ba1"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/content-plan.json",
+      "bytes": 14352,
+      "sha256": "042c6f30cb5af5cfff71eeafe71b5480ef4b1137badf54e2087218936cc43448"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/index.html",
+      "bytes": 58842,
+      "sha256": "41b3d9d6d6e853b33fc53b49120e4cc0112129ef14ed3896db2a6234b67f0585"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/kids-channel-plan.json",
+      "bytes": 12694,
+      "sha256": "d1897683199a9586b2eb9eb751b41a8db557b4ffffd3dbffcd84345745b9ce2a"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/kids-pilot-01.txt",
+      "bytes": 5018,
+      "sha256": "8bbde56c6f40d222c943d190ade726564b5bfe3f763947b7accf995b26818fcc"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/research/dogtoon-references.md",
+      "bytes": 15357,
+      "sha256": "17001f8ca58e9407898ef16a98145c21195fed28947079a1b87b11c00516ab3c"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/research/korean-character-sns-recheck.md",
+      "bytes": 9057,
+      "sha256": "02db23635eeb91431115128118c53c403c34cdf15803624990be3a8a8e9d0142"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/research/korean-dogtoon-recheck.md",
+      "bytes": 14352,
+      "sha256": "00c83698357add7fa31991edf08febfbfcb67a389d81cbcb65da9ff60e66e62c"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/research/platforms.md",
+      "bytes": 15053,
+      "sha256": "4c694ac3f6135357a29103dfebef788b08fc3e58462ef1660a65ddf420a21338"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/research/trademark.md",
+      "bytes": 11488,
+      "sha256": "42c47a6658ee40329752c8a74376cb89923bdff4565dbfa0a75b1acfdc446645"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/brand/sns-automation-prompt.txt",
+      "bytes": 4155,
+      "sha256": "753220713b18d89f1b4bb184815602960c64366b89980b228e14e1273152b146"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/checks.json",
+      "bytes": 1316,
+      "sha256": "9c03d1dc77170eff7d4a23dce77f57fbfa8e0e7fdc04c12368938a3eb08cc6dd"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/caption.txt",
+      "bytes": 468,
+      "sha256": "793c1f17cbcf1f8f2029bd761449827bc4eecf31dfd9ff41a6dee0d9a3156286"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/EP01-good-spot.png",
+      "bytes": 1667018,
+      "sha256": "f89a652ffdec7ec7e9a1885c3e1fa13e41a18c2e04064c358e158b8edfab55d7"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/generation-prompt.txt",
+      "bytes": 7320,
+      "sha256": "fe98747bf9f796e73d12f8e3bc9d0c2da845baf1a3ddd99e408b303d0b50f1c2"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/manifest.json",
+      "bytes": 731,
+      "sha256": "b767ab553db511d924208212b5a8b9755a1b1fda177981c794d617ddae36d1b9"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/review.txt",
+      "bytes": 1886,
+      "sha256": "70fb3b04080934b633e6ba1cc78872c177408b691690f3159116abfeca49989b"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/storyboard.txt",
+      "bytes": 1879,
+      "sha256": "a6c3d2c02929ba66a6e1b6794b48d47e9cf63b9bb9a473241675de4eea19c41f"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/comic/workflow-notes.txt",
+      "bytes": 2465,
+      "sha256": "2c011deb47a374274afc835f69e998337d3712eb3092687f8623102b4f7deb95"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/file-manifest.json",
+      "bytes": 6931,
+      "sha256": "aff05b4e6a7d6a815f8003196fcd1084f209e329fdda1c00f8cff8116de68061"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/HANDOFF.md",
+      "bytes": 6786,
+      "sha256": "875c6ed64e59535971bc5f68ce043b091269c3e2be827801f861ffed71710e92"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/2026-10-27/KIDS01/assets-needed.json",
+      "bytes": 1261,
+      "sha256": "2aa12d318e11a5f28136be530e1b1ee924a17090028851c6700f0c3c533cd052"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/2026-10-27/KIDS01/metadata.txt",
+      "bytes": 399,
+      "sha256": "fa66ca3f74c6ac7d2255fd8f13db807d19ea14d2daf8dc6180dadfdb22e0e02d"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/2026-10-27/KIDS01/review.txt",
+      "bytes": 350,
+      "sha256": "0d1a902386450ebedd109959b3cb2144fed2ac9d19aacd748d206ecf00401fd1"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/2026-10-27/KIDS01/script.txt",
+      "bytes": 5018,
+      "sha256": "8bbde56c6f40d222c943d190ade726564b5bfe3f763947b7accf995b26818fcc"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/2026-10-27/KIDS01/storyboard.json",
+      "bytes": 6307,
+      "sha256": "a4e1095f8145ee2d1087dc351d36a5655eecbf70f3540d6ecce48a3d95d4079d"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/kids/production-index.json",
+      "bytes": 380,
+      "sha256": "c7a83f843b506c44a7da2d4929d516f2091451009356426f626b7c9272ec846c"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/pupsters-handoff-20261028.zip",
+      "bytes": 7884792,
+      "sha256": "b44a5c641b26f23ccb3b19fc0d20043ac3dcd217a96071d7c0a39fde6e75b997"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/README.md",
+      "bytes": 2291,
+      "sha256": "4a1c55da957a21cb523f5059a25379de2b469fa292480a9b9445e5ba827215a7"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/reference/art-direction.json",
+      "bytes": 2653,
+      "sha256": "70811925ef252c2e4ec88c8c088e66b1d77cc41dfe194e61522233d439dba5bf"
+    },
+    {
+      "path": "20261028-pupsters-sns-handoff/reference/line-weight-spec.json",
+      "bytes": 4259,
+      "sha256": "4ad6bdc7912fc9c8fac39a7ade21aa2d16d022383cbc76c59ff0f8e91f2ba1c4"
+    }
+  ]
+}
