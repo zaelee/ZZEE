@@ -1,0 +1,2548 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-29",
+  "scope": "Compact public game-integration audio derived from provisional edit drafts.",
+  "encoding": {
+    "format": "Ogg Vorbis",
+    "quality": "q5",
+    "sample_rate_hz": 44100,
+    "channels": 2,
+    "metadata_policy": "All source metadata removed; encoder identification may remain."
+  },
+  "validation": {
+    "file_count": 56,
+    "total_bytes": 66620938,
+    "maximum_file_bytes": 2923835,
+    "all_under_20000000_bytes": true,
+    "all_under_420_seconds": true,
+    "all_sample_rates_at_most_48000_hz": true,
+    "all_stereo": true,
+    "all_full_decode_passed": true,
+    "all_true_peaks_at_or_below_minus_1_dbtp": true,
+    "true_peak_note": "True peak measured on every lossy OGG; attenuation, if needed, was applied before a fresh encode from the WAV.",
+    "requested_bpm_status": "unverified planning values",
+    "listening_qa_status": "pending for every file"
+  },
+  "files": [
+    {
+      "id": "M01",
+      "kind": "bgm",
+      "title": "메인 타이틀 · 작은 발, 큰 모험",
+      "file": "audio/bgm/PUP_MUS_M01_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1431351,
+      "duration_seconds": 75.294127,
+      "sha256": "f774339dae8fc4e8f304c3dbeb3a4e3f1244e05cbb23f12db9b2003a27422848",
+      "source_cue": "M01",
+      "source_wav_sha256": "1b3d3c921d789085801cb8819ca0e95812930aebab677717ac68498e33513de9",
+      "label": "PUP_MUS_M01_A_v01_take01_loop_draft",
+      "requested_bpm": 102,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M01",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 75.294118,
+        "end": 150.708235,
+        "rendered_duration": 75.294118
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M01_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M02",
+      "kind": "bgm",
+      "title": "빌리지 낮 · 분수 앞 산책",
+      "file": "audio/bgm/PUP_MUS_M02_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1824124,
+      "duration_seconds": 102.127664,
+      "sha256": "b95652170ff7006abb44fb16f41ace700d3e0ebc813faff4b05b964779f39d94",
+      "source_cue": "M02",
+      "source_wav_sha256": "1c63754289e284dc1c31d0dd1385b76c9052e23d0c31f03a7fb3e34983e14938",
+      "label": "PUP_MUS_M02_A_v01_take01_loop_draft",
+      "requested_bpm": 94,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M02",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 40.851064,
+        "end": 143.098723,
+        "rendered_duration": 102.12766
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M02_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M03",
+      "kind": "bgm",
+      "title": "빌리지 밤 · 잘 자요, 펍스터즈",
+      "file": "audio/bgm/PUP_MUS_M03_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1860991,
+      "duration_seconds": 106.666667,
+      "sha256": "ee0bfc528eec98aa90bca152694fbab53121573317b989a410dccea81d69edb7",
+      "source_cue": "M03",
+      "source_wav_sha256": "81a745d236c14cb0001d2d71e7350bd2da4dda963fcd3e62c7c387624c385da2",
+      "label": "PUP_MUS_M03_A_v01_take01_loop_draft",
+      "requested_bpm": 72,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M03",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 40,
+        "end": 146.786667,
+        "rendered_duration": 106.666667
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M03_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M04",
+      "kind": "bgm",
+      "title": "게임홀 · 오늘의 모험",
+      "file": "audio/bgm/PUP_MUS_M04_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1436318,
+      "duration_seconds": 73.846145,
+      "sha256": "118ceca2eccfa885b52b950a57f5373012044e7afef89ea315d13919b7171ba0",
+      "source_cue": "M04",
+      "source_wav_sha256": "eaebdc47d92a4d0fc4750d3ee4798904b0b5756c3ebf33fbcbd9dcd4a1978e0a",
+      "label": "PUP_MUS_M04_A_v01_take01_loop_draft",
+      "requested_bpm": 104,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M04",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 55.384615,
+        "end": 129.350769,
+        "rendered_duration": 73.846154
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M04_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.3,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M05",
+      "kind": "bgm",
+      "title": "듀오 대기 · 한 자리 남았어요",
+      "file": "audio/bgm/PUP_MUS_M05_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1238779,
+      "duration_seconds": 70,
+      "sha256": "acc0cebf9c012f117a01ce49dcf03823e62ae47c969993795910db3c161cfe0b",
+      "source_cue": "M05",
+      "source_wav_sha256": "804bc2bf164c83f4d39a44e0923c3b5deb05a68b6929cd52d0b506bda6e26c07",
+      "label": "PUP_MUS_M05_A_v01_take01_loop_draft",
+      "requested_bpm": 96,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M05",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 60,
+        "end": 130.12,
+        "rendered_duration": 70
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M05_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M06",
+      "kind": "bgm",
+      "title": "공용 로딩 · 문 너머로",
+      "file": "audio/bgm/PUP_MUS_M06_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 372377,
+      "duration_seconds": 20.869569,
+      "sha256": "cc08c0d2ce3c3ef6f8ff3bbeabd7ce2fe59fa7ca6f6466c5c5f98b26a5ddb1a2",
+      "source_cue": "M06",
+      "source_wav_sha256": "eeba76360914f0f72182cdd67481814d28c57d594da4756d5e8d6cabf7c04c88",
+      "label": "PUP_MUS_M06_A_v01_take01_loop_draft",
+      "requested_bpm": 92,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M06",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 73.043478,
+        "end": 94.033043,
+        "rendered_duration": 20.869565
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M06_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M07",
+      "kind": "bgm",
+      "title": "장난감 방 · 블록 소동",
+      "file": "audio/bgm/PUP_MUS_M07_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2089183,
+      "duration_seconds": 107.586213,
+      "sha256": "d66206526246768a5c437b8d4de53b81f4f11140897c33d9af112e03b0f7c396",
+      "source_cue": "M07",
+      "source_wav_sha256": "921c9b8f62df35b65c1884adf0e86da010ec727d8f4dd71b45f016d13ca4445b",
+      "label": "PUP_MUS_M07_A_v01_take01_loop_draft",
+      "requested_bpm": 116,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M07",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 41.37931,
+        "end": 149.085517,
+        "rendered_duration": 107.586207
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M07_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M08",
+      "kind": "bgm",
+      "title": "장난감 방 · 방어선 사수",
+      "file": "audio/bgm/PUP_MUS_M08_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1947828,
+      "duration_seconds": 105,
+      "sha256": "c32455bc4f553023b64c900ee2041c5aac861f8e8e517c6f84e748dede97d39c",
+      "source_cue": "M08",
+      "source_wav_sha256": "b61a72d3e5ef4dd12925954ac8d4cdcf1b69b22d75e35f2a5348621a9d9eba4d",
+      "label": "PUP_MUS_M08_A_v01_take01_loop_draft",
+      "requested_bpm": 128,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M08",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 30,
+        "end": 135.12,
+        "rendered_duration": 105
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M08_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M09",
+      "kind": "bgm",
+      "title": "뒷마당 · 잔디 위 추격전",
+      "file": "audio/bgm/PUP_MUS_M09_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2073069,
+      "duration_seconds": 104,
+      "sha256": "70860d1b7c276b6eb3bece258aed28883f0c21f0080d3e890573238e154c3ca4",
+      "source_cue": "M09",
+      "source_wav_sha256": "7b5833672a9a289c30467efd086f0c888a5ff81901a9569cae39d9f7af22968a",
+      "label": "PUP_MUS_M09_A_v01_take01_loop_draft",
+      "requested_bpm": 120,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M09",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 32,
+        "end": 136.12,
+        "rendered_duration": 104
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M09_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.1,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M10",
+      "kind": "bgm",
+      "title": "뒷마당 · 놓치지 마!",
+      "file": "audio/bgm/PUP_MUS_M10_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1829810,
+      "duration_seconds": 101.818186,
+      "sha256": "1426d87e9756e3efc1a95db44696165faac155ccd837d508258f9e17890e323f",
+      "source_cue": "M10",
+      "source_wav_sha256": "7ffb567a48a1bf675fe2517d60491b497d1964853e496fa4ca830f54fc330fea",
+      "label": "PUP_MUS_M10_A_v01_take01_loop_draft",
+      "requested_bpm": 132,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M10",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 50.909091,
+        "end": 152.847273,
+        "rendered_duration": 101.818182
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M10_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M11",
+      "kind": "bgm",
+      "title": "한밤의 토이샵 · 진열장의 비밀",
+      "file": "audio/bgm/PUP_MUS_M11_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1871859,
+      "duration_seconds": 102.857143,
+      "sha256": "fb1e9c3b49112b290c009400ed07d276e4345c37ef64b1e8854b2dcaa35c4414",
+      "source_cue": "M11",
+      "source_wav_sha256": "da53f5bb7c33326a81f520e074798f08a9fa82f99216b6589f24735c554c1f75",
+      "label": "PUP_MUS_M11_A_v01_take01_loop_draft",
+      "requested_bpm": 112,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M11",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 25.714286,
+        "end": 128.691429,
+        "rendered_duration": 102.857143
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M11_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M12",
+      "kind": "bgm",
+      "title": "한밤의 토이샵 · 진열장 대소동",
+      "file": "audio/bgm/PUP_MUS_M12_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2044038,
+      "duration_seconds": 103.384626,
+      "sha256": "96f80af4eb505041cf2a273fddd2f9c93b6a05ea5efd0316c4aed9cfc05c0060",
+      "source_cue": "M12",
+      "source_wav_sha256": "126c940e7fc7ac8ce029abec6be957fa83152f5a3789384951f6920fa502619a",
+      "label": "PUP_MUS_M12_A_v01_take01_loop_draft",
+      "requested_bpm": 130,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M12",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 29.538462,
+        "end": 133.043077,
+        "rendered_duration": 103.384615
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M12_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M13",
+      "kind": "bgm",
+      "title": "협동 마당 · 둘이서 지키는 길",
+      "file": "audio/bgm/PUP_MUS_M13_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2088422,
+      "duration_seconds": 108.387098,
+      "sha256": "ea4752f2bbf543c35624b17378115bfbea0dedf660ed0f4fb885609ea7f268ec",
+      "source_cue": "M13",
+      "source_wav_sha256": "3f187db1d130ef335a5e5d6a5f105b882640210dd94392bee226c1ca36e1bf74",
+      "label": "PUP_MUS_M13_A_v01_take01_loop_draft",
+      "requested_bpm": 124,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M13",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 38.709677,
+        "end": 147.216774,
+        "rendered_duration": 108.387097
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M13_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -6.1,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M14",
+      "kind": "bgm",
+      "title": "무한 도전 · 한 판 더",
+      "file": "audio/bgm/PUP_MUS_M14_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2923835,
+      "duration_seconds": 152.380952,
+      "sha256": "31cd373517a9e989b19b0cb24b6add056f3437c4dbc5cc54524d6cb5f82a3344",
+      "source_cue": "M14",
+      "source_wav_sha256": "30908f07f501f61bc5fa402b5bfdc007208bf5e0b531b4bcdde94724b1b519d7",
+      "label": "PUP_MUS_M14_A_v01_take01_loop_draft",
+      "requested_bpm": 126,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M14",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 152.500952,
+        "rendered_duration": 152.380952
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M14_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.1,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M15",
+      "kind": "bgm",
+      "title": "무한 도전 · 한계 너머",
+      "file": "audio/bgm/PUP_MUS_M15_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2809195,
+      "duration_seconds": 153.043469,
+      "sha256": "68a72f8216cebe8dd21b9ba78da1957df5884a4eb3dc2d8f69bda232b4baa57b",
+      "source_cue": "M15",
+      "source_wav_sha256": "61bb156751f0d845558bfdc0d09e7025ccf956f6a4420cdbcdee298445bb7c03",
+      "label": "PUP_MUS_M15_A_v01_take01_loop_draft",
+      "requested_bpm": 138,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M15",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 13.913043,
+        "end": 167.076522,
+        "rendered_duration": 153.043478
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M15_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.1,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M16",
+      "kind": "bgm",
+      "title": "보스 · 블록사우루스가 온다",
+      "file": "audio/bgm/PUP_MUS_M16_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1990432,
+      "duration_seconds": 102.857143,
+      "sha256": "88c5d519ac42ce5116347487bf89d09469025f026cac7723b094cd58a0a650bb",
+      "source_cue": "M16",
+      "source_wav_sha256": "a0f24b87b9b5a06667a06d4fd7f374febe9ce5f49b7fbfdfe39c20dd0753ff13",
+      "label": "PUP_MUS_M16_A_v01_take01_loop_draft",
+      "requested_bpm": 140,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M16",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 41.142857,
+        "end": 144.12,
+        "rendered_duration": 102.857143
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M16_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M17",
+      "kind": "bgm",
+      "title": "스킨 스튜디오 · 오늘의 옷장",
+      "file": "audio/bgm/PUP_MUS_M17_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1407472,
+      "duration_seconds": 78.367347,
+      "sha256": "f4410b4d62a63296d7c90c967b7f77b26bcc7d4f623c9bd4615203a6db3b8ae6",
+      "source_cue": "M17",
+      "source_wav_sha256": "39e526e631c83ef681c7d87c5cd5218c0515335391e33b2d14511954ad036d02",
+      "label": "PUP_MUS_M17_A_v01_take01_loop_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M17",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 58.77551,
+        "end": 137.262857,
+        "rendered_duration": 78.367347
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M17_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M18",
+      "kind": "bgm",
+      "title": "파우 포지 · 차근차근 성장",
+      "file": "audio/bgm/PUP_MUS_M18_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1504917,
+      "duration_seconds": 76.8,
+      "sha256": "7743b21573caca44ae2a7911daadfdded0a6b1513b12886b872a7b30ef970378",
+      "source_cue": "M18",
+      "source_wav_sha256": "591745f688b6a26657959e0060595b4a7522195e7185f59e385a838811fda183",
+      "label": "PUP_MUS_M18_A_v01_take01_loop_draft",
+      "requested_bpm": 100,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M18",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 48,
+        "end": 124.92,
+        "rendered_duration": 76.8
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M18_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M19",
+      "kind": "bgm",
+      "title": "팩 랩 · 본능의 지도",
+      "file": "audio/bgm/PUP_MUS_M19_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1882632,
+      "duration_seconds": 106.666667,
+      "sha256": "8382744450380b2bf187788a1a1d4975be721db2f1674529aee98cf2a5e79b59",
+      "source_cue": "M19",
+      "source_wav_sha256": "0bbff30fdeb0b20353975deee4383b31170a9b0abdcdf3712304aa85d5f358f0",
+      "label": "PUP_MUS_M19_A_v01_take01_loop_draft",
+      "requested_bpm": 90,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M19",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 42.666667,
+        "end": 149.453333,
+        "rendered_duration": 106.666667
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M19_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M20",
+      "kind": "bgm",
+      "title": "파우 카페 · 친구 기다리기",
+      "file": "audio/bgm/PUP_MUS_M20_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1987192,
+      "duration_seconds": 105.36585,
+      "sha256": "343c3ff2d559e650e59377d470bf9bf2ac0db8189027c5a7a3ac5ee661a4cc81",
+      "source_cue": "M20",
+      "source_wav_sha256": "fa679975f1b43aa102bb32e8ddec0b288fc02628a22eb77350b4ce3406442cf6",
+      "label": "PUP_MUS_M20_A_v01_take01_loop_draft",
+      "requested_bpm": 82,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M20",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 46.829268,
+        "end": 152.315122,
+        "rendered_duration": 105.365854
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M20_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.8,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M21",
+      "kind": "bgm",
+      "title": "첫 산책 · 튜토리얼",
+      "file": "audio/bgm/PUP_MUS_M21_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1406307,
+      "duration_seconds": 76.8,
+      "sha256": "992471d23ca1e7ab6c8228fbb4e05da05552c89e88211ad8aea988529a0ed602",
+      "source_cue": "M21",
+      "source_wav_sha256": "f097b5f5fff0a194d3de4df3c2c53041f015235c16cfdb61f99e311a16f50d18",
+      "label": "PUP_MUS_M21_A_v01_take01_loop_draft",
+      "requested_bpm": 100,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M21",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 48,
+        "end": 124.92,
+        "rendered_duration": 76.8
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M21_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M22",
+      "kind": "bgm",
+      "title": "승리 결과 · 잘했어, 우리 팀",
+      "file": "audio/bgm/PUP_MUS_M22_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1007280,
+      "duration_seconds": 54.339615,
+      "sha256": "89e7af7b518a2b82127e8378d2fdc73b3d3d6a0f0b1467c35e6d5b118f0b031e",
+      "source_cue": "M22",
+      "source_wav_sha256": "3b67eba8ddb6aafada27be0321bcc99df75b8d0cf0e94e1f6d92493278405dd0",
+      "label": "PUP_MUS_M22_A_v01_take01_loop_draft",
+      "requested_bpm": 106,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M22",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 72.45283,
+        "end": 126.912453,
+        "rendered_duration": 54.339623
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M22_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M23",
+      "kind": "bgm",
+      "title": "패배 결과 · 다음엔 할 수 있어",
+      "file": "audio/bgm/PUP_MUS_M23_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 892469,
+      "duration_seconds": 50.526327,
+      "sha256": "b6125245fdc5cd4403dcebc0f861e477f36fd15868983b78677b3276bd58293d",
+      "source_cue": "M23",
+      "source_wav_sha256": "abb4cb83b672d0cacf051704b3adb2fc09e3347361f3505d6d66e05b952fab59",
+      "label": "PUP_MUS_M23_A_v01_take01_loop_draft",
+      "requested_bpm": 76,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M23",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 63.157895,
+        "end": 113.804211,
+        "rendered_duration": 50.526316
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M23_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.4,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "M24",
+      "kind": "bgm",
+      "title": "집으로 돌아오는 길",
+      "file": "audio/bgm/PUP_MUS_M24_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1126095,
+      "duration_seconds": 60,
+      "sha256": "42e2abedc45f5f030cd975445cbfbf7af436ccc06701e6d1d6d74e1923c8c17f",
+      "source_cue": "M24",
+      "source_wav_sha256": "30918c6218d28e2fec09a2d5eebba10b2a0b0a53e8ce3483bd7685d8458ccd37",
+      "label": "PUP_MUS_M24_A_v01_take01_loop_draft",
+      "requested_bpm": 88,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M24",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 65.454545,
+        "end": 125.574545,
+        "rendered_duration": 60
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_M24_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.4,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F01",
+      "kind": "bgm",
+      "title": "봄 · 꽃길 피크닉",
+      "file": "audio/bgm/PUP_MUS_F01_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1943520,
+      "duration_seconds": 102.857143,
+      "sha256": "94204b71ddade4b257979b28f0d8cf8a72adae30214d99980bb9cb02672cfd85",
+      "source_cue": "F01",
+      "source_wav_sha256": "bf66f0ed6e4adc2b7530c93e3f3d718990f7e74199a8ecb47d1e2552448f1722",
+      "label": "PUP_MUS_F01_A_v01_take01_loop_draft",
+      "requested_bpm": 112,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F01",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 42.857143,
+        "end": 145.834286,
+        "rendered_duration": 102.857143
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F01_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.3,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F02",
+      "kind": "bgm",
+      "title": "여름 · 물장구 대작전",
+      "file": "audio/bgm/PUP_MUS_F02_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2094607,
+      "duration_seconds": 105.762721,
+      "sha256": "88d8b0d42ba7e0bb7b2c0b37d2f71c1f58ddc6383cee1eeab4d9e4aa001817b0",
+      "source_cue": "F02",
+      "source_wav_sha256": "a4b0b0e3bf30e8da114d8f92a2ec4a823529f8efb5795639c0bc54c96c5d5e97",
+      "label": "PUP_MUS_F02_A_v01_take01_loop_draft",
+      "requested_bpm": 118,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F02",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 40.677966,
+        "end": 146.560678,
+        "rendered_duration": 105.762712
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F02_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F03",
+      "kind": "bgm",
+      "title": "가을 · 호박 뒤의 장난감",
+      "file": "audio/bgm/PUP_MUS_F03_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1919411,
+      "duration_seconds": 102.857143,
+      "sha256": "e3064060cb4fd77941bc630cf8e7f79c07f196dc7fd0b721644518c7c735a040",
+      "source_cue": "F03",
+      "source_wav_sha256": "a098efed11d7b5835324ca5ca6391d3893693e79739f31a0f5ce155ba6e10a11",
+      "label": "PUP_MUS_F03_A_v01_take01_loop_draft",
+      "requested_bpm": 112,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F03",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 25.714286,
+        "end": 128.691429,
+        "rendered_duration": 102.857143
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F03_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F04",
+      "kind": "bgm",
+      "title": "겨울 · 눈발 속 발자국",
+      "file": "audio/bgm/PUP_MUS_F04_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1669543,
+      "duration_seconds": 100,
+      "sha256": "a0706f005b6c94a945b619b6bc861f86f0263b2927b8e27f153310809e560b8c",
+      "source_cue": "F04",
+      "source_wav_sha256": "11271a1e6b8f7d257f0d5f4a9bcac0b7d861d40480c452728f55769aff201662",
+      "label": "PUP_MUS_F04_A_v01_take01_loop_draft",
+      "requested_bpm": 96,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F04",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 40,
+        "end": 140.12,
+        "rendered_duration": 100
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F04_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F05",
+      "kind": "bgm",
+      "title": "주방 · 간식 대탈출",
+      "file": "audio/bgm/PUP_MUS_F05_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2018591,
+      "duration_seconds": 108.387098,
+      "sha256": "9478b10f083dce9d96035f5e4afcb991a150fa28fc51eff1fd5cd66d09dd241d",
+      "source_cue": "F05",
+      "source_wav_sha256": "1f0f6a496dc5fc11b557718cdd9e7d3e5477e4e12477eefcb13b3cb1697307b8",
+      "label": "PUP_MUS_F05_A_v01_take01_loop_draft",
+      "requested_bpm": 124,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F05",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 23.225806,
+        "end": 131.732903,
+        "rendered_duration": 108.387097
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F05_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F06",
+      "kind": "bgm",
+      "title": "세탁실 · 거품 대소동",
+      "file": "audio/bgm/PUP_MUS_F06_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1937164,
+      "duration_seconds": 104.727279,
+      "sha256": "7e6edf071dece681884617b16abbea10b117dc8beb0ba4094f8452ca5490b811",
+      "source_cue": "F06",
+      "source_wav_sha256": "53e711d5b190aa1c672a416d2c0730ec01b243160a6de36e1feffdae4c04e61d",
+      "label": "PUP_MUS_F06_A_v01_take01_loop_draft",
+      "requested_bpm": 110,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F06",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 43.636364,
+        "end": 148.483636,
+        "rendered_duration": 104.727273
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F06_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F07",
+      "kind": "bgm",
+      "title": "다락방 · 태엽의 비밀",
+      "file": "audio/bgm/PUP_MUS_F07_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 1962972,
+      "duration_seconds": 106.666667,
+      "sha256": "b151d6ca9874f6bb5df5d95db23fb8366df4f72623ace8df5e783b9dcab8c9c2",
+      "source_cue": "F07",
+      "source_wav_sha256": "2aa050809985d8f7d60ae0e3c7709fe12ae817e335698a7d3498553ec5c1ea2d",
+      "label": "PUP_MUS_F07_A_v01_take01_loop_draft",
+      "requested_bpm": 108,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F07",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 26.666667,
+        "end": 133.453333,
+        "rendered_duration": 106.666667
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F07_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F08",
+      "kind": "bgm",
+      "title": "도시 공원 · 산책길 너머",
+      "file": "audio/bgm/PUP_MUS_F08_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2081058,
+      "duration_seconds": 107.586213,
+      "sha256": "21ba9492f8f47e11a75bc4f48c7366a3e7092103c769bf8b6955f511ad3cffa5",
+      "source_cue": "F08",
+      "source_wav_sha256": "09f77306f5af8aacd56d09e3b97efc1a63045d76a72516e5e6c66e813d136708",
+      "label": "PUP_MUS_F08_A_v01_take01_loop_draft",
+      "requested_bpm": 116,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F08",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 49.655172,
+        "end": 157.361379,
+        "rendered_duration": 107.586207
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F08_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.4,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F09",
+      "kind": "bgm",
+      "title": "대형 협동 · 한 팀 한 마음",
+      "file": "audio/bgm/PUP_MUS_F09_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2808676,
+      "duration_seconds": 148.235283,
+      "sha256": "82c9748009c8c94a2fd5d5c5544a18999a882b7fd7e7303d80b5a8b30267a9ce",
+      "source_cue": "F09",
+      "source_wav_sha256": "22bed7b69bc9df2591b0fcbfdc1e440b76cc5fe54b03e6152cd3fed3baf9fd08",
+      "label": "PUP_MUS_F09_A_v01_take01_loop_draft",
+      "requested_bpm": 136,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F09",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 35.294118,
+        "end": 183.649412,
+        "rendered_duration": 148.235294
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F09_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -6.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F10",
+      "kind": "bgm",
+      "title": "펍스터즈 축제",
+      "file": "audio/bgm/PUP_MUS_F10_A_v01_take01_loop_draft.ogg",
+      "size_bytes": 2138070,
+      "duration_seconds": 106.666667,
+      "sha256": "8fc09f10613a17508933bc8d8e62af0b9675008478a45896c2ef1ec868805038",
+      "source_cue": "F10",
+      "source_wav_sha256": "badb2f191f7d6bccc73f4159cc8fe56d073922925d701783385d6648c16d6b23",
+      "label": "PUP_MUS_F10_A_v01_take01_loop_draft",
+      "requested_bpm": 108,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F10",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 44.444444,
+        "end": 151.231111,
+        "rendered_duration": 106.666667
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/bgm/PUP_MUS_F10_A_v01_take01_loop_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F11_15s",
+      "kind": "promo",
+      "title": "출동, 펍스터즈!",
+      "file": "audio/promo/PUP_MUS_F11_A_v01_take01_promo_15s_draft.ogg",
+      "size_bytes": 299824,
+      "duration_seconds": 15,
+      "sha256": "d138c45e0390fa48c590586023b13ac6d4c64925651c5f65ba75ad3441be24fc",
+      "source_cue": "F11",
+      "source_wav_sha256": "8688f5c0b30df17b21bedf83d35b57fb571c4187ba3c847ba74b9ace1c6babd3",
+      "label": "PUP_MUS_F11_A_v01_take01_promo_15s_draft",
+      "requested_bpm": 128,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F11",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 67.5,
+        "end": 82.5,
+        "rendered_duration": 15
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F11_A_v01_take01_promo_15s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F11_30s",
+      "kind": "promo",
+      "title": "출동, 펍스터즈!",
+      "file": "audio/promo/PUP_MUS_F11_A_v01_take01_promo_30s_draft.ogg",
+      "size_bytes": 590368,
+      "duration_seconds": 30,
+      "sha256": "2f03f616138fed97dabcc6272161bbd87034d44f5bae9eeaaa1bc1fbacf66405",
+      "source_cue": "F11",
+      "source_wav_sha256": "8a4b36e1b27bf0dd02c4feee50823cd6a9b100551625697d3a66d12b82c678f6",
+      "label": "PUP_MUS_F11_A_v01_take01_promo_30s_draft",
+      "requested_bpm": 128,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F11",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 60,
+        "end": 90,
+        "rendered_duration": 30
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F11_A_v01_take01_promo_30s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F11_60s",
+      "kind": "promo",
+      "title": "출동, 펍스터즈!",
+      "file": "audio/promo/PUP_MUS_F11_A_v01_take01_promo_60s_draft.ogg",
+      "size_bytes": 1182578,
+      "duration_seconds": 60,
+      "sha256": "bbfe5e530f17ec9111d56954b2a25ff4b6c8cbb3c69d6265b00c7177accc71d1",
+      "source_cue": "F11",
+      "source_wav_sha256": "15f7970ef820a023c659fbf1018c4303747cc418b543bae113f06313782eb419",
+      "label": "PUP_MUS_F11_A_v01_take01_promo_60s_draft",
+      "requested_bpm": 128,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F11",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 45,
+        "end": 105,
+        "rendered_duration": 60
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F11_A_v01_take01_promo_60s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F12_15s",
+      "kind": "promo",
+      "title": "사고멍치의 하루",
+      "file": "audio/promo/PUP_MUS_F12_A_v01_take01_promo_15s_draft.ogg",
+      "size_bytes": 299163,
+      "duration_seconds": 15,
+      "sha256": "6cc4048075d4763259f9a406c669f33eec05257c5f4c87ac7a4382482261ef0a",
+      "source_cue": "F12",
+      "source_wav_sha256": "f14a494bb759101f19cb725de6f6630328d4eedf2c789c345c00bf11b4c09584",
+      "label": "PUP_MUS_F12_A_v01_take01_promo_15s_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F12",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 78.367347,
+        "end": 93.367347,
+        "rendered_duration": 15
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F12_A_v01_take01_promo_15s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F12_30s",
+      "kind": "promo",
+      "title": "사고멍치의 하루",
+      "file": "audio/promo/PUP_MUS_F12_A_v01_take01_promo_30s_draft.ogg",
+      "size_bytes": 577749,
+      "duration_seconds": 30,
+      "sha256": "11e2c24989943e3ce87fb96e074dd636dfdf277144f2ce8a42f0564c0a9544e7",
+      "source_cue": "F12",
+      "source_wav_sha256": "3f9119dc2b6da492a324bfee292f2c6c8b526abb78f3557c0d248251d61ad4bc",
+      "label": "PUP_MUS_F12_A_v01_take01_promo_30s_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F12",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 68.571429,
+        "end": 98.571429,
+        "rendered_duration": 30
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F12_A_v01_take01_promo_30s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.3,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "F12_60s",
+      "kind": "promo",
+      "title": "사고멍치의 하루",
+      "file": "audio/promo/PUP_MUS_F12_A_v01_take01_promo_60s_draft.ogg",
+      "size_bytes": 1155221,
+      "duration_seconds": 60,
+      "sha256": "b775bb5edd5ce60878ff6cb0de923f82dd1e35319a37b38ec08f4393f5005727",
+      "source_cue": "F12",
+      "source_wav_sha256": "b43aefdf80cd7ff13f7272c35351fabaafd18bd248a28964295d2bbd3ae396c5",
+      "label": "PUP_MUS_F12_A_v01_take01_promo_60s_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F12",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 58.77551,
+        "end": 118.77551,
+        "rendered_duration": 60
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/promo/PUP_MUS_F12_A_v01_take01_promo_60s_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.7,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J01",
+      "kind": "jingles",
+      "title": "브랜드 로고",
+      "file": "audio/jingles/PUP_STING_J01_draft.ogg",
+      "size_bytes": 37609,
+      "duration_seconds": 1.764717,
+      "sha256": "8c8357365fc32d474ee47cdb86616db1d09ef878b1a48b28d2f48a9f5e3f4d67",
+      "source_cue": "M01",
+      "source_wav_sha256": "e75a0e741375c85de9d9aa1892a55823b3a6f09296aa7a3004dd8ee8a612d233",
+      "label": "PUP_STING_J01_draft",
+      "requested_bpm": 102,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M01",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.764706,
+        "rendered_duration": 1.764706
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J01_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J02",
+      "kind": "jingles",
+      "title": "게임 출발",
+      "file": "audio/jingles/PUP_STING_J02_draft.ogg",
+      "size_bytes": 47779,
+      "duration_seconds": 2.307687,
+      "sha256": "5b3ec97096b55c7fc3f40696f96460fed8a7bf442a739de129c2dbad819b28a2",
+      "source_cue": "M04",
+      "source_wav_sha256": "da37b4a230403950cbceceb737ff03e1b7f2fe61653e42ced4ff273446172a4a",
+      "label": "PUP_STING_J02_draft",
+      "requested_bpm": 104,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M04",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 2.307692,
+        "rendered_duration": 2.307692
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J02_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J03",
+      "kind": "jingles",
+      "title": "웨이브 클리어",
+      "file": "audio/jingles/PUP_STING_J03_draft.ogg",
+      "size_bytes": 25358,
+      "duration_seconds": 1.03449,
+      "sha256": "969c81f7821069fecab76d4c11f852f482711c0f2b46d175188e45bf5ef6f47f",
+      "source_cue": "M07",
+      "source_wav_sha256": "d755fc4a878cd14c9082000a987c6814bd502e515bdc66ea353956efa5782d6c",
+      "label": "PUP_STING_J03_draft",
+      "requested_bpm": 116,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M07",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.034483,
+        "rendered_duration": 1.034483
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J03_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.4,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J04",
+      "kind": "jingles",
+      "title": "보스 등장",
+      "file": "audio/jingles/PUP_STING_J04_draft.ogg",
+      "size_bytes": 53960,
+      "duration_seconds": 2.571429,
+      "sha256": "ab0be88d452f120ff0f1706408232390b9f55e380f967d8e05315f34b66c7382",
+      "source_cue": "M16",
+      "source_wav_sha256": "393d2fbbe81b027477ef51078cf353a53e7d299d3cd8860925dd9ed6691bae9e",
+      "label": "PUP_STING_J04_draft",
+      "requested_bpm": 140,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M16",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 2.571429,
+        "rendered_duration": 2.571429
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J04_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.3,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J05",
+      "kind": "jingles",
+      "title": "승리",
+      "file": "audio/jingles/PUP_STING_J05_draft.ogg",
+      "size_bytes": 96026,
+      "duration_seconds": 5.094331,
+      "sha256": "f0e2e858c58d603235df01e3e0ef1f1b0023fe724d50769f182a62a525736d35",
+      "source_cue": "M22",
+      "source_wav_sha256": "b5db1266bd2044856d16704e6b419d9445dae825e9c8db0e2aa2210e5609510b",
+      "label": "PUP_STING_J05_draft",
+      "requested_bpm": 106,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M22",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 5.09434,
+        "rendered_duration": 5.09434
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J05_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.8,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J06",
+      "kind": "jingles",
+      "title": "패배·도전 종료",
+      "file": "audio/jingles/PUP_STING_J06_draft.ogg",
+      "size_bytes": 62396,
+      "duration_seconds": 3.157891,
+      "sha256": "6120bf9841acfb0a6a424aff74d98df3fa5e6da6545e515fa0018fa1c5478d57",
+      "source_cue": "M23",
+      "source_wav_sha256": "cf6d18d2d4357466674334eb9b2c017174aad5b3285396fb1c309e3b489aafa8",
+      "label": "PUP_STING_J06_draft",
+      "requested_bpm": 76,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M23",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 3.157895,
+        "rendered_duration": 3.157895
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J06_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -1.5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J07",
+      "kind": "jingles",
+      "title": "일반 진화",
+      "file": "audio/jingles/PUP_STING_J07_draft.ogg",
+      "size_bytes": 27433,
+      "duration_seconds": 1.2,
+      "sha256": "c15b277cce837ad80dc11a2f5fda4ffdd486cecb5baee11e610ac46d805c0e80",
+      "source_cue": "M18",
+      "source_wav_sha256": "f3f58c53c89e84f468350f17c9fa4ff4a4cc1461859be3f4548f949672a83284",
+      "label": "PUP_STING_J07_draft",
+      "requested_bpm": 100,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M18",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.2,
+        "rendered_duration": 1.2
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J07_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J08",
+      "kind": "jingles",
+      "title": "최종 각성",
+      "file": "audio/jingles/PUP_STING_J08_draft.ogg",
+      "size_bytes": 70084,
+      "duration_seconds": 3.52941,
+      "sha256": "0f2865e647a84d8f08fb3abfd09b5b77acb1a02bcdb5fc58f20cc9fb40579831",
+      "source_cue": "M01",
+      "source_wav_sha256": "6be7b3086e999223e3ec80e3771a848a141f8b32632d460c1822fed12b80904c",
+      "label": "PUP_STING_J08_draft",
+      "requested_bpm": 102,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M01",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 3.529412,
+        "rendered_duration": 3.529412
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J08_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J09",
+      "kind": "jingles",
+      "title": "티어 승급",
+      "file": "audio/jingles/PUP_STING_J09_draft.ogg",
+      "size_bytes": 50134,
+      "duration_seconds": 2.4,
+      "sha256": "3aed2f71958504f7d3e2975836a4cb7308dedff34df8305a5455c5c5a3617bca",
+      "source_cue": "M18",
+      "source_wav_sha256": "015f1075704c6fc6ac721c11ee67351ed649f4139f3f378251a205741d44560c",
+      "label": "PUP_STING_J09_draft",
+      "requested_bpm": 100,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M18",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 2.4,
+        "rendered_duration": 2.4
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J09_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.3,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J10",
+      "kind": "jingles",
+      "title": "냄새 추적대 합체",
+      "file": "audio/jingles/PUP_STING_J10_draft.ogg",
+      "size_bytes": 51402,
+      "duration_seconds": 2.44898,
+      "sha256": "1e830d368faae39c28d629698f21a9b3736d5c3fa3240f25ea39b9701a56ed78",
+      "source_cue": "F12",
+      "source_wav_sha256": "edfe6dcc5c6eca6015b6b52ddb28c78431c50e0f9d93d21e195e9e2c044c04db",
+      "label": "PUP_STING_J10_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "F12",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 2.44898,
+        "rendered_duration": 2.44898
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J10_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -1.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J11",
+      "kind": "jingles",
+      "title": "도전 10·20… 돌파",
+      "file": "audio/jingles/PUP_STING_J11_draft.ogg",
+      "size_bytes": 40874,
+      "duration_seconds": 1.904762,
+      "sha256": "a2f34654cf27b22446b7a8f49e75283126d99e011a76884b47deb4efa07e138b",
+      "source_cue": "M14",
+      "source_wav_sha256": "49209d8aadb1c33245842d86b8af9c46af60c882583cd76075a65d087524a2cf",
+      "label": "PUP_STING_J11_draft",
+      "requested_bpm": 126,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M14",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.904762,
+        "rendered_duration": 1.904762
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J11_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J12",
+      "kind": "jingles",
+      "title": "도전 100라운드 돌파",
+      "file": "audio/jingles/PUP_STING_J12_draft.ogg",
+      "size_bytes": 91510,
+      "duration_seconds": 4.782608,
+      "sha256": "a696c2e8c483c7d1e5a695cc4d4abe4d5fd1e99a293dc8db1606f9e2d10709c4",
+      "source_cue": "M15",
+      "source_wav_sha256": "9f5d0a5825f32c2d8d12fc0573eef6b5078605458d606ae603784e12b833638e",
+      "label": "PUP_STING_J12_draft",
+      "requested_bpm": 138,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M15",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 4.782609,
+        "rendered_duration": 4.782609
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J12_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.8,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J13",
+      "kind": "jingles",
+      "title": "새 강아지 해금",
+      "file": "audio/jingles/PUP_STING_J13_draft.ogg",
+      "size_bytes": 49465,
+      "duration_seconds": 2.44898,
+      "sha256": "2fc645493cc46c9efc70d8c81effd92c7a300bec2aeab68877b035919241b234",
+      "source_cue": "M17",
+      "source_wav_sha256": "92a3c227304399ed8499626a13d320aa7bf39ef5ef05598ed53ee01181c1ff28",
+      "label": "PUP_STING_J13_draft",
+      "requested_bpm": 98,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M17",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 2.44898,
+        "rendered_duration": 2.44898
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J13_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -4.6,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J14",
+      "kind": "jingles",
+      "title": "계정 레벨 상승",
+      "file": "audio/jingles/PUP_STING_J14_draft.ogg",
+      "size_bytes": 28206,
+      "duration_seconds": 1.333333,
+      "sha256": "638c9d376cd6b9622892c47c0a6f23ccc69361ceb3438c1e6fc6414f70e7d5ae",
+      "source_cue": "M19",
+      "source_wav_sha256": "d32476abed0f91ebbca9ef6ba0c07a39a792bbea5f93773ea2c5c48770500c95",
+      "label": "PUP_STING_J14_draft",
+      "requested_bpm": 90,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M19",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.333333,
+        "rendered_duration": 1.333333
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J14_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -3.2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J15",
+      "kind": "jingles",
+      "title": "보상 받기·퀘스트 완료",
+      "file": "audio/jingles/PUP_STING_J15_draft.ogg",
+      "size_bytes": 35423,
+      "duration_seconds": 1.698118,
+      "sha256": "d4ee7a8bfb7b3f69451f8b57ee81189300c3c4da6ecd01d1552fdb483afaf26d",
+      "source_cue": "M22",
+      "source_wav_sha256": "849cb122e2e89a79b5cb7340fd9c7f7ddcdc6950b3cacd4d3b05650d912df88d",
+      "label": "PUP_STING_J15_draft",
+      "requested_bpm": 106,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M22",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 1.698113,
+        "rendered_duration": 1.698113
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J15_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -2,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    },
+    {
+      "id": "J16",
+      "kind": "jingles",
+      "title": "챕터 완료",
+      "file": "audio/jingles/PUP_STING_J16_draft.ogg",
+      "size_bytes": 128789,
+      "duration_seconds": 6.818186,
+      "sha256": "1f9a77e338347f8714314d2a267fd704de18556edf89a1a1d82fa12ea3fe8e74",
+      "source_cue": "M24",
+      "source_wav_sha256": "3ba47722a6a28cabc009100db376d2bf14f7a2120f7c904a069539994ac5df96",
+      "label": "PUP_STING_J16_draft",
+      "requested_bpm": 88,
+      "bpm_verification": "unverified; requested plan BPM only",
+      "listening_qa": "pending",
+      "source_choice": "Variant A, Take 01; deterministic provisional choice",
+      "source_selection": {
+        "cue_id": "M24",
+        "variant": "A",
+        "version": 1,
+        "take": 1
+      },
+      "source_range_seconds": {
+        "start": 0,
+        "end": 6.818182,
+        "rendered_duration": 6.818182
+      },
+      "source_wav_file": "source-pack/edit-drafts56WAV/jingles/PUP_STING_J16_draft.wav",
+      "codec": "vorbis",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "true_peak_dbtp": -5.9,
+      "true_peak_measured_after_lossy_encode": true,
+      "attenuation_before_encode_db": 0,
+      "metadata_keys": [
+        "encoder"
+      ],
+      "attached_pictures": 0,
+      "probe_passed": true,
+      "full_decode_passed": true,
+      "quality_limits": [
+        "Lossy OGG Vorbis q5 delivery encode from a PCM WAV draft.",
+        "Musical edit points, loop seams, motif choice, and subjective quality require listening review.",
+        "No measured BPM claim; requested BPM is an unverified planning value."
+      ]
+    }
+  ]
+}

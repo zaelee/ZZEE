@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "node_version": "24.18.0",
+  "audio_files": 56,
+  "ogg_total_bytes": 66620938,
+  "ogg_maximum_file_bytes": 2923835,
+  "audio_sha256_match": true,
+  "audio_probe_and_full_decode_pass": 56,
+  "all_ogg_under_20mb_7minutes_48khz": true,
+  "lossy_output_true_peak_max_dbtp": -1.2,
+  "source_stream_copy_audio_identity_pass": 200,
+  "source_zip_crc_pass": true,
+  "source_zip_bytes": 1434575495,
+  "upload_register_rows": 50,
+  "all_roblox_ids_empty": true,
+  "public_metadata_scan": "passed: no account images, personal PC paths, private audio URLs or credentials",
+  "inline_javascript_syntax": "passed",
+  "repository_javascript_files_checked": 173,
+  "repository_local_links_checked": 1438,
+  "repository_tests": {
+    "passed": 63,
+    "failed": 0
+  },
+  "npm_run_check": {
+    "status": "failed_on_pre_existing_unrelated_food_map_data",
+    "error_count": 40,
+    "reason": "Existing Boryeong addresses outside validator expected area; those files were not changed."
+  },
+  "food_map_smoke": "passed independently after validation stopped the aggregate check",
+  "listening_qa": "pending",
+  "roblox_upload_and_in_game_test": "not performed",
+  "browser_visual_qa": "not yet performed"
+}

@@ -4,6 +4,8 @@
 
 ## Projects
 
+- [사고멍치 음악 적용 인수인계 2026-10-29](20261029-pupsters-music-handoff/README.md): BGM·징글·홍보 컷 56개, 사용처·Roblox 적용 지침·자산 등록표와 원본 릴리스
+
 - [사고멍치 게임·UI·3채널 통합 인수인계 2026-10-28](20261028-pupsters-game-ui-handoff/README.md): 14종·특전·밸런스, UI·아트·레벨·재화 수정 요청과 SNS·키즈 자료 통합 ZIP
 
 - [사고멍치 SNS 인수인계 2026-10-28](20261028-pupsters-sns-handoff/README.md): 최신 4컷 〈좋은 자리〉, 대본·제작 규칙·참고 원화와 브랜드·키즈 기획

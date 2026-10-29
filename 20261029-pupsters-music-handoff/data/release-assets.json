@@ -1,0 +1,12 @@
+{
+  "tag": "pupsters-music-20261029",
+  "url": "https://github.com/zaelee/ZZEE/releases/tag/pupsters-music-20261029",
+  "assets": [
+    {
+      "name": "PUPSTERS-Music-Sources-20261029.zip",
+      "bytes": 1434575495,
+      "sha256": "f63c5792a8b273d87f04da93cd8ddf97185c25a531548e4a0ca1540dbd4a6396",
+      "role": "144 source MP3 audio streams and 56 WAV drafts; sanitized public package"
+    }
+  ]
+}
