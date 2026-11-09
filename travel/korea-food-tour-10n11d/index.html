@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>한국 10박 11일 50개 먹킷리스트 · 수원 본가 &amp; 서울 맛집 루트</title>
+  <meta name="description" content="인천공항 입출국 · 수원 본가(엄마표 집밥·부모님 외식)와 서울(친구들과 맛집·포차)을 오가는 10박 11일 50개 메뉴 완주 루트와 유명 맛집 주소록." />
+  <style>
+    :root {
+      --bg: #f7f7f2;
+      --paper: #fffefa;
+      --ink: #191917;
+      --muted: #64685f;
+      --line: #deded2;
+      --accent: #ff6b35;
+      --accent-soft: rgba(255, 107, 53, 0.12);
+      --green: #3b7a47;
+      --green-soft: rgba(59, 122, 71, 0.12);
+      --blue: #286684;
+      --blue-soft: rgba(40, 102, 132, 0.12);
+      --amber: #b4690e;
+      --amber-soft: rgba(180, 105, 14, 0.13);
+      --shadow: 0 14px 36px rgba(25, 25, 23, 0.07);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255, 254, 250, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      width: min(1140px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 12px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 11px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .back-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .progress-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .progress-track {
+      width: 110px;
+      height: 8px;
+      background: var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--green);
+      transition: width 220ms ease;
+    }
+
+    .reset-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .shell {
+      width: min(1140px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #fffefa 0%, #fff4ec 100%);
+      border: 1px solid rgba(255, 107, 53, 0.45);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .badge.green {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .badge.blue {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .badge.amber {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4.5vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 780px;
+    }
+
+    .controls {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .control-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab-btn, .filter-btn, .day-btn {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+
+    .tab-btn:hover, .filter-btn:hover, .day-btn:hover {
+      border-color: var(--accent);
+    }
+
+    .tab-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      max-width: 340px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 13px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-size: 13px;
+      color: var(--ink);
+    }
+
+    .search-box input:focus {
+      outline: 2px solid rgba(255, 107, 53, 0.35);
+      border-color: var(--accent);
+    }
+
+    .day-nav {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    .day-btn {
+      flex-shrink: 0;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    .day-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .group-section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(25, 25, 23, 0.04);
+    }
+
+    .group-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .group-head h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .group-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .route-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .food-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 16px;
+      cursor: pointer;
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+    }
+
+    .food-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(25, 25, 23, 0.06);
+    }
+
+    .food-card.checked {
+      opacity: 0.62;
+      background: #f9f9f5;
+    }
+
+    .food-card.checked h3 {
+      text-decoration: line-through;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .card-num-slot {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .check-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .food-card.checked .check-box {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .card-title-row h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .restaurant-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .card-tip {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .card-footer {
+      margin: 0 -16px -16px;
+      padding: 11px 16px;
+      background: var(--bg);
+      border-top: 1px solid var(--line);
+      border-radius: 0 0 12px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .addr-text {
+      font-size: 12px;
+      color: var(--ink);
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .addr-text strong {
+      color: var(--muted);
+      margin-right: 4px;
+    }
+
+    .action-btns {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .mini-btn {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 4px 9px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .mini-btn:hover {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 50;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+      display: none;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 780px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 20px;
+      }
+      .group-section {
+        padding: 16px;
+      }
+      .search-box {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="back-link" href="../../index.html">← ZZEE 목차로</a>
+      <div class="progress-pill">
+        <span>먹킷리스트 달성률</span>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-bar" class="progress-fill"></div>
+        </div>
+        <span id="progress-text">0 / 50 (0%)</span>
+        <button type="button" class="reset-btn" onclick="resetChecks()">초기화</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">
+        <span class="badge">✈️ 인천공항 입출국</span>
+        <span class="badge amber">🏡 수원 본가 베이스캠프 (엄마표 집밥)</span>
+        <span class="badge green">👨‍👩‍👧 부모님과 수원·서울 외식</span>
+        <span class="badge blue">🍻 서울 친구들과 맛집·포차</span>
+      </div>
+      <h1>10박 11일 한국 귀국 50개 먹킷리스트 &amp; 맛집 주소록</h1>
+      <p>
+        수원 집을 베이스캠프로 삼아 <strong>아침·점심은 엄마표 집밥</strong>으로 위장과 지갑을 아끼고,
+        저녁과 주말은 <strong>부모님 모시고 가는 노포 외식</strong>과 <strong>서울 친구들과 달리는 핫플·술자리</strong>로 50개 전 메뉴를 완주하는 실전 동선입니다.
+      </p>
+
+      <div class="controls">
+        <div class="control-row">
+          <div class="btn-group" role="tablist" aria-label="보기 방식 전환">
+            <button type="button" id="tab-schedule" class="tab-btn active" onclick="setViewMode('schedule')">
+              📅 10박 11일 일자별 루트
+            </button>
+            <button type="button" id="tab-category" class="tab-btn" onclick="setViewMode('category')">
+              🗂️ 누구랑 먹을지 (집밥 / 부모님 / 친구들)
+            </button>
+          </div>
+
+          <div class="search-box">
+            <input
+              id="search-input"
+              type="search"
+              oninput="handleSearch(this.value)"
+              placeholder="메뉴, 맛집 상호, 동네 검색 (예: 방어, 종로, 수원)..."
+              aria-label="메뉴 또는 맛집 검색"
+            />
+          </div>
+        </div>
+
+        <div class="control-row">
+          <div class="btn-group" aria-label="대상별 필터">
+            <button type="button" id="filter-all" class="filter-btn active" onclick="setFilter('all')">전체 (50)</button>
+            <button type="button" id="filter-home" class="filter-btn" onclick="setFilter('home')">🏡 수원 집밥·집배달 (16)</button>
+            <button type="button" id="filter-parents" class="filter-btn" onclick="setFilter('parents')">👨‍👩‍👧 부모님과 외식 (13)</button>
+            <button type="button" id="filter-friends" class="filter-btn" onclick="setFilter('friends')">🍻 서울 친구들과 (21)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav id="day-nav" class="day-nav" aria-label="일자별 바로가기">
+      <button type="button" id="day-btn-all" class="day-btn active" onclick="setDayFilter('all')">전 일정 보기</button>
+    </nav>
+
+    <div id="content-area"></div>
+
+    <footer>
+      <span>ZZEE · 10박 11일 인천공항 — 수원 본가 — 서울 50개 먹킷리스트</span>
+      <span>카드를 클릭하면 완료 체크가 브라우저에 자동 저장됩니다.</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const DAYS_INFO = [
+      { day: 1, title: "Day 1. 인천공항 입국 → 수원 본가 도착 (가족 환영회)", route: "인천공항 ✈️ → 수원 본가 🏡 → 수원 인계동 외식", desc: "입국 직후 공항에서 간단히 요기하고 수원 집으로 이동! 광교 망개떡으로 당 충전 후 저녁엔 부모님과 수원 왕갈비 외식, 밤엔 첫날 기념 치킨 야식." },
+      { day: 2, title: "Day 2. 엄마표 김치찜 집밥 → 서울 종로·광장시장 포차 투어", route: "수원 본가 🏡 → 서울 광장시장 · 종로3가 🍻 → 수원 귀가", desc: "아침·점심은 집에서 엄마표 묵은지 김치찜과 미역줄기로 든든히 먹고 서울로 출격! 친구들과 광장시장 육회탕탕이 → 종로3가 오죽이네 → 꼼장어 풀코스." },
+      { day: 3, title: "Day 3. 부모님과 수원 광교산 & 남문 전통시장 데이트", route: "수원 광교산 ⛰️ → 팔달문(지동·못골시장) 🏮 → 수원 본가 🏡", desc: "부모님 모시고 광교산 보리밥정식·비지찌개 나들이 후 수원 남문시장에서 호떡·떡볶이 간식, 저녁엔 본가에서 편하게 중국집 & 족발·보쌈 배달 파티!" },
+      { day: 4, title: "Day 4. 집제육 쌈밥 → 서울 명동·을지로 친구들 약속", route: "수원 본가 🏡 → 서울 명동 · 을지로 · 신촌 🍻 → 수원 귀가", desc: "집에서 엄마표 제육볶음 먹고 오후에 서울행! 명동교자 칼국수로 시작해 저녁엔 소곱창 구이, 입가심으로 시원한 설빙 빙수까지." },
+      { day: 5, title: "Day 5. 엄마표 동그랑땡 → 서울 연남·노량진 11월 대방어 파티", route: "수원 본가 🏡 → 서울 홍대·연남 · 노량진 🐟", desc: "점심은 집에서 갓 부친 수제 동그랑땡, 오후엔 친구들과 신전떡볶이+오징어튀김 번개, 저녁엔 11월 제철 맞은 두툼한 대방어회와 감자탕 해장!" },
+      { day: 6, title: "Day 6. 수원 지동시장 순대국밥 & 강남 논현 왕천파닭", route: "수원 지동시장 🍲 → 서울 마포/구로 → 강남 논현동 🍗", desc: "아침 겸 점심으로 부모님과 수원 지동시장 순대타운에서 순대국밥, 저녁엔 들깨 감자옹심이와 논현동 먹자골목 왕천파닭으로 파채 치킨 맥주!" },
+      { day: 7, title: "Day 7. 서울 친구들과 등촌샤브 → 삼겹살·막창·엽떡 올나잇", route: "수원 본가 🏡 → 서울 마포·용산·왕십리 🔥", desc: "점심은 얼큰한 등촌샤브칼국수 풀코스, 저녁엔 육즙 가득 삼겹살 1차 → 연탄 돼지막창 2차 → 밤엔 매콤한 엽떡+엽닭 세트로 달리는 날!" },
+      { day: 8, title: "Day 8. 부모님과 미쉐린 게장·평양냉면 & 회기 파전골목", route: "수원 본가 🏡 → 서울 마포·충무로 👨‍👩‍👧 → 회기 파전골목 🍶", desc: "점심엔 부모님 모시고 서울 나들이(우래옥 평양냉면 & 진미식당 간장게장), 저녁엔 친구들과 회기 파전골목 해물파전 막걸리 후 집에서 황금올리브 야식!" },
+      { day: 9, title: "Day 9. 엄마표 오삼불고기 집밥 → 서울 한남·용산 매콤 찜 투어", route: "수원 본가 🏡 → 서울 한남동 · 용리단길 🌶️ → 수원 귀가", desc: "낮엔 집에서 매콤한 엄마표 오삼불고기 백반, 저녁엔 서울 올라가서 친구들과 한남동 뼈찜 1차 & 용리단길 알곤이찜 2차로 소주 안주 끝판왕 달성!" },
+      { day: 10, title: "Day 10. 한국에서의 마지막 만찬 (충무로 닭칼국수 & 둔촌동 보성갈비)", route: "수원 본가 🏡 → 서울 충무로 · 강동 둔촌동 🥩 → 수원 본가", desc: "점심엔 진한 닭 육수의 충무로 사랑방 닭칼국수, 저녁엔 달짝지근한 양념 돼지갈비 노포 '보성갈비'에서 마지막 만찬을 즐기며 짐 정리!" },
+      { day: 11, title: "Day 11. 수원 본가 마지막 집밥 → 인천공항 출국 전 바지락칼국수", route: "수원 본가 🏡 → 인천공항 영종도 ✈️", desc: "아침에 엄마 반찬으로 마지막 집밥 먹고 공항 이동! 비행기 타기 전 영종도 황해해물칼국수(바지락칼국수)로 시원하게 마무리 후 출국." }
+    ];
+
+    const FOOD_ITEMS = [
+      { id: 1, keyword: "맘스터치", day: 1, slot: "입국 직후 간식", who: "home", whoLabel: "🏡 공항 / 수원 집배달", restaurant: "맘스터치 인천공항점 / 수원역점", region: "인천공항 / 수원 팔달구", address: "인천광역시 중구 공항로 272", tip: "입국 직후나 출국 직전 공항 매장에서 갓 튀긴 싸이버거 세트로 빠르게 한국 패스트푸드 수혈!" },
+      { id: 2, keyword: "망개랑(수원 망개떡)", day: 1, slot: "본가 도착 티타임", who: "home", whoLabel: "🏡 수원 본가 간식", restaurant: "망개랑 광교본점", region: "수원 영통구 광교", address: "경기도 수원시 영통구 센트럴파크로128번길 15-2", tip: "수원 광교의 명물 수제 망개떡 전문점! 당일 생산이라 오전에 픽업해 부모님과 집에서 드시기 최고입니다." },
+      { id: 3, keyword: "인절미", day: 1, slot: "본가 떡 투어", who: "home", whoLabel: "🏡 수원 본가 간식", restaurant: "못골시장 종로떡집 / 서울 망원 경기떡집", region: "수원 팔달구 못골시장", address: "경기도 수원시 팔달구 수성로24번길 19", tip: "망개떡 살 때 못골시장 방앗간에서 고소한 콩고물 인절미도 한 팩 사서 본가 식탁에 두고 오가며 드세요." },
+      { id: 4, keyword: "절편", day: 1, slot: "본가 떡 투어", who: "home", whoLabel: "🏡 수원 본가 간식", restaurant: "못골시장 종로떡집 / 망개랑 광교본점", region: "수원 팔달구 못골시장", address: "경기도 수원시 팔달구 수성로24번길 19", tip: "참기름 솔솔 발라진 쫄깃한 절편! 집에서 프라이팬에 살짝 구워 조청 찍어 먹으면 아침 대용으로 일품." },
+      { id: 5, keyword: "소갈비", day: 1, slot: "저녁 가족 외식", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 수원 외식", restaurant: "가보정 본점 / 본수원갈비 본점", region: "수원 팔달구 인계동", address: "경기도 수원시 팔달구 장다리로 282", tip: "수원이 본가라면 귀국 첫 저녁은 무조건 부모님 모시고 수원 왕갈비! 정갈한 밑반찬의 가보정, 푸짐한 생갈비의 본수원갈비 모두 최고." },
+      { id: 6, keyword: "뿌링클", day: 1, slot: "첫날 밤 야식", who: "home", whoLabel: "🏡 수원 본가 배달", restaurant: "BHC치킨 (수원 본가 배달 / 인계점)", region: "수원 팔달구 인계동", address: "경기도 수원시 팔달구 경수대로466번길 59", tip: "뿌링클 순살/콤보에 뿌링치즈볼 추가는 국룰! 첫날 밤 집에서 편하게 맥주 한 캔과 즐기세요." },
+
+      { id: 7, keyword: "김치찜", day: 2, slot: "아침·점심 집밥", who: "home", whoLabel: "🏡 수원 본가 엄마표 집밥", restaurant: "🏡 수원 본가 엄마표 (외식 시: 서대문 한옥집 본점)", region: "수원 본가 / 서울 서대문구", address: "서울특별시 서대문구 통일로9안길 14", tip: "집에 있는 묵은지 통째로 넣고 돼지 목살·삼겹살 푹 지져낸 엄마표 김치찜으로 서울 나가기 전 든든하게 한 공기 뚝딱!" },
+      { id: 8, keyword: "미역줄기", day: 2, slot: "아침·점심 집밥 반찬", who: "home", whoLabel: "🏡 수원 본가 엄마표 집밥", restaurant: "🏡 수원 본가 엄마표 밑반찬", region: "수원 본가 / 못골시장", address: "경기도 수원시 팔달구 수성로24번길 19", tip: "한국 집밥의 소울 밑반찬! 들기름과 다진 마늘 넣고 꼬들꼬들하게 볶은 엄마표 미역줄기볶음을 반찬통에 넉넉히 해달라고 하세요." },
+      { id: 9, keyword: "자몽톡톡스무디", day: 2, slot: "서울 이동 후 카페", who: "friends", whoLabel: "🍻 서울 친구들과 카페", restaurant: "메가MGC커피 (종로4가점 등 전국 매장)", region: "서울 종로구", address: "서울특별시 종로구 종로 177", tip: "수원에서 서울 올라가 친구들 만나기 전, 상큼하고 쌉싸름한 자몽 과육이 톡톡 씹히는 스무디로 리프레시!" },
+      { id: 10, keyword: "꽈베기", day: 2, slot: "오후 시장 간식", who: "friends", whoLabel: "🍻 서울 친구들과 간식", restaurant: "광장시장 찹쌀꽈배기", region: "서울 종로구 광장시장", address: "서울특별시 종로구 종로32길 2", tip: "줄이 길어도 회전율이 엄청 빠릅니다! 계피설탕 묻힌 갓 튀긴 뜨거운 찹쌀꽈배기 한 입으로 광장시장 투어 시작." },
+      { id: 11, keyword: "산낙지", day: 2, slot: "저녁 1차 (광장시장)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "부촌육회 본점 / 육회자매집", region: "서울 종로구 광장시장", address: "서울특별시 종로구 종로 200-12", tip: "미쉐린 가이드 빕구르망 선정 맛집! 싱싱하게 꿈틀거리는 산낙지를 육회와 함께 '육회낙지탕탕이'로 주문하세요." },
+      { id: 12, keyword: "육회", day: 2, slot: "저녁 1차 (광장시장)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "부촌육회 본점 / 육회자매집 1호점", region: "서울 종로구 광장시장", address: "서울특별시 종로구 종로 200-4", tip: "산낙지+육회 조합에 노른자와 배를 쓱쓱 비벼 김에 싸 먹으면 친구들과 1차 시작 안주로 완벽합니다." },
+      { id: 13, keyword: "오죽이네", day: 2, slot: "저녁 2차 (종로3가)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "오죽이네 본점 (닭매운탕 전문)", region: "서울 종로구 익선동", address: "서울특별시 종로구 돈화문로11가길 25", tip: "광장시장에서 도보 10분! 마늘 향 진하고 칼칼한 국물의 닭매운탕 성지입니다. 다 먹고 칼국수 사리나 볶음밥 필수!" },
+      { id: 14, keyword: "꼼장어", day: 2, slot: "저녁 3차 (종로 노포)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "공평동꼼장어 본점 / 종로5가 원조산꼼장어", region: "서울 종로구 공평동", address: "서울특별시 종로구 우정국로 29", tip: "오죽이네 근처 종로 골목에서 불향 가득한 연탄 소금·양념 꼼장어로 3차 마무리 후 심야버스로 수원 귀가!" },
+
+      { id: 15, keyword: "보리밥정식", day: 3, slot: "점심 부모님 외식", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 수원 외식", restaurant: "광교산 형제농원 / 백운주말농장", region: "수원 장안구 광교산", address: "경기도 수원시 장안구 광교산로 537-13", tip: "수원 부모님들의 최애 외식 코스인 광교산 보리밥촌! 구수한 보리밥에 각종 나물과 참기름, 고추장 넣고 쓱쓱 비벼 드세요." },
+      { id: 16, keyword: "비지찌개", day: 3, slot: "점심 외식 & 집밥", who: "home", whoLabel: "🏡 집밥 & 광교산 보리밥 세트", restaurant: "🏡 수원 본가 엄마표 / 광교산 형제농원", region: "수원 본가 / 광교산", address: "경기도 수원시 장안구 광교산로 537-13", tip: "보리밥정식 시키면 뚝배기 비지찌개가 같이 나오고, 집에서도 엄마가 신김치·돼지고기 송송 썰어 끓여주시는 집 비지찌개로 한 번 더!" },
+      { id: 17, keyword: "호떡", day: 3, slot: "오후 시장 데이트", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 시장 간식", restaurant: "수원 남문 지동시장 호떡 / 남대문 야채호떡", region: "수원 팔달구 지동시장", address: "경기도 수원시 팔달구 팔달문로 19", tip: "부모님과 수원 남문시장 산책하며 갓 구운 따끈한 꿀호떡 한 입! (Day 4 명동 갈 때 남대문 야채호떡도 도보 10분 거리)" },
+      { id: 18, keyword: "떡볶이", day: 3, slot: "오후 시장 분식", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 시장 간식", restaurant: "수원 남문시장 떡볶이 골목", region: "수원 팔달구 팔달문", address: "경기도 수원시 팔달구 정조로 777", tip: "굵직한 가래떡에 꾸덕한 고추장 양념이 밴 전통 시장 판떡볶이! 호떡 먹을 때 세트로 맛보기 딱 좋습니다." },
+      { id: 19, keyword: "짬봉,탕수육,짜장", day: 3, slot: "저녁 가족 배달/외식", who: "home", whoLabel: "🏡 수원 본가 가족 배달", restaurant: "🏡 본가 단골 중국집 배달 (외식: 수원 고등반점)", region: "수원 본가 / 팔달구", address: "경기도 수원시 팔달구 팔달로 67", tip: "부모님과 집에서 가장 편하게 시켜 먹는 한국식 중화요리 탕짜짬 세트! 바삭한 탕수육에 얼큰한 짬뽕 국물 조합." },
+      { id: 20, keyword: "족발", day: 3, slot: "밤 가족 야식 / 서울 외식", who: "home", whoLabel: "🏡 본가 배달 (서울: 평안도족발집)", restaurant: "🏡 수원 본가 족보세트 배달 / 장충동 평안도족발집", region: "수원 본가 / 서울 장충동", address: "서울특별시 중구 장충단로 174-6", tip: "저녁이나 야식으로 부모님과 집에서 족발+보쌈 세트로 배달시켜 막국수와 함께 푸짐하게 즐기세요." },
+      { id: 21, keyword: "보쌈", day: 3, slot: "밤 가족 야식 / 서울 외식", who: "home", whoLabel: "🏡 본가 배달 (서울: 종로 삼해집)", restaurant: "🏡 수원 본가 족보세트 배달 / 종로 삼해집", region: "수원 본가 / 서울 종로구", address: "서울특별시 종로구 수표로20길 16-15", tip: "족발 시킬 때 반반(족보세트)으로 한 번에 클리어하거나, 11월 제철 생굴과 함께 나오는 종로 굴보쌈 골목 방문 추천!" },
+
+      { id: 22, keyword: "제육볶음", day: 4, slot: "아침·점심 집밥", who: "home", whoLabel: "🏡 수원 본가 엄마표 집밥", restaurant: "🏡 수원 본가 엄마표 제육 (외식: 성북동돼지갈비백반)", region: "수원 본가 / 서울 성북구", address: "서울특별시 성북구 성북로 115", tip: "엄마가 앞다리살이나 삼겹살에 고추장 양념 듬뿍 재워 볶아주신 집제육에 상추·깻잎 쌈 크게 싸서 점심 해결!" },
+      { id: 23, keyword: "명동교자", day: 4, slot: "오후 서울 첫 끼", who: "friends", whoLabel: "🍻 서울 친구들과 식사", restaurant: "명동교자 본점", region: "서울 중구 명동", address: "서울특별시 중구 명동10길 29", tip: "알싸한 마늘 김치와 걸쭉한 닭 육수 칼국수, 육즙 가득 만두의 조합! 사리 리필과 공깃밥이 무료입니다." },
+      { id: 24, keyword: "소곱창", day: 4, slot: "저녁 메인 (신촌/을지로)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "신촌황소곱창 본점 / 을지로 양미옥", region: "서울 서대문구 신촌", address: "서울특별시 서대문구 연세로9길 31", tip: "곱이 꽉 찬 고소한 한우 소곱창 구이 위에 부추무침 듬뿍 올리고, 마지막엔 깍두기 볶음밥으로 판을 긁어줘야 완성!" },
+      { id: 25, keyword: "빙수", day: 4, slot: "저녁 후 디저트 2차", who: "friends", whoLabel: "🍻 서울 친구들과 디저트", restaurant: "설빙 홍대입구역점 / 부암동 부빙", region: "서울 마포구 홍대", address: "서울특별시 마포구 홍익로6길 15", tip: "기름진 소곱창 먹고 난 뒤 친구들과 설빙에 가서 인절미설빙이나 과일빙수에 연유 듬뿍 뿌려 입가심하면 극락!" },
+
+      { id: 26, keyword: "동그랑땡", day: 5, slot: "아침·점심 집밥", who: "home", whoLabel: "🏡 수원 본가 엄마표 집밥", restaurant: "🏡 수원 본가 엄마표 수제전 (외식: 사당 전주전집)", region: "수원 본가 / 서울 사당", address: "서울특별시 동작구 동작대로7길 19", tip: "엄마가 돼지고기·두부·야채 다져 계란옷 입혀 따끈하게 부쳐주시는 집밥 동그랑땡! 케첩이나 초간장 찍어 드세요." },
+      { id: 27, keyword: "신전떡볶이", day: 5, slot: "오후 분식 번개", who: "friends", whoLabel: "🍻 친구들과 분식 타임", restaurant: "신전떡볶이 홍대점 / 수원인계점", region: "서울 마포구 홍대", address: "서울특별시 마포구 와우산로 105", tip: "중독성 강한 카레향 매콤 국물떡볶이! 신전치즈김밥을 떡볶이 국물에 푹 적셔 먹는 게 핵심입니다." },
+      { id: 28, keyword: "오징어튀김", day: 5, slot: "오후 분식 세트", who: "friends", whoLabel: "🍻 친구들과 분식 타임", restaurant: "신전떡볶이 / 홍대 조폭떡볶이", region: "서울 마포구 홍대", address: "서울특별시 마포구 어울마당로 60", tip: "신전떡볶이 시킬 때 바삭한 오징어튀김+어묵튀김을 추가해 매콤한 국물에 찍어 드세요." },
+      { id: 29, keyword: "방어회", day: 5, slot: "저녁 메인 (연남/노량진)", who: "friends", whoLabel: "🍻 서울 친구들과 제철 횟집", restaurant: "바다회사랑 연남본점", region: "서울 마포구 연남동", address: "서울특별시 마포구 동교로27길 60", tip: "11월은 대방어 전성기! 두툼하게 썬 기름진 대방어 뱃살을 김 위에 올리고 기름장 찍은 백김치·와사비와 함께 싸 드세요." },
+      { id: 30, keyword: "방어", day: 5, slot: "저녁 메인 (제철 대방어)", who: "friends", whoLabel: "🍻 서울 친구들과 제철 횟집", restaurant: "노량진수산시장 형제상회 (모둠 대방어)", region: "서울 동작구 노량진", address: "서울특별시 동작구 노들로 674", tip: "연남동 웨이팅이 길다면 노량진수산시장에서 대방어 특수부위(배꼽살·사잇살)를 포장해 초장집에서 친구들과 달리세요!" },
+      { id: 31, keyword: "감자탕", day: 5, slot: "심야 2차 / 해장", who: "friends", whoLabel: "🍻 서울 친구들과 술자리·해장", restaurant: "일미집 본점 (후암동) / 동원집 (을지로)", region: "서울 용산구 후암동", address: "서울특별시 용산구 후암로 1-1", tip: "방어회 먹고 난 뒤 뜨끈한 국물이 땡길 때 2차로 가거나 다음 날 해장으로 최고인 푹 삶은 등뼈 감자탕!" },
+
+      { id: 32, keyword: "순대국밥", day: 6, slot: "아침·점심 해장", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 수원 시장 외식", restaurant: "수원 지동시장 순대타운", region: "수원 팔달구 지동시장", address: "경기도 수원시 팔달구 팔달문로 19", tip: "수원 토박이들의 성지 지동시장 순대타운! 잡내 없이 진한 사골 육수에 머릿고기와 피순대가 가득 들어간 순대국밥." },
+      { id: 33, keyword: "감자옹심이", day: 6, slot: "늦은 점심 / 저녁 1차", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 별미 외식", restaurant: "옹기종기감자옹심이 / 봉평옹심이메밀칼국수", region: "서울 구로구 오류동 / 마포구 공덕", address: "서울특별시 구로구 서해안로30길 13-8", tip: "생감자를 강판에 갈아 빚어 쫀득쫀득한 식감과 걸쭉하고 고소한 들깨 국물이 어른들 입맛을 단번에 사로잡습니다." },
+      { id: 34, keyword: "왕천파닭", day: 6, slot: "저녁 치맥 (강남 논현)", who: "friends", whoLabel: "🍻 서울 친구들과 치맥", restaurant: "왕천파닭 논현점", region: "서울 강남구 논현동", address: "서울특별시 강남구 학동로2길 20", tip: "조치원 파닭의 전설을 서울 강남 논현동에서! 거대한 가마솥 후라이드 위에 매콤 알싸한 파채가 산더미처럼 올라갑니다." },
+
+      { id: 35, keyword: "등촌", day: 7, slot: "점심 (등촌샤브칼국수)", who: "friends", whoLabel: "🍻 친구들과 점심 해장", restaurant: "등촌샤브칼국수 서교점 / 수원인계점", region: "서울 마포구 홍대", address: "서울특별시 마포구 월드컵북로1길 48", tip: "미나리와 느타리버섯 듬뿍 들어간 얼큰 육수에 소고기 샤브 → 칼국수 면 → 계란 미나리 볶음밥 3단 코스 필수!" },
+      { id: 36, keyword: "삼겹살", day: 7, slot: "저녁 1차 (용산/약수)", who: "friends", whoLabel: "🍻 서울 친구들과 고기 파티", restaurant: "금돼지식당 / 남영돈", region: "서울 중구 신당동(약수)", address: "서울특별시 중구 다산로 149", tip: "서울 3대 돼지고기 맛집으로 꼽히는 연탄 본삼겹(금돼지식당) 혹은 참숯 항정·삼겹살(남영돈)로 육즙 파티!" },
+      { id: 37, keyword: "돼지막창", day: 7, slot: "저녁 2차 (왕십리/홍대)", who: "friends", whoLabel: "🍻 서울 친구들과 술자리", restaurant: "왕십리 정부네곱창막창", region: "서울 성동구 왕십리", address: "서울특별시 성동구 고산자로 287", tip: "동그랗게 썰어 연탄불에 바싹 구워낸 쫄깃하고 고소한 돼지막창을 막장(된장+고추+쪽파 소스)에 푹 찍어 드세요." },
+      { id: 38, keyword: "엽닭", day: 7, slot: "심야 야식 파티", who: "friends", whoLabel: "🍻 친구들과 야식 / 본가 배달", restaurant: "동대문엽기떡볶이 신당본점 / 배달", region: "서울 중구 신당동", address: "서울특별시 중구 다산로 255", tip: "감자·당면·메추리알·소시지 사리 추가한 매콤 걸쭉한 '엽기닭볶음탕(엽닭)'! 주먹김밥을 국물에 비벼 먹으면 최고." },
+      { id: 39, keyword: "엽떡 엽닭", day: 7, slot: "심야 야식 파티", who: "friends", whoLabel: "🍻 친구들과 야식 / 본가 배달", restaurant: "동대문엽기떡볶이 신당본점 / 배달", region: "서울 중구 신당동", address: "서울특별시 중구 다산로 255", tip: "친구들 여러 명 모였을 때 엽기떡볶이(반반) + 엽기닭볶음탕 투톱으로 시켜 중국당면·분모자 사리까지 올클리어!" },
+
+      { id: 40, keyword: "평양냉면", day: 8, slot: "점심 부모님 서울 나들이", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 서울 노포 외식", restaurant: "우래옥 본점 / 을밀대 본점", region: "서울 중구 을지로4가", address: "서울특별시 중구 창경궁로 62-29", tip: "진한 소고기 육향의 우래옥, 혹은 살얼음 동동 띄운 거칠고 구수한 메밀면의 을밀대! 부모님 모시고 가기 최고의 노포." },
+      { id: 41, keyword: "게장", day: 8, slot: "점심·오후 부모님 외식", who: "parents", whoLabel: "👨‍👩‍👧 부모님과 미쉐린 외식", restaurant: "진미식당 (마포 공덕)", region: "서울 마포구 공덕동", address: "서울특별시 마포구 마포대로 186-6", tip: "주황빛 알이 꽉 찬 서해안 암꽃게 간장게장을 감태와 김에 싸 먹는 밥도둑 끝판왕! (방문 전 전화 예약 필수)" },
+      { id: 42, keyword: "해물파전", day: 8, slot: "저녁 친구들과 막걸리", who: "friends", whoLabel: "🍻 서울 친구들과 파전골목", restaurant: "회기 이모네왕파전", region: "서울 동대문구 회기동", address: "서울특별시 동대문구 회기로28길 12-3", tip: "두께가 피자만 한 바삭바삭 왕해물파전(동그랑땡·모둠전 함께 가능)에 살얼음 동동 막걸리로 대학가 감성 충전!" },
+      { id: 43, keyword: "황올", day: 8, slot: "수원 복귀 후 야식", who: "home", whoLabel: "🏡 수원 본가 치킨 배달", restaurant: "BBQ 황금올리브치킨 (본가 배달 / 수원역점)", region: "수원 본가 배달", address: "경기도 수원시 팔달구 매산로 52-1", tip: "후라이드 치킨의 영원한 1티어 황금올리브! 속살까지 촉촉하고 튀김옷이 바삭해 양념소스에 푹 찍어 드세요." },
+
+      { id: 44, keyword: "오삼불고기", day: 9, slot: "아침·점심 집밥", who: "home", whoLabel: "🏡 수원 본가 엄마표 집밥", restaurant: "🏡 수원 본가 엄마표 오삼불고기", region: "수원 본가 / 서울 을지로", address: "서울특별시 중구 을지로 108", tip: "집에서 탱글한 오징어와 고소한 삼겹살을 매콤달콤 고추장 양념에 볶아 참기름 두른 밥 위에 얹어 먹는 엄마표 집밥!" },
+      { id: 45, keyword: "뼈찜", day: 9, slot: "저녁 1차 (한남동)", who: "friends", whoLabel: "🍻 서울 친구들과 저녁 술자리", restaurant: "한남동감자탕 본점", region: "서울 용산구 한남동", address: "서울특별시 용산구 대사관로 73", tip: "SNS와 방송을 휩쓴 매콤달콤 중독적인 양념 뼈찜의 성지! 부드러운 살코기를 발라 당면 사리와 함께 드세요." },
+      { id: 46, keyword: "알곤이찜", day: 9, slot: "저녁 2차 (용리단길/방이동)", who: "friends", whoLabel: "🍻 서울 친구들과 저녁 2차", restaurant: "용산 해물점 / 잠실 개나리아구찜", region: "서울 용산구 삼각지", address: "서울특별시 용산구 한강대로62나길 14-1", tip: "한남동에서 바로 옆 삼각지(용리단길)로 이동! 고소한 곤이(이리)와 톡톡 터지는 알이 산더미처럼 쌓인 매콤 알곤이찜." },
+
+      { id: 47, keyword: "닭칼국수", day: 10, slot: "점심 노포 외식", who: "parents", whoLabel: "👨‍👩‍👧 부모님 또는 친구와 점심", restaurant: "충무로 사랑방칼국수", region: "서울 중구 충무로", address: "서울특별시 중구 퇴계로27길 46", tip: "진하게 우러난 닭 육수에 부드러운 닭고기와 칼국수, 혹은 백숙백반을 곁들이면 전날 술자리가 싹 내려갑니다." },
+      { id: 48, keyword: "돼지갈비", day: 10, slot: "저녁 마지막 만찬", who: "parents", whoLabel: "👨‍👩‍👧 가족 만찬 / 친구들과 노포", restaurant: "둔촌동 보성갈비 / 마포 진짜원조최대포", region: "서울 강동구 성내동", address: "서울특별시 강동구 양재대로89가길 14", tip: "한국에서의 마지막 밤! 단짠 양념이 잘 밴 부드러운 돼지갈비를 숯불에 구워 냉면과 함께 마무리하세요." },
+      { id: 49, keyword: "보성갈비", day: 10, slot: "저녁 마지막 만찬", who: "parents", whoLabel: "👨‍👩‍👧 가족 만찬 / 서울 노포", restaurant: "보성갈비 본점 (둔촌동역 3번 출구)", region: "서울 강동구 성내동", address: "서울특별시 강동구 양재대로89가길 14", tip: "둔촌동역 인근에서 오랜 세월 사랑받는 돼지갈비 노포 맛집! (혹시 수원의 '본수원갈비'를 뜻하신 거라면 Day 1 수원 외식으로도 완벽)" },
+
+      { id: 50, keyword: "바지락칼국수", day: 11, slot: "출국 직전 영종도 점심", who: "parents", whoLabel: "👨‍👩‍👧 공항 배웅 가족 식사", restaurant: "황해해물칼국수 1호점 (인천공항 영종도)", region: "인천 중구 영종도", address: "인천광역시 중구 마시란로 24", tip: "비행기 타러 가는 길(또는 입국 첫날) 공항 바로 옆 영종도에서 바지락·해물이 그릇 넘치게 들어간 시원한 바지락칼국수로 대장정 피날레!" }
+    ];
+
+    let viewMode = 'schedule';
+    let activeFilter = 'all';
+    let activeDay = 'all';
+    let searchQuery = '';
+    let checkedIds = JSON.parse(localStorage.getItem('zzee_kr_food_50_checked') || '[]');
+
+    function saveChecks() {
+      localStorage.setItem('zzee_kr_food_50_checked', JSON.stringify(checkedIds));
+      updateProgress();
+    }
+
+    function toggleCheck(id) {
+      if (checkedIds.includes(id)) {
+        checkedIds = checkedIds.filter(i => i !== id);
+      } else {
+        checkedIds.push(id);
+      }
+      saveChecks();
+      render();
+    }
+
+    function resetChecks() {
+      checkedIds = [];
+      saveChecks();
+      render();
+    }
+
+    function updateProgress() {
+      const count = checkedIds.length;
+      const pct = Math.round((count / FOOD_ITEMS.length) * 100);
+      document.getElementById('progress-text').textContent = `${count} / ${FOOD_ITEMS.length} (${pct}%)`;
+      document.getElementById('progress-bar').style.width = `${pct}%`;
+    }
+
+    function copyAddress(event, address) {
+      event.stopPropagation();
+      navigator.clipboard.writeText(address).then(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = `📋 주소 복사 완료: ${address}`;
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.display = 'none'; }, 2200);
+      });
+    }
+
+    function setViewMode(mode) {
+      viewMode = mode;
+      document.getElementById('tab-schedule').classList.toggle('active', mode === 'schedule');
+      document.getElementById('tab-category').classList.toggle('active', mode === 'category');
+      document.getElementById('day-nav').style.display = mode === 'schedule' ? 'flex' : 'none';
+      render();
+    }
+
+    function setFilter(filter) {
+      activeFilter = filter;
+      ['all', 'home', 'parents', 'friends'].forEach(f => {
+        const btn = document.getElementById(`filter-${f}`);
+        if (btn) btn.classList.toggle('active', f === filter);
+      });
+      render();
+    }
+
+    function setDayFilter(day) {
+      activeDay = day;
+      document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById(`day-btn-${day}`);
+      if (activeBtn) activeBtn.classList.add('active');
+      render();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      render();
+    }
+
+    function getBadgeClass(who) {
+      if (who === 'home') return 'badge amber';
+      if (who === 'parents') return 'badge green';
+      return 'badge blue';
+    }
+
+    function renderCard(item) {
+      const isChecked = checkedIds.includes(item.id);
+      const badgeClass = getBadgeClass(item.who);
+      const mapQuery = encodeURIComponent(`${item.restaurant.split('/')[0].replace('🏡', '').trim()} ${item.address}`);
+
+      return `
+        <article class="food-card ${isChecked ? 'checked' : ''}" onclick="toggleCheck(${item.id})">
+          <div>
+            <div class="card-top">
+              <div class="card-num-slot">
+                <span class="check-box">${isChecked ? '✓' : item.id}</span>
+                <span>Day ${item.day} · ${item.slot}</span>
+              </div>
+              <span class="${badgeClass}">${item.whoLabel}</span>
+            </div>
+
+            <div class="card-title-row">
+              <h3>${item.keyword}</h3>
+              <span class="restaurant-name">@ ${item.restaurant}</span>
+            </div>
+
+            <p class="card-tip">${item.tip}</p>
+          </div>
+
+          <div class="card-footer">
+            <div class="addr-text">
+              <strong>📍 주소</strong>${item.address}
+            </div>
+            <div class="action-btns">
+              <button type="button" class="mini-btn" onclick="copyAddress(event, '${item.address.replace(/'/g, "\\'")}')">주소 복사</button>
+              <a class="mini-btn" href="https://map.naver.com/p/search/${mapQuery}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">네이버지도</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function getFilteredItems() {
+      return FOOD_ITEMS.filter(item => {
+        if (activeFilter !== 'all' && item.who !== activeFilter) return false;
+        if (viewMode === 'schedule' && activeDay !== 'all' && item.day !== activeDay) return false;
+        if (searchQuery) {
+          const hay = `${item.keyword} ${item.restaurant} ${item.region} ${item.address} ${item.tip}`.toLowerCase();
+          if (!hay.includes(searchQuery)) return false;
+        }
+        return true;
+      });
+    }
+
+    function render() {
+      const container = document.getElementById('content-area');
+      const filtered = getFilteredItems();
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <strong>조건에 맞는 메뉴가 없습니다.</strong>
+            <p>검색어나 상단 필터를 초기화해 보세요.</p>
+          </div>
+        `;
+        return;
+      }
+
+      if (viewMode === 'schedule') {
+        let html = '';
+        DAYS_INFO.forEach(dInfo => {
+          if (activeDay !== 'all' && dInfo.day !== activeDay) return;
+          const dayItems = filtered.filter(i => i.day === dInfo.day);
+          if (dayItems.length === 0) return;
+
+          html += `
+            <section class="group-section">
+              <div class="group-head">
+                <div>
+                  <h2>${dInfo.title}</h2>
+                  <p>${dInfo.desc}</p>
+                </div>
+                <span class="route-pill">${dInfo.route}</span>
+              </div>
+              <div class="cards-grid">
+                ${dayItems.map(renderCard).join('')}
+              </div>
+            </section>
+          `;
+        });
+        container.innerHTML = html;
+      } else {
+        const groups = [
+          {
+            key: 'home',
+            title: '🏡 1. 수원 본가 엄마표 집밥 & 집콕 배달·간식',
+            desc: '서울 나가기 전 아침·점심으로 집에서 챙겨 먹는 엄마 손맛 반찬들과, 집에서 편하게 시켜 먹는 치킨·중국집·떡 리스트입니다.'
+          },
+          {
+            key: 'parents',
+            title: '👨‍👩‍👧 2. 부모님 모시고 오붓하게 외식 & 수원 시장 데이트',
+            desc: '수원 왕갈비, 광교산 보리밥정식, 지동시장 순대국밥, 서울 노포 평양냉면·미쉐린 간장게장 등 부모님 취향 저격 외식 코스입니다.'
+          },
+          {
+            key: 'friends',
+            title: '🍻 3. 서울 올라가서 친구들이랑 달리는 맛집·포차·디저트',
+            desc: '광장시장, 종로3가, 을지로, 홍대·연남, 노량진, 강남 논현동 등 서울 핵심 상권에서 친구들과 1차~3차로 즐기는 핫플 리스트입니다.'
+          }
+        ];
+
+        let html = '';
+        groups.forEach(g => {
+          const gItems = filtered.filter(i => i.who === g.key);
+          if (gItems.length === 0) return;
+          html += `
+            <section class="group-section">
+              <div class="group-head">
+                <div>
+                  <h2>${g.title} (${gItems.length}개)</h2>
+                  <p>${g.desc}</p>
+                </div>
+              </div>
+              <div class="cards-grid">
+                ${gItems.map(renderCard).join('')}
+              </div>
+            </section>
+          `;
+        });
+        container.innerHTML = html;
+      }
+    }
+
+    function initDayButtons() {
+      const nav = document.getElementById('day-nav');
+      DAYS_INFO.forEach(d => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = `day-btn-${d.day}`;
+        btn.className = 'day-btn';
+        btn.textContent = `Day ${d.day}`;
+        btn.onclick = () => setDayFilter(d.day);
+        nav.appendChild(btn);
+      });
+    }
+
+    initDayButtons();
+    updateProgress();
+    render();
+  </script>
+</body>
+</html>
