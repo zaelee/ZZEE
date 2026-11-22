@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="기어몬: 타워 디펜스 뉴비 공략. 근거를 구분한 투자 티어표, 기어 연결, 물리·바람 세팅과 다이아 계산기. 2026년 11월 22일 조사.">
+<meta name="theme-color" content="#18382c">
+<title>기어몬 무과금 뉴비 작전실 | 공략 · 티어 · 세팅</title>
+<style>
+:root{--ink:#17251e;--muted:#5b6b62;--bg:#f3f6f3;--paper:#fff;--line:#d9e2da;--forest:#18382c;--forest2:#234b39;--lime:#d6f282;--green:#2f684a;--pale:#edf4e9;--amber:#805207;--amber-bg:#fff3d8;--radius:16px;--space:24px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}a{color:var(--green);text-underline-offset:4px}button,a{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #568322;outline-offset:4px}button{border:0}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{line-height:1.3;letter-spacing:-.045em}
+h2{font-size:32px}
+h3{font-size:21px}p{margin-top:12px}small{font-size:13px}
+.skip{position:fixed;top:-100px;left:16px;background:var(--lime);padding:12px;z-index:100}
+.skip:focus{top:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-icon{width:40px;height:40px;display:grid;place-items:center;background:var(--lime);color:var(--forest);border-radius:12px;font-size:27px}
+.brand strong{font-size:17px;display:block;line-height:1.3}
+.brand small{font-size:11px;letter-spacing:.14em;color:#b6c7bd}
+.sidebar{position:fixed;inset:0 auto 0 0;width:232px;background:var(--forest);color:#fff;padding:32px 24px;display:flex;flex-direction:column;z-index:30}
+.side-label{margin:44px 12px 12px;font-size:12px;letter-spacing:.15em;color:#a8beb0}
+.sidebar nav{display:grid;gap:6px}
+.sidebar nav a{color:#c1d0c5;text-decoration:none;padding:10px 12px;border-radius:8px;font-size:16px}
+.sidebar nav a:hover,.sidebar nav a.active{background:#2a4a39;color:var(--lime)}
+.sidebar nav .nav-index{display:inline-block;width:27px;font-size:12px;opacity:.7;font-family:ui-monospace,monospace}
+.side-bottom{margin-top:auto;border-top:1px solid #3b5547;padding-top:20px;color:#c1d0c5;font-size:13px}
+.side-bottom b{color:var(--lime);font-weight:500}
+.layout{margin-left:232px}
+.topbar{height:76px;position:sticky;top:0;z-index:20;background:rgba(243,246,243,.96);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 40px;gap:16px;backdrop-filter:blur(10px)}
+.breadcrumb{font-size:14px;color:var(--muted)}
+.breadcrumb b{color:var(--ink);font-weight:600}
+.top-actions{display:flex;gap:10px;align-items:center}
+.date{font-size:13px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border-radius:8px;background:var(--forest);color:#fff;font-weight:650;font-size:14px;text-decoration:none;line-height:1.4}
+.btn:hover{background:#2f5541}
+.btn-outline{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.btn-outline:hover{background:var(--pale)}
+.btn-lime{background:var(--lime);color:var(--forest)}
+.btn-lime:hover{background:#e2ffa0}
+.mobile-nav{display:none}
+.content{max-width:1280px;margin:auto;padding:32px 40px 60px}
+.hero{position:relative;background:var(--forest);color:white;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;min-height:360px}
+.hero-copy{padding:44px 0 44px 40px;z-index:1}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:650;color:var(--green);display:block;margin-bottom:14px}
+.hero .eyebrow{color:var(--lime)}
+h1{font-size:clamp(36px,4.2vw,60px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:#c6d6c8;max-width:470px;font-size:16px;margin:20px 0 24px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero-pills span{border:1px solid #4c6752;border-radius:100px;font-size:12px;padding:3px 11px;color:#dbe8db}
+.hero-art{display:flex;align-items:center;justify-content:center;position:relative;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:28px 28px}
+.hero-art svg{width:100%;max-width:360px;height:auto}
+.hero-art .art-label{position:absolute;bottom:25px;left:0;right:0;text-align:center;color:#aec5b5;font-size:11px;letter-spacing:.1em}
+.verdict{display:grid;grid-template-columns:repeat(3,1fr);margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:white}
+.verdict>div{padding:20px 24px}
+.verdict>div+div{border-left:1px solid var(--line)}
+.verdict small{font-size:12px;letter-spacing:.07em;color:var(--muted)}
+.verdict strong{font-size:18px;display:block;margin-top:4px}
+.verdict p{font-size:14px;color:var(--muted);margin-top:4px}
+.evidence-note{display:flex;gap:12px;padding:16px 0 0;font-size:13px;color:var(--muted)}
+.evidence-note b{color:var(--ink)}
+.dot-icon{flex-shrink:0;width:20px;height:20px;display:grid;place-items:center;border:1px solid #93aa99;border-radius:50%;font:600 12px/1 Georgia,serif;margin-top:2px}
+.section{padding-top:64px;scroll-margin-top:16px}
+.section-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:24px}
+.section-top p{color:var(--muted);font-size:16px;max-width:680px}
+.section-tag{font-size:12px;color:var(--muted);white-space:nowrap;padding-bottom:5px}
+.roadmap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.road-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.road-card .time{font-size:12px;color:var(--green);font-weight:750;letter-spacing:.05em}
+.road-card h3{margin-top:8px}
+.road-card p,.road-card li{font-size:16px;color:var(--muted)}
+.road-card ul{padding-left:19px;margin-bottom:0}
+.road-card li{margin-top:8px}
+.road-card:first-child{border-color:#96b870}
+.callout{background:var(--pale);border-left:3px solid #7da253;padding:18px 20px;margin-top:20px;border-radius:0 10px 10px 0;font-size:16px}
+.callout strong{display:block;margin-bottom:4px}
+.citations{white-space:nowrap;font-size:12px;vertical-align:super;margin-left:2px}
+.citations a{margin-left:3px;text-decoration:none;font-weight:650}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.segmented{display:flex;gap:4px;padding:4px;background:#e6ece5;border-radius:10px;max-width:100%}
+.segmented button{padding:9px 15px;border-radius:7px;color:var(--muted);background:transparent;min-height:44px;font-size:14px;font-weight:650}
+.segmented button[aria-pressed="true"]{background:var(--forest);color:white}
+.search-wrap{flex:1;max-width:310px}
+.search-wrap input{width:100%;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:9px 14px;background:white;color:var(--ink);font-size:14px}
+.tier-explainer{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:14px}
+.tier-explainer strong{color:var(--ink)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{border-collapse:collapse;width:100%;text-align:left;font-size:16px}
+th{padding:13px 18px;background:#edf1eb;font-size:12px;letter-spacing:.03em;color:var(--muted);font-weight:650}
+td{padding:18px;border-top:1px solid var(--line);vertical-align:middle}
+td:first-child{width:76px}
+td:nth-child(2){width:28%;min-width:180px}
+td:nth-child(3){width:18%;min-width:120px}
+td strong{font-size:16px;display:block;line-height:1.5}
+td small{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+td:last-child{color:var(--muted)}
+.tier{display:inline-flex;min-width:40px;height:40px;padding:0 7px;justify-content:center;align-items:center;border-radius:8px;font-weight:800;font-size:19px;background:#edf0ec;color:#536858}
+.tier-s{background:var(--lime);color:#304713}
+.tier-a{background:#dcece5;color:#225a42}
+.tier-b{background:#e5ebed;color:#4a646e}
+.role{font-size:13px;line-height:1.5;display:block}
+.caption{font-size:13px;color:var(--muted);margin-top:12px}
+.empty{padding:40px;text-align:center;background:white;border:1px solid var(--line);border-radius:12px}
+.statusline{font-size:13px;color:var(--muted);margin-left:auto}
+.build-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;margin-top:20px}
+.build-heading{font-size:24px;margin-bottom:10px}
+.tag{display:inline-block;padding:3px 10px;border-radius:6px;background:var(--pale);font-size:12px;color:var(--green);margin-bottom:14px}
+.role-stack{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.role-chip{padding:8px 13px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fafcf9}
+.role-chip.main{background:var(--forest);color:white;border-color:var(--forest)}
+.compact-list{margin:0;padding-left:20px}
+.compact-list li{margin:9px 0;font-size:16px;color:var(--muted)}
+.compact-list strong{color:var(--ink)}
+.setting-list{margin:0}
+.setting-list>div{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:15px 0;border-top:1px solid var(--line)}
+.setting-list>div:first-child{border-top:none;padding-top:0}
+.setting-list dt{font-size:14px;font-weight:700}
+.setting-list dd{margin:0;color:var(--muted);font-size:16px}
+.warning{background:var(--amber-bg);color:var(--amber);border:1px solid #ead9b4;border-radius:9px;padding:12px 16px;font-size:13px;margin-top:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gear-board{background:#eef3ed;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gear-board svg{width:100%;height:auto;display:block}
+.gear-board figcaption{padding:12px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);background:white}
+.gear-board{margin:0}
+.number-list{list-style:none;counter-reset:steps;margin:16px 0 0;padding:0}
+.number-list li{position:relative;padding:0 0 19px 40px;counter-increment:steps;font-size:16px;color:var(--muted)}
+.number-list li:before{content:counter(steps);position:absolute;left:0;top:0;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:var(--pale);color:var(--green);font-size:12px;font-weight:750}
+.number-list strong{color:var(--ink)}
+.resource-table td:nth-child(2){width:38%}
+.resource-table td:nth-child(3){width:auto}
+.resource-table td:first-child{white-space:nowrap;min-width:110px;font-weight:650}
+.calculator{background:var(--forest);color:white;border-radius:var(--radius);padding:28px;margin-top:24px}
+.calculator h3{font-size:24px}
+.calculator p{color:#c1d3c6;font-size:14px}
+.calc-layout{display:grid;grid-template-columns:1.4fr .6fr;gap:32px;margin-top:20px}
+.calc-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.field label{font-size:13px;display:block;margin-bottom:6px}
+.field input{width:100%;min-height:44px;padding:8px 10px;border:1px solid #73927d;border-radius:7px;color:white;background:#244633;outline-offset:2px}
+.field input:focus-visible{outline-color:var(--lime)}
+.calc-result{border-left:1px solid #496450;padding-left:28px;display:flex;flex-direction:column;justify-content:center}
+.calc-result small{color:#c1d3c6;font-size:13px}
+.calc-result output{font-size:34px;font-weight:800;color:var(--lime);line-height:1.3;margin-top:7px}
+.calc-result p{font-size:13px}
+.calc-note{margin-top:18px!important;font-size:12px!important}
+.calc-check{display:flex;gap:9px;align-items:flex-start;font-size:13px;margin-top:18px}
+.calc-check input{width:18px;height:18px;accent-color:var(--lime);flex-shrink:0;margin:3px 0}
+.calc-result [data-error]{color:#ffdc9b}
+.checks{display:grid;gap:0;margin-top:15px}
+.check-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);cursor:pointer}
+.check-row:first-child{border:0}
+.check-row input{width:20px;height:20px;accent-color:var(--forest);flex-shrink:0;margin:4px 0}
+.check-row strong{font-size:16px;display:block}
+.check-row small{display:block;color:var(--muted);font-size:13px}
+.check-row:has(input:checked) strong{text-decoration:line-through;color:var(--muted)}
+.progress-outer{height:6px;background:#e7eee4;border-radius:6px;overflow:hidden;margin-top:16px}
+.progress-inner{height:100%;background:#6d974a;width:0;transition:width .2s}
+.check-head{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.check-head output{font-weight:700;color:var(--green)}
+.plain-btn{background:transparent;text-decoration:underline;text-underline-offset:4px;font-size:13px;color:var(--muted);padding:8px 0;min-height:44px}
+.diagnosis-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.diagnosis-tabs button{background:var(--pale);color:var(--green);padding:10px 14px;text-align:left;font-size:14px;border:1px solid var(--line);border-radius:8px;min-height:44px}
+.diagnosis-tabs button[aria-pressed="true"]{background:var(--forest);color:white}
+.diagnosis-answer{margin-top:20px;border-top:1px solid var(--line);padding-top:20px;min-height:180px}
+.diagnosis-answer h3{font-size:18px}
+.diagnosis-answer p{font-size:16px;color:var(--muted)}
+.question{border-top:1px solid var(--line);padding:18px 0}
+.question:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:650;list-style-position:outside;margin-left:18px;padding-left:5px;min-height:30px}
+.question p{font-size:16px;color:var(--muted);margin:14px 0 4px 23px}
+.source-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px;padding:0;margin:20px 0 0}
+.source-list li{display:flex;gap:14px;border-top:1px solid var(--line);padding:18px 0;scroll-margin-top:100px}
+.source-number{font:12px/1.8 ui-monospace,monospace;color:var(--muted);padding-top:2px;flex-shrink:0}
+.source-list a{font-size:14px;font-weight:650}
+.source-date{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.source-list p{font-size:13px;color:var(--muted);margin-top:6px}
+.research-box{padding:20px 24px;background:#e8eeea;border-radius:12px;font-size:14px;color:var(--muted)}
+.research-box strong{color:var(--ink)}
+.research-box ul{padding-left:20px;margin-bottom:0}
+.research-box li{margin-top:7px}
+.footer{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:24px;margin-top:40px;color:var(--muted);font-size:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}noscript p{padding:16px;background:var(--amber-bg);color:var(--amber)}
+@media(min-width:1600px){.content{padding-top:40px}
+.hero{min-height:390px}
+.hero-copy{padding:48px}}
+@media(max-width:1200px){.sidebar{width:204px;padding:28px 18px}
+.layout{margin-left:204px}
+.content{padding:28px}
+.topbar{padding:0 28px}
+.hero-copy{padding:32px 0 32px 28px}
+h1{font-size:44px}
+.roadmap{gap:12px}
+.road-card{padding:20px}
+.section-top{gap:12px}
+.calc-layout{grid-template-columns:1.2fr .8fr}
+.calc-fields{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.sidebar{display:none}
+.layout{margin-left:0}
+.mobile-nav{display:flex;gap:8px;padding:10px 24px;background:var(--paper);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+.mobile-nav a{font-size:13px;text-decoration:none;padding:7px 10px}
+.hero-copy{padding:36px}
+.hero-art{margin-left:-20px}
+.road-card h3{font-size:19px}
+.topbar{height:64px}
+.section{padding-top:52px}
+.source-list{column-gap:20px}
+.date{display:none}}
+@media(max-width:700px){html{scroll-padding-top:80px}
+.content{padding:20px 16px 36px}
+.topbar{padding:0 16px}
+.breadcrumb{font-size:13px}
+.topbar .btn{font-size:12px;padding:8px 12px}
+.hero{grid-template-columns:1fr;min-height:unset;border-radius:18px}
+.hero-copy{padding:28px 24px}
+h1{font-size:42px}
+.hero p{font-size:16px}
+.hero-art{display:none}
+.verdict{grid-template-columns:1fr}
+.verdict>div{padding:15px 20px}
+.verdict>div+div{border-left:none;border-top:1px solid var(--line)}
+.verdict small{display:block}
+.verdict strong{font-size:17px}
+.section-top{display:block}
+.section-tag{display:block;margin-top:8px}
+h2{font-size:27px}
+.roadmap,.two-col,.build-grid,.source-list{grid-template-columns:1fr}
+.road-card{padding:20px}
+.road-card ul{margin-top:12px}
+.toolbar{gap:12px}
+.search-wrap{max-width:none;flex-basis:100%}
+.segmented{width:100%}
+.segmented button{flex:1;padding:8px 9px;font-size:13px}
+.panel{padding:20px}
+.build-grid{gap:20px}
+.build-heading{font-size:22px}
+.table-wrap{border-radius:10px}table{min-width:690px}
+.resource-table{min-width:600px}
+td{padding:15px}
+th{padding:12px 15px}
+.section{padding-top:44px}
+.calc-layout{grid-template-columns:1fr;gap:24px}
+.calculator{padding:22px 18px}
+.calc-result{border-left:none;padding:20px 0 0;border-top:1px solid #496450}
+.calc-fields{gap:12px}
+.setting-list>div{grid-template-columns:80px 1fr;gap:10px}
+.footer{flex-direction:column;gap:8px}
+.diagnosis-answer{min-height:unset}
+.research-box{padding:18px}
+.evidence-note{font-size:12px}
+.mobile-nav{padding-left:12px}
+.source-list li{padding:17px 0}}
+@media(max-width:360px){h1{font-size:35px}
+.hero-copy{padding:26px 20px}
+.hero-pills{gap:5px}
+.hero-pills span{font-size:11px}
+.breadcrumb span{display:none}
+.calc-fields{grid-template-columns:1fr 1fr}
+.diagnosis-tabs{grid-template-columns:1fr}
+.segmented button{font-size:12px;padding:8px}
+.panel{padding:16px}
+.hero .eyebrow{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{@page{margin:15mm}body{background:white;font-size:11pt}
+.sidebar,.topbar,.mobile-nav,.hero-art,.toolbar,.segmented,.search-wrap,.plain-btn,.calculator,.diagnosis-tabs,.btn,.progress-outer{display:none!important}
+.layout{margin:0}
+.content{padding:0;max-width:none}
+.hero{background:#fff;color:#17251e;min-height:unset;border:1px solid #aaa;display:block}
+.hero-copy{padding:20px}
+.hero p,.hero .eyebrow,.hero h1 em{color:#17251e}
+.hero h1{font-size:32px}
+.hero-pills span{color:#17251e;border-color:#aaa}
+.section{padding-top:28px;break-inside:auto}
+.section-top{margin-bottom:15px}
+h2{font-size:24px}
+.table-wrap{overflow:visible}table,.resource-table{min-width:0;font-size:10pt}
+th,td{padding:9px}
+.roadmap,.two-col,.build-grid{display:block}
+.road-card,.panel{margin-bottom:12px;break-inside:avoid}
+.source-list{display:block}
+.source-list li{break-inside:avoid}
+.build-panel[hidden],tbody tr[hidden],.diagnosis-answer[hidden]{display:revert!important}
+.build-panel{padding-bottom:20px}
+.section-tag{display:none}details>p{display:block!important}
+.footer{display:block}
+.tier{font-size:16px}
+.citations{font-size:9pt}a{color:inherit}
+.caption{font-size:10pt}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로가기</a>
+<aside class="sidebar" aria-label="가이드 목차">
+<a class="brand" href="#overview">
+<span class="brand-icon" aria-hidden="true">⚙</span>
+<span>
+<strong>기어몬 작전실</strong>
+<small>NEW PLAYER FIELD GUIDE</small>
+</span>
+</a>
+<p class="side-label">YOUR FIRST BUILD</p>
+<nav>
+<a href="#overview" class="active">
+<span class="nav-index">01</span>한눈에 보는 결론</a>
+<a href="#roadmap">
+<span class="nav-index">02</span>성장 우선순위</a>
+<a href="#tiers">
+<span class="nav-index">03</span>뉴비 투자 티어표</a>
+<a href="#builds">
+<span class="nav-index">04</span>내 단계별 세팅</a>
+<a href="#gears">
+<span class="nav-index">05</span>기어와 전투 운용</a>
+<a href="#resources">
+<span class="nav-index">06</span>재화 · 소환 계산기</a>
+<a href="#daily">
+<span class="nav-index">07</span>오늘 할 일 · 막힘 해결</a>
+<a href="#sources">
+<span class="nav-index">08</span>조사 근거와 한계</a>
+</nav>
+<div class="side-bottom">
+<b>처음 시작 · 무과금 / PvE</b>
+<br>조사 기준 2026.11.22<br>팬 제작 조사·분석 가이드</div>
+</aside>
+<div class="layout">
+<header class="topbar">
+<div class="breadcrumb">GEARPAW DEFENDERS <span>/</span> <b>뉴비 가이드</b>
+</div>
+<div class="top-actions">
+<span class="date">2026.11.22 조사</span>
+<button class="btn btn-outline" id="print-button" type="button">인쇄 / PDF</button>
+</div>
+</header>
+<nav class="mobile-nav" aria-label="빠른 목차">
+<a href="#roadmap">우선순위</a>
+<a href="#tiers">티어표</a>
+<a href="#builds">세팅</a>
+<a href="#gears">기어</a>
+<a href="#resources">재화</a>
+<a href="#daily">오늘 할 일</a>
+<a href="#sources">출처</a>
+</nav>
+<main id="main" class="content">
+<noscript>
+<p>공략 본문은 그대로 읽을 수 있습니다. 필터·계산기·체크리스트 저장을 쓰려면 브라우저에서 JavaScript를 허용하세요.</p>
+</noscript>
+<section id="overview" aria-labelledby="title">
+<div class="hero">
+<div class="hero-copy">
+<span class="eyebrow">GEARPAW DEFENDERS / BEGINNER'S PLAYBOOK</span>
+<h1 id="title">뽑기 전에,<br>
+<em>성장 루트부터.</em>
+</h1>
+<p>기어몬: 타워 디펜스를 처음 시작하는 무과금 가이드.<br>무료 전력으로 진행하고, 다음 성장에 쓸 재화를 모으세요.</p>
+<div class="hero-pills">
+<span>처음 시작 · 무과금</span>
+<span>메인 스테이지 중심</span>
+<span>출처별 근거 표시</span>
+</div>
+<a href="#roadmap" class="btn btn-lime">내 성장 순서 보기</a>
+</div>
+<div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 360 340">
+<circle cx="200" cy="165" r="134" fill="none" stroke="#355542" stroke-dasharray="3 8"/>
+<path d="M90 238L254 75M114 93L286 260" stroke="#456048" stroke-width="1"/><polygon points="227.2,128.0 242.6,136.6 241.3,145.2 224.1,148.9 221.7,155.6 232.6,169.5 228.2,176.9 210.8,173.8 206.0,179.0 210.8,196.0 203.9,201.2 189.0,191.6 182.6,194.7 180.5,212.2 172.2,214.3 162.1,199.8 155.0,200.2 146.4,215.6 137.8,214.3 134.1,197.1 127.4,194.7 113.5,205.6 106.1,201.2 109.2,183.8 104.0,179.0 87.0,183.8 81.8,176.9 91.4,162.0 88.3,155.6 70.8,153.5 68.7,145.2 83.2,135.1 82.8,128.0 67.4,119.4 68.7,110.8 85.9,107.1 88.3,100.4 77.4,86.5 81.8,79.1 99.2,82.2 104.0,77.0 99.2,60.0 106.1,54.8 121.0,64.4 127.4,61.3 129.5,43.8 137.8,41.7 147.9,56.2 155.0,55.8 163.6,40.4 172.2,41.7 175.9,58.9 182.6,61.3 196.5,50.4 203.9,54.8 200.8,72.2 206.0,77.0 223.0,72.2 228.2,79.1 218.6,94.0 221.7,100.4 239.2,102.5 241.3,110.8 226.8,120.9" fill="#d6f282"/><circle cx="155" cy="128" r="43.12" fill="#18382c"/><circle cx="155" cy="128" r="16.72" fill="#d6f282"/><polygon points="303.6,212.0 313.7,217.7 312.9,223.3 301.5,225.8 299.9,230.2 307.2,239.3 304.2,244.2 292.8,242.2 289.6,245.6 292.8,256.8 288.2,260.2 278.4,253.9 274.2,255.9 272.8,267.5 267.3,268.9 260.7,259.3 256.0,259.6 250.3,269.7 244.7,268.9 242.2,257.5 237.8,255.9 228.7,263.2 223.8,260.2 225.8,248.8 222.4,245.6 211.2,248.8 207.8,244.2 214.1,234.4 212.1,230.2 200.5,228.8 199.1,223.3 208.7,216.7 208.4,212.0 198.3,206.3 199.1,200.7 210.5,198.2 212.1,193.8 204.8,184.7 207.8,179.8 219.2,181.8 222.4,178.4 219.2,167.2 223.8,163.8 233.6,170.1 237.8,168.1 239.2,156.5 244.7,155.1 251.3,164.7 256.0,164.4 261.7,154.3 267.3,155.1 269.8,166.5 274.2,168.1 283.3,160.8 288.2,163.8 286.2,175.2 289.6,178.4 300.8,175.2 304.2,179.8 297.9,189.6 299.9,193.8 311.5,195.2 312.9,200.7 303.3,207.3" fill="#88b781"/><circle cx="256" cy="212" r="28.419999999999998" fill="#18382c"/><circle cx="256" cy="212" r="11.02" fill="#88b781"/><polygon points="120.2,250.0 126.8,253.7 126.3,257.4 118.8,259.0 117.8,261.9 122.5,267.9 120.6,271.1 113.1,269.8 111.0,272.0 113.1,279.4 110.1,281.6 103.7,277.5 100.9,278.8 100.0,286.4 96.4,287.3 92.1,281.0 89.0,281.2 85.3,287.8 81.6,287.3 80.0,279.8 77.1,278.8 71.1,283.5 67.9,281.6 69.2,274.1 67.0,272.0 59.6,274.1 57.4,271.1 61.5,264.7 60.2,261.9 52.6,261.0 51.7,257.4 58.0,253.1 57.8,250.0 51.2,246.3 51.7,242.6 59.2,241.0 60.2,238.1 55.5,232.1 57.4,228.9 64.9,230.2 67.0,228.0 64.9,220.6 67.9,218.4 74.3,222.5 77.1,221.2 78.0,213.6 81.6,212.7 85.9,219.0 89.0,218.8 92.7,212.2 96.4,212.7 98.0,220.2 100.9,221.2 106.9,216.5 110.1,218.4 108.8,225.9 111.0,228.0 118.4,225.9 120.6,228.9 116.5,235.3 117.8,238.1 125.4,239.0 126.3,242.6 120.0,246.9" fill="#769f74"/><circle cx="89" cy="250" r="18.62" fill="#18382c"/><circle cx="89" cy="250" r="7.22" fill="#769f74"/><rect x="176" y="254" width="138" height="44" rx="10" fill="#e0f5a3"/>
+<text x="245" y="273" text-anchor="middle" font-size="10" fill="#244732" font-weight="700">BUILD WITH A PLAN</text>
+<text x="245" y="289" text-anchor="middle" font-size="10" fill="#244732">연결 · 성장 · 집중</text>
+</svg>
+<div class="art-label">ILLUSTRATION / 전략을 연결하는 톱니</div>
+</div>
+</div>
+<div class="verdict">
+<div>
+<small>지금 할 것</small>
+<strong>무료 보상 + 연결 배치</strong>
+<p>일반 소환은 무료 재화 중심으로. <span class="citations"><a href="#src-guide" aria-label="근거 10">[10]</a></span></p>
+</div>
+<div>
+<small>첫날의 주력</small>
+<strong>무료로 얻은 딜러부터</strong>
+<p>물리 후보가 있으면 검토. 없으면 보유 전력으로 진행.</p>
+</div>
+<div>
+<small>다이아 사용 전</small>
+<strong>이벤트 목표 비용 계산</strong>
+<p>일정·확정 보상을 보고 저축 목표 결정.</p>
+</div>
+</div>
+<div class="evidence-note">
+<span class="dot-icon" aria-hidden="true">i</span>
+<span>
+<b>2026년 11월 22일 조사본.</b> 공개된 공식 패치 안내와 과거 유저 공략을 대조했습니다. 아래 티어는 <b>뉴비 투자 순서에 대한 분석</b>이며, 11월 전체 영웅의 성능을 실측한 확정 메타표는 아닙니다.</span>
+</div>
+</section>
+<section class="section" id="roadmap" aria-labelledby="road-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">START HERE</span>
+<h2 id="road-title">먼저 이 순서로 성장하세요</h2>
+<p>당신의 선택: 처음 시작 · 무과금. 아래 순서로 진행하고, 보유 영웅이 정해지면 투자 대상을 좁히세요. 기능 개방은 계정의 실제 화면을 우선합니다.</p>
+</div>
+<span class="section-tag">도달 조건으로 넘어가기</span>
+</div>
+<div class="roadmap">
+<article class="road-card">
+<span class="time">오늘 · 무료 보상과 기본 전력</span>
+<h3>받은 영웅으로 시작합니다</h3>
+<ul>
+<li>무료 소환·출석·7일 목표 보상을 먼저 회수. <span class="citations"><a href="#src-guide" aria-label="근거 10">[10]</a></span></li>
+<li>보유 주력으로 메인을 진행하고, 막히면 기어 연결과 제어 역할을 점검.</li>
+<li>일반 소환은 무료 재화 중심으로. 막혔다는 이유만으로 다이아를 바로 쓰지 않기.</li>
+</ul>
+</article>
+<article class="road-card">
+<span class="time">그다음 · 한정 신화가 열린 뒤</span>
+<h3>한 축을 정하고 모읍니다</h3>
+<ul>
+<li>물리 신화 호랑이·표범은 장기 후보로 검토. 오늘 당장 필요한 시작 조건은 아님. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a><a href="#src-krplay" aria-label="근거 9">[9]</a></span></li>
+<li>양쪽 영웅·성급·합체 조건과 무료 재화로 확보 가능한 범위를 확인한 뒤 투자.</li>
+<li>다른 속성의 육성이 앞서면 현재 덱으로 진행하며 전환 준비.</li>
+</ul>
+</article>
+<article class="road-card">
+<span class="time">핵심 덱이 작동한 뒤</span>
+<h3>다음 도약을 준비합니다</h3>
+<ul>
+<li>래디언트 이벤트의 선택권·누적 보상 조건을 확인. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></li>
+<li>가장 부족한 보물·코어·성장 옵션 한 곳부터 보강.</li>
+<li>목표에 예산이 모자라면 다음 기회를 준비. 결제를 전제로 한 성장 계획은 잡지 않기.</li>
+</ul>
+</article>
+</div>
+<div class="callout">
+<strong>‘주력 집중’과 ‘다른 영웅 육성’은 재화별로 나눠 생각하세요.</strong>한국 플레이 기록에는 비주력 영웅 성급업의 전체 공격력 보너스가, 대만 공략에는 레벨 구간의 계열 보너스가 나옵니다. <b>값싼 보너스는 챙기되, 희소한 계열 에너지원은 실제 주력에 우선</b>하는 절충이 합리적입니다. 현재 도감에 같은 효과가 있는지 확인하세요. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a><a href="#src-beginner" aria-label="근거 3">[3]</a></span></div>
+</section>
+<section class="section" id="tiers" aria-labelledby="tier-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">INVESTMENT TIER LIST</span>
+<h2 id="tier-title">강함보다, 먼저 키울 순서</h2>
+<p>S = 우선 검토 · A = 좋은 보조/조건부 후보 · B = 대체/투자 후순위. 별표(*)는 조합·보유 성급 조건이 붙습니다. 보유했을 때의 투자 순서이며, S를 얻으려고 다이아를 즉시 쓰라는 뜻은 아닙니다. 분류는 자료를 종합한 편집 판단입니다.</p>
+</div>
+</div>
+<div class="toolbar">
+<div class="segmented" aria-label="티어표 진행 단계">
+<button type="button" data-phase-filter="early" aria-pressed="true">초반 즉시 전력</button>
+<button type="button" data-phase-filter="long" aria-pressed="false">중장기 투자</button>
+<button type="button" data-phase-filter="all" aria-pressed="false">전체</button>
+</div>
+<div class="search-wrap">
+<label for="hero-search" class="sr-only">영웅 이름 또는 역할 검색</label>
+<input id="hero-search" type="search" placeholder="이름·속성·역할 검색" autocomplete="off">
+</div>
+</div>
+<div class="tier-explainer">
+<span>
+<strong>평가 범위</strong> 입문 PvE와 재화 효율</span>
+<span>
+<strong>제외</strong> PvP·최상위 랭킹 확정 순위</span>
+<span class="statusline" id="tier-count" aria-live="polite">전체 12개 항목</span>
+</div>
+<div class="table-wrap" tabindex="0" aria-label="영웅 투자 티어표, 좁은 화면에서는 좌우로 스크롤">
+<table id="tier-table">
+<thead>
+<tr>
+<th scope="col">투자</th>
+<th scope="col">영웅 · 조합</th>
+<th scope="col">사용 목적</th>
+<th scope="col">추천 이유와 조건</th>
+</tr>
+</thead>
+<tbody><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>흑대성 계열</strong><small>黑大聖 · 물리 전설</small></td><td><span class="role">초반 주력 후보</span></td><td>보유했다면 진행용으로 활용. 이름은 중문 원문의 한자 독음이며 한국 도감명은 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>땅속 어쌔신</strong><small>물리 전설 · 두더지</small></td><td><span class="role">초반 주력 후보</span></td><td>물리 덱으로 이어갈 때 우선 검토. 원문의 地脈潛行者와 대응은 외형·역할 기반 추정. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>블랙 샤크 대왕</strong><small>수속성 · 상어</small></td><td><span class="role">둔화 보조</span></td><td>적을 늦추는 역할. 黑鯊海王와 명칭 대응은 추정이며 현재 스킬 설명을 확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>토끼 대장 계열</strong><small>萌兔隊長 · 바람 전설</small></td><td><span class="role">밀쳐내기 보조</span></td><td>원문은 밀쳐내기와 코어 연계 기절을 추천. 한국 이름·현재 코어 효과는 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-b">B</span></td><td><strong>달빛 거미 / 여우 술사</strong><small>月光蜘蛛 / 白狐術師</small></td><td><span class="role">대체 제어·지원</span></td><td>거미는 둔화, 여우는 밀쳐내기·증폭 역할로 소개됨. 부족한 역할을 채우되 희귀 재화 투자는 신중하게. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="long" data-tags="physical"><td><span class="tier tier-s">S</span></td><td><strong>물리 신화 호랑이 + 표범</strong><small>死侍虎 + 十環豹</small></td><td><span class="role">첫 신화 축 후보</span></td><td>두 영웅과 합체·지원 조건을 함께 확인. 여러 공략에 물리 조합 추천이 반복되지만 무조건 승리하는 조합은 아님. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="radiant"><td><span class="tier tier-s">S*</span></td><td><strong>물리 / 바람 래디언트</strong><small>璀璨 · Radiant</small></td><td><span class="role">장기 저축 후보</span></td><td>핵심 영웅·필요 성급·지원 조합을 확보할 수 있을 때. 속성만 보고 아무 래디언트나 뽑는 의미는 아님. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>수속성 신화 가오리 + 해파리</strong><small>逍遙蝠魴 + 迷幻水母</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>이미 육성이 앞서거나 해당 스테이지 보너스에 맞을 때 유지 후보. 신규 집중투자는 물리 축과 비교. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>전기 신화 사자 + 판다</strong><small>賽亞獅 + 龜派熊貓</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>신화 두 영웅의 합체 쌍. 현재 가진 성급과 실제 전투 결과를 기준으로 판단. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>바람 신화 나비 + 올빼미</strong><small>皎月蝴蝶 + 怒風雕鴞</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>바람 래디언트 추천을 이 두 영웅의 무조건 최상위 평가로 해석하지 않기. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-b">B*</span></td><td><strong>불 / 독 신화 조합</strong><small>超級小熊貓 + 黑暗蝙蝠 / 鋼鐵戰蟻 + 猛毒蜂后</small></td><td><span class="role">신규 투자 후순위</span></td><td>자료상 뉴비가 먼저 좇을 근거가 부족함. 약하다는 확정 판정은 아니며 보유 성급·속성 보너스가 좋다면 사용. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="hold"><td><span class="tier tier-보">보류</span></td><td><strong>얼티밋 / 초월 계열</strong><small>공식 예: 전기 「기적의 천마」</small></td><td><span class="role">입문 목표에서 제외</span></td><td>현재 입수·합체 비용을 확인하기 전에는 투자 계획에 넣지 않기. 최상위 희귀도와 뉴비 가성비는 별개. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></td></tr></tbody>
+</table>
+</div>
+<p class="empty" id="tier-empty" hidden>일치하는 항목이 없습니다. 검색어를 지우거나 ‘전체’를 선택하세요.</p>
+<p class="caption">한국명은 공개 게임 화면에서 확인 가능한 명칭을 사용했습니다. 일부 중문 영웅과의 대응은 추정이며, 이름을 확인하지 못한 영웅은 외형·중문명을 함께 적었습니다. ‘S’라고 해서 지금 새로 뽑으라는 뜻은 아닙니다. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></p>
+<div class="callout">
+<strong>성급과 완성도가 희귀도 차이를 뒤집을 수 있습니다.</strong>2026년 8월 유저 사례에는 낮은 성급 래디언트보다 육성된 신화 표범이 더 유용했다는 평가도 있습니다. 새 고등급 한 장을 얻었다고 기존 핵심을 즉시 교체하기보다, 같은 스테이지에서 비교하세요. <span class="citations"><a href="#src-case" aria-label="근거 7">[7]</a></span></div>
+</section>
+<section class="section" id="builds" aria-labelledby="build-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">BUILD YOUR FOUNDATION</span>
+<h2 id="build-title">내 단계에 맞는 세팅</h2>
+<p>전투에 필요한 역할과 계정 성장 옵션을 함께 봅니다. 이름이 다르면 현재 게임의 효과 설명으로 대조하세요.</p>
+</div>
+</div>
+<div class="panel">
+<div class="segmented" aria-label="세팅 선택">
+<button type="button" data-build="starter" aria-pressed="true">지금: 신화 없음</button>
+<button type="button" data-build="physical" aria-pressed="false">이후: 물리 신화</button>
+<button type="button" data-build="radiant" aria-pressed="false">장기: 래디언트</button>
+</div>
+<article class="build-panel" id="build-starter">
+<div class="build-grid">
+<div>
+<span class="tag">STARTER / 편집 추천</span>
+<h3 class="build-heading">보유 딜러 + 부족한 제어</h3>
+<p>오늘의 기본안은 <b>무료로 얻은 딜러 + 필요한 제어 + 작동하는 기어 연결</b>입니다. 아래는 고정 슬롯 수를 뜻하지 않는 역할 구성 예시입니다.</p>
+<div class="role-stack">
+<span class="role-chip main">보유 주력 딜러</span>
+<span class="role-chip">둔화 또는 밀쳐내기</span>
+<span class="role-chip">기어 충전 지원</span>
+</div>
+<ul class="compact-list">
+<li>물리 후보를 보유했다면 흑대성 계열·땅속 어쌔신부터 검토. 없으면 현재 가진 주력 유지.</li>
+<li>보조 후보: 상어·토끼·거미·여우의 제어 스킬. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></li>
+<li>막히는 원인이 화력인지, 공격 속도인지, 적 누수인지부터 구분.</li>
+</ul>
+</div>
+<dl class="setting-list">
+<div>
+<dt>성장 재화</dt>
+<dd>계열 에너지원은 실제로 오래 사용할 높은 등급 주력에 먼저. 낮은 등급에 분산하기 전 보류를 검토. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></dd>
+</div>
+<div>
+<dt>기어</dt>
+<dd>작동하는 동력 연결을 확보하고, 변경 전후 주력의 표시 공격 속도를 비교. <span class="citations"><a href="#src-gear" aria-label="근거 5">[5]</a></span></dd>
+</div>
+<div>
+<dt>카드 선택</dt>
+<dd>현재 부족한 역할을 보완. 주력의 티어·핵심 스킬을 개선하는 선택지를 먼저 비교. <span class="citations"><a href="#src-krplay" aria-label="근거 9">[9]</a></span></dd>
+</div>
+<div>
+<dt>옵션 정제</dt>
+<dd>초반에는 이미 쓸 만한 옵션을 유지. 핵심 조합이 정해지기 전에 완벽한 옵션을 노리며 재화를 소모하지 않기. <b>편집 추천</b>
+</dd>
+</div>
+</dl>
+</div>
+</article>
+<article class="build-panel" id="build-physical" hidden>
+<div class="build-grid">
+<div>
+<span class="tag">PHYSICAL / 조건부 추천</span>
+<h3 class="build-heading">호랑이·표범 축부터 확인</h3>
+<p>원문 합체 쌍은 死侍虎 + 十環豹입니다. 두 영웅의 보유 여부와 인게임 합체 도감 조건을 먼저 확인합니다. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></p>
+<div class="role-stack">
+<span class="role-chip main">물리 신화 쌍</span>
+<span class="role-chip">보유 물리 딜러</span>
+<span class="role-chip">필요한 제어</span>
+</div>
+<ul class="compact-list">
+<li>한쪽만 보유했다면 주력 덱을 유지하면서 나머지 조각·선택권을 계획.</li>
+<li>합체 전후의 화력·제어 공백까지 확인.</li>
+<li>물리 덱이 불리한 스테이지 조건이면 해당 속성 대안을 비교.</li>
+</ul>
+</div>
+<dl class="setting-list">
+<div>
+<dt>신성한 나무</dt>
+<dd>중상 대상 공격의 확정 치명 효과가 실제로 작동할 때, 물리/전체 치명 피해와 피해 증가를 우선 비교하는 유저 추천이 있음. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></dd>
+</div>
+<div>
+<dt>치명 확률</dt>
+<dd>위 조건이 없으면 ‘물리는 치확 불필요’라는 결론을 적용하지 않기. 현재 스킬·성급·보스 적용 여부 확인.</dd>
+</div>
+<div>
+<dt>코어</dt>
+<dd>표범 코어처럼 지원 기능이 있는 코어는 상위 색깔 코어가 생겨도 효과부터 비교. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></dd>
+</div>
+<div>
+<dt>투자 순서</dt>
+<dd>합체·필수 효과 개방을 확인한 다음, 주력 → 보조 시너지 → 세부 옵션 순으로 지출. <b>편집 추천</b>
+</dd>
+</div>
+</dl>
+</div>
+<div class="warning">확정 치명과 중상 연계는 2026년 9월 유저 공략 기준입니다. 최신 한국 서버의 스킬 수치·면역·적용 범위는 직접 검증하지 못했습니다.</div>
+</article>
+<article class="build-panel" id="build-radiant" hidden>
+<div class="build-grid">
+<div>
+<span class="tag">RADIANT / 장기 계획</span>
+<h3 class="build-heading">고등급 한 장보다 완성 조건</h3>
+<p>9월 유저 후기는 물리·바람을 장기 성장 후보로 추천합니다. 개별 최신 영웅의 우열까지 확인된 것은 아닙니다. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></p>
+<div class="role-stack">
+<span class="role-chip main">목표 래디언트</span>
+<span class="role-chip">필요한 지원 조합</span>
+<span class="role-chip">성급·코어 조건</span>
+</div>
+<ul class="compact-list">
+<li>이미 주력인 속성과 맞는지 먼저 보기.</li>
+<li>획득 직후 쓸 수 있는지, 추가 성급이 필수인지 구분.</li>
+<li>현재 덱을 유지한 상태에서 필요한 확정 보상까지의 비용 계산.</li>
+</ul>
+</div>
+<dl class="setting-list">
+<div>
+<dt>바람 세팅</dt>
+<dd>치명 확률을 스스로 누적하는 래디언트라면 치명 피해를 우선 검토한다는 유저 의견. 모든 바람 영웅에 적용되는 규칙은 아님. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></dd>
+</div>
+<div>
+<dt>코어</dt>
+<dd>실제 주력 래디언트를 강화하는 효과를 우선 비교. 코어 색깔만으로 자동 교체하지 않기. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></dd>
+</div>
+<div>
+<dt>전환 시점</dt>
+<dd>현재 덱보다 같은 구간의 클리어가 안정적일 때. 단일 획득 결과만으로 기존 투자를 버리지 않기. <b>편집 추천</b>
+</dd>
+</div>
+<div>
+<dt>얼티밋</dt>
+<dd>공식 업데이트에 존재는 확인되지만, 뉴비용 비용·효율 근거가 부족해 별도 투자 추천을 유보. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></dd>
+</div>
+</dl>
+</div>
+</article>
+</div>
+<div class="callout">
+<strong>보물은 범용 기반부터 비교하세요.</strong>9월 유저 추천: <b>미스릴 기어(秘銀齒輪) 보라 1단계</b> → 신비 룰렛(神秘輪盤)·만능 카드(萬能卡片). 출발 수정(啟程水晶)은 초반 3성 정도를 제안합니다. 모두 <b>원문 설명용 번역</b>이며 한국 도감명·현재 효과·승급 비용을 대조한 뒤 적용하세요. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></div>
+</section>
+<section class="section" id="gears" aria-labelledby="gear-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">ON THE BATTLEFIELD</span>
+<h2 id="gear-title">안 때리면, 연결부터 봅니다</h2>
+<p>기어는 장식이 아니라 공격을 작동시키는 기반입니다. 배치를 바꾼 뒤에는 주력의 실제 공격 속도를 확인하세요. <span class="citations"><a href="#src-gear" aria-label="근거 5">[5]</a></span></p>
+</div>
+</div>
+<div class="two-col">
+<figure class="gear-board">
+<svg viewBox="0 0 520 320" role="img" aria-labelledby="gear-svg-title gear-svg-desc">
+<title id="gear-svg-title">동력 기어와 영웅 연결 개념도</title>
+<desc id="gear-svg-desc">동력 기어에서 연결된 기어망을 통해 주력 영웅으로 충전이 전달된다. 끊어진 가지는 피하고 접촉과 속도를 확인한다. 실제 게임의 격자 배치나 공식 수식을 표현한 그림은 아니다.</desc>
+<defs>
+<pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+<path d="M28 0H0V28" fill="none" stroke="#dce6d9" stroke-width="1"/>
+</pattern>
+</defs>
+<rect width="520" height="320" fill="url(#grid)"/>
+<path d="M106 159H222H370M222 159V249H370" fill="none" stroke="#a2bf77" stroke-width="12" stroke-linejoin="round"/>
+<circle cx="106" cy="159" r="49" fill="#d6f282" stroke="#6d8d45" stroke-width="2"/>
+<text x="106" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#284322">동력</text>
+<text x="106" y="173" text-anchor="middle" font-size="14" font-weight="700" fill="#284322">기어</text>
+<rect x="192" y="128" width="62" height="62" rx="13" fill="#fff" stroke="#8ca27f" stroke-width="2"/>
+<text x="223" y="166" text-anchor="middle" font-size="15" fill="#284322">연결</text>
+<rect x="334" y="128" width="100" height="62" rx="13" fill="#18382c"/>
+<text x="384" y="155" text-anchor="middle" font-size="14" fill="#fff">주력 영웅</text>
+<text x="384" y="175" text-anchor="middle" font-size="11" fill="#d6f282">표시 공속 확인</text>
+<rect x="334" y="223" width="100" height="52" rx="13" fill="#fff" stroke="#8ca27f" stroke-width="2"/>
+<text x="384" y="254" text-anchor="middle" font-size="14" fill="#284322">보조 영웅</text>
+<text x="52" y="53" fill="#2f684a" font-size="12" font-weight="700" letter-spacing="2">CONNECT · CHECK · COMPARE</text>
+<text x="52" y="79" fill="#5b6b62" font-size="13">배치 전후를 같은 조건에서 비교</text>
+</svg>
+<figcaption>직접 제작한 연결 원리 개념도. 실제 맵·격자 배치·에너지 분배 수식의 재현이 아닙니다.</figcaption>
+</figure>
+<div class="panel">
+<h3>전투 중 확인할 순서</h3>
+<ol class="number-list">
+<li>
+<strong>동력에 닿아 있는가?</strong>
+<br>멈춘 기어가 있으면 연결부터 수정.</li>
+<li>
+<strong>연결을 늘린 뒤 더 빨라졌는가?</strong>
+<br>원문 관찰에서는 분기만 늘리면 느려지고, 연결망·동력 접촉을 개선하면 빨라지는 경우가 나옵니다. <span class="citations"><a href="#src-gear" aria-label="근거 5">[5]</a></span></li>
+<li>
+<strong>병합하면 필요한 역할이 남는가?</strong>
+<br>딜러 또는 유일한 제어 유닛이 사라질 상황이라면 대체 수단부터 확보. <b>편집 추천</b>
+</li>
+<li>
+<strong>카드가 지금 주력에 적용되는가?</strong>
+<br>다른 계열 강화 대신 실제 사용하는 영웅·기어·스킬의 개선 효과를 비교. <span class="citations"><a href="#src-guide" aria-label="근거 10">[10]</a></span></li>
+</ol>
+</div>
+</div>
+<div class="warning">‘연결 개수만 많으면 무조건 강해진다’는 공식은 확인되지 않았습니다. 공략의 에너지 100·50 예시는 설명을 위한 가정치입니다. 공식 피해 계산이나 최적 배치 수식으로 사용하지 않았습니다.</div>
+</section>
+<section class="section" id="resources" aria-labelledby="resource-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">SPEND WITH INTENT</span>
+<h2 id="resource-title">무엇에 쓰고, 무엇을 모을까</h2>
+<p>새 소환을 누르기 전에 목표 보상, 필요한 조합, 이벤트 중복 보상을 확인하는 것이 기본입니다.</p>
+</div>
+</div>
+<div class="table-wrap" tabindex="0" aria-label="재화별 사용 우선순위">
+<table class="resource-table">
+<thead>
+<tr>
+<th scope="col">재화·시스템</th>
+<th scope="col">먼저 할 일</th>
+<th scope="col">지출을 미룰 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>다이아</td>
+<td>한정 래디언트·목표 선택권을 위한 예산 확인. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></td>
+<td>일반 소환을 습관적으로 반복하거나 목표 보상에 못 미치는 충동 지출.</td>
+</tr>
+<tr>
+<td>일반 소환 재화</td>
+<td>입문 전력이 부족하면 무료 재화로 진행. 이후 여유분은 소환 스퍼트 조건과 비교. <span class="citations"><a href="#src-guide" aria-label="근거 10">[10]</a></span> <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></td>
+<td>진행까지 멈추며 무조건 저장하거나, 반대로 이벤트 조건을 보지 않고 전부 사용.</td>
+</tr>
+<tr>
+<td>계열 에너지원</td>
+<td>현재 핵심 영웅의 필요한 성장 구간 우선. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></td>
+<td>곧 교체할 낮은 등급 영웅에 고르게 분산.</td>
+</tr>
+<tr>
+<td>성급·레벨</td>
+<td>주력의 스킬 개방 + 저비용 전체/계열 보너스 확인. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td>
+<td>다음 보너스까지 비용을 확인하지 않은 전 영웅 일괄 투자.</td>
+</tr>
+<tr>
+<td>코어·보물</td>
+<td>현재 주력에 적용되는 효과와 지원 기능을 비교.</td>
+<td>희귀도만 보고 교체하거나 확인하지 않은 보조 코어를 합성 재료로 사용.</td>
+</tr>
+<tr>
+<td>성물·정령·공명</td>
+<td>개방되면 설명과 무료 효과부터 확인. 존재는 공식 패치에서 확인. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></td>
+<td>기본 덱이 완성되기 전 새로운 시스템 모두에 희귀 재화 분산.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="caption">표의 ‘미룰 상황’은 뉴비 자원 손실을 줄이기 위한 편집 판단입니다. 스퍼트는 필요한 이벤트를 선택해 여는 기능이 공식 패치에 기록되어 있지만, 현재 계정의 조건·보상은 게임 화면에서 확인해야 합니다. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></p>
+<div class="calculator" id="calculator">
+<h3>내 이벤트 소환 예산 계산기</h3>
+<p>현재 이벤트 화면의 숫자로 바꿔 넣으세요. 기본값은 <b>계산 예시</b>이며 현재 판매 가격·천장·보장 횟수가 아닙니다.</p>
+<div class="calc-layout">
+<div>
+<div class="calc-fields">
+<div class="field">
+<label for="gems">보유 다이아</label>
+<input id="gems" type="number" min="0" max="100000000" step="1" value="30000" inputmode="numeric">
+</div>
+<div class="field">
+<label for="target-pulls">목표 누적 횟수</label>
+<input id="target-pulls" type="number" min="1" max="100000" step="1" value="200" inputmode="numeric">
+</div>
+<div class="field">
+<label for="done-pulls">이미 완료한 횟수</label>
+<input id="done-pulls" type="number" min="0" max="100000" step="1" value="0" inputmode="numeric">
+</div>
+<div class="field">
+<label for="free-pulls">확보한 무료 횟수</label>
+<input id="free-pulls" type="number" min="0" max="100000" step="1" value="0" inputmode="numeric">
+</div>
+<div class="field">
+<label for="pack-cost">묶음당 다이아</label>
+<input id="pack-cost" type="number" min="1" max="100000000" step="1" value="6000" inputmode="numeric">
+</div>
+<div class="field">
+<label for="pack-pulls">묶음당 소환 횟수</label>
+<input id="pack-pulls" type="number" min="1" max="100000" step="1" value="20" inputmode="numeric">
+</div>
+</div>
+<label class="calc-check">
+<input type="checkbox" id="verified-values">현재 이벤트에서 가격·보상 기준·구매 한도를 확인했습니다.</label>
+</div>
+<div class="calc-result" aria-live="polite" aria-atomic="true">
+<small id="calc-label">예시 기준 필요한 다이아</small>
+<output id="calc-total">60,000</output>
+<p id="calc-detail">10묶음 · 추가 200회</p>
+<p id="calc-gap">보유량 대비 30,000 부족</p>
+<p id="calc-verdict">예시 계산입니다. 게임 화면의 값으로 변경하세요.</p>
+</div>
+</div>
+<p class="calc-note">계산 = ⌈max(0, 목표 − 완료 − 무료 횟수) ÷ 묶음 횟수⌉ × 묶음 가격. 무료 횟수는 목표 누적에 인정되는 보유 티켓만 포함하세요. 미수령 환급·확률 획득·미래 보상·스퍼트 중복 보상은 자동 계산하지 않습니다. 묶음 구매가 가능한 범위에서의 예산이며, 특정 영웅 획득을 보장하지 않습니다.</p>
+</div>
+<div class="callout">
+<strong>무과금 운영 원칙: 무료 기회 회수 → 필요한 성장 → 다음 목표 저축.</strong>광고 보상은 플레이 시간 안에서 필요한 것부터 선택하세요. 일반 소환·상점 갱신·옵션 정제에 다이아가 반복 소모되는지 먼저 확인합니다. <b>계산기의 부족액은 다음 목표까지 모을 다이아</b>입니다. 지금 이벤트를 완주할 수 없으면 확인되지 않은 확률에 기대어 전부 쓰기보다, 남은 보상과 이월 조건을 보고 보류하세요. <b>편집 추천</b></div>
+</section>
+<section class="section" id="daily" aria-labelledby="daily-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">YOUR NEXT SESSION</span>
+<h2 id="daily-title">오늘 첫 접속 때 할 일</h2>
+<p>아직 열리지 않은 콘텐츠는 건너뛰세요. 무료 보상을 받은 뒤 메인을 진행하고, 막혔을 때만 배치와 성장 한 곳을 점검합니다. 아래 순서는 편집 추천입니다.</p>
+</div>
+</div>
+<div class="two-col">
+<div class="panel">
+<div class="check-head">
+<h3>뉴비 실행 체크리스트</h3>
+<output id="check-count" aria-live="polite">0 / 6</output>
+</div>
+<div class="progress-outer" role="progressbar" aria-label="체크리스트 완료율" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="check-progress">
+<div class="progress-inner" id="check-bar">
+</div>
+</div>
+<div class="checks">
+<label class="check-row">
+<input type="checkbox" data-task="rewards">
+<span>
+<strong>무료 보상부터 수령</strong>
+<small>출석·우편·무료 소환·방치 보상 확인. <span class="citations"><a href="#src-guide" aria-label="근거 10">[10]</a></span></small>
+</span>
+</label>
+<label class="check-row">
+<input type="checkbox" data-task="event">
+<span>
+<strong>이벤트 종료일과 확정 보상 확인</strong>
+<small>다이아를 쓰기 전에 가격·누적 조건 메모.</small>
+</span>
+</label>
+<label class="check-row">
+<input type="checkbox" data-task="core">
+<span>
+<strong>내 주력과 합체 조건 확인</strong>
+<small>보유 성급·조각·지원 스킬이 완성되는 구간 확인.</small>
+</span>
+</label>
+<label class="check-row">
+<input type="checkbox" data-task="bonus">
+<span>
+<strong>저비용 계정 보너스 확인</strong>
+<small>성급·레벨·공명의 실제 효과를 보고 필요한 것만.</small>
+</span>
+</label>
+<label class="check-row">
+<input type="checkbox" data-task="daily">
+<span>
+<strong>열린 성장 콘텐츠의 무료 기회 사용</strong>
+<small>필요 재료를 주는 던전·탑·원정 중심. <span class="citations"><a href="#src-jolly" aria-label="근거 11">[11]</a></span></small>
+</span>
+</label>
+<label class="check-row">
+<input type="checkbox" data-task="stage">
+<span>
+<strong>메인 재도전, 한 가지씩 변경</strong>
+<small>배치·제어·카드를 한 번에 모두 바꾸지 말고 비교.</small>
+</span>
+</label>
+</div>
+<p class="caption" id="storage-status">체크는 이 브라우저에 저장됩니다. 날짜가 바뀌어도 유지됩니다.</p>
+<button class="plain-btn" id="reset-checks" type="button">체크 초기화</button>
+</div>
+<div class="panel">
+<h3>어디에서 막히나요?</h3>
+<p class="caption">실측 최적해가 아닌, 원인을 좁히기 위한 점검 순서입니다.</p>
+<div class="diagnosis-tabs" aria-label="막히는 상황">
+<button type="button" data-problem="waves" aria-pressed="true">잡몹이 계속 샘</button>
+<button type="button" data-problem="boss" aria-pressed="false">보스가 안 죽음</button>
+<button type="button" data-problem="speed" aria-pressed="false">공격이 너무 느림</button>
+<button type="button" data-problem="resources" aria-pressed="false">재화가 항상 부족</button>
+</div>
+<div class="diagnosis-answer" id="problem-waves">
+<h3>제어와 화력 공백부터</h3>
+<p>둔화·밀쳐내기가 실제 적에게 적용되는지 확인하고, 병합 직후 화력이 비는지 봅니다. 주력 연결이 유지되는 상태에서 보조 역할을 하나씩 보강하세요.</p>
+</div>
+<div class="diagnosis-answer" id="problem-boss" hidden>
+<h3>적 조건과 주력 성장 구간부터</h3>
+<p>스테이지 버프·디버프, 보스 면역을 먼저 읽습니다. 주력의 핵심 스킬·합체·성급 효과가 개방됐는지 확인한 뒤 딜 카드를 비교하세요. 한 번의 실패만으로 속성 전체를 갈아타지 않습니다.</p>
+</div>
+<div class="diagnosis-answer" id="problem-speed" hidden>
+<h3>표시 공격 속도로 비교</h3>
+<p>멈춘 가지와 동력 접촉을 확인합니다. 한 군데만 바꾸고 주력의 표시 속도를 기록하세요. 분기 수 자체보다 작동하는 연결망과 실제 충전 결과가 중요합니다. <span class="citations"><a href="#src-gear" aria-label="근거 5">[5]</a></span></p>
+</div>
+<div class="diagnosis-answer" id="problem-resources" hidden>
+<h3>가장 최근의 다이아 지출부터</h3>
+<p>일반 소환·상점 갱신·옵션 정제에 반복 지출하는지 확인합니다. 매일 상점을 모두 사라는 조언은 골드가 부족한 뉴비에게 그대로 맞지 않습니다. 진행에 필요한 재료와 다음 확정 보상 예산을 먼저 남기세요.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="faq" aria-labelledby="faq-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">BEFORE YOU COMMIT</span>
+<h2 id="faq-title">헷갈리기 쉬운 판단</h2>
+</div>
+</div>
+<details class="question">
+<summary>리세마라로 ‘0티어’부터 뽑아야 하나요?</summary>
+<p>이번 조사에서는 최신 리세 시간 대비 보상과 목표 영웅의 현재 확률을 검증하지 못했습니다. 따라서 강제 리세를 권하지 않습니다. 무료 시작 재화로 진행한 뒤, 실제 이벤트에서 얻을 수 있는 핵심 조합을 계획하는 쪽을 기본안으로 잡았습니다.</p>
+</details>
+<details class="question">
+<summary>8일차나 매월 25일이라는 말을 그대로 믿어도 되나요?</summary>
+<p>과거 유저 자료에는 신화 개방 8일차, 래디언트 월말 일정이 등장합니다. 한국 서버의 오늘 일정·해금 조건으로 확정하지 않았습니다. 계정의 이벤트 화면과 공식 공지를 먼저 보세요. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span> <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></p>
+</details>
+<details class="question">
+<summary>물리 덱이면 치명 확률을 전부 버리면 되나요?</summary>
+<p>확정 치명 효과가 현재 성급과 콘텐츠에서 작동할 때만 적용하세요. 속성 이름만으로 치명 확률이 불필요하다고 판단하면 안 됩니다. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></p>
+</details>
+<details class="question">
+<summary>2026년 11월 쿠폰은 어디서 확인하나요?</summary>
+<p>공식 라운지와 게임 공지를 확인하세요. 공개 안내에서 JOINPAWS가 보였지만 현재 사용 가능 여부와 서버 조건을 실제 입력 검증하지 않았습니다. 이 페이지에서는 미검증 쿠폰을 ‘지금 유효’로 나열하지 않습니다. <span class="citations"><a href="#src-lounge" aria-label="근거 2">[2]</a></span></p>
+</details>
+<details class="question">
+<summary>병합과 합체는 어떻게 구분하나요?</summary>
+<p>전투 중 같은 유닛·기어를 올리는 병합과, 지정된 영웅 조합으로 만드는 합체를 구분해서 보세요. 물리 신화 호랑이·표범처럼 합체 쌍이 따로 있습니다. 필요한 계정 레벨·성급·전투 등급은 현재 합체 도감에서 확인하는 것이 우선입니다. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span> <span class="citations"><a href="#src-jolly" aria-label="근거 11">[11]</a></span></p>
+</details>
+</section>
+<section class="section" id="sources" aria-labelledby="source-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">EVIDENCE & LIMITS</span>
+<h2 id="source-title">공략에도 출처가 필요하니까</h2>
+<p>공식으로 확인한 사실, 유저 경험, 이 가이드의 판단을 분리했습니다. 본문 숫자 링크로 근거를 찾아갈 수 있습니다.</p>
+</div>
+</div>
+<div class="research-box">
+<strong>조사 방법과 적용 범위</strong>
+<ul>
+<li>
+<b>공식 확인:</b> 한국 App Store와 Google Play에서 게임명·개발사·업데이트를 대조. App Store 표시 0.18.0에는 원소의 탑·히어로 공명이 포함됩니다. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></li>
+<li>
+<b>유저 자료:</b> 한국 플레이 화면과 대만 플레이어 원문을 비교. 바하무트 글은 검색 색인에 노출된 본문을 확인했으며, 직접 페이지 접근은 403 응답으로 제한됐습니다.</li>
+<li>
+<b>판단 한계:</b> 계정 인벤토리·실제 피해량·11월 최신 전체 밸런스는 미확인. 서버별 개방·명칭 차이가 있을 수 있습니다.</li>
+<li>
+<b>채택하지 않은 주장:</b> 독립 근거가 부족한 ‘코어 오버로드·잔느’ 티어, 최신 여부 불명의 쿠폰, 오래된 상품 가격. 일부 공략의 소환 묶음 가격·누적 횟수·다이아 총액이 서로 맞지 않아 고정 저축 금액도 제외했습니다.</li>
+<li>
+<b>분석 기준:</b> 당장 쓸 수 있는가 → 역할·합체가 완성되는가 → 희귀 재화를 얼마나 요구하는가. 같은 기준으로 작성한 뉴비용 투자표이며 공식 등급표가 아닙니다.</li>
+</ul>
+</div>
+<ol class="source-list"><li id="src-official"><span class="source-number">01</span><div><a href="https://apps.apple.com/kr/app/id6747024269" target="_blank" rel="noopener noreferrer">공식 · 한국 App Store / 버전 기록</a><span class="source-date">0.18.0 · 2026.10.07 표시</span><p>게임 정체, 기어·병합, 성물·비전석·공명과 업데이트 확인. 앱스토어에 보이는 버전이며 모든 서버의 현재 버전을 뜻하지 않습니다.</p></div></li><li id="src-lounge"><span class="source-number">02</span><div><a href="https://game.naver.com/lounge/GearPaw_Defenders/home" target="_blank" rel="noopener noreferrer">공식 · 네이버 게임 라운지</a><span class="source-date">홈 화면 확인 · 2026.11.22</span><p>공식 표시와 공지 존재 확인. 게시글 상세·공략 목록은 로그인 요구로 검증하지 못했습니다. 최신 밸런스와 이벤트는 여기서 재확인하세요.</p></div></li><li id="src-beginner"><span class="source-number">03</span><div><a href="https://forum.gamer.com.tw/Co.php?bsn=83656&amp;sn=45" target="_blank" rel="noopener noreferrer">유저 원문 · 신입 시작 추천</a><span class="source-date">2025.12.18 제목 기준</span><p>물리 조합, 보조 영웅, 레벨 구간의 계열 보너스. 오래된 공략이므로 현재 도감 효과를 우선합니다.</p></div></li><li id="src-mythic"><span class="source-number">04</span><div><a href="https://forum.gamer.com.tw/G2.php?bsn=83656&amp;sn=3" target="_blank" rel="noopener noreferrer">유저 원문 · 6속성 신화와 코어</a><span class="source-date">2025.12.23 편집</span><p>신화 쌍과 합체 관계, 물리 우선 추천. 과거 순차 개방 일정은 현재 규칙으로 옮기지 않았습니다.</p></div></li><li id="src-gear"><span class="source-number">05</span><div><a href="https://forum.gamer.com.tw/G2.php?bsn=83656&amp;sn=4" target="_blank" rel="noopener noreferrer">유저 관찰 · 기어 작동 원리</a><span class="source-date">2025.12.23 편집</span><p>동력 기어 연결·접촉과 공격 속도 관찰. 원문도 공식 수식이 없다고 명시합니다.</p></div></li><li id="src-late"><span class="source-number">06</span><div><a href="https://forum.gamer.com.tw/C.php?bsn=83656&amp;snA=61" target="_blank" rel="noopener noreferrer">유저 원문 · 賣核彈的小女孩의 3개월 후기</a><span class="source-date">2026.09.21 편집</span><p>물리·바람 성장 방향, 보물, 신성한 나무, 코어에 관한 개인 경험. 단일 유저의 의견이며 최신 전체 메타 검증은 아닙니다.</p></div></li><li id="src-case"><span class="source-number">07</span><div><a href="https://forum.gamer.com.tw/C.php?bsn=83656&amp;snA=62" target="_blank" rel="noopener noreferrer">유저 사례 · 8일차 성장 질문</a><span class="source-date">2026.08.23~29</span><p>래디언트 확보 경험과 고성급 신화의 체감 비교. 등급만으로 투자를 결정하지 않는 보조 근거.</p></div></li><li id="src-kr"><span class="source-number">08</span><div><a href="https://keumchimong.tistory.com/m/entry/기어몬-타워디펜스-초반-꿀팁-3가지-전투력-올리기" target="_blank" rel="noopener noreferrer">한국 플레이 기록 · 초반 팁 3가지</a><span class="source-date">2026.01.10</span><p>성급업의 전체 공격력 보너스, 계열 에너지원 투자. 수치와 영웅 표기는 당시 게임 화면 기준입니다.</p></div></li><li id="src-krplay"><span class="source-number">09</span><div><a href="https://keumchimong.tistory.com/m/entry/기어몬-타워디펜스-최신-쿠폰-정보-및-초반-꿀팁" target="_blank" rel="noopener noreferrer">한국 플레이 기록 · 연결과 물리 조합</a><span class="source-date">2026.01.04</span><p>기어 연결 화면, 물리 호랑이·표범 추천. 최신 티어표로 취급하지 않았습니다.</p></div></li><li id="src-guide"><span class="source-number">10</span><div><a href="https://clashiverse.com/gearpaw-defenders-beginner-guide/" target="_blank" rel="noopener noreferrer">보조 공략 · Clashiverse 입문 가이드</a><span class="source-date">2026.04.02</span><p>일반 소환과 무료 보상, 합체·병합 기본. 과거 쿠폰과 고정 횟수는 채택하지 않았습니다.</p></div></li><li id="src-jolly"><span class="source-number">11</span><div><a href="https://club.jollymax.com/beginner-guide-gearpaw-defenders-game/" target="_blank" rel="noopener noreferrer">보조 자료 · JollyMax 게임 안내</a><span class="source-date">2025.09.30</span><p>기어 충전·스킬, 지형과 속성 조건, 성장 콘텐츠 개요. 상업성 자료이므로 상품 추천 근거로는 쓰지 않았습니다.</p></div></li></ol>
+</section>
+<footer class="footer">
+<span>GEARPAW DEFENDERS · 뉴비 작전실<br>팬 제작 가이드 · Perfeggs 공식 문서가 아닙니다.</span>
+<span>조사 2026.11.22 (한국 시간)<br>인터넷 없이 본문·도구 사용 가능 · 출처 링크는 인터넷 필요</span>
+</footer>
+</main>
+</div>
+<script>
+'use strict';
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+let phase = 'early';
+function filterTiers() {
+  const query = $('#hero-search').value.trim().toLocaleLowerCase('ko-KR');
+  let count = 0;
+  $$('#tier-table tbody tr').forEach(row => {
+    const show = (phase === 'all' || row.dataset.phase === phase) && row.textContent.toLocaleLowerCase('ko-KR').includes(query);
+    row.hidden = !show;
+    count += Number(show);
+  });
+  $('#tier-count').textContent = `${count}개 항목`;
+  $('#tier-empty').hidden = count > 0;
+  $$('.table-wrap')[0].hidden = count === 0;
+}
+$$('[data-phase-filter]').forEach(button => button.addEventListener('click', () => {
+  phase = button.dataset.phaseFilter;
+  $$('[data-phase-filter]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  filterTiers();
+}));
+$('#hero-search').addEventListener('input', filterTiers);
+filterTiers();
+function setupPanels(attribute, prefix, selector) {
+  $$(`[${attribute}]`).forEach(button => button.addEventListener('click', () => {
+    $$(`[${attribute}]`).forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    $$(selector).forEach(panel => panel.hidden = panel.id !== prefix + button.getAttribute(attribute));
+  }));
+}
+setupPanels('data-build', 'build-', '.build-panel');
+setupPanels('data-problem', 'problem-', '.diagnosis-answer');
+const fmt = n => new Intl.NumberFormat('ko-KR').format(n);
+const calcInputs = $$('.calc-fields input');
+function calculate() {
+  const invalid = calcInputs.find(input => input.value.trim() === '' || !input.validity.valid || !Number.isSafeInteger(Number(input.value)));
+  const verified = $('#verified-values').checked;
+  $('#calc-label').textContent = verified ? '입력 조건상 필요한 다이아' : '예시 기준 필요한 다이아';
+  if (invalid) {
+    $('#calc-total').textContent = '입력 확인';
+    $('#calc-detail').textContent = '모든 칸에 허용 범위의 정수를 입력하세요.';
+    $('#calc-gap').textContent = '';
+    $('#calc-verdict').textContent = '목표·묶음 가격·묶음 횟수는 1 이상이어야 합니다.';
+    return;
+  }
+  const [gems, target, done, free, packCost, packPulls] = calcInputs.map(input => Number(input.value));
+  const remaining = Math.max(0, target - done - free);
+  const packs = Math.ceil(remaining / packPulls);
+  const total = packs * packCost;
+  const gap = gems - total;
+  $('#calc-total').textContent = fmt(total);
+  $('#calc-detail').textContent = `${fmt(packs)}묶음 · 구매로 추가 ${fmt(packs * packPulls)}회${packs * packPulls > remaining ? ` (목표보다 ${fmt(packs * packPulls - remaining)}회 초과)` : ''}`;
+  $('#calc-gap').textContent = gap >= 0 ? `구매 후 ${fmt(gap)} 다이아 남음` : `보유량 대비 ${fmt(-gap)} 다이아 부족`;
+  $('#calc-verdict').textContent = !verified ? '예시 계산입니다. 게임 화면의 값으로 변경하세요.' : remaining === 0 ? '확보한 횟수만으로 입력한 목표에 도달합니다. 보상 조건은 별도 확인하세요.' : gap >= 0 ? '입력한 예산은 충족합니다. 구매 한도·이월·보상 조건까지 확인 후 결정하세요.' : '입력한 목표까지 예산이 모자랍니다. 무료 횟수나 저축 계획을 다시 확인하세요.';
+}
+calcInputs.forEach(input => input.addEventListener('input', () => { $('#verified-values').checked = false; calculate(); }));
+$('#verified-values').addEventListener('change', calculate);
+calculate();
+const STORAGE_KEY = 'gearpaw-beginner-guide-checks-v1';
+let storageAvailable = true;
+try {
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+    $$('[data-task]').forEach(input => input.checked = saved[input.dataset.task] === true);
+  }
+} catch { storageAvailable = false; }
+function updateChecks(save = true) {
+  const inputs = $$('[data-task]');
+  const count = inputs.filter(input => input.checked).length;
+  $('#check-count').textContent = `${count} / ${inputs.length}`;
+  $('#check-progress').setAttribute('aria-valuenow', String(count));
+  $('#check-bar').style.width = `${count / inputs.length * 100}%`;
+  if (save) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Object.fromEntries(inputs.map(input => [input.dataset.task, input.checked])))); }
+    catch { storageAvailable = false; }
+  }
+  if (!storageAvailable) $('#storage-status').textContent = '브라우저 저장소를 사용할 수 없어 체크는 이 화면을 닫으면 사라질 수 있습니다.';
+}
+$$('[data-task]').forEach(input => input.addEventListener('change', () => updateChecks()));
+$('#reset-checks').addEventListener('click', () => { $$('[data-task]').forEach(input => input.checked = false); updateChecks(); });
+updateChecks(false);
+$('#print-button').addEventListener('click', () => window.print());
+let printDetails = [];
+let printTableWasHidden = false;
+window.addEventListener('beforeprint', () => {
+  printTableWasHidden = $$('.table-wrap')[0].hidden;
+  $$('.table-wrap')[0].hidden = false;
+  printDetails = $$('details').map(el => [el, el.open]);
+  printDetails.forEach(([el]) => el.open = true);
+});
+window.addEventListener('afterprint', () => {
+  printDetails.forEach(([el, wasOpen]) => el.open = wasOpen);
+  $$('.table-wrap')[0].hidden = printTableWasHidden;
+});
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (!visible) return;
+    $$('.sidebar nav a').forEach(link => {
+      const active = link.getAttribute('href') === '#' + visible.target.id;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    });
+  }, { rootMargin: '-10% 0px -65% 0px', threshold: 0 });
+  $$('main > section[id]').forEach(section => observer.observe(section));
+}
+</script>
+</body>
+</html>
