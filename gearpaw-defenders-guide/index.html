@@ -86,6 +86,32 @@ h1{font-size:clamp(36px,4.2vw,60px);font-weight:800}
 .segmented button[aria-pressed="true"]{background:var(--forest);color:white}
 .search-wrap{flex:1;max-width:310px}
 .search-wrap input{width:100%;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:9px 14px;background:white;color:var(--ink);font-size:14px}
+.hero-buttons{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-secondary{color:#e0f5a3;font-size:14px;text-underline-offset:4px;padding:10px 0}
+.tier-summary{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;margin:22px 0 14px}
+.tier-board{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper);min-width:0}
+.tier-board header{padding:20px;border-bottom:1px solid var(--line)}
+.tier-board h3{font-size:20px;margin:0}
+.tier-board header p{font-size:13px;color:var(--muted);margin:4px 0 0}
+.tier-band{display:grid;grid-template-columns:76px minmax(0,1fr);border-bottom:1px solid var(--line)}
+.tier-rank{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 6px;text-align:center;background:#edf0ec}
+.tier-rank b{font-size:32px;line-height:1.1}
+.tier-rank span{font-size:11px;line-height:1.4}
+.rank-s .tier-rank{background:var(--lime);color:#304713}
+.rank-a .tier-rank{background:#dcece5;color:#225a42}
+.rank-b .tier-rank{background:#e5ebed;color:#4a646e}
+.rank-hold .tier-rank b{font-size:20px}
+.tier-band ul{margin:0;padding:14px 16px;list-style:none;display:grid;gap:12px;min-width:0}
+.tier-band li+li{border-top:1px dashed var(--line);padding-top:12px}
+.tier-band strong{display:block;font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.tier-band small{display:block;font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px;overflow-wrap:anywhere}
+.tier-card-role{display:block;font-size:12px;color:var(--green);margin-top:5px}
+.board-source{padding:13px 16px;margin:0;font-size:11px;color:var(--muted)}
+.tier-summary-note{font-size:13px;color:var(--muted);margin:12px 0 26px}
+.tier-detail-title{font-size:20px;margin:28px 0 16px}
+@media(max-width:1100px){.tier-summary{grid-template-columns:1fr}}
+@media(max-width:360px){.tier-band{grid-template-columns:58px minmax(0,1fr)}.tier-band ul{padding:12px}.tier-rank span{font-size:10px}}
+@media print{.tier-summary{display:block}.tier-board{margin-bottom:16px;break-inside:avoid}.hero-secondary{display:none}.tier-rank{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 .tier-explainer{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:14px}
 .tier-explainer strong{color:var(--ink)}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{border-collapse:collapse;width:100%;text-align:left;font-size:16px}
@@ -302,10 +328,10 @@ th,td{padding:9px}
 <nav>
 <a href="#overview" class="active">
 <span class="nav-index">01</span>한눈에 보는 결론</a>
-<a href="#roadmap">
-<span class="nav-index">02</span>성장 우선순위</a>
 <a href="#tiers">
-<span class="nav-index">03</span>뉴비 투자 티어표</a>
+<span class="nav-index">02</span>캐릭터 티어표</a>
+<a href="#roadmap">
+<span class="nav-index">03</span>성장 우선순위</a>
 <a href="#builds">
 <span class="nav-index">04</span>내 단계별 세팅</a>
 <a href="#gears">
@@ -331,8 +357,8 @@ th,td{padding:9px}
 </div>
 </header>
 <nav class="mobile-nav" aria-label="빠른 목차">
-<a href="#roadmap">우선순위</a>
 <a href="#tiers">티어표</a>
+<a href="#roadmap">우선순위</a>
 <a href="#builds">세팅</a>
 <a href="#gears">기어</a>
 <a href="#resources">재화</a>
@@ -356,7 +382,10 @@ th,td{padding:9px}
 <span>메인 스테이지 중심</span>
 <span>출처별 근거 표시</span>
 </div>
-<a href="#roadmap" class="btn btn-lime">내 성장 순서 보기</a>
+<div class="hero-buttons">
+<a href="#tiers" class="btn btn-lime">캐릭터 티어표 바로 보기</a>
+<a href="#roadmap" class="hero-secondary">성장 순서 보기 →</a>
+</div>
 </div>
 <div class="hero-art" aria-hidden="true">
 <svg viewBox="0 0 360 340">
@@ -390,6 +419,53 @@ th,td{padding:9px}
 <span>
 <b>2026년 11월 22일 조사본.</b> 공개된 공식 패치 안내와 과거 유저 공략을 대조했습니다. 아래 티어는 <b>뉴비 투자 순서에 대한 분석</b>이며, 11월 전체 영웅의 성능을 실측한 확정 메타표는 아닙니다.</span>
 </div>
+</section>
+<section class="section" id="tiers" aria-labelledby="tier-title">
+<div class="section-top">
+<div>
+<span class="eyebrow">INVESTMENT TIER LIST</span>
+<h2 id="tier-title">캐릭터 티어표 · 무과금 육성 순위</h2>
+<p><b>S는 우선 육성, A는 보조·조건부 선택, B는 대체·후순위.</b> 처음 시작하는 무과금 유저의 PvE 투자 기준입니다. 공식 등급표나 동일 성급의 순수 화력 순위는 아니며, 공개 공략을 종합한 편집 평가입니다.</p>
+</div>
+</div>
+<div class="tier-summary" aria-label="S A B 캐릭터 티어 요약판"><article class="tier-board" aria-labelledby="board-early"><header><h3 id="board-early">초반 영웅 티어</h3><p>신화가 없을 때 · 보유 영웅 기준</p></header><div class="tier-band rank-s"><div class="tier-rank"><b>S</b><span>우선 육성</span></div><ul><li><strong>흑대성 계열</strong><small>黑大聖 · 물리 전설</small><span class="tier-card-role">S · 초반 주력 후보</span></li><li><strong>땅속 어쌔신</strong><small>물리 전설 · 두더지</small><span class="tier-card-role">S · 초반 주력 후보</span></li></ul></div><div class="tier-band rank-a"><div class="tier-rank"><b>A</b><span>보조 · 조건부</span></div><ul><li><strong>블랙 샤크 대왕</strong><small>수속성 · 상어</small><span class="tier-card-role">A · 둔화 보조</span></li><li><strong>토끼 대장 계열</strong><small>萌兔隊長 · 바람 전설</small><span class="tier-card-role">A · 밀쳐내기 보조</span></li></ul></div><div class="tier-band rank-b"><div class="tier-rank"><b>B</b><span>대체 · 후순위</span></div><ul><li><strong>달빛 거미 / 여우 술사</strong><small>月光蜘蛛 / 白狐術師</small><span class="tier-card-role">B · 대체 제어·지원</span></li></ul></div><p class="board-source">공략 자료를 종합한 편집 평가 <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a><a href="#src-late" aria-label="근거 6">[6]</a></span></p></article><article class="tier-board" aria-labelledby="board-long"><header><h3 id="board-long">중장기 조합 티어</h3><p>신화 이후 · 합체와 성급 조건 확인</p></header><div class="tier-band rank-s"><div class="tier-rank"><b>S</b><span>우선 육성</span></div><ul><li><strong>물리 신화 호랑이 + 표범</strong><small>死侍虎 + 十環豹</small><span class="tier-card-role">S · 첫 신화 축 후보</span></li><li><strong>물리 / 바람 래디언트</strong><small>璀璨 · Radiant</small><span class="tier-card-role">S* · 장기 저축 후보</span></li></ul></div><div class="tier-band rank-a"><div class="tier-rank"><b>A</b><span>보조 · 조건부</span></div><ul><li><strong>수속성 신화 가오리 + 해파리</strong><small>逍遙蝠魴 + 迷幻水母</small><span class="tier-card-role">A* · 보유 육성·속성 조건</span></li><li><strong>전기 신화 사자 + 판다</strong><small>賽亞獅 + 龜派熊貓</small><span class="tier-card-role">A* · 보유 육성·속성 조건</span></li><li><strong>바람 신화 나비 + 올빼미</strong><small>皎月蝴蝶 + 怒風雕鴞</small><span class="tier-card-role">A* · 보유 육성·속성 조건</span></li></ul></div><div class="tier-band rank-b"><div class="tier-rank"><b>B</b><span>대체 · 후순위</span></div><ul><li><strong>불 / 독 신화 조합</strong><small>超級小熊貓 + 黑暗蝙蝠 / 鋼鐵戰蟻 + 猛毒蜂后</small><span class="tier-card-role">B* · 신규 투자 후순위</span></li></ul></div><div class="tier-band rank-hold"><div class="tier-rank"><b>보류</b><span>초보 투자 보류</span></div><ul><li><strong>얼티밋 / 초월 계열</strong><small>공식 예: 전기 「기적의 천마」</small><span class="tier-card-role">보류 · 입문 목표에서 제외</span></li></ul></div><p class="board-source">공략 자료를 종합한 편집 평가 <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a><a href="#src-late" aria-label="근거 6">[6]</a><a href="#src-case" aria-label="근거 7">[7]</a></span></p></article></div>
+<p class="tier-summary-note"><b>읽는 법:</b> 초반 S와 중장기 S는 서로 다른 성장 단계의 추천입니다. <b>*는 조합·보유 성급 조건부</b>이며, 같은 티어 안에는 순서 차이가 없습니다. 이름·한국판 대응이 미확인인 항목은 아래 상세표에 표시했습니다. S를 얻으려고 다이아를 즉시 쓰기보다 보유 전력부터 활용하세요.</p>
+<h3 class="tier-detail-title">영웅별 추천 이유와 조건</h3>
+<div class="toolbar">
+<div class="segmented" aria-label="티어표 진행 단계">
+<button type="button" data-phase-filter="early" aria-pressed="false">초반 즉시 전력</button>
+<button type="button" data-phase-filter="long" aria-pressed="false">중장기 투자</button>
+<button type="button" data-phase-filter="all" aria-pressed="true">전체</button>
+</div>
+<div class="search-wrap">
+<label for="hero-search" class="sr-only">영웅 이름 또는 역할 검색</label>
+<input id="hero-search" type="search" placeholder="이름·속성·역할 검색" autocomplete="off">
+</div>
+</div>
+<div class="tier-explainer">
+<span>
+<strong>평가 범위</strong> 입문 PvE와 재화 효율</span>
+<span>
+<strong>제외</strong> PvP·최상위 랭킹 확정 순위</span>
+<span class="statusline" id="tier-count" aria-live="polite">전체 12개 항목</span>
+</div>
+<div class="table-wrap" tabindex="0" aria-label="영웅 투자 티어표, 좁은 화면에서는 좌우로 스크롤">
+<table id="tier-table">
+<thead>
+<tr>
+<th scope="col">투자</th>
+<th scope="col">영웅 · 조합</th>
+<th scope="col">사용 목적</th>
+<th scope="col">추천 이유와 조건</th>
+</tr>
+</thead>
+<tbody><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>흑대성 계열</strong><small>黑大聖 · 물리 전설</small></td><td><span class="role">초반 주력 후보</span></td><td>보유했다면 진행용으로 활용. 이름은 중문 원문의 한자 독음이며 한국 도감명은 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>땅속 어쌔신</strong><small>물리 전설 · 두더지</small></td><td><span class="role">초반 주력 후보</span></td><td>물리 덱으로 이어갈 때 우선 검토. 원문의 地脈潛行者와 대응은 외형·역할 기반 추정. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>블랙 샤크 대왕</strong><small>수속성 · 상어</small></td><td><span class="role">둔화 보조</span></td><td>적을 늦추는 역할. 黑鯊海王와 명칭 대응은 추정이며 현재 스킬 설명을 확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>토끼 대장 계열</strong><small>萌兔隊長 · 바람 전설</small></td><td><span class="role">밀쳐내기 보조</span></td><td>원문은 밀쳐내기와 코어 연계 기절을 추천. 한국 이름·현재 코어 효과는 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-b">B</span></td><td><strong>달빛 거미 / 여우 술사</strong><small>月光蜘蛛 / 白狐術師</small></td><td><span class="role">대체 제어·지원</span></td><td>거미는 둔화, 여우는 밀쳐내기·증폭 역할로 소개됨. 부족한 역할을 채우되 희귀 재화 투자는 신중하게. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="long" data-tags="physical"><td><span class="tier tier-s">S</span></td><td><strong>물리 신화 호랑이 + 표범</strong><small>死侍虎 + 十環豹</small></td><td><span class="role">첫 신화 축 후보</span></td><td>두 영웅과 합체·지원 조건을 함께 확인. 여러 공략에 물리 조합 추천이 반복되지만 무조건 승리하는 조합은 아님. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="radiant"><td><span class="tier tier-s">S*</span></td><td><strong>물리 / 바람 래디언트</strong><small>璀璨 · Radiant</small></td><td><span class="role">장기 저축 후보</span></td><td>핵심 영웅·필요 성급·지원 조합을 확보할 수 있을 때. 속성만 보고 아무 래디언트나 뽑는 의미는 아님. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>수속성 신화 가오리 + 해파리</strong><small>逍遙蝠魴 + 迷幻水母</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>이미 육성이 앞서거나 해당 스테이지 보너스에 맞을 때 유지 후보. 신규 집중투자는 물리 축과 비교. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>전기 신화 사자 + 판다</strong><small>賽亞獅 + 龜派熊貓</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>신화 두 영웅의 합체 쌍. 현재 가진 성급과 실제 전투 결과를 기준으로 판단. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>바람 신화 나비 + 올빼미</strong><small>皎月蝴蝶 + 怒風雕鴞</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>바람 래디언트 추천을 이 두 영웅의 무조건 최상위 평가로 해석하지 않기. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-b">B*</span></td><td><strong>불 / 독 신화 조합</strong><small>超級小熊貓 + 黑暗蝙蝠 / 鋼鐵戰蟻 + 猛毒蜂后</small></td><td><span class="role">신규 투자 후순위</span></td><td>자료상 뉴비가 먼저 좇을 근거가 부족함. 약하다는 확정 판정은 아니며 보유 성급·속성 보너스가 좋다면 사용. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="hold"><td><span class="tier tier-보">보류</span></td><td><strong>얼티밋 / 초월 계열</strong><small>공식 예: 전기 「기적의 천마」</small></td><td><span class="role">입문 목표에서 제외</span></td><td>현재 입수·합체 비용을 확인하기 전에는 투자 계획에 넣지 않기. 최상위 희귀도와 뉴비 가성비는 별개. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></td></tr></tbody>
+</table>
+</div>
+<p class="empty" id="tier-empty" hidden>일치하는 항목이 없습니다. 검색어를 지우거나 ‘전체’를 선택하세요.</p>
+<p class="caption">한국명은 공개 게임 화면에서 확인 가능한 명칭을 사용했습니다. 일부 중문 영웅과의 대응은 추정이며, 이름을 확인하지 못한 영웅은 외형·중문명을 함께 적었습니다. ‘S’라고 해서 지금 새로 뽑으라는 뜻은 아닙니다. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></p>
+<div class="callout">
+<strong>성급과 완성도가 희귀도 차이를 뒤집을 수 있습니다.</strong>2026년 8월 유저 사례에는 낮은 성급 래디언트보다 육성된 신화 표범이 더 유용했다는 평가도 있습니다. 새 고등급 한 장을 얻었다고 기존 핵심을 즉시 교체하기보다, 같은 스테이지에서 비교하세요. <span class="citations"><a href="#src-case" aria-label="근거 7">[7]</a></span></div>
 </section>
 <section class="section" id="roadmap" aria-labelledby="road-title">
 <div class="section-top">
@@ -431,50 +507,6 @@ th,td{padding:9px}
 </div>
 <div class="callout">
 <strong>‘주력 집중’과 ‘다른 영웅 육성’은 재화별로 나눠 생각하세요.</strong>한국 플레이 기록에는 비주력 영웅 성급업의 전체 공격력 보너스가, 대만 공략에는 레벨 구간의 계열 보너스가 나옵니다. <b>값싼 보너스는 챙기되, 희소한 계열 에너지원은 실제 주력에 우선</b>하는 절충이 합리적입니다. 현재 도감에 같은 효과가 있는지 확인하세요. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a><a href="#src-beginner" aria-label="근거 3">[3]</a></span></div>
-</section>
-<section class="section" id="tiers" aria-labelledby="tier-title">
-<div class="section-top">
-<div>
-<span class="eyebrow">INVESTMENT TIER LIST</span>
-<h2 id="tier-title">강함보다, 먼저 키울 순서</h2>
-<p>S = 우선 검토 · A = 좋은 보조/조건부 후보 · B = 대체/투자 후순위. 별표(*)는 조합·보유 성급 조건이 붙습니다. 보유했을 때의 투자 순서이며, S를 얻으려고 다이아를 즉시 쓰라는 뜻은 아닙니다. 분류는 자료를 종합한 편집 판단입니다.</p>
-</div>
-</div>
-<div class="toolbar">
-<div class="segmented" aria-label="티어표 진행 단계">
-<button type="button" data-phase-filter="early" aria-pressed="true">초반 즉시 전력</button>
-<button type="button" data-phase-filter="long" aria-pressed="false">중장기 투자</button>
-<button type="button" data-phase-filter="all" aria-pressed="false">전체</button>
-</div>
-<div class="search-wrap">
-<label for="hero-search" class="sr-only">영웅 이름 또는 역할 검색</label>
-<input id="hero-search" type="search" placeholder="이름·속성·역할 검색" autocomplete="off">
-</div>
-</div>
-<div class="tier-explainer">
-<span>
-<strong>평가 범위</strong> 입문 PvE와 재화 효율</span>
-<span>
-<strong>제외</strong> PvP·최상위 랭킹 확정 순위</span>
-<span class="statusline" id="tier-count" aria-live="polite">전체 12개 항목</span>
-</div>
-<div class="table-wrap" tabindex="0" aria-label="영웅 투자 티어표, 좁은 화면에서는 좌우로 스크롤">
-<table id="tier-table">
-<thead>
-<tr>
-<th scope="col">투자</th>
-<th scope="col">영웅 · 조합</th>
-<th scope="col">사용 목적</th>
-<th scope="col">추천 이유와 조건</th>
-</tr>
-</thead>
-<tbody><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>흑대성 계열</strong><small>黑大聖 · 물리 전설</small></td><td><span class="role">초반 주력 후보</span></td><td>보유했다면 진행용으로 활용. 이름은 중문 원문의 한자 독음이며 한국 도감명은 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="early"><td><span class="tier tier-s">S</span></td><td><strong>땅속 어쌔신</strong><small>물리 전설 · 두더지</small></td><td><span class="role">초반 주력 후보</span></td><td>물리 덱으로 이어갈 때 우선 검토. 원문의 地脈潛行者와 대응은 외형·역할 기반 추정. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>블랙 샤크 대왕</strong><small>수속성 · 상어</small></td><td><span class="role">둔화 보조</span></td><td>적을 늦추는 역할. 黑鯊海王와 명칭 대응은 추정이며 현재 스킬 설명을 확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-a">A</span></td><td><strong>토끼 대장 계열</strong><small>萌兔隊長 · 바람 전설</small></td><td><span class="role">밀쳐내기 보조</span></td><td>원문은 밀쳐내기와 코어 연계 기절을 추천. 한국 이름·현재 코어 효과는 미확인. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="early" data-tags="control"><td><span class="tier tier-b">B</span></td><td><strong>달빛 거미 / 여우 술사</strong><small>月光蜘蛛 / 白狐術師</small></td><td><span class="role">대체 제어·지원</span></td><td>거미는 둔화, 여우는 밀쳐내기·증폭 역할로 소개됨. 부족한 역할을 채우되 희귀 재화 투자는 신중하게. <span class="citations"><a href="#src-beginner" aria-label="근거 3">[3]</a></span></td></tr><tr data-phase="long" data-tags="physical"><td><span class="tier tier-s">S</span></td><td><strong>물리 신화 호랑이 + 표범</strong><small>死侍虎 + 十環豹</small></td><td><span class="role">첫 신화 축 후보</span></td><td>두 영웅과 합체·지원 조건을 함께 확인. 여러 공략에 물리 조합 추천이 반복되지만 무조건 승리하는 조합은 아님. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="radiant"><td><span class="tier tier-s">S*</span></td><td><strong>물리 / 바람 래디언트</strong><small>璀璨 · Radiant</small></td><td><span class="role">장기 저축 후보</span></td><td>핵심 영웅·필요 성급·지원 조합을 확보할 수 있을 때. 속성만 보고 아무 래디언트나 뽑는 의미는 아님. <span class="citations"><a href="#src-late" aria-label="근거 6">[6]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>수속성 신화 가오리 + 해파리</strong><small>逍遙蝠魴 + 迷幻水母</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>이미 육성이 앞서거나 해당 스테이지 보너스에 맞을 때 유지 후보. 신규 집중투자는 물리 축과 비교. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>전기 신화 사자 + 판다</strong><small>賽亞獅 + 龜派熊貓</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>신화 두 영웅의 합체 쌍. 현재 가진 성급과 실제 전투 결과를 기준으로 판단. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-a">A*</span></td><td><strong>바람 신화 나비 + 올빼미</strong><small>皎月蝴蝶 + 怒風雕鴞</small></td><td><span class="role">보유 육성·속성 조건</span></td><td>바람 래디언트 추천을 이 두 영웅의 무조건 최상위 평가로 해석하지 않기. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="conditional"><td><span class="tier tier-b">B*</span></td><td><strong>불 / 독 신화 조합</strong><small>超級小熊貓 + 黑暗蝙蝠 / 鋼鐵戰蟻 + 猛毒蜂后</small></td><td><span class="role">신규 투자 후순위</span></td><td>자료상 뉴비가 먼저 좇을 근거가 부족함. 약하다는 확정 판정은 아니며 보유 성급·속성 보너스가 좋다면 사용. <span class="citations"><a href="#src-mythic" aria-label="근거 4">[4]</a></span></td></tr><tr data-phase="long" data-tags="hold"><td><span class="tier tier-보">보류</span></td><td><strong>얼티밋 / 초월 계열</strong><small>공식 예: 전기 「기적의 천마」</small></td><td><span class="role">입문 목표에서 제외</span></td><td>현재 입수·합체 비용을 확인하기 전에는 투자 계획에 넣지 않기. 최상위 희귀도와 뉴비 가성비는 별개. <span class="citations"><a href="#src-official" aria-label="근거 1">[1]</a></span></td></tr></tbody>
-</table>
-</div>
-<p class="empty" id="tier-empty" hidden>일치하는 항목이 없습니다. 검색어를 지우거나 ‘전체’를 선택하세요.</p>
-<p class="caption">한국명은 공개 게임 화면에서 확인 가능한 명칭을 사용했습니다. 일부 중문 영웅과의 대응은 추정이며, 이름을 확인하지 못한 영웅은 외형·중문명을 함께 적었습니다. ‘S’라고 해서 지금 새로 뽑으라는 뜻은 아닙니다. <span class="citations"><a href="#src-kr" aria-label="근거 8">[8]</a></span></p>
-<div class="callout">
-<strong>성급과 완성도가 희귀도 차이를 뒤집을 수 있습니다.</strong>2026년 8월 유저 사례에는 낮은 성급 래디언트보다 육성된 신화 표범이 더 유용했다는 평가도 있습니다. 새 고등급 한 장을 얻었다고 기존 핵심을 즉시 교체하기보다, 같은 스테이지에서 비교하세요. <span class="citations"><a href="#src-case" aria-label="근거 7">[7]</a></span></div>
 </section>
 <section class="section" id="builds" aria-labelledby="build-title">
 <div class="section-top">
@@ -920,7 +952,7 @@ th,td{padding:9px}
 'use strict';
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
-let phase = 'early';
+let phase = 'all';
 function filterTiers() {
   const query = $('#hero-search').value.trim().toLocaleLowerCase('ko-KR');
   let count = 0;
