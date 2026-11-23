@@ -1,0 +1,1886 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>좌측 둔부·고관절 재활 &amp; 스트레칭 가이드 · ZZEE Wellness</title>
+    <meta
+      name="description"
+      content="고강도 웨이트·크로스핏 이후 좌측 둔근 활성화 저하와 심부 압통에 대한 의학 논문(PubMed 25편) 기반 분석, 해부학 삽화, 아침 동적·저녁 정적 스트레칭 및 재활 복귀 가이드."
+    />
+    <meta name="theme-color" content="#f5f6f1" />
+    <style>
+      :root {
+        --bg: #f5f6f1;
+        --paper: #fffefb;
+        --paper-soft: #f8f9f5;
+        --ink: #18201b;
+        --muted: #5a6760;
+        --line: #dce1da;
+        --line-strong: #c7cfc5;
+        --teal: #0f766e;
+        --teal-soft: #e6f5f3;
+        --amber: #b45309;
+        --amber-soft: #fef3c7;
+        --indigo: #3730a3;
+        --indigo-soft: #eef2ff;
+        --rose: #be123c;
+        --rose-soft: #fff1f2;
+        --navy: #1c2b44;
+        --shadow: 0 16px 40px rgba(24, 32, 27, 0.07);
+        --shadow-sm: 0 8px 22px rgba(24, 32, 27, 0.05);
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(circle at 0% 0%, rgba(15, 118, 110, 0.1), transparent 30rem),
+          radial-gradient(circle at 100% 10%, rgba(55, 48, 163, 0.06), transparent 28rem),
+          var(--bg);
+        line-height: 1.6;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 22px 0 84px;
+      }
+
+      /* Topbar */
+      .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+
+      .topbar-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .pill-btn {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 254, 251, 0.92);
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+      }
+
+      .pill-btn:hover,
+      .pill-btn:focus-visible {
+        border-color: var(--teal);
+        background: var(--paper);
+        outline: 3px solid rgba(15, 118, 110, 0.14);
+        outline-offset: 2px;
+      }
+
+      .pill-btn.primary {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: #ffffff;
+      }
+
+      .pill-btn.primary:hover,
+      .pill-btn.primary:focus-visible {
+        background: #0d625b;
+      }
+
+      /* Hero Header */
+      header.hero {
+        padding: clamp(26px, 4.5vw, 48px);
+        border: 1px solid rgba(15, 118, 110, 0.22);
+        border-radius: 26px;
+        background: var(--paper);
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        margin: 0 0 14px;
+        color: var(--teal);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #14b8a6;
+        content: "";
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(30px, 5.2vw, 52px);
+        font-weight: 850;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      .lead {
+        max-width: 820px;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: clamp(15px, 1.9vw, 18px);
+        line-height: 1.72;
+      }
+
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+      }
+
+      .chip {
+        display: inline-flex;
+        min-height: 32px;
+        align-items: center;
+        padding: 0 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .chip.morning {
+        background: var(--teal-soft);
+        color: var(--teal);
+      }
+
+      .chip.evening {
+        background: var(--indigo-soft);
+        color: var(--indigo);
+      }
+
+      .chip.neutral {
+        background: #eef1ec;
+        color: #344039;
+      }
+
+      .disclaimer {
+        margin-top: 20px;
+        padding: 13px 16px;
+        border-left: 4px solid var(--teal);
+        border-radius: 12px;
+        background: var(--paper-soft);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .disclaimer strong {
+        color: var(--ink);
+      }
+
+      /* Sticky Nav */
+      nav.toc {
+        position: sticky;
+        z-index: 20;
+        top: 10px;
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        margin-top: 16px;
+        padding: 8px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255, 254, 251, 0.92);
+        box-shadow: 0 10px 24px rgba(24, 32, 27, 0.06);
+        backdrop-filter: blur(10px);
+        scrollbar-width: none;
+      }
+
+      nav.toc::-webkit-scrollbar {
+        display: none;
+      }
+
+      nav.toc a {
+        flex: 0 0 auto;
+        padding: 8px 13px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+        color: #2f3b35;
+      }
+
+      nav.toc a:hover,
+      nav.toc a:focus-visible {
+        background: var(--teal-soft);
+        color: var(--teal);
+        outline: none;
+      }
+
+      /* Sections */
+      section {
+        scroll-margin-top: 84px;
+        margin-top: 48px;
+      }
+
+      .section-head {
+        margin-bottom: 18px;
+      }
+
+      .section-kicker {
+        display: inline-block;
+        color: var(--teal);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .section-kicker.evening-kicker {
+        color: var(--indigo);
+      }
+
+      h2 {
+        margin: 5px 0 0;
+        font-size: clamp(24px, 3.6vw, 36px);
+        font-weight: 850;
+        line-height: 1.2;
+        letter-spacing: -0.035em;
+      }
+
+      .section-desc {
+        max-width: 840px;
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      /* Anatomy Atlas Plate */
+      .atlas-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: center;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .plate-frame {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #e5e9e3;
+        border-radius: 16px;
+        background: #ffffff;
+        cursor: zoom-in;
+      }
+
+      .plate-frame img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #ffffff;
+      }
+
+      .zoom-hint {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(24, 32, 27, 0.72);
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 700;
+        pointer-events: none;
+      }
+
+      .legend-list {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .legend-item {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding: 10px 12px;
+        border: 1px solid #ebeee9;
+        border-radius: 12px;
+        background: var(--paper-soft);
+      }
+
+      .pin-num {
+        display: inline-flex;
+        width: 26px;
+        height: 26px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--navy);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .legend-item strong {
+        display: block;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      .legend-item span {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 12.5px;
+        line-height: 1.5;
+      }
+
+      /* Interactive Routine Toolbar + Timer */
+      .routine-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .mode-tabs {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 4px;
+        border-radius: 13px;
+        background: #eef1ec;
+      }
+
+      .mode-tab {
+        padding: 9px 14px;
+        border: 0;
+        border-radius: 10px;
+        background: transparent;
+        color: #3f4b44;
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: background-color 140ms ease, color 140ms ease, box-shadow 140ms ease;
+      }
+
+      .mode-tab[aria-pressed="true"] {
+        background: var(--paper);
+        color: var(--ink);
+        box-shadow: 0 2px 8px rgba(24, 32, 27, 0.08);
+      }
+
+      .mode-tab.morning-tab[aria-pressed="true"] {
+        color: var(--teal);
+      }
+
+      .mode-tab.evening-tab[aria-pressed="true"] {
+        color: var(--indigo);
+      }
+
+      .timer-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .timer-display {
+        min-width: 72px;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--paper-soft);
+        font-variant-numeric: tabular-nums;
+        font-size: 18px;
+        font-weight: 900;
+        text-align: center;
+        color: var(--ink);
+      }
+
+      .timer-display.running {
+        border-color: var(--teal);
+        background: var(--teal-soft);
+        color: var(--teal);
+      }
+
+      .timer-btn {
+        min-height: 36px;
+        padding: 0 11px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--paper);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .timer-btn:hover {
+        border-color: var(--teal);
+      }
+
+      .timer-btn.active {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: #ffffff;
+      }
+
+      .progress-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--paper-soft);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .progress-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .prog-pill {
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .prog-pill.morning {
+        background: var(--teal-soft);
+        color: var(--teal);
+      }
+
+      .prog-pill.evening {
+        background: var(--indigo-soft);
+        color: var(--indigo);
+      }
+
+      .reset-checks {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      /* Routine Blocks */
+      .routine-block {
+        margin-top: 24px;
+      }
+
+      .routine-block[hidden] {
+        display: none;
+      }
+
+      .block-banner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        padding: 18px 20px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+      }
+
+      .block-banner.morning {
+        border-color: rgba(15, 118, 110, 0.25);
+        background: linear-gradient(135deg, #ecf8f6 0%, #fffefb 65%);
+      }
+
+      .block-banner.evening {
+        border-color: rgba(55, 48, 163, 0.22);
+        background: linear-gradient(135deg, #eef2ff 0%, #fffefb 65%);
+      }
+
+      .block-banner h3 {
+        margin: 4px 0 4px;
+        font-size: clamp(20px, 2.8vw, 26px);
+        font-weight: 850;
+        letter-spacing: -0.03em;
+      }
+
+      .block-banner p {
+        margin: 0;
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .block-badge {
+        display: inline-flex;
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .block-banner.morning .block-badge {
+        background: var(--teal);
+        color: #ffffff;
+      }
+
+      .block-banner.evening .block-badge {
+        background: var(--indigo);
+        color: #ffffff;
+      }
+
+      /* Exercise Cards Grid */
+      .exercise-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .exercise-card {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+      }
+
+      .exercise-card.done {
+        border-color: var(--teal);
+        background: #fafdfb;
+      }
+
+      .exercise-card.evening-card.done {
+        border-color: var(--indigo);
+        background: #fafaff;
+      }
+
+      .exercise-media {
+        position: relative;
+        border-bottom: 1px solid #ecefe9;
+        background: #ffffff;
+        cursor: zoom-in;
+      }
+
+      .exercise-media img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #ffffff;
+      }
+
+      .step-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(24, 32, 27, 0.82);
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+      }
+
+      .evening-card .step-tag {
+        background: rgba(55, 48, 163, 0.88);
+      }
+
+      .exercise-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 18px 20px 20px;
+      }
+
+      .exercise-top {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .exercise-top h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 850;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+      }
+
+      .check-wrap {
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--paper-soft);
+        font-size: 12px;
+        font-weight: 800;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .check-wrap input {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        accent-color: var(--teal);
+        cursor: pointer;
+      }
+
+      .evening-card .check-wrap input {
+        accent-color: var(--indigo);
+      }
+
+      .dose-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .dose-pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 8px;
+        background: var(--teal-soft);
+        color: var(--teal);
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .evening-card .dose-pill {
+        background: var(--indigo-soft);
+        color: var(--indigo);
+      }
+
+      .dose-pill.sub {
+        background: #eef1ec;
+        color: #3a463f;
+      }
+
+      .exercise-steps {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: #2b3630;
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      .exercise-steps li + li {
+        margin-top: 4px;
+      }
+
+      .cue-caution {
+        margin-top: 12px;
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: var(--amber-soft);
+        color: #78350f;
+        font-size: 12.5px;
+        line-height: 1.55;
+      }
+
+      .cite-line {
+        margin-top: auto;
+        padding-top: 12px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .cite-line a {
+        color: var(--teal);
+        font-weight: 800;
+        text-underline-offset: 2px;
+      }
+
+      .evening-card .cite-line a {
+        color: var(--indigo);
+      }
+
+      /* Clinical Analysis & Differential */
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .info-card h3 {
+        margin: 0 0 12px;
+        font-size: 19px;
+        font-weight: 850;
+        letter-spacing: -0.025em;
+      }
+
+      .info-list {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 14.5px;
+        line-height: 1.68;
+        color: #2b3630;
+      }
+
+      .info-list li + li {
+        margin-top: 10px;
+      }
+
+      .info-list a {
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      /* Tables */
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+      }
+
+      table {
+        width: 100%;
+        min-width: 720px;
+        border-collapse: collapse;
+        font-size: 13.5px;
+      }
+
+      th,
+      td {
+        padding: 13px 15px;
+        border-bottom: 1px solid #eaeee8;
+        text-align: left;
+        vertical-align: top;
+        line-height: 1.58;
+      }
+
+      thead th {
+        background: #f1f4ee;
+        color: #26332c;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      td a {
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      /* Rehab Phases */
+      .phase-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .phase-card {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--teal);
+        border-radius: 18px;
+        background: var(--paper);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .phase-card.p2 {
+        border-top-color: var(--amber);
+      }
+
+      .phase-card.p3 {
+        border-top-color: var(--indigo);
+      }
+
+      .phase-label {
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+
+      .phase-card.p2 .phase-label {
+        color: var(--amber);
+      }
+
+      .phase-card.p3 .phase-label {
+        color: var(--indigo);
+      }
+
+      .phase-card h3 {
+        margin: 6px 0 10px;
+        font-size: 17px;
+        font-weight: 850;
+      }
+
+      .phase-card ul {
+        margin: 0;
+        padding-left: 17px;
+        color: #2f3a34;
+        font-size: 13.5px;
+        line-height: 1.62;
+      }
+
+      .phase-card li + li {
+        margin-top: 6px;
+      }
+
+      /* Warning & Red Flags */
+      .alert-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .alert-box {
+        padding: 18px 20px;
+        border-radius: 18px;
+        border: 1px solid rgba(180, 83, 9, 0.25);
+        background: #fffbeb;
+      }
+
+      .alert-box.redflag {
+        border-color: rgba(190, 18, 60, 0.28);
+        background: var(--rose-soft);
+      }
+
+      .alert-box h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: 900;
+        color: var(--amber);
+      }
+
+      .alert-box.redflag h3 {
+        color: var(--rose);
+      }
+
+      .alert-box ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 13.5px;
+        line-height: 1.62;
+        color: #36281c;
+      }
+
+      .alert-box.redflag ul {
+        color: #4c1122;
+      }
+
+      .alert-box li + li {
+        margin-top: 6px;
+      }
+
+      /* References */
+      .ref-card {
+        padding: 22px 24px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--paper);
+      }
+
+      .ref-list {
+        margin: 0;
+        padding-left: 22px;
+        columns: 2;
+        column-gap: 32px;
+        font-size: 12.5px;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .ref-list li {
+        break-inside: avoid;
+        margin-bottom: 8px;
+      }
+
+      .ref-list strong {
+        color: var(--ink);
+      }
+
+      .ref-list a {
+        color: var(--teal);
+        font-weight: 800;
+        text-underline-offset: 2px;
+      }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12.5px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      /* Lightbox Dialog */
+      dialog.lightbox {
+        width: min(1040px, calc(100vw - 24px));
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      dialog.lightbox::backdrop {
+        background: rgba(15, 23, 20, 0.72);
+        backdrop-filter: blur(4px);
+      }
+
+      .lightbox-head {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .lightbox-head strong {
+        font-size: 15px;
+      }
+
+      .lightbox-close {
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--paper-soft);
+        font-size: 12px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .lightbox img {
+        width: 100%;
+        max-height: 78vh;
+        object-fit: contain;
+        border-radius: 12px;
+      }
+
+      /* Responsive */
+      @media (max-width: 960px) {
+        .atlas-card,
+        .exercise-grid,
+        .two-col,
+        .phase-grid,
+        .alert-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ref-list {
+          columns: 1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .shell {
+          width: calc(100% - 24px);
+        }
+
+        header.hero {
+          padding: 22px 18px;
+        }
+
+        .exercise-body {
+          padding: 15px 16px 16px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .topbar,
+        nav.toc,
+        .routine-toolbar,
+        .progress-strip,
+        .zoom-hint,
+        .check-wrap {
+          display: none !important;
+        }
+
+        .routine-block[hidden] {
+          display: block !important;
+        }
+
+        .shell {
+          width: 100%;
+          padding: 0;
+        }
+
+        .exercise-card,
+        .atlas-card,
+        .info-card,
+        .phase-card,
+        .table-wrap {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topbar">
+        <a class="pill-btn" href="../../index.html" aria-label="ZZEE 프로젝트 인덱스로 돌아가기">← ZZEE Index</a>
+        <div class="topbar-actions">
+          <a class="pill-btn primary" href="#routine">아침·저녁 루틴 바로가기</a>
+          <button class="pill-btn" type="button" onclick="window.print()">인쇄 / PDF</button>
+        </div>
+      </div>
+
+      <header class="hero">
+        <p class="eyebrow">Sports Medicine &amp; Rehab · PubMed Evidence-Based (25편)</p>
+        <h1>좌측 둔부·고관절 재활 &amp; 스트레칭 가이드</h1>
+        <p class="lead">
+          웨이트 트레이닝(2년+)·크로스핏(1년+) 수행 중 발생한 <strong>좌측 허리·둔부 불편감</strong>에서
+          초기 통증(데드리프트 최하단·스쿼트 기립 시 튀는 느낌)이 가라앉은 뒤에도 남아 있는
+          <strong>좌측 둔근 힘 전달감 저하</strong>와 <strong>심부 압통</strong>을 의학 논문 기준으로 분석하고,
+          <strong>아침 동적 · 저녁 정적</strong> 루틴을 의학 삽화와 함께 정리한 개인 재활 보드입니다.
+        </p>
+        <div class="hero-chips">
+          <span class="chip morning">☀️ 아침: 동적 스트레칭 + 좌측 둔근 프라이밍 (7~8분)</span>
+          <span class="chip evening">🌙 저녁: 정적 스트레칭 20~30초 × 2~4세트 (8~10분)</span>
+          <span class="chip neutral">MRI 정상 · 근신경 재교육 + 부하 조절 중심</span>
+        </div>
+        <div class="disclaimer">
+          <strong>의학적 안내:</strong> 본 가이드는 PubMed 등재 동료심사 문헌을 근거로 가능한 기전과 안전한 운동·스트레칭 원칙을 정리한 참고 자료이며, 대면 이학적 검진을 대체하는 확정 진단이 아닙니다. 운동 중 다리 뒤 저림·방사통·진행성 힘 빠짐이 나타나면 즉시 중단하고 스포츠의학·재활의학과·정형외과 전문의 진료를 받으세요.
+        </div>
+      </header>
+
+      <nav class="toc" aria-label="페이지 목차">
+        <a href="#anatomy">1. 해부학 삽화</a>
+        <a href="#routine">2. 아침 동적 / 저녁 정적</a>
+        <a href="#analysis">3. 5대 임상 분석</a>
+        <a href="#tests">4. 감별 &amp; 확인 검사</a>
+        <a href="#rehab">5. 복귀 로드맵 &amp; 주의</a>
+        <a href="#references">6. 의학 논문 출처 (25편)</a>
+      </nav>
+
+      <!-- SECTION 1: MEDICAL ANATOMY PLATE -->
+      <section id="anatomy">
+        <div class="section-head">
+          <span class="section-kicker">Anatomical Atlas · Left Posterior Hip</span>
+          <h2>1. 좌측 심부 둔부 공간 해부학 도해</h2>
+          <p class="section-desc">
+            표층 대둔근(Gluteus Maximus) 아래에는 여러 심부 근육·건·신경이 밀집해 있습니다.
+            <strong>어느 구조에 부하가 걸리는지에 따라 피해야 할 스트레칭과 필요한 재활이 완전히 달라집니다.</strong> (삽화를 클릭하면 크게 볼 수 있습니다.)
+          </p>
+        </div>
+
+        <div class="atlas-card">
+          <figure class="plate-frame" data-zoom="좌측 후면 골반 및 심부 둔부 공간 해부학 도해">
+            <img
+              src="./assets/anatomy-deep-gluteal.jpg"
+              alt="좌측 후면 골반과 심부 둔부 공간(중둔근, 이상근, 좌골신경, 심부 외회전근, 대전자, 좌골결절 및 근위 햄스트링 건)을 1~6번 번호로 표시한 의학 삽화"
+              width="1376"
+              height="768"
+            />
+            <span class="zoom-hint">클릭해 확대</span>
+          </figure>
+
+          <ol class="legend-list" aria-label="해부학 도해 번호 설명">
+            <li class="legend-item">
+              <span class="pin-num">1</span>
+              <div>
+                <strong>좌측 중둔근 (Gluteus Medius)</strong>
+                <span>한발 지지·스쿼트 시 골반 수평 유지 핵심. 통증 이후 억제·타이밍 지연이 흔함.</span>
+              </div>
+            </li>
+            <li class="legend-item">
+              <span class="pin-num">2</span>
+              <div>
+                <strong>좌측 이상근 (Piriformis)</strong>
+                <span>천골과 대전자를 잇는 심부 외회전근. 과긴장 시 하부 좌골신경 활주를 제한.</span>
+              </div>
+            </li>
+            <li class="legend-item">
+              <span class="pin-num">3</span>
+              <div>
+                <strong>좌골신경 (Sciatic Nerve)</strong>
+                <span>이상근 아래로 주행. 폼롤러 강한 압박 시 날카로운 심부 통증·자극 유발 가능.</span>
+              </div>
+            </li>
+            <li class="legend-item">
+              <span class="pin-num">4</span>
+              <div>
+                <strong>심부 둔부 공간 (좌골신경 교차부 &amp; 심부 외회전근)</strong>
+                <span>쌍둥이근·내폐쇄근·대퇴방형근 밀집 구역. 심부 둔부 증후군(DGS) 감별 핵심 부위.</span>
+              </div>
+            </li>
+            <li class="legend-item">
+              <span class="pin-num">5</span>
+              <div>
+                <strong>대전자 &amp; 외측 둔근 건 부착부 (Greater Trochanter)</strong>
+                <span>중·소둔근 건병증 및 외측 탄발성 고관절 부위. 과도한 내전 스트레칭 시 압박 악화.</span>
+              </div>
+            </li>
+            <li class="legend-item">
+              <span class="pin-num">6</span>
+              <div>
+                <strong>좌골결절 &amp; 근위 햄스트링 건 (Ischial Tuberosity)</strong>
+                <span>데드리프트 최하단처럼 깊은 고관절 굴곡에서 높은 압축·인장 부하가 집중되는 부위.</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SECTION 2: MORNING DYNAMIC vs EVENING STATIC ROUTINE -->
+      <section id="routine">
+        <div class="section-head">
+          <span class="section-kicker">Daily Illustrated Protocol · Left-Side Focus</span>
+          <h2>2. 아침 동적 · 저녁 정적 분리 스트레칭 루틴</h2>
+          <p class="section-desc">
+            기상 직후 1~2시간은 요추 추간판 수분 팽창으로 깊은 정적 굴곡 부하를 피해야 하므로(<a href="https://pubmed.ncbi.nlm.nih.gov/9854759/" target="_blank" rel="noopener noreferrer">Snook et al., 1998</a>)
+            <strong>아침에는 중립 척추 기반 동적 가동성 + 좌측 둔근 활성화</strong>를,
+            직후 고중량 리프팅이 없는 <strong>저녁에는 20~30초 정적 스트레칭</strong>을 배치합니다(<a href="https://pubmed.ncbi.nlm.nih.gov/26642915/" target="_blank" rel="noopener noreferrer">Behm et al., 2016</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/29063454/" target="_blank" rel="noopener noreferrer">Opplert &amp; Babault, 2018</a>).
+          </p>
+        </div>
+
+        <div class="routine-toolbar" role="region" aria-label="루틴 필터 및 스트레칭 타이머">
+          <div class="mode-tabs" role="group" aria-label="시간대 보기 전환">
+            <button class="mode-tab" type="button" data-view="all" aria-pressed="true">📋 전체 한눈에</button>
+            <button class="mode-tab morning-tab" type="button" data-view="morning" aria-pressed="false">☀️ 아침 동적만</button>
+            <button class="mode-tab evening-tab" type="button" data-view="evening" aria-pressed="false">🌙 저녁 정적만</button>
+          </div>
+
+          <div class="timer-box" aria-label="정적 스트레칭 카운트다운 타이머">
+            <span class="timer-display" id="timerDisplay" aria-live="polite">00:30</span>
+            <button class="timer-btn" type="button" data-preset="20">20초</button>
+            <button class="timer-btn active" type="button" data-preset="30">30초</button>
+            <button class="timer-btn" type="button" id="timerToggle">시작</button>
+            <button class="timer-btn" type="button" id="timerReset">리셋</button>
+          </div>
+        </div>
+
+        <div class="progress-strip">
+          <div class="progress-badges">
+            <span class="prog-pill morning" id="morningProgress">☀️ 아침 동적 0 / 5 완료</span>
+            <span class="prog-pill evening" id="eveningProgress">🌙 저녁 정적 0 / 4 완료</span>
+          </div>
+          <button class="reset-checks" type="button" id="resetChecks">오늘 체크 초기화</button>
+        </div>
+
+        <!-- MORNING DYNAMIC BLOCK -->
+        <div class="routine-block" id="morningBlock">
+          <div class="block-banner morning">
+            <div>
+              <span class="section-kicker">Morning · Dynamic Mobility + Glute Priming</span>
+              <h3>☀️ 아침 루틴 — 동적 스트레칭 &amp; 좌측 둔근 활성화</h3>
+              <p>끝 지점에서 오래 버티지 않고 통증·저림·튀는 느낌이 없는 가동범위(VAS ≤ 2~3/10)에서 부드럽게 움직입니다. 오전·낮 웨이트/크로스핏 직전 워밍업으로 그대로 활용하세요.</p>
+            </div>
+            <span class="block-badge">총 7~8분 · 주 5~7회</span>
+          </div>
+
+          <div class="exercise-grid">
+            <!-- Morning 1 -->
+            <article class="exercise-card" data-check-id="m1" data-group="morning">
+              <figure class="exercise-media" data-zoom="아침 동적 1 · 좌측 좌골신경 슬라이더 (신경 활주)">
+                <img src="./assets/stretch-3-sciatic-slider.jpg" alt="벤치에 앉아 왼쪽 무릎 신전과 고개 들기(A), 왼쪽 무릎 굴곡과 고개 숙이기(B)를 교대로 수행하는 좌측 좌골신경 슬라이더 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">MORNING 01 · 신경 활주</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>좌측 좌골신경 슬라이더 (Sciatic Nerve Slider)</h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="m1" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">10~15회 × 1~2세트</span>
+                  <span class="dose-pill sub">1회 2~3초 · 끝 정지 금지</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>벤치·의자 끝에 허리를 곧게 펴고 앉습니다(오른발 바닥 고정).</li>
+                  <li><strong>자세 A:</strong> 왼쪽 무릎을 앞으로 펴며 발끝을 살짝 당기는 <strong>동시에 고개를 위로 듭니다</strong>(신경관 상부를 풀어주며 하부 활주).</li>
+                  <li><strong>자세 B:</strong> 왼쪽 무릎을 벤치 아래로 구부리며 발목 힘을 빼는 <strong>동시에 턱을 아래로 숙입니다</strong>.</li>
+                </ol>
+                <div class="cue-caution"><strong>중단 기준:</strong> 다리 뒤로 찌릿함·저림이 나오면 무릎을 끝까지 펴지 말고 증상 없는 각도(70~80%)까지만 왕복하세요.</div>
+                <div class="cite-line">근거: Basson et al. (2017, <em>JOSPT</em>, <a href="https://pubmed.ncbi.nlm.nih.gov/28704626/" target="_blank" rel="noopener noreferrer">PMID: 28704626</a>)</div>
+              </div>
+            </article>
+
+            <!-- Morning 2 -->
+            <article class="exercise-card" data-check-id="m2" data-group="morning">
+              <figure class="exercise-media" data-zoom="아침 동적 2 · 90/90 고관절 내·외회전 동적 전환">
+                <img src="./assets/stretch-5-9090-switches.jpg" alt="매트에 앉아 양 무릎을 90도로 좌우 전환하며 우측(A)과 좌측(B) 고관절 내회전 및 외회전 가동성을 여는 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">MORNING 02 · 고관절 회전</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>90/90 고관절 내·외회전 동적 전환</h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="m2" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">좌우 교대 8~10회 × 2세트</span>
+                  <span class="dose-pill sub">천천히 통제 전환</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>매트에 앉아 양손을 엉덩이 뒤 바닥에 가볍게 짚고 척추를 세웁니다.</li>
+                  <li>양 무릎을 굽힌 채 좌측 고관절이 열리고(A) 다시 <strong>안쪽으로 부드럽게 내회전(B, 90°)</strong>되도록 천천히 좌우 전환합니다.</li>
+                  <li>좌우 내회전 각도 차이와 좌측 뻣뻣함이 풀리는 느낌을 확인합니다.</li>
+                </ol>
+                <div class="cue-caution"><strong>주의:</strong> 사타구니 앞쪽이 날카롭게 찝히거나 튀는 구간이 나오면 그 직전 각도까지만 부드럽게 전환하세요.</div>
+                <div class="cite-line">근거: Opplert &amp; Babault (2018, <em>Sports Med</em>, <a href="https://pubmed.ncbi.nlm.nih.gov/29063454/" target="_blank" rel="noopener noreferrer">PMID: 29063454</a>)</div>
+              </div>
+            </article>
+
+            <!-- Morning 3 -->
+            <article class="exercise-card" data-check-id="m3" data-group="morning">
+              <figure class="exercise-media" data-zoom="아침 동적 3 · 반무릎 좌측 고관절 굴곡근 동적 펄스 + 둔근 수축">
+                <img src="./assets/stretch-2-hip-flexor.jpg" alt="왼쪽 무릎을 패드에 대고 반무릎 자세에서 골반 후방경사와 왼쪽 대둔근 수축을 동시에 수행하는 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">MORNING 03 · 상호억제</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>반무릎 좌측 고관절 굴곡근 동적 펄스 + 둔근 수축</h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="m3" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">8~10회 × 1~2세트</span>
+                  <span class="dose-pill sub">좌측 둔근 2~3초 수축 후 복귀</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>접은 수건·패드 위에 <strong>왼쪽 무릎</strong>을 대고 오른발을 앞으로 90° 세웁니다.</li>
+                  <li>허리가 꺾이지 않게 꼬리뼈를 살짝 말고(후방경사) <strong>왼쪽 엉덩이(초록 부위)에 꽉 힘을 주며</strong> 골반만 앞으로 2~3cm 이동합니다.</li>
+                  <li>2~3초간 좌측 둔근 수축감을 느낀 뒤 제자리로 돌아오기를 반복합니다.</li>
+                </ol>
+                <div class="cue-caution"><strong>포인트:</strong> 길항근(장요근)을 풀며 동시에 좌측 대둔근 신경 신호를 깨우는 동작입니다. 허리를 뒤로 젖히지 마세요.</div>
+                <div class="cite-line">근거: Mills et al. (2015, <em>IJSPT</em>, <a href="https://pubmed.ncbi.nlm.nih.gov/26673683/" target="_blank" rel="noopener noreferrer">PMID: 26673683</a>); Behm et al. (2016, <a href="https://pubmed.ncbi.nlm.nih.gov/26642915/" target="_blank" rel="noopener noreferrer">PMID: 26642915</a>)</div>
+              </div>
+            </article>
+
+            <!-- Morning 4 & 5 -->
+            <article class="exercise-card" data-check-id="m4" data-group="morning">
+              <figure class="exercise-media" data-zoom="아침 동적 4·5 · 좌측 둔근 프라이밍 2종 (A: 135° 싱글레그 브릿지 / B: 사이드라인 외전)">
+                <img src="./assets/stretch-4-glute-activation.jpg" alt="A: 왼발을 지지한 싱글레그 글루트 브릿지, B: 오른쪽으로 누워 왼쪽 다리를 30도 들어 올리는 사이드라인 고관절 외전 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">MORNING 04 · 05 · 둔근 프라이밍</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>좌측 둔근 깨우기 2종 (A: 135° 브릿지 / B: 외전)</h4>
+                  <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                    <label class="check-wrap"><input type="checkbox" data-check="m4" /> A 완료</label>
+                    <label class="check-wrap"><input type="checkbox" data-check="m5" /> B 완료</label>
+                  </div>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">A: 좌측 10~12회(상단 2초) × 2세트</span>
+                  <span class="dose-pill">B: 좌측 12~15회 × 2세트</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li><strong>A. 135° 변형 싱글레그 브릿지:</strong> <strong>왼발 뒤꿈치를 엉덩이 가까이(무릎 ~135°)</strong> 두면 햄스트링 개입이 75% → 23% MVIC로 급감하고 대둔근·중둔근에 집중됩니다. 골반 수평을 유지하며 어깨-골반-무릎 일직선까지만 듭니다.</li>
+                  <li><strong>B. 사이드라인 좌측 고관절 외전:</strong> 오른쪽 옆으로 누워 골반이 뒤로 눕지 않게 고정하고, 왼 다리를 몸통보다 약 10° 뒤로 둔 채 <strong>30°까지만</strong> 들어 올립니다(중둔근 ~81% MVIC). <em>대체: 밴드 클램쉘/사이드스텝.</em></li>
+                </ol>
+                <div class="cue-caution"><strong>핵심 체크:</strong> 우측도 1세트씩 비교해 좌측에서 햄스트링 쥐·허리 꺾임 없이 엉덩이에 정확히 힘이 실리는지 점검하세요.</div>
+                <div class="cite-line">근거: Lehecka et al. (2017, <a href="https://pubmed.ncbi.nlm.nih.gov/28900560/" target="_blank" rel="noopener noreferrer">PMID: 28900560</a>); DiStefano et al. (2009, <a href="https://pubmed.ncbi.nlm.nih.gov/19574661/" target="_blank" rel="noopener noreferrer">PMID: 19574661</a>); Selkowitz et al. (2013, <a href="https://pubmed.ncbi.nlm.nih.gov/23160432/" target="_blank" rel="noopener noreferrer">PMID: 23160432</a>)</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- EVENING STATIC BLOCK -->
+        <div class="routine-block" id="eveningBlock">
+          <div class="block-banner evening">
+            <div>
+              <span class="section-kicker evening-kicker">Evening · Static Stretching &amp; Recovery</span>
+              <h3>🌙 저녁 루틴 — 정적 스트레칭 (운동 후 또는 취침 전)</h3>
+              <p>ACSM(Garber et al., 2011) 및 Page(2012) 기준에 따라 <strong>회당 20~30초 유지 × 2~4세트(근육당 총 60~90초)</strong>를 권장합니다. 상단 타이머(20초/30초)를 켜고 천천히 내쉬는 호흡과 함께 이완하세요.</p>
+            </div>
+            <span class="block-badge">총 8~10분 · 주 4~7회</span>
+          </div>
+
+          <div class="exercise-grid">
+            <!-- Evening 1 -->
+            <article class="exercise-card evening-card" data-check-id="e1" data-group="evening">
+              <figure class="exercise-media" data-zoom="저녁 정적 1 · 좌측 좌식 4자 이상근·심부 외회전근 스트레칭">
+                <img src="./assets/stretch-1-figure4.jpg" alt="벤치에 바르게 앉아 오른쪽 허벅지 위에 왼쪽 발목을 올려 4자 모양을 만들고 좌측 이상근과 심부 외회전근을 늘리는 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">EVENING 01 · 심부 외회전근</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>좌측 4자 이상근·심부 외회전근 정적 스트레칭</h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="e1" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">20~30초 × 3세트 (총 60~90초)</span>
+                  <span class="dose-pill sub">우측 1~2세트 비교</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>벤치/의자에 척추를 곧게 펴고 앉아 오른발을 바닥에 고정합니다.</li>
+                  <li><strong>왼쪽 발목 바깥쪽</strong>을 오른 허벅지 위(무릎 바로 위)에 올려 4자 모양을 만듭니다.</li>
+                  <li>왼 무릎을 억지로 누르지 말고, 허리를 편 채 <strong>고관절만 앞으로 10~20° 숙여</strong> 왼쪽 엉덩이 깊은 곳의 시원한 당김(VAS ≤ 3/10)을 유지합니다. <em>(누운 4자 변형도 동일 효과)</em></li>
+                </ol>
+                <div class="cue-caution"><strong>금기 신호:</strong> 무릎을 반대쪽 어깨로 강하게 꺾는 과도한 내전(둔근 건병증 악화)과 허벅지 뒤 저림·고관절 앞 찝힘이 생기면 각도를 줄이세요.</div>
+                <div class="cite-line">근거: Gulledge et al. (2014, <a href="https://pubmed.ncbi.nlm.nih.gov/24262799/" target="_blank" rel="noopener noreferrer">PMID: 24262799</a>); Grimaldi &amp; Fearon (2015, <a href="https://pubmed.ncbi.nlm.nih.gov/26381486/" target="_blank" rel="noopener noreferrer">PMID: 26381486</a>); Page (2012, <a href="https://pubmed.ncbi.nlm.nih.gov/22319684/" target="_blank" rel="noopener noreferrer">PMID: 22319684</a>)</div>
+              </div>
+            </article>
+
+            <!-- Evening 2 -->
+            <article class="exercise-card evening-card" data-check-id="e2" data-group="evening">
+              <figure class="exercise-media" data-zoom="저녁 정적 2 · 좌측 반무릎 고관절 굴곡근 정적 스트레칭">
+                <img src="./assets/stretch-2-hip-flexor.jpg" alt="왼쪽 무릎을 바닥 패드에 대고 척추 중립과 골반 후방경사를 유지하며 좌측 장요근을 정적으로 늘리는 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">EVENING 02 · 고관절 굴곡근</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>좌측 반무릎 고관절 굴곡근(장요근) 정적 스트레칭</h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="e2" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">20~30초 × 2~3세트 (총 60초)</span>
+                  <span class="dose-pill sub">우측 1~2세트</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>접은 수건 위에 왼쪽 무릎을 대고 상체를 수직으로 세웁니다.</li>
+                  <li>꼬리뼈를 살짝 말아(후방경사) 왼쪽 엉덩이에 가볍게 힘을 유지한 채, 골반을 미세하게 전진해 <strong>왼쪽 고관절 앞쪽(주황 부위)</strong>이 부드럽게 늘어나게 합니다.</li>
+                  <li>아침의 동적 펄스와 달리, 20~30초간 호흡을 내쉬며 일정하게 유지합니다.</li>
+                </ol>
+                <div class="cue-caution"><strong>포인트:</strong> 허리가 과신전되면 장요근 대신 요추만 눌립니다. 갈비뼈를 살짝 내리고 복압을 유지하세요.</div>
+                <div class="cite-line">근거: Mills et al. (2015, <a href="https://pubmed.ncbi.nlm.nih.gov/26673683/" target="_blank" rel="noopener noreferrer">PMID: 26673683</a>); Lewis (2010, <a href="https://pubmed.ncbi.nlm.nih.gov/23015936/" target="_blank" rel="noopener noreferrer">PMID: 23015936</a>); Garber et al. (2011, <a href="https://pubmed.ncbi.nlm.nih.gov/21694556/" target="_blank" rel="noopener noreferrer">PMID: 21694556</a>)</div>
+              </div>
+            </article>
+
+            <!-- Evening 3 -->
+            <article class="exercise-card evening-card" data-check-id="e3" data-group="evening">
+              <figure class="exercise-media" data-zoom="저녁 정적 3 · 좌측 누운 무릎 15° 미세굴곡 햄스트링 정적 스트레칭">
+                <img src="./assets/stretch-6-softknee-hamstring.jpg" alt="바로 누운 자세에서 스트랩으로 왼쪽 다리를 들어 올리고 무릎을 15도 살짝 구부려 허벅지 뒤 중앙 햄스트링만 부드럽게 늘리는 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">EVENING 03 · 햄스트링 보호</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>누운 무릎 15° 미세굴곡 햄스트링 정적 스트레칭 <em>(조건부)</em></h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="e3" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">20~30초 × 2세트</span>
+                  <span class="dose-pill sub">무릎 10~15° 굽힘 필수</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>바로 누워 수건이나 스트레칭 스트랩을 <strong>왼발 중간</strong>에 걸고 양 팔꿈치를 바닥에 편히 내려놓습니다.</li>
+                  <li><strong>왼쪽 무릎을 10~15° 살짝 굽힌 상태</strong>로 다리를 올려 <strong>허벅지 뒤 중앙(주황 부위)</strong>에만 부드러운 당김이 오도록 유지합니다.</li>
+                  <li>무릎을 쫙 펴지 않아 좌골신경 과신장과 좌골결절(엉덩이 밑 뼈) 근위건 압박을 줄입니다.</li>
+                </ol>
+                <div class="cue-caution"><strong>생략 기준:</strong> 허벅지 중앙이 아니라 <strong>앉을 때 닿는 좌골결절 뼈 바로 아래가 아프거나 저림</strong>이 느껴지면 근위 햄스트링 건병증·신경 민감성 신호이므로 이 동작은 생략하세요.</div>
+                <div class="cite-line">근거: Goom et al. (2016, <em>JOSPT</em>, <a href="https://pubmed.ncbi.nlm.nih.gov/27084841/" target="_blank" rel="noopener noreferrer">PMID: 27084841</a>)</div>
+              </div>
+            </article>
+
+            <!-- Evening 4 -->
+            <article class="exercise-card evening-card" data-check-id="e4" data-group="evening">
+              <figure class="exercise-media" data-zoom="저녁 정적 4 · 좌측 좌골신경 슬라이더 마무리">
+                <img src="./assets/stretch-3-sciatic-slider.jpg" alt="정적 스트레칭 후 좌측 좌골신경 활주를 부드럽게 정리하는 앉은 신경 슬라이더 2단계 의학 삽화" width="1376" height="768" loading="lazy" />
+                <span class="step-tag">EVENING 04 · 선택 마무리</span>
+                <span class="zoom-hint">확대</span>
+              </figure>
+              <div class="exercise-body">
+                <div class="exercise-top">
+                  <h4>좌측 좌골신경 슬라이더 마무리 <em>(선택)</em></h4>
+                  <label class="check-wrap"><input type="checkbox" data-check="e4" /> 완료</label>
+                </div>
+                <div class="dose-row">
+                  <span class="dose-pill">천천히 10회 × 1세트</span>
+                  <span class="dose-pill sub">신경 긴장 잔여감 정리</span>
+                </div>
+                <ol class="exercise-steps">
+                  <li>정적 스트레칭 직후 심부 둔부 주변에 신경 긴장감이 남지 않도록 아침 1번과 동일하게 <strong>A ↔ B를 부드럽게 10회</strong> 왕복해 마무리합니다.</li>
+                  <li>저녁에 운동하시는 날에는 <strong>운동 전 = 아침 동적 루틴 / 운동 후·취침 전 = 저녁 정적 루틴</strong> 순서로 배치하세요.</li>
+                </ol>
+                <div class="cue-caution"><strong>팁:</strong> 정적 스트레칭 직후 폼롤러로 왼쪽 깊은 압통점을 세게 문지르는 대신 이 슬라이더로 마무리하는 편이 신경 자극 없이 회복에 유리합니다.</div>
+                <div class="cite-line">근거: Basson et al. (2017, <a href="https://pubmed.ncbi.nlm.nih.gov/28704626/" target="_blank" rel="noopener noreferrer">PMID: 28704626</a>); Wiewelhove et al. (2019, <a href="https://pubmed.ncbi.nlm.nih.gov/31024339/" target="_blank" rel="noopener noreferrer">PMID: 31024339</a>)</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CLINICAL ANALYSIS -->
+      <section id="analysis">
+        <div class="section-head">
+          <span class="section-kicker">Clinical Mechanism Analysis</span>
+          <h2>3. 통증이 사라져도 둔근 힘 전달감이 떨어지는 이유 &amp; MRI 해석</h2>
+        </div>
+
+        <div class="two-col">
+          <article class="info-card">
+            <h3>Q1. 통증은 거의 없는데 왼쪽 둔근에 힘이 안 들어가는 원인</h3>
+            <ul class="info-list">
+              <li><strong>통증 유발 운동 재분배의 잔존:</strong> 통증이 생기면 중추신경계가 보호를 위해 근육 내·간 동원 전략을 재배치하며, <strong>통증이 사라져도 이 변화가 자동 복구되지 않습니다</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/21087823/" target="_blank" rel="noopener noreferrer">Hodges &amp; Tucker, 2011</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/19186001/" target="_blank" rel="noopener noreferrer">MacDonald et al., 2009</a>).</li>
+              <li><strong>높은 근력에 가려진 보상 패턴:</strong> 숙련 리프터는 좌측 둔근 출력이 줄어도 햄스트링·기립근·대퇴근막장근(TFL)·우측 체중 이동으로 고중량을 그대로 들 수 있어 "무게는 드는데 왼쪽 엉덩이만 덜 먹는 느낌"이 남습니다 (<a href="https://pubmed.ncbi.nlm.nih.gov/31638962/" target="_blank" rel="noopener noreferrer">Sadler et al., 2019</a>).</li>
+              <li><strong>고관절 굴곡근 긴장에 의한 상호억제:</strong> 고관절 굴곡근 가동성 제한은 스쿼트·신전 시 대둔근 활성도를 낮출 수 있습니다 (<a href="https://pubmed.ncbi.nlm.nih.gov/26673683/" target="_blank" rel="noopener noreferrer">Mills et al., 2015</a>).</li>
+              <li><strong>심부 잔존 과민성:</strong> 폼롤러 시 유난히 강한 심부 압통은 자발통은 없어도 심부 조직·신경 주변의 기계적 민감도가 남아 감각-운동 피드백을 둔화시킬 수 있음을 시사합니다.</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h3>Q3. MRI가 정상이어도 기능적 문제가 지속될 수 있는가?</h3>
+            <ul class="info-list">
+              <li><strong>네, 충분히 가능합니다.</strong> 우선 촬영한 MRI가 <strong>요추(허리) MRI</strong>였는지 <strong>골반·고관절 MRI</strong>였는지 구분해야 합니다. 요추 MRI는 디스크·협착 배제에는 정확하지만, <strong>고관절 관절와순·FAI·중·소둔근 건병증·근위 햄스트링 건·심부 둔부 공간</strong>은 정밀 평가하지 못합니다.</li>
+              <li><strong>정적 영상의 본질적 한계:</strong> 설령 골반·고관절 MRI까지 정상이어도, 누워서 힘을 뺀 정적 검사는 고중량 스쿼트·데드리프트 중 발생하는 <strong>동원 타이밍 지연, 좌우 부하 비대칭, 동적 건 탄발(snapping), 신경 활주 저하</strong>를 포착하지 못합니다 (<a href="https://pubmed.ncbi.nlm.nih.gov/25430861/" target="_blank" rel="noopener noreferrer">Brinjikji et al., 2015</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/21087823/" target="_blank" rel="noopener noreferrer">Hodges &amp; Tucker, 2011</a>).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 4: DIFFERENTIAL & TESTS -->
+      <section id="tests">
+        <div class="section-head">
+          <span class="section-kicker">Differential &amp; Functional Assessment</span>
+          <h2>4. 고려해야 할 5가지 감별 가능성 &amp; 좌우 확인 검사</h2>
+          <p class="section-desc">단순히 "근육이 뭉쳤다"고 단정하지 않고, 각 후보의 단서와 확인 검사를 분리해 접근합니다.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:20%">감별 후보</th>
+                <th style="width:30%">현재 증상과의 부합 단서</th>
+                <th style="width:30%">추가 확인 포인트 (단정 금지)</th>
+                <th style="width:20%">핵심 의학 근거</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>① 근신경계 운동조절 변화 / 둔근 억제</strong></td>
+                <td>통증은 거의 사라졌고 절대 근력 유지되나 좌측 둔근 힘 전달감 저하 지속</td>
+                <td>실제 근력 저하(LSI)인지 협응·타이밍 문제인지 편측 테스트로 확인</td>
+                <td><a href="https://pubmed.ncbi.nlm.nih.gov/21087823/" target="_blank" rel="noopener noreferrer">Hodges &amp; Tucker (2011)</a><br><a href="https://pubmed.ncbi.nlm.nih.gov/19186001/" target="_blank" rel="noopener noreferrer">MacDonald et al. (2009)</a></td>
+              </tr>
+              <tr>
+                <td><strong>② 심부 둔부 증후군 (DGS) · 이상근/심부 외회전근</strong></td>
+                <td>폼롤러 시 왼쪽 엉덩이 깊숙한 곳의 강한 압통, 초기 고관절 굴곡 구간 불편감</td>
+                <td>장시간 좌식 시 악화·방사통 유무 및 Seated + Active Piriformis 검사 필요</td>
+                <td><a href="https://pubmed.ncbi.nlm.nih.gov/27011826/" target="_blank" rel="noopener noreferrer">Martin et al. (2015)</a><br><a href="https://pubmed.ncbi.nlm.nih.gov/24217716/" target="_blank" rel="noopener noreferrer">Martin et al. (2014)</a></td>
+              </tr>
+              <tr>
+                <td><strong>③ 탄발성 고관절 / 관절내(FAI·관절와순)</strong></td>
+                <td>초기 스쿼트 앉은 자세에서 일어날 때 <strong>튀는 듯한 느낌</strong>과 고관절 뻣뻣함</td>
+                <td>튀는 위치가 앞쪽(장요근/관절내)인지 바깥쪽(ITB/대둔근 건)인지 구분 필요</td>
+                <td><a href="https://pubmed.ncbi.nlm.nih.gov/23015936/" target="_blank" rel="noopener noreferrer">Lewis (2010)</a><br><a href="https://pubmed.ncbi.nlm.nih.gov/27629403/" target="_blank" rel="noopener noreferrer">Griffin et al. (2016)</a></td>
+              </tr>
+              <tr>
+                <td><strong>④ 근위 햄스트링(PHT) 또는 둔근 건병증(GTPS)</strong></td>
+                <td>초기 데드리프트 최하단 통증(좌골결절 위 압축·인장 부하), 폼롤러 압통</td>
+                <td>좌골결절(아래 뼈) 압통이면 PHT, 대전자(바깥 뼈)·한발 서기 통증이면 둔근 건병증</td>
+                <td><a href="https://pubmed.ncbi.nlm.nih.gov/27084841/" target="_blank" rel="noopener noreferrer">Goom et al. (2016)</a><br><a href="https://pubmed.ncbi.nlm.nih.gov/26381486/" target="_blank" rel="noopener noreferrer">Grimaldi &amp; Fearon (2015)</a></td>
+              </tr>
+              <tr>
+                <td><strong>⑤ 단순 근막 긴장 / 말초·신경근 요인</strong></td>
+                <td>의료진 초기 소견(근육 긴장), 국소 심부 압통</td>
+                <td>상·하둔신경 미세 자극이나 감각·반사 이상 유무는 신경학적 진찰로 배제</td>
+                <td><a href="https://pubmed.ncbi.nlm.nih.gov/25430861/" target="_blank" rel="noopener noreferrer">Brinjikji et al. (2015)</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col" style="margin-top:16px;">
+          <article class="info-card">
+            <h3>자가 확인 체크 (통증 유발 목적 금지)</h3>
+            <ul class="info-list">
+              <li><strong>30초 한발 서기:</strong> 맨발로 좌우 30초씩 서서 반대쪽 골반 처짐(Trendelenburg)이나 30초 내 외측 고관절 통증 여부 비교 (<a href="https://pubmed.ncbi.nlm.nih.gov/27633027/" target="_blank" rel="noopener noreferrer">Grimaldi et al., 2017</a> — 30초 외측 통증 시 둔근 건병증 특이도 100%).</li>
+              <li><strong>135° 싱글레그 브릿지 비교:</strong> 좌측만 햄스트링에 먼저 쥐가 나거나 허리가 꺾이는지 확인 (<a href="https://pubmed.ncbi.nlm.nih.gov/28900560/" target="_blank" rel="noopener noreferrer">Lehecka et al., 2017</a>).</li>
+              <li><strong>90° 좌식 고관절 내회전 각도:</strong> 의자에 앉아 좌우 발목을 바깥으로 벌려 내회전 가동범위·앞쪽 찝힘 비교.</li>
+              <li><strong>후면 스쿼트 영상 촬영:</strong> 빈 봉 스쿼트 시 하단~기립 구간에서 우측으로 골반이 밀리는지(hip shift) 확인.</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h3>병원·전문가에게 요청할 이학적·장비 검사</h3>
+            <ul class="info-list">
+              <li><strong>Seated + Active Piriformis Test 병행:</strong> 단순 SLR(민감도 15%)보다 DGS 감별 정확도가 월등함 — 병행 시 <strong>민감도 91%, 특이도 80%</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/24217716/" target="_blank" rel="noopener noreferrer">Martin et al., 2014</a>).</li>
+              <li><strong>건·관절내 유발검사:</strong> 대전자 촉진 + FADER/FADER-R(둔근 건병증), Puranen-Orava(근위 햄스트링), FADIR/FABER(FAI·관절와순).</li>
+              <li><strong>객관적 근력 대칭성(LSI):</strong> 휴대용 근력계(HHD) 또는 등속성 검사로 좌우 고관절 외전·신전·외회전 근력 비율 <strong>≥ 90%</strong> 확인.</li>
+              <li><strong>동적 초음파 &amp; 신경학적 진찰:</strong> 움직임 중 건 탄발 실시간 확인 + 근절·피부분절·심부건반사 점검(필요 시 EMG/NCS).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 5: RETURN TO TRAINING & PRECAUTIONS -->
+      <section id="rehab">
+        <div class="section-head">
+          <span class="section-kicker">CrossFit &amp; Weightlifting Return Plan</span>
+          <h2>5. 운동을 유지하며 회복하는 3단계 로드맵 &amp; 복귀 주의사항</h2>
+          <p class="section-desc">
+            고관절·둔근 과사용 재활에서 무작위 대조시험(LEAP trial, <a href="https://pubmed.ncbi.nlm.nih.gov/29720374/" target="_blank" rel="noopener noreferrer">Mellor et al., 2018, BMJ</a>)은 단순 휴식(29%)이나 주사(58%)보다 <strong>부하 관리 교육 + 단계적 운동(8주 개선율 77%)</strong>이 유의하게 우월함을 입증했습니다.
+          </p>
+        </div>
+
+        <div class="phase-grid">
+          <article class="phase-card">
+            <span class="phase-label">Phase 1 · 1~2주</span>
+            <h3>자극 각도 수정 + 매일 프라이밍</h3>
+            <ul>
+              <li>바닥 데드리프트 → <strong>블록/랙풀(정강이 중간~무릎 아래)</strong> 또는 트랩바로 깊은 굴곡 압박 회피</li>
+              <li>깊은 반동 스쿼트 → <strong>박스 스쿼트 / 3-1-1 템포 스쿼트</strong>(튀는 각도 직전 통제)</li>
+              <li>모든 하체 세션 전 아침 동적 루틴 8분 필수</li>
+            </ul>
+          </article>
+
+          <article class="phase-card p2">
+            <span class="phase-label">Phase 2 · 2~4주</span>
+            <h3>편측 대칭화 + 느린 고부하 저항</h3>
+            <ul>
+              <li><strong>불가리안 스플릿 스쿼트, 스텝업, 싱글레그 RDL</strong> 중심 (<a href="https://pubmed.ncbi.nlm.nih.gov/22007858/" target="_blank" rel="noopener noreferrer">Reiman et al., 2012</a>)</li>
+              <li><strong>좌측(약측) 먼저 수행</strong>하고 우측은 좌측의 깨끗한 폼 횟수·중량에 맞춤</li>
+              <li>주간 증량 폭 10~15% 이내 유지</li>
+            </ul>
+          </article>
+
+          <article class="phase-card p3">
+            <span class="phase-label">Phase 3 · 4주 이후</span>
+            <h3>풀레인지 · 역도 · 고강도 WOD 복귀</h3>
+            <ul>
+              <li>블록 높이를 2~3cm씩 낮춰 바닥 데드리프트 복귀</li>
+              <li>풀 스쿼트·클린/스내치 캐치 자세 점진 재도입</li>
+              <li>피로 누적형 하이볼륨 WOD는 대칭감 회복 후 최후순위 복귀</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="alert-grid">
+          <div class="alert-box">
+            <h3>⚠️ 크로스핏·웨이트 복귀 시 4대 필수 주의사항</h3>
+            <ul>
+              <li><strong>폼롤러·라크로스볼 심부 강한 압박 중단:</strong> 깊은 날카로운 압통점은 좌골신경·근위 건 압박일 수 있어 강한 마사지가 증상을 악화시킵니다.</li>
+              <li><strong>운동 직전 60초+ 정적 스트레칭 금지:</strong> 리프팅 직전 장시간 정적 스트레칭은 최대 근력과 근활성도를 떨어뜨립니다(-3.7~-4.6%, <a href="https://pubmed.ncbi.nlm.nih.gov/26642915/" target="_blank" rel="noopener noreferrer">Behm et al., 2016</a>).</li>
+              <li><strong>과도한 고관절 내전 습관 차단:</strong> 다리 꼬기, 짝다리 서기, 무릎을 반대쪽으로 세게 꺾는 스트레칭은 둔근 건 압박을 높입니다(<a href="https://pubmed.ncbi.nlm.nih.gov/26381486/" target="_blank" rel="noopener noreferrer">Grimaldi &amp; Fearon, 2015</a>).</li>
+              <li><strong>24시간 신호등 규칙:</strong> 운동 중 불편감 VAS ≤ 3/10, 튀는 느낌·저림 0, <strong>다음 날 뻣뻣함·힘 안 들어감 악화가 없을 때만</strong> 증량합니다.</li>
+            </ul>
+          </div>
+
+          <div class="alert-box redflag">
+            <h3>🚨 즉시 대면 진료가 필요한 적신호 (Red Flags)</h3>
+            <ul>
+              <li>엉덩이에서 허벅지 뒤·종아리·발로 뻗치는 전기 같은 방사통이나 저림·감각 저하</li>
+              <li>발목·발가락 힘 빠짐 등 뚜렷하게 진행되는 근력 저하</li>
+              <li>앉아 있을 때 깊은 둔부 통증이 점점 심해지거나 야간통 발생</li>
+              <li>배뇨·배변 감각 이상 또는 회음부 감각 저하(응급 평가 필요)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: PEER-REVIEWED REFERENCES -->
+      <section id="references">
+        <div class="section-head">
+          <span class="section-kicker">Peer-Reviewed Medical Literature</span>
+          <h2>6. 참고 의학 논문 출처 (PubMed 등재 25편)</h2>
+        </div>
+
+        <div class="ref-card">
+          <ol class="ref-list">
+            <li><strong>Hodges PW, Tucker K.</strong> Moving differently in pain: a new theory to explain the adaptation to pain. <em>Pain.</em> 2011;152(3 Suppl):S90–S98. <a href="https://pubmed.ncbi.nlm.nih.gov/21087823/" target="_blank" rel="noopener noreferrer">PMID: 21087823</a></li>
+            <li><strong>MacDonald D, Moseley GL, Hodges PW.</strong> Why do some patients keep hurting their back? Evidence of ongoing back muscle dysfunction during remission from recurrent back pain. <em>Pain.</em> 2009. <a href="https://pubmed.ncbi.nlm.nih.gov/19186001/" target="_blank" rel="noopener noreferrer">PMID: 19186001</a></li>
+            <li><strong>Sadler S, et al.</strong> Gluteus medius muscle function in people with and without low back pain: a systematic review. <em>BMC Musculoskelet Disord.</em> 2019. <a href="https://pubmed.ncbi.nlm.nih.gov/31638962/" target="_blank" rel="noopener noreferrer">PMID: 31638962</a></li>
+            <li><strong>Brinjikji W, et al.</strong> Systematic literature review of imaging features of spinal degeneration in asymptomatic populations. <em>AJNR Am J Neuroradiol.</em> 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/25430861/" target="_blank" rel="noopener noreferrer">PMID: 25430861</a></li>
+            <li><strong>Martin HD, Reddy M, Gómez-Hoyos J.</strong> Deep gluteal syndrome. <em>J Hip Preserv Surg.</em> 2015;2(2):99–107. <a href="https://pubmed.ncbi.nlm.nih.gov/27011826/" target="_blank" rel="noopener noreferrer">PMID: 27011826</a></li>
+            <li><strong>Martin HD, Kivlan BR, Palmer IJ, Martin RL.</strong> Diagnostic accuracy of clinical tests for sciatic nerve entrapment in the gluteal region. <em>Knee Surg Sports Traumatol Arthrosc.</em> 2014;22(4):882–888. <a href="https://pubmed.ncbi.nlm.nih.gov/24217716/" target="_blank" rel="noopener noreferrer">PMID: 24217716</a></li>
+            <li><strong>Grimaldi A, Fearon A.</strong> Gluteal Tendinopathy: Integrating Pathomechanics and Clinical Features in Its Management. <em>JOSPT.</em> 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/26381486/" target="_blank" rel="noopener noreferrer">PMID: 26381486</a></li>
+            <li><strong>Grimaldi A, Mellor R, Nicolson P, et al.</strong> Utility of clinical tests to diagnose MRI-confirmed gluteal tendinopathy in patients presenting with lateral hip pain. <em>Br J Sports Med.</em> 2017;51(5):519–524. <a href="https://pubmed.ncbi.nlm.nih.gov/27633027/" target="_blank" rel="noopener noreferrer">PMID: 27633027</a></li>
+            <li><strong>Mellor R, Bennell K, Grimaldi A, et al.</strong> Education plus exercise versus corticosteroid injection use versus a wait and see approach on global outcome and pain from gluteal tendinopathy (LEAP trial). <em>BMJ.</em> 2018;360:k1662. <a href="https://pubmed.ncbi.nlm.nih.gov/29720374/" target="_blank" rel="noopener noreferrer">PMID: 29720374</a></li>
+            <li><strong>Goom TSH, Malliaras P, Reiman MP, Purdam CR.</strong> Proximal Hamstring Tendinopathy: Clinical Aspects of Assessment and Management. <em>JOSPT.</em> 2016;46(6):483–493. <a href="https://pubmed.ncbi.nlm.nih.gov/27084841/" target="_blank" rel="noopener noreferrer">PMID: 27084841</a></li>
+            <li><strong>Lewis CL.</strong> Extra-articular snapping hip: A literature review. <em>Sports Health.</em> 2010;2(3):186–190. <a href="https://pubmed.ncbi.nlm.nih.gov/23015936/" target="_blank" rel="noopener noreferrer">PMID: 23015936</a></li>
+            <li><strong>Griffin DR, Dickenson EJ, O'Donnell J, et al.</strong> The Warwick Agreement on femoroacetabular impingement syndrome (FAI syndrome). <em>Br J Sports Med.</em> 2016;50(19):1169–1176. <a href="https://pubmed.ncbi.nlm.nih.gov/27629403/" target="_blank" rel="noopener noreferrer">PMID: 27629403</a></li>
+            <li><strong>Garber CE, et al. (ACSM).</strong> Quantity and Quality of Exercise for Developing and Maintaining Cardiorespiratory, Musculoskeletal, and Neuromotor Fitness in Apparently Healthy Adults. <em>Med Sci Sports Exerc.</em> 2011;43(7):1334–1359. <a href="https://pubmed.ncbi.nlm.nih.gov/21694556/" target="_blank" rel="noopener noreferrer">PMID: 21694556</a></li>
+            <li><strong>Page P.</strong> Current concepts in muscle stretching for exercise and rehabilitation. <em>Int J Sports Phys Ther.</em> 2012. <a href="https://pubmed.ncbi.nlm.nih.gov/22319684/" target="_blank" rel="noopener noreferrer">PMID: 22319684</a></li>
+            <li><strong>Behm DG, Blazevich AJ, Kay AD, McHugh MP.</strong> Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in healthy active individuals. <em>Appl Physiol Nutr Metab.</em> 2016;41(1):1–11. <a href="https://pubmed.ncbi.nlm.nih.gov/26642915/" target="_blank" rel="noopener noreferrer">PMID: 26642915</a></li>
+            <li><strong>Opplert J, Babault N.</strong> Acute Effects of Dynamic Stretching on Muscle Flexibility and Performance: An Analysis of the Current Literature. <em>Sports Med.</em> 2018. <a href="https://pubmed.ncbi.nlm.nih.gov/29063454/" target="_blank" rel="noopener noreferrer">PMID: 29063454</a></li>
+            <li><strong>Snook SH, Webster BS, McGorry RW, Fogleman MT, McCann KB.</strong> The reduction of chronic nonspecific low back pain through the control of early morning lumbar flexion. <em>Spine.</em> 1998. <a href="https://pubmed.ncbi.nlm.nih.gov/9854759/" target="_blank" rel="noopener noreferrer">PMID: 9854759</a></li>
+            <li><strong>Gulledge BM, Marcellin-Little DJ, Levine D, et al.</strong> Comparison of two stretching methods and optimization of stretching protocol for the piriformis muscle. <em>Med Eng Phys.</em> 2014. <a href="https://pubmed.ncbi.nlm.nih.gov/24262799/" target="_blank" rel="noopener noreferrer">PMID: 24262799</a></li>
+            <li><strong>Mills M, Frank B, Goto S, Blackburn T, et al.</strong> Effect of restricted hip flexor muscle length on hip extensor muscle activity and lower extremity biomechanics. <em>Int J Sports Phys Ther.</em> 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/26673683/" target="_blank" rel="noopener noreferrer">PMID: 26673683</a></li>
+            <li><strong>Basson A, Olivier B, Ellis R, et al.</strong> The Effectiveness of Neural Mobilization for Neuromusculoskeletal Conditions: A Systematic Review and Meta-analysis. <em>JOSPT.</em> 2017;47(9):593–615. <a href="https://pubmed.ncbi.nlm.nih.gov/28704626/" target="_blank" rel="noopener noreferrer">PMID: 28704626</a></li>
+            <li><strong>DiStefano LJ, Blackburn JT, Marshall SW, Padua DA.</strong> Gluteal muscle activation during common therapeutic exercises. <em>JOSPT.</em> 2009;39(7):532–540. <a href="https://pubmed.ncbi.nlm.nih.gov/19574661/" target="_blank" rel="noopener noreferrer">PMID: 19574661</a></li>
+            <li><strong>Reiman MP, Bolgla LA, Loudon JK.</strong> A literature review of studies evaluating gluteus maximus and gluteus medius activation during rehabilitation exercises. <em>Physiother Theory Pract.</em> 2012;28(4):257–268. <a href="https://pubmed.ncbi.nlm.nih.gov/22007858/" target="_blank" rel="noopener noreferrer">PMID: 22007858</a></li>
+            <li><strong>Lehecka BJ, Edwards M, Haverkamp R, et al.</strong> Building a better gluteal bridge: electromyographic analysis of hip muscle activity during modified single-leg bridges. <em>Int J Sports Phys Ther.</em> 2017. <a href="https://pubmed.ncbi.nlm.nih.gov/28900560/" target="_blank" rel="noopener noreferrer">PMID: 28900560</a></li>
+            <li><strong>Selkowitz DM, Beneck GJ, Powers CM.</strong> Which exercises target the gluteal muscles while minimizing activation of the tensor fascia lata? <em>JOSPT.</em> 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23160432/" target="_blank" rel="noopener noreferrer">PMID: 23160432</a></li>
+            <li><strong>Wiewelhove T, Döweling A, Schneider C, et al.</strong> A Meta-Analysis of the Effects of Foam Rolling on Performance and Recovery. <em>Front Physiol.</em> 2019. <a href="https://pubmed.ncbi.nlm.nih.gov/31024339/" target="_blank" rel="noopener noreferrer">PMID: 31024339</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <footer>
+        <span>ZZEE Wellness · Left Glute &amp; Hip Rehab Guide</span>
+        <span>Updated 2026-11-23 · Evidence-based reference only</span>
+      </footer>
+    </main>
+
+    <dialog class="lightbox" id="lightbox" aria-label="삽화 확대 보기">
+      <div class="lightbox-head">
+        <strong id="lightboxTitle">의학 삽화</strong>
+        <button class="lightbox-close" type="button" id="lightboxClose">닫기</button>
+      </div>
+      <img id="lightboxImg" src="./assets/anatomy-deep-gluteal.jpg" alt="" />
+    </dialog>
+
+    <script>
+      (() => {
+        const morningBlock = document.getElementById("morningBlock");
+        const eveningBlock = document.getElementById("eveningBlock");
+        const modeTabs = document.querySelectorAll(".mode-tab");
+
+        modeTabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const view = tab.dataset.view;
+            modeTabs.forEach((btn) => btn.setAttribute("aria-pressed", String(btn === tab)));
+            morningBlock.hidden = view === "evening";
+            eveningBlock.hidden = view === "morning";
+          });
+        });
+
+        // Daily persisted checkboxes (auto-reset on a new calendar date)
+        const todayKey = `zzee-left-glute-checks-${new Date().toISOString().slice(0, 10)}`;
+        const checkboxes = Array.from(document.querySelectorAll("input[data-check]"));
+        const morningProg = document.getElementById("morningProgress");
+        const eveningProg = document.getElementById("eveningProgress");
+
+        const readState = () => {
+          try {
+            return JSON.parse(localStorage.getItem(todayKey) || "{}");
+          } catch {
+            return {};
+          }
+        };
+
+        const writeState = (state) => {
+          try {
+            localStorage.setItem(todayKey, JSON.stringify(state));
+          } catch {
+            // Ignore storage restrictions in private browsing
+          }
+        };
+
+        const syncUI = () => {
+          const state = {};
+          let mDone = 0;
+          let eDone = 0;
+          checkboxes.forEach((cb) => {
+            const id = cb.dataset.check;
+            state[id] = cb.checked;
+            if (id.startsWith("m") && cb.checked) mDone += 1;
+            if (id.startsWith("e") && cb.checked) eDone += 1;
+          });
+          document.querySelectorAll(".exercise-card").forEach((card) => {
+            const inputs = Array.from(card.querySelectorAll("input[data-check]"));
+            card.classList.toggle("done", inputs.length > 0 && inputs.every((i) => i.checked));
+          });
+          morningProg.textContent = `☀️ 아침 동적 ${mDone} / 5 완료`;
+          eveningProg.textContent = `🌙 저녁 정적 ${eDone} / 4 완료`;
+          writeState(state);
+        };
+
+        const saved = readState();
+        checkboxes.forEach((cb) => {
+          cb.checked = Boolean(saved[cb.dataset.check]);
+          cb.addEventListener("change", syncUI);
+        });
+        syncUI();
+
+        document.getElementById("resetChecks").addEventListener("click", () => {
+          checkboxes.forEach((cb) => {
+            cb.checked = false;
+          });
+          syncUI();
+        });
+
+        // Built-in 20s / 30s stretch countdown timer
+        const display = document.getElementById("timerDisplay");
+        const toggleBtn = document.getElementById("timerToggle");
+        const resetBtn = document.getElementById("timerReset");
+        const presetBtns = document.querySelectorAll("[data-preset]");
+        let presetSeconds = 30;
+        let remaining = 30;
+        let timerId = null;
+
+        const formatTime = (sec) => `00:${String(Math.max(0, sec)).padStart(2, "0")}`;
+
+        const chime = () => {
+          try {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            if (!AudioCtx) return;
+            const ctx = new AudioCtx();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = "sine";
+            osc.frequency.value = 660;
+            gain.gain.setValueAtTime(0.08, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.45);
+          } catch {
+            // Audio unavailable
+          }
+        };
+
+        const stopTimer = () => {
+          if (timerId !== null) {
+            window.clearInterval(timerId);
+            timerId = null;
+          }
+          display.classList.remove("running");
+          toggleBtn.textContent = "시작";
+        };
+
+        presetBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            stopTimer();
+            presetSeconds = Number(btn.dataset.preset) || 30;
+            remaining = presetSeconds;
+            display.textContent = formatTime(remaining);
+            presetBtns.forEach((b) => b.classList.toggle("active", b === btn));
+          });
+        });
+
+        toggleBtn.addEventListener("click", () => {
+          if (timerId !== null) {
+            stopTimer();
+            return;
+          }
+          if (remaining <= 0) remaining = presetSeconds;
+          display.textContent = formatTime(remaining);
+          display.classList.add("running");
+          toggleBtn.textContent = "일시정지";
+          timerId = window.setInterval(() => {
+            remaining -= 1;
+            display.textContent = formatTime(remaining);
+            if (remaining <= 0) {
+              stopTimer();
+              chime();
+            }
+          }, 1000);
+        });
+
+        resetBtn.addEventListener("click", () => {
+          stopTimer();
+          remaining = presetSeconds;
+          display.textContent = formatTime(remaining);
+        });
+
+        // Image Lightbox
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const lightboxTitle = document.getElementById("lightboxTitle");
+        const lightboxClose = document.getElementById("lightboxClose");
+
+        document.querySelectorAll("[data-zoom]").forEach((el) => {
+          el.addEventListener("click", () => {
+            const img = el.querySelector("img");
+            if (!img) return;
+            lightboxImg.src = img.getAttribute("src");
+            lightboxImg.alt = img.alt;
+            lightboxTitle.textContent = el.dataset.zoom || "의학 삽화";
+            if (typeof lightbox.showModal === "function") {
+              lightbox.showModal();
+            }
+          });
+        });
+
+        lightboxClose.addEventListener("click", () => lightbox.close());
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) lightbox.close();
+        });
+      })();
+    </script>
+  </body>
+</html>
