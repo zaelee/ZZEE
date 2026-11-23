@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <title>ZZEE 영양제 루틴 표 · 복용 및 구매 체크</title>
+    <title>ZZEE 영양제 루틴 표 · 필수·선택 및 구매 체크</title>
     <meta
       name="description"
-      content="영양제 복용 시간·용량·휴식 여부와 아이허브 가성비 제품을 표로 정리한 개인 체크 가이드."
+      content="임상 근거가 검증된 필수 영양제와 조건부 선택·제외 항목을 구분하고, 복용 루틴과 아이허브·쿠팡 실구매가까지 정리한 개인 체크 가이드."
     />
     <style>
       :root {
@@ -129,7 +129,7 @@
       }
 
       .lead {
-        max-width: 760px;
+        max-width: 780px;
         margin: 20px 0 0;
         color: var(--muted);
         font-size: clamp(16px, 2vw, 19px);
@@ -153,6 +153,11 @@
         color: var(--green);
         font-size: 12px;
         font-weight: 900;
+      }
+
+      .chip.conditional {
+        background: var(--blue-soft);
+        color: var(--blue);
       }
 
       .chip.pause {
@@ -221,10 +226,54 @@
       }
 
       .section-head p {
-        max-width: 800px;
+        max-width: 820px;
         margin: 8px 0 0;
         color: var(--muted);
         line-height: 1.65;
+      }
+
+      .tier-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .tier-card {
+        padding: 20px 18px;
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--green);
+        border-radius: 18px;
+        background: var(--paper);
+        box-shadow: 0 10px 28px rgba(28, 51, 33, 0.05);
+      }
+
+      .tier-card.conditional {
+        border-top-color: var(--blue);
+      }
+
+      .tier-card.exclude {
+        border-top-color: var(--pink);
+      }
+
+      .tier-card h3 {
+        margin: 10px 0 8px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+
+      .tier-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .tier-card ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 1.7;
       }
 
       .table-wrap {
@@ -241,7 +290,7 @@
       }
 
       .routine-table {
-        min-width: 900px;
+        min-width: 960px;
       }
 
       .buy-table {
@@ -249,7 +298,7 @@
       }
 
       .product-table {
-        min-width: 980px;
+        min-width: 1000px;
       }
 
       th,
@@ -275,6 +324,15 @@
 
       tbody tr:hover {
         background: #fbfcf8;
+      }
+
+      tbody tr.row-exclude {
+        background: #faf9f6;
+        opacity: 0.78;
+      }
+
+      tbody tr.row-exclude:hover {
+        opacity: 1;
       }
 
       .time {
@@ -314,6 +372,11 @@
         font-size: 12px;
         font-weight: 950;
         white-space: nowrap;
+      }
+
+      .status.conditional {
+        background: var(--blue-soft);
+        color: var(--blue);
       }
 
       .status.pause {
@@ -416,6 +479,21 @@
         text-underline-offset: 3px;
       }
 
+      .alt-note {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .alt-note a {
+        color: var(--blue);
+        font-weight: 800;
+        text-underline-offset: 2px;
+      }
+
       .avoid {
         color: #875069;
         font-size: 14px;
@@ -469,6 +547,12 @@
         text-align: center;
       }
 
+      @media (max-width: 860px) {
+        .tier-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (max-width: 720px) {
         .shell {
           width: min(100% - 24px, 1180px);
@@ -506,6 +590,7 @@
         }
 
         header,
+        .tier-card,
         .table-wrap,
         .checklist li,
         .quality-box div {
@@ -543,27 +628,72 @@
       </div>
 
       <header>
-        <p class="eyebrow">Supplement routine</p>
+        <p class="eyebrow">Supplement routine · Evidence-based</p>
         <h1>영양제 루틴 표</h1>
-        <p class="lead">복용 시간과 용량은 원본 표대로 모으고, 실제 제품을 살 때 확인할 성분 형태와 함량 기준만 덧붙였다.</p>
-        <div class="chips" aria-label="표시 기준">
-          <span class="chip">✓ 계속: 휴식기에도 유지</span>
-          <span class="chip pause">○ 쉬어도 됨: 필요에 따라 중단</span>
+        <p class="lead">“좋아 보이는 영양제” 대신 NIH ODS·NCCIH·ISSN·USPSTF 임상 근거를 기준으로 <strong>진짜 효과가 검증된 것만 필수</strong>로 남기고, 근거가 약하거나 중복되는 품목은 선택·제외로 구분했다. (운동량이 많은 성인 기준)</p>
+        <div class="chips" aria-label="선별 구분 기준">
+          <span class="chip">★ 필수 (3~4종): 임상 근거·운동 보충 가치 확실</span>
+          <span class="chip conditional">◎ 선택 (1종): 증상·목적 있을 때만 추가</span>
+          <span class="chip pause">✕ 제외·후순위 (3종): 근거 약함 또는 성분 중복</span>
         </div>
       </header>
 
       <nav aria-label="페이지 바로가기">
-        <a href="#routine">루틴 표</a>
+        <a href="#tier">필수 vs 선택 기준</a>
+        <a href="#routine">복용 루틴</a>
         <a href="#before">복용 전 체크</a>
-        <a href="#buy">구매 시 체크</a>
-        <a href="#choice">종류별 구매 기준</a>
-        <a href="#products">아이허브 추천</a>
+        <a href="#buy">구매 공통 체크</a>
+        <a href="#choice">종류별 라벨 기준</a>
+        <a href="#products">추천 제품·가격</a>
       </nav>
+
+      <section id="tier" aria-labelledby="tier-title">
+        <div class="section-head">
+          <span>Selection criteria</span>
+          <h2 id="tier-title">필수 · 선택 · 제외 기준</h2>
+          <p>선택 기준은 단 하나, <strong>공신력 있는 인체 임상 연구에서 효과가 일관되게 검증되었는지</strong>와 <strong>운동량이 많은 식단에서 실제로 부족하기 쉬운지</strong>다.</p>
+        </div>
+
+        <div class="tier-grid">
+          <article class="tier-card">
+            <span class="priority">★ 필수 핵심 (3~4종)</span>
+            <h3>검증된 효과 · 운동인 핵심</h3>
+            <p>임상 근거가 가장 탄탄하거나 땀·대사 소모로 부족하기 쉬운 기본 축이다.</p>
+            <ul>
+              <li><strong>크레아틴</strong> — 근력·파워·회복 임상 근거 1위(ISSN 최상위)</li>
+              <li><strong>오메가3</strong> — 중성지방 감소·운동 후 염증 완화 근거 확실</li>
+              <li><strong>마그네슘</strong> — 운동 시 배설·소모 증가로 결핍 보충 가치 높음</li>
+              <li><strong>종합비타민</strong> — 질병 예방보다 단조로운 식단·감량 시 결핍 보험용</li>
+            </ul>
+          </article>
+
+          <article class="tier-card conditional">
+            <span class="priority conditional">◎ 조건부 선택 (1종)</span>
+            <h3>증상·목적이 분명할 때만</h3>
+            <p>건강한 성인이 예방용으로 매일 챙길 근거는 약하므로 필요할 때만 더한다.</p>
+            <ul>
+              <li><strong>유산균</strong> — 고단백 식단으로 속이 불편하거나 변비·설사·잦은 감기가 있을 때만 선택 (일반 상시 복용은 근거 부족)</li>
+            </ul>
+          </article>
+
+          <article class="tier-card exclude">
+            <span class="priority low">✕ 제외 · 후순위 (3종)</span>
+            <h3>검증 근거 약함 · 성분 중복</h3>
+            <p>임상 효과가 미미하거나 다른 제품·식사와 겹쳐 굳이 안 먹어도 된다.</p>
+            <ul>
+              <li><strong>실리마린</strong> — 건강한 성인의 간 해독·보호 임상 근거 최약</li>
+              <li><strong>아르기닌</strong> — 장·간 대사 손실로 숙련 운동인의 수행력 개선 근거 매우 약함</li>
+              <li><strong>단독 아연</strong> — 종합비타민(10 mg)+육류·계란 식사와 중복</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <section id="routine" aria-labelledby="routine-title">
         <div class="section-head">
           <span>Daily table</span>
           <h2 id="routine-title">복용 루틴</h2>
+          <p>원본 시간표(아침 공복 → 아침 식후 → 저녁 식후/운동 전)를 유지하되, 각 항목에 필수·선택·제외 구분과 근거 요약을 함께 적었다.</p>
         </div>
 
         <div class="table-wrap" role="region" aria-label="영양제 복용 루틴 표" tabindex="0">
@@ -572,67 +702,76 @@
               <tr>
                 <th scope="col">시간</th>
                 <th scope="col">영양제</th>
+                <th scope="col">구분</th>
                 <th scope="col">용량 / 1회 기준</th>
                 <th scope="col">쉬는 달 여부</th>
-                <th scope="col">비고 / 팁</th>
+                <th scope="col">근거 요약 / 복용 팁</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="time">아침 공복</span></td>
                 <td><span class="name">유산균</span></td>
+                <td><span class="status conditional">◎ 선택</span></td>
                 <td><span class="dose">10억–100억 CFU</span></td>
                 <td><span class="status">✓ 계속</span></td>
-                <td class="note">균주명·유통기한까지 보장되는 CFU·보관법을 확인하고 제품 라벨의 복용법을 우선한다.</td>
+                <td class="note">장 트러블·고단백 소화 부담·잦은 감기가 있을 때만 추가. 균주명·유통기한 CFU 보장·보관법을 확인한다.</td>
               </tr>
               <tr>
                 <td rowspan="2"><span class="time">아침 식후</span></td>
                 <td><span class="name">종합비타민</span></td>
+                <td><span class="status">★ 필수 (식단 보험)</span></td>
                 <td><span class="dose">1정</span></td>
                 <td><span class="status">✓ 계속</span></td>
-                <td class="note">기본 영양 보충용. 별도 아연·마그네슘과 성분이 겹치는지 확인한다.</td>
+                <td class="note">불규칙·단조로운 식단이나 감량 시 미량영양소 보충용. 아연 10 mg이 들어 있어 별도 아연을 중복하지 않는다.</td>
               </tr>
               <tr>
                 <td><span class="name">오메가3</span></td>
-                <td><span class="dose">제품에 따라 1–2정<br />EPA+DHA 합 1 g 이상</span></td>
+                <td><span class="status">★ 필수</span></td>
+                <td><span class="dose">1정 (또는 1–2정)<br />EPA+DHA 약 1 g</span></td>
                 <td><span class="status">✓ 계속</span></td>
-                <td class="note">‘어유 1,000 mg’이 아니라 실제 EPA와 DHA의 합계를 본다. 식사와 함께 복용한다.</td>
+                <td class="note">중성지방 감소·운동 후 염증 완화에 검증됨. ‘어유 1,000 mg’이 아니라 실제 EPA+DHA 합계를 보고 식사와 함께 먹는다.</td>
               </tr>
               <tr>
                 <td rowspan="5"><span class="time">저녁 식후<br />운동 1–2시간 전</span></td>
-                <td><span class="name">실리마린</span></td>
-                <td><span class="dose">200–400 mg</span></td>
-                <td><span class="status pause">○ 쉬어도 됨</span></td>
-                <td class="note">간 질환 치료 대체가 아니며 효과 근거가 제한적이다. 복용 약이 있으면 먼저 확인한다.</td>
-              </tr>
-              <tr>
-                <td><span class="name">아연</span></td>
-                <td><span class="dose">15 mg</span></td>
-                <td><span class="status pause">○ 쉬어도 됨</span></td>
-                <td class="note">종합비타민 속 아연까지 합산한다. 속이 불편하면 식사와 함께 먹는다.</td>
-              </tr>
-              <tr>
-                <td><span class="name">아르기닌 파우더</span></td>
-                <td><span class="dose">3 g</span></td>
-                <td><span class="status pause">○ 쉬어도 됨</span></td>
-                <td class="note">운동 전 선택 섭취. 운동 성능 개선 근거는 제한적이고 혈압을 조금 낮출 수 있다.</td>
-              </tr>
-              <tr>
                 <td><span class="name">크레아틴 파우더</span></td>
+                <td><span class="status">★ 필수 (1순위)</span></td>
                 <td><span class="dose">3 g</span></td>
                 <td><span class="status">✓ 계속</span></td>
-                <td class="note">운동하지 않는 날도 매일 유지. 복용 시간보다 꾸준히 먹는 것이 중요하다.</td>
+                <td class="note">근력·파워·회복 임상 근거 1위. 운동하지 않는 날도 매일 유지하며 시간보다 꾸준한 섭취가 핵심이다.</td>
               </tr>
               <tr>
                 <td><span class="name">마그네슘</span></td>
-                <td><span class="dose">300–400 mg*</span></td>
+                <td><span class="status">★ 필수 (운동인)</span></td>
+                <td><span class="dose">원소 200–300 mg*</span></td>
                 <td><span class="status pause">○ 쉬어도 됨</span></td>
-                <td class="note">라벨의 ‘원소 마그네슘’ 양을 확인한다. 보충제로 350 mg을 넘기면 전문가와 상의한다.</td>
+                <td class="note">운동량이 많으면 땀·대사로 부족해지기 쉽다. 라벨의 ‘원소 마그네슘’ 기준 보충제 상한 350 mg 이내로 맞춘다.</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">아연 (단독)</span></td>
+                <td><span class="status pause">✕ 제외 (중복)</span></td>
+                <td><span class="dose">15 mg</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">종합비타민(10 mg)+육류·계란 식사로 충분. 종합비타민을 안 먹거나 결핍 진단 시에만 단독 고려한다.</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">아르기닌 파우더</span></td>
+                <td><span class="status pause">✕ 제외 (근거 약함)</span></td>
+                <td><span class="dose">3 g</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">경구 복용 시 장·간 초회 대사 손실이 커 숙련 운동인의 수행력 개선 근거가 매우 약하다. 혈압을 소폭 낮출 수 있다.</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">실리마린</span></td>
+                <td><span class="status pause">✕ 제외 (근거 최약)</span></td>
+                <td><span class="dose">200–400 mg</span></td>
+                <td><span class="status pause">○ 쉬어도 됨</span></td>
+                <td class="note">건강한 성인의 간 해독·예방·피로 회복에 대한 일관된 임상 근거가 부족하다. 질환·복용 약이 있으면 의료진 상담이 우선이다.</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="footnote">* 원본 표의 300–400 mg을 유지했다. 성인의 보충제·의약품 마그네슘 상한은 하루 350 mg이므로, 400 mg이 원소량이라면 그대로 구매·복용하지 말고 확인한다.</p>
+        <p class="footnote">* 원본 표는 300–400 mg이었으나 성인의 보충제·의약품 마그네슘 상한이 하루 350 mg이므로, 실제 복용은 원소 마그네슘 200–300 mg 선에서 조절하는 것을 기준으로 잡았다.</p>
       </section>
 
       <section id="before" aria-labelledby="before-title">
@@ -657,16 +796,16 @@
         <ul class="checklist">
           <li><strong>Supplement Facts의 1회분</strong>앞면의 큰 숫자 대신 1회 섭취량과 실제 유효성분 mg·CFU를 본다.</li>
           <li><strong>단일 성분 우선</strong>함량을 숨긴 proprietary blend, ‘디톡스·치료·완치’ 표현, 불필요한 자극제 혼합은 피한다.</li>
-          <li><strong>제3자 품질검사</strong>가능하면 USP·NSF·ConsumerLab 등의 품질검사를 확인한다. 품질 표시는 효과를 보장한다는 뜻은 아니다.</li>
-          <li><strong>유통기한·로트·보관법</strong>제조사 연락처, 로트 번호, 개봉 후 보관법이 명확하고 복용 기간 안에 다 먹을 용량을 산다.</li>
+          <li><strong>제3자 품질검사</strong>가능하면 USP·NSF·IFOS·ISURA·ConsumerLab 등의 품질검사를 확인한다. 품질 표시는 효과를 보장한다는 뜻은 아니다.</li>
+          <li><strong>유통기한·산패·통관 한도</strong>오메가3 같은 유지류는 6개월 내 소진할 용량을 사고, 해외직구는 1회 6병·관세 한도(미화 150달러 안팎)를 확인한다.</li>
         </ul>
       </section>
 
       <section id="choice" aria-labelledby="choice-title">
         <div class="section-head">
           <span>What to buy</span>
-          <h2 id="choice-title">종류별로 이렇게 구매</h2>
-          <p>특정 브랜드보다 아래 표기가 있는 제품을 우선한다. ‘우선’은 해당 목적이 있을 때의 상대적인 구매 순서다.</p>
+          <h2 id="choice-title">종류별 라벨 기준</h2>
+          <p>특정 브랜드보다 아래 표기가 있는 제품을 우선한다. 임상 근거와 실제 보충 필요성 순으로 배열했다.</p>
         </div>
 
         <div class="table-wrap" role="region" aria-label="영양제 종류별 구매 기준 표" tabindex="0">
@@ -674,142 +813,162 @@
             <thead>
               <tr>
                 <th scope="col">영양제</th>
-                <th scope="col">구매 우선순위</th>
+                <th scope="col">구분</th>
                 <th scope="col">라벨에서 찾을 표기</th>
                 <th scope="col">피할 것</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="name">유산균</span></td>
-                <td><span class="priority conditional">증상·목적별</span></td>
-                <td class="buy-this">속·종·균주번호까지 표시, 유통기한까지 CFU 보장, 냉장 여부 명시</td>
-                <td class="avoid">균주 없이 ‘1000억’ 숫자만 강조한 제품</td>
-              </tr>
-              <tr>
-                <td><span class="name">종합비타민</span></td>
-                <td><span class="priority conditional">식사 부족 시</span></td>
-                <td class="buy-this">1일 1정 기본형, 대부분의 성분이 100% DV 안팎, 연령·성별에 맞는 구성</td>
-                <td class="avoid">메가도스, 허브 혼합, 별도 아연과 중복되는 고함량 제품</td>
-              </tr>
-              <tr>
-                <td><span class="name">오메가3</span></td>
-                <td><span class="priority conditional">생선 섭취 적을 때</span></td>
-                <td class="buy-this">1회분당 EPA mg + DHA mg가 각각 명시된 어유 또는 조류유, 품질검사 표시</td>
-                <td class="avoid">EPA·DHA 없이 ‘Fish oil 1,000 mg’만 크게 표시한 제품</td>
-              </tr>
-              <tr>
-                <td><span class="name">실리마린</span></td>
-                <td><span class="priority low">낮음 · 선택</span></td>
-                <td class="buy-this">단일 성분, 1회분의 실리마린 실제 mg와 표준화 비율, 제3자 품질검사</td>
-                <td class="avoid">‘간 해독·간 치료’를 보장하는 복합 제품</td>
-              </tr>
-              <tr>
-                <td><span class="name">아연</span></td>
-                <td><span class="priority conditional">필요 확인 후</span></td>
-                <td class="buy-this">원소 아연 15 mg. 황산염·아세트산염·글루콘산염 중 어느 형태가 우월한지는 불명확</td>
-                <td class="avoid">종합비타민과 합산하지 않은 50 mg 고함량 매일 복용</td>
-              </tr>
-              <tr>
-                <td><span class="name">아르기닌</span></td>
-                <td><span class="priority low">낮음 · 선택</span></td>
-                <td class="buy-this">100% L-아르기닌 단일 파우더, 1회 3 g을 계량할 수 있는 구성</td>
-                <td class="avoid">함량 비공개 프리워크아웃 블렌드와 자극제 혼합</td>
-              </tr>
-              <tr>
                 <td><span class="name">크레아틴</span></td>
-                <td><span class="priority">근력운동 시 우선</span></td>
+                <td><span class="priority">★ 필수 1순위</span></td>
                 <td class="buy-this">100% 크레아틴 모노하이드레이트, 무향·무첨가, 1회 3–5 g</td>
                 <td class="avoid">모노하이드레이트보다 우수하다고 광고하는 고가의 에틸에스터·버퍼드 형태</td>
               </tr>
               <tr>
+                <td><span class="name">오메가3</span></td>
+                <td><span class="priority">★ 필수</span></td>
+                <td class="buy-this">1회분당 EPA mg + DHA mg가 각각 명시된 rTG 어유/조류유, IFOS·MSC 등 품질검사</td>
+                <td class="avoid">EPA·DHA 없이 ‘Fish oil 1,000 mg’만 크게 표시한 저농축 제품, 1년 이상 과다 쟁여두기</td>
+              </tr>
+              <tr>
                 <td><span class="name">마그네슘</span></td>
-                <td><span class="priority conditional">식사·필요 확인 후</span></td>
-                <td class="buy-this">원소 마그네슘 mg가 명확한 구연산염·염화물·젖산염·아스파르트산염</td>
-                <td class="avoid">화합물 총중량만 크게 쓰고 원소량을 찾기 어려운 제품</td>
+                <td><span class="priority">★ 필수 (운동인)</span></td>
+                <td class="buy-this">원소 마그네슘 mg가 명확한 구연산염(citrate) 또는 글리시네이트(TRAACS 등 킬레이트)</td>
+                <td class="avoid">화합물 총중량만 크게 쓰고 원소량을 찾기 어려운 제품, 흡수율 낮은 산화마그네슘 위주</td>
+              </tr>
+              <tr>
+                <td><span class="name">종합비타민</span></td>
+                <td><span class="priority">★ 필수 (식단 보험)</span></td>
+                <td class="buy-this">1일 1정 기본형, 대부분 100% DV 안팎, 연령·성별에 맞는 구성(필요시 철분 무함유)</td>
+                <td class="avoid">메가도스, 허브 혼합, 별도 아연과 중복되는 고함량 제품</td>
+              </tr>
+              <tr>
+                <td><span class="name">유산균</span></td>
+                <td><span class="priority conditional">◎ 조건부 선택</span></td>
+                <td class="buy-this">속·종·균주번호까지 표시, 유통기한까지 CFU 보장, 냉장 여부 명시</td>
+                <td class="avoid">균주 정보 없이 ‘1000억’ 숫자만 강조한 제품, 증상 없는데 습관적 장기 복용</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">아연</span></td>
+                <td><span class="priority low">✕ 제외 (중복)</span></td>
+                <td class="buy-this">단독 필요 시 원소 아연 15 mg 단일 성분, 제3자 품질검사(ISURA 등)</td>
+                <td class="avoid">종합비타민(10 mg)과 중복 구매, 50 mg 고함량 매일 복용</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">아르기닌</span></td>
+                <td><span class="priority low">✕ 제외 (근거 약함)</span></td>
+                <td class="buy-this">굳이 살 경우 HCl 염산염이 아닌 100% 유리형 L-아르기닌 단일 파우더</td>
+                <td class="avoid">함량 비공개 프리워크아웃 블렌드, 순수 아르기닌 함량이 낮은 HCl 혼동</td>
+              </tr>
+              <tr class="row-exclude">
+                <td><span class="name">실리마린</span></td>
+                <td><span class="priority low">✕ 제외 (근거 최약)</span></td>
+                <td class="buy-this">굳이 살 경우 단일 성분, 실리마린 80% 표준화 실제 mg 명시, 제3자 품질검사</td>
+                <td class="avoid">‘간 해독·간 치료’를 보장하는 복합 제품, 표준화 비율 없는 단순 추출물</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="quality-box" aria-label="구매 결론">
-          <div><strong>근력운동 목적</strong><p>가장 단순한 100% 크레아틴 모노하이드레이트부터 본다.</p></div>
-          <div><strong>기본 영양 목적</strong><p>식사에서 부족한 것이 있는지 먼저 보고 종합비타민·오메가3·마그네슘을 조건부로 고른다.</p></div>
-          <div><strong>후순위</strong><p>실리마린·아르기닌은 효과 근거가 제한적이므로 예산이 부족하면 먼저 제외한다.</p></div>
+          <div><strong>필수 핵심 4종</strong><p>크레아틴·오메가3·마그네슘을 기본으로 두고, 식단이 불규칙하거나 감량 중이면 종합비타민까지 챙긴다.</p></div>
+          <div><strong>조건부 선택 1종</strong><p>유산균은 고단백 소화 불편·장 트러블·잦은 감기가 있을 때만 추가하고, 평소 불편이 없으면 생략한다.</p></div>
+          <div><strong>제외 3종</strong><p>실리마린·아르기닌은 임상 근거가 가장 약하고, 단독 아연은 종합비타민과 중복되므로 빼는 편이 합리적이다.</p></div>
         </div>
       </section>
 
       <section id="products" aria-labelledby="products-title">
         <div class="section-head">
-          <span>iHerb value picks</span>
-          <h2 id="products-title">아이허브 가성비 추천</h2>
-          <p>2026-08-31 아이허브 한국 페이지 확인가 기준. 할인 코드·환율·재고에 따라 실제 결제가는 달라질 수 있다.</p>
+          <span>Verified value picks</span>
+          <h2 id="products-title">추천 제품 · 실구매가 비교</h2>
+          <p>2026-11-23 아이허브 한국 페이지(블랙프라이데이 코드 <code>NOVAPAC26</code> 장바구니 실검증가) 및 쿠팡 로켓직구 와우가 기준. 행사 종료(11/26 03:00)·환율·재고에 따라 실제 결제가는 달라질 수 있다.</p>
         </div>
 
-        <div class="table-wrap" role="region" aria-label="아이허브 영양제 가성비 추천 표" tabindex="0">
+        <div class="table-wrap" role="region" aria-label="영양제 추천 제품과 가격 비교 표" tabindex="0">
           <table class="product-table">
             <thead>
               <tr>
-                <th scope="col">영양제</th>
+                <th scope="col">구분 · 영양제</th>
                 <th scope="col">가성비 추천 제품</th>
-                <th scope="col">확인가 / 예상 비용</th>
+                <th scope="col">확인가 / 1일 비용</th>
                 <th scope="col">선택 메모</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="name">유산균</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-lactobif-30-probiotics-30-billion-cfu-120-veggie-capsules/143853" target="_blank" rel="noopener noreferrer">California Gold Nutrition LactoBif 30<br />300억 CFU · 120정 ↗</a></td>
-                <td class="buy-this">약 41,498원<br />하루 약 346원</td>
-                <td class="note">장 관련 목적이 있을 때 추가. 단순히 CFU 숫자가 높다는 이유로 고르지 않는다.</td>
+                <td><span class="priority">★ 필수</span><br /><span class="name">크레아틴</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-sport-pure-creatine-monohydrate-unflavored-2-2-lbs-1-kg/143718" target="_blank" rel="noopener noreferrer">California Gold Nutrition<br />순수 크레아틴 일수화물 · 1 kg ↗</a>
+                  <span class="alt-note">더 저렴한 1 kg 대안: <a href="https://kr.iherb.com/pr/micro-ingredients-creatine-monohydrate-powder-unflavored-2-2-lb-1-kg/146523" target="_blank" rel="noopener noreferrer">Micro Ingredients 1 kg (블프 26,769원 · 3 g 80원) ↗</a></span>
+                </td>
+                <td class="buy-this">블프 31,777원<br />(정가 39,721원)<br />3 g 약 95원</td>
+                <td class="note">100% 모노하이드레이트 단일 분말 · 제3자 검사 · 리뷰 4.4만+. 근력운동 최우선 1픽.</td>
               </tr>
               <tr>
-                <td><span class="name">종합비타민</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/now-foods-daily-vits-multi-vitamin-mineral-120-veg-capsules/86755" target="_blank" rel="noopener noreferrer">NOW Foods Daily Vits<br />철분 무함유 · 120정 ↗</a></td>
-                <td class="buy-this">약 18,410원<br />하루 약 153원</td>
-                <td class="note">아연 10 mg 포함. 이 제품을 먹는 날은 별도 아연을 대부분 생략한다.</td>
+                <td><span class="priority">★ 필수</span><br /><span class="name">오메가3</span></td>
+                <td>
+                  <strong class="product-link">쿠팡 로켓직구 · Sports Research<br />알래스카 오메가3 1,040 mg · 180정 (1개)</strong>
+                  <span class="alt-note">아이허브 대안: <a href="https://kr.iherb.com/pr/sports-research-omega-3-fish-oil-triple-strength-120-softgels/109322" target="_blank" rel="noopener noreferrer">Sports Research 트리플 스트렝스 120정 (블프 37,692원 · 1정 314원) ↗</a></span>
+                </td>
+                <td class="buy-this">쿠팡 44,850원<br />(와우 무료배송)<br />1정 약 249원</td>
+                <td class="note">rTG · 단일 알래스카 명태(MSC) · 1정 EPA 690+DHA 260=950 mg. 아이허브 블프 대비 EPA+DHA 1 g당 약 16.5% 저렴. 산패 방지를 위해 1개(6개월치)씩 구매 권장.</td>
               </tr>
               <tr>
-                <td><span class="name">오메가3</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-omega-800-90-fish-gelatin-softgels-1-000-mg-per-softgel/85180" target="_blank" rel="noopener noreferrer">California Gold Nutrition Omega 800<br />90정 ↗</a></td>
-                <td class="buy-this">약 37,560원<br />1정 약 417원</td>
-                <td class="note">1정에 EPA 480 mg + DHA 320 mg. 합계 1 g 이상 목표라면 하루 2정이 필요하다.</td>
+                <td><span class="priority">★ 필수</span><br /><span class="name">마그네슘</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/vitacost-everyday-magnesium-citrate-240-tablets-200-mg-per-tablet/159050" target="_blank" rel="noopener noreferrer">Vitacost 마그네슘시트레이트<br />1정당 원소 200 mg · 240정 ↗</a>
+                  <span class="alt-note">위장 편안·100 mg 단위 조절: <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567" target="_blank" rel="noopener noreferrer">Doctor's Best TRAACS 240정 (블프 21,020원 · 300 mg 263원) ↗</a></span>
+                </td>
+                <td class="buy-this">블프 15,918원<br />(정가 22,739원)<br />300 mg 약 99원</td>
+                <td class="note">구연산염 초가성비(블프 30%). 2정(400 mg)은 상한 350 mg 초과이므로 1정(200 mg) 또는 1.5정(300 mg)으로 조절. 설사 민감 시 Doctor's Best 추천.</td>
               </tr>
               <tr>
-                <td><span class="name">실리마린</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/now-foods-milk-thistle-extract-300-mg-200-veg-capsules/13870" target="_blank" rel="noopener noreferrer">NOW Foods 밀크시슬 추출물<br />300 mg · 200정 ↗</a></td>
-                <td class="buy-this">할인 약 27,368원<br />하루 약 137원</td>
-                <td class="note">실리마린 240 mg 표준화. 민들레·아티초크도 들어 있는 후순위 선택 제품이다.</td>
+                <td><span class="priority">★ 필수</span><br /><span class="name">종합비타민</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/now-foods-daily-vits-multi-vitamin-mineral-120-veg-capsules/86755" target="_blank" rel="noopener noreferrer">NOW Foods Daily Vits<br />철분 무함유 · 베지캡슐 120정 ↗</a>
+                </td>
+                <td class="buy-this">블프 15,196원<br />(정가 20,261원)<br />하루 약 127원</td>
+                <td class="note">1일 1정 기본형(~100% DV). 아연 10 mg(TRAACS)·구리 1 mg 포함이라 별도 아연을 생략할 수 있다.</td>
               </tr>
               <tr>
-                <td><span class="name">아연</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/thorne-zinc-picolinate-15-mg-60-capsules/18476" target="_blank" rel="noopener noreferrer">Thorne 아연 피콜리네이트<br />15 mg · 60정 ↗</a></td>
-                <td class="buy-this">할인 약 16,902원<br />하루 약 282원</td>
-                <td class="note">단일 성분 제품. 종합비타민에 아연이 들어 있으면 중복 구매하지 않는다.</td>
+                <td><span class="priority conditional">◎ 선택</span><br /><span class="name">유산균</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-lactobif-5-probiotics-5-billion-cfu-120-veggie-capsules/143852" target="_blank" rel="noopener noreferrer">California Gold Nutrition LactoBif 5<br />50억 CFU · 120정 ↗</a>
+                  <span class="alt-note">균주번호 8종 명시 대안: <a href="https://kr.iherb.com/pr/jarrow-formulas-jarro-dophilus-eps-120-veggie-capsules-5-billion-cfu-per-capsule/7006" target="_blank" rel="noopener noreferrer">Jarrow Jarro-Dophilus EPS 120정 (블프 39,203원 · 1정 327원) ↗</a></span>
+                </td>
+                <td class="buy-this">블프 16,215원<br />(정가 23,163원)<br />하루 약 135원</td>
+                <td class="note">장 증상·고단백 소화 불편 시 추가. LactoBif 5는 실온·블리스터·유통기한 CFU 보장이지만 라벨에 균주번호 미표기. 균주번호 기준을 엄격히 보려면 Jarrow EPS 선택.</td>
               </tr>
-              <tr>
-                <td><span class="name">아르기닌</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/nutricost-l-arginine-unflavored-17-9-oz-500-g/148199" target="_blank" rel="noopener noreferrer">Nutricost L-아르기닌<br />무맛 · 500 g ↗</a></td>
-                <td class="buy-this">약 29,613원<br />3 g 약 178원</td>
-                <td class="note">100% 단일 분말. 운동할 때만 선택하고 예산이 부족하면 먼저 제외한다.</td>
+              <tr class="row-exclude">
+                <td><span class="priority low">✕ 제외</span><br /><span class="name">아연</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/natural-factors-zinc-citrate-15-mg-90-tablets/2670" target="_blank" rel="noopener noreferrer">Natural Factors 시트르산아연<br />원소 15 mg · 90정 ↗</a>
+                </td>
+                <td class="buy-this">5,796원<br />(블프 코드 제외)<br />하루 약 64원</td>
+                <td class="note">단일 성분 + ISURA 제3자 인증. 종합비타민 복용 중에는 중복이므로 제외하고, 단독 필요 시에만 구매.</td>
               </tr>
-              <tr>
-                <td><span class="name">크레아틴</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/california-gold-nutrition-sport-pure-creatine-monohydrate-unflavored-2-2-lbs-1-kg/143718" target="_blank" rel="noopener noreferrer">California Gold Nutrition<br />크레아틴 모노하이드레이트 · 1 kg ↗</a></td>
-                <td class="buy-this">할인 약 43,938원<br />3 g 약 132원</td>
-                <td class="note">100% 모노하이드레이트 단일 분말. 근력운동 목적이면 가장 먼저 담는다.</td>
+              <tr class="row-exclude">
+                <td><span class="priority low">✕ 제외</span><br /><span class="name">아르기닌</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/nutricost-l-arginine-unflavored-17-9-oz-500-g/148199" target="_blank" rel="noopener noreferrer">Nutricost L-아르기닌<br />무맛 유리형 · 500 g ↗</a>
+                </td>
+                <td class="buy-this">블프 21,041원<br />(정가 28,054원)<br />3 g 약 126원</td>
+                <td class="note">100% 유리형 단일 분말이지만 운동 수행력 근거가 약해 제외 2순위.</td>
               </tr>
-              <tr>
-                <td><span class="name">마그네슘</span></td>
-                <td><a class="product-link" href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567" target="_blank" rel="noopener noreferrer">Doctor's Best 고흡수 마그네슘<br />1정당 100 mg · 240정 ↗</a></td>
-                <td class="buy-this">할인 약 26,774원<br />300 mg 약 335원</td>
-                <td class="note">원소량을 100 mg 단위로 조절하기 쉽다. 보충제로 하루 350 mg을 넘기기 전 확인한다.</td>
+              <tr class="row-exclude">
+                <td><span class="priority low">✕ 제외</span><br /><span class="name">실리마린</span></td>
+                <td>
+                  <a class="product-link" href="https://kr.iherb.com/pr/nutricost-milk-thistle-300-mg-120-capsules/147394" target="_blank" rel="noopener noreferrer">Nutricost 밀크시슬 추출물<br />300 mg (실리마린 80%) · 120정 ↗</a>
+                </td>
+                <td class="buy-this">블프 16,684원<br />(정가 22,245원)<br />하루 약 139원</td>
+                <td class="note">단일 성분·실리마린 240 mg 표준화·제3자 검사 충족. 다만 건강한 성인 대상 임상 근거가 가장 약해 제외 1순위.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p class="alert"><strong>추천 장바구니:</strong> 처음에는 크레아틴 + 오메가3 + 마그네슘 + 종합비타민만 사고, 유산균은 장 관련 목적이 있을 때 추가한다. 종합비타민을 먹는 동안 별도 아연은 대부분 제외하고 실리마린·아르기닌은 후순위로 둔다.</p>
+        <p class="alert"><strong>추천 최종 장바구니 (운동인 핵심 4종 · 총 4병 약 107,741원):</strong> 오메가3는 <strong>쿠팡 로켓직구 180정 1개(44,850원)</strong>로 따로 사고, 아이허브에서 <strong>크레아틴 + 마그네슘 + 종합비타민 3종(블프 62,891원 · 무료배송)</strong>만 결제한다. 유산균을 더해도 <strong>총 5병 · 123,956원</strong>이라 양쪽이 같은 날 입항해도 6병 제한·관세 한도 모두 안전하다. <em>(마그네슘을 Doctor's Best로 바꾸면 +5,102원)</em></p>
       </section>
 
       <p class="sources">
@@ -821,11 +980,12 @@
         <a href="https://www.nccih.nih.gov/health/milk-thistle" target="_blank" rel="noopener noreferrer">실리마린</a>,
         <a href="https://ods.od.nih.gov/factsheets/Zinc-Consumer/" target="_blank" rel="noopener noreferrer">아연</a>,
         <a href="https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-Consumer/" target="_blank" rel="noopener noreferrer">아르기닌·크레아틴</a>,
-        <a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">마그네슘</a>.
+        <a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">마그네슘</a>
+        (및 ISSN 스포츠영양 입장문 · USPSTF 종합비타민 권고 · AGA 프로바이오틱스 지침 참고).
         이 페이지는 개인 체크용 정리이며 진단·치료 지시가 아니다.
       </p>
 
-      <footer>ZZEE Wellness Archive · Updated 2026-08-31</footer>
+      <footer>ZZEE Wellness Archive · Updated 2026-11-23</footer>
     </main>
   </body>
 </html>
