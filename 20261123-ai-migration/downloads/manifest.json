@@ -1,0 +1,2694 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-23",
+  "edition": "public-portable",
+  "portableSkills": 15,
+  "observedSkills": 119,
+  "files": [
+    {
+      "path": "docs/DEPENDENCIES.md",
+      "size": 1165,
+      "sha256": "7078DDCDDF97A6C27AD875F93250B0175DE5FFD54C617523F5E4A1123934EC20"
+    },
+    {
+      "path": "docs/EXCLUSIONS.md",
+      "size": 764,
+      "sha256": "A6F836B15C65CF0BBA074F2AB180B43702438B069E997A175498560F17F9E516"
+    },
+    {
+      "path": "docs/skill-inventory.json",
+      "size": 75962,
+      "sha256": "83B840713EE5D404A94CC2BC04DB9BF1984ECC78DD1FC1EC048E6B3EFCCF6C3A"
+    },
+    {
+      "path": "docs/START-HERE.md",
+      "size": 2548,
+      "sha256": "B2A25D0AAA3566204FE3B4ECF95F54F56681365AE52555E907CBD980C00A2DD8"
+    },
+    {
+      "path": "docs/THIRD-PARTY-NOTICES.md",
+      "size": 1357,
+      "sha256": "B2A8A6BB7B0FB7201221DD85C70FA0C4CF5348FD62966AC458F36D5499A8A8AB"
+    },
+    {
+      "path": "memory/AGENTS.portable.md",
+      "size": 2251,
+      "sha256": "6954858D26A8CFBB58DE528DB6E5184BF3457124B113DD075E3F10618C5025DD"
+    },
+    {
+      "path": "memory/README.md",
+      "size": 557,
+      "sha256": "F8722F721223D0A3ED6CA780669816C38B5234D133CE2F49078DD8A00B6DF734"
+    },
+    {
+      "path": "settings/agent-role-examples/explorer.toml",
+      "size": 622,
+      "sha256": "EC6B7ED25651BADCAC2032E57A268440DA975EB83CAC2DE5791AD29F178D2A4E"
+    },
+    {
+      "path": "settings/agent-role-examples/luna_worker.toml",
+      "size": 1021,
+      "sha256": "DAE7F99CF87670FB2212BC924F5766AC287AD7638ED6CE04C32A47223199E1A9"
+    },
+    {
+      "path": "settings/agent-role-examples/reviewer.toml",
+      "size": 704,
+      "sha256": "40CDA69D801BE917E8620A7E15FD81379415D618C994640BB9BBE487105CF49E"
+    },
+    {
+      "path": "settings/agent-role-examples/sol_worker.toml",
+      "size": 949,
+      "sha256": "122E9CB53AC4EF3EF47B7A18999F33021463888353EDEA4814FF10E976036BC6"
+    },
+    {
+      "path": "settings/plugins.json",
+      "size": 5060,
+      "sha256": "5254AFBE9115007B19FF8FC42A3C665656492BB1AE6A855DE48FA9AC57101365"
+    },
+    {
+      "path": "settings/preferences.toml",
+      "size": 210,
+      "sha256": "F5E1C74D9EAC4CF27AD149ABEE1A46D7E429B508972EE292A90200E95EE397C0"
+    },
+    {
+      "path": "settings/README.md",
+      "size": 1321,
+      "sha256": "039D618AB2A35FC6DEE26447F146CDF26BF0890C43C424AA2912B4330A07AD50"
+    },
+    {
+      "path": "skills/3d-handpainted-npr/SKILL.md",
+      "size": 1358,
+      "sha256": "7B8B3F63CA37D4E939C0A71CA1184BADBCA2068799589389C7F63CCE4F100706"
+    },
+    {
+      "path": "skills/agy-subagent/SKILL.md",
+      "size": 1194,
+      "sha256": "4ABD7FAD3E836916EA1BC354B4D94F26948E58B7C47DF0430AB937DD9BC0694F"
+    },
+    {
+      "path": "skills/aihub-knowledge/SKILL.md",
+      "size": 967,
+      "sha256": "3B81CDD988A4CCB0DA15CA8F25478AF72F6E2A914D3CB0FBD1336B49118E8B23"
+    },
+    {
+      "path": "skills/antigravity-aside-router/references/execution.md",
+      "size": 1248,
+      "sha256": "D0C079C84B6D9E42BEC627BD4D3610E508A9328D5034D481A7337CC736D25AE1"
+    },
+    {
+      "path": "skills/antigravity-aside-router/SKILL.md",
+      "size": 1386,
+      "sha256": "526CA5131ADB76DB9541D1659A017EE688B2EEFC800B9E2959EB6992EFA90D77"
+    },
+    {
+      "path": "skills/archify/assets/JetBrainsMono-OFL.txt",
+      "size": 4398,
+      "sha256": "C1AB7C666206842A02B35B30770DAC0D7A10156ED401C9DEFC3F02A754D89E90"
+    },
+    {
+      "path": "skills/archify/assets/template.html",
+      "size": 787334,
+      "sha256": "9689EEEC1A5918AEA571EB84D66EA28C7B5BCDCBCF2AE71666BAD19D44CC89BC"
+    },
+    {
+      "path": "skills/archify/bin/archify.mjs",
+      "size": 288781,
+      "sha256": "3CEBCEE3FA339E3B98DEACAE8CB9A5570525E003D8823368D304D904BA9CEECD"
+    },
+    {
+      "path": "skills/archify/bin/delivery-update.mjs",
+      "size": 3700,
+      "sha256": "24D92F908D91ECE10DDCEFE979F7950F9250023813C41777022AE5D948AA8E2C"
+    },
+    {
+      "path": "skills/archify/bin/finalize.mjs",
+      "size": 50052,
+      "sha256": "766E053AFAEACA8045B8A0558F50CB6B685DFE21CB9D00E7776D407D6DB364E8"
+    },
+    {
+      "path": "skills/archify/bin/open-artifact.mjs",
+      "size": 4144,
+      "sha256": "B0AB5F37C4F4556F76040DC862744AFE9D4B65F319F35E1F9B505E0344B9C409"
+    },
+    {
+      "path": "skills/archify/bin/preview.mjs",
+      "size": 36668,
+      "sha256": "A37F4F0985339933E8D89EF664D27988AFAC557B52084EC04407848B936989BD"
+    },
+    {
+      "path": "skills/archify/bin/recover-output.mjs",
+      "size": 1367,
+      "sha256": "B3F7DB21B3FC5341326207C1259AA787730120F42179EFF50E481B0C6AD1E2D4"
+    },
+    {
+      "path": "skills/archify/bin/visual-check.mjs",
+      "size": 120537,
+      "sha256": "72A8EEC9793588552DA4013F228EB3FB5AD4936A3D3CF31920DE883B77CA3DFD"
+    },
+    {
+      "path": "skills/archify/brand-marks/catalog.json",
+      "size": 14162,
+      "sha256": "E1A6C555CBF8EA36FB8100A4A25824E7AB87BEBE9871E450BA05B6DEA3B036D6"
+    },
+    {
+      "path": "skills/archify/brand-marks/README.md",
+      "size": 1449,
+      "sha256": "8B771A16322CE9EA47FDC00B9935E33ADF0F3AF608F2D735235443E15EF622E2"
+    },
+    {
+      "path": "skills/archify/delta/architecture-delta.mjs",
+      "size": 79087,
+      "sha256": "479C55681F6A5B24D187D6E45A585792384E5DC56AA583131D189366B950A1C5"
+    },
+    {
+      "path": "skills/archify/examples/agent-run.lifecycle.json",
+      "size": 3260,
+      "sha256": "5BA36F5CE91ED428CB48B599E275424916D82B619B9A3231CBD1BBC3966FC54B"
+    },
+    {
+      "path": "skills/archify/examples/agent-tool-call.workflow.json",
+      "size": 4939,
+      "sha256": "D67965D50872C97E4FF3476271E645BF19FAB6B3AB44E111BDB44B063E3AA36F"
+    },
+    {
+      "path": "skills/archify/examples/archify-dev-activity.timeline.json",
+      "size": 4460,
+      "sha256": "E9C8D76528E8C38A68D9A8DF2499C462F6B9633292EA43BF33350546EF2FD3A3"
+    },
+    {
+      "path": "skills/archify/examples/archify-repository.tree.json",
+      "size": 4368,
+      "sha256": "970617EE844ECFB1BB792C677AA8B85688ABFD2CF8AB2365DC03EA9E26E6B9C7"
+    },
+    {
+      "path": "skills/archify/examples/async-job-roundtrip.sequence.json",
+      "size": 3766,
+      "sha256": "B8C6C52F1763EDE2933C77DEB8DA59B3E06917BC41D27E66DF896136456B859A"
+    },
+    {
+      "path": "skills/archify/examples/brand-aware-delivery.architecture.json",
+      "size": 2789,
+      "sha256": "211C126EBDC5F0124617B1067CECFB858143A1A18FD10621D01F5765C7DE3B5D"
+    },
+    {
+      "path": "skills/archify/examples/cache-miss-request.sequence.json",
+      "size": 3805,
+      "sha256": "F8486DAA803FFF6C295CECCA4604C561FBBF9ACB2E83326022B5A87639E8AFE6"
+    },
+    {
+      "path": "skills/archify/examples/checkout-platform.base.architecture.json",
+      "size": 2279,
+      "sha256": "81D55A2E86FC39F6473B32DFBA986A12D3B7A705A95821844865B1DC831C9FE7"
+    },
+    {
+      "path": "skills/archify/examples/checkout-platform.head.architecture.json",
+      "size": 2413,
+      "sha256": "EB4AE056035DD3316414A5D7F6599525107B5D1AF7BEDBD905460ADE77DAF5C6"
+    },
+    {
+      "path": "skills/archify/examples/checkout-request.waterfall.json",
+      "size": 1209,
+      "sha256": "55A5F74699A0F0E44018A4A000556D43C90430B95F39ACCAC6141AF8318B5133"
+    },
+    {
+      "path": "skills/archify/examples/class-payment-processors-rendered.html",
+      "size": 875036,
+      "sha256": "56D2F75D3E147ACD4DE44D23D1715D2D3A6C5F057C08B50DD3E1D35B7DD8A66E"
+    },
+    {
+      "path": "skills/archify/examples/class-payments-rendered.html",
+      "size": 840775,
+      "sha256": "4749922E51166B7F855FD4F2070459A27641A1B429D52D5BCBDB9FA8E641D152"
+    },
+    {
+      "path": "skills/archify/examples/dataflow-product-analytics.html",
+      "size": 843855,
+      "sha256": "F41D292ADCA854BF46E0114D1CB4E73566A667533C659467538A7FA4788D9897"
+    },
+    {
+      "path": "skills/archify/examples/delivery.explainer.json",
+      "size": 4570,
+      "sha256": "188CF8777816AC034DD5A92B04BF427B0F1A8DBFA0956AE072B2D4091427806C"
+    },
+    {
+      "path": "skills/archify/examples/deployment-release.lifecycle.json",
+      "size": 4155,
+      "sha256": "E3DC105D03C1C9881160006CDACE23CB5D8533803E337CAF0EC287C64E775275"
+    },
+    {
+      "path": "skills/archify/examples/erd-orders-rendered.html",
+      "size": 861259,
+      "sha256": "E97A501766FF355602F9E123FF2A11784D09EE473B9DB296A79267A3508533D2"
+    },
+    {
+      "path": "skills/archify/examples/event-stream.dataflow.json",
+      "size": 4769,
+      "sha256": "3BDD77674282009C7C68D588CF8A3C495BC98A3BE1B9C45327FD1801A6F83A23"
+    },
+    {
+      "path": "skills/archify/examples/example-rebuild.waterfall.json",
+      "size": 4617,
+      "sha256": "77D610013A5AAB031DF739C207B66EBC26E1740371B51DA06956ECF06B5E9929"
+    },
+    {
+      "path": "skills/archify/examples/holiday-planning.workflow.json",
+      "size": 3019,
+      "sha256": "B98354F921CA45842FED235DB09FD4F19D94ADC16865876F438C0D699D05E1EA"
+    },
+    {
+      "path": "skills/archify/examples/incident-response.workflow.json",
+      "size": 4723,
+      "sha256": "630BE98449925D2716ECB8439F404B2BFF5FE65BA905B0AD0BAEA6D96890C526"
+    },
+    {
+      "path": "skills/archify/examples/lifecycle-agent-run.html",
+      "size": 847663,
+      "sha256": "ED4D735DC926B3C27324D0C174FE0607377722674D150B34A2FEDCE47459E111"
+    },
+    {
+      "path": "skills/archify/examples/locales/de.json",
+      "size": 28444,
+      "sha256": "77975293855578923FBBEE29F478D9D84002C04D6A7B3E22CD9DB8CF3FB414BA"
+    },
+    {
+      "path": "skills/archify/examples/locales/fr.json",
+      "size": 29281,
+      "sha256": "EA1AF868932EB22761094A4950B769FD0634430FE706FC4EA4335ECA7F0529BB"
+    },
+    {
+      "path": "skills/archify/examples/locales/fr.partial.json",
+      "size": 959,
+      "sha256": "8958A8354FFCCCE2CE63AC21B3F8A0F131086F532832445A3FE7FEFF02200397"
+    },
+    {
+      "path": "skills/archify/examples/locales/it.json",
+      "size": 28793,
+      "sha256": "BE8CD15FCD0311521DC8AE1F35BBCF8E33A180E20E5CE94FD0D65DEC4E147E6B"
+    },
+    {
+      "path": "skills/archify/examples/locales/ja.json",
+      "size": 32495,
+      "sha256": "BB6D66D7E1126C5C622423317A536728820D3FE686BE90D0C9CC8F6CA4FF3E67"
+    },
+    {
+      "path": "skills/archify/examples/locales/pt.json",
+      "size": 28454,
+      "sha256": "8E3C6A054183E96465BD882BC23D38EAFE19C0484EDA5709F4E2B37E132E0731"
+    },
+    {
+      "path": "skills/archify/examples/locales/ru.json",
+      "size": 36940,
+      "sha256": "EA673BF7156D87AC43D754839155A1A145AAFA481B5DE540E04D1F8D3EC008D3"
+    },
+    {
+      "path": "skills/archify/examples/orders.erd.json",
+      "size": 7321,
+      "sha256": "1777A374647084466F4D7CE3A968004BE6AB70AC9CF82459B96BED7C556CDFDD"
+    },
+    {
+      "path": "skills/archify/examples/payment-incident.timeline.json",
+      "size": 1445,
+      "sha256": "C1F535B3CC915DDD47ECD7DF4E3EF02C441C8C3191DACED5CF4422CFF8DEC95F"
+    },
+    {
+      "path": "skills/archify/examples/payment-platform.tree.json",
+      "size": 1214,
+      "sha256": "1E99F37B3845D67FA97C9A2FF33109981C23BFDB0D03BA05B7D92944DCDFC61F"
+    },
+    {
+      "path": "skills/archify/examples/payment-processors.class.json",
+      "size": 7321,
+      "sha256": "98742B997DB4782981460E8110E5FBA899D8500C92C086AA867C5C62C3B89222"
+    },
+    {
+      "path": "skills/archify/examples/payments.class.json",
+      "size": 2828,
+      "sha256": "AFBA837F97A041E14687CBE8893523232C4AFAD7AFD922D9B128606D1B3F12C8"
+    },
+    {
+      "path": "skills/archify/examples/product-analytics.dataflow.json",
+      "size": 5035,
+      "sha256": "8A635DB9E51A5B1A8D2955B9D66F5B9A450E0A298432CE8F2E2F0BE11F372E05"
+    },
+    {
+      "path": "skills/archify/examples/production-deployment.architecture.json",
+      "size": 4734,
+      "sha256": "610A5614667E8F108BDCF1769C9D7AF5C3CE0FB62BE3EA50550B10EB752E4BDA"
+    },
+    {
+      "path": "skills/archify/examples/release-delivery.workflow.json",
+      "size": 4510,
+      "sha256": "DBD5C174AF66296CAEC372E7214CF4DF7158B50A563508E16826B95AB8D1CD6C"
+    },
+    {
+      "path": "skills/archify/examples/sequence-cache-miss-request.html",
+      "size": 841568,
+      "sha256": "49E750C91BB8A21A63DB5F80F147BF4867CF938F75CBDD5A5DA1E11B36A3D3BA"
+    },
+    {
+      "path": "skills/archify/examples/subscription-billing-rendered.html",
+      "size": 884212,
+      "sha256": "0CAB0E29A347B6427CEBB20C6C1D236E59CD7689CE7790E029101F7927C5A944"
+    },
+    {
+      "path": "skills/archify/examples/subscription-billing.erd.json",
+      "size": 11817,
+      "sha256": "89945699D92B9CC0AB91263CF38A07C350867D260EACD5D8BA1DC835FE2D22ED"
+    },
+    {
+      "path": "skills/archify/examples/timeline-archify-dev-activity-rendered.html",
+      "size": 866510,
+      "sha256": "F66DD976211353DE010A43AEC72205F6AAD7DC53F1433A22E41C6EED391230B1"
+    },
+    {
+      "path": "skills/archify/examples/timeline-payment-incident-rendered.html",
+      "size": 834097,
+      "sha256": "46494B119B8637449A402EC05990B2B63A0FFC3B883A85A3D622656CE909260E"
+    },
+    {
+      "path": "skills/archify/examples/tree-archify-repository-rendered.html",
+      "size": 877360,
+      "sha256": "E1A68B7C1AE795994F29C8C9A3EFCB91F616E637D0C8D5B95C179C2597345683"
+    },
+    {
+      "path": "skills/archify/examples/tree-payment-platform-rendered.html",
+      "size": 839719,
+      "sha256": "B79F07651F7D26EB8651E4C321D8396963D125ED66D2EC9BD86365284DDB472E"
+    },
+    {
+      "path": "skills/archify/examples/waterfall-checkout-request-rendered.html",
+      "size": 833386,
+      "sha256": "74CB226D2A44BE1482A824D08E6CA21D3B0353065118623C692EA651CD9E9759"
+    },
+    {
+      "path": "skills/archify/examples/waterfall-example-rebuild-rendered.html",
+      "size": 863204,
+      "sha256": "6A7840B16ED9E8175F2F6EAA2FFBD9518E06A96B5CA0A5DAFAAAD874CA80EC70"
+    },
+    {
+      "path": "skills/archify/examples/web-app-rendered.html",
+      "size": 846197,
+      "sha256": "FFABD084C754EE97ED9E9355BA19FAB449533432537D6B8CDB5C6D276293741A"
+    },
+    {
+      "path": "skills/archify/examples/web-app.architecture.json",
+      "size": 3197,
+      "sha256": "95E051B27A9E4A3307E194C0F666FCA4AF51470BE7E2228D400FF48AEA5B353B"
+    },
+    {
+      "path": "skills/archify/examples/workflow-agent-tool-call-rendered.html",
+      "size": 851280,
+      "sha256": "6EE1999C899C2B7BED3B69B14E23DFBF9C7FF096441870361C690B469AD43E29"
+    },
+    {
+      "path": "skills/archify/explainer/browser-check.mjs",
+      "size": 30708,
+      "sha256": "CBBEBFCA2CB58CDE0791F349E4F13490C0D085CE2F8653279139CF2AED334677"
+    },
+    {
+      "path": "skills/archify/explainer/charts.mjs",
+      "size": 5997,
+      "sha256": "BB49C5E8E5D6BA70A511D292DBAC6A47953A010B67A8563E5F68222C7B220390"
+    },
+    {
+      "path": "skills/archify/explainer/check.mjs",
+      "size": 14888,
+      "sha256": "151211EDD6F1B842EE63B1AEF8682CB68E6237CE3B9E7A81E09667420F2B9B3B"
+    },
+    {
+      "path": "skills/archify/explainer/diagrams.mjs",
+      "size": 38710,
+      "sha256": "BB4AAE343968DB5A5AD70C368AD41DCC9D2AC93F3ACE02645059DAF33CAB16BA"
+    },
+    {
+      "path": "skills/archify/explainer/diff.mjs",
+      "size": 8454,
+      "sha256": "0851A6B9715A3F277308CB88C84A5EF5FC943F09A9E0A391A573438FE8A30FBB"
+    },
+    {
+      "path": "skills/archify/explainer/inline.mjs",
+      "size": 8721,
+      "sha256": "E024B719A365077B547CB3D50AC9909DB7E080CA5BDE62387E5D62EAD3F819F3"
+    },
+    {
+      "path": "skills/archify/explainer/layout.mjs",
+      "size": 2571,
+      "sha256": "656232369FE0394E35F827C1B5295FB8F14D315E7FA53D5F16248440519736C8"
+    },
+    {
+      "path": "skills/archify/explainer/page-bundle.mjs",
+      "size": 1138,
+      "sha256": "1D4FC3F65B4EB4207A0C3B86A2968310F931A9B945FCD1FC3021CE98A29F7310"
+    },
+    {
+      "path": "skills/archify/explainer/parse.mjs",
+      "size": 27256,
+      "sha256": "DD0D05672E92453B1B1CEA31372792CBE03AECDD80F21E2F3AA0EDA49D3BE853"
+    },
+    {
+      "path": "skills/archify/explainer/patch.mjs",
+      "size": 12039,
+      "sha256": "B2721021DE474431537705D696325EA01EB946E9095E8476FAD1802D2FB5BE4D"
+    },
+    {
+      "path": "skills/archify/explainer/prepare.mjs",
+      "size": 9819,
+      "sha256": "D8FF050738D7C858D62641B069455482814DE0C4BDF7C0872D0A2A663B1B0643"
+    },
+    {
+      "path": "skills/archify/explainer/reader.css",
+      "size": 47157,
+      "sha256": "20AE425A84157C2D478241250975E74FCA8938B47B85C5414149710FF4A3538F"
+    },
+    {
+      "path": "skills/archify/explainer/reader.js",
+      "size": 51676,
+      "sha256": "202D3AD200ACCD89A1484FE64610D9BC8BB4544C14C3F51522BA74F965B332C6"
+    },
+    {
+      "path": "skills/archify/explainer/render.mjs",
+      "size": 34005,
+      "sha256": "18AC4F6DBC0C476C5BE24F41719BC6F3D2027FA91A50E2902DD818317088C57D"
+    },
+    {
+      "path": "skills/archify/explainer/revision.mjs",
+      "size": 1965,
+      "sha256": "29032CAB30C03B2E4C48730F40175E0E59AA4794893C02E5AE38668776C18288"
+    },
+    {
+      "path": "skills/archify/explainer/sources.mjs",
+      "size": 20882,
+      "sha256": "C6AAE2EF90B6E49D16C1CCD5CFC5351A7716B8F9150E1C261DBD6CA8B8CA9AB5"
+    },
+    {
+      "path": "skills/archify/explainer/validate.mjs",
+      "size": 14520,
+      "sha256": "4E14063082B4BCED482E0D2F771DE5B29EF805677FCC354DFD283B9E16BD1B0A"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/3DKXF73K.js",
+      "size": 3429,
+      "sha256": "5901AFFFB8349D0CB095E93494E8D3F36F09497B28A9255E066C52B6CE0A6C31"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/42UTT654.js",
+      "size": 11384,
+      "sha256": "365A5DCD61413ED715D375C053466EF89652AAA5065214720045D22D3198D7ED"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/DKTLEL5E.js",
+      "size": 838,
+      "sha256": "91864EED78A6A3CC9791D20FB9B61FD8F458C12101662883CD23E755FD2A4CB6"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/EEIX5ZYH.js",
+      "size": 14177,
+      "sha256": "1E097466ABF989151F92368E6FF7CB463E2AE191724E307CA2D004A58126B651"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/EJ5KOXYD.js",
+      "size": 7664,
+      "sha256": "CB84C22DA57A11EB988D4E671B12FF17018923619883DDF49CD0B0AB270C4BBE"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/GUJTEFZK.js",
+      "size": 511,
+      "sha256": "E8584CE5872C50C6370EFC1FBCE911848506D84FF6FA88E4F079F412B5E2F068"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/IZOKQ2GT.js",
+      "size": 8651,
+      "sha256": "80D3EBE446AE5447BF88C7F01B762478F51CE8CDD6E270B90F4B58534FC363F8"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/L4LY553T.js",
+      "size": 14810,
+      "sha256": "D574102B3E5499E752513C2BA75F152CD447B9F81D877DDFFD37FAED0E7DAE16"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/MSKIJHB2.js",
+      "size": 5132,
+      "sha256": "94317F9DABBE5793C8ED57A298B5A68474FCCA6C62ECD07FABD9A3C6F15D3E23"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/RVARI57O.js",
+      "size": 159,
+      "sha256": "3DC7661B060578920EAB83AAFD1FA261886E7E331D44F8F5D2F34BD0804027A3"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/UKSIWDDN.js",
+      "size": 7382,
+      "sha256": "C0F5A984EAEFAEFA550D525670624E9D426BB7280BA33FCB5F9FA8ADCA804FC3"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/UPTXNAXN.js",
+      "size": 9468,
+      "sha256": "F2FC18109DFB5CA72EA43C7951C4CE36D20A890B2FEFB2D531FA751AA9911B87"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/XTDUIGUI.js",
+      "size": 5037,
+      "sha256": "1ED02BFF674691DE6CB6CE6B3863FB021B1508F33B992515FAEAC876D0716C39"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/chunks/YAYTP6L5.js",
+      "size": 15746,
+      "sha256": "9246835C2B1544AB95DD1B89B7CE4CFAA2A89AA26873F3D52F7E4A17EF957DA6"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/core.js",
+      "size": 347,
+      "sha256": "AC428C1CA244F030F363E0D0F12E623DF92C1439D2A211310D1FF73F0ED224A4"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/pie.js",
+      "size": 184,
+      "sha256": "A2BC92D2F8842B476CDB8A039455493DB2C71D6A4E3A1B3DC97CFC1F409056D1"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/quadrantChart.js",
+      "size": 209,
+      "sha256": "9AC8FC714B3973854EFDD960FB6831C973E72624BB9B0BC091ADA8958794EBFB"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/radar.js",
+      "size": 179,
+      "sha256": "379748E709992F9E242028AD4A1B103F75AD693A84331C8FC33DF0F258A7A9FE"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/sankey.js",
+      "size": 179,
+      "sha256": "A789E591BA81FD434418A64561005CAF50760F11CBAA9D4DD589E777BBFE8E36"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/venn.js",
+      "size": 154,
+      "sha256": "E4BC9943916A8CE8B07D0848EDA99D38F7E8334708998A5D951ACF27A5F4A059"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/diagrams/xychart.js",
+      "size": 209,
+      "sha256": "817DE14381D9BA413DC70947824FF2538BA532C232592035A5B836094434E4BB"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/LICENSE",
+      "size": 1934,
+      "sha256": "311BCCC30DE6F7B9CBFB64232BB0C911CCB2191ABE316550813AE25B2C7925B9"
+    },
+    {
+      "path": "skills/archify/explainer/vendor/pele/README.md",
+      "size": 475,
+      "sha256": "47CB1894B1D248C49B7D79590A97FBA294B090A7F2BAC178A85BAA79F2DAE0D6"
+    },
+    {
+      "path": "skills/archify/explainer/writing.mjs",
+      "size": 11389,
+      "sha256": "1030BC5B09F932E805F87390D8B51A1A23BC8DAB2CC02068873621E26DA8781F"
+    },
+    {
+      "path": "skills/archify/LICENSE",
+      "size": 11358,
+      "sha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30"
+    },
+    {
+      "path": "skills/archify/LICENSE-MIT",
+      "size": 1102,
+      "sha256": "B799AB081703E7821AE5096D2C1ABDF14BBDC75E8EA1C4045998C36ED6DB9706"
+    },
+    {
+      "path": "skills/archify/locales/ar.json",
+      "size": 33837,
+      "sha256": "4A8D5C821A16FA94C97B68784481841C323E288D841ACD84AC8415C063483A9F"
+    },
+    {
+      "path": "skills/archify/locales/en.json",
+      "size": 27386,
+      "sha256": "1E8B43D8BA6D8AE75C2B393B2EDB43CAC5E142F33CBC2D1A2351E0E8BAF9E1AA"
+    },
+    {
+      "path": "skills/archify/locales/es.json",
+      "size": 29504,
+      "sha256": "F2B971994CB9F7091758E605931B4B4959103ED0090916FE281BFB2F2E1E5CC7"
+    },
+    {
+      "path": "skills/archify/locales/ko.json",
+      "size": 30852,
+      "sha256": "B7F2BE52C61E4CED665EA62BB0670B4C2615A6C706127246A44BBCFFDF65F8BE"
+    },
+    {
+      "path": "skills/archify/locales/manifest.json",
+      "size": 293,
+      "sha256": "9A377676B5D16F97A6A1F9326AADBB447321E9CEB5744718181796CE3DCCE0D8"
+    },
+    {
+      "path": "skills/archify/locales/README.md",
+      "size": 2235,
+      "sha256": "F1F59D12D490927BFDB804B1A71E76EA057F2EF8DC1D98F9AA053343E0F80056"
+    },
+    {
+      "path": "skills/archify/locales/zh-CN.json",
+      "size": 27080,
+      "sha256": "83D870452E9FF3459A3CAE88BE6900D9A98B268E6CFBA94B608A7C10F484E485"
+    },
+    {
+      "path": "skills/archify/locales/zh-TW.json",
+      "size": 27147,
+      "sha256": "0DB367AEC82CF92B08D4335D5ED021480801F7AE79B1E2C1A0C79B27D4EAFB2E"
+    },
+    {
+      "path": "skills/archify/migrations/workflow-v2.mjs",
+      "size": 9204,
+      "sha256": "0EEC02057B8490AFCA9B093DE5EA6E636C7FAD2361CD28A04CF2F3E4B6197434"
+    },
+    {
+      "path": "skills/archify/NOTICE",
+      "size": 1340,
+      "sha256": "665EB53E6FCF09CEE183C9F23C8052645DC95570D9CCBBF53DC0F5213A1B5EDD"
+    },
+    {
+      "path": "skills/archify/package-lock.json",
+      "size": 3232,
+      "sha256": "AB7A1438A8EDBD26CEDA9CF9648E3AD50542BFFD7CC87F9EC83793CDE1F26287"
+    },
+    {
+      "path": "skills/archify/package.json",
+      "size": 1485,
+      "sha256": "EA99289562037CAE2DEECED0B45E1374CE4C4B4F23A53A607A6AADA62C803CD0"
+    },
+    {
+      "path": "skills/archify/recipes/scenarios.mjs",
+      "size": 41520,
+      "sha256": "1E93BA15D0782BE535251BFB406CF8CC056291D84D77D33CA9DCA01DF743528F"
+    },
+    {
+      "path": "skills/archify/references/architecture-layout-repair.md",
+      "size": 4449,
+      "sha256": "6C90CAA232C004FA43B8770C745B83672919DEAF8909F2592A3AD5FCD4031953"
+    },
+    {
+      "path": "skills/archify/references/authoring-contract.md",
+      "size": 42749,
+      "sha256": "C7C9918EE28E213DEFD4CB504F0440AE366A8DB4665938D2A0DB0B62DA565901"
+    },
+    {
+      "path": "skills/archify/references/authoring-defaults.md",
+      "size": 12862,
+      "sha256": "11A2C60B31CB8A4BC19E83FF2E8351C1B5AF93CFA091512E6D053A13288EAF6C"
+    },
+    {
+      "path": "skills/archify/references/brand-marks.md",
+      "size": 5771,
+      "sha256": "D6E1A6CEAFD07E48F27CAF01655EA642365A5416ED0543B4022CA62750B58F0F"
+    },
+    {
+      "path": "skills/archify/references/delivery-contract.md",
+      "size": 49894,
+      "sha256": "0E283A418871A19C7ADCC493C461AE6180E9B233F14AD95A19A9C15E109D2415"
+    },
+    {
+      "path": "skills/archify/references/explainer-authoring.md",
+      "size": 18968,
+      "sha256": "722C126F05192DA499F75468E9C1B3001DAA4A844894EBF45A854B6687A4AF18"
+    },
+    {
+      "path": "skills/archify/references/repository-authoring.md",
+      "size": 8004,
+      "sha256": "C1648FC0C1B85A3A9BFBF3A8919DFA741FF0B5A55EA310D1FCACBF6EE837E139"
+    },
+    {
+      "path": "skills/archify/references/update-awareness.md",
+      "size": 1957,
+      "sha256": "16B437A47790FDA48F0E74F6AA053715FB06B6E8CD1BA994D1C01FFEFA12A76B"
+    },
+    {
+      "path": "skills/archify/references/viewer-runtime.md",
+      "size": 5692,
+      "sha256": "7D35EF52A8F47E77E8EC827CEA7C71219BF1AAFA53B5EF72AD4F1E1437F882A4"
+    },
+    {
+      "path": "skills/archify/renderers/architecture/grid.mjs",
+      "size": 2071,
+      "sha256": "F6DE99C32436FEED3378B0DDEF516BB4732FF27A89C543B50635D4D14A15A55A"
+    },
+    {
+      "path": "skills/archify/renderers/architecture/labels.mjs",
+      "size": 155,
+      "sha256": "3A0066A987D8AD20121D0F7261D8BCFD3659443A335EA5E47938E7779AE12D31"
+    },
+    {
+      "path": "skills/archify/renderers/architecture/render-architecture.mjs",
+      "size": 58551,
+      "sha256": "50BF6F0748446BA99C4236E29E2E39755D5A2B8894FB598F104F7B3107063CA3"
+    },
+    {
+      "path": "skills/archify/renderers/architecture/routing.mjs",
+      "size": 74482,
+      "sha256": "908DDAF85CAAA2D5D4A17C0544489AD9500614914C64A1D2EE2B96C4CC9AD4B3"
+    },
+    {
+      "path": "skills/archify/renderers/class/README.md",
+      "size": 6781,
+      "sha256": "33074161E184A98DBB2B65D0EE308779B216A3C97DDA4DFAA2BD6E2FB2E9F526"
+    },
+    {
+      "path": "skills/archify/renderers/class/render-class.mjs",
+      "size": 53567,
+      "sha256": "E4943C1E91062ABA7C72715E4887165F03908DE03A1C99DC71F296BB0D1214CF"
+    },
+    {
+      "path": "skills/archify/renderers/dataflow/dataflow-compiler.mjs",
+      "size": 91209,
+      "sha256": "E27A9B69876927B7285CE14569D22B92E32E8173FD953184AC13A8A02408E257"
+    },
+    {
+      "path": "skills/archify/renderers/dataflow/joint-label-routing.mjs",
+      "size": 10827,
+      "sha256": "8D1FD73D0D6055F6C551DCBC7EA3B01E4B801216C3101B2246E4172A564BEEA8"
+    },
+    {
+      "path": "skills/archify/renderers/dataflow/label-capacity.mjs",
+      "size": 4454,
+      "sha256": "187AF128F09630E512931B22BB301115D2A4D72C925CF02D3FC4736FB1846CB9"
+    },
+    {
+      "path": "skills/archify/renderers/dataflow/README.md",
+      "size": 9193,
+      "sha256": "3E9C8368E5AAB1E686817745628D6DA6E584B5009973AE1EE8E4FBEA1F324BA5"
+    },
+    {
+      "path": "skills/archify/renderers/dataflow/render-dataflow.mjs",
+      "size": 960,
+      "sha256": "BEFC8BDACD86C07DD0B65A4B9635632A1246DD8DAE7CB98DCF6D31DDE361DA2C"
+    },
+    {
+      "path": "skills/archify/renderers/erd/grid.mjs",
+      "size": 7038,
+      "sha256": "1AA4644D8EF13FDEBE5ADF48377C0755222A0288F6CC487FAF052D7957A78A32"
+    },
+    {
+      "path": "skills/archify/renderers/erd/README.md",
+      "size": 14516,
+      "sha256": "2DCE4B5DA474D2B1F4190D34F5F3B625E2A479460DA8EE89B8DBE0481E9245F4"
+    },
+    {
+      "path": "skills/archify/renderers/erd/render-erd.mjs",
+      "size": 80473,
+      "sha256": "ED180A39C00BEC377BDE0C48C8AF798BB93E97D0CF006DD321A9BA14D5C50D7E"
+    },
+    {
+      "path": "skills/archify/renderers/explainer/render-explainer.mjs",
+      "size": 3292,
+      "sha256": "A646F6E5450BFCDE6BD0AAC23487D0F9D7FEB947B307079F9A6F2DF27087FE93"
+    },
+    {
+      "path": "skills/archify/renderers/lifecycle/README.md",
+      "size": 6167,
+      "sha256": "42AA4D37721661D1F59BABB7E6467D910C7569D8573ADD2679C04942F5EBD72A"
+    },
+    {
+      "path": "skills/archify/renderers/lifecycle/render-lifecycle.mjs",
+      "size": 61373,
+      "sha256": "B700AF01FA3848D7DFDF492B9EFACCC7B384E6AD509A75BF9AC9AF2038E4EFC6"
+    },
+    {
+      "path": "skills/archify/renderers/sequence/README.md",
+      "size": 8667,
+      "sha256": "D93CDF05140AE60F8A5DF495DA5CD5C9DC492F2338760C53626F3943454D00B3"
+    },
+    {
+      "path": "skills/archify/renderers/sequence/render-sequence.mjs",
+      "size": 57144,
+      "sha256": "249689C4DE5636BF7D746A04B3369F5576B91F76EA533502B313F943DA4A8A95"
+    },
+    {
+      "path": "skills/archify/renderers/shared/atomic-output.mjs",
+      "size": 70372,
+      "sha256": "F804D66D1801AC2DADC9D0A4C334645CFBB7A8CD1A7DE112DDFB952C056A580B"
+    },
+    {
+      "path": "skills/archify/renderers/shared/automatic-labels.mjs",
+      "size": 14771,
+      "sha256": "3F3B63CD9CFD242968A739CA703291D7788567EC5699B5E7D6A11A4079E15917"
+    },
+    {
+      "path": "skills/archify/renderers/shared/brand-marks.mjs",
+      "size": 28938,
+      "sha256": "87436FA956C98DC9BBABF826D5F254587C1B3E7A829883F4098E04C62F4B5345"
+    },
+    {
+      "path": "skills/archify/renderers/shared/cli.mjs",
+      "size": 19047,
+      "sha256": "039C3FBB0D46436D387629CE16B737A7C3247DFB79A9E77C1487CA49C0AFBBE0"
+    },
+    {
+      "path": "skills/archify/renderers/shared/desktop-readability.mjs",
+      "size": 6929,
+      "sha256": "55EE7ABA702D7883A08B6E54B39B00D5A17918A0C6BCF0C0FEA19034F4DE8990"
+    },
+    {
+      "path": "skills/archify/renderers/shared/diagnostics.mjs",
+      "size": 8272,
+      "sha256": "4635119E65F77F28F0A81C038642C7D7DE318BA9400073F37DECD59DF258DCD6"
+    },
+    {
+      "path": "skills/archify/renderers/shared/engineering-profiles.mjs",
+      "size": 6936,
+      "sha256": "7E99F9D5423F66CC9AB6224DA56DC2D5AA6C6FAEC29178034794E9DB6B5B2889"
+    },
+    {
+      "path": "skills/archify/renderers/shared/generated-brand-marks.mjs",
+      "size": 163612,
+      "sha256": "0F157D229C12DF6F53763A3B88684BAA5803A52484C49C4D34EC40B8743BEEA2"
+    },
+    {
+      "path": "skills/archify/renderers/shared/generated-validators.mjs",
+      "size": 1020040,
+      "sha256": "F9E6D4F4EF5C5AB98013563C7EA1D27D58C67111832BD4167989DC0C88405181"
+    },
+    {
+      "path": "skills/archify/renderers/shared/geometry.mjs",
+      "size": 89929,
+      "sha256": "818F6C000595F11A915CCE2F73B5DEB1A82ECECF6C578A22BEE70099988EA7A5"
+    },
+    {
+      "path": "skills/archify/renderers/shared/i18n.mjs",
+      "size": 13869,
+      "sha256": "1E6601157BABD70C455DCDDC93868F4665E56E7E723708D95DCC791DD1B636B9"
+    },
+    {
+      "path": "skills/archify/renderers/shared/layout-report.mjs",
+      "size": 1587,
+      "sha256": "979DA7226C5080CB16FB352236D5705CC79C06C15D0A3550B95963AF02C63B6E"
+    },
+    {
+      "path": "skills/archify/renderers/shared/legend.mjs",
+      "size": 9225,
+      "sha256": "C33FCB54CC5AA60D788154036DAA165F85D2E06D28AA9F1D4A73705FA278DE70"
+    },
+    {
+      "path": "skills/archify/renderers/shared/node-card-style.mjs",
+      "size": 2470,
+      "sha256": "80A0D473B936EE198E73CB89ADDD43A6344FB81DA94F9FC88C53AE759CBF748D"
+    },
+    {
+      "path": "skills/archify/renderers/shared/output-path.mjs",
+      "size": 19029,
+      "sha256": "7422139101ABD93493918898A97BED06F2212BFD411D3514CD229B6D57A3797E"
+    },
+    {
+      "path": "skills/archify/renderers/shared/owned-temp-directory.mjs",
+      "size": 3198,
+      "sha256": "FB94515F8CD4B6B28799A7367745235822E2169534B8200791600CE7C3953A0E"
+    },
+    {
+      "path": "skills/archify/renderers/shared/path-semantics.mjs",
+      "size": 32406,
+      "sha256": "4EF002AF9061C06634A07DE6D199FD7D13E6C50561C792FD018118BF3E065F52"
+    },
+    {
+      "path": "skills/archify/renderers/shared/portable-path.mjs",
+      "size": 12543,
+      "sha256": "26130CBCDAE9B9F082486AEB5FEEC9C5FE57905D2ED8E30C8081B9710E2E8AC3"
+    },
+    {
+      "path": "skills/archify/renderers/shared/repository-evidence.mjs",
+      "size": 20342,
+      "sha256": "D1E14F82BA07EB4DF9FB0986B4D0C02110D1EAA05A4454F33E92BD1E5DFDC8D3"
+    },
+    {
+      "path": "skills/archify/renderers/shared/repository-location.mjs",
+      "size": 4349,
+      "sha256": "344044D8240A093919894BD63278652BD01B3717C5B49FB174A6F77BEA28B839"
+    },
+    {
+      "path": "skills/archify/renderers/shared/route-quality.mjs",
+      "size": 26944,
+      "sha256": "C9CB9AAE3A1623667F0490BA755BBC0BA57E5957E7EA56379D872EB1F2BB2090"
+    },
+    {
+      "path": "skills/archify/renderers/shared/sidecar-path.mjs",
+      "size": 1269,
+      "sha256": "C23CAC8BCC265A74E2920C58D0968D1FFA06C1328BDD9CFD07755D4DF2F22974"
+    },
+    {
+      "path": "skills/archify/renderers/shared/software-notices.mjs",
+      "size": 506,
+      "sha256": "8BFC9EE3DC35EB0AA9860F71E7038F15647ED24D6CE7386E0E24870766E10BFE"
+    },
+    {
+      "path": "skills/archify/renderers/shared/spatial-grid.mjs",
+      "size": 2440,
+      "sha256": "E728BF6A729972F95AE09E368EA370490D10FF94D49DEBE2FAB2E9BAC923EE1A"
+    },
+    {
+      "path": "skills/archify/renderers/shared/svg-path-analysis.mjs",
+      "size": 5429,
+      "sha256": "4C498EF5BA090A2D658C2CE3D80145F4CC63DA9462F547B621206250096957C5"
+    },
+    {
+      "path": "skills/archify/renderers/shared/text-fit.mjs",
+      "size": 5195,
+      "sha256": "EBD499072EF4FE31C9AABF45A01C204A9C2C142D45F087C3240673F90F477038"
+    },
+    {
+      "path": "skills/archify/renderers/shared/utils.mjs",
+      "size": 12972,
+      "sha256": "D0E8692B8ACDC6993578C5D4AEB67065EFFDF5BF4CF2CD127BF561C677AF38F5"
+    },
+    {
+      "path": "skills/archify/renderers/shared/validator.mjs",
+      "size": 3336,
+      "sha256": "F5CF5B9AA3623A456E9A07F0C5F08FE09A0A67D3BA356E32937C3287C75C3BC9"
+    },
+    {
+      "path": "skills/archify/renderers/timeline/README.md",
+      "size": 4087,
+      "sha256": "377CB185F8DDFCA2A0349D122E736A6FC832D5C8E0555039F0E0BCC4F5038C86"
+    },
+    {
+      "path": "skills/archify/renderers/timeline/render-timeline.mjs",
+      "size": 30321,
+      "sha256": "125FC65B2CD2AC725A3AD655F4DCB8F14E158E21D04AF72924839830181E294C"
+    },
+    {
+      "path": "skills/archify/renderers/tree/README.md",
+      "size": 4255,
+      "sha256": "C1AFBCB94E026910987199776D76896B58B7947DB2F94D90D1DA608E44CA9A35"
+    },
+    {
+      "path": "skills/archify/renderers/tree/render-tree.mjs",
+      "size": 30666,
+      "sha256": "4E2BA7D4A3F567760C3801E7439BD18FA28ACFE51E581479BD56AD549E240B68"
+    },
+    {
+      "path": "skills/archify/renderers/waterfall/README.md",
+      "size": 3501,
+      "sha256": "13AFED9D91D02BDABEA0B920C23CD6EE851A42E53D30E80042E2AEE4F845ECD0"
+    },
+    {
+      "path": "skills/archify/renderers/waterfall/render-waterfall.mjs",
+      "size": 23030,
+      "sha256": "DF95D32EF3B790C9B830F5E7A5741D71AE14B9F602D65DB84BC60235A74D3290"
+    },
+    {
+      "path": "skills/archify/renderers/workflow/README.md",
+      "size": 17670,
+      "sha256": "D6F13218145CF373FAFA6005EB718C1564A424B486253048B11D242C33C445AA"
+    },
+    {
+      "path": "skills/archify/renderers/workflow/render-workflow.mjs",
+      "size": 1654,
+      "sha256": "304DF0DF006C44AB01AD534F34CB48CBE163F7ED2E7E2E8490DFEE88827D3ABA"
+    },
+    {
+      "path": "skills/archify/renderers/workflow/workflow-compiler.mjs",
+      "size": 250196,
+      "sha256": "A84FA7570341166E9190892B4AB9BD5FD1AC63290CC9EC5A48DCAAF8A4183A3F"
+    },
+    {
+      "path": "skills/archify/renderers/workflow/workflow-migration-geometry.mjs",
+      "size": 6331,
+      "sha256": "47729F32EAE163C05C249CC0A663949FAE745A9C74FE9548C83EB361B31E285A"
+    },
+    {
+      "path": "skills/archify/renderers/workflow/workflow-placement-repair.mjs",
+      "size": 4762,
+      "sha256": "3EE6E83C3A5279E1AF2B06DB39FD39C3348264B2DAA159A94CDA3E1D8DE5ED7C"
+    },
+    {
+      "path": "skills/archify/schemas/architecture.schema.json",
+      "size": 6024,
+      "sha256": "AEF992B585A18A4016B8207254FE43A6227B0D45322A1BA95E0F69A80FC8F8C1"
+    },
+    {
+      "path": "skills/archify/schemas/class.schema.json",
+      "size": 8120,
+      "sha256": "0ECFB9948563166C4F23DF784D618DDD93F003EE61402A9349C5F63B0284FF2A"
+    },
+    {
+      "path": "skills/archify/schemas/common.schema.json",
+      "size": 5785,
+      "sha256": "3BB6BDE1122EBC1D47F73CF12400015BAA0C7E5650E5780B0E89773D7EAD4DEF"
+    },
+    {
+      "path": "skills/archify/schemas/dataflow.schema.json",
+      "size": 6320,
+      "sha256": "F01B2FAAFA5FD6E300F6B5045EECA70F70226552411180442D6E528DD45172F1"
+    },
+    {
+      "path": "skills/archify/schemas/erd.schema.json",
+      "size": 9329,
+      "sha256": "83AEF0349F3CD415A00DA4ED30C7864056DC9599627E004E6B7168AD4149EBC8"
+    },
+    {
+      "path": "skills/archify/schemas/explainer.schema.json",
+      "size": 19246,
+      "sha256": "9FC54042927602B1C37DD130061989F7D9A90718888AD75943275BE2FD7D1371"
+    },
+    {
+      "path": "skills/archify/schemas/lifecycle.schema.json",
+      "size": 5342,
+      "sha256": "151BEFAE29A68833BA26E7848769E89AB9DC71FC5BBA234A91A62307338CFA49"
+    },
+    {
+      "path": "skills/archify/schemas/README.md",
+      "size": 15049,
+      "sha256": "DCB6E86F3D1591004C669764EC62558BD01384C2E9155BB82D8A3BE1C3842E05"
+    },
+    {
+      "path": "skills/archify/schemas/sequence.schema.json",
+      "size": 6178,
+      "sha256": "97AF565F8B6D8FBD4B5BE40DDB52F4943ACCAB2CF4F386D695E800D367DD4F89"
+    },
+    {
+      "path": "skills/archify/schemas/timeline.schema.json",
+      "size": 3951,
+      "sha256": "4A657251D454BDE44EF4697C960FE7503EEB4DB4E50F9540C7E2D54046DD0769"
+    },
+    {
+      "path": "skills/archify/schemas/tree.schema.json",
+      "size": 3172,
+      "sha256": "65C794A1F522CE336AFE787BD59ADB63A81F57A5BBA3AC266F2BAE5C3A07B8C3"
+    },
+    {
+      "path": "skills/archify/schemas/waterfall.schema.json",
+      "size": 3526,
+      "sha256": "7C3000534B491CE86B96ACE528E9BD5A453BA3D14294A724DA3ECE4BD83B51F6"
+    },
+    {
+      "path": "skills/archify/schemas/workflow.schema.json",
+      "size": 10165,
+      "sha256": "E13A1CE3B841376C8C6F6B9CB8152F8C0C7D70A77A2960FECDFE9025DE83DC25"
+    },
+    {
+      "path": "skills/archify/scripts/check-render-output.mjs",
+      "size": 68682,
+      "sha256": "6288FF1BE897B5BB1CBBB790CC58F23335E6806829389B2BF53297F6C79483A2"
+    },
+    {
+      "path": "skills/archify/scripts/check-update.mjs",
+      "size": 59332,
+      "sha256": "A1ED8BE99A484D81964C9D66938F813FB3726690AACE3E982E777EA8BCA5EBBC"
+    },
+    {
+      "path": "skills/archify/scripts/delivery-update-child.mjs",
+      "size": 1296,
+      "sha256": "EC231C992AB9B548C735698F209CB350D4B137AAD2A5E8CB1374E692B6B38064"
+    },
+    {
+      "path": "skills/archify/scripts/generate-brand-marks.mjs",
+      "size": 5136,
+      "sha256": "0434C31903B831382A91E85A329BCBCB39B32F29C656273A273F896B3B0A42E7"
+    },
+    {
+      "path": "skills/archify/scripts/generate-validators.mjs",
+      "size": 4172,
+      "sha256": "F6EC68D16B8B2A8A1C55B3E5CBB121A8557B86A5C59A6A0503E798DB9C0E75EE"
+    },
+    {
+      "path": "skills/archify/scripts/render-examples.mjs",
+      "size": 2024,
+      "sha256": "C2C99C4153CF21F0526CF3F041C1D81716017BE182D404173F8961FA494E8C8C"
+    },
+    {
+      "path": "skills/archify/scripts/update-contract.mjs",
+      "size": 6826,
+      "sha256": "B6EB5E18EBEA770C0A0C2CF2BA45D122D85ABE61E94B9A5426602A9F84910B31"
+    },
+    {
+      "path": "skills/archify/skill-release.json",
+      "size": 260,
+      "sha256": "1EA25551E0359E547267D40E83812FFD1A7BDF7398826B65F2A2FCF1A11BA596"
+    },
+    {
+      "path": "skills/archify/SKILL.md",
+      "size": 18877,
+      "sha256": "1382CFB7108B05E500B82AF93C04FD7B694430D3908039BD92D634F01C1E7181"
+    },
+    {
+      "path": "skills/archify/THIRD_PARTY_NOTICES.md",
+      "size": 5669,
+      "sha256": "B5E129197F391568F7ABF287C74B24F4835F10E5388F600407C8788FEAEB9015"
+    },
+    {
+      "path": "skills/aside-browser/SKILL.md",
+      "size": 1524,
+      "sha256": "B535D94CA2C98446B2B129DB670124C704573EE8810E068014EA6ED9EAA089ED"
+    },
+    {
+      "path": "skills/brand-design-geometry/references/source-notes.md",
+      "size": 542,
+      "sha256": "AB9DFBE9CE191AFC88D839F09ED09F5A00CC440DA23C38F8BD5B009D988FABBA"
+    },
+    {
+      "path": "skills/brand-design-geometry/SKILL.md",
+      "size": 4471,
+      "sha256": "756820780980C283108207F7C8F0A834375F25D402825E4FFB739B0B16DC9FBD"
+    },
+    {
+      "path": "skills/codex-stall-recovery/SKILL.md",
+      "size": 6241,
+      "sha256": "2D22DA6BEBDBF5EA6E5431820B38CE920B9D43C6E1D84FF282527DD655BBA5A3"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/app.css",
+      "size": 15918,
+      "sha256": "16518C3A999FB81B2698137F1F743128C189272E8B1D411C4B02598C6755B67F"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/base.css",
+      "size": 6520,
+      "sha256": "AA6EA21613C79E06E06DEA3D33200C78590C89B0346BB976EC07947BB45CEAFA"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/base.js",
+      "size": 2162,
+      "sha256": "8D50416125596B84C0083D5D5FFBA09ADD57DB4B06CBF0EEDAC2D4999B7653BC"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/charts.js",
+      "size": 59016,
+      "sha256": "A7E916594729576B7C7E37048A68508A3243FE8FBC9654775CD245232E9F8100"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/scenes/stage.css",
+      "size": 1141,
+      "sha256": "B5C587DAC45AC6FCC34AE7CB4AA2B3E43797B2EF5D71FD32B48483BDA3FCA3E0"
+    },
+    {
+      "path": "skills/design-taste-frontend/assets/scenes/stage.js",
+      "size": 7691,
+      "sha256": "9CE782A94406E6A230C49CA5F87E56AFF9D436DA3F56416B1659421F8976BC2B"
+    },
+    {
+      "path": "skills/design-taste-frontend/evals/evals.json",
+      "size": 8198,
+      "sha256": "DF0EE2A248CD5445C0E1600EB095DC0D43DD312F5B4BB4316A78471AE0D22A74"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/app.json",
+      "size": 74229,
+      "sha256": "3678CCBE1E8D05FEFF6D4F07FA16A0D610AEFEEA5E697E842A876713BA763CF5"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/directions.json",
+      "size": 61466,
+      "sha256": "D71E3824AF33A92D9E1CA543E17F80BAA5B7A30C815DF5125CFE3300A14892C1"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/heroes.json",
+      "size": 108240,
+      "sha256": "98D5E01104412A5FB27936F9C686F3BC0A5F76CE0793186D3DE46B982C65B172"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/motions.json",
+      "size": 9033,
+      "sha256": "51815DD09A823C829897F99ED9EA7DC5C35BD305AC989B8A0632EA6D42A3F08B"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/palettes.json",
+      "size": 34753,
+      "sha256": "A14BE9F45BABA848C53436F4AA44EB4F1925AD3E232C5D1DCDDF4F565661A525"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/photos.json",
+      "size": 160632,
+      "sha256": "8FC3B76BCA90F44675BD99D99BB4CE95B0756C6C5D4141B7E917D11D90E61520"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/sections.json",
+      "size": 276146,
+      "sha256": "7C2C8A470A22501176948661F803434DB8C542A511281752C717252DE80C1AD8"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/sites.json",
+      "size": 869073,
+      "sha256": "A2BC4D0CFF8EBFF481F0DFD4879C106D5E1E16CB3122F9AB3702184A5E1F3502"
+    },
+    {
+      "path": "skills/design-taste-frontend/library/type.json",
+      "size": 82326,
+      "sha256": "DBABF41A468775CF6CC5EA5F3C898B0663293822E167B72B02FEBA1EF03EBF37"
+    },
+    {
+      "path": "skills/design-taste-frontend/LICENSE",
+      "size": 1065,
+      "sha256": "4575A543AB88DAD12CCEA7D97E563D0BCE5B448B06072E65D3264497DAD326DF"
+    },
+    {
+      "path": "skills/design-taste-frontend/README.md",
+      "size": 5345,
+      "sha256": "5E33FD716B3E1FFACA9340F645D44C193F9B446107FA67F0CCE498D33025672C"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/app-screens.md",
+      "size": 85358,
+      "sha256": "55E937EC30DE605B53A11310B446F328A3CE7403DE24FFF008920A00BE1A5ED4"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/colour.md",
+      "size": 6853,
+      "sha256": "6556BCC7EED48B7BC2D0D281C28BF57C1B75E94D7CA0BDE49F5D9DF8C6A09351"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/copy.md",
+      "size": 9436,
+      "sha256": "676EDBE75D5F3CFD8A793010EA9F730525AE074B231A674C2426264D3398262E"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/critique.md",
+      "size": 11157,
+      "sha256": "9C2F4392674530B3F02AC529FBA53D82AB37B85F401C4C1989FBE98D6217F0B4"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/imagery.md",
+      "size": 51025,
+      "sha256": "518DEF6B2C643B295E13E66B09B66F2E3FC1421D3CF6C7DBB1DC749097AD2AD9"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/layout.md",
+      "size": 18315,
+      "sha256": "40080640719B07737AFB94A8868AFEF87767A1AB4892814D9B6882E2D283453B"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/motion.md",
+      "size": 55400,
+      "sha256": "79F94D8469898D2BF6186C198AD86DDF691A67C6536EAEC36A4EC101285D9A37"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/research.md",
+      "size": 24262,
+      "sha256": "83433646A352CAE588591E05BC0A75FE1DEADFF55EDE8851BC8DD5DD483ADFC5"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/scenes.md",
+      "size": 9817,
+      "sha256": "733AC7258A1A28F2F6AE8205BC36BA66C563594AD0A2E2F829C5EAABA3199A61"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/tells.md",
+      "size": 7420,
+      "sha256": "8E6DE4411C43D3108F832B3F33BB1A2A838148A72B92A176DF893B67D99A0DA9"
+    },
+    {
+      "path": "skills/design-taste-frontend/references/type.md",
+      "size": 8495,
+      "sha256": "6353FF1D0CE2F9913628C88FBCB7DAD3CC3877E61196848BCE99E33A17D20611"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/assets.mjs",
+      "size": 64522,
+      "sha256": "B4B4B99B5634735F5A0B4213169CDA5240EE6BBED8ED8042AD1BCF2B6607C1FA"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/draw.mjs",
+      "size": 54140,
+      "sha256": "6C2047D207D2400D3B099956DFE2AC306203B614246E66BC8760212A7F797DBF"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/inspect.mjs",
+      "size": 28853,
+      "sha256": "C0D7366F789B3F594787B37A525D1D7096104A499AAC8A97AE04B405046CF02C"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lib/app-draw.mjs",
+      "size": 14715,
+      "sha256": "AA0802D341D19B53EC14EC21746E428BE49A8EC3ED7B30253194105FC18A8DF6"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lib/cdp.mjs",
+      "size": 11920,
+      "sha256": "320FB75C6454A97B88458E5C33559A1188042AA0041BD5EFF53455900236C88A"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lib/inspection-files.mjs",
+      "size": 478,
+      "sha256": "5635C0D5FBE0F5BD012E58534BCD554FF7440A4E5C724A61A61C476C7F42E918"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lib/probe.mjs",
+      "size": 82552,
+      "sha256": "A5A17DF891E438F55F196D8233601C3C79C873755F442C1AC5C3568DE4E6BB48"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lib/rules.mjs",
+      "size": 37298,
+      "sha256": "8244AA9F53E77A59A562410310414E6B1A0F0CF002CE8F5AA792740B7F0149BF"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/lint.mjs",
+      "size": 11747,
+      "sha256": "05F2FAE2F56FC051B539CDBACB43A6F78FBBFB9644BB74AA11BE472FF12DCAF5"
+    },
+    {
+      "path": "skills/design-taste-frontend/scripts/scenes.mjs",
+      "size": 8980,
+      "sha256": "234EC582E2B841457C33033FEEEBA8535F9AC285495A74D08DC533A1566C90D5"
+    },
+    {
+      "path": "skills/design-taste-frontend/SKILL.md",
+      "size": 39537,
+      "sha256": "3435ED963B15A1B6447746EC8844AB2CD38D8D2E8EAD3451937F42DF01E408C4"
+    },
+    {
+      "path": "skills/graphify/SKILL.md",
+      "size": 1405,
+      "sha256": "1B73E35824F2B3F5D54C8E5D2DB5DDB3378D21F329272F66A9A8F814E5D2CB9A"
+    },
+    {
+      "path": "skills/hallmark/agents/openai.yaml",
+      "size": 386,
+      "sha256": "0BC6FA7D573C926E8D3FE04A5AFC8191096E5AA7287598A59B6C7E6321B53298"
+    },
+    {
+      "path": "skills/hallmark/LICENSE",
+      "size": 1078,
+      "sha256": "06088A8B94598626F27612DEA42300154BF7BE967C85D9D3EEE4490CB056AF7D"
+    },
+    {
+      "path": "skills/hallmark/references/anatomy.md",
+      "size": 7037,
+      "sha256": "70F570279D42AC0BEF4AF809C80B522E550C6DACAAA0A93349A0FFF0D5B93500"
+    },
+    {
+      "path": "skills/hallmark/references/brand-truth.md",
+      "size": 3685,
+      "sha256": "01C17C45D3B213F80EF28C93548D1B99AA2AFAD75ED8B236811BA56169C3F068"
+    },
+    {
+      "path": "skills/hallmark/references/comp.md",
+      "size": 7669,
+      "sha256": "597F16DE607E136F93EA5829C9D82663223A1C1C0423D581B55FA0B51C08F37F"
+    },
+    {
+      "path": "skills/hallmark/references/craft.md",
+      "size": 19279,
+      "sha256": "1B7B40F81F0FE1C04DCE133696182CA1229D16162F8F3203603F24A0F585C41C"
+    },
+    {
+      "path": "skills/hallmark/references/dark-mode.md",
+      "size": 3919,
+      "sha256": "99E86439EED1CAA9E898A31BAA05E65C856C53918FAF6FDCB5D71A8E0F1EF131"
+    },
+    {
+      "path": "skills/hallmark/references/data-viz.md",
+      "size": 3398,
+      "sha256": "1A26F9E8E16CA065D7412D2DB57200698459CDBDA498E08E8EAF0EA7A82097DC"
+    },
+    {
+      "path": "skills/hallmark/references/design-md.md",
+      "size": 3061,
+      "sha256": "839D4CD8D5B07007854E9C6DE95491691725F2968A0922F9B8FCFDBE42E2784C"
+    },
+    {
+      "path": "skills/hallmark/references/direction.md",
+      "size": 7525,
+      "sha256": "19E00099E95BE52DF2AE893881E29A23CD7A5EE5DC8434A87588376818851642"
+    },
+    {
+      "path": "skills/hallmark/references/export-formats.md",
+      "size": 6294,
+      "sha256": "3078BCB08E6324904EE156B6871DC0F47AA170E5D4BAF09D43A5C48C46CA7C6B"
+    },
+    {
+      "path": "skills/hallmark/references/flow.md",
+      "size": 16750,
+      "sha256": "D24FA0BBFD8EA6F8ADD579029598E09815A697FC99A4ABDB8C17F67155E368E5"
+    },
+    {
+      "path": "skills/hallmark/references/fonts.md",
+      "size": 5302,
+      "sha256": "87D50B1B32B9C901D9DF5376870CF6D8E39334F468FE9A582A2720D9DA5586EC"
+    },
+    {
+      "path": "skills/hallmark/references/gates.md",
+      "size": 39061,
+      "sha256": "63AD234A1ACAB5E081DFE8ECF2331518A43CBF42760DC5C6ABABFB24D7B3E50C"
+    },
+    {
+      "path": "skills/hallmark/references/genres/atmospheric.md",
+      "size": 1664,
+      "sha256": "39C2BA5B282FCC934742AEB410D1BB4D6C65F1DA1514B0F18A9600AA8F13F289"
+    },
+    {
+      "path": "skills/hallmark/references/genres/editorial.md",
+      "size": 1372,
+      "sha256": "1D47311BFD4D3E4C02F88F25E4852D920D168EB838370FEE77B917BCC6E3592C"
+    },
+    {
+      "path": "skills/hallmark/references/genres/modern-minimal.md",
+      "size": 1551,
+      "sha256": "5F84B3C056BE101707C6F2D7AC929E879F5AB7B009AC8426156C11054193CD9B"
+    },
+    {
+      "path": "skills/hallmark/references/genres/playful.md",
+      "size": 1610,
+      "sha256": "974E13A9ADA8B49E2CFCC05EFB8235BE60103ACEF02E390D8F819CD8E2ABD3A9"
+    },
+    {
+      "path": "skills/hallmark/references/imagery.md",
+      "size": 14343,
+      "sha256": "B5A4ABAA3FD949AC2E2890C9AA37B2953587ED419FDD1B4FF343A4FC04838E7E"
+    },
+    {
+      "path": "skills/hallmark/references/interaction-and-states.md",
+      "size": 6034,
+      "sha256": "08E232008734FCE86B1EC6085DB72342E90D2F855351EB84F20EA3799FE0808A"
+    },
+    {
+      "path": "skills/hallmark/references/layout.md",
+      "size": 16258,
+      "sha256": "FA904B5B46F19CA08EE325C99DEB1CF30C67ACB00106E7B74945C30E428C7EAB"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/01-bento-grid.md",
+      "size": 1554,
+      "sha256": "1EFD7DA3E1857D22DA50307AF0EFFA92200198B59C26F0E429B8FFCAA9CD96AE"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/02-long-document.md",
+      "size": 1833,
+      "sha256": "4D7524C16B764DAEF6FD8BC5E6757DCC4D886ADDF33F324B32F024C64BCBC573"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/03-marquee-hero.md",
+      "size": 1649,
+      "sha256": "CB379A2EB56D8503265AB541EF9711E59BB2D51DADEDFE3E47CCB697B3948E79"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/04-stat-led.md",
+      "size": 1923,
+      "sha256": "2A065807340244D188DE455FDB21C7FF8906BB95240873D0993F734C85C8F4A1"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/05-workbench.md",
+      "size": 1671,
+      "sha256": "6BC0CCD0604AFEF8C749706189CF91B35078BCC52738EB29603840DB0DB151C6"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/06-conversational-faq.md",
+      "size": 1530,
+      "sha256": "000A182731D543EAA9E2FDA2BE50FD4032FF25ED83A6BEFBBB0CD03567DBE15B"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/07-manifesto.md",
+      "size": 1931,
+      "sha256": "3AC47D67FA8E0EE8DB2FBA2FD329C5FFCBF981A0B760E482748935F6E3411C46"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/08-photographic.md",
+      "size": 1554,
+      "sha256": "D07D2508845277B68CB8CACC8F82D8FAC84B69063277EC277D19A7F59FE43992"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/09-quote-led.md",
+      "size": 1666,
+      "sha256": "1609DDC34D842C730E4D18BACC010B1B43CFA59892043C523B51BDFFEAD0FB56"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/10-specimen.md",
+      "size": 1527,
+      "sha256": "18313A17C6512AFDA417C8C19F4E0BEA1549ECD5FC43E87BA89FB4E526B56EEA"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/11-catalogue.md",
+      "size": 1495,
+      "sha256": "20708E7E61ED610506971F48D36EEC88512423B77855F78CC8C65B75BA90E0AE"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/12-letter.md",
+      "size": 1282,
+      "sha256": "0D6779B5DA3E3A44B573B3665DAEFE489FBD4857C1124CA4B8FF0FE6FC17A34F"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/13-index-first.md",
+      "size": 1237,
+      "sha256": "BA7B085F91A8C2EB0BAF376B88E4307B38250A2D4DD707FB22F2E5FAEB32A7E2"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/14-narrative-workflow.md",
+      "size": 2096,
+      "sha256": "4E120A5CB04A54AA172A5D2B5E727C27603CCDDF37A2F8C9A15756993A9337FC"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/15-split-studio.md",
+      "size": 1426,
+      "sha256": "49C758082CE6D4A6E541BB8706412FE4EB92FFD9DD772208B6A21142AA4BF3C6"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/16-feature-stack.md",
+      "size": 1753,
+      "sha256": "DF26D2D4094B3059C0A35DB94389524B0BA76F8FE64E89D4E6BA3DEF7EED1ECE"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/17-type-specimen.md",
+      "size": 1211,
+      "sha256": "4FF06C001A10F973B9C70B1A0FA21EA1CE54AC0E3727CF8B5EC2E0A1B6BF568D"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/18-portfolio-grid.md",
+      "size": 1177,
+      "sha256": "D035DEE299E329EFEEA7DD3B4B897B11F0547F03AC4C2F0C62A3FD422D30F618"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/19-map-diagram.md",
+      "size": 1497,
+      "sha256": "B8C0021C01FB8A970907CAEFA74A8C462CB573A2666FC4B223082812F9B19399"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/20-ecosystem-index.md",
+      "size": 1315,
+      "sha256": "27B1909D028F553EFBC112ECD5A8C843E191E97A286BF2BD258DAAD86BFA64C4"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures/21-component-playground.md",
+      "size": 1315,
+      "sha256": "830B52F62BDB722F3BD954F4F9CE60FC8C6E521BA2CC1F173E6C0FC3B5611413"
+    },
+    {
+      "path": "skills/hallmark/references/macrostructures.md",
+      "size": 14614,
+      "sha256": "3389DBC0434BD9A6161896A19B4EC6664859D49F1B0329CD0E8FAE6F045E1C43"
+    },
+    {
+      "path": "skills/hallmark/references/microinteractions.md",
+      "size": 6484,
+      "sha256": "E7EC31F08E58EDCDB8986FC57D276466C1F7B08445756F3A7CF6F46E8B5A8C8E"
+    },
+    {
+      "path": "skills/hallmark/references/patterns.md",
+      "size": 10928,
+      "sha256": "BB15954CB04083C9A3B796DDA5DF5C33C9C05DDDF2341D7BEFE2571E715F613B"
+    },
+    {
+      "path": "skills/hallmark/references/redesign.md",
+      "size": 12231,
+      "sha256": "CD3FC1DD10AF22BB0374B41340FBAB8F2B3BE997EA5B63716DA3D44BA0BB0552"
+    },
+    {
+      "path": "skills/hallmark/references/responsive.md",
+      "size": 3504,
+      "sha256": "7ED0CD54FDA3351BE9E7B5514EBF4A5306A837CF3D893B31E96C7FD490B348EA"
+    },
+    {
+      "path": "skills/hallmark/references/review-finish.md",
+      "size": 3865,
+      "sha256": "9D00DE59E71EE2516212140B0512D6D2E90A120D4A328EEBA9CB12396FF38D64"
+    },
+    {
+      "path": "skills/hallmark/references/review-hero.md",
+      "size": 2548,
+      "sha256": "E84702982BCAD34FC8EF4AAF032A5482356912992CE72D84B12E05CD4A519FB2"
+    },
+    {
+      "path": "skills/hallmark/references/scroll-choreography.md",
+      "size": 6099,
+      "sha256": "809C0FC84011412766DB10E3E14DEF2B3CE02F0452D7FB2E60ADECFA85991393"
+    },
+    {
+      "path": "skills/hallmark/references/texture.md",
+      "size": 6082,
+      "sha256": "B5749C008FEF0511188D491AEC0C5556B19F6731B13539934ECC1CB584A2E756"
+    },
+    {
+      "path": "skills/hallmark/references/themes/almanac.jpg",
+      "size": 99885,
+      "sha256": "A78B5A78A662EBD6A54BE31B581BFD7447D391CFF549C503025F0F762F4BDDB5"
+    },
+    {
+      "path": "skills/hallmark/references/themes/almanac.md",
+      "size": 7491,
+      "sha256": "B5C85E7C96CDA4F13AF81DD42C020C7EAE7C4F63B4530B7E9FCEF09340D96EFC"
+    },
+    {
+      "path": "skills/hallmark/references/themes/arcade.jpg",
+      "size": 101185,
+      "sha256": "DAD3BBCF4CC25BF8E97E03D034CEED2F2BF0F8A9EA308AFE60B559F04BB40F04"
+    },
+    {
+      "path": "skills/hallmark/references/themes/arcade.md",
+      "size": 7504,
+      "sha256": "A6E6D644412E9CBE0172FA784BC05A69767C792A642AB860E6DA1AF33EF861F9"
+    },
+    {
+      "path": "skills/hallmark/references/themes/atelier.jpg",
+      "size": 91926,
+      "sha256": "1F7D16373C8AB9D949084599C87777060C24B298FEC9FD382FE7CC0066D6EC03"
+    },
+    {
+      "path": "skills/hallmark/references/themes/atelier.md",
+      "size": 7851,
+      "sha256": "8CFFFFD26A857ADAB803FD0E1C5EB49ADE86CD486A8DC3C576728032A84A5CCF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/bloom.jpg",
+      "size": 82847,
+      "sha256": "6DCDA211F142627C455EC800442038475341CFCBDAE83C529753283427066081"
+    },
+    {
+      "path": "skills/hallmark/references/themes/bloom.md",
+      "size": 7995,
+      "sha256": "2965ADFC995A5605078F45B4CA09A549F1587E6B960FA1986890850668543660"
+    },
+    {
+      "path": "skills/hallmark/references/themes/blueprint.jpg",
+      "size": 101363,
+      "sha256": "DEC761657594B854635572F498E6D7428068B132E314DF782B07D31E7E06D777"
+    },
+    {
+      "path": "skills/hallmark/references/themes/blueprint.md",
+      "size": 7561,
+      "sha256": "9DE09C493DF045F8B3F720638248D21F857B076BE264E7EE0262E9877A5040D6"
+    },
+    {
+      "path": "skills/hallmark/references/themes/broadside.jpg",
+      "size": 131008,
+      "sha256": "86E56076FB37223A448C354EA1148890167E85036B3189C51296A176C97BC978"
+    },
+    {
+      "path": "skills/hallmark/references/themes/broadside.md",
+      "size": 7360,
+      "sha256": "9A4EBCEEF5CA462A0B7ADE98250A07AD33CFA40F97F6E78434E638FA9E626222"
+    },
+    {
+      "path": "skills/hallmark/references/themes/brutal.jpg",
+      "size": 114728,
+      "sha256": "CAFD8A53EB83FE09EFB0250F2006FD517C3218959AFC337024BFE775E4BC7BBF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/brutal.md",
+      "size": 7065,
+      "sha256": "4E087F62F815635CBF9C1A7F2A58DB77C610AE97F31BEF70ACD777871859AA97"
+    },
+    {
+      "path": "skills/hallmark/references/themes/carnival.jpg",
+      "size": 132812,
+      "sha256": "9A0A139AFB7F1CA0AC65D55157432C5ED91E23371B7B6116E3E6937B675712A5"
+    },
+    {
+      "path": "skills/hallmark/references/themes/carnival.md",
+      "size": 7588,
+      "sha256": "FC8E876E5A1C23BDA103719B61A7440E203FF91FF050EBDED53F732108C43B82"
+    },
+    {
+      "path": "skills/hallmark/references/themes/cobalt.jpg",
+      "size": 103331,
+      "sha256": "695CF419C3CC734C8FA9E6D23E0692385990BCD55349BB689300431392D0E3CD"
+    },
+    {
+      "path": "skills/hallmark/references/themes/cobalt.md",
+      "size": 7990,
+      "sha256": "D24A5609F0C42E6FF6A1976D5F7F0651EC40EED69DB5D6C4680C1385A65F2007"
+    },
+    {
+      "path": "skills/hallmark/references/themes/console.jpg",
+      "size": 70036,
+      "sha256": "665F07532303613D55C3832AC7141C2B007CB3A34BB245882BEF3AB74E6E1CF1"
+    },
+    {
+      "path": "skills/hallmark/references/themes/console.md",
+      "size": 7598,
+      "sha256": "D52EDA46D5480AB0123F78AB83EA1187813F4B26DDB02D0F4E61E2B511AE6309"
+    },
+    {
+      "path": "skills/hallmark/references/themes/coral.jpg",
+      "size": 81948,
+      "sha256": "DBB7596586C0563122935AB602E627CC621FE6939013619B6A1C552D5F25A03E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/coral.md",
+      "size": 7966,
+      "sha256": "F8444921B5E751B3B9BE94D448AAEE502E509729AA89411FF887087777BB1C28"
+    },
+    {
+      "path": "skills/hallmark/references/themes/darkroom.jpg",
+      "size": 154305,
+      "sha256": "D8A7136D01223A7B6D2193D30C0C2E549E2967DA65FB69FD33EEE55DF9F149C1"
+    },
+    {
+      "path": "skills/hallmark/references/themes/darkroom.md",
+      "size": 7591,
+      "sha256": "946E2233F310DDE0304F970070408A7FF6581E3B442FAAA14DA80F39E31E9499"
+    },
+    {
+      "path": "skills/hallmark/references/themes/dose.jpg",
+      "size": 79672,
+      "sha256": "7BDF523555D21E8C89B04AB77AF15A816A3C7BF84055C7C780B77D891CD4C735"
+    },
+    {
+      "path": "skills/hallmark/references/themes/dose.md",
+      "size": 7912,
+      "sha256": "780A5E57A813B3008AC6A8C7287AFFC5516A68E51310D77DF890286F6D6369F5"
+    },
+    {
+      "path": "skills/hallmark/references/themes/dusk.jpg",
+      "size": 93157,
+      "sha256": "F38BE2C20D3D2183DFDB127FC2A9DF71E3F16E413B8FDA56146567A05E5A9514"
+    },
+    {
+      "path": "skills/hallmark/references/themes/dusk.md",
+      "size": 7955,
+      "sha256": "47CF0EDE99BA90B88CEC14EB2EC80D5FD9E003E9ED3878708275553E2C52D4BF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/editorial.jpg",
+      "size": 111404,
+      "sha256": "A5F3ECDBE561CFBE06374706BEAC154BC47A77B12AC964C742B412EEC6A3E0DF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/editorial.md",
+      "size": 7551,
+      "sha256": "CAFD967F2AC736C9927A749DE1B8F4216183E3FA3ADCE95E638D124B2DE5876F"
+    },
+    {
+      "path": "skills/hallmark/references/themes/formwork.jpg",
+      "size": 116193,
+      "sha256": "DC52B44D0DD300D54D0FAD5F18B032E7B29F0288DA546FBFA4DD73BAA0D4E255"
+    },
+    {
+      "path": "skills/hallmark/references/themes/formwork.md",
+      "size": 7444,
+      "sha256": "E2C0F88B2A83EEC6AC076BE536CD71CFD883BB21A234C268BBA0CCD12E773416"
+    },
+    {
+      "path": "skills/hallmark/references/themes/furrow.jpg",
+      "size": 148449,
+      "sha256": "2F6DECB95504070EAF484C051DA77A4EC0713D2B2CC55EABDC7D99CE740ACC99"
+    },
+    {
+      "path": "skills/hallmark/references/themes/furrow.md",
+      "size": 7914,
+      "sha256": "16F9FFC0FE9588754D25A96A32D6CA25E4B5A918623E90A1EE0DC5006953FC89"
+    },
+    {
+      "path": "skills/hallmark/references/themes/garden.jpg",
+      "size": 149502,
+      "sha256": "A0D649ED96F7462DBEF00047685151A3CA3E8A72E9672F240B21A82D798A9740"
+    },
+    {
+      "path": "skills/hallmark/references/themes/garden.md",
+      "size": 7041,
+      "sha256": "2F2197DA95EF795A10EEEF1C60F9AE98E62CA110C34260035B9789C1F3486185"
+    },
+    {
+      "path": "skills/hallmark/references/themes/grid.jpg",
+      "size": 73542,
+      "sha256": "511ED8D58F8ABB1FE86D53166C3966C4046C1000CCC7075D6C312BA3EFC67F70"
+    },
+    {
+      "path": "skills/hallmark/references/themes/grid.md",
+      "size": 7803,
+      "sha256": "0F81C1EFA45EC32AE3BD24B15EB96144EDFF8E018EEC7A3D6A6A8BB25E42F520"
+    },
+    {
+      "path": "skills/hallmark/references/themes/halftone.jpg",
+      "size": 104490,
+      "sha256": "A84CB1876366B5E1070CE1A70B22F263A7A963372587FF92076C0492C7F2D9DB"
+    },
+    {
+      "path": "skills/hallmark/references/themes/halftone.md",
+      "size": 7498,
+      "sha256": "A19DA44930E5C475CF9C285F939D959AB590DA17FAEA21426387332A5D8CA682"
+    },
+    {
+      "path": "skills/hallmark/references/themes/hedgerow.jpg",
+      "size": 123319,
+      "sha256": "AC564EB0F3C8553CD5A077B8F5DA38A1BB1D2C7A78E4E8EBB8AAFE91EE448F95"
+    },
+    {
+      "path": "skills/hallmark/references/themes/hedgerow.md",
+      "size": 7181,
+      "sha256": "23371C7894032CCC4F51236539D535D9C47B201B3007A40949DB234C19B84DDD"
+    },
+    {
+      "path": "skills/hallmark/references/themes/hum.jpg",
+      "size": 130495,
+      "sha256": "22C73E8BDB16FD96165CC4D003A82CF321E1D274F6C3C538015E0D3AE823802E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/hum.md",
+      "size": 7485,
+      "sha256": "180EF874894A544230F4E3A867A7120DA3A79D5994D15737E806E0373E4CC5C7"
+    },
+    {
+      "path": "skills/hallmark/references/themes/index.json",
+      "size": 51051,
+      "sha256": "DF8299332A805B9C8504C10574258A98057FB9E63E87E85A7E8BBB76333FB403"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ink.jpg",
+      "size": 75097,
+      "sha256": "18802CCA6D7428C50A0E9D3051F7AA321F0F4749E14DD941107B30266346C62E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ink.md",
+      "size": 7347,
+      "sha256": "7DD419CCEC59A33461C86D894856085EDAEDDD6139F8EB9EFF22F22E45FBDF9F"
+    },
+    {
+      "path": "skills/hallmark/references/themes/kiln.jpg",
+      "size": 91613,
+      "sha256": "2EF6DA1860464F7D189D6E0E371B97B1E17B4EE107E1E68B7555AAFC96685123"
+    },
+    {
+      "path": "skills/hallmark/references/themes/kiln.md",
+      "size": 7467,
+      "sha256": "94909CF878A89B88BA96D3A69DFCCB64CE32968A3A4544A920A9C927D5A56FD4"
+    },
+    {
+      "path": "skills/hallmark/references/themes/loom.jpg",
+      "size": 132303,
+      "sha256": "A71F16F59EC0C9710D5F6CD4F3EEC0FBE3536E31B194B1E25DBB924618765F64"
+    },
+    {
+      "path": "skills/hallmark/references/themes/loom.md",
+      "size": 7578,
+      "sha256": "835789CAAE2EF444B1DB967411856F79DDCF844C8A988F75A62F3F5D4B53D819"
+    },
+    {
+      "path": "skills/hallmark/references/themes/lumen.jpg",
+      "size": 106712,
+      "sha256": "D7F66625E11D7D495C89748C6F43DB49B5542040D1C091A109802A7098D1CC84"
+    },
+    {
+      "path": "skills/hallmark/references/themes/lumen.md",
+      "size": 7604,
+      "sha256": "8A202BDE1D9EB9B4615B0F0E2279ADEB5C95A82DEDD003FDBA1613C70B715450"
+    },
+    {
+      "path": "skills/hallmark/references/themes/manifesto.jpg",
+      "size": 85855,
+      "sha256": "C900E70AC48D01D133ACDCBDA0310D9C0FD53A0474D7A1B1344291A70B3C89BD"
+    },
+    {
+      "path": "skills/hallmark/references/themes/manifesto.md",
+      "size": 7212,
+      "sha256": "326C63F732128ED5CDA8FF3187793FFE9BCB56936387367CC932B5A3E216B862"
+    },
+    {
+      "path": "skills/hallmark/references/themes/midnight.jpg",
+      "size": 86091,
+      "sha256": "6F49568B885BA74035FAA5A2608C51A079CD7A2EEBE7E1967FA0225958B0C82E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/midnight.md",
+      "size": 6998,
+      "sha256": "CB29035685B63A56762C291DC4246C6A66C6EC6D8BC4559D6823EE2D2A80E40D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/newsprint.jpg",
+      "size": 154148,
+      "sha256": "FDAC566BE09A8EA6891F79CCB70F1F2C47ABE12A3FB476C3874031EECE6E0FE6"
+    },
+    {
+      "path": "skills/hallmark/references/themes/newsprint.md",
+      "size": 7373,
+      "sha256": "2FD477D10F9DDE600993486A7DAB5FF5F643C8821833CB3837F176005EAFB5E0"
+    },
+    {
+      "path": "skills/hallmark/references/themes/overprint.jpg",
+      "size": 84649,
+      "sha256": "415342811CFECC22D267D93AFB07C12DFA12D8823A2E2C5852C9A587D9F462DE"
+    },
+    {
+      "path": "skills/hallmark/references/themes/overprint.md",
+      "size": 7597,
+      "sha256": "79010C27E619FAD842DA18559658C83CEC86172266B00BB5933871B3F7BF852B"
+    },
+    {
+      "path": "skills/hallmark/references/themes/pasteup.jpg",
+      "size": 111056,
+      "sha256": "664423A43E4906E63AB9610B8C327AF1BADDB611A14109B453A7ED04505BA0C2"
+    },
+    {
+      "path": "skills/hallmark/references/themes/pasteup.md",
+      "size": 7568,
+      "sha256": "7E8D5013BDA81E945F27B401F967F08E41BBC7D10DDC14D1EF7DD91C25F95C3D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/piste.jpg",
+      "size": 118882,
+      "sha256": "39C73CB56040DC5AB13B6BB7927D0DFDACFC7802EF1D22D9C1C13F39FAF1500B"
+    },
+    {
+      "path": "skills/hallmark/references/themes/piste.md",
+      "size": 7082,
+      "sha256": "79C1B4B7297467D9A0D057AD790D475F4B88A41AF1867172DFD77B951CDA803A"
+    },
+    {
+      "path": "skills/hallmark/references/themes/README.md",
+      "size": 7649,
+      "sha256": "AECE9D5F273EF6A4EB3E59833BC428C17232AD4ADE1247637355636087D5264D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/refract.jpg",
+      "size": 84000,
+      "sha256": "43B0C7245536DC7F83608B3881221A90E68F78A6C7223006B75E47CC86B1A719"
+    },
+    {
+      "path": "skills/hallmark/references/themes/refract.md",
+      "size": 7953,
+      "sha256": "74970C11C5759685610608FC569E18EB409F12AC479C3409C9156A8A352C5FDC"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ribbon.jpg",
+      "size": 67143,
+      "sha256": "A5848452F358EB7E8F7FAE3B1592FE04B9F1FB09C92551C372DEF878529512D0"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ribbon.md",
+      "size": 7906,
+      "sha256": "0BCC8708D3CEEC0CB246FA134A4FCF8E019FA8012AF1F87646737CC1C8B324A1"
+    },
+    {
+      "path": "skills/hallmark/references/themes/rim.jpg",
+      "size": 115325,
+      "sha256": "BBC6F916316DA6F6D03B01DFC798EFD0C8F8B94D80155049F0A1A497A3560811"
+    },
+    {
+      "path": "skills/hallmark/references/themes/rim.md",
+      "size": 7018,
+      "sha256": "AC134E8CCBDA501B660F4CD83ACE56059F2B254B187F574A612460C7C796E49F"
+    },
+    {
+      "path": "skills/hallmark/references/themes/riso.jpg",
+      "size": 113102,
+      "sha256": "B02F0C68760CAB70CF971CACC2669FE32472F1F3EB2998F8C7706C4FAFB678CA"
+    },
+    {
+      "path": "skills/hallmark/references/themes/riso.md",
+      "size": 7585,
+      "sha256": "333577E736F793C94161994DD8087C583AB53DD5AF50A5DC63C3BFC5F4BF28AD"
+    },
+    {
+      "path": "skills/hallmark/references/themes/solstice.jpg",
+      "size": 100411,
+      "sha256": "5D6BCF025A79C4B117CCC2EDE5CC69F5334BFC65ED8107B1068A9689CFFF7ABF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/solstice.md",
+      "size": 7346,
+      "sha256": "6813E8556FAA9E34637CE52A2CEFADBF74795E7956503F14CF1C672C3F92C5D1"
+    },
+    {
+      "path": "skills/hallmark/references/themes/specimen.jpg",
+      "size": 64586,
+      "sha256": "9735716DDDA7BBA0F62D1D35743256AD1B718038FBD6924E341BCEB3DFA62150"
+    },
+    {
+      "path": "skills/hallmark/references/themes/specimen.md",
+      "size": 6880,
+      "sha256": "F9ED583E2ADFE885ECED94374FED3F697FF932705EEE029A9C226D4DB39667ED"
+    },
+    {
+      "path": "skills/hallmark/references/themes/spore.jpg",
+      "size": 70176,
+      "sha256": "B2493347715FB49D6D30040AE3EA85885571709BD588F2222722A1AF317A704A"
+    },
+    {
+      "path": "skills/hallmark/references/themes/spore.md",
+      "size": 7312,
+      "sha256": "2B4F30287F6779404104A98BDDD2F2876F000ABAD2533228C9AA105B3C30CA7D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/sport.jpg",
+      "size": 109685,
+      "sha256": "51A51694055EF122DE7E6BE01F5D881FEC696D86DF5192557AEFD90D12BB1B84"
+    },
+    {
+      "path": "skills/hallmark/references/themes/sport.md",
+      "size": 7425,
+      "sha256": "5714651DF7C46925357D33876E498AC4ECAA3C8B3D50BEE5EAD3BF7CE54D863A"
+    },
+    {
+      "path": "skills/hallmark/references/themes/squeeze.jpg",
+      "size": 105257,
+      "sha256": "570529D5D842CA14A60D9689D3C4997EAC31E463C5A9DF3D386D39F36091224B"
+    },
+    {
+      "path": "skills/hallmark/references/themes/squeeze.md",
+      "size": 7579,
+      "sha256": "D007F2F09A6D8DA5CF53A9FE98BC9CB3EAD7F013D71569B605E65E7F295B2CB5"
+    },
+    {
+      "path": "skills/hallmark/references/themes/sticker.jpg",
+      "size": 90110,
+      "sha256": "CCBF946B230EAE35F8BA35B7CEB362BD082B0C6240E1FF3695A07F9E948D6320"
+    },
+    {
+      "path": "skills/hallmark/references/themes/sticker.md",
+      "size": 7554,
+      "sha256": "5C266F131F506D7BA2E51E12015141E8D1AC394523CE537504A6B21336F0F953"
+    },
+    {
+      "path": "skills/hallmark/references/themes/studio.jpg",
+      "size": 113815,
+      "sha256": "D4B8670539D50EBC17C64AD5F13FBD01DBF6BF47CC3421BAF688A496112D6DAF"
+    },
+    {
+      "path": "skills/hallmark/references/themes/studio.md",
+      "size": 7629,
+      "sha256": "7E0352A5DE3485BBC61043C412258490AA7750EAB03A5534A422A717F44DB194"
+    },
+    {
+      "path": "skills/hallmark/references/themes/terminal.jpg",
+      "size": 89868,
+      "sha256": "0843A7120876A7E4F89ACBD122FE7F6D4DAB72CAAD99746C5A574EB8F5A8552E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/terminal.md",
+      "size": 7564,
+      "sha256": "CB5104B31D31E2ECE13CC736A2EE5819D9B80A3272FF5A905E0F772C2865F19E"
+    },
+    {
+      "path": "skills/hallmark/references/themes/terrazzo.jpg",
+      "size": 146188,
+      "sha256": "8F22CE7FAC3FED6479BAC56A0061477491C9055398B5BC7D7D856D66188F357D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/terrazzo.md",
+      "size": 7034,
+      "sha256": "9F2A03AA0670FE7CAEF3789E077EB917483034A38C756B45977EA9F27EE1DC02"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ultraviolet.jpg",
+      "size": 72491,
+      "sha256": "66CB4AD24A61FB16F5CF0E97F4D81BE67993E3D237D4AF0B67E71E4F0E6961DB"
+    },
+    {
+      "path": "skills/hallmark/references/themes/ultraviolet.md",
+      "size": 7359,
+      "sha256": "B706384370D51AD849FAAA87F80C2BEEFF9D14CA2F253385D20E28AC09BC9569"
+    },
+    {
+      "path": "skills/hallmark/references/themes/vantage.jpg",
+      "size": 112234,
+      "sha256": "D64768E186AD62D32F1546C5C97CE55F4E97D1879686A0BBFDF394DE353916A4"
+    },
+    {
+      "path": "skills/hallmark/references/themes/vantage.md",
+      "size": 7295,
+      "sha256": "08405EAD89E69270C2FA5946C6D3F7905168D10EB06A34502C5C129D262F96DB"
+    },
+    {
+      "path": "skills/hallmark/references/themes/vellum.jpg",
+      "size": 175505,
+      "sha256": "4B4116033AD5EA3A65E0EC720F43E0E9CD1C7494E4AE95C09610782240B9A48D"
+    },
+    {
+      "path": "skills/hallmark/references/themes/vellum.md",
+      "size": 7606,
+      "sha256": "4914D9E6CA704D55B57FE6630CA2EDC1ED49DEA0FDD0912C97D437939FD3E893"
+    },
+    {
+      "path": "skills/hallmark/references/themes/wayfind.jpg",
+      "size": 101995,
+      "sha256": "3FC6E32CD77B7455A10237BA7424048BD2FB94BDC955BDD5395DA173D9B3B574"
+    },
+    {
+      "path": "skills/hallmark/references/themes/wayfind.md",
+      "size": 7351,
+      "sha256": "7849521B843F82A3956727E0D06A595D6ECEC5F501F4C31F577BF4BD1BAE9E2C"
+    },
+    {
+      "path": "skills/hallmark/references/themes/werkstatt.jpg",
+      "size": 114968,
+      "sha256": "5CD183720988973306FF568FA7F21A7C7CB345621DFA1D288A33D22F785AAC20"
+    },
+    {
+      "path": "skills/hallmark/references/themes/werkstatt.md",
+      "size": 7441,
+      "sha256": "B3A31E2ACB8A15CA46BBB194F23B9555EF19D9C70CEB1CF67D9FDE3B55B7E08A"
+    },
+    {
+      "path": "skills/hallmark/scripts/capture.mjs",
+      "size": 9659,
+      "sha256": "0364CA6591A722D14B935F201956C300D688B8F9F73879B00DF92242DC26610B"
+    },
+    {
+      "path": "skills/hallmark/scripts/capture.test.mjs",
+      "size": 4400,
+      "sha256": "F2E5E44E78EF3FB71A10C2A54706CBD7ADAFE904F907F6F7B845254D6A924CA0"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/exemplars/atmospheric.html",
+      "size": 25070,
+      "sha256": "10A6BC8F44A8AD3E3874DDDAF2444888D95EFB4B3E72C6D403CD258259202F8D"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/exemplars/editorial.html",
+      "size": 27259,
+      "sha256": "51C9177037DA9EC810D81CE809DF358C48B33C19C88DBDA5192C2D1508EE5C50"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/exemplars/modern-minimal.html",
+      "size": 42033,
+      "sha256": "48AC41CA0235A29B613A736E989864E845497D348FC2183156E0790785ADAC6A"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/exemplars/playful.html",
+      "size": 27784,
+      "sha256": "810CDDD441D619CFCEB6815177C60412D7F91A1E30971141830F77F29A1C6615"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/eyebrow-fail/index.html",
+      "size": 4008,
+      "sha256": "777A97F5C636BDD32623AB92F53B003A48E21B0CCDA33166A0DDCEDAD41074B8"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/eyebrow-pass/index.html",
+      "size": 4977,
+      "sha256": "E79CC0979F3D47295812D1F373F4EA8E95C94F2A18624AE2C064E3FDBC4476F8"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/imagegen/imagegen.test.mjs",
+      "size": 6700,
+      "sha256": "C751918E7A2E8D125AFBB243AFE2BF7A2ADB4854F86D249F8F4BA866813FC1CB"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/kept/after.html",
+      "size": 1155,
+      "sha256": "3943056C96C322C2BD55FBD19170DE48F01815981D0430A094538737DAE1A204"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/kept/before.html",
+      "size": 1069,
+      "sha256": "6E9AD44EBCA1D553B0F6A0096F613E3BD9800DBB222B42C4996A247DEE08B72F"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/slopped.html",
+      "size": 4865,
+      "sha256": "F324387E624F20E10BEA32FD4C29D53865C3B4C261E723DC7965EF48EA39466E"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-fail/Feature.vue",
+      "size": 698,
+      "sha256": "A0B1F3810F0B3621459D52921795A6C99F0DBA53A9B0445CBF53E8529B801CF2"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-fail/Hero.tsx",
+      "size": 1290,
+      "sha256": "4B0A2D0996D44173178D3F3AD4313836A3464993658798A491E92E4ADBE9A576"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-fail/index.html",
+      "size": 3797,
+      "sha256": "668E6026F6517B456D8B10D07F21E33F32476CBEDEF86E90BDF6BCC3785C120C"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-fail/style.css",
+      "size": 207,
+      "sha256": "520DAC1BF1B9AC4C3C4E05506A91A804849413172EC500F9E21A01C94542C5FC"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-pass/Hero.tsx",
+      "size": 1354,
+      "sha256": "C81AED17AABA4936FC51FCBC07B642481C7DAD6CBBD87AC8DD56384290B6EDF3"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-pass/index.html",
+      "size": 3839,
+      "sha256": "7D7FB9C531B872458C049FC9BBED93EDF8BF506F5F2FBFF8D4A66FFC1F7E6CC2"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/tailwind-pass/style.css",
+      "size": 576,
+      "sha256": "B3D42D5CD53476942B34253A2DCAD284548302CE551BEF56FB1AF6F9D4C8EBBB"
+    },
+    {
+      "path": "skills/hallmark/scripts/fixtures/waiver/index.html",
+      "size": 2870,
+      "sha256": "9AC592D4EA4FEF4F33551B678ED9CE03570D8C3C8AFAA23717446D41DBC106BC"
+    },
+    {
+      "path": "skills/hallmark/scripts/imagegen.mjs",
+      "size": 4165,
+      "sha256": "6A92A1CBBB19B47A4B2CFAB6938901EF1A2CEF6F62A486596A5E13F353C11128"
+    },
+    {
+      "path": "skills/hallmark/scripts/photos.json",
+      "size": 452868,
+      "sha256": "1EE6836583E8048400876351C0605BC3F08515FECFE68ACA3712B9E75498BC65"
+    },
+    {
+      "path": "skills/hallmark/scripts/picture.mjs",
+      "size": 6423,
+      "sha256": "21DB01DB66D393D58D2DD799E7614A6033D1A56891D9D9D8CAE0C42ED42592C1"
+    },
+    {
+      "path": "skills/hallmark/scripts/refcheck.mjs",
+      "size": 24529,
+      "sha256": "1CC43275139C4D2856ED43B04269B3F94252C298B5DEB103AA862ED0D98E6017"
+    },
+    {
+      "path": "skills/hallmark/scripts/reroll-exhaustion.test.mjs",
+      "size": 1985,
+      "sha256": "21072D8044E13E6EEC47CEB711DB05E4DF34E847DB3AAB3E749864CBCED48413"
+    },
+    {
+      "path": "skills/hallmark/scripts/sloplint-render.mjs",
+      "size": 99965,
+      "sha256": "228F14808CBF872AB6DCC5F4F9E8D58A5A9060028F1530BEC80E24DBD12737F3"
+    },
+    {
+      "path": "skills/hallmark/scripts/sloplint-render.test.mjs",
+      "size": 3940,
+      "sha256": "5ACD02402B8EF867FEE730191F96FEC9018D9BAEAFA0AFC2F54CF7519EA7E843"
+    },
+    {
+      "path": "skills/hallmark/scripts/sloplint.mjs",
+      "size": 231740,
+      "sha256": "23FB94903AE0E3B709019380443163BDC50390A246911E3423B83695E4BC8037"
+    },
+    {
+      "path": "skills/hallmark/scripts/theme.mjs",
+      "size": 59476,
+      "sha256": "7C5CD6EA080E47B663967F2CCE5C806E38ACBC33EB77B6DCE7585A9F2EA1A1A6"
+    },
+    {
+      "path": "skills/hallmark/scripts/theme.test.mjs",
+      "size": 2272,
+      "sha256": "0A164C3F671B2CF2DF40184E4B3515D7D7CEF45447F71D0C8A5EAC762B3AB4AC"
+    },
+    {
+      "path": "skills/hallmark/SKILL.md",
+      "size": 18399,
+      "sha256": "64AC3E485C7F187838B51FD4EAA3122A90A952DFADAA9C2E1471A947055B2B96"
+    },
+    {
+      "path": "skills/impeccable/agents/impeccable_asset_producer.toml",
+      "size": 8476,
+      "sha256": "AF4B1724F58C853A0F5FDF3916A0501C07899EBA45C6EE3FEDFDDDA81EBD7291"
+    },
+    {
+      "path": "skills/impeccable/agents/impeccable_documenter.toml",
+      "size": 3690,
+      "sha256": "0E27E9CA24CA9954DA00C056DF0E630CD3A0999C1378ED7FE71165D51E659F97"
+    },
+    {
+      "path": "skills/impeccable/agents/impeccable_finish_reviewer.toml",
+      "size": 16092,
+      "sha256": "D9B3F0C3A5672685C665A78A4CBC50629A13D5D73DF2404C3C12638C057AB201"
+    },
+    {
+      "path": "skills/impeccable/agents/impeccable_manual_edit_applier.toml",
+      "size": 7568,
+      "sha256": "2028E6893E00AC50F194A313AD31EEBB9CCA155E375D2F1E4E61CF18B604DB38"
+    },
+    {
+      "path": "skills/impeccable/agents/impeccable_motion_reviewer.toml",
+      "size": 6515,
+      "sha256": "90AC469C7A299F5587783C0F2674A6274F66CA538A368DCA4E54291FD43ADBB8"
+    },
+    {
+      "path": "skills/impeccable/agents/openai.yaml",
+      "size": 239,
+      "sha256": "92A7F329C767DD067A21B6E7BC1CCF07319A2B4E6F84687B3318A595AF2E15D9"
+    },
+    {
+      "path": "skills/impeccable/LICENSE",
+      "size": 10957,
+      "sha256": "FC0673369DAE07C045C46869D3D4C9113678C77FCC7D3B4E3A39AC074CFA68B6"
+    },
+    {
+      "path": "skills/impeccable/reference/adapt.md",
+      "size": 11693,
+      "sha256": "FF53E9376B28E8087060F354B58622CF4DE4A3F0E613C579C3650A76FC5D788A"
+    },
+    {
+      "path": "skills/impeccable/reference/adapt.native.md",
+      "size": 3968,
+      "sha256": "07F759E869AB46308AB8E4776CBC9587F3B44F43DCAD48C953D68861BC280DE0"
+    },
+    {
+      "path": "skills/impeccable/reference/android.md",
+      "size": 4249,
+      "sha256": "90143FF65239DB1ECF84CC370717582708AA31731BE82A50085CC40E3E94ED7D"
+    },
+    {
+      "path": "skills/impeccable/reference/animate.md",
+      "size": 8859,
+      "sha256": "57943D98C34CF62164E43E5D841C09DD42EACED8C37146B8AC68F16991844A8A"
+    },
+    {
+      "path": "skills/impeccable/reference/audit.md",
+      "size": 12114,
+      "sha256": "4649CFFFB006E6719DA03F4BA11834398D211408D5CB2221FD6B56F91CC7BE95"
+    },
+    {
+      "path": "skills/impeccable/reference/audit.native.md",
+      "size": 9026,
+      "sha256": "33794636A2B3F2EB6F66CF185E8D0A93795606CDA9728FB0E471C4145FFB0FC1"
+    },
+    {
+      "path": "skills/impeccable/reference/bolder.md",
+      "size": 3599,
+      "sha256": "B0F36C1F1BD01ECA327D755E935BAE11F5C02FB8006635BB613D6C0F82388EC4"
+    },
+    {
+      "path": "skills/impeccable/reference/clarify.md",
+      "size": 4684,
+      "sha256": "CBBF5647E0E14F6B10C7FD43392ECC1D6924ACFBF43994D1D147047D73497F42"
+    },
+    {
+      "path": "skills/impeccable/reference/colorize.md",
+      "size": 4623,
+      "sha256": "A3CD4B18154E8C06EDFBF7E7316077E8DD500D9777EA723C09FC02FE32B3FBA2"
+    },
+    {
+      "path": "skills/impeccable/reference/component-review.md",
+      "size": 8080,
+      "sha256": "479855A5E4E9E706470EB2950A72C4BD451E1F303D3A5765618D569F42AB5B08"
+    },
+    {
+      "path": "skills/impeccable/reference/craft-floor.md",
+      "size": 5582,
+      "sha256": "CDBA099B46E6901E32FB00EB411703DF582871A5F42E0039FA07FBB56F74AB47"
+    },
+    {
+      "path": "skills/impeccable/reference/craft.md",
+      "size": 560,
+      "sha256": "39B5FEFBF524AD156A4CAB2FBC5B65F2358C213A30D59A4C7510704E8D9DD56B"
+    },
+    {
+      "path": "skills/impeccable/reference/critique-rubric.md",
+      "size": 20433,
+      "sha256": "11CB70E203D6547C16C9EDC8A21B0300B44A47DB54255F75BDD4B827BD11A6E3"
+    },
+    {
+      "path": "skills/impeccable/reference/critique.md",
+      "size": 30332,
+      "sha256": "66D4C6B2FD46813E9F1E5AC734BEF1B15FFE1152C64778ACAC8FED2C0282386D"
+    },
+    {
+      "path": "skills/impeccable/reference/degraded/asset-producer.md",
+      "size": 8673,
+      "sha256": "6C1358680DDA786670242494FC9BB038173E7286731C1AA1009770F23565DEF4"
+    },
+    {
+      "path": "skills/impeccable/reference/degraded/documenter.md",
+      "size": 3857,
+      "sha256": "82E3B15C6A0EF24DD34A44AF0E5E55BBA2DC7FDB89240D6D7AC67764B0748B4A"
+    },
+    {
+      "path": "skills/impeccable/reference/degraded/finish-reviewer.md",
+      "size": 16237,
+      "sha256": "EAC79C6B0595EA118ECD40F5127A34F4FA63E49A47D09A6D8839211F8276FAE4"
+    },
+    {
+      "path": "skills/impeccable/reference/degraded/manual-edit-applier.md",
+      "size": 7777,
+      "sha256": "61783BF0DFFB0A4D0E73FC750BB6D903988FF696FF840D0BD9487BB2012FB0BB"
+    },
+    {
+      "path": "skills/impeccable/reference/degraded/motion-reviewer.md",
+      "size": 6694,
+      "sha256": "D0CA2232EE31A375CA53AB92297147938B311915413AD0303AB7D2CF9FE0B222"
+    },
+    {
+      "path": "skills/impeccable/reference/delight.md",
+      "size": 3786,
+      "sha256": "14A5700220C44C9ADDF2BCA02036969B4CEDE7EA51FD98FE290892942BB89D2C"
+    },
+    {
+      "path": "skills/impeccable/reference/distill.md",
+      "size": 5806,
+      "sha256": "300A45C7502381001739935450F80D075BE42A84A49BBA0FCCB662DBCB47986C"
+    },
+    {
+      "path": "skills/impeccable/reference/doctor.md",
+      "size": 5671,
+      "sha256": "6F7FD3F6C9F90D175D22DC07DA348539C511B0A3E71EA69E23844E30C1745833"
+    },
+    {
+      "path": "skills/impeccable/reference/document.md",
+      "size": 28815,
+      "sha256": "6505DDBF03EB5E563067D096F3B84CBFF8D1DE1E0595B92D15162C5EE4092C6B"
+    },
+    {
+      "path": "skills/impeccable/reference/extract.md",
+      "size": 3475,
+      "sha256": "9F62E80B14A210B1C5DD036865C9D3A83614451E060CBD4B2220D1B597B2C973"
+    },
+    {
+      "path": "skills/impeccable/reference/foundations.md",
+      "size": 7642,
+      "sha256": "F412542CA061C172FC83909C18F50F89C74EFA7A7AEE6A468DF1065F046BBE0F"
+    },
+    {
+      "path": "skills/impeccable/reference/generate.md",
+      "size": 13322,
+      "sha256": "4CFB126CAB29CA02B667FA37A7F1AB670C74AD65D01E40EECD1E4E2C28496469"
+    },
+    {
+      "path": "skills/impeccable/reference/harden.md",
+      "size": 11110,
+      "sha256": "592A24802724356B029FDF8CF27C3927341A27DC254E8819A15670127D8F0394"
+    },
+    {
+      "path": "skills/impeccable/reference/hooks.md",
+      "size": 17879,
+      "sha256": "9880E009212DAF35E34896A87A8CA802075DC9F7902FFDE83324862BFA029207"
+    },
+    {
+      "path": "skills/impeccable/reference/init.md",
+      "size": 12362,
+      "sha256": "B90A016AB54EEEE7E81FA062AA2BAACC0318FC4C9091796412BB730E35DBA55E"
+    },
+    {
+      "path": "skills/impeccable/reference/ios.md",
+      "size": 3863,
+      "sha256": "60ADA207BFB419AD0A570B8319C29403713CA2AD3FB9A2F5BDFFA62AB25611BB"
+    },
+    {
+      "path": "skills/impeccable/reference/layout.md",
+      "size": 5245,
+      "sha256": "875CEAE18559E953DC9949E50374C2DAADAEBDB58520406B909F552A06C3E081"
+    },
+    {
+      "path": "skills/impeccable/reference/live-setup.md",
+      "size": 8551,
+      "sha256": "C9D6E1C35ED6963FFED82813B1E65FB54C28331C415360F7477B0295333DF02C"
+    },
+    {
+      "path": "skills/impeccable/reference/live.md",
+      "size": 42465,
+      "sha256": "CABAF4DEA7D41BFA06014D711D9FBA5B43129B06F28791652789C28D308D3B9F"
+    },
+    {
+      "path": "skills/impeccable/reference/mode-operate.md",
+      "size": 4737,
+      "sha256": "7CC131B41DAE694A4B554C940445117318F0C6FB19F905CF1F8CBAFC08A3F430"
+    },
+    {
+      "path": "skills/impeccable/reference/mode-persuade.md",
+      "size": 3657,
+      "sha256": "81CF3D22F747B9768ABE48BD6CB881B8807809B8995F20096CFB442DADF550BC"
+    },
+    {
+      "path": "skills/impeccable/reference/mode-read.md",
+      "size": 4417,
+      "sha256": "20DA46DD620DA4433736173B130DE306CEEB124DAC83FCCF664A12E236EE0B8D"
+    },
+    {
+      "path": "skills/impeccable/reference/new-work-comp.md",
+      "size": 14550,
+      "sha256": "F6CDF61BD7FE7AF32733D7FAFC1E43D8065C0894EC0B1F51EAA1CF1DAAC29C21"
+    },
+    {
+      "path": "skills/impeccable/reference/new-work-world.md",
+      "size": 19891,
+      "sha256": "F2EA669A58F5D6ACF7437BA9026EFCD0E9214FD5F17F6BC0E15C168AB1D08797"
+    },
+    {
+      "path": "skills/impeccable/reference/new-work.md",
+      "size": 32943,
+      "sha256": "8870B8632FEB9BDF78F93D4EF93B31CF54BE2401983EFB947F77422803C62A09"
+    },
+    {
+      "path": "skills/impeccable/reference/onboard.md",
+      "size": 8201,
+      "sha256": "4FCE915439CA9A4250FA8B074B286491CBEFF4CF7797682F95D39D7D7145B77E"
+    },
+    {
+      "path": "skills/impeccable/reference/operate.md",
+      "size": 4206,
+      "sha256": "C4B169AB7932329C833750971C53BC129D0385E16D0219B31F002792FCE939E8"
+    },
+    {
+      "path": "skills/impeccable/reference/optimize.md",
+      "size": 7834,
+      "sha256": "4FD6244DE42EE793F0D4484ED2D44A1C1FC644367CB4347E76B5692271AFAE81"
+    },
+    {
+      "path": "skills/impeccable/reference/overdrive.md",
+      "size": 9388,
+      "sha256": "A012553B97A809316A43BAD4B90800BAA0B45D18DF6B9F665054D876A7FD028B"
+    },
+    {
+      "path": "skills/impeccable/reference/polish.md",
+      "size": 6751,
+      "sha256": "E0F8997A76FF955449CC65BF2D9FCC542D893700A30B56FB2C5E5D8A438410F7"
+    },
+    {
+      "path": "skills/impeccable/reference/quieter.md",
+      "size": 5164,
+      "sha256": "1C9199938FD1DA3364C78C5A285EB94CD5D4A9C0118305BF078617AC4C46A57C"
+    },
+    {
+      "path": "skills/impeccable/reference/region-map.md",
+      "size": 3387,
+      "sha256": "AF58FF0B02C6507BE860624F122F6D2F4F36BDDF18F143B2D5036962BEA932C6"
+    },
+    {
+      "path": "skills/impeccable/reference/routing.md",
+      "size": 3360,
+      "sha256": "3347CC1BF41D7B34E32617A468A7064FC1740EB7C1ABE4FF479BE07CFEBEC5B5"
+    },
+    {
+      "path": "skills/impeccable/reference/shape.md",
+      "size": 3606,
+      "sha256": "51960B514F8437BAF12484DD5BE824E0C2D0EE8802E29E7F511E431493A6C417"
+    },
+    {
+      "path": "skills/impeccable/reference/typeset.md",
+      "size": 7131,
+      "sha256": "0EF98EF25410E09E8F50847D67C010296BEE32BDFEA14BE33C256FA5BB00AA76"
+    },
+    {
+      "path": "skills/impeccable/reference/visualize.md",
+      "size": 14100,
+      "sha256": "89DD72ACA888F6268AE12FDB2C4BDD77548DD306FD16CF560F8413AE478AEA68"
+    },
+    {
+      "path": "skills/impeccable/scripts/command-metadata.json",
+      "size": 8416,
+      "sha256": "7B91B379CC594CB9E45945F7C29838324C531B04E27AB52713EB0A35F02C6479"
+    },
+    {
+      "path": "skills/impeccable/scripts/data/font-index-failures.json",
+      "size": 2557,
+      "sha256": "7461DE9923357D70B1365647B0A85D181EAC1702F622CBF24465767F4BA99D06"
+    },
+    {
+      "path": "skills/impeccable/scripts/data/font-index.json",
+      "size": 1100013,
+      "sha256": "47EDBDFAF27073C47033D1AC7DFEE881BE49E2DCBDA7671D1157300481DDE6DA"
+    },
+    {
+      "path": "skills/impeccable/scripts/engine-checksums.txt",
+      "size": 796,
+      "sha256": "7E27D4B687D152CA8F2C02D856131249AC89783B0A6C382FDC228C360D43AE58"
+    },
+    {
+      "path": "skills/impeccable/scripts/impeccable",
+      "size": 14043,
+      "sha256": "2C0189437217E85870689CB31372A4EA63C01587EEC01852B1BA23FE9ACF89FD"
+    },
+    {
+      "path": "skills/impeccable/scripts/impeccable.cmd",
+      "size": 15459,
+      "sha256": "34CE99F691C2380E27108915FE921E3C716BBE532D7A7CFCE3B7F0D5C68DCCDD"
+    },
+    {
+      "path": "skills/impeccable/scripts/live-browser-dom.js",
+      "size": 12603,
+      "sha256": "0E8E243D4242D1AF8A710A548A85FE421A4FCF7787C6DBC11376EBE4C0F8F118"
+    },
+    {
+      "path": "skills/impeccable/scripts/live-browser-ignores.js",
+      "size": 10669,
+      "sha256": "D5FB703E91293F5769BFA2376076C115823BE19EF8D8F1EAB57E8DD6E4283C4A"
+    },
+    {
+      "path": "skills/impeccable/scripts/live-browser-session.js",
+      "size": 6021,
+      "sha256": "BD1580C0A32B88863B8BB014C6007054D496DE9CD18CEBD612E220F11F2C9474"
+    },
+    {
+      "path": "skills/impeccable/scripts/live-browser.js",
+      "size": 579729,
+      "sha256": "3D48ACB5984CB5E59A14B3B0C019CDC6F6DA9816ADA9874E6F074CAC48B22F4F"
+    },
+    {
+      "path": "skills/impeccable/scripts/modern-screenshot.umd.js",
+      "size": 29304,
+      "sha256": "9B0DC34415466EDAC6E6802574006608B5E5C0DA9FDCB7B2651DBD1EA06713A6"
+    },
+    {
+      "path": "skills/impeccable/scripts/VERSION",
+      "size": 8,
+      "sha256": "F6637B9FF8AB7E77322EF83D85058995859446434D9E3B3769C384DDD90308B3"
+    },
+    {
+      "path": "skills/impeccable/SKILL.md",
+      "size": 12856,
+      "sha256": "42B5A68857C8651B5BDDFE748ABF2F8AFFBBB64C4D7633E36BAD2DD7250A9145"
+    },
+    {
+      "path": "skills/karpathy-guidelines/SKILL.md",
+      "size": 1517,
+      "sha256": "ACFAE502542C2D95CB80FE3199F3A15301F62D34AA8D9E51CCDF59D98DECC73B"
+    },
+    {
+      "path": "skills/paired-workbench/agents/openai.yaml",
+      "size": 308,
+      "sha256": "F8A1447A943AECF84B917EF88268373A9BC0742A757C05334A1154BF4288D4A0"
+    },
+    {
+      "path": "skills/paired-workbench/scripts/dispatch.py",
+      "size": 12491,
+      "sha256": "5768B3237EF7E1E72F41673C9F961489275FE1192FB2F4717C51B59CAF39F8E0"
+    },
+    {
+      "path": "skills/paired-workbench/SKILL.md",
+      "size": 6424,
+      "sha256": "56F9BDA8EAD3FE6C9DD2A4DAFF578A8299F900C0E7F53F8FB2563F87353091F0"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/LICENSE",
+      "size": 1064,
+      "sha256": "798F9E4D18E49B30BF2F12696C8CED73DC4E1413DA375A333D01281543A1EA8B"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/android-applications.md",
+      "size": 2584,
+      "sha256": "24ECAA1798EB4F28591884A7DEB68DF31E90313865515A23E3B466403F1ABC39"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/connection-and-recovery.md",
+      "size": 17307,
+      "sha256": "4754441E63E4252A0B230CF5AA12B78C0716463905305059BB7DEA6713BA0BFC"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/environments.md",
+      "size": 10620,
+      "sha256": "83E041F0A5243172AF69EAADF62DA0699617ADD3FF1D46B294E4BBA7ECE9D95F"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/evidence-workflows.md",
+      "size": 8091,
+      "sha256": "F44B68ACC6EBAA60C1F5D0670E4F9FF7212D351A0ECC6E6CA77CE38B9177EA57"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/javascript-applications.md",
+      "size": 13860,
+      "sha256": "619CFD15FFDF466452CC32002AE357FEFEC59D5DCAD4C9DFC27630138F0F719D"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/native-and-artifacts.md",
+      "size": 38322,
+      "sha256": "CF394568AE91E9017D63056ADB8872FB1DF9E2F6BBE544A95D0FD9F064B06DD5"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/references/runtime-observation.md",
+      "size": 11719,
+      "sha256": "852BD1E25E9F83F0E8C7D4F8441A043E2B2A7D5E39F729BF22AC77259A0207BD"
+    },
+    {
+      "path": "skills/reverse-engineer-anything/SKILL.md",
+      "size": 36270,
+      "sha256": "EA05B260AB928A4D0E0AEE4806AD45892C0A1A2C4BBD6CA005CC53F2765C4807"
+    }
+  ]
+}
