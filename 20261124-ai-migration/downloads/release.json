@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T09:48:21+09:00",
+  "inventoryAsOf": "2026-11-24T09:46:54+09:00",
+  "file": "ZAE-Migration-2026-11-24.zip",
+  "bytes": 11710229,
+  "sha256": "2D070271BEE6CB1CEA3009B8A49BBF281F4CA8209E4B81E6A486CE03A39BDCEC",
+  "payloadFiles": 539,
+  "portableSkills": 15,
+  "observedSkills": 119
+}
